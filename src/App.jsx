@@ -5,6 +5,19 @@ import { Search, Bookmark, Book, Layout, ChevronRight, X, FolderPlus, Trash2, He
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const CHAPTERS_TO_SHOW = [
+  '第一章：进行游戏',
+  '第二章：创建角色',
+  '第三章：角色职业',
+  '第四章：角色起源',
+  '第五章：专长',
+  '第六章：装备',
+  '第七章：法术',
+  '附录 A：多元宇宙',
+  '附录 B：生物数据卡',
+  '附录 C：术语汇编'
+];
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('browser'); // browser, bookmarks, search, spells
   const [selectedItem, setSelectedItem] = useState(null); // The actual content item to show (file)
@@ -18,6 +31,7 @@ export default function App() {
   const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
   const [pendingBookmark, setPendingBookmark] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activePopover, setActivePopover] = useState(null); // Track which spell card has the bookmark popover open
 
   // New State for Spell Browser
   const [spellFilters, setSpellFilters] = useState({ class: '全部', level: '0' });
@@ -409,7 +423,7 @@ export default function App() {
                   <img src="/DFD logo-01.png" alt="Welcome Logo" className="welcome-logo" />
                   <h3 className="welcome-title text-2xl mb-2">开始您的冒险</h3>
                   <p className="welcome-desc mb-6">从左侧选择一个分类，或者使用全局搜索寻找您需要的规则、法术或职业信息。</p>
-                  <div className="disclaimer-box">
+                  <div className="disclaimer-box mb-8">
                     <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
                       <strong>冒险者须知 · Beta 测试</strong>
                       {"\n"}
@@ -431,6 +445,27 @@ export default function App() {
                       你的反馈，将决定下一次升级的命运。
                     </p>
                   </div>
+
+                  <div className="welcome-directory mt-12">
+                    <h3 className="section-title text-center mb-6">快速访问</h3>
+                    <div className="item-grid">
+                      {CHAPTERS_TO_SHOW.map(name => {
+                        const node = categoryTree[name];
+                        if (!node) return null;
+                        return (
+                          <motion.div
+                            key={name}
+                            whileHover={{ scale: 1.02, y: -4 }}
+                            onClick={() => navigateTo(node._path)}
+                            className="item-card glass-panel flex flex-col items-center justify-center py-6"
+                          >
+                            <Folder size={32} className="text-gold opacity-60 mb-2" />
+                            <h4 className="card-title text-center text-sm">{name}</h4>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
               )}
             </motion.div>
@@ -444,13 +479,13 @@ export default function App() {
                   <h2 className="view-title gold-text">法术列表</h2>
                 </div>
 
-                {/* Spell Filters */}
-                <div className="glass-panel p-4 mb-4 flex flex-wrap gap-2 items-center shrink-0">
-                  <div className="filter-group">
+                {/* Unified Spell Filters */}
+                <div className="unified-filter-bar glass-panel mb-4 shrink-0">
+                  <div className="filter-item">
                     <select
                       value={spellFilters.class}
                       onChange={(e) => setSpellFilters(prev => ({ ...prev, class: e.target.value }))}
-                      className="bg-black/40 border border-gold/30 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-gold"
+                      className="filter-select"
                     >
                       <option value="全部">全部职业</option>
                       {['吟游诗人', '牧师', '德鲁伊', '圣武士', '游侠', '术士', '魔契师', '法师'].map(c => (
@@ -459,11 +494,13 @@ export default function App() {
                     </select>
                   </div>
 
-                  <div className="filter-group">
+                  <div className="filter-divider"></div>
+
+                  <div className="filter-item">
                     <select
                       value={spellFilters.level}
                       onChange={(e) => setSpellFilters(prev => ({ ...prev, level: e.target.value }))}
-                      className="bg-black/40 border border-gold/30 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-gold"
+                      className="filter-select"
                     >
                       <option value="全部">全部环阶</option>
                       <option value="0">戏法</option>
@@ -473,17 +510,17 @@ export default function App() {
                     </select>
                   </div>
 
-                  <div className="filter-group flex-grow min-w-[100px]">
-                    <div className="relative">
-                      <Search size={14} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400" />
-                      <input
-                        type="text"
-                        placeholder="搜索..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-black/40 border border-gold/30 rounded pl-8 pr-2 py-1 text-xs text-white focus:outline-none focus:border-gold"
-                      />
-                    </div>
+                  <div className="filter-divider"></div>
+
+                  <div className="filter-search flex-grow">
+                    <Search size={14} className="search-icon" />
+                    <input
+                      type="text"
+                      placeholder="搜索法术..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="search-input"
+                    />
                   </div>
                 </div>
 
@@ -502,6 +539,10 @@ export default function App() {
                         content={selectedItem?.id === spell.id ? loadedContent : null}
                         loading={contentLoading}
                         onBookmark={() => openBookmarkDialog(spell)}
+                        activePopover={activePopover}
+                        setActivePopover={setActivePopover}
+                        bookmarks={bookmarks}
+                        toggleBookmark={toggleBookmark}
                       />
                     ))}
                     {filteredSpells.length === 0 && <div className="col-span-full text-center text-gray-500 py-10">未找到匹配的法术</div>}
@@ -786,7 +827,19 @@ function ItemCard({ item, onClick, isBookmarked }) {
   );
 }
 
-function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, onBookmark }) {
+function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, onBookmark, activePopover, setActivePopover, bookmarks, toggleBookmark }) {
+  const isPopoverOpen = activePopover === item.id;
+
+  const handleBookmarkClick = (e) => {
+    e.stopPropagation();
+    // 默认的会自动被点击: Toggle bookmark in "默认" folder
+    const isInDefault = bookmarks['默认']?.includes(item.id);
+    if (!isInDefault) {
+      toggleBookmark(item.id, '默认');
+    }
+    // Show popover
+    setActivePopover(isPopoverOpen ? null : item.id);
+  };
   return (
     <div className={`spell-card-wrapper ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''}`}>
       <div
@@ -803,7 +856,41 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
             <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
               {item.title}
             </h3>
-            {isBookmarked && <Heart size={14} className="spell-card-heart" fill="currentColor" />}
+            <div className="spell-card-actions">
+              <button
+                className={`spell-card-bookmark-btn ${isBookmarked ? 'active' : ''}`}
+                onClick={handleBookmarkClick}
+              >
+                <Heart size={14} fill={isBookmarked ? "currentColor" : "none"} />
+              </button>
+
+              <AnimatePresence>
+                {isPopoverOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                    className="bookmark-popover glass-panel"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="popover-header">添加到收藏</div>
+                    <div className="popover-list">
+                      {Object.keys(bookmarks).map(folder => (
+                        <button
+                          key={folder}
+                          className={`popover-item ${bookmarks[folder].includes(item.id) ? 'active' : ''}`}
+                          onClick={() => toggleBookmark(item.id, folder)}
+                        >
+                          <span className="truncate">{folder}</span>
+                          {bookmarks[folder].includes(item.id) && <Heart size={10} fill="currentColor" />}
+                        </button>
+                      ))}
+                    </div>
+                    <div className="popover-arrow"></div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           <div className="spell-card-meta">
