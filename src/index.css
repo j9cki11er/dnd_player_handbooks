@@ -56,7 +56,7 @@ body {
 
 .main-viewport.wide-view {
   max-width: 100%;
-  padding: 1rem 1.5rem 100px 1rem;
+  padding: 1rem 1.5rem 0.5rem 1rem;
 }
 
 /* Components */
@@ -794,6 +794,22 @@ body {
   opacity: 0.6;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.min-h-0 {
+  min-height: 0;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 /* Mobile Responsiveness */
 .mobile-navbar {
   display: none;
@@ -950,7 +966,7 @@ body {
 
 .spell-card-title {
   font-family: 'Crimson Pro', serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.25;
   color: #e2e2e7;
   transition: color 0.2s;
@@ -991,20 +1007,43 @@ body {
 
 .spell-card-classes {
   font-size: 10px;
-  color: #71717a;
+  color: var(--accent-gold);
+  opacity: 0.6;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
 }
 
-.spell-card-time {
-  font-size: 10px;
-  color: #52525b;
+.spell-card-extra {
+  margin-top: 4px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 4px;
+}
+
+.extra-item {
+  display: flex;
+  gap: 4px;
+  font-size: 10px;
   align-items: center;
-  gap: 0.25rem;
-  padding-top: 0.25rem;
-  opacity: 0.8;
+}
+
+.extra-item .label {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.extra-item .value {
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .spell-card-indicator {
@@ -1045,7 +1084,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 2.5rem);
   overflow: hidden;
   position: relative;
 }
@@ -1079,4 +1118,41 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Logo Styling */
+.sidebar-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.welcome-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.disclaimer-box {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.whatsapp-link {
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
 }

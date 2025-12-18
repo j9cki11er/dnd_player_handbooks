@@ -292,10 +292,11 @@ export default function App() {
       {/* Sidebar */}
       <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
-          <div className="logo-icon bg-gold-gradient">
-            <Book className="icon-black" size={24} />
+          <img src="/DFD logo-01.png" alt="Logo" className="sidebar-logo" />
+          <div className="flex flex-col">
+            <span className="logo-text dnd-font gold-text leading-tight">不要喂龙公会</span>
+            <span className="text-xs gold-text opacity-80">DnD 玩家手册</span>
           </div>
-          <span className="logo-text dnd-font gold-text">D&D 2024 PHB</span>
         </div>
 
         <nav className="nav-menu">
@@ -405,9 +406,31 @@ export default function App() {
                 </div>
               ) : (
                 <div className="glass-panel welcome-panel">
-                  <Book size={64} className="welcome-icon" />
-                  <h3 className="welcome-title">开始您的冒险</h3>
-                  <p className="welcome-desc">从左侧选择一个分类，或者使用全局搜索寻找您需要的规则、法术或职业信息。</p>
+                  <img src="/DFD logo-01.png" alt="Welcome Logo" className="welcome-logo" />
+                  <h3 className="welcome-title text-2xl mb-2">开始您的冒险</h3>
+                  <p className="welcome-desc mb-6">从左侧选择一个分类，或者使用全局搜索寻找您需要的规则、法术或职业信息。</p>
+                  <div className="disclaimer-box">
+                    <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
+                      <strong>冒险者须知 · Beta 测试</strong>
+                      {"\n"}
+                      此玩家手册仍在锻造之中（Beta 测试阶段）。
+                      {"\n"}
+                      若你在冒险途中发现任何异常、错误，或有改进建议，
+                      {"\n"}
+                      请透过 WhatsApp 将情报送达：
+                      {"\n"}
+                      <a
+                        href="https://wa.me/60175815819"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp-link text-lg block my-1"
+                      >
+                        +60 17-581 5819
+                      </a>
+                      {"\n"}
+                      你的反馈，将决定下一次升级的命运。
+                    </p>
+                  </div>
                 </div>
               )}
             </motion.div>
@@ -466,7 +489,7 @@ export default function App() {
 
                 {/* Spell List */}
                 {/* Spell List */}
-                <div className="overflow-y-auto min-h-0 pr-2 pb-20 custom-scrollbar">
+                <div className="overflow-y-auto flex-1 min-h-0 pr-2 pb-20 custom-scrollbar">
                   <div className="spell-grid">
                     {filteredSpells.slice(0, 100).map(spell => (
                       <SpellListItem
@@ -770,26 +793,33 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
         onClick={onClick}
         className="spell-card-inner"
       >
-        {/* Card Header */}
-        <div className="spell-card-header">
-          <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
-            {item.title}
-          </h3>
-          {isBookmarked && <Heart size={14} className="spell-card-heart" fill="currentColor" />}
-        </div>
-
         {/* Card Body */}
         <div className="spell-card-body">
-          <div className="spell-card-meta">
-            {item.school} <span>•</span> {item.level}
-          </div>
-
           <div className="spell-card-classes" title={item.classes.join('、')}>
             {item.classes.join('、')}
           </div>
 
-          <div className="spell-card-time">
-            <span>⏱ 1 动作</span>
+          <div className="spell-card-header">
+            <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
+              {item.title}
+            </h3>
+            {isBookmarked && <Heart size={14} className="spell-card-heart" fill="currentColor" />}
+          </div>
+
+          <div className="spell-card-meta">
+            <span className="meta-item">{item.level}</span>
+            <span className="meta-divider">•</span>
+            <span className="meta-item">{item.castingTime || '1 动作'}</span>
+          </div>
+
+          <div className="spell-card-extra">
+            <div className="extra-item">
+              <span className="label">时间:</span>
+              <span className="value">{item.duration}</span>
+              <span className="label">| 成分:</span>
+              <span className="value">{item.components}</span>
+            </div>
+
           </div>
         </div>
 
