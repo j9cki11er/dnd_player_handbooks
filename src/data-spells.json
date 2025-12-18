@@ -1,0 +1,6066 @@
+[
+  {
+    "id": "Acid_Splash",
+    "title": "酸液飞溅",
+    "titleEn": "Acid Splash",
+    "fullTitle": "酸液飞溅｜Acid Splash",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Acid_Splash.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Blade_Ward",
+    "title": "剑刃防护",
+    "titleEn": "Blade Ward",
+    "fullTitle": "剑刃防护｜Blade Ward",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Blade_Ward.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Chill_Touch",
+    "title": "颤栗之触",
+    "titleEn": "Chill Touch",
+    "fullTitle": "颤栗之触｜Chill Touch",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "死灵",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Chill_Touch.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Dancing_Lights",
+    "title": "舞光术",
+    "titleEn": "Dancing Lights",
+    "fullTitle": "舞光术｜Dancing Lights",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Dancing_Lights.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Druidcraft",
+    "title": "德鲁伊伎俩",
+    "titleEn": "Druidcraft",
+    "fullTitle": "德鲁伊伎俩｜Druidcraft",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Druidcraft.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Eldritch_Blast",
+    "title": "魔能爆",
+    "titleEn": "Eldritch Blast",
+    "fullTitle": "魔能爆｜Eldritch Blast",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "魔契师"
+    ],
+    "path": "spells/Eldritch_Blast.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Elementalism",
+    "title": "四象法门",
+    "titleEn": "Elementalism",
+    "fullTitle": "四象法门｜Elementalism",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Elementalism.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Fire_Bolt",
+    "title": "火焰箭",
+    "titleEn": "Fire Bolt",
+    "fullTitle": "火焰箭｜Fire Bolt",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Fire_Bolt.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Friends",
+    "title": "交友术",
+    "titleEn": "Friends",
+    "fullTitle": "交友术｜Friends",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Friends.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Guidance",
+    "title": "神导术",
+    "titleEn": "Guidance",
+    "fullTitle": "神导术｜Guidance",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "预言",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Guidance.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Light",
+    "title": "光亮术",
+    "titleEn": "Light",
+    "fullTitle": "光亮术｜Light",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Light.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Mage_Hand",
+    "title": "法师之手",
+    "titleEn": "Mage Hand",
+    "fullTitle": "法师之手｜Mage Hand",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Mage_Hand.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Mending",
+    "title": "修复术",
+    "titleEn": "Mending",
+    "fullTitle": "修复术｜Mending",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Mending.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Message",
+    "title": "传讯术",
+    "titleEn": "Message",
+    "fullTitle": "传讯术｜Message",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Message.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Mind_Sliver",
+    "title": "心灵之楔",
+    "titleEn": "Mind Sliver",
+    "fullTitle": "心灵之楔｜Mind Sliver",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "惑控",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Mind_Sliver.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Minor_Illusion",
+    "title": "次级幻象",
+    "titleEn": "Minor Illusion",
+    "fullTitle": "次级幻象｜Minor Illusion",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Minor_Illusion.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Poison_Spray",
+    "title": "毒气喷涌",
+    "titleEn": "Poison Spray",
+    "fullTitle": "毒气喷涌｜Poison Spray",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "死灵",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Poison_Spray.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Prestidigitation",
+    "title": "魔法伎俩",
+    "titleEn": "Prestidigitation",
+    "fullTitle": "魔法伎俩｜Prestidigitation",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Prestidigitation.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Produce_Flame",
+    "title": "燃火术",
+    "titleEn": "Produce Flame",
+    "fullTitle": "燃火术｜Produce Flame",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Produce_Flame.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Ray_of_Frost",
+    "title": "冷冻射线",
+    "titleEn": "Ray of Frost",
+    "fullTitle": "冷冻射线｜Ray of Frost",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Ray_of_Frost.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Resistance",
+    "title": "抵抗术",
+    "titleEn": "Resistance",
+    "fullTitle": "抵抗术｜Resistance",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Resistance.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Sacred_Flame",
+    "title": "圣火术",
+    "titleEn": "Sacred Flame",
+    "fullTitle": "圣火术｜Sacred Flame",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Sacred_Flame.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Shillelagh",
+    "title": "橡棍术",
+    "titleEn": "Shillelagh",
+    "fullTitle": "橡棍术｜Shillelagh",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Shillelagh.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Shocking_Grasp",
+    "title": "电爪",
+    "titleEn": "Shocking Grasp",
+    "fullTitle": "电爪｜Shocking Grasp",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Shocking_Grasp.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Sorcerous_Burst",
+    "title": "术法爆发",
+    "titleEn": "Sorcerous Burst",
+    "fullTitle": "术法爆发｜Sorcerous Burst",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "术士"
+    ],
+    "path": "spells/Sorcerous_Burst.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Spare_the_Dying",
+    "title": "维生术",
+    "titleEn": "Spare the Dying",
+    "fullTitle": "维生术｜Spare the Dying",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Spare_the_Dying.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Starry_Wisp",
+    "title": "点点星芒",
+    "titleEn": "Starry Wisp",
+    "fullTitle": "点点星芒｜Starry Wisp",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊"
+    ],
+    "path": "spells/Starry_Wisp.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Thaumaturgy",
+    "title": "奇术",
+    "titleEn": "Thaumaturgy",
+    "fullTitle": "奇术｜Thaumaturgy",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Thaumaturgy.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Thorn_Whip",
+    "title": "荆棘之鞭",
+    "titleEn": "Thorn Whip",
+    "fullTitle": "荆棘之鞭｜Thorn Whip",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "变化",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Thorn_Whip.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Thunderclap",
+    "title": "鸣雷破",
+    "titleEn": "Thunderclap",
+    "fullTitle": "鸣雷破｜Thunderclap",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Thunderclap.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Toll_the_Dead",
+    "title": "亡者丧钟",
+    "titleEn": "Toll the Dead",
+    "fullTitle": "亡者丧钟｜Toll the Dead",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Toll_the_Dead.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "True_Strike",
+    "title": "克敌先击",
+    "titleEn": "True Strike",
+    "fullTitle": "克敌先击｜True Strike",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/True_Strike.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Vicious_Mockery",
+    "title": "恶言相加",
+    "titleEn": "Vicious Mockery",
+    "fullTitle": "恶言相加｜Vicious Mockery",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人"
+    ],
+    "path": "spells/Vicious_Mockery.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Word_of_Radiance",
+    "title": "光耀祷词",
+    "titleEn": "Word of Radiance",
+    "fullTitle": "光耀祷词｜Word of Radiance",
+    "level": "戏法",
+    "levelNumeric": 0,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Word_of_Radiance.html",
+    "source": "0环.html"
+  },
+  {
+    "id": "Alarm",
+    "title": "警报术",
+    "titleEn": "Alarm",
+    "fullTitle": "警报术｜Alarm",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Alarm.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Animal_Friendship",
+    "title": "化兽为友",
+    "titleEn": "Animal Friendship",
+    "fullTitle": "化兽为友｜Animal Friendship",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Animal_Friendship.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Armor_of_Agathys",
+    "title": "黯冰狱铠",
+    "titleEn": "Armor of Agathys",
+    "fullTitle": "黯冰狱铠｜Armor of Agathys",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "魔契师"
+    ],
+    "path": "spells/Armor_of_Agathys.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Arms_of_Hadar",
+    "title": "哈达之臂",
+    "titleEn": "Arms of Hadar",
+    "fullTitle": "哈达之臂｜Arms of Hadar",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "魔契师"
+    ],
+    "path": "spells/Arms_of_Hadar.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Bane",
+    "title": "灾祸术",
+    "titleEn": "Bane",
+    "fullTitle": "灾祸术｜Bane",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "魔契师"
+    ],
+    "path": "spells/Bane.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Bless",
+    "title": "祝福术",
+    "titleEn": "Bless",
+    "fullTitle": "祝福术｜Bless",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Bless.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Burning_Hands",
+    "title": "燃烧之手",
+    "titleEn": "Burning Hands",
+    "fullTitle": "燃烧之手｜Burning Hands",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Burning_Hands.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Charm_Person",
+    "title": "魅惑类人",
+    "titleEn": "Charm Person",
+    "fullTitle": "魅惑类人｜Charm Person",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Charm_Person.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Chromatic_Orb",
+    "title": "繁彩球",
+    "titleEn": "Chromatic Orb",
+    "fullTitle": "繁彩球｜Chromatic Orb",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Chromatic_Orb.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Color_Spray",
+    "title": "七彩喷射",
+    "titleEn": "Color Spray",
+    "fullTitle": "七彩喷射｜Color Spray",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Color_Spray.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Command",
+    "title": "命令术",
+    "titleEn": "Command",
+    "fullTitle": "命令术｜Command",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Command.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Compelled_Duel",
+    "title": "强令对决",
+    "titleEn": "Compelled Duel",
+    "fullTitle": "强令对决｜Compelled Duel",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Compelled_Duel.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Comprehend_Languages",
+    "title": "通晓语言",
+    "titleEn": "Comprehend Languages",
+    "fullTitle": "通晓语言｜Comprehend Languages",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Comprehend_Languages.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Create_or_Destroy_Water",
+    "title": "造水术/枯水术",
+    "titleEn": "Create or Destroy Water",
+    "fullTitle": "造水术/枯水术｜Create or Destroy Water",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Create_or_Destroy_Water.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Cure_Wounds",
+    "title": "疗伤术",
+    "titleEn": "Cure Wounds",
+    "fullTitle": "疗伤术｜Cure Wounds",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Cure_Wounds.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Detect_Evil_and_Good",
+    "title": "侦测善恶",
+    "titleEn": "Detect Evil and Good",
+    "fullTitle": "侦测善恶｜Detect Evil and Good",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Detect_Evil_and_Good.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Detect_Magic",
+    "title": "侦测魔法",
+    "titleEn": "Detect Magic",
+    "fullTitle": "侦测魔法｜Detect Magic",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Detect_Magic.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Detect_Poison_and_Disease",
+    "title": "侦测毒性和疾病",
+    "titleEn": "Detect Poison and Disease",
+    "fullTitle": "侦测毒性和疾病｜Detect Poison and Disease",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Detect_Poison_and_Disease.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Disguise_Self",
+    "title": "易容术",
+    "titleEn": "Disguise Self",
+    "fullTitle": "易容术｜Disguise Self",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Disguise_Self.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Dissonant_Whispers",
+    "title": "不谐低语",
+    "titleEn": "Dissonant Whispers",
+    "fullTitle": "不谐低语｜Dissonant Whispers",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人"
+    ],
+    "path": "spells/Dissonant_Whispers.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Divine_Favor",
+    "title": "神恩",
+    "titleEn": "Divine Favor",
+    "fullTitle": "神恩｜Divine Favor",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Divine_Favor.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Divine_Smite",
+    "title": "至圣斩",
+    "titleEn": "Divine Smite",
+    "fullTitle": "至圣斩｜Divine Smite",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Divine_Smite.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Ensnaring_Strike",
+    "title": "捕获打击",
+    "titleEn": "Ensnaring Strike",
+    "fullTitle": "捕获打击｜Ensnaring Strike",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Ensnaring_Strike.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Entangle",
+    "title": "纠缠术",
+    "titleEn": "Entangle",
+    "fullTitle": "纠缠术｜Entangle",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Entangle.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Expeditious_Retreat",
+    "title": "脚底抹油",
+    "titleEn": "Expeditious Retreat",
+    "fullTitle": "脚底抹油｜Expeditious Retreat",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Expeditious_Retreat.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Faerie_Fire",
+    "title": "妖火",
+    "titleEn": "Faerie Fire",
+    "fullTitle": "妖火｜Faerie Fire",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊"
+    ],
+    "path": "spells/Faerie_Fire.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "False_Life",
+    "title": "虚假生命",
+    "titleEn": "False Life",
+    "fullTitle": "虚假生命｜False Life",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "死灵",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/False_Life.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Feather_Fall",
+    "title": "羽落术",
+    "titleEn": "Feather Fall",
+    "fullTitle": "羽落术｜Feather Fall",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Feather_Fall.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Find_Familiar",
+    "title": "寻获魔宠",
+    "titleEn": "Find Familiar",
+    "fullTitle": "寻获魔宠｜Find Familiar",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Find_Familiar.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Fog_Cloud",
+    "title": "云雾术",
+    "titleEn": "Fog Cloud",
+    "fullTitle": "云雾术｜Fog Cloud",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Fog_Cloud.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Goodberry",
+    "title": "神莓术",
+    "titleEn": "Goodberry",
+    "fullTitle": "神莓术｜Goodberry",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Goodberry.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Grease",
+    "title": "油腻术",
+    "titleEn": "Grease",
+    "fullTitle": "油腻术｜Grease",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Grease.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Guiding_Bolt",
+    "title": "光导箭",
+    "titleEn": "Guiding Bolt",
+    "fullTitle": "光导箭｜Guiding Bolt",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Guiding_Bolt.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Hail_of_Thorns",
+    "title": "荆棘之雨",
+    "titleEn": "Hail of Thorns",
+    "fullTitle": "荆棘之雨｜Hail of Thorns",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Hail_of_Thorns.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Healing_Word",
+    "title": "治愈真言",
+    "titleEn": "Healing Word",
+    "fullTitle": "治愈真言｜Healing Word",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Healing_Word.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Hellish_Rebuke",
+    "title": "炼狱叱喝",
+    "titleEn": "Hellish Rebuke",
+    "fullTitle": "炼狱叱喝｜Hellish Rebuke",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "魔契师"
+    ],
+    "path": "spells/Hellish_Rebuke.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Heroism",
+    "title": "英雄气概",
+    "titleEn": "Heroism",
+    "fullTitle": "英雄气概｜Heroism",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "圣武士"
+    ],
+    "path": "spells/Heroism.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Hex",
+    "title": "脆弱诅咒",
+    "titleEn": "Hex",
+    "fullTitle": "脆弱诅咒｜Hex",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "魔契师"
+    ],
+    "path": "spells/Hex.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Hunter_s_Mark",
+    "title": "猎人印记",
+    "titleEn": "Hunter's Mark",
+    "fullTitle": "猎人印记｜Hunter's Mark",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Hunter_s_Mark.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Ice_Knife",
+    "title": "冰刃",
+    "titleEn": "Ice Knife",
+    "fullTitle": "冰刃｜Ice Knife",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Ice_Knife.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Identify",
+    "title": "鉴定术",
+    "titleEn": "Identify",
+    "fullTitle": "鉴定术｜Identify",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Identify.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Illusory_Script",
+    "title": "迷幻手稿",
+    "titleEn": "Illusory Script",
+    "fullTitle": "迷幻手稿｜Illusory Script",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Illusory_Script.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Inflict_Wounds",
+    "title": "致伤术",
+    "titleEn": "Inflict Wounds",
+    "fullTitle": "致伤术｜Inflict Wounds",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "死灵",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Inflict_Wounds.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Jump",
+    "title": "跳跃术",
+    "titleEn": "Jump",
+    "fullTitle": "跳跃术｜Jump",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Jump.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Longstrider",
+    "title": "大步奔行",
+    "titleEn": "Longstrider",
+    "fullTitle": "大步奔行｜Longstrider",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Longstrider.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Mage_Armor",
+    "title": "法师护甲",
+    "titleEn": "Mage Armor",
+    "fullTitle": "法师护甲｜Mage Armor",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Mage_Armor.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Magic_Missile",
+    "title": "魔法飞弹",
+    "titleEn": "Magic Missile",
+    "fullTitle": "魔法飞弹｜Magic Missile",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Magic_Missile.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Protection_from_Evil_and_Good",
+    "title": "防护善恶",
+    "titleEn": "Protection from Evil and Good",
+    "fullTitle": "防护善恶｜Protection from Evil and Good",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Protection_from_Evil_and_Good.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Purify_Food_and_Drink",
+    "title": "净化饮食",
+    "titleEn": "Purify Food and Drink",
+    "fullTitle": "净化饮食｜Purify Food and Drink",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士"
+    ],
+    "path": "spells/Purify_Food_and_Drink.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Ray_of_Sickness",
+    "title": "致病射线",
+    "titleEn": "Ray of Sickness",
+    "fullTitle": "致病射线｜Ray of Sickness",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "死灵",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Ray_of_Sickness.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Sanctuary",
+    "title": "庇护术",
+    "titleEn": "Sanctuary",
+    "fullTitle": "庇护术｜Sanctuary",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Sanctuary.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Searing_Smite",
+    "title": "炽焰斩",
+    "titleEn": "Searing Smite",
+    "fullTitle": "炽焰斩｜Searing Smite",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Searing_Smite.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Shield",
+    "title": "护盾术",
+    "titleEn": "Shield",
+    "fullTitle": "护盾术｜Shield",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Shield.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Shield_of_Faith",
+    "title": "虔诚护盾",
+    "titleEn": "Shield of Faith",
+    "fullTitle": "虔诚护盾｜Shield of Faith",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Shield_of_Faith.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Silent_Image",
+    "title": "无声幻影",
+    "titleEn": "Silent Image",
+    "fullTitle": "无声幻影｜Silent Image",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Silent_Image.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Sleep",
+    "title": "睡眠术",
+    "titleEn": "Sleep",
+    "fullTitle": "睡眠术｜Sleep",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Sleep.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Speak_with_Animals",
+    "title": "动物交谈",
+    "titleEn": "Speak with Animals",
+    "fullTitle": "动物交谈｜Speak with Animals",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠",
+      "魔契师"
+    ],
+    "path": "spells/Speak_with_Animals.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Tasha_s_Hideous_Laughter",
+    "title": "塔莎狂笑术",
+    "titleEn": "Tasha's Hideous Laughter",
+    "fullTitle": "塔莎狂笑术｜Tasha's Hideous Laughter",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Tasha_s_Hideous_Laughter.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Tenser_s_Floating_Disk",
+    "title": "谭森浮碟术",
+    "titleEn": "Tenser's Floating Disk",
+    "fullTitle": "谭森浮碟术｜Tenser's Floating Disk",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Tenser_s_Floating_Disk.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Thunderous_Smite",
+    "title": "雷鸣斩",
+    "titleEn": "Thunderous Smite",
+    "fullTitle": "雷鸣斩｜Thunderous Smite",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Thunderous_Smite.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Thunderwave",
+    "title": "雷鸣波",
+    "titleEn": "Thunderwave",
+    "fullTitle": "雷鸣波｜Thunderwave",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Thunderwave.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Unseen_Servant",
+    "title": "隐形仆役",
+    "titleEn": "Unseen Servant",
+    "fullTitle": "隐形仆役｜Unseen Servant",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Unseen_Servant.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Witch_Bolt",
+    "title": "巫术箭",
+    "titleEn": "Witch Bolt",
+    "fullTitle": "巫术箭｜Witch Bolt",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Witch_Bolt.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Wrathful_Smite",
+    "title": "激愤斩",
+    "titleEn": "Wrathful Smite",
+    "fullTitle": "激愤斩｜Wrathful Smite",
+    "level": "1环",
+    "levelNumeric": 1,
+    "school": "死灵",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Wrathful_Smite.html",
+    "source": "1环.html"
+  },
+  {
+    "id": "Aid",
+    "title": "援助术",
+    "titleEn": "Aid",
+    "fullTitle": "援助术｜Aid",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Aid.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Alter_Self",
+    "title": "变身术",
+    "titleEn": "Alter Self",
+    "fullTitle": "变身术｜Alter Self",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Alter_Self.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Animal_Messenger",
+    "title": "动物信使",
+    "titleEn": "Animal Messenger",
+    "fullTitle": "动物信使｜Animal Messenger",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Animal_Messenger.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Arcane_Lock",
+    "title": "秘法锁",
+    "titleEn": "Arcane Lock",
+    "fullTitle": "秘法锁｜Arcane Lock",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Arcane_Lock.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Arcane_Vigor",
+    "title": "复苏秘法",
+    "titleEn": "Arcane Vigor",
+    "fullTitle": "复苏秘法｜Arcane Vigor",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Arcane_Vigor.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Augury",
+    "title": "卜筮术",
+    "titleEn": "Augury",
+    "fullTitle": "卜筮术｜Augury",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Augury.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Barkskin",
+    "title": "树肤术",
+    "titleEn": "Barkskin",
+    "fullTitle": "树肤术｜Barkskin",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Barkskin.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Beast_Sense",
+    "title": "野兽感官",
+    "titleEn": "Beast Sense",
+    "fullTitle": "野兽感官｜Beast Sense",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Beast_Sense.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "BlindnessDeafness",
+    "title": "目盲术/耳聋术",
+    "titleEn": "Blindness/Deafness",
+    "fullTitle": "目盲术/耳聋术｜Blindness/Deafness",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/BlindnessDeafness.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Blur",
+    "title": "朦胧术",
+    "titleEn": "Blur",
+    "fullTitle": "朦胧术｜Blur",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Blur.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Calm_Emotions",
+    "title": "安定心神",
+    "titleEn": "Calm Emotions",
+    "fullTitle": "安定心神｜Calm Emotions",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师"
+    ],
+    "path": "spells/Calm_Emotions.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Cloud_of_Daggers",
+    "title": "匕首之云",
+    "titleEn": "Cloud of Daggers",
+    "fullTitle": "匕首之云｜Cloud of Daggers",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Cloud_of_Daggers.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Continual_Flame",
+    "title": "不灭明焰",
+    "titleEn": "Continual Flame",
+    "fullTitle": "不灭明焰｜Continual Flame",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Continual_Flame.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Cordon_of_Arrows",
+    "title": "警戒箭阵",
+    "titleEn": "Cordon of Arrows",
+    "fullTitle": "警戒箭阵｜Cordon of Arrows",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Cordon_of_Arrows.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Crown_of_Madness",
+    "title": "疯狂冠冕",
+    "titleEn": "Crown of Madness",
+    "fullTitle": "疯狂冠冕｜Crown of Madness",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Crown_of_Madness.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Darkness",
+    "title": "黑暗术",
+    "titleEn": "Darkness",
+    "fullTitle": "黑暗术｜Darkness",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Darkness.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Darkvision",
+    "title": "黑暗视觉",
+    "titleEn": "Darkvision",
+    "fullTitle": "黑暗视觉｜Darkvision",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Darkvision.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Detect_Thoughts",
+    "title": "侦测思想",
+    "titleEn": "Detect Thoughts",
+    "fullTitle": "侦测思想｜Detect Thoughts",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Detect_Thoughts.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Dragon_s_Breath",
+    "title": "龙息术",
+    "titleEn": "Dragon's Breath",
+    "fullTitle": "龙息术｜Dragon's Breath",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Dragon_s_Breath.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Enhance_Ability",
+    "title": "强化属性",
+    "titleEn": "Enhance Ability",
+    "fullTitle": "强化属性｜Enhance Ability",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Enhance_Ability.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Enlarge_Reduce",
+    "title": "变巨术/缩小术",
+    "titleEn": "Enlarge/Reduce",
+    "fullTitle": "变巨术/缩小术｜Enlarge/Reduce",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Enlarge_Reduce.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Enthrall",
+    "title": "注目术",
+    "titleEn": "Enthrall",
+    "fullTitle": "注目术｜Enthrall",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "魔契师"
+    ],
+    "path": "spells/Enthrall.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Find_Steed",
+    "title": "寻获坐骑",
+    "titleEn": "Find Steed",
+    "fullTitle": "寻获坐骑｜Find Steed",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "咒法",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Find_Steed.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Find_Traps",
+    "title": "寻找陷阱",
+    "titleEn": "Find Traps",
+    "fullTitle": "寻找陷阱｜Find Traps",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Find_Traps.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Flame_Blade",
+    "title": "火焰刀",
+    "titleEn": "Flame Blade",
+    "fullTitle": "火焰刀｜Flame Blade",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "术士"
+    ],
+    "path": "spells/Flame_Blade.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Flaming_Sphere",
+    "title": "炽焰法球",
+    "titleEn": "Flaming Sphere",
+    "fullTitle": "炽焰法球｜Flaming Sphere",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Flaming_Sphere.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Gentle_Repose",
+    "title": "遗体防腐",
+    "titleEn": "Gentle Repose",
+    "fullTitle": "遗体防腐｜Gentle Repose",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "圣武士",
+      "法师"
+    ],
+    "path": "spells/Gentle_Repose.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Gust_of_Wind",
+    "title": "造风术",
+    "titleEn": "Gust of Wind",
+    "fullTitle": "造风术｜Gust of Wind",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Gust_of_Wind.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Heat_Metal",
+    "title": "灼热金属",
+    "titleEn": "Heat Metal",
+    "fullTitle": "灼热金属｜Heat Metal",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊"
+    ],
+    "path": "spells/Heat_Metal.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Hold_Person",
+    "title": "定身类人",
+    "titleEn": "Hold Person",
+    "fullTitle": "定身类人｜Hold Person",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Hold_Person.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Invisibility",
+    "title": "隐形术",
+    "titleEn": "Invisibility",
+    "fullTitle": "隐形术｜Invisibility",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Invisibility.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Knock",
+    "title": "敲击术",
+    "titleEn": "Knock",
+    "fullTitle": "敲击术｜Knock",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Knock.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Lesser_Restoration",
+    "title": "次等复原术",
+    "titleEn": "Lesser Restoration",
+    "fullTitle": "次等复原术｜Lesser Restoration",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Lesser_Restoration.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Levitate",
+    "title": "浮空术",
+    "titleEn": "Levitate",
+    "fullTitle": "浮空术｜Levitate",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Levitate.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Locate_Animals_or_Plants",
+    "title": "动植物定位术",
+    "titleEn": "Locate Animals or Plants",
+    "fullTitle": "动植物定位术｜Locate Animals or Plants",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Locate_Animals_or_Plants.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Locate_Object",
+    "title": "物件定位术",
+    "titleEn": "Locate Object",
+    "fullTitle": "物件定位术｜Locate Object",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Locate_Object.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Magic_Mouth",
+    "title": "魔嘴术",
+    "titleEn": "Magic Mouth",
+    "fullTitle": "魔嘴术｜Magic Mouth",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Magic_Mouth.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Magic_Weapon",
+    "title": "魔化武器",
+    "titleEn": "Magic Weapon",
+    "fullTitle": "魔化武器｜Magic Weapon",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "圣武士",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Magic_Weapon.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Melf_s_Acid_Arrow",
+    "title": "马友夫强酸箭",
+    "titleEn": "Melf's Acid Arrow",
+    "fullTitle": "马友夫强酸箭｜Melf's Acid Arrow",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Melf_s_Acid_Arrow.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Mind_Spike",
+    "title": "心灵尖刺",
+    "titleEn": "Mind Spike",
+    "fullTitle": "心灵尖刺｜Mind Spike",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Mind_Spike.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Mirror_Image",
+    "title": "镜影术",
+    "titleEn": "Mirror Image",
+    "fullTitle": "镜影术｜Mirror Image",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Mirror_Image.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Misty_Step",
+    "title": "迷踪步",
+    "titleEn": "Misty Step",
+    "fullTitle": "迷踪步｜Misty Step",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Misty_Step.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Moonbeam",
+    "title": "月华之光",
+    "titleEn": "Moonbeam",
+    "fullTitle": "月华之光｜Moonbeam",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Moonbeam.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Nystul_s_Magic_Aura",
+    "title": "涅斯图魔法灵光",
+    "titleEn": "Nystul's Magic Aura",
+    "fullTitle": "涅斯图魔法灵光｜Nystul's Magic Aura",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Nystul_s_Magic_Aura.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Pass_without_Trace",
+    "title": "行动无踪",
+    "titleEn": "Pass without Trace",
+    "fullTitle": "行动无踪｜Pass without Trace",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Pass_without_Trace.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Phantasmal_Force",
+    "title": "魅影之力",
+    "titleEn": "Phantasmal Force",
+    "fullTitle": "魅影之力｜Phantasmal Force",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Phantasmal_Force.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Prayer_of_Healing",
+    "title": "治疗祷言",
+    "titleEn": "Prayer of Healing",
+    "fullTitle": "治疗祷言｜Prayer of Healing",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Prayer_of_Healing.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Protection_from_Poison",
+    "title": "防护毒素",
+    "titleEn": "Protection from Poison",
+    "fullTitle": "防护毒素｜Protection from Poison",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Protection_from_Poison.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Ray_of_Enfeeblement",
+    "title": "衰弱射线",
+    "titleEn": "Ray of Enfeeblement",
+    "fullTitle": "衰弱射线｜Ray of Enfeeblement",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "死灵",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Ray_of_Enfeeblement.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Rope_Trick",
+    "title": "魔绳术",
+    "titleEn": "Rope Trick",
+    "fullTitle": "魔绳术｜Rope Trick",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Rope_Trick.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Scorching_Ray",
+    "title": "灼热射线",
+    "titleEn": "Scorching Ray",
+    "fullTitle": "灼热射线｜Scorching Ray",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Scorching_Ray.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "See_Invisibility",
+    "title": "识破隐形",
+    "titleEn": "See Invisibility",
+    "fullTitle": "识破隐形｜See Invisibility",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/See_Invisibility.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Shatter",
+    "title": "粉碎音波",
+    "titleEn": "Shatter",
+    "fullTitle": "粉碎音波｜Shatter",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Shatter.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Shining_Smite",
+    "title": "闪耀斩",
+    "titleEn": "Shining Smite",
+    "fullTitle": "闪耀斩｜Shining Smite",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Shining_Smite.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Silence",
+    "title": "沉默术",
+    "titleEn": "Silence",
+    "fullTitle": "沉默术｜Silence",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "游侠"
+    ],
+    "path": "spells/Silence.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Spider_Climb",
+    "title": "蛛行术",
+    "titleEn": "Spider Climb",
+    "fullTitle": "蛛行术｜Spider Climb",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Spider_Climb.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Spike_Growth",
+    "title": "荆棘丛生",
+    "titleEn": "Spike Growth",
+    "fullTitle": "荆棘丛生｜Spike Growth",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Spike_Growth.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Spiritual_Weapon",
+    "title": "灵体武器",
+    "titleEn": "Spiritual Weapon",
+    "fullTitle": "灵体武器｜Spiritual Weapon",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Spiritual_Weapon.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Suggestion",
+    "title": "暗示术",
+    "titleEn": "Suggestion",
+    "fullTitle": "暗示术｜Suggestion",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Suggestion.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Summon_Beast",
+    "title": "野兽召唤术",
+    "titleEn": "Summon Beast",
+    "fullTitle": "野兽召唤术｜Summon Beast",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Summon_Beast.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Warding_Bond",
+    "title": "守护之链",
+    "titleEn": "Warding Bond",
+    "fullTitle": "守护之链｜Warding Bond",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Warding_Bond.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Web",
+    "title": "蛛网术",
+    "titleEn": "Web",
+    "fullTitle": "蛛网术｜Web",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Web.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Zone_of_Truth",
+    "title": "诚实之域",
+    "titleEn": "Zone of Truth",
+    "fullTitle": "诚实之域｜Zone of Truth",
+    "level": "2环",
+    "levelNumeric": 2,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Zone_of_Truth.html",
+    "source": "2环.html"
+  },
+  {
+    "id": "Animate_Dead",
+    "title": "活化死尸",
+    "titleEn": "Animate Dead",
+    "fullTitle": "活化死尸｜Animate Dead",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Animate_Dead.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Aura_of_Vitality",
+    "title": "活力灵光",
+    "titleEn": "Aura of Vitality",
+    "fullTitle": "活力灵光｜Aura of Vitality",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士"
+    ],
+    "path": "spells/Aura_of_Vitality.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Beacon_of_Hope",
+    "title": "希望信标",
+    "titleEn": "Beacon of Hope",
+    "fullTitle": "希望信标｜Beacon of Hope",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Beacon_of_Hope.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Bestow_Curse",
+    "title": "降咒",
+    "titleEn": "Bestow Curse",
+    "fullTitle": "降咒｜Bestow Curse",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Bestow_Curse.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Blinding_Smite",
+    "title": "致盲斩",
+    "titleEn": "Blinding Smite",
+    "fullTitle": "致盲斩｜Blinding Smite",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Blinding_Smite.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Blink",
+    "title": "闪现术",
+    "titleEn": "Blink",
+    "fullTitle": "闪现术｜Blink",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Blink.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Call_Lightning",
+    "title": "召雷术",
+    "titleEn": "Call Lightning",
+    "fullTitle": "召雷术｜Call Lightning",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Call_Lightning.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Clairvoyance",
+    "title": "鹰眼术",
+    "titleEn": "Clairvoyance",
+    "fullTitle": "鹰眼术｜Clairvoyance",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Clairvoyance.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Conjure_Animals",
+    "title": "咒唤兽群",
+    "titleEn": "Conjure Animals",
+    "fullTitle": "咒唤兽群｜Conjure Animals",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Conjure_Animals.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Conjure_Barrage",
+    "title": "箭如雨下",
+    "titleEn": "Conjure Barrage",
+    "fullTitle": "箭如雨下｜Conjure Barrage",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Conjure_Barrage.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Counterspell",
+    "title": "法术反制",
+    "titleEn": "Counterspell",
+    "fullTitle": "法术反制｜Counterspell",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Counterspell.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Create_Food_and_Water",
+    "title": "造粮术",
+    "titleEn": "Create Food and Water",
+    "fullTitle": "造粮术｜Create Food and Water",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Create_Food_and_Water.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Crusader_s_Mantle",
+    "title": "十字军披风",
+    "titleEn": "Crusader's Mantle",
+    "fullTitle": "十字军披风｜Crusader's Mantle",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Crusader_s_Mantle.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Daylight",
+    "title": "昼明术",
+    "titleEn": "Daylight",
+    "fullTitle": "昼明术｜Daylight",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠",
+      "术士"
+    ],
+    "path": "spells/Daylight.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Dispel_Magic",
+    "title": "解除魔法",
+    "titleEn": "Dispel Magic",
+    "fullTitle": "解除魔法｜Dispel Magic",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Dispel_Magic.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Elemental_Weapon",
+    "title": "元素武器",
+    "titleEn": "Elemental Weapon",
+    "fullTitle": "元素武器｜Elemental Weapon",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Elemental_Weapon.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Fear",
+    "title": "恐惧术",
+    "titleEn": "Fear",
+    "fullTitle": "恐惧术｜Fear",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Fear.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Feign_Death",
+    "title": "假死术",
+    "titleEn": "Feign Death",
+    "fullTitle": "假死术｜Feign Death",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Feign_Death.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Fireball",
+    "title": "火球术",
+    "titleEn": "Fireball",
+    "fullTitle": "火球术｜Fireball",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Fireball.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Fly",
+    "title": "飞行术",
+    "titleEn": "Fly",
+    "fullTitle": "飞行术｜Fly",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Fly.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Gaseous_Form",
+    "title": "气化形体",
+    "titleEn": "Gaseous Form",
+    "fullTitle": "气化形体｜Gaseous Form",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Gaseous_Form.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Glyph_of_Warding",
+    "title": "守卫刻纹",
+    "titleEn": "Glyph of Warding",
+    "fullTitle": "守卫刻纹｜Glyph of Warding",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Glyph_of_Warding.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Haste",
+    "title": "加速术",
+    "titleEn": "Haste",
+    "fullTitle": "加速术｜Haste",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Haste.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Hunger_of_Hadar",
+    "title": "哈达之欲",
+    "titleEn": "Hunger of Hadar",
+    "fullTitle": "哈达之欲｜Hunger of Hadar",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "魔契师"
+    ],
+    "path": "spells/Hunger_of_Hadar.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Hypnotic_Pattern",
+    "title": "催眠图纹",
+    "titleEn": "Hypnotic Pattern",
+    "fullTitle": "催眠图纹｜Hypnotic Pattern",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Hypnotic_Pattern.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Leomund_s_Tiny_Hut",
+    "title": "李欧蒙小屋",
+    "titleEn": "Leomund's Tiny Hut",
+    "fullTitle": "李欧蒙小屋｜Leomund's Tiny Hut",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Leomund_s_Tiny_Hut.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Lightning_Arrows",
+    "title": "闪电箭矢",
+    "titleEn": "Lightning Arrows",
+    "fullTitle": "闪电箭矢｜Lightning Arrows",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Lightning_Arrows.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Lightning_Bolt",
+    "title": "闪电束",
+    "titleEn": "Lightning Bolt",
+    "fullTitle": "闪电束｜Lightning Bolt",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Lightning_Bolt.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Magic_Circle",
+    "title": "防护法阵",
+    "titleEn": "Magic Circle",
+    "fullTitle": "防护法阵｜Magic Circle",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Magic_Circle.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Major_Image",
+    "title": "高级幻影",
+    "titleEn": "Major Image",
+    "fullTitle": "高级幻影｜Major Image",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Major_Image.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Mass_Healing_Word",
+    "title": "群体治愈真言",
+    "titleEn": "Mass Healing Word",
+    "fullTitle": "群体治愈真言｜Mass Healing Word",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师"
+    ],
+    "path": "spells/Mass_Healing_Word.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Meld_Into_Stone",
+    "title": "融身入石",
+    "titleEn": "Meld Into Stone",
+    "fullTitle": "融身入石｜Meld Into Stone",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Meld_Into_Stone.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Nondetection",
+    "title": "回避侦测",
+    "titleEn": "Nondetection",
+    "fullTitle": "回避侦测｜Nondetection",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Nondetection.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Phantom_Steed",
+    "title": "魅影驹",
+    "titleEn": "Phantom Steed",
+    "fullTitle": "魅影驹｜Phantom Steed",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "幻术",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Phantom_Steed.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Plant_Growth",
+    "title": "植物滋长",
+    "titleEn": "Plant Growth",
+    "fullTitle": "植物滋长｜Plant Growth",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Plant_Growth.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Protection_from_Energy",
+    "title": "防护能量",
+    "titleEn": "Protection from Energy",
+    "fullTitle": "防护能量｜Protection from Energy",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Protection_from_Energy.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Remove_Curse",
+    "title": "移除诅咒",
+    "titleEn": "Remove Curse",
+    "fullTitle": "移除诅咒｜Remove Curse",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Remove_Curse.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Revivify",
+    "title": "回生术",
+    "titleEn": "Revivify",
+    "fullTitle": "回生术｜Revivify",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Revivify.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Sending",
+    "title": "短讯术",
+    "titleEn": "Sending",
+    "fullTitle": "短讯术｜Sending",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Sending.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Sleet_Storm",
+    "title": "雪雨暴",
+    "titleEn": "Sleet Storm",
+    "fullTitle": "雪雨暴｜Sleet Storm",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Sleet_Storm.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Slow",
+    "title": "缓慢术",
+    "titleEn": "Slow",
+    "fullTitle": "缓慢术｜Slow",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Slow.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Speak_with_Dead",
+    "title": "死者交谈",
+    "titleEn": "Speak with Dead",
+    "fullTitle": "死者交谈｜Speak with Dead",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Speak_with_Dead.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Speak_with_Plants",
+    "title": "植物交谈",
+    "titleEn": "Speak with Plants",
+    "fullTitle": "植物交谈｜Speak with Plants",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Speak_with_Plants.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Spirit_Guardians",
+    "title": "灵体卫士",
+    "titleEn": "Spirit Guardians",
+    "fullTitle": "灵体卫士｜Spirit Guardians",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Spirit_Guardians.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Stinking_Cloud",
+    "title": "臭云术",
+    "titleEn": "Stinking Cloud",
+    "fullTitle": "臭云术｜Stinking Cloud",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Stinking_Cloud.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Summon_Fey",
+    "title": "妖精召唤术",
+    "titleEn": "Summon Fey",
+    "fullTitle": "妖精召唤术｜Summon Fey",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Summon_Fey.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Summon_Undead",
+    "title": "亡灵召唤术",
+    "titleEn": "Summon Undead",
+    "fullTitle": "亡灵召唤术｜Summon Undead",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Summon_Undead.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Tongues",
+    "title": "巧言术",
+    "titleEn": "Tongues",
+    "fullTitle": "巧言术｜Tongues",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Tongues.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Vampiric_Touch",
+    "title": "汲血之触",
+    "titleEn": "Vampiric Touch",
+    "fullTitle": "汲血之触｜Vampiric Touch",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "死灵",
+    "classes": [
+      "术士",
+      "",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Vampiric_Touch.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Water_Breathing",
+    "title": "水下呼吸",
+    "titleEn": "Water Breathing",
+    "fullTitle": "水下呼吸｜Water Breathing",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Water_Breathing.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Water_Walk",
+    "title": "水上行走",
+    "titleEn": "Water Walk",
+    "fullTitle": "水上行走｜Water Walk",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "游侠",
+      "术士"
+    ],
+    "path": "spells/Water_Walk.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Wind_Wall",
+    "title": "风墙术",
+    "titleEn": "Wind Wall",
+    "fullTitle": "风墙术｜Wind Wall",
+    "level": "3环",
+    "levelNumeric": 3,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Wind_Wall.html",
+    "source": "3环.html"
+  },
+  {
+    "id": "Arcane_Eye",
+    "title": "秘法眼",
+    "titleEn": "Arcane Eye",
+    "fullTitle": "秘法眼｜Arcane Eye",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "预言",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Arcane_Eye.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Aura_of_Life",
+    "title": "生命灵光",
+    "titleEn": "Aura of Life",
+    "fullTitle": "生命灵光｜Aura of Life",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Aura_of_Life.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Aura_of_Purity",
+    "title": "净化灵光",
+    "titleEn": "Aura of Purity",
+    "fullTitle": "净化灵光｜Aura of Purity",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Aura_of_Purity.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Banishment",
+    "title": "放逐术",
+    "titleEn": "Banishment",
+    "fullTitle": "放逐术｜Banishment",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Banishment.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Blight",
+    "title": "枯萎术",
+    "titleEn": "Blight",
+    "fullTitle": "枯萎术｜Blight",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "死灵",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Blight.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Charm_Monster",
+    "title": "魅惑怪物",
+    "titleEn": "Charm Monster",
+    "fullTitle": "魅惑怪物｜Charm Monster",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Charm_Monster.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Compulsion",
+    "title": "强迫术",
+    "titleEn": "Compulsion",
+    "fullTitle": "强迫术｜Compulsion",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人"
+    ],
+    "path": "spells/Compulsion.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Confusion",
+    "title": "困惑术",
+    "titleEn": "Confusion",
+    "fullTitle": "困惑术｜Confusion",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Confusion.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Conjure_Minor_Elementals",
+    "title": "咒唤微元素群",
+    "titleEn": "Conjure Minor Elementals",
+    "fullTitle": "咒唤微元素群｜Conjure Minor Elementals",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Conjure_Minor_Elementals.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Conjure_Woodland_Beings",
+    "title": "咒唤林地卫士",
+    "titleEn": "Conjure Woodland Beings",
+    "fullTitle": "咒唤林地卫士｜Conjure Woodland Beings",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Conjure_Woodland_Beings.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Control_Water",
+    "title": "操控水体",
+    "titleEn": "Control Water",
+    "fullTitle": "操控水体｜Control Water",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Control_Water.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Death_Ward",
+    "title": "防死结界",
+    "titleEn": "Death Ward",
+    "fullTitle": "防死结界｜Death Ward",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Death_Ward.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Dimension_Door",
+    "title": "任意门",
+    "titleEn": "Dimension Door",
+    "fullTitle": "任意门｜Dimension Door",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Dimension_Door.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Divination",
+    "title": "预言术",
+    "titleEn": "Divination",
+    "fullTitle": "预言术｜Divination",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "预言",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Divination.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Dominate_Beast",
+    "title": "支配野兽",
+    "titleEn": "Dominate Beast",
+    "fullTitle": "支配野兽｜Dominate Beast",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "惑控",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士"
+    ],
+    "path": "spells/Dominate_Beast.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Evard_s_Black_Tentacles",
+    "title": "艾伐黑触手",
+    "titleEn": "Evard's Black Tentacles",
+    "fullTitle": "艾伐黑触手｜Evard's Black Tentacles",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Evard_s_Black_Tentacles.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Fabricate",
+    "title": "鬼斧神工",
+    "titleEn": "Fabricate",
+    "fullTitle": "鬼斧神工｜Fabricate",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "变化",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Fabricate.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Fire_Shield",
+    "title": "火焰护盾",
+    "titleEn": "Fire Shield",
+    "fullTitle": "火焰护盾｜Fire Shield",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Fire_Shield.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Fount_of_Moonlight",
+    "title": "月光涌泉",
+    "titleEn": "Fount of Moonlight",
+    "fullTitle": "月光涌泉｜Fount of Moonlight",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊"
+    ],
+    "path": "spells/Fount_of_Moonlight.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Freedom_of_Movement",
+    "title": "行动自如",
+    "titleEn": "Freedom of Movement",
+    "fullTitle": "行动自如｜Freedom of Movement",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Freedom_of_Movement.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Giant_Insect",
+    "title": "巨虫术",
+    "titleEn": "Giant Insect",
+    "fullTitle": "巨虫术｜Giant Insect",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Giant_Insect.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Grasping_Vine",
+    "title": "擒抱藤",
+    "titleEn": "Grasping Vine",
+    "fullTitle": "擒抱藤｜Grasping Vine",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Grasping_Vine.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Greater_Invisibility",
+    "title": "高等隐形术",
+    "titleEn": "Greater Invisibility",
+    "fullTitle": "高等隐形术｜Greater Invisibility",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Greater_Invisibility.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Guardian_of_Faith",
+    "title": "信仰守卫",
+    "titleEn": "Guardian of Faith",
+    "fullTitle": "信仰守卫｜Guardian of Faith",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Guardian_of_Faith.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Hallucinatory_Terrain",
+    "title": "幻景",
+    "titleEn": "Hallucinatory Terrain",
+    "fullTitle": "幻景｜Hallucinatory Terrain",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Hallucinatory_Terrain.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Ice_Storm",
+    "title": "冰风暴",
+    "titleEn": "Ice Storm",
+    "fullTitle": "冰风暴｜Ice Storm",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Ice_Storm.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Leomund_s_Secret_Chest",
+    "title": "李欧蒙秘藏箱",
+    "titleEn": "Leomund's Secret Chest",
+    "fullTitle": "李欧蒙秘藏箱｜Leomund's Secret Chest",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Leomund_s_Secret_Chest.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Locate_Creature",
+    "title": "生物定位术",
+    "titleEn": "Locate Creature",
+    "fullTitle": "生物定位术｜Locate Creature",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Locate_Creature.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Mordenkainen_s_Faithful_Hound",
+    "title": "魔邓肯忠犬",
+    "titleEn": "Mordenkainen's Faithful Hound",
+    "fullTitle": "魔邓肯忠犬｜Mordenkainen's Faithful Hound",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Mordenkainen_s_Faithful_Hound.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Mordenkainen_s_Private_Sanctum",
+    "title": "魔邓肯私人密室",
+    "titleEn": "Mordenkainen's Private Sanctum",
+    "fullTitle": "魔邓肯私人密室｜Mordenkainen's Private Sanctum",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Mordenkainen_s_Private_Sanctum.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Otiluke_s_Resilient_Sphere",
+    "title": "欧提路克弹力法球",
+    "titleEn": "Otiluke's Resilient Sphere",
+    "fullTitle": "欧提路克弹力法球｜Otiluke's Resilient Sphere",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Otiluke_s_Resilient_Sphere.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Phantasmal_Killer",
+    "title": "魅影杀手",
+    "titleEn": "Phantasmal Killer",
+    "fullTitle": "魅影杀手｜Phantasmal Killer",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Phantasmal_Killer.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Polymorph",
+    "title": "变形术",
+    "titleEn": "Polymorph",
+    "fullTitle": "变形术｜Polymorph",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Polymorph.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Staggering_Smite",
+    "title": "惊惧斩",
+    "titleEn": "Staggering Smite",
+    "fullTitle": "惊惧斩｜Staggering Smite",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "惑控",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Staggering_Smite.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Stone_Shape",
+    "title": "塑石术",
+    "titleEn": "Stone Shape",
+    "fullTitle": "塑石术｜Stone Shape",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Stone_Shape.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Stoneskin",
+    "title": "石肤术",
+    "titleEn": "Stoneskin",
+    "fullTitle": "石肤术｜Stoneskin",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "防护",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Stoneskin.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Summon_Aberration",
+    "title": "异怪召唤术",
+    "titleEn": "Summon Aberration",
+    "fullTitle": "异怪召唤术｜Summon Aberration",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Summon_Aberration.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Summon_Construct",
+    "title": "构装召唤术",
+    "titleEn": "Summon Construct",
+    "fullTitle": "构装召唤术｜Summon Construct",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Summon_Construct.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Summon_Elemental",
+    "title": "元素召唤术",
+    "titleEn": "Summon Elemental",
+    "fullTitle": "元素召唤术｜Summon Elemental",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Summon_Elemental.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Vitriolic_Sphere",
+    "title": "浓酸球",
+    "titleEn": "Vitriolic Sphere",
+    "fullTitle": "浓酸球｜Vitriolic Sphere",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Vitriolic_Sphere.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Wall_of_Fire",
+    "title": "火墙术",
+    "titleEn": "Wall of Fire",
+    "fullTitle": "火墙术｜Wall of Fire",
+    "level": "4环",
+    "levelNumeric": 4,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Wall_of_Fire.html",
+    "source": "4环.html"
+  },
+  {
+    "id": "Animate_Objects",
+    "title": "活化物件",
+    "titleEn": "Animate Objects",
+    "fullTitle": "活化物件｜Animate Objects",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Animate_Objects.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Antilife_Shell",
+    "title": "防活物护罩",
+    "titleEn": "Antilife Shell",
+    "fullTitle": "防活物护罩｜Antilife Shell",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Antilife_Shell.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Awaken",
+    "title": "启蒙术",
+    "titleEn": "Awaken",
+    "fullTitle": "启蒙术｜Awaken",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊"
+    ],
+    "path": "spells/Awaken.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Banishing_Smite",
+    "title": "放逐斩",
+    "titleEn": "Banishing Smite",
+    "fullTitle": "放逐斩｜Banishing Smite",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Banishing_Smite.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Bigby_s_Hand",
+    "title": "毕格比之手",
+    "titleEn": "Bigby's Hand",
+    "fullTitle": "毕格比之手｜Bigby's Hand",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Bigby_s_Hand.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Circle_of_Power",
+    "title": "原力法阵",
+    "titleEn": "Circle of Power",
+    "fullTitle": "原力法阵｜Circle of Power",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士",
+      "法师"
+    ],
+    "path": "spells/Circle_of_Power.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Cloudkill",
+    "title": "死云术",
+    "titleEn": "Cloudkill",
+    "fullTitle": "死云术｜Cloudkill",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Cloudkill.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Commune",
+    "title": "通神术",
+    "titleEn": "Commune",
+    "fullTitle": "通神术｜Commune",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "预言",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Commune.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Commune_with_Nature",
+    "title": "问道自然",
+    "titleEn": "Commune with Nature",
+    "fullTitle": "问道自然｜Commune with Nature",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "预言",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Commune_with_Nature.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Cone_of_Cold",
+    "title": "寒冰锥",
+    "titleEn": "Cone of Cold",
+    "fullTitle": "寒冰锥｜Cone of Cold",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Cone_of_Cold.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Conjure_Elemental",
+    "title": "咒唤元素",
+    "titleEn": "Conjure Elemental",
+    "fullTitle": "咒唤元素｜Conjure Elemental",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Conjure_Elemental.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Conjure_Volley",
+    "title": "万箭齐发",
+    "titleEn": "Conjure Volley",
+    "fullTitle": "万箭齐发｜Conjure Volley",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Conjure_Volley.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Contact_Other_Plane",
+    "title": "异界探知",
+    "titleEn": "Contact Other Plane",
+    "fullTitle": "异界探知｜Contact Other Plane",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "预言",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Contact_Other_Plane.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Contagion",
+    "title": "疫病术",
+    "titleEn": "Contagion",
+    "fullTitle": "疫病术｜Contagion",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Contagion.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Creation",
+    "title": "造物术",
+    "titleEn": "Creation",
+    "fullTitle": "造物术｜Creation",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "幻术",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Creation.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Destructive_Wave",
+    "title": "湮灭波",
+    "titleEn": "Destructive Wave",
+    "fullTitle": "湮灭波｜Destructive Wave",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "圣武士"
+    ],
+    "path": "spells/Destructive_Wave.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Dispel_Evil_and_Good",
+    "title": "驱逐善恶",
+    "titleEn": "Dispel Evil and Good",
+    "fullTitle": "驱逐善恶｜Dispel Evil and Good",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Dispel_Evil_and_Good.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Dominate_Person",
+    "title": "支配类人",
+    "titleEn": "Dominate Person",
+    "fullTitle": "支配类人｜Dominate Person",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Dominate_Person.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Dream",
+    "title": "托梦术",
+    "titleEn": "Dream",
+    "fullTitle": "托梦术｜Dream",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Dream.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Flame_Strike",
+    "title": "焰击术",
+    "titleEn": "Flame Strike",
+    "fullTitle": "焰击术｜Flame Strike",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Flame_Strike.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Geas",
+    "title": "指使术",
+    "titleEn": "Geas",
+    "fullTitle": "指使术｜Geas",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "法师"
+    ],
+    "path": "spells/Geas.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Greater_Restoration",
+    "title": "高等复原术",
+    "titleEn": "Greater Restoration",
+    "fullTitle": "高等复原术｜Greater Restoration",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "圣武士",
+      "游侠"
+    ],
+    "path": "spells/Greater_Restoration.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Hallow",
+    "title": "圣居",
+    "titleEn": "Hallow",
+    "fullTitle": "圣居｜Hallow",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Hallow.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Hold_Monster",
+    "title": "定身怪物",
+    "titleEn": "Hold Monster",
+    "fullTitle": "定身怪物｜Hold Monster",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Hold_Monster.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Insect_Plague",
+    "title": "疫病虫群",
+    "titleEn": "Insect Plague",
+    "fullTitle": "疫病虫群｜Insect Plague",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "术士"
+    ],
+    "path": "spells/Insect_Plague.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Jallarzi_s_Storm_of_Radiance",
+    "title": "贾拉兹光辉风暴",
+    "titleEn": "Jallarzi's Storm of Radiance",
+    "fullTitle": "贾拉兹光辉风暴｜Jallarzi's Storm of Radiance",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Jallarzi_s_Storm_of_Radiance.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Legend_Lore",
+    "title": "通晓传奇",
+    "titleEn": "Legend Lore",
+    "fullTitle": "通晓传奇｜Legend Lore",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Legend_Lore.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Mass_Cure_Wounds",
+    "title": "群体疗伤术",
+    "titleEn": "Mass Cure Wounds",
+    "fullTitle": "群体疗伤术｜Mass Cure Wounds",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Mass_Cure_Wounds.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Mislead",
+    "title": "假象术",
+    "titleEn": "Mislead",
+    "fullTitle": "假象术｜Mislead",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Mislead.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Modify_Memory",
+    "title": "篡改记忆",
+    "titleEn": "Modify Memory",
+    "fullTitle": "篡改记忆｜Modify Memory",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Modify_Memory.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Passwall",
+    "title": "穿墙术",
+    "titleEn": "Passwall",
+    "fullTitle": "穿墙术｜Passwall",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "变化",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Passwall.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Planar_Binding",
+    "title": "异界誓缚",
+    "titleEn": "Planar Binding",
+    "fullTitle": "异界誓缚｜Planar Binding",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Planar_Binding.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Raise_Dead",
+    "title": "死者复活",
+    "titleEn": "Raise Dead",
+    "fullTitle": "死者复活｜Raise Dead",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "死灵",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Raise_Dead.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Rary_s_Telepathic_Bond",
+    "title": "拉瑞心灵联结",
+    "titleEn": "Rary's Telepathic Bond",
+    "fullTitle": "拉瑞心灵联结｜Rary's Telepathic Bond",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Rary_s_Telepathic_Bond.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Reincarnate",
+    "title": "转生术",
+    "titleEn": "Reincarnate",
+    "fullTitle": "转生术｜Reincarnate",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "死灵",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Reincarnate.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Scrying",
+    "title": "探知术",
+    "titleEn": "Scrying",
+    "fullTitle": "探知术｜Scrying",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Scrying.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Seeming",
+    "title": "伪装术",
+    "titleEn": "Seeming",
+    "fullTitle": "伪装术｜Seeming",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Seeming.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Steel_Wind_Strike",
+    "title": "钢风斩",
+    "titleEn": "Steel Wind Strike",
+    "fullTitle": "钢风斩｜Steel Wind Strike",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "游侠",
+      "法师"
+    ],
+    "path": "spells/Steel_Wind_Strike.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Summon_Celestial",
+    "title": "天界召唤术",
+    "titleEn": "Summon Celestial",
+    "fullTitle": "天界召唤术｜Summon Celestial",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "牧师",
+      "圣武士"
+    ],
+    "path": "spells/Summon_Celestial.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Summon_Dragon",
+    "title": "龙类召唤术",
+    "titleEn": "Summon Dragon",
+    "fullTitle": "龙类召唤术｜Summon Dragon",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Summon_Dragon.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Swift_Quiver",
+    "title": "迅捷箭袋",
+    "titleEn": "Swift Quiver",
+    "fullTitle": "迅捷箭袋｜Swift Quiver",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "变化",
+    "classes": [
+      "游侠"
+    ],
+    "path": "spells/Swift_Quiver.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Synaptic_Static",
+    "title": "突触静止",
+    "titleEn": "Synaptic Static",
+    "fullTitle": "突触静止｜Synaptic Static",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Synaptic_Static.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Telekinesis",
+    "title": "心灵遥控",
+    "titleEn": "Telekinesis",
+    "fullTitle": "心灵遥控｜Telekinesis",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Telekinesis.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Teleportation_Circle",
+    "title": "传送法阵",
+    "titleEn": "Teleportation Circle",
+    "fullTitle": "传送法阵｜Teleportation Circle",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Teleportation_Circle.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Tree_Stride",
+    "title": "树跃术",
+    "titleEn": "Tree Stride",
+    "fullTitle": "树跃术｜Tree Stride",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "游侠"
+    ],
+    "path": "spells/Tree_Stride.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Wall_of_Force",
+    "title": "力场墙",
+    "titleEn": "Wall of Force",
+    "fullTitle": "力场墙｜Wall of Force",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Wall_of_Force.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Wall_of_Stone",
+    "title": "石墙术",
+    "titleEn": "Wall of Stone",
+    "fullTitle": "石墙术｜Wall of Stone",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "塑能",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Wall_of_Stone.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Yolande_s_Regal_Presence",
+    "title": "悠兰德王者威仪",
+    "titleEn": "Yolande's Regal Presence",
+    "fullTitle": "悠兰德王者威仪｜Yolande's Regal Presence",
+    "level": "5环",
+    "levelNumeric": 5,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Yolande_s_Regal_Presence.html",
+    "source": "5环.html"
+  },
+  {
+    "id": "Arcane_Gate",
+    "title": "秘法门",
+    "titleEn": "Arcane Gate",
+    "fullTitle": "秘法门｜Arcane Gate",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Arcane_Gate.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Blade_Barrier",
+    "title": "剑刃护壁",
+    "titleEn": "Blade Barrier",
+    "fullTitle": "剑刃护壁｜Blade Barrier",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Blade_Barrier.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Chain_Lightning",
+    "title": "连锁闪电",
+    "titleEn": "Chain Lightning",
+    "fullTitle": "连锁闪电｜Chain Lightning",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Chain_Lightning.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Circle_of_Death",
+    "title": "死亡法阵",
+    "titleEn": "Circle of Death",
+    "fullTitle": "死亡法阵｜Circle of Death",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "",
+    "classes": [],
+    "path": "spells/Circle_of_Death.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Conjure_Fey",
+    "title": "咒唤妖精",
+    "titleEn": "Conjure Fey",
+    "fullTitle": "咒唤妖精｜Conjure Fey",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "",
+    "classes": [],
+    "path": "spells/Conjure_Fey.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Contingency",
+    "title": "触发术",
+    "titleEn": "Contingency",
+    "fullTitle": "触发术｜Contingency",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "防护",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Contingency.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Create_Undead",
+    "title": "唤起亡灵",
+    "titleEn": "Create Undead",
+    "fullTitle": "唤起亡灵｜Create Undead",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Create_Undead.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Disintegrate",
+    "title": "解离术",
+    "titleEn": "Disintegrate",
+    "fullTitle": "解离术｜Disintegrate",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Disintegrate.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Drawmij_s_Instant_Summons",
+    "title": "卓姆吉瞬间召唤",
+    "titleEn": "Drawmij's Instant Summons",
+    "fullTitle": "卓姆吉瞬间召唤｜Drawmij's Instant Summons",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Drawmij_s_Instant_Summons.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Eyebite",
+    "title": "摄心目光",
+    "titleEn": "Eyebite",
+    "fullTitle": "摄心目光｜Eyebite",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "死灵",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Eyebite.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Find_the_Path",
+    "title": "寻路术",
+    "titleEn": "Find the Path",
+    "fullTitle": "寻路术｜Find the Path",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Find_the_Path.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Flesh_to_Stone",
+    "title": "石化术",
+    "titleEn": "Flesh to Stone",
+    "fullTitle": "石化术｜Flesh to Stone",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Flesh_to_Stone.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Forbiddance",
+    "title": "禁制术",
+    "titleEn": "Forbiddance",
+    "fullTitle": "禁制术｜Forbiddance",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "防护",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Forbiddance.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Globe_of_Invulnerability",
+    "title": "法术无效结界",
+    "titleEn": "Globe of Invulnerability",
+    "fullTitle": "法术无效结界｜Globe of Invulnerability",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "防护",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Globe_of_Invulnerability.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Guards_and_Wards",
+    "title": "铜墙铁壁",
+    "titleEn": "Guards and Wards",
+    "fullTitle": "铜墙铁壁｜Guards and Wards",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Guards_and_Wards.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Harm",
+    "title": "重伤术",
+    "titleEn": "Harm",
+    "fullTitle": "重伤术｜Harm",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "死灵",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Harm.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Heal",
+    "title": "医疗术",
+    "titleEn": "Heal",
+    "fullTitle": "医疗术｜Heal",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Heal.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Heroes__Feast",
+    "title": "英雄宴",
+    "titleEn": "Heroes' Feast",
+    "fullTitle": "英雄宴｜Heroes' Feast",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Heroes__Feast.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Magic_Jar",
+    "title": "魔魂壶",
+    "titleEn": "Magic Jar",
+    "fullTitle": "魔魂壶｜Magic Jar",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "死灵",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Magic_Jar.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Mass_Suggestion",
+    "title": "群体暗示术",
+    "titleEn": "Mass Suggestion",
+    "fullTitle": "群体暗示术｜Mass Suggestion",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Mass_Suggestion.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Move_Earth",
+    "title": "地动术",
+    "titleEn": "Move Earth",
+    "fullTitle": "地动术｜Move Earth",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Move_Earth.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Otiluke_s_Freezing_Sphere",
+    "title": "欧提路克冰封法球",
+    "titleEn": "Otiluke's Freezing Sphere",
+    "fullTitle": "欧提路克冰封法球｜Otiluke's Freezing Sphere",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Otiluke_s_Freezing_Sphere.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Otto_s_Irresistible_Dance",
+    "title": "奥图迷舞",
+    "titleEn": "Otto's Irresistible Dance",
+    "fullTitle": "奥图迷舞｜Otto's Irresistible Dance",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Otto_s_Irresistible_Dance.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Planar_Ally",
+    "title": "异界誓盟",
+    "titleEn": "Planar Ally",
+    "fullTitle": "异界誓盟｜Planar Ally",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Planar_Ally.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Programmed_Illusion",
+    "title": "预置幻象",
+    "titleEn": "Programmed Illusion",
+    "fullTitle": "预置幻象｜Programmed Illusion",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Programmed_Illusion.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Summon_Fiend",
+    "title": "邪魔召唤术",
+    "titleEn": "Summon Fiend",
+    "fullTitle": "邪魔召唤术｜Summon Fiend",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Summon_Fiend.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Sunbeam",
+    "title": "阳炎射线",
+    "titleEn": "Sunbeam",
+    "fullTitle": "阳炎射线｜Sunbeam",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "塑能",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Sunbeam.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Tasha_s_Bubbling_Cauldron",
+    "title": "塔莎泡泡坩埚",
+    "titleEn": "Tasha's Bubbling Cauldron",
+    "fullTitle": "塔莎泡泡坩埚｜Tasha's Bubbling Cauldron",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Tasha_s_Bubbling_Cauldron.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Transport_via_Plants",
+    "title": "木遁术",
+    "titleEn": "Transport via Plants",
+    "fullTitle": "木遁术｜Transport via Plants",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Transport_via_Plants.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "True_Seeing",
+    "title": "真知术",
+    "titleEn": "True Seeing",
+    "fullTitle": "真知术｜True Seeing",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/True_Seeing.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Wall_of_Ice",
+    "title": "冰墙术",
+    "titleEn": "Wall of Ice",
+    "fullTitle": "冰墙术｜Wall of Ice",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "塑能",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Wall_of_Ice.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Wall_of_Thorns",
+    "title": "棘墙术",
+    "titleEn": "Wall of Thorns",
+    "fullTitle": "棘墙术｜Wall of Thorns",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Wall_of_Thorns.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Wind_Walk",
+    "title": "御风而行",
+    "titleEn": "Wind Walk",
+    "fullTitle": "御风而行｜Wind Walk",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "变化",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Wind_Walk.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Word_of_Recall",
+    "title": "回返真言",
+    "titleEn": "Word of Recall",
+    "fullTitle": "回返真言｜Word of Recall",
+    "level": "6环",
+    "levelNumeric": 6,
+    "school": "咒法",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Word_of_Recall.html",
+    "source": "6环.html"
+  },
+  {
+    "id": "Conjure_Celestial",
+    "title": "咒唤圣光",
+    "titleEn": "Conjure Celestial",
+    "fullTitle": "咒唤圣光｜Conjure Celestial",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "咒法",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Conjure_Celestial.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Delayed_Blast_Fireball",
+    "title": "延迟爆裂火球",
+    "titleEn": "Delayed Blast Fireball",
+    "fullTitle": "延迟爆裂火球｜Delayed Blast Fireball",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Delayed_Blast_Fireball.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Divine_Word",
+    "title": "圣言术",
+    "titleEn": "Divine Word",
+    "fullTitle": "圣言术｜Divine Word",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "塑能",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Divine_Word.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Etherealness",
+    "title": "以太化",
+    "titleEn": "Etherealness",
+    "fullTitle": "以太化｜Etherealness",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Etherealness.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Finger_of_Death",
+    "title": "死亡一指",
+    "titleEn": "Finger of Death",
+    "fullTitle": "死亡一指｜Finger of Death",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "死灵",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Finger_of_Death.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Fire_Storm",
+    "title": "火焰风暴",
+    "titleEn": "Fire Storm",
+    "fullTitle": "火焰风暴｜Fire Storm",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "塑能",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "术士"
+    ],
+    "path": "spells/Fire_Storm.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Forcecage",
+    "title": "力场监牢",
+    "titleEn": "Forcecage",
+    "fullTitle": "力场监牢｜Forcecage",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Forcecage.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Mirage_Arcane",
+    "title": "海市蜃楼",
+    "titleEn": "Mirage Arcane",
+    "fullTitle": "海市蜃楼｜Mirage Arcane",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Mirage_Arcane.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Mordenkainen_s_Magnificent_Mansion",
+    "title": "魔邓肯豪宅术",
+    "titleEn": "Mordenkainen's Magnificent Mansion",
+    "fullTitle": "魔邓肯豪宅术｜Mordenkainen's Magnificent Mansion",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Mordenkainen_s_Magnificent_Mansion.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Mordenkainen_s_Sword",
+    "title": "魔邓肯之剑",
+    "titleEn": "Mordenkainen's Sword",
+    "fullTitle": "魔邓肯之剑｜Mordenkainen's Sword",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Mordenkainen_s_Sword.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Plane_Shift",
+    "title": "位面转移",
+    "titleEn": "Plane Shift",
+    "fullTitle": "位面转移｜Plane Shift",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "咒法",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Plane_Shift.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Power_Word_Fortify",
+    "title": "律令巩固",
+    "titleEn": "Power Word Fortify",
+    "fullTitle": "律令巩固｜Power Word Fortify",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师"
+    ],
+    "path": "spells/Power_Word_Fortify.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Prismatic_Spray",
+    "title": "虹光喷射",
+    "titleEn": "Prismatic Spray",
+    "fullTitle": "虹光喷射｜Prismatic Spray",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "塑能",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Prismatic_Spray.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Project_Image",
+    "title": "投影术",
+    "titleEn": "Project Image",
+    "fullTitle": "投影术｜Project Image",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "幻术",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Project_Image.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Regenerate",
+    "title": "再生术",
+    "titleEn": "Regenerate",
+    "fullTitle": "再生术｜Regenerate",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/Regenerate.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Resurrection",
+    "title": "复生术",
+    "titleEn": "Resurrection",
+    "fullTitle": "复生术｜Resurrection",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "死灵",
+    "classes": [
+      "吟游诗人",
+      "牧师"
+    ],
+    "path": "spells/Resurrection.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Reverse_Gravity",
+    "title": "反转重力",
+    "titleEn": "Reverse Gravity",
+    "fullTitle": "反转重力｜Reverse Gravity",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Reverse_Gravity.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Sequester",
+    "title": "隔离术",
+    "titleEn": "Sequester",
+    "fullTitle": "隔离术｜Sequester",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "变化",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Sequester.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Simulacrum",
+    "title": "拟像术",
+    "titleEn": "Simulacrum",
+    "fullTitle": "拟像术｜Simulacrum",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "幻术",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Simulacrum.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Symbol",
+    "title": "徽记术",
+    "titleEn": "Symbol",
+    "fullTitle": "徽记术｜Symbol",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Symbol.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Teleport",
+    "title": "传送术",
+    "titleEn": "Teleport",
+    "fullTitle": "传送术｜Teleport",
+    "level": "7环",
+    "levelNumeric": 7,
+    "school": "咒法",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Teleport.html",
+    "source": "7环.html"
+  },
+  {
+    "id": "Animal_Shapes",
+    "title": "动物形态",
+    "titleEn": "Animal Shapes",
+    "fullTitle": "动物形态｜Animal Shapes",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "变化",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Animal_Shapes.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Antimagic_Field",
+    "title": "反魔法场",
+    "titleEn": "Antimagic Field",
+    "fullTitle": "反魔法场｜Antimagic Field",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "防护",
+    "classes": [
+      "牧师",
+      "法师"
+    ],
+    "path": "spells/Antimagic_Field.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "AntipathySympathy",
+    "title": "嫌恶术/关怀术",
+    "titleEn": "Antipathy/Sympathy",
+    "fullTitle": "嫌恶术/关怀术｜Antipathy/Sympathy",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/AntipathySympathy.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Befuddlement",
+    "title": "摧心术",
+    "titleEn": "Befuddlement",
+    "fullTitle": "摧心术｜Befuddlement",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Befuddlement.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Clone",
+    "title": "克隆术",
+    "titleEn": "Clone",
+    "fullTitle": "克隆术｜Clone",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "死灵",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Clone.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Control_Weather",
+    "title": "操控天气",
+    "titleEn": "Control Weather",
+    "fullTitle": "操控天气｜Control Weather",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Control_Weather.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Demiplane",
+    "title": "半位面",
+    "titleEn": "Demiplane",
+    "fullTitle": "半位面｜Demiplane",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Demiplane.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Dominate_Monster",
+    "title": "支配怪物",
+    "titleEn": "Dominate Monster",
+    "fullTitle": "支配怪物｜Dominate Monster",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Dominate_Monster.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Earthquake",
+    "title": "地震术",
+    "titleEn": "Earthquake",
+    "fullTitle": "地震术｜Earthquake",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "变化",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "术士"
+    ],
+    "path": "spells/Earthquake.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Glibness",
+    "title": "花言巧语",
+    "titleEn": "Glibness",
+    "fullTitle": "花言巧语｜Glibness",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "魔契师"
+    ],
+    "path": "spells/Glibness.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Holy_Aura",
+    "title": "圣洁灵光",
+    "titleEn": "Holy Aura",
+    "fullTitle": "圣洁灵光｜Holy Aura",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "防护",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Holy_Aura.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Incendiary_Cloud",
+    "title": "焚云术",
+    "titleEn": "Incendiary Cloud",
+    "fullTitle": "焚云术｜Incendiary Cloud",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Incendiary_Cloud.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Maze",
+    "title": "迷宫术",
+    "titleEn": "Maze",
+    "fullTitle": "迷宫术｜Maze",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "咒法",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Maze.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Mind_Blank",
+    "title": "心灵屏障",
+    "titleEn": "Mind Blank",
+    "fullTitle": "心灵屏障｜Mind Blank",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Mind_Blank.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Power_Word_Stun",
+    "title": "律令震慑",
+    "titleEn": "Power Word Stun",
+    "fullTitle": "律令震慑｜Power Word Stun",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Power_Word_Stun.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Sunburst",
+    "title": "阳炎爆",
+    "titleEn": "Sunburst",
+    "fullTitle": "阳炎爆｜Sunburst",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "塑能",
+    "classes": [
+      "牧师",
+      "德鲁伊",
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Sunburst.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Telepathy",
+    "title": "心灵感应",
+    "titleEn": "Telepathy",
+    "fullTitle": "心灵感应｜Telepathy",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "预言",
+    "classes": [
+      "法师"
+    ],
+    "path": "spells/Telepathy.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Tsunami",
+    "title": "海啸术",
+    "titleEn": "Tsunami",
+    "fullTitle": "海啸术｜Tsunami",
+    "level": "8环",
+    "levelNumeric": 8,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Tsunami.html",
+    "source": "8环.html"
+  },
+  {
+    "id": "Astral_Projection",
+    "title": "星界投影",
+    "titleEn": "Astral Projection",
+    "fullTitle": "星界投影｜Astral Projection",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Astral_Projection.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Foresight",
+    "title": "预见术",
+    "titleEn": "Foresight",
+    "fullTitle": "预见术｜Foresight",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "预言",
+    "classes": [
+      "吟游诗人",
+      "德鲁伊",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Foresight.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Gate",
+    "title": "异界之门",
+    "titleEn": "Gate",
+    "fullTitle": "异界之门｜Gate",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "咒法",
+    "classes": [
+      "牧师",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Gate.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Imprisonment",
+    "title": "禁锢术",
+    "titleEn": "Imprisonment",
+    "fullTitle": "禁锢术｜Imprisonment",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "防护",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Imprisonment.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Mass_Heal",
+    "title": "群体医疗术",
+    "titleEn": "Mass Heal",
+    "fullTitle": "群体医疗术｜Mass Heal",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "防护",
+    "classes": [
+      "牧师"
+    ],
+    "path": "spells/Mass_Heal.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Meteor_Swarm",
+    "title": "流星爆",
+    "titleEn": "Meteor Swarm",
+    "fullTitle": "流星爆｜Meteor Swarm",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "塑能",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Meteor_Swarm.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Power_Word_Heal",
+    "title": "律令医疗",
+    "titleEn": "Power Word Heal",
+    "fullTitle": "律令医疗｜Power Word Heal",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "牧师"
+    ],
+    "path": "spells/Power_Word_Heal.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Power_Word_Kill",
+    "title": "律令死亡",
+    "titleEn": "Power Word Kill",
+    "fullTitle": "律令死亡｜Power Word Kill",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "惑控",
+    "classes": [
+      "吟游诗人",
+      "术士",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Power_Word_Kill.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Prismatic_Wall",
+    "title": "虹光法墙",
+    "titleEn": "Prismatic Wall",
+    "fullTitle": "虹光法墙｜Prismatic Wall",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "防护",
+    "classes": [
+      "吟游诗人",
+      "法师"
+    ],
+    "path": "spells/Prismatic_Wall.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Shapechange",
+    "title": "形体变化",
+    "titleEn": "Shapechange",
+    "fullTitle": "形体变化｜Shapechange",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "变化",
+    "classes": [
+      "德鲁伊",
+      "法师"
+    ],
+    "path": "spells/Shapechange.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Storm_of_Vengeance",
+    "title": "复仇风暴",
+    "titleEn": "Storm of Vengeance",
+    "fullTitle": "复仇风暴｜Storm of Vengeance",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
+    "path": "spells/Storm_of_Vengeance.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Time_Stop",
+    "title": "时间停止",
+    "titleEn": "Time Stop",
+    "fullTitle": "时间停止｜Time Stop",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "变化",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Time_Stop.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "True_Polymorph",
+    "title": "完全变形术",
+    "titleEn": "True Polymorph",
+    "fullTitle": "完全变形术｜True Polymorph",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "变化",
+    "classes": [
+      "吟游诗人",
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/True_Polymorph.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "True_Resurrection",
+    "title": "完全复生术",
+    "titleEn": "True Resurrection",
+    "fullTitle": "完全复生术｜True Resurrection",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "死灵",
+    "classes": [
+      "牧师",
+      "德鲁伊"
+    ],
+    "path": "spells/True_Resurrection.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Weird",
+    "title": "怪影杀手",
+    "titleEn": "Weird",
+    "fullTitle": "怪影杀手｜Weird",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "幻术",
+    "classes": [
+      "魔契师",
+      "法师"
+    ],
+    "path": "spells/Weird.html",
+    "source": "9环.html"
+  },
+  {
+    "id": "Wish",
+    "title": "祈愿术",
+    "titleEn": "Wish",
+    "fullTitle": "祈愿术｜Wish",
+    "level": "9环",
+    "levelNumeric": 9,
+    "school": "咒法",
+    "classes": [
+      "术士",
+      "法师"
+    ],
+    "path": "spells/Wish.html",
+    "source": "9环.html"
+  }
+]

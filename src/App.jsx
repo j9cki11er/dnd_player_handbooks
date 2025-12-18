@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
+import spellData from './data-spells.json';
 import { Search, Bookmark, Book, Layout, ChevronRight, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('browser'); // browser, bookmarks, search
+  const [activeTab, setActiveTab] = useState('browser'); // browser, bookmarks, search, spells
   const [selectedItem, setSelectedItem] = useState(null); // The actual content item to show (file)
   const [currentPath, setCurrentPath] = useState([]); // Array of strings represent current directory path
   const [searchQuery, setSearchQuery] = useState('');
@@ -17,6 +18,17 @@ export default function App() {
   const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
   const [pendingBookmark, setPendingBookmark] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // New State for Spell Browser
+  const [spellFilters, setSpellFilters] = useState({ class: '全部', level: '0' });
+
+  // Mobile detection
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Content loading states
   const [loadedContent, setLoadedContent] = useState('');
@@ -37,6 +49,20 @@ export default function App() {
     if (!searchQuery) return [];
     return fuse.search(searchQuery).map(r => r.item);
   }, [searchQuery, fuse]);
+
+  // Memoize filtered spells
+  const filteredSpells = useMemo(() => {
+    return spellData.filter(spell => {
+      const classMatch = spellFilters.class === '全部' || spell.classes.includes(spellFilters.class);
+      // spell.levelNumeric is number, spellFilters.level is '全部' or number/string '0'
+      const levelMatch = spellFilters.level === '全部' || spell.levelNumeric === parseInt(spellFilters.level);
+      const searchMatch = !searchQuery ||
+        spell.title.includes(searchQuery) ||
+        spell.titleEn.toLowerCase().includes(searchQuery.toLowerCase());
+
+      return classMatch && levelMatch && searchMatch;
+    });
+  }, [spellFilters, searchQuery]);
 
   // Build tree structure for the sidebar
   const categoryTree = useMemo(() => {
@@ -276,8 +302,14 @@ export default function App() {
           <NavItem
             icon={<Layout size={20} />}
             label="资料游览"
-            active={activeTab === 'browser' && currentPath.length === 0}
+            active={activeTab === 'browser'}
             onClick={() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); }}
+          />
+          <NavItem
+            icon={<Book size={20} />}
+            label="法术列表"
+            active={activeTab === 'spells'}
+            onClick={() => { setActiveTab('spells'); setSelectedItem(null); setSearchQuery(''); }}
           />
           <NavItem
             icon={<Search size={20} />}
@@ -381,6 +413,106 @@ export default function App() {
             </motion.div>
           )}
 
+          {activeTab === 'spells' && (
+            <div className="h-full flex flex-col md:flex-row gap-4 overflow-hidden relative">
+              {/* Left Panel: List & Filters */}
+              <div className={`flex-1 flex flex-col h-full overflow-hidden transition-all duration-300 ${selectedItem && !isMobile ? 'md:max-w-md' : ''}`}>
+                <div className="view-header mb-4 shrink-0">
+                  <h2 className="view-title gold-text">法术列表</h2>
+                </div>
+
+                {/* Spell Filters */}
+                <div className="glass-panel p-4 mb-4 flex flex-wrap gap-2 items-center shrink-0">
+                  <div className="filter-group">
+                    <select
+                      value={spellFilters.class}
+                      onChange={(e) => setSpellFilters(prev => ({ ...prev, class: e.target.value }))}
+                      className="bg-black/40 border border-gold/30 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-gold"
+                    >
+                      <option value="全部">全部职业</option>
+                      {['吟游诗人', '牧师', '德鲁伊', '圣武士', '游侠', '术士', '魔契师', '法师'].map(c => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="filter-group">
+                    <select
+                      value={spellFilters.level}
+                      onChange={(e) => setSpellFilters(prev => ({ ...prev, level: e.target.value }))}
+                      className="bg-black/40 border border-gold/30 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-gold"
+                    >
+                      <option value="全部">全部环阶</option>
+                      <option value="0">戏法</option>
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(l => (
+                        <option key={l} value={l}>{l}环</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="filter-group flex-grow min-w-[100px]">
+                    <div className="relative">
+                      <Search size={14} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400" />
+                      <input
+                        type="text"
+                        placeholder="搜索..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full bg-black/40 border border-gold/30 rounded pl-8 pr-2 py-1 text-xs text-white focus:outline-none focus:border-gold"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Spell List */}
+                <div className="overflow-y-auto min-h-0 space-y-2 pr-2 pb-20">
+                  {filteredSpells.slice(0, 100).map(spell => (
+                    <SpellListItem
+                      key={spell.id}
+                      item={spell}
+                      isSelected={selectedItem?.id === spell.id}
+                      onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                      isBookmarked={isBookmarkedAnywhere(spell.id)}
+                      isMobile={isMobile}
+                      content={selectedItem?.id === spell.id ? loadedContent : null}
+                      loading={contentLoading}
+                      onBookmark={() => openBookmarkDialog(spell)}
+                    />
+                  ))}
+                  {filteredSpells.length === 0 && <div className="text-center text-gray-500 py-10">未找到匹配的法术</div>}
+                  {filteredSpells.length > 100 && <div className="text-center text-gray-500 py-4 text-xs">显示前 100 个结果</div>}
+                </div>
+              </div>
+
+              {/* Right Panel: Desktop Details */}
+              {!isMobile && (
+                <div className={`hidden md:flex flex-col h-full bg-black/40 border-l border-gold/20 transition-all duration-300 ${selectedItem ? 'w-[600px] opacity-100 translate-x-0' : 'w-0 opacity-0 translate-x-10 overflow-hidden'}`}>
+                  {selectedItem && (
+                    <div className="p-6 h-full overflow-y-auto custom-scrollbar">
+                      <div className="flex justify-between items-start mb-6 border-b border-gold/20 pb-4">
+                        <h1 className="text-2xl font-bold text-gold">{selectedItem.title}</h1>
+                        <button
+                          onClick={() => openBookmarkDialog(selectedItem)}
+                          className={`p-2 rounded hover:bg-gold/10 transition-colors ${isBookmarkedAnywhere(selectedItem.id) ? 'text-red-500' : 'text-gray-400'}`}
+                        >
+                          <Heart fill={isBookmarkedAnywhere(selectedItem.id) ? "currentColor" : "none"} size={20} />
+                        </button>
+                      </div>
+
+                      {contentLoading ? (
+                        <div className="flex justify-center py-20">
+                          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
+                        </div>
+                      ) : (
+                        <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
           {activeTab === 'search' && !selectedItem && (
             <motion.div
               key="search"
@@ -443,7 +575,7 @@ export default function App() {
                   {bookmarks[folder].length > 0 ? (
                     <div className="item-grid">
                       {bookmarks[folder].map(id => {
-                        const item = data.find(i => i.id === id);
+                        const item = data.find(i => i.id === id) || spellData.find(s => s.id === id); // Updated to look in both
                         if (!item) return null;
                         return <ItemCard key={id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />;
                       })}
@@ -459,7 +591,7 @@ export default function App() {
             </motion.div>
           )}
 
-          {selectedItem && (
+          {selectedItem && activeTab !== 'spells' && (
             <motion.div
               key="detail-view"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
@@ -569,12 +701,18 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
         className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
         onClick={() => {
           setActiveTab('browser');
-          // Optional: prompt or logic to reset path if clicked while active? 
-          // For now behavior is just switch tab.
         }}
       >
         <Layout size={24} />
         <span>资料游览</span>
+      </button>
+
+      <button
+        className={`mobile-nav-item ${activeTab === 'spells' ? 'active' : ''}`}
+        onClick={() => setActiveTab('spells')}
+      >
+        <Book size={24} />
+        <span>法术</span>
       </button>
 
       <button
@@ -610,15 +748,68 @@ function ItemCard({ item, onClick, isBookmarked }) {
       whileHover={{ scale: 1.02, y: -4 }}
       transition={{ type: "spring", stiffness: 300 }}
       onClick={onClick}
-      className="item-card glass-panel"
+      className="item-card glass-panel group relative"
     >
       <div className="card-top">
         <span className="card-category">{item?.pathParts?.join(' > ') || ''}</span>
         {isBookmarked && <Heart size={14} className="heart-active" fill="currentColor" />}
       </div>
-      <h3 className="card-title">{item?.title}</h3>
+      <h3 className="card-title group-hover:text-gold transition-colors">{item?.title}</h3>
       {item?.isOverview && <p className="card-subtitle text-gold">概览</p>}
     </motion.div>
   );
 }
 
+function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, onBookmark }) {
+  return (
+    <div className={`rounded-md overflow-hidden transition-all duration-300 ${isSelected ? 'bg-gold/10 border-gold/50' : 'bg-black/20 border-transparent hover:bg-black/30'}`}>
+      <div
+        onClick={onClick}
+        className="p-3 border border-white/5 cursor-pointer flex items-center justify-between"
+      >
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-1">
+            <h3 className={`font-medium ${isSelected ? 'text-gold' : 'text-gray-200'}`}>{item.title}</h3>
+            {isBookmarked && <Heart size={12} className="text-red-500" fill="currentColor" />}
+          </div>
+          <div className="text-xs text-gray-500 flex items-center gap-2">
+            <span className="text-gold/80">{item.level}</span>
+            <span>•</span>
+            <span className="truncate max-w-[200px]">{item.classes.join('、')}</span>
+            {/* Note: Casting time data is currently unavailable in the source data */}
+          </div>
+        </div>
+        {isSelected && isMobile && <ChevronDown size={16} className="text-gold" />}
+        {!isSelected && isMobile && <ChevronRight size={16} className="text-gray-600" />}
+      </div>
+
+      {/* Mobile Actions / Accordion */}
+      <AnimatePresence>
+        {isMobile && isSelected && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden border-t border-gold/10 bg-black/40"
+          >
+            <div className="p-4 relative">
+              <button
+                onClick={(e) => { e.stopPropagation(); onBookmark(); }}
+                className="absolute right-4 top-4 text-gold p-2"
+              >
+                <Heart size={18} fill={isBookmarked ? "currentColor" : "none"} className={isBookmarked ? "text-red-500" : ""} />
+              </button>
+              {loading ? (
+                <div className="py-8 flex justify-center">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-gold"></div>
+                </div>
+              ) : (
+                <div className="dnd-content text-sm" dangerouslySetInnerHTML={{ __html: content }} />
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
