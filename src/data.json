@@ -1,0 +1,2329 @@
+[
+  {
+    "id": "序章：欢迎来到冒险世界/_序章.htm",
+    "title": "序章：欢迎来到冒险世界",
+    "category": "序章：欢迎来到冒险世界",
+    "path": "序章：欢迎来到冒险世界/_序章.html",
+    "pathParts": [
+      "序章：欢迎来到冒险世界"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "序章：欢迎来到冒险世界/你需要什么.htm",
+    "title": "你需要什么",
+    "category": "序章：欢迎来到冒险世界",
+    "path": "序章：欢迎来到冒险世界/你需要什么.html",
+    "pathParts": [
+      "序章：欢迎来到冒险世界"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "序章：欢迎来到冒险世界/使用本书.htm",
+    "title": "使用本书",
+    "category": "序章：欢迎来到冒险世界",
+    "path": "序章：欢迎来到冒险世界/使用本书.html",
+    "pathParts": [
+      "序章：欢迎来到冒险世界"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "序章：欢迎来到冒险世界/充满冒险的世界.htm",
+    "title": "充满冒险的世界",
+    "category": "序章：欢迎来到冒险世界",
+    "path": "序章：欢迎来到冒险世界/充满冒险的世界.html",
+    "pathParts": [
+      "序章：欢迎来到冒险世界"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/_概述.htm",
+    "title": "第一章：进行游戏",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/_概述.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第一章：进行游戏/玩家还是DM？.htm",
+    "title": "玩家还是DM？",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/玩家还是DM？.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/长期游戏.htm",
+    "title": "长期游戏",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/长期游戏.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/骰子.htm",
+    "title": "骰子",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/骰子.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/六项属性.htm",
+    "title": "六项属性",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/六项属性.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/D20检定.htm",
+    "title": "D20检定",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/D20检定.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/动作.htm",
+    "title": "动作",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/动作.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/交涉.htm",
+    "title": "交涉",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/交涉.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索.htm",
+    "title": "探索",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗.htm",
+    "title": "战斗",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗.htm",
+    "title": "伤害与治疗",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/状态.htm",
+    "title": "状态",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/状态.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗与伤害案例.htm",
+    "title": "战斗与伤害案例",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗与伤害案例.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/游戏节奏.htm",
+    "title": "游戏规律",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/游戏节奏.html",
+    "pathParts": [
+      "第一章：进行游戏"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/D20 检定/属性检定.htm",
+    "title": "属性检定",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/D20 检定/属性检定.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "D20 检定"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/D20 检定/豁免检定.htm",
+    "title": "豁免检定",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/D20 检定/豁免检定.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "D20 检定"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/D20 检定/攻击检定.htm",
+    "title": "攻击检定",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/D20 检定/攻击检定.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "D20 检定"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/D20 检定/优势 劣势.htm",
+    "title": "优势/劣势",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/D20 检定/优势 劣势.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "D20 检定"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/D20 检定/熟练.htm",
+    "title": "熟练",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/D20 检定/熟练.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "D20 检定"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/动作/附赠动作.htm",
+    "title": "附赠动作",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/动作/附赠动作.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "动作"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/动作/反应.htm",
+    "title": "反应",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/动作/反应.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "动作"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/交涉/交涉案例.htm",
+    "title": "交涉案例",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/交涉/交涉案例.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "交涉"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索/视野与光照.htm",
+    "title": "视野与光照",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索/视野与光照.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "探索"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索/躲藏.htm",
+    "title": "躲藏",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索/躲藏.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "探索"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索/与物件交互.htm",
+    "title": "与物件交互",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索/与物件交互.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "探索"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索/危害.htm",
+    "title": "危害",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索/危害.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "探索"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索/旅行.htm",
+    "title": "旅行",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索/旅行.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "探索"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/探索/探索案例.htm",
+    "title": "探索案例",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/探索/探索案例.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "探索"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/战斗流程.htm",
+    "title": "战斗流程",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/战斗流程.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/移动和位置.htm",
+    "title": "移动和位置",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/移动和位置.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/发动攻击.htm",
+    "title": "发动攻击",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/发动攻击.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/近战攻击.htm",
+    "title": "近战攻击",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/近战攻击.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/远程攻击.htm",
+    "title": "远程攻击",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/远程攻击.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/骑乘战斗.htm",
+    "title": "骑乘战斗",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/骑乘战斗.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/战斗/水下战斗.htm",
+    "title": "水下战斗",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/战斗/水下战斗.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "战斗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/生命值.htm",
+    "title": "生命值",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/生命值.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/伤害掷骰.htm",
+    "title": "伤害掷骰",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/伤害掷骰.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/豁免检定与伤害.htm",
+    "title": "豁免检定与伤害",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/豁免检定与伤害.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/伤害类型.htm",
+    "title": "伤害类型",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/伤害类型.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/抗性和易伤.htm",
+    "title": "抗性和易伤",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/抗性和易伤.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/免疫.htm",
+    "title": "免疫",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/免疫.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/治疗.htm",
+    "title": "治疗",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/治疗.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/生命值降至 0 点.htm",
+    "title": "生命值降至0点",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/生命值降至 0 点.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/临时生命值.htm",
+    "title": "临时生命值",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/临时生命值.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第一章：进行游戏/伤害与治疗/重击.htm",
+    "title": "重击命中",
+    "category": "第一章：进行游戏",
+    "path": "第一章：进行游戏/伤害与治疗/重击.html",
+    "pathParts": [
+      "第一章：进行游戏",
+      "伤害与治疗"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/_概述.htm",
+    "title": "第二章：创建角色",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/_概述.html",
+    "pathParts": [
+      "第二章：创建角色"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第二章：创建角色/创建你的角色.htm",
+    "title": "创建你的角色",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/创建你的角色.html",
+    "pathParts": [
+      "第二章：创建角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/等级提升.htm",
+    "title": "等级提升",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/等级提升.html",
+    "pathParts": [
+      "第二章：创建角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/以更高等级开始.htm",
+    "title": "以更高等级开始",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/以更高等级开始.html",
+    "pathParts": [
+      "第二章：创建角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/兼职.htm",
+    "title": "兼职",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/兼职.html",
+    "pathParts": [
+      "第二章：创建角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/饰品.htm",
+    "title": "饰品",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/饰品.html",
+    "pathParts": [
+      "第二章：创建角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/创建你的角色/第一步：选择职业.htm",
+    "title": "第一步：选择职业",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/创建你的角色/第一步：选择职业.html",
+    "pathParts": [
+      "第二章：创建角色",
+      "创建你的角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/创建你的角色/第二步：确定起源.htm",
+    "title": "第二步：确定起源",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/创建你的角色/第二步：确定起源.html",
+    "pathParts": [
+      "第二章：创建角色",
+      "创建你的角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/创建你的角色/第三步：确定属性值.htm",
+    "title": "第三步：确定属性值",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/创建你的角色/第三步：确定属性值.html",
+    "pathParts": [
+      "第二章：创建角色",
+      "创建你的角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/创建你的角色/第四步：选择阵营.htm",
+    "title": "第四步：选择阵营",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/创建你的角色/第四步：选择阵营.html",
+    "pathParts": [
+      "第二章：创建角色",
+      "创建你的角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第二章：创建角色/创建你的角色/第五步：丰富细节.htm",
+    "title": "第五步：丰富细节",
+    "category": "第二章：创建角色",
+    "path": "第二章：创建角色/创建你的角色/第五步：丰富细节.html",
+    "pathParts": [
+      "第二章：创建角色",
+      "创建你的角色"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/_概述.htm",
+    "title": "第三章：角色职业",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/_概述.html",
+    "pathParts": [
+      "第三章：角色职业"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/野蛮人/野蛮人.htm",
+    "title": "野蛮人",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/野蛮人/野蛮人.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "野蛮人"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/野蛮人/狂战士道途.htm",
+    "title": "狂战士道途",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/野蛮人/狂战士道途.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "野蛮人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/野蛮人/兽心道途.htm",
+    "title": "兽心道途",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/野蛮人/兽心道途.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "野蛮人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/野蛮人/世界树道途.htm",
+    "title": "世界树道途",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/野蛮人/世界树道途.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "野蛮人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/野蛮人/狂热者道途.htm",
+    "title": "狂热者道途",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/野蛮人/狂热者道途.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "野蛮人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/吟游诗人/吟游诗人.htm",
+    "title": "吟游诗人",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/吟游诗人/吟游诗人.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "吟游诗人"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/吟游诗人/吟游诗人法术列表.htm",
+    "title": "吟游诗人法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/吟游诗人/吟游诗人法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "吟游诗人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/吟游诗人/勇气学院.htm",
+    "title": "勇气学院",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/吟游诗人/勇气学院.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "吟游诗人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/吟游诗人/舞蹈学院.htm",
+    "title": "舞蹈学院",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/吟游诗人/舞蹈学院.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "吟游诗人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/吟游诗人/逸闻学院.htm",
+    "title": "逸闻学院",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/吟游诗人/逸闻学院.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "吟游诗人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/吟游诗人/魅心学院.htm",
+    "title": "魅心学院",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/吟游诗人/魅心学院.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "吟游诗人"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/牧师/牧师.htm",
+    "title": "牧师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/牧师/牧师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "牧师"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/牧师/牧师法术列表.htm",
+    "title": "牧师法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/牧师/牧师法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "牧师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/牧师/生命领域.htm",
+    "title": "生命领域",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/牧师/生命领域.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "牧师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/牧师/光明领域.htm",
+    "title": "光明领域",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/牧师/光明领域.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "牧师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/牧师/诡术领域.htm",
+    "title": "诡术领域",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/牧师/诡术领域.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "牧师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/牧师/战争领域.htm",
+    "title": "战争领域",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/牧师/战争领域.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "牧师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/德鲁伊/德鲁伊.htm",
+    "title": "德鲁伊",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/德鲁伊/德鲁伊.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "德鲁伊"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/德鲁伊/德鲁伊法术列表.htm",
+    "title": "德鲁伊法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/德鲁伊/德鲁伊法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "德鲁伊"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/德鲁伊/大地结社.htm",
+    "title": "大地结社",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/德鲁伊/大地结社.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "德鲁伊"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/德鲁伊/月亮结社.htm",
+    "title": "月亮结社",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/德鲁伊/月亮结社.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "德鲁伊"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/德鲁伊/海洋结社.htm",
+    "title": "海洋结社",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/德鲁伊/海洋结社.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "德鲁伊"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/德鲁伊/星辰结社.htm",
+    "title": "星辰结社",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/德鲁伊/星辰结社.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "德鲁伊"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/战士/战士.htm",
+    "title": "战士",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/战士/战士.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "战士"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/战士/战斗大师.htm",
+    "title": "战斗大师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/战士/战斗大师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "战士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/战士/勇士.htm",
+    "title": "勇士",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/战士/勇士.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "战士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/战士/奥法骑士.htm",
+    "title": "奥法骑士",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/战士/奥法骑士.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "战士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/战士/灵能武士.htm",
+    "title": "灵能武士",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/战士/灵能武士.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "战士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/武僧/武僧.htm",
+    "title": "武僧",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/武僧/武僧.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "武僧"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/武僧/命流武者.htm",
+    "title": "命流武者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/武僧/命流武者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "武僧"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/武僧/暗影武者.htm",
+    "title": "暗影武者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/武僧/暗影武者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "武僧"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/武僧/四象武者.htm",
+    "title": "四象武者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/武僧/四象武者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "武僧"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/武僧/散打武者.htm",
+    "title": "散打武者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/武僧/散打武者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "武僧"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/圣武士/圣武士.htm",
+    "title": "圣武士",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/圣武士/圣武士.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "圣武士"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/圣武士/圣武士法术列表.htm",
+    "title": "圣武士法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/圣武士/圣武士法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "圣武士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/圣武士/奉献之誓.htm",
+    "title": "奉献之誓",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/圣武士/奉献之誓.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "圣武士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/圣武士/荣耀之誓.htm",
+    "title": "荣耀之誓",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/圣武士/荣耀之誓.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "圣武士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/圣武士/古贤之誓.htm",
+    "title": "古贤之誓",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/圣武士/古贤之誓.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "圣武士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/圣武士/复仇之誓.htm",
+    "title": "复仇之誓",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/圣武士/复仇之誓.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "圣武士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游侠/游侠.htm",
+    "title": "游侠",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游侠/游侠.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游侠"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/游侠/游侠法术列表.htm",
+    "title": "游侠法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游侠/游侠法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游侠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游侠/驯兽师.htm",
+    "title": "驯兽师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游侠/驯兽师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游侠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游侠/妖精漫游者.htm",
+    "title": "妖精漫游者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游侠/妖精漫游者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游侠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游侠/幽域追猎者.htm",
+    "title": "幽域追猎者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游侠/幽域追猎者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游侠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游侠/猎人.htm",
+    "title": "猎人",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游侠/猎人.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游侠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游荡者/游荡者.htm",
+    "title": "游荡者",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游荡者/游荡者.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游荡者"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/游荡者/诡术师.htm",
+    "title": "诡术师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游荡者/诡术师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游荡者"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游荡者/刺客.htm",
+    "title": "刺客",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游荡者/刺客.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游荡者"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游荡者/魂刃.htm",
+    "title": "魂刃",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游荡者/魂刃.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游荡者"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/游荡者/盗贼.htm",
+    "title": "盗贼",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/游荡者/盗贼.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "游荡者"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/术士/术士.htm",
+    "title": "术士",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/术士.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/术士/超魔法选项.htm",
+    "title": "超魔法选项",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/超魔法选项.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/术士/术士法术列表.htm",
+    "title": "术士法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/术士法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/术士/畸变术法.htm",
+    "title": "畸变术法",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/畸变术法.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/术士/时械术法.htm",
+    "title": "时械术法",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/时械术法.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/术士/龙族术法.htm",
+    "title": "龙族术法",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/龙族术法.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/术士/狂野术法.htm",
+    "title": "狂野术法",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/术士/狂野术法.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "术士"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/魔契师/魔契师.htm",
+    "title": "魔契师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/魔契师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/魔契师/魔能祈唤选项.htm",
+    "title": "魔能祈唤选项",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/魔能祈唤选项.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/魔契师/魔契师法术列表.htm",
+    "title": "魔契师法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/魔契师法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/魔契师/至高妖精宗主.htm",
+    "title": "至高妖精宗主",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/至高妖精宗主.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/魔契师/天界宗主.htm",
+    "title": "天界宗主",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/天界宗主.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/魔契师/邪魔宗主.htm",
+    "title": "邪魔宗主",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/邪魔宗主.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/魔契师/旧日支配者宗主.htm",
+    "title": "旧日支配者宗主",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/魔契师/旧日支配者宗主.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "魔契师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/法师/法师.htm",
+    "title": "法师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/法师/法师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "法师"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第三章：角色职业/法师/法师法术列表.htm",
+    "title": "法师法术列表",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/法师/法师法术列表.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "法师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/法师/防护师.htm",
+    "title": "防护师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/法师/防护师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "法师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/法师/预言师.htm",
+    "title": "预言师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/法师/预言师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "法师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/法师/塑能师.htm",
+    "title": "塑能师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/法师/塑能师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "法师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第三章：角色职业/法师/幻术师.htm",
+    "title": "幻术师",
+    "category": "第三章：角色职业",
+    "path": "第三章：角色职业/法师/幻术师.html",
+    "pathParts": [
+      "第三章：角色职业",
+      "法师"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/_概述.htm",
+    "title": "第四章：角色起源",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/_概述.html",
+    "pathParts": [
+      "第四章：角色起源"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第四章：角色起源/起源的构成部分.htm",
+    "title": "起源的构成部分",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/起源的构成部分.html",
+    "pathParts": [
+      "第四章：角色起源"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述.htm",
+    "title": "背景详述",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述.html",
+    "pathParts": [
+      "第四章：角色起源"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述.htm",
+    "title": "种族详述",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述.html",
+    "pathParts": [
+      "第四章：角色起源"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/侍僧.htm",
+    "title": "侍僧",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/侍僧.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/工匠.htm",
+    "title": "工匠",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/工匠.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/骗子.htm",
+    "title": "骗子",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/骗子.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/罪犯.htm",
+    "title": "罪犯",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/罪犯.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/艺人.htm",
+    "title": "艺人",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/艺人.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/农民.htm",
+    "title": "农民",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/农民.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/警卫.htm",
+    "title": "警卫",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/警卫.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/向导.htm",
+    "title": "向导",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/向导.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/隐士.htm",
+    "title": "隐士",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/隐士.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/商人.htm",
+    "title": "商人",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/商人.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/贵族.htm",
+    "title": "贵族",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/贵族.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/智者.htm",
+    "title": "智者",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/智者.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/水手.htm",
+    "title": "水手",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/水手.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/抄写员.htm",
+    "title": "抄写员",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/抄写员.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/士兵.htm",
+    "title": "士兵",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/士兵.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/背景详述/流浪者.htm",
+    "title": "流浪者",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/背景详述/流浪者.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "背景详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/阿斯莫.htm",
+    "title": "阿斯莫",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/阿斯莫.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/龙裔.htm",
+    "title": "龙裔",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/龙裔.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/矮人.htm",
+    "title": "矮人",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/矮人.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/精灵.htm",
+    "title": "精灵",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/精灵.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/侏儒.htm",
+    "title": "侏儒",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/侏儒.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/歌利亚.htm",
+    "title": "歌利亚",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/歌利亚.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/半身人.htm",
+    "title": "半身人",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/半身人.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/人类.htm",
+    "title": "人类",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/人类.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/兽人.htm",
+    "title": "兽人",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/兽人.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第四章：角色起源/种族详述/提夫林.htm",
+    "title": "提夫林",
+    "category": "第四章：角色起源",
+    "path": "第四章：角色起源/种族详述/提夫林.html",
+    "pathParts": [
+      "第四章：角色起源",
+      "种族详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第五章：专长/_概述.htm",
+    "title": "第五章：专长",
+    "category": "第五章：专长",
+    "path": "第五章：专长/_概述.html",
+    "pathParts": [
+      "第五章：专长"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第五章：专长/专长概述.htm",
+    "title": "专长概述",
+    "category": "第五章：专长",
+    "path": "第五章：专长/专长概述.html",
+    "pathParts": [
+      "第五章：专长"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第五章：专长/起源专长.htm",
+    "title": "起源专长",
+    "category": "第五章：专长",
+    "path": "第五章：专长/起源专长.html",
+    "pathParts": [
+      "第五章：专长"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第五章：专长/通用专长.htm",
+    "title": "通用专长",
+    "category": "第五章：专长",
+    "path": "第五章：专长/通用专长.html",
+    "pathParts": [
+      "第五章：专长"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第五章：专长/战斗风格专长.htm",
+    "title": "战斗风格专长",
+    "category": "第五章：专长",
+    "path": "第五章：专长/战斗风格专长.html",
+    "pathParts": [
+      "第五章：专长"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第五章：专长/传奇恩惠专长.htm",
+    "title": "传奇恩惠专长",
+    "category": "第五章：专长",
+    "path": "第五章：专长/传奇恩惠专长.html",
+    "pathParts": [
+      "第五章：专长"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/_概述.htm",
+    "title": "第六章：装备",
+    "category": "第六章：装备",
+    "path": "第六章：装备/_概述.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第六章：装备/钱币.htm",
+    "title": "钱币",
+    "category": "第六章：装备",
+    "path": "第六章：装备/钱币.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/武器.htm",
+    "title": "武器",
+    "category": "第六章：装备",
+    "path": "第六章：装备/武器.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/工具.htm",
+    "title": "工具",
+    "category": "第六章：装备",
+    "path": "第六章：装备/工具.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/冒险装备.htm",
+    "title": "冒险装备",
+    "category": "第六章：装备",
+    "path": "第六章：装备/冒险装备.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/坐骑与载具.htm",
+    "title": "坐骑与载具",
+    "category": "第六章：装备",
+    "path": "第六章：装备/坐骑与载具.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/服务.htm",
+    "title": "服务",
+    "category": "第六章：装备",
+    "path": "第六章：装备/服务.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/魔法物品.htm",
+    "title": "魔法物品",
+    "category": "第六章：装备",
+    "path": "第六章：装备/魔法物品.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/制作装备.htm",
+    "title": "制作装备",
+    "category": "第六章：装备",
+    "path": "第六章：装备/制作装备.html",
+    "pathParts": [
+      "第六章：装备"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/武器/词条.htm",
+    "title": "词条",
+    "category": "第六章：装备",
+    "path": "第六章：装备/武器/词条.html",
+    "pathParts": [
+      "第六章：装备",
+      "武器"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/武器/精通词条.htm",
+    "title": "精通词条",
+    "category": "第六章：装备",
+    "path": "第六章：装备/武器/精通词条.html",
+    "pathParts": [
+      "第六章：装备",
+      "武器"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/护甲/护甲.htm",
+    "title": "护甲",
+    "category": "第六章：装备",
+    "path": "第六章：装备/护甲/护甲.html",
+    "pathParts": [
+      "第六章：装备",
+      "护甲"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第六章：装备/工具/工匠工具.htm",
+    "title": "工匠工具",
+    "category": "第六章：装备",
+    "path": "第六章：装备/工具/工匠工具.html",
+    "pathParts": [
+      "第六章：装备",
+      "工具"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第六章：装备/工具/其他工具.htm",
+    "title": "其他工具",
+    "category": "第六章：装备",
+    "path": "第六章：装备/工具/其他工具.html",
+    "pathParts": [
+      "第六章：装备",
+      "工具"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/_概述.htm",
+    "title": "第七章：法术",
+    "category": "第七章：法术",
+    "path": "第七章：法术/_概述.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "第七章：法术/获得法术.htm",
+    "title": "获得法术",
+    "category": "第七章：法术",
+    "path": "第七章：法术/获得法术.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/施展法术.htm",
+    "title": "施展法术",
+    "category": "第七章：法术",
+    "path": "第七章：法术/施展法术.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术环阶.htm",
+    "title": "法术环阶",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术环阶.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/魔法学派.htm",
+    "title": "魔法学派",
+    "category": "第七章：法术",
+    "path": "第七章：法术/魔法学派.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/职业法术列表.htm",
+    "title": "职业法术列表",
+    "category": "第七章：法术",
+    "path": "第七章：法术/职业法术列表.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/施法时间.htm",
+    "title": "施法时间",
+    "category": "第七章：法术",
+    "path": "第七章：法术/施法时间.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/施法距离.htm",
+    "title": "施法距离",
+    "category": "第七章：法术",
+    "path": "第七章：法术/施法距离.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术成分.htm",
+    "title": "法术成分",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术成分.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/持续时间.htm",
+    "title": "持续时间",
+    "category": "第七章：法术",
+    "path": "第七章：法术/持续时间.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术效应.htm",
+    "title": "法术效应",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术效应.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述.htm",
+    "title": "法术详述",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述.html",
+    "pathParts": [
+      "第七章：法术"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/0环.htm",
+    "title": "戏法（零环）",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/0环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/1环.htm",
+    "title": "一环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/1环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/2环.htm",
+    "title": "二环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/2环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/3环.htm",
+    "title": "三环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/3环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/4环.htm",
+    "title": "四环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/4环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/5环.htm",
+    "title": "五环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/5环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/6环.htm",
+    "title": "六环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/6环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/7环.htm",
+    "title": "七环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/7环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/8环.htm",
+    "title": "八环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/8环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "第七章：法术/法术详述/9环.htm",
+    "title": "九环",
+    "category": "第七章：法术",
+    "path": "第七章：法术/法术详述/9环.html",
+    "pathParts": [
+      "第七章：法术",
+      "法术详述"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 A：多元宇宙/_概述.htm",
+    "title": "附录A：多元宇宙",
+    "category": "附录 A：多元宇宙",
+    "path": "附录 A：多元宇宙/_概述.html",
+    "pathParts": [
+      "附录 A：多元宇宙"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "附录 A：多元宇宙/物质领域.htm",
+    "title": "物质领域",
+    "category": "附录 A：多元宇宙",
+    "path": "附录 A：多元宇宙/物质领域.html",
+    "pathParts": [
+      "附录 A：多元宇宙"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 A：多元宇宙/过渡位面.htm",
+    "title": "过渡位面",
+    "category": "附录 A：多元宇宙",
+    "path": "附录 A：多元宇宙/过渡位面.html",
+    "pathParts": [
+      "附录 A：多元宇宙"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 A：多元宇宙/内层位面.htm",
+    "title": "内层位面",
+    "category": "附录 A：多元宇宙",
+    "path": "附录 A：多元宇宙/内层位面.html",
+    "pathParts": [
+      "附录 A：多元宇宙"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 A：多元宇宙/外层位面.htm",
+    "title": "外层位面",
+    "category": "附录 A：多元宇宙",
+    "path": "附录 A：多元宇宙/外层位面.html",
+    "pathParts": [
+      "附录 A：多元宇宙"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 B：生物数据卡/_概述.htm",
+    "title": "附录B：生物数据卡",
+    "category": "附录 B：生物数据卡",
+    "path": "附录 B：生物数据卡/_概述.html",
+    "pathParts": [
+      "附录 B：生物数据卡"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "附录 C：术语汇编/_概述.htm",
+    "title": "附录C：术语汇编",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/_概述.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": true
+  },
+  {
+    "id": "附录 C：术语汇编/动作.htm",
+    "title": "动作",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/动作.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 C：术语汇编/危害.htm",
+    "title": "危害",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/危害.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 C：术语汇编/状态.htm",
+    "title": "状态",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/状态.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 C：术语汇编/术语速查.htm",
+    "title": "术语速查",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/术语速查.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 C：术语汇编/效应区域.htm",
+    "title": "效应区域",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/效应区域.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 C：术语汇编/态度.htm",
+    "title": "态度",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/态度.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "附录 C：术语汇编/其他术语.htm",
+    "title": "其他术语",
+    "category": "附录 C：术语汇编",
+    "path": "附录 C：术语汇编/其他术语.html",
+    "pathParts": [
+      "附录 C：术语汇编"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "Credits.htm",
+    "title": "玩家手册2024",
+    "category": "Credits.htm",
+    "path": "Credits.html",
+    "pathParts": [
+      "Credits.htm"
+    ],
+    "isOverview": false
+  }
+]
