@@ -14,3 +14,9 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Deployment helper
+
+Use `npm run deploy` whenever you need a quick production build hosted on a non-default port (helpful when another Node process already occupies the default preview port). The script runs `vite build` and immediately serves the `dist/` directory with `vite preview --host 0.0.0.0` on port `4280`.
+
+Override the port by exporting `DEPLOY_PORT`, e.g. `DEPLOY_PORT=5200 npm run deploy`, or pass it as an argument, e.g. `npm run deploy -- 5200`. Point your reverse proxy/OpenLiteSpeed context to that port if you need to expose it publicly.
