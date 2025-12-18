@@ -541,13 +541,14 @@ export default function App() {
         />
       )}
 
-      {/* Mobile Quick Access FAB */}
-      <button
-        className="mobile-fab"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-      >
-        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+      {/* Mobile Navigation Bar */}
+      <MobileNavBar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        activePath={currentPath}
+        navigateTo={navigateTo}
+        toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      />
     </div>
   );
 }
@@ -558,6 +559,48 @@ function NavItem({ icon, label, active, onClick }) {
       {icon}
       <span className="nav-label">{label}</span>
     </button>
+  );
+}
+
+function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleMenu }) {
+  return (
+    <nav className="mobile-navbar glass-panel">
+      <button
+        className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveTab('browser');
+          // Optional: prompt or logic to reset path if clicked while active? 
+          // For now behavior is just switch tab.
+        }}
+      >
+        <Layout size={24} />
+        <span>资料游览</span>
+      </button>
+
+      <button
+        className={`mobile-nav-item ${activeTab === 'search' ? 'active' : ''}`}
+        onClick={() => setActiveTab('search')}
+      >
+        <Search size={24} />
+        <span>全局搜索</span>
+      </button>
+
+      <button
+        className={`mobile-nav-item ${activeTab === 'bookmarks' ? 'active' : ''}`}
+        onClick={() => setActiveTab('bookmarks')}
+      >
+        <Bookmark size={24} />
+        <span>我的收藏</span>
+      </button>
+
+      <button
+        className="mobile-nav-item"
+        onClick={toggleMenu}
+      >
+        <Menu size={24} />
+        <span>Menu</span>
+      </button>
+    </nav>
   );
 }
 
@@ -578,3 +621,4 @@ function ItemCard({ item, onClick, isBookmarked }) {
     </motion.div>
   );
 }
+
