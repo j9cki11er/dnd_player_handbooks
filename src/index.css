@@ -878,3 +878,153 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Spell Grid & Cards */
+.spell-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .spell-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.spell-card-wrapper {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.spell-card-wrapper:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.spell-card-wrapper.selected {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+/* Mobile Expanded Logic */
+@media (max-width: 767px) {
+  .spell-card-wrapper.mobile-expanded {
+    grid-column: span 2;
+  }
+}
+
+.spell-card-inner {
+  padding: 0.75rem;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.spell-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.spell-card-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  color: #e2e2e7;
+  transition: color 0.2s;
+}
+
+.spell-card-wrapper:hover .spell-card-title {
+  color: var(--accent-gold);
+}
+
+.spell-card-wrapper.selected .spell-card-title {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.spell-card-heart {
+  color: #ef4444;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+
+.spell-card-body {
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.spell-card-meta {
+  font-size: 0.75rem;
+  color: rgba(212, 175, 55, 0.9);
+  font-weight: 500;
+}
+
+.spell-card-meta span {
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0 0.25rem;
+}
+
+.spell-card-classes {
+  font-size: 10px;
+  color: #71717a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spell-card-time {
+  font-size: 10px;
+  color: #52525b;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.spell-card-indicator {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+  color: var(--text-muted);
+  transition: opacity 0.2s;
+}
+
+.spell-card-wrapper:hover .spell-card-indicator {
+  opacity: 1;
+}
+
+/* Accordion */
+.spell-card-accordion {
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.spell-card-float-heart {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--accent-gold);
+  padding: 0.5rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}

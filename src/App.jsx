@@ -465,22 +465,25 @@ export default function App() {
                 </div>
 
                 {/* Spell List */}
-                <div className="overflow-y-auto min-h-0 space-y-2 pr-2 pb-20">
-                  {filteredSpells.slice(0, 100).map(spell => (
-                    <SpellListItem
-                      key={spell.id}
-                      item={spell}
-                      isSelected={selectedItem?.id === spell.id}
-                      onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
-                      isBookmarked={isBookmarkedAnywhere(spell.id)}
-                      isMobile={isMobile}
-                      content={selectedItem?.id === spell.id ? loadedContent : null}
-                      loading={contentLoading}
-                      onBookmark={() => openBookmarkDialog(spell)}
-                    />
-                  ))}
-                  {filteredSpells.length === 0 && <div className="text-center text-gray-500 py-10">未找到匹配的法术</div>}
-                  {filteredSpells.length > 100 && <div className="text-center text-gray-500 py-4 text-xs">显示前 100 个结果</div>}
+                {/* Spell List */}
+                <div className="overflow-y-auto min-h-0 pr-2 pb-20 custom-scrollbar">
+                  <div className="spell-grid">
+                    {filteredSpells.slice(0, 100).map(spell => (
+                      <SpellListItem
+                        key={spell.id}
+                        item={spell}
+                        isSelected={selectedItem?.id === spell.id}
+                        onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                        isBookmarked={isBookmarkedAnywhere(spell.id)}
+                        isMobile={isMobile}
+                        content={selectedItem?.id === spell.id ? loadedContent : null}
+                        loading={contentLoading}
+                        onBookmark={() => openBookmarkDialog(spell)}
+                      />
+                    ))}
+                    {filteredSpells.length === 0 && <div className="col-span-full text-center text-gray-500 py-10">未找到匹配的法术</div>}
+                    {filteredSpells.length > 100 && <div className="col-span-full text-center text-gray-500 py-4 text-xs">显示前 100 个结果</div>}
+                  </div>
                 </div>
               </div>
 
@@ -762,40 +765,55 @@ function ItemCard({ item, onClick, isBookmarked }) {
 
 function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, onBookmark }) {
   return (
-    <div className={`rounded-md overflow-hidden transition-all duration-300 ${isSelected ? 'bg-gold/10 border-gold/50' : 'bg-black/20 border-transparent hover:bg-black/30'}`}>
+    <div className={`spell-card-wrapper ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''}`}>
       <div
         onClick={onClick}
-        className="p-3 border border-white/5 cursor-pointer flex items-center justify-between"
+        className="spell-card-inner"
       >
-        <div className="flex-1">
-          <div className="flex items-center gap-2 mb-1">
-            <h3 className={`font-medium ${isSelected ? 'text-gold' : 'text-gray-200'}`}>{item.title}</h3>
-            {isBookmarked && <Heart size={12} className="text-red-500" fill="currentColor" />}
+        {/* Card Header */}
+        <div className="spell-card-header">
+          <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
+            {item.title}
+          </h3>
+          {isBookmarked && <Heart size={14} className="spell-card-heart" fill="currentColor" />}
+        </div>
+
+        {/* Card Body */}
+        <div className="spell-card-body">
+          <div className="spell-card-meta">
+            {item.school} <span>•</span> {item.level}
           </div>
-          <div className="text-xs text-gray-500 flex items-center gap-2">
-            <span className="text-gold/80">{item.level}</span>
-            <span>•</span>
-            <span className="truncate max-w-[200px]">{item.classes.join('、')}</span>
-            {/* Note: Casting time data is currently unavailable in the source data */}
+
+          <div className="spell-card-classes" title={item.classes.join('、')}>
+            {item.classes.join('、')}
+          </div>
+
+          <div className="spell-card-time">
+            <span>⏱ 1 动作</span>
           </div>
         </div>
-        {isSelected && isMobile && <ChevronDown size={16} className="text-gold" />}
-        {!isSelected && isMobile && <ChevronRight size={16} className="text-gray-600" />}
+
+        {/* Mobile Indicator */}
+        {isMobile && !isSelected && (
+          <div className="spell-card-indicator">
+            <ChevronDown size={14} />
+          </div>
+        )}
       </div>
 
-      {/* Mobile Actions / Accordion */}
+      {/* Mobile Accordion Content */}
       <AnimatePresence>
         {isMobile && isSelected && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-gold/10 bg-black/40"
+            className="spell-card-accordion"
           >
             <div className="p-4 relative">
               <button
                 onClick={(e) => { e.stopPropagation(); onBookmark(); }}
-                className="absolute right-4 top-4 text-gold p-2"
+                className="spell-card-float-heart"
               >
                 <Heart size={18} fill={isBookmarked ? "currentColor" : "none"} className={isBookmarked ? "text-red-500" : ""} />
               </button>
