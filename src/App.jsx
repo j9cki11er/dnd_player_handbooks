@@ -414,7 +414,7 @@ export default function App() {
           )}
 
           {activeTab === 'spells' && (
-            <div className="h-full flex flex-col md:flex-row gap-4 overflow-hidden relative">
+            <div className="h-[calc(100vh-6rem)] flex flex-row gap-4 overflow-hidden relative">
               {/* Left Panel: List & Filters */}
               <div className={`flex-1 flex flex-col h-full overflow-hidden transition-all duration-300`}>
                 <div className="view-header mb-4 shrink-0">
