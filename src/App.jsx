@@ -333,7 +333,7 @@ export default function App() {
             onClick={() => { setActiveTab('search'); setSelectedItem(null); }}
           />
           <NavItem
-            icon={<Bookmark size={20} />}
+            icon={<Heart size={20} />}
             label="我的收藏"
             active={activeTab === 'bookmarks'}
             onClick={() => { setActiveTab('bookmarks'); setSelectedItem(null); }}
@@ -472,7 +472,7 @@ export default function App() {
           )}
 
           {activeTab === 'spells' && (
-            <div className="spell-browser-container">
+            <div className="spell-browser-container glass-panel p-4">
               {/* Left Panel: List & Filters */}
               <div className="spell-list-panel">
                 <div className="view-header mb-4 shrink-0">
@@ -556,11 +556,11 @@ export default function App() {
                 <div className={`spell-detail-panel ${selectedItem ? 'active' : ''}`}>
                   {selectedItem && (
                     <div className="p-6 h-full overflow-y-auto custom-scrollbar">
-                      <div className="flex justify-between items-start mb-6 border-b border-gold/20 pb-4">
-                        <h1 className="text-2xl font-bold text-gold">{selectedItem.title}</h1>
+                      <div className="detail-header">
+                        <h1 className="detail-title gold-text">{selectedItem.title}</h1>
                         <button
                           onClick={() => openBookmarkDialog(selectedItem)}
-                          className={`p-2 rounded hover:bg-gold/10 transition-colors ${isBookmarkedAnywhere(selectedItem.id) ? 'text-red-500' : 'text-gray-400'}`}
+                          className={`bookmark-btn ${isBookmarkedAnywhere(selectedItem.id) ? 'active' : ''}`}
                         >
                           <Heart fill={isBookmarkedAnywhere(selectedItem.id) ? "currentColor" : "none"} size={20} />
                         </button>
@@ -640,12 +640,97 @@ export default function App() {
                     )}
                   </div>
                   {bookmarks[folder].length > 0 ? (
-                    <div className="item-grid">
-                      {bookmarks[folder].map(id => {
-                        const item = data.find(i => i.id === id) || spellData.find(s => s.id === id); // Updated to look in both
-                        if (!item) return null;
-                        return <ItemCard key={id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />;
-                      })}
+                    <div className="flex flex-col gap-8">
+                      {/* Set 1: 职业 背景 专长 */}
+                      {(() => {
+                        const items = bookmarks[folder].map(id => data.find(i => i.id === id)).filter(item => {
+                          if (!item) return false;
+                          const path = item.pathParts.join(' ');
+                          return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
+                        });
+                        if (items.length === 0) return null;
+                        return (
+                          <div className="bookmark-group">
+                            <h4 className="section-title mb-4">职业 背景 专长</h4>
+                            <div className="item-grid">
+                              {items.map(item => (
+                                <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })()}
+
+                      {/* Set 2: 法术 */}
+                      {(() => {
+                        const items = bookmarks[folder].map(id => spellData.find(s => s.id === id) || data.find(i => i.id === id && i.pathParts.join(' ').includes('法术'))).filter(Boolean);
+                        if (items.length === 0) return null;
+                        return (
+                          <div className="bookmark-group">
+                            <h4 className="section-title mb-4">法术列表</h4>
+                            <div className="spell-grid">
+                              {items.map(spell => (
+                                <SpellListItem
+                                  key={spell.id}
+                                  item={spell}
+                                  isSelected={selectedItem?.id === spell.id}
+                                  onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                                  isBookmarked={true}
+                                  isMobile={isMobile}
+                                  content={selectedItem?.id === spell.id ? loadedContent : null}
+                                  loading={contentLoading}
+                                  onBookmark={() => openBookmarkDialog(spell)}
+                                  activePopover={activePopover}
+                                  setActivePopover={setActivePopover}
+                                  bookmarks={bookmarks}
+                                  toggleBookmark={toggleBookmark}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })()}
+
+                      {/* Set 3: 装备 道具 */}
+                      {(() => {
+                        const items = bookmarks[folder].map(id => data.find(i => i.id === id)).filter(item => {
+                          if (!item) return false;
+                          const path = item.pathParts.join(' ');
+                          return (path.includes('装备') || path.includes('道具')) && !path.includes('法术');
+                        });
+                        if (items.length === 0) return null;
+                        return (
+                          <div className="bookmark-group">
+                            <h4 className="section-title mb-4">装备 道具</h4>
+                            <div className="item-grid">
+                              {items.map(item => (
+                                <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })()}
+
+                      {/* Other Items */}
+                      {(() => {
+                        const items = bookmarks[folder].map(id => data.find(i => i.id === id)).filter(item => {
+                          if (!item) return false;
+                          const path = item.pathParts.join(' ');
+                          const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('法术') || path.includes('装备') || path.includes('道具');
+                          return !isSpecial;
+                        });
+                        if (items.length === 0) return null;
+                        return (
+                          <div className="bookmark-group">
+                            <h4 className="section-title mb-4">其他</h4>
+                            <div className="item-grid">
+                              {items.map(item => (
+                                <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })()}
                     </div>
                   ) : (
                     <div className="empty-folder">此文件夹为空</div>
@@ -794,7 +879,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
         className={`mobile-nav-item ${activeTab === 'bookmarks' ? 'active' : ''}`}
         onClick={() => setActiveTab('bookmarks')}
       >
-        <Bookmark size={24} />
+        <Heart size={24} />
         <span>我的收藏</span>
       </button>
 
@@ -841,15 +926,15 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
     setActivePopover(isPopoverOpen ? null : item.id);
   };
   return (
-    <div className={`spell-card-wrapper ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''}`}>
+    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''}`}>
       <div
         onClick={onClick}
         className="spell-card-inner"
       >
         {/* Card Body */}
         <div className="spell-card-body">
-          <div className="spell-card-classes" title={item.classes.join('、')}>
-            {item.classes.join('、')}
+          <div className="spell-card-classes" title={item.classes?.join('、') || ''}>
+            {item.classes?.join('、') || ''}
           </div>
 
           <div className="spell-card-header">
@@ -894,7 +979,7 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
           </div>
 
           <div className="spell-card-meta">
-            <span className="meta-item">{item.level}</span>
+            <span className="meta-item">{item.level || '环阶未知'}</span>
             <span className="meta-divider">•</span>
             <span className="meta-item">{item.castingTime || '1 动作'}</span>
           </div>
@@ -902,11 +987,10 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
           <div className="spell-card-extra">
             <div className="extra-item">
               <span className="label">时间:</span>
-              <span className="value">{item.duration}</span>
+              <span className="value">{item.duration || '瞬时'}</span>
               <span className="label">| 成分:</span>
-              <span className="value">{item.components}</span>
+              <span className="value">{item.components || 'V, S'}</span>
             </div>
-
           </div>
         </div>
 
@@ -927,7 +1011,7 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
             exit={{ height: 0, opacity: 0 }}
             className="spell-card-accordion"
           >
-            <div className="p-4 relative">
+            <div className="p-3 relative">
               <button
                 onClick={(e) => { e.stopPropagation(); onBookmark(); }}
                 className="spell-card-float-heart"
