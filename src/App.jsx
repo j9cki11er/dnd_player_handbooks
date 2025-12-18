@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
-import { Search, Bookmark, Book, Layout, ChevronRight, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown } from 'lucide-react';
+import { Search, Bookmark, Book, Layout, ChevronRight, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -16,6 +16,7 @@ export default function App() {
   const [expandedPaths, setExpandedPaths] = useState({}); // Track expanded folders in sidebar
   const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
   const [pendingBookmark, setPendingBookmark] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Content loading states
   const [loadedContent, setLoadedContent] = useState('');
@@ -164,6 +165,7 @@ export default function App() {
       const pathStr = path.join('/');
       setExpandedPaths(prev => ({ ...prev, [pathStr]: true }));
     }
+    setIsMobileMenuOpen(false);
   };
 
   const toggleBookmark = (id, folder) => {
@@ -262,7 +264,7 @@ export default function App() {
   return (
     <div className="app-container">
       {/* Sidebar */}
-      <aside className="sidebar">
+      <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           <div className="logo-icon bg-gold-gradient">
             <Book className="icon-black" size={24} />
@@ -529,6 +531,23 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+
+
+      {/* Mobile Menu Backdrop */}
+      {isMobileMenuOpen && (
+        <div
+          className="mobile-backdrop"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Quick Access FAB */}
+      <button
+        className="mobile-fab"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
     </div>
   );
 }
