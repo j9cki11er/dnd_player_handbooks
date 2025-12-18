@@ -336,7 +336,7 @@ export default function App() {
       </aside>
 
       {/* Main Content */}
-      <main className="main-viewport">
+      <main className={`main-viewport ${activeTab === 'spells' ? 'wide-view' : ''}`}>
         <AnimatePresence mode="wait">
           {activeTab === 'browser' && !selectedItem && (
             <motion.div
@@ -416,7 +416,7 @@ export default function App() {
           {activeTab === 'spells' && (
             <div className="h-full flex flex-col md:flex-row gap-4 overflow-hidden relative">
               {/* Left Panel: List & Filters */}
-              <div className={`flex-1 flex flex-col h-full overflow-hidden transition-all duration-300 ${selectedItem && !isMobile ? 'md:max-w-md' : ''}`}>
+              <div className={`flex-1 flex flex-col h-full overflow-hidden transition-all duration-300`}>
                 <div className="view-header mb-4 shrink-0">
                   <h2 className="view-title gold-text">法术列表</h2>
                 </div>
