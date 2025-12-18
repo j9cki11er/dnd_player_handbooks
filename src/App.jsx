@@ -425,13 +425,13 @@ export default function App() {
                   <p className="welcome-desc mb-6">从左侧选择一个分类，或者使用全局搜索寻找您需要的规则、法术或职业信息。</p>
                   <div className="disclaimer-box mb-8">
                     <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
-                      <strong>冒险者须知 · Beta 测试</strong>
+                      <strong>冒险者须知 · Beta 测试</strong><br></br>
                       {"\n"}
-                      此玩家手册仍在锻造之中（Beta 测试阶段）。
+                      此玩家手册仍在锻造之中（Beta 测试阶段）。<br></br>
                       {"\n"}
-                      若你在冒险途中发现任何异常、错误，或有改进建议，
+                      若你在冒险途中发现任何异常、错误，或有改进建议，<br></br>
                       {"\n"}
-                      请透过 WhatsApp 将情报送达：
+                      请透过 WhatsApp 将情报送达：<br></br>
                       {"\n"}
                       <a
                         href="https://wa.me/60175815819"
@@ -441,7 +441,7 @@ export default function App() {
                       >
                         +60 17-581 5819
                       </a>
-                      {"\n"}
+                      {"\n"}<br></br>
                       你的反馈，将决定下一次升级的命运。
                     </p>
                   </div>

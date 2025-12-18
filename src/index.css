@@ -910,7 +910,19 @@ body {
   }
 
   .item-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .welcome-panel {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .item-card {
+    padding: 0.5rem;
   }
 }
 
@@ -1013,13 +1025,13 @@ body {
 }
 
 .spell-card-meta span {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
   margin: 0 0.25rem;
 }
 
 .spell-card-classes {
   font-size: 10px;
-  color: var(--accent-gold);
+  color: rgba(198, 180, 29, 0.9);
   opacity: 0.6;
   white-space: nowrap;
   overflow: hidden;
@@ -1126,7 +1138,7 @@ body {
 @media (min-width: 768px) {
   .spell-detail-panel.active {
     display: flex;
-    width: 350px;
+    width: 450px;
     opacity: 1;
     transform: translateX(0);
   }
