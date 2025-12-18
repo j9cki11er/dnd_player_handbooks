@@ -414,9 +414,9 @@ export default function App() {
           )}
 
           {activeTab === 'spells' && (
-            <div className="h-[calc(100vh-6rem)] flex flex-row gap-4 overflow-hidden relative">
+            <div className="spell-browser-container">
               {/* Left Panel: List & Filters */}
-              <div className={`flex-1 flex flex-col h-full overflow-hidden transition-all duration-300`}>
+              <div className="spell-list-panel">
                 <div className="view-header mb-4 shrink-0">
                   <h2 className="view-title gold-text">法术列表</h2>
                 </div>
@@ -489,7 +489,7 @@ export default function App() {
 
               {/* Right Panel: Desktop Details */}
               {!isMobile && (
-                <div className={`hidden md:flex flex-col h-full bg-black/40 border-l border-gold/20 transition-all duration-300 ${selectedItem ? 'w-[600px] opacity-100 translate-x-0' : 'w-0 opacity-0 translate-x-10 overflow-hidden'}`}>
+                <div className={`spell-detail-panel ${selectedItem ? 'active' : ''}`}>
                   {selectedItem && (
                     <div className="p-6 h-full overflow-y-auto custom-scrollbar">
                       <div className="flex justify-between items-start mb-6 border-b border-gold/20 pb-4">
