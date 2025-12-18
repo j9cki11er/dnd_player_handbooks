@@ -12,7 +12,11 @@
       "法师"
     ],
     "path": "spells/Acid_Splash.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Blade_Ward",
@@ -29,7 +33,11 @@
       "法师"
     ],
     "path": "spells/Blade_Ward.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Chill_Touch",
@@ -45,7 +53,11 @@
       "法师"
     ],
     "path": "spells/Chill_Touch.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Dancing_Lights",
@@ -61,7 +73,11 @@
       "法师"
     ],
     "path": "spells/Dancing_Lights.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一点磷）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Druidcraft",
@@ -75,7 +91,11 @@
       "德鲁伊"
     ],
     "path": "spells/Druidcraft.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Eldritch_Blast",
@@ -89,7 +109,11 @@
       "魔契师"
     ],
     "path": "spells/Eldritch_Blast.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Elementalism",
@@ -105,7 +129,11 @@
       "法师"
     ],
     "path": "spells/Elementalism.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Fire_Bolt",
@@ -120,7 +148,11 @@
       "法师"
     ],
     "path": "spells/Fire_Bolt.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Friends",
@@ -137,7 +169,11 @@
       "法师"
     ],
     "path": "spells/Friends.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "10尺",
+    "components": "S、M（一些化妆品）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Guidance",
@@ -152,7 +188,11 @@
       "德鲁伊"
     ],
     "path": "spells/Guidance.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Light",
@@ -169,7 +209,11 @@
       "法师"
     ],
     "path": "spells/Light.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、M（一只萤火虫或一片磷光苔藓）",
+    "duration": "1小时"
   },
   {
     "id": "Mage_Hand",
@@ -186,7 +230,11 @@
       "法师"
     ],
     "path": "spells/Mage_Hand.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "1分钟"
   },
   {
     "id": "Mending",
@@ -204,7 +252,11 @@
       "法师"
     ],
     "path": "spells/Mending.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "1分钟",
+    "range": "触碰",
+    "components": "V、S、M（两块天然磁石）",
+    "duration": "立即"
   },
   {
     "id": "Message",
@@ -221,7 +273,11 @@
       "法师"
     ],
     "path": "spells/Message.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "S、M（一段铜线）",
+    "duration": "立即"
   },
   {
     "id": "Mind_Sliver",
@@ -237,7 +293,11 @@
       "法师"
     ],
     "path": "spells/Mind_Sliver.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "1轮"
   },
   {
     "id": "Minor_Illusion",
@@ -254,7 +314,11 @@
       "法师"
     ],
     "path": "spells/Minor_Illusion.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "S、M（少量羊毛）",
+    "duration": "1分钟"
   },
   {
     "id": "Poison_Spray",
@@ -271,7 +335,11 @@
       "法师"
     ],
     "path": "spells/Poison_Spray.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Prestidigitation",
@@ -288,7 +356,11 @@
       "法师"
     ],
     "path": "spells/Prestidigitation.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "10尺",
+    "components": "V、S",
+    "duration": "至多1小时"
   },
   {
     "id": "Produce_Flame",
@@ -302,7 +374,11 @@
       "德鲁伊"
     ],
     "path": "spells/Produce_Flame.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "10分钟"
   },
   {
     "id": "Ray_of_Frost",
@@ -317,7 +393,11 @@
       "法师"
     ],
     "path": "spells/Ray_of_Frost.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Resistance",
@@ -332,7 +412,11 @@
       "德鲁伊"
     ],
     "path": "spells/Resistance.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Sacred_Flame",
@@ -346,7 +430,11 @@
       "牧师"
     ],
     "path": "spells/Sacred_Flame.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Shillelagh",
@@ -360,7 +448,11 @@
       "德鲁伊"
     ],
     "path": "spells/Shillelagh.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S、M（槲寄生）",
+    "duration": "1分钟"
   },
   {
     "id": "Shocking_Grasp",
@@ -375,7 +467,11 @@
       "法师"
     ],
     "path": "spells/Shocking_Grasp.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Sorcerous_Burst",
@@ -389,7 +485,11 @@
       "术士"
     ],
     "path": "spells/Sorcerous_Burst.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Spare_the_Dying",
@@ -404,7 +504,11 @@
       "德鲁伊"
     ],
     "path": "spells/Spare_the_Dying.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "15尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Starry_Wisp",
@@ -419,7 +523,11 @@
       "德鲁伊"
     ],
     "path": "spells/Starry_Wisp.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Thaumaturgy",
@@ -433,7 +541,11 @@
       "牧师"
     ],
     "path": "spells/Thaumaturgy.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V",
+    "duration": "1分钟"
   },
   {
     "id": "Thorn_Whip",
@@ -447,7 +559,11 @@
       "德鲁伊"
     ],
     "path": "spells/Thorn_Whip.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一根带刺植物茎）",
+    "duration": "立即"
   },
   {
     "id": "Thunderclap",
@@ -465,7 +581,11 @@
       "法师"
     ],
     "path": "spells/Thunderclap.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "S",
+    "duration": "立即"
   },
   {
     "id": "Toll_the_Dead",
@@ -481,7 +601,11 @@
       "法师"
     ],
     "path": "spells/Toll_the_Dead.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "True_Strike",
@@ -498,7 +622,11 @@
       "法师"
     ],
     "path": "spells/True_Strike.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "S、M（一把价值1+CP的你熟练的武器）",
+    "duration": "立即"
   },
   {
     "id": "Vicious_Mockery",
@@ -512,7 +640,11 @@
       "吟游诗人"
     ],
     "path": "spells/Vicious_Mockery.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Word_of_Radiance",
@@ -526,7 +658,11 @@
       "牧师"
     ],
     "path": "spells/Word_of_Radiance.html",
-    "source": "0环.html"
+    "source": "0环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、M（一枚艳阳标志）",
+    "duration": "立即"
   },
   {
     "id": "Alarm",
@@ -541,7 +677,11 @@
       "法师"
     ],
     "path": "spells/Alarm.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "1 分钟或仪式",
+    "range": "30 尺",
+    "components": "V、S、M（一个小铃铛和一小段银线）",
+    "duration": "8 小时"
   },
   {
     "id": "Animal_Friendship",
@@ -557,7 +697,11 @@
       "游侠"
     ],
     "path": "spells/Animal_Friendship.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S、M（一点食物）",
+    "duration": "24 小时"
   },
   {
     "id": "Armor_of_Agathys",
@@ -571,7 +715,11 @@
       "魔契师"
     ],
     "path": "spells/Armor_of_Agathys.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S、M（一块蓝色玻璃碎片）",
+    "duration": "1 小时"
   },
   {
     "id": "Arms_of_Hadar",
@@ -585,7 +733,11 @@
       "魔契师"
     ],
     "path": "spells/Arms_of_Hadar.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Bane",
@@ -601,7 +753,11 @@
       "魔契师"
     ],
     "path": "spells/Bane.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一滴血）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Bless",
@@ -616,7 +772,11 @@
       "圣武士"
     ],
     "path": "spells/Bless.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一枚价值5+GP的圣徽）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Burning_Hands",
@@ -631,7 +791,11 @@
       "法师"
     ],
     "path": "spells/Burning_Hands.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Charm_Person",
@@ -649,7 +813,11 @@
       "法师"
     ],
     "path": "spells/Charm_Person.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S",
+    "duration": "1 小时"
   },
   {
     "id": "Chromatic_Orb",
@@ -664,7 +832,11 @@
       "法师"
     ],
     "path": "spells/Chromatic_Orb.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V、S、M（一枚价值50GP+的钻石）",
+    "duration": "立即"
   },
   {
     "id": "Color_Spray",
@@ -680,7 +852,11 @@
       "法师"
     ],
     "path": "spells/Color_Spray.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一撮彩色沙子）",
+    "duration": "立即"
   },
   {
     "id": "Command",
@@ -696,7 +872,11 @@
       "圣武士"
     ],
     "path": "spells/Command.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Compelled_Duel",
@@ -710,7 +890,10 @@
       "圣武士"
     ],
     "path": "spells/Compelled_Duel.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "30 尺",
+    "components": "V"
   },
   {
     "id": "Comprehend_Languages",
@@ -727,7 +910,11 @@
       "法师"
     ],
     "path": "spells/Comprehend_Languages.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "自身",
+    "components": "V、S、M（一撮煤灰和盐）",
+    "duration": "1 小时"
   },
   {
     "id": "Create_or_Destroy_Water",
@@ -742,7 +929,11 @@
       "德鲁伊"
     ],
     "path": "spells/Create_or_Destroy_Water.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（水沙混合物）",
+    "duration": "立即"
   },
   {
     "id": "Cure_Wounds",
@@ -760,7 +951,11 @@
       "游侠"
     ],
     "path": "spells/Cure_Wounds.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Detect_Evil_and_Good",
@@ -775,7 +970,11 @@
       "圣武士"
     ],
     "path": "spells/Detect_Evil_and_Good.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Detect_Magic",
@@ -796,7 +995,11 @@
       "法师"
     ],
     "path": "spells/Detect_Magic.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Detect_Poison_and_Disease",
@@ -813,7 +1016,11 @@
       "游侠"
     ],
     "path": "spells/Detect_Poison_and_Disease.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "自身",
+    "components": "V、S、M（一片紫杉叶）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Disguise_Self",
@@ -829,7 +1036,11 @@
       "法师"
     ],
     "path": "spells/Disguise_Self.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "1小时"
   },
   {
     "id": "Dissonant_Whispers",
@@ -843,7 +1054,11 @@
       "吟游诗人"
     ],
     "path": "spells/Dissonant_Whispers.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Divine_Favor",
@@ -857,7 +1072,11 @@
       "圣武士"
     ],
     "path": "spells/Divine_Favor.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "1分钟"
   },
   {
     "id": "Divine_Smite",
@@ -871,7 +1090,11 @@
       "圣武士"
     ],
     "path": "spells/Divine_Smite.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Ensnaring_Strike",
@@ -885,7 +1108,11 @@
       "游侠"
     ],
     "path": "spells/Ensnaring_Strike.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作，在你用武器命中目标后立即可用",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Entangle",
@@ -900,7 +1127,11 @@
       "游侠"
     ],
     "path": "spells/Entangle.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "90尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Expeditious_Retreat",
@@ -916,7 +1147,11 @@
       "法师"
     ],
     "path": "spells/Expeditious_Retreat.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Faerie_Fire",
@@ -931,7 +1166,11 @@
       "德鲁伊"
     ],
     "path": "spells/Faerie_Fire.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "False_Life",
@@ -946,7 +1185,11 @@
       "法师"
     ],
     "path": "spells/False_Life.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一滴酒精）",
+    "duration": "立即"
   },
   {
     "id": "Feather_Fall",
@@ -962,7 +1205,11 @@
       "法师"
     ],
     "path": "spells/Feather_Fall.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "反应，你或距你60尺内的可见生物坠落时可用",
+    "range": "60尺",
+    "components": "V、M（一小根羽毛或一块羽绒）",
+    "duration": "1分钟"
   },
   {
     "id": "Find_Familiar",
@@ -976,7 +1223,11 @@
       "法师"
     ],
     "path": "spells/Find_Familiar.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "1小时或仪式",
+    "range": "10尺",
+    "components": "V、S、M（价值10+GP的焚香，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Fog_Cloud",
@@ -993,7 +1244,11 @@
       "法师"
     ],
     "path": "spells/Fog_Cloud.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Goodberry",
@@ -1008,7 +1263,11 @@
       "游侠"
     ],
     "path": "spells/Goodberry.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一根槲寄生）",
+    "duration": "24小时"
   },
   {
     "id": "Grease",
@@ -1023,7 +1282,11 @@
       "法师"
     ],
     "path": "spells/Grease.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一块猪皮或黄油）",
+    "duration": "1分钟"
   },
   {
     "id": "Guiding_Bolt",
@@ -1037,7 +1300,11 @@
       "牧师"
     ],
     "path": "spells/Guiding_Bolt.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "1轮"
   },
   {
     "id": "Hail_of_Thorns",
@@ -1051,7 +1318,11 @@
       "游侠"
     ],
     "path": "spells/Hail_of_Thorns.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "1附赠动作，在你使用远程武器命中一个生物时紧接可用",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Healing_Word",
@@ -1067,7 +1338,11 @@
       "德鲁伊"
     ],
     "path": "spells/Healing_Word.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Hellish_Rebuke",
@@ -1081,7 +1356,11 @@
       "魔契师"
     ],
     "path": "spells/Hellish_Rebuke.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "反应，当你受到来自60尺内你可见生物的伤害时执行。",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Heroism",
@@ -1096,7 +1375,11 @@
       "圣武士"
     ],
     "path": "spells/Heroism.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Hex",
@@ -1110,7 +1393,11 @@
       "魔契师"
     ],
     "path": "spells/Hex.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "90尺",
+    "components": "V、S、M（一只风干的蝾螈眼）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Hunter_s_Mark",
@@ -1124,7 +1411,11 @@
       "游侠"
     ],
     "path": "spells/Hunter_s_Mark.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "90尺",
+    "components": "V",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Ice_Knife",
@@ -1140,7 +1431,11 @@
       "法师"
     ],
     "path": "spells/Ice_Knife.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "S、M（一滴水或一块冰）",
+    "duration": "立即"
   },
   {
     "id": "Identify",
@@ -1155,7 +1450,11 @@
       "法师"
     ],
     "path": "spells/Identify.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "1分钟或仪式",
+    "range": "触碰",
+    "components": "V、S、M（一颗价值100GP+的珍珠）",
+    "duration": "立即"
   },
   {
     "id": "Illusory_Script",
@@ -1170,7 +1469,11 @@
       "法师"
     ],
     "path": "spells/Illusory_Script.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "1分钟或仪式",
+    "range": "触碰",
+    "components": "V、S、M（价值 10+GP 的墨水，作为法术耗材）",
+    "duration": "10日"
   },
   {
     "id": "Inflict_Wounds",
@@ -1184,7 +1487,11 @@
       "牧师"
     ],
     "path": "spells/Inflict_Wounds.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Jump",
@@ -1201,7 +1508,11 @@
       "法师"
     ],
     "path": "spells/Jump.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "触碰",
+    "components": "V、S、M（一只蚱蜢的后腿）",
+    "duration": "1分钟"
   },
   {
     "id": "Longstrider",
@@ -1218,7 +1529,11 @@
       "法师"
     ],
     "path": "spells/Longstrider.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一撮泥土）",
+    "duration": "1 小时"
   },
   {
     "id": "Mage_Armor",
@@ -1233,7 +1548,11 @@
       "法师"
     ],
     "path": "spells/Mage_Armor.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一块鞣制过的皮革）",
+    "duration": "8小时"
   },
   {
     "id": "Magic_Missile",
@@ -1248,7 +1567,11 @@
       "法师"
     ],
     "path": "spells/Magic_Missile.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Protection_from_Evil_and_Good",
@@ -1266,7 +1589,11 @@
       "法师"
     ],
     "path": "spells/Protection_from_Evil_and_Good.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一瓶25GP+的圣水，作为此法术的耗材）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Purify_Food_and_Drink",
@@ -1282,7 +1609,11 @@
       "圣武士"
     ],
     "path": "spells/Purify_Food_and_Drink.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "10尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Ray_of_Sickness",
@@ -1297,7 +1628,11 @@
       "法师"
     ],
     "path": "spells/Ray_of_Sickness.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Sanctuary",
@@ -1311,7 +1646,11 @@
       "牧师"
     ],
     "path": "spells/Sanctuary.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "30 尺",
+    "components": "V、S、M（一块镜子碎片）",
+    "duration": "1 分钟"
   },
   {
     "id": "Searing_Smite",
@@ -1325,7 +1664,11 @@
       "圣武士"
     ],
     "path": "spells/Searing_Smite.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个目标后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "1分钟"
   },
   {
     "id": "Shield",
@@ -1340,7 +1683,11 @@
       "法师"
     ],
     "path": "spells/Shield.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "反应，当你被攻击命中或被作为<U><EM>魔法飞弹Magic Missile</EM></U>法术的目标时执行",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "1 轮"
   },
   {
     "id": "Shield_of_Faith",
@@ -1355,7 +1702,11 @@
       "圣武士"
     ],
     "path": "spells/Shield_of_Faith.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作",
+    "range": "60 尺",
+    "components": "V、S、M（一张祷文卷轴）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Silent_Image",
@@ -1371,7 +1722,11 @@
       "法师"
     ],
     "path": "spells/Silent_Image.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S、M（少量羊毛）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Sleep",
@@ -1387,7 +1742,11 @@
       "法师"
     ],
     "path": "spells/Sleep.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S、M（一把细沙或玫瑰花瓣）",
+    "duration": "专注，至多1 分钟"
   },
   {
     "id": "Speak_with_Animals",
@@ -1404,7 +1763,11 @@
       "魔契师"
     ],
     "path": "spells/Speak_with_Animals.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "10 分钟"
   },
   {
     "id": "Tasha_s_Hideous_Laughter",
@@ -1420,7 +1783,11 @@
       "法师"
     ],
     "path": "spells/Tasha_s_Hideous_Laughter.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一块甜馅饼和一根羽毛）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Tenser_s_Floating_Disk",
@@ -1434,7 +1801,11 @@
       "法师"
     ],
     "path": "spells/Tenser_s_Floating_Disk.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "30尺",
+    "components": "V、S、M（一滴汞）",
+    "duration": "1小时"
   },
   {
     "id": "Thunderous_Smite",
@@ -1448,7 +1819,11 @@
       "圣武士"
     ],
     "path": "spells/Thunderous_Smite.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个目标后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Thunderwave",
@@ -1465,7 +1840,11 @@
       "法师"
     ],
     "path": "spells/Thunderwave.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Unseen_Servant",
@@ -1481,7 +1860,11 @@
       "法师"
     ],
     "path": "spells/Unseen_Servant.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作或仪式",
+    "range": "60尺",
+    "components": "V、S、M（一些线和木头）",
+    "duration": "1小时"
   },
   {
     "id": "Witch_Bolt",
@@ -1497,7 +1880,11 @@
       "法师"
     ],
     "path": "spells/Witch_Bolt.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一根被闪电击中的树枝）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Wrathful_Smite",
@@ -1511,7 +1898,11 @@
       "圣武士"
     ],
     "path": "spells/Wrathful_Smite.html",
-    "source": "1环.html"
+    "source": "1环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "1分钟"
   },
   {
     "id": "Aid",
@@ -1529,7 +1920,11 @@
       "游侠"
     ],
     "path": "spells/Aid.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S、M（一小片白布）",
+    "duration": "8 小时"
   },
   {
     "id": "Alter_Self",
@@ -1544,7 +1939,11 @@
       "法师"
     ],
     "path": "spells/Alter_Self.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Animal_Messenger",
@@ -1560,7 +1959,11 @@
       "游侠"
     ],
     "path": "spells/Animal_Messenger.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作或仪式",
+    "range": "30 尺",
+    "components": "V、S、M（一点食物）",
+    "duration": "24小时"
   },
   {
     "id": "Arcane_Lock",
@@ -1574,7 +1977,11 @@
       "法师"
     ],
     "path": "spells/Arcane_Lock.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（价值25GP+的金粉，作为法术耗材）",
+    "duration": "直到被解除"
   },
   {
     "id": "Arcane_Vigor",
@@ -1589,7 +1996,11 @@
       "法师"
     ],
     "path": "spells/Arcane_Vigor.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Augury",
@@ -1605,7 +2016,11 @@
       "法师"
     ],
     "path": "spells/Augury.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "1 分钟或仪式",
+    "range": "自身",
+    "components": "V、S、M（绘有标记的短棒、骨头、卡片、或类似的预言道具，价值25+GP）",
+    "duration": "立即"
   },
   {
     "id": "Barkskin",
@@ -1620,7 +2035,11 @@
       "游侠"
     ],
     "path": "spells/Barkskin.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "触碰",
+    "components": "V、S、M（一把树皮）",
+    "duration": "1小时"
   },
   {
     "id": "Beast_Sense",
@@ -1635,7 +2054,11 @@
       "游侠"
     ],
     "path": "spells/Beast_Sense.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作或仪式",
+    "range": "触碰",
+    "components": "S",
+    "duration": "专注，至多一小时"
   },
   {
     "id": "BlindnessDeafness",
@@ -1652,7 +2075,11 @@
       "法师"
     ],
     "path": "spells/BlindnessDeafness.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V",
+    "duration": "1分钟"
   },
   {
     "id": "Blur",
@@ -1667,7 +2094,11 @@
       "法师"
     ],
     "path": "spells/Blur.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Calm_Emotions",
@@ -1682,7 +2113,11 @@
       "牧师"
     ],
     "path": "spells/Calm_Emotions.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Cloud_of_Daggers",
@@ -1699,7 +2134,11 @@
       "法师"
     ],
     "path": "spells/Cloud_of_Daggers.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S、M（一小片玻璃）",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Continual_Flame",
@@ -1715,7 +2154,11 @@
       "法师"
     ],
     "path": "spells/Continual_Flame.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（价值50+GP的红宝石尘，作为法术耗材）",
+    "duration": "直至被解除"
   },
   {
     "id": "Cordon_of_Arrows",
@@ -1729,7 +2172,11 @@
       "游侠"
     ],
     "path": "spells/Cordon_of_Arrows.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一根装饰性穗带）",
+    "duration": "8小时"
   },
   {
     "id": "Crown_of_Madness",
@@ -1746,7 +2193,11 @@
       "法师"
     ],
     "path": "spells/Crown_of_Madness.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Darkness",
@@ -1762,7 +2213,11 @@
       "法师"
     ],
     "path": "spells/Darkness.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（蝙蝠毛与一块煤）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Darkvision",
@@ -1779,7 +2234,11 @@
       "法师"
     ],
     "path": "spells/Darkvision.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一根干胡萝卜）",
+    "duration": "8小时"
   },
   {
     "id": "Detect_Thoughts",
@@ -1795,7 +2254,11 @@
       "法师"
     ],
     "path": "spells/Detect_Thoughts.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（1铜币）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Dragon_s_Breath",
@@ -1810,7 +2273,11 @@
       "法师"
     ],
     "path": "spells/Dragon_s_Breath.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "触碰",
+    "components": "V、S、M（一根辣椒）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Enhance_Ability",
@@ -1829,7 +2296,11 @@
       "法师"
     ],
     "path": "spells/Enhance_Ability.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（毛发或羽毛）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Enlarge_Reduce",
@@ -1846,7 +2317,11 @@
       "法师"
     ],
     "path": "spells/Enlarge_Reduce.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一撮铁粉）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Enthrall",
@@ -1861,7 +2336,11 @@
       "魔契师"
     ],
     "path": "spells/Enthrall.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Find_Steed",
@@ -1875,7 +2354,11 @@
       "圣武士"
     ],
     "path": "spells/Find_Steed.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Find_Traps",
@@ -1891,7 +2374,11 @@
       "游侠"
     ],
     "path": "spells/Find_Traps.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Flame_Blade",
@@ -1906,7 +2393,11 @@
       "术士"
     ],
     "path": "spells/Flame_Blade.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S、M（一片漆树叶）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Flaming_Sphere",
@@ -1922,7 +2413,11 @@
       "法师"
     ],
     "path": "spells/Flaming_Sphere.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一颗蜡球）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Gentle_Repose",
@@ -1938,7 +2433,11 @@
       "法师"
     ],
     "path": "spells/Gentle_Repose.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作或仪式",
+    "range": "触碰",
+    "components": "V、S、M（2枚铜币，作为此法术的耗材）",
+    "duration": "10日"
   },
   {
     "id": "Gust_of_Wind",
@@ -1955,7 +2454,11 @@
       "法师"
     ],
     "path": "spells/Gust_of_Wind.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一颗豆类种子）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Heat_Metal",
@@ -1970,7 +2473,11 @@
       "德鲁伊"
     ],
     "path": "spells/Heat_Metal.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一片铁片和一团火焰）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Hold_Person",
@@ -1989,7 +2496,11 @@
       "法师"
     ],
     "path": "spells/Hold_Person.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一片直的小铁片）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Invisibility",
@@ -2006,7 +2517,11 @@
       "法师"
     ],
     "path": "spells/Invisibility.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一根包裹在阿拉伯胶中的睫毛）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Knock",
@@ -2022,7 +2537,11 @@
       "法师"
     ],
     "path": "spells/Knock.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Lesser_Restoration",
@@ -2040,7 +2559,11 @@
       "游侠"
     ],
     "path": "spells/Lesser_Restoration.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Levitate",
@@ -2055,7 +2578,11 @@
       "法师"
     ],
     "path": "spells/Levitate.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S、M（一个金属弹簧）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Locate_Animals_or_Plants",
@@ -2071,7 +2598,11 @@
       "游侠"
     ],
     "path": "spells/Locate_Animals_or_Plants.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作或仪式",
+    "range": "自身",
+    "components": "V、S、M（一块寻血猎犬的皮毛）",
+    "duration": "立即"
   },
   {
     "id": "Locate_Object",
@@ -2090,7 +2621,11 @@
       "法师"
     ],
     "path": "spells/Locate_Object.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一根分叉的树枝）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Magic_Mouth",
@@ -2105,7 +2640,11 @@
       "法师"
     ],
     "path": "spells/Magic_Mouth.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "1分钟或仪式",
+    "range": "30尺",
+    "components": "V、S、M（价值10GP+的玉粉，作为法术耗材）",
+    "duration": "直到被解除"
   },
   {
     "id": "Magic_Weapon",
@@ -2122,7 +2661,11 @@
       "法师"
     ],
     "path": "spells/Magic_Weapon.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "1小时"
   },
   {
     "id": "Melf_s_Acid_Arrow",
@@ -2136,7 +2679,11 @@
       "法师"
     ],
     "path": "spells/Melf_s_Acid_Arrow.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "90尺",
+    "components": "V、S、M（大黄粉）",
+    "duration": "立即"
   },
   {
     "id": "Mind_Spike",
@@ -2152,7 +2699,11 @@
       "法师"
     ],
     "path": "spells/Mind_Spike.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "S",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Mirror_Image",
@@ -2169,7 +2720,11 @@
       "法师"
     ],
     "path": "spells/Mirror_Image.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "1分钟"
   },
   {
     "id": "Misty_Step",
@@ -2185,7 +2740,11 @@
       "法师"
     ],
     "path": "spells/Misty_Step.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Moonbeam",
@@ -2199,7 +2758,11 @@
       "德鲁伊"
     ],
     "path": "spells/Moonbeam.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一片月籽藤叶）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Nystul_s_Magic_Aura",
@@ -2213,7 +2776,11 @@
       "法师"
     ],
     "path": "spells/Nystul_s_Magic_Aura.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一小片方形丝绸）",
+    "duration": "24小时"
   },
   {
     "id": "Pass_without_Trace",
@@ -2228,7 +2795,11 @@
       "游侠"
     ],
     "path": "spells/Pass_without_Trace.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（槲寄生烧成的灰烬）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Phantasmal_Force",
@@ -2244,7 +2815,11 @@
       "法师"
     ],
     "path": "spells/Phantasmal_Force.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一点羊毛）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Prayer_of_Healing",
@@ -2259,7 +2834,11 @@
       "圣武士"
     ],
     "path": "spells/Prayer_of_Healing.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "10分钟",
+    "range": "30尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Protection_from_Poison",
@@ -2276,7 +2855,11 @@
       "游侠"
     ],
     "path": "spells/Protection_from_Poison.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "1小时"
   },
   {
     "id": "Ray_of_Enfeeblement",
@@ -2291,7 +2874,11 @@
       "法师"
     ],
     "path": "spells/Ray_of_Enfeeblement.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Rope_Trick",
@@ -2305,7 +2892,11 @@
       "法师"
     ],
     "path": "spells/Rope_Trick.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一段绳子）",
+    "duration": "1小时"
   },
   {
     "id": "Scorching_Ray",
@@ -2320,7 +2911,11 @@
       "法师"
     ],
     "path": "spells/Scorching_Ray.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "120 尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "See_Invisibility",
@@ -2336,7 +2931,11 @@
       "法师"
     ],
     "path": "spells/See_Invisibility.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一撮滑石粉）",
+    "duration": "1 小时"
   },
   {
     "id": "Shatter",
@@ -2352,7 +2951,11 @@
       "法师"
     ],
     "path": "spells/Shatter.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S、M（一片云母）",
+    "duration": "立即"
   },
   {
     "id": "Shining_Smite",
@@ -2366,7 +2969,11 @@
       "圣武士"
     ],
     "path": "spells/Shining_Smite.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Silence",
@@ -2382,7 +2989,11 @@
       "游侠"
     ],
     "path": "spells/Silence.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作或仪式",
+    "range": "120 尺",
+    "components": "V、S",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Spider_Climb",
@@ -2398,7 +3009,11 @@
       "法师"
     ],
     "path": "spells/Spider_Climb.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一滴沥青和一只蜘蛛）",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Spike_Growth",
@@ -2413,7 +3028,11 @@
       "游侠"
     ],
     "path": "spells/Spike_Growth.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（七根棘刺）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Spiritual_Weapon",
@@ -2427,7 +3046,11 @@
       "牧师"
     ],
     "path": "spells/Spiritual_Weapon.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "附赠动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "专注，至多1 分钟"
   },
   {
     "id": "Suggestion",
@@ -2444,7 +3067,11 @@
       "法师"
     ],
     "path": "spells/Suggestion.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、M（一滴蜂蜜）",
+    "duration": "专注，至多 8 小时"
   },
   {
     "id": "Summon_Beast",
@@ -2459,7 +3086,11 @@
       "游侠"
     ],
     "path": "spells/Summon_Beast.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一根羽毛、一簇毛皮和一条装在镀金橡果内的鱼尾、价值至少200GP）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Warding_Bond",
@@ -2474,7 +3105,11 @@
       "圣武士"
     ],
     "path": "spells/Warding_Bond.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一对铂金戒指（每个价值50GP+），你和目标在法术持续时间内需保持佩戴它们）",
+    "duration": "1小时"
   },
   {
     "id": "Web",
@@ -2489,7 +3124,11 @@
       "法师"
     ],
     "path": "spells/Web.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（少量蜘蛛网）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Zone_of_Truth",
@@ -2505,7 +3144,11 @@
       "圣武士"
     ],
     "path": "spells/Zone_of_Truth.html",
-    "source": "2环.html"
+    "source": "2环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "10分钟"
   },
   {
     "id": "Animate_Dead",
@@ -2520,7 +3163,11 @@
       "法师"
     ],
     "path": "spells/Animate_Dead.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "1 分钟",
+    "range": "10 尺",
+    "components": "V、S、M（一滴血、一块肉、以及一点骨灰）",
+    "duration": "立即"
   },
   {
     "id": "Aura_of_Vitality",
@@ -2536,7 +3183,11 @@
       "圣武士"
     ],
     "path": "spells/Aura_of_Vitality.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Beacon_of_Hope",
@@ -2550,7 +3201,11 @@
       "牧师"
     ],
     "path": "spells/Beacon_of_Hope.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "专注，至多一分钟"
   },
   {
     "id": "Bestow_Curse",
@@ -2566,7 +3221,11 @@
       "法师"
     ],
     "path": "spells/Bestow_Curse.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Blinding_Smite",
@@ -2580,7 +3239,11 @@
       "圣武士"
     ],
     "path": "spells/Blinding_Smite.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "1分钟"
   },
   {
     "id": "Blink",
@@ -2595,7 +3258,11 @@
       "法师"
     ],
     "path": "spells/Blink.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "1分钟"
   },
   {
     "id": "Call_Lightning",
@@ -2609,7 +3276,11 @@
       "德鲁伊"
     ],
     "path": "spells/Call_Lightning.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "120 尺",
+    "components": "V、S",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Clairvoyance",
@@ -2626,7 +3297,11 @@
       "法师"
     ],
     "path": "spells/Clairvoyance.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "10 分钟",
+    "range": "1 里",
+    "components": "V、S、M（一件价值100GP+的法具：选择聆听则为一个以珠宝装饰的号角，选择观察则为一颗玻璃眼珠）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Conjure_Animals",
@@ -2641,7 +3316,11 @@
       "游侠"
     ],
     "path": "spells/Conjure_Animals.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Conjure_Barrage",
@@ -2655,7 +3334,11 @@
       "游侠"
     ],
     "path": "spells/Conjure_Barrage.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一把价值1+CP的近战或远程武器）",
+    "duration": "立即"
   },
   {
     "id": "Counterspell",
@@ -2671,7 +3354,11 @@
       "法师"
     ],
     "path": "spells/Counterspell.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "反应，当你看见60尺内一名生物施展一道具有言语、姿势或材料成分的法术时可用",
+    "range": "60尺",
+    "components": "S",
+    "duration": "立即"
   },
   {
     "id": "Create_Food_and_Water",
@@ -2686,7 +3373,11 @@
       "圣武士"
     ],
     "path": "spells/Create_Food_and_Water.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Crusader_s_Mantle",
@@ -2700,7 +3391,11 @@
       "圣武士"
     ],
     "path": "spells/Crusader_s_Mantle.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Daylight",
@@ -2718,7 +3413,11 @@
       "术士"
     ],
     "path": "spells/Daylight.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "1小时"
   },
   {
     "id": "Dispel_Magic",
@@ -2739,7 +3438,11 @@
       "法师"
     ],
     "path": "spells/Dispel_Magic.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Elemental_Weapon",
@@ -2755,7 +3458,11 @@
       "游侠"
     ],
     "path": "spells/Elemental_Weapon.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Fear",
@@ -2772,7 +3479,11 @@
       "法师"
     ],
     "path": "spells/Fear.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一根白羽毛）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Feign_Death",
@@ -2789,7 +3500,11 @@
       "法师"
     ],
     "path": "spells/Feign_Death.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作或仪式",
+    "range": "触碰",
+    "components": "V、S、M（一撮墓土）",
+    "duration": "1小时"
   },
   {
     "id": "Fireball",
@@ -2804,7 +3519,11 @@
       "法师"
     ],
     "path": "spells/Fireball.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（一颗蝙蝠粪和硫磺搓成的小球）",
+    "duration": "立即"
   },
   {
     "id": "Fly",
@@ -2820,7 +3539,11 @@
       "法师"
     ],
     "path": "spells/Fly.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一根羽毛）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Gaseous_Form",
@@ -2836,7 +3559,11 @@
       "法师"
     ],
     "path": "spells/Gaseous_Form.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一小块纱布）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Glyph_of_Warding",
@@ -2852,7 +3579,11 @@
       "法师"
     ],
     "path": "spells/Glyph_of_Warding.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "1小时",
+    "range": "触碰",
+    "components": "V、S、M（价值200GP+的钻石尘，作为法术耗材）",
+    "duration": "直到被解除或触发"
   },
   {
     "id": "Haste",
@@ -2867,7 +3598,11 @@
       "法师"
     ],
     "path": "spells/Haste.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一片甘草根切片）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Hunger_of_Hadar",
@@ -2881,7 +3616,11 @@
       "魔契师"
     ],
     "path": "spells/Hunger_of_Hadar.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（一条酸洗过的触须）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Hypnotic_Pattern",
@@ -2898,7 +3637,11 @@
       "法师"
     ],
     "path": "spells/Hypnotic_Pattern.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "S、M（一撮五彩纸屑）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Leomund_s_Tiny_Hut",
@@ -2913,7 +3656,11 @@
       "法师"
     ],
     "path": "spells/Leomund_s_Tiny_Hut.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "1分钟或仪式",
+    "range": "自身",
+    "components": "V、S、M（一个小水晶珠子）",
+    "duration": "8 小时"
   },
   {
     "id": "Lightning_Arrows",
@@ -2927,7 +3674,11 @@
       "游侠"
     ],
     "path": "spells/Lightning_Arrows.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "附赠动作，在你使用武器发动远程攻击命中一个目标或失手时紧接可用",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Lightning_Bolt",
@@ -2942,7 +3693,11 @@
       "法师"
     ],
     "path": "spells/Lightning_Bolt.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一些毛皮和一把水晶权杖）",
+    "duration": "立即"
   },
   {
     "id": "Magic_Circle",
@@ -2959,7 +3714,11 @@
       "法师"
     ],
     "path": "spells/Magic_Circle.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "1分钟",
+    "range": "10尺",
+    "components": "V、S、M（总价值100GP+的盐和银粉，作为法术耗材）",
+    "duration": "1小时"
   },
   {
     "id": "Major_Image",
@@ -2976,7 +3735,11 @@
       "法师"
     ],
     "path": "spells/Major_Image.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一撮羊毛）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Mass_Healing_Word",
@@ -2991,7 +3754,11 @@
       "牧师"
     ],
     "path": "spells/Mass_Healing_Word.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "附赠动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Meld_Into_Stone",
@@ -3007,7 +3774,11 @@
       "游侠"
     ],
     "path": "spells/Meld_Into_Stone.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作或仪式",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "8小时"
   },
   {
     "id": "Nondetection",
@@ -3023,7 +3794,11 @@
       "法师"
     ],
     "path": "spells/Nondetection.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一撮价值25+GP的钻石尘，作为法术耗材）",
+    "duration": "8小时"
   },
   {
     "id": "Phantom_Steed",
@@ -3037,7 +3812,11 @@
       "法师"
     ],
     "path": "spells/Phantom_Steed.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "1分钟或仪式",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "1小时"
   },
   {
     "id": "Plant_Growth",
@@ -3053,7 +3832,11 @@
       "游侠"
     ],
     "path": "spells/Plant_Growth.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作（繁茂）或8小时（丰产）",
+    "range": "150尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Protection_from_Energy",
@@ -3071,7 +3854,11 @@
       "法师"
     ],
     "path": "spells/Protection_from_Energy.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Remove_Curse",
@@ -3088,7 +3875,11 @@
       "法师"
     ],
     "path": "spells/Remove_Curse.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Revivify",
@@ -3105,7 +3896,11 @@
       "游侠"
     ],
     "path": "spells/Revivify.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一颗价值300+GP的钻石，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Sending",
@@ -3121,7 +3916,11 @@
       "法师"
     ],
     "path": "spells/Sending.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "无限",
+    "components": "V、S、M（一段铜线）",
+    "duration": "立即"
   },
   {
     "id": "Sleet_Storm",
@@ -3137,7 +3936,11 @@
       "法师"
     ],
     "path": "spells/Sleet_Storm.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "150 尺",
+    "components": "V、S、M（一把迷你雨伞）",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Slow",
@@ -3153,7 +3956,11 @@
       "法师"
     ],
     "path": "spells/Slow.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "120 尺",
+    "components": "V、S、M（一滴糖浆）",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Speak_with_Dead",
@@ -3169,7 +3976,11 @@
       "法师"
     ],
     "path": "spells/Speak_with_Dead.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "10 尺",
+    "components": "V、S、M（燃烧的香）",
+    "duration": "10 分钟"
   },
   {
     "id": "Speak_with_Plants",
@@ -3185,7 +3996,11 @@
       "游侠"
     ],
     "path": "spells/Speak_with_Plants.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身（半径 30 尺）",
+    "components": "V、S",
+    "duration": "10 分钟"
   },
   {
     "id": "Spirit_Guardians",
@@ -3199,7 +4014,11 @@
       "牧师"
     ],
     "path": "spells/Spirit_Guardians.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一卷祷文）",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Stinking_Cloud",
@@ -3215,7 +4034,11 @@
       "法师"
     ],
     "path": "spells/Stinking_Cloud.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V、S、M（一个臭鸡蛋）",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Summon_Fey",
@@ -3232,7 +4055,11 @@
       "法师"
     ],
     "path": "spells/Summon_Fey.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一朵价值300+GP的镀金花）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Summon_Undead",
@@ -3247,7 +4074,11 @@
       "法师"
     ],
     "path": "spells/Summon_Undead.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一个价值300+GP的镀金头骨）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Tongues",
@@ -3265,7 +4096,11 @@
       "法师"
     ],
     "path": "spells/Tongues.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、M（一座微缩庙塔）",
+    "duration": "1小时"
   },
   {
     "id": "Vampiric_Touch",
@@ -3282,7 +4117,11 @@
       "法师"
     ],
     "path": "spells/Vampiric_Touch.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Water_Breathing",
@@ -3299,7 +4138,11 @@
       "法师"
     ],
     "path": "spells/Water_Breathing.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作或仪式",
+    "range": "30尺",
+    "components": "V、S、M（一根短芦苇）",
+    "duration": "24小时"
   },
   {
     "id": "Water_Walk",
@@ -3316,7 +4159,11 @@
       "术士"
     ],
     "path": "spells/Water_Walk.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作或仪式",
+    "range": "30尺",
+    "components": "V、S、M（一个软木塞）",
+    "duration": "1小时"
   },
   {
     "id": "Wind_Wall",
@@ -3331,7 +4178,11 @@
       "游侠"
     ],
     "path": "spells/Wind_Wall.html",
-    "source": "3环.html"
+    "source": "3环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一把扇子和一根羽毛）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Arcane_Eye",
@@ -3345,7 +4196,11 @@
       "法师"
     ],
     "path": "spells/Arcane_Eye.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S、M（一点蝙蝠毛皮）",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Aura_of_Life",
@@ -3360,7 +4215,11 @@
       "圣武士"
     ],
     "path": "spells/Aura_of_Life.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Aura_of_Purity",
@@ -3375,7 +4234,11 @@
       "圣武士"
     ],
     "path": "spells/Aura_of_Purity.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Banishment",
@@ -3393,7 +4256,11 @@
       "法师"
     ],
     "path": "spells/Banishment.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一颗五芒星）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Blight",
@@ -3410,7 +4277,11 @@
       "法师"
     ],
     "path": "spells/Blight.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Charm_Monster",
@@ -3428,7 +4299,11 @@
       "法师"
     ],
     "path": "spells/Charm_Monster.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S",
+    "duration": "1 小时"
   },
   {
     "id": "Compulsion",
@@ -3442,7 +4317,11 @@
       "吟游诗人"
     ],
     "path": "spells/Compulsion.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Confusion",
@@ -3459,7 +4338,11 @@
       "法师"
     ],
     "path": "spells/Confusion.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V、S、M（三颗坚果壳）",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Conjure_Minor_Elementals",
@@ -3474,7 +4357,11 @@
       "法师"
     ],
     "path": "spells/Conjure_Minor_Elementals.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Conjure_Woodland_Beings",
@@ -3489,7 +4376,11 @@
       "游侠"
     ],
     "path": "spells/Conjure_Woodland_Beings.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Control_Water",
@@ -3505,7 +4396,11 @@
       "法师"
     ],
     "path": "spells/Control_Water.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "300尺",
+    "components": "V、S、M（水尘混合物）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Death_Ward",
@@ -3520,7 +4415,11 @@
       "圣武士"
     ],
     "path": "spells/Death_Ward.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "8小时"
   },
   {
     "id": "Dimension_Door",
@@ -3537,7 +4436,11 @@
       "法师"
     ],
     "path": "spells/Dimension_Door.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "500尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Divination",
@@ -3553,7 +4456,11 @@
       "法师"
     ],
     "path": "spells/Divination.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作或仪式",
+    "range": "自身",
+    "components": "V、S、M（价值25+GP的熏香，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Dominate_Beast",
@@ -3569,7 +4476,11 @@
       "术士"
     ],
     "path": "spells/Dominate_Beast.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Evard_s_Black_Tentacles",
@@ -3583,7 +4494,11 @@
       "法师"
     ],
     "path": "spells/Evard_s_Black_Tentacles.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "90尺",
+    "components": "V、S、M（一根触手）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Fabricate",
@@ -3597,7 +4512,11 @@
       "法师"
     ],
     "path": "spells/Fabricate.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "10分钟",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Fire_Shield",
@@ -3613,7 +4532,11 @@
       "法师"
     ],
     "path": "spells/Fire_Shield.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一小块磷或一只萤火虫）",
+    "duration": "10分钟"
   },
   {
     "id": "Fount_of_Moonlight",
@@ -3628,7 +4551,11 @@
       "德鲁伊"
     ],
     "path": "spells/Fount_of_Moonlight.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Freedom_of_Movement",
@@ -3645,7 +4572,11 @@
       "游侠"
     ],
     "path": "spells/Freedom_of_Movement.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一条皮带）",
+    "duration": "1小时"
   },
   {
     "id": "Giant_Insect",
@@ -3659,7 +4590,11 @@
       "德鲁伊"
     ],
     "path": "spells/Giant_Insect.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Grasping_Vine",
@@ -3674,7 +4609,11 @@
       "游侠"
     ],
     "path": "spells/Grasping_Vine.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "附赠动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Greater_Invisibility",
@@ -3690,7 +4629,11 @@
       "法师"
     ],
     "path": "spells/Greater_Invisibility.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Guardian_of_Faith",
@@ -3704,7 +4647,11 @@
       "牧师"
     ],
     "path": "spells/Guardian_of_Faith.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V",
+    "duration": "8小时"
   },
   {
     "id": "Hallucinatory_Terrain",
@@ -3721,7 +4668,11 @@
       "法师"
     ],
     "path": "spells/Hallucinatory_Terrain.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "10分钟",
+    "range": "300尺",
+    "components": "V、S、M（一颗蘑菇）",
+    "duration": "24小时"
   },
   {
     "id": "Ice_Storm",
@@ -3737,7 +4688,11 @@
       "法师"
     ],
     "path": "spells/Ice_Storm.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "300尺",
+    "components": "V、S、M（一只连指手套）",
+    "duration": "立即"
   },
   {
     "id": "Leomund_s_Secret_Chest",
@@ -3751,7 +4706,11 @@
       "法师"
     ],
     "path": "spells/Leomund_s_Secret_Chest.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一个3尺×2尺×2尺、由稀有材料制成的、价值5000GP+的箱子；以及由同样材料制成的一个箱子的微缩模型（价值50GP+））",
+    "duration": "直至解除"
   },
   {
     "id": "Locate_Creature",
@@ -3770,7 +4729,11 @@
       "法师"
     ],
     "path": "spells/Locate_Creature.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一块寻血猎犬的皮毛）",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Mordenkainen_s_Faithful_Hound",
@@ -3784,7 +4747,11 @@
       "法师"
     ],
     "path": "spells/Mordenkainen_s_Faithful_Hound.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一支银哨）",
+    "duration": "8小时"
   },
   {
     "id": "Mordenkainen_s_Private_Sanctum",
@@ -3798,7 +4765,11 @@
       "法师"
     ],
     "path": "spells/Mordenkainen_s_Private_Sanctum.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "10分钟",
+    "range": "120尺",
+    "components": "V、S、M（一片薄铅）",
+    "duration": "24小时"
   },
   {
     "id": "Otiluke_s_Resilient_Sphere",
@@ -3812,7 +4783,11 @@
       "法师"
     ],
     "path": "spells/Otiluke_s_Resilient_Sphere.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一颗玻璃球）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Phantasmal_Killer",
@@ -3827,7 +4802,11 @@
       "法师"
     ],
     "path": "spells/Phantasmal_Killer.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Polymorph",
@@ -3844,7 +4823,11 @@
       "法师"
     ],
     "path": "spells/Polymorph.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一枚毛毛虫茧）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Staggering_Smite",
@@ -3858,7 +4841,11 @@
       "圣武士"
     ],
     "path": "spells/Staggering_Smite.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Stone_Shape",
@@ -3874,7 +4861,11 @@
       "法师"
     ],
     "path": "spells/Stone_Shape.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（软粘土）",
+    "duration": "立即"
   },
   {
     "id": "Stoneskin",
@@ -3891,7 +4882,11 @@
       "法师"
     ],
     "path": "spells/Stoneskin.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（价值100GP+的钻石粉末，作为法术耗材）",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Summon_Aberration",
@@ -3906,7 +4901,11 @@
       "法师"
     ],
     "path": "spells/Summon_Aberration.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一条腌制触手和一颗装在白金瓶中的眼球、价值400GP+）",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Summon_Construct",
@@ -3920,7 +4919,11 @@
       "法师"
     ],
     "path": "spells/Summon_Construct.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一个金属密码箱、价值400GP+）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Summon_Elemental",
@@ -3936,7 +4939,11 @@
       "法师"
     ],
     "path": "spells/Summon_Elemental.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一个价值400GP+的、装有空气、一块鹅卵石、灰烬与水的镶金瓶）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Vitriolic_Sphere",
@@ -3951,7 +4958,11 @@
       "法师"
     ],
     "path": "spells/Vitriolic_Sphere.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（一滴胆汁）",
+    "duration": "立即"
   },
   {
     "id": "Wall_of_Fire",
@@ -3967,7 +4978,11 @@
       "法师"
     ],
     "path": "spells/Wall_of_Fire.html",
-    "source": "4环.html"
+    "source": "4环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一块木炭）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Animate_Objects",
@@ -3997,7 +5012,11 @@
       "德鲁伊"
     ],
     "path": "spells/Antilife_Shell.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "Awaken",
@@ -4012,7 +5031,11 @@
       "德鲁伊"
     ],
     "path": "spells/Awaken.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "8 小时",
+    "range": "触碰",
+    "components": "V、S、M（一块价值1000GP+的玛瑙，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Banishing_Smite",
@@ -4026,7 +5049,11 @@
       "圣武士"
     ],
     "path": "spells/Banishing_Smite.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "附赠动作，当你使用近战武器或徒手打击命中一个生物后立即执行",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Bigby_s_Hand",
@@ -4041,7 +5068,11 @@
       "法师"
     ],
     "path": "spells/Bigby_s_Hand.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一个蛋壳和一只分指手套）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Circle_of_Power",
@@ -4057,7 +5088,11 @@
       "法师"
     ],
     "path": "spells/Circle_of_Power.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Cloudkill",
@@ -4072,7 +5107,11 @@
       "法师"
     ],
     "path": "spells/Cloudkill.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "120 尺",
+    "components": "V、S",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Commune",
@@ -4086,7 +5125,11 @@
       "牧师"
     ],
     "path": "spells/Commune.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1 分钟或仪式",
+    "range": "自身",
+    "components": "V、S、M（焚香）",
+    "duration": "1 分钟"
   },
   {
     "id": "Commune_with_Nature",
@@ -4101,7 +5144,11 @@
       "游侠"
     ],
     "path": "spells/Commune_with_Nature.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1 分钟或仪式",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Cone_of_Cold",
@@ -4117,7 +5164,11 @@
       "法师"
     ],
     "path": "spells/Cone_of_Cold.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一个小水晶或玻璃锥体）",
+    "duration": "立即"
   },
   {
     "id": "Conjure_Elemental",
@@ -4132,7 +5183,11 @@
       "法师"
     ],
     "path": "spells/Conjure_Elemental.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Conjure_Volley",
@@ -4146,7 +5201,11 @@
       "游侠"
     ],
     "path": "spells/Conjure_Volley.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "150 尺",
+    "components": "V、S、M（一把价值1+CP的近战或远程武器）",
+    "duration": "立即"
   },
   {
     "id": "Contact_Other_Plane",
@@ -4161,7 +5220,11 @@
       "法师"
     ],
     "path": "spells/Contact_Other_Plane.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1 分钟或仪式",
+    "range": "自身",
+    "components": "V",
+    "duration": "1 分钟"
   },
   {
     "id": "Contagion",
@@ -4176,7 +5239,11 @@
       "德鲁伊"
     ],
     "path": "spells/Contagion.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "7日"
   },
   {
     "id": "Creation",
@@ -4191,7 +5258,11 @@
       "法师"
     ],
     "path": "spells/Creation.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1分钟",
+    "range": "30尺",
+    "components": "V、S、M（一支画笔）",
+    "duration": "特殊"
   },
   {
     "id": "Destructive_Wave",
@@ -4205,7 +5276,11 @@
       "圣武士"
     ],
     "path": "spells/Destructive_Wave.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Dispel_Evil_and_Good",
@@ -4220,7 +5295,11 @@
       "圣武士"
     ],
     "path": "spells/Dispel_Evil_and_Good.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（银粉和铁粉）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Dominate_Person",
@@ -4236,7 +5315,11 @@
       "法师"
     ],
     "path": "spells/Dominate_Person.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Dream",
@@ -4252,7 +5335,11 @@
       "法师"
     ],
     "path": "spells/Dream.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1分钟",
+    "range": "特殊",
+    "components": "V、S、M（一把沙子）",
+    "duration": "8小时"
   },
   {
     "id": "Flame_Strike",
@@ -4266,7 +5353,11 @@
       "牧师"
     ],
     "path": "spells/Flame_Strike.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一撮硫磺）",
+    "duration": "立即"
   },
   {
     "id": "Geas",
@@ -4284,7 +5375,11 @@
       "法师"
     ],
     "path": "spells/Geas.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1分钟",
+    "range": "60尺",
+    "components": "V",
+    "duration": "30日"
   },
   {
     "id": "Greater_Restoration",
@@ -4302,7 +5397,11 @@
       "游侠"
     ],
     "path": "spells/Greater_Restoration.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（价值100GP+的钻石尘，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Hallow",
@@ -4316,7 +5415,11 @@
       "牧师"
     ],
     "path": "spells/Hallow.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "24小时",
+    "range": "触碰",
+    "components": "V、S、M（价值1000GP+的熏香，作为法术耗材）",
+    "duration": "直至解除"
   },
   {
     "id": "Hold_Monster",
@@ -4333,7 +5436,11 @@
       "法师"
     ],
     "path": "spells/Hold_Monster.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "90尺",
+    "components": "V、S、M（一片直的小铁片）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Insect_Plague",
@@ -4364,7 +5471,11 @@
       "法师"
     ],
     "path": "spells/Jallarzi_s_Storm_of_Radiance.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一撮磷粉）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Legend_Lore",
@@ -4380,7 +5491,11 @@
       "法师"
     ],
     "path": "spells/Legend_Lore.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "10分钟",
+    "range": "自身",
+    "components": "V、S、M（价值 250+GP 的熏香，作为法术耗材。以及每块价值 50+GP 的四块象牙板）",
+    "duration": "立即"
   },
   {
     "id": "Mass_Cure_Wounds",
@@ -4396,7 +5511,11 @@
       "德鲁伊"
     ],
     "path": "spells/Mass_Cure_Wounds.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Mislead",
@@ -4412,7 +5531,11 @@
       "法师"
     ],
     "path": "spells/Mislead.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "S",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Modify_Memory",
@@ -4427,7 +5550,11 @@
       "法师"
     ],
     "path": "spells/Modify_Memory.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Passwall",
@@ -4441,7 +5568,11 @@
       "法师"
     ],
     "path": "spells/Passwall.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一撮芝麻）",
+    "duration": "1小时"
   },
   {
     "id": "Planar_Binding",
@@ -4459,7 +5590,11 @@
       "法师"
     ],
     "path": "spells/Planar_Binding.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1小时",
+    "range": "60尺",
+    "components": "V、S、M（一颗价值1000+GP的宝石，作为法术耗材）",
+    "duration": "24小时"
   },
   {
     "id": "Raise_Dead",
@@ -4475,7 +5610,11 @@
       "圣武士"
     ],
     "path": "spells/Raise_Dead.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1小时",
+    "range": "触碰",
+    "components": "V、S、M（一颗价值500+GP的钻石，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Rary_s_Telepathic_Bond",
@@ -4490,7 +5629,11 @@
       "法师"
     ],
     "path": "spells/Rary_s_Telepathic_Bond.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作或仪式",
+    "range": "30尺",
+    "components": "V、S、M（两颗蛋）",
+    "duration": "1小时"
   },
   {
     "id": "Reincarnate",
@@ -4504,7 +5647,11 @@
       "德鲁伊"
     ],
     "path": "spells/Reincarnate.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1小时",
+    "range": "触碰",
+    "components": "V、S、M（价值1000GP+的珍稀油，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Scrying",
@@ -4522,7 +5669,11 @@
       "法师"
     ],
     "path": "spells/Scrying.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "10 分钟",
+    "range": "自身",
+    "components": "V、S、M（一个价值1000GP+的聚焦镜，例如水晶球、银镜、装满水的圣水池之类的）",
+    "duration": "专注，最多10分钟"
   },
   {
     "id": "Seeming",
@@ -4538,7 +5689,11 @@
       "法师"
     ],
     "path": "spells/Seeming.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S",
+    "duration": "8 小时"
   },
   {
     "id": "Steel_Wind_Strike",
@@ -4553,7 +5708,11 @@
       "法师"
     ],
     "path": "spells/Steel_Wind_Strike.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "S、M（一把价值1SP+的近战武器）",
+    "duration": "立即"
   },
   {
     "id": "Summon_Celestial",
@@ -4568,7 +5727,11 @@
       "圣武士"
     ],
     "path": "spells/Summon_Celestial.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一个的金制圣物匣，价值500GP+）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Summon_Dragon",
@@ -4582,7 +5745,11 @@
       "法师"
     ],
     "path": "spells/Summon_Dragon.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一件刻有巨龙图案的物品，价值500GP+）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Swift_Quiver",
@@ -4596,7 +5763,11 @@
       "游侠"
     ],
     "path": "spells/Swift_Quiver.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "附赠动作",
+    "range": "自身",
+    "components": "V、S、M（一个价值1+GP的箭袋）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Synaptic_Static",
@@ -4613,7 +5784,11 @@
       "法师"
     ],
     "path": "spells/Synaptic_Static.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Telekinesis",
@@ -4628,7 +5803,11 @@
       "法师"
     ],
     "path": "spells/Telekinesis.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Teleportation_Circle",
@@ -4645,7 +5824,11 @@
       "法师"
     ],
     "path": "spells/Teleportation_Circle.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "1分钟",
+    "range": "10尺",
+    "components": "V、M（价值50+GP的珍稀墨水，作为法术耗材）",
+    "duration": "1轮"
   },
   {
     "id": "Tree_Stride",
@@ -4660,7 +5843,11 @@
       "游侠"
     ],
     "path": "spells/Tree_Stride.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Wall_of_Force",
@@ -4674,7 +5861,11 @@
       "法师"
     ],
     "path": "spells/Wall_of_Force.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一块玻璃碎片）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Wall_of_Stone",
@@ -4690,7 +5881,11 @@
       "法师"
     ],
     "path": "spells/Wall_of_Stone.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一块方形花岗岩）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Yolande_s_Regal_Presence",
@@ -4705,7 +5900,11 @@
       "法师"
     ],
     "path": "spells/Yolande_s_Regal_Presence.html",
-    "source": "5环.html"
+    "source": "5环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一顶微型皇冠）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Arcane_Gate",
@@ -4721,7 +5920,11 @@
       "法师"
     ],
     "path": "spells/Arcane_Gate.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "500 尺",
+    "components": "V、S",
+    "duration": "专注，至多 10 分钟"
   },
   {
     "id": "Blade_Barrier",
@@ -4735,7 +5938,11 @@
       "牧师"
     ],
     "path": "spells/Blade_Barrier.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "90尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Chain_Lightning",
@@ -4750,7 +5957,11 @@
       "法师"
     ],
     "path": "spells/Chain_Lightning.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "150 尺",
+    "components": "V、S、M（三根银质别针）",
+    "duration": "立即"
   },
   {
     "id": "Circle_of_Death",
@@ -4788,7 +5999,11 @@
       "法师"
     ],
     "path": "spells/Contingency.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "10分钟",
+    "range": "自身",
+    "components": "V、S、M（一尊价值1500+GP的饰宝石自塑像）",
+    "duration": "10日"
   },
   {
     "id": "Create_Undead",
@@ -4804,7 +6019,11 @@
       "法师"
     ],
     "path": "spells/Create_Undead.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1分钟",
+    "range": "10尺",
+    "components": "V、S、M（每具尸体一颗价值150+GP的缟玛瑙）",
+    "duration": "立即"
   },
   {
     "id": "Disintegrate",
@@ -4819,7 +6038,11 @@
       "法师"
     ],
     "path": "spells/Disintegrate.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一块天然磁石和灰尘）",
+    "duration": "立即"
   },
   {
     "id": "Drawmij_s_Instant_Summons",
@@ -4833,7 +6056,11 @@
       "法师"
     ],
     "path": "spells/Drawmij_s_Instant_Summons.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1分钟或仪式",
+    "range": "触碰",
+    "components": "V、S、M（一颗价值1000GP+的蓝宝石）",
+    "duration": "直至被解除"
   },
   {
     "id": "Eyebite",
@@ -4850,7 +6077,11 @@
       "法师"
     ],
     "path": "spells/Eyebite.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Find_the_Path",
@@ -4866,7 +6097,11 @@
       "德鲁伊"
     ],
     "path": "spells/Find_the_Path.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1分钟",
+    "range": "自身",
+    "components": "V、S、M（一套价值100GP+的预言道具、如纸牌或符文）",
+    "duration": "专注，至多1日"
   },
   {
     "id": "Flesh_to_Stone",
@@ -4882,7 +6117,11 @@
       "法师"
     ],
     "path": "spells/Flesh_to_Stone.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一根鸡蛇兽羽毛）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Forbiddance",
@@ -4896,7 +6135,11 @@
       "牧师"
     ],
     "path": "spells/Forbiddance.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "10分钟或仪式",
+    "range": "触碰",
+    "components": "V、S、M（价值1000GP+的红宝石尘）",
+    "duration": "1日"
   },
   {
     "id": "Globe_of_Invulnerability",
@@ -4911,7 +6154,11 @@
       "法师"
     ],
     "path": "spells/Globe_of_Invulnerability.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一颗玻璃珠）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Guards_and_Wards",
@@ -4926,7 +6173,11 @@
       "法师"
     ],
     "path": "spells/Guards_and_Wards.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1小时",
+    "range": "触碰",
+    "components": "V、S、M（一根10+GP的银权杖）",
+    "duration": "24小时"
   },
   {
     "id": "Harm",
@@ -4940,7 +6191,11 @@
       "牧师"
     ],
     "path": "spells/Harm.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Heal",
@@ -4955,7 +6210,11 @@
       "德鲁伊"
     ],
     "path": "spells/Heal.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Heroes__Feast",
@@ -4971,7 +6230,11 @@
       "德鲁伊"
     ],
     "path": "spells/Heroes__Feast.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "10分钟",
+    "range": "自身",
+    "components": "V、S、M（一个价值1000GP+的镶饰宝石的碗，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Magic_Jar",
@@ -4985,7 +6248,11 @@
       "法师"
     ],
     "path": "spells/Magic_Jar.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1分钟",
+    "range": "自身",
+    "components": "V、S、M（一块宝石或水晶、或者一个圣物匣、其价值不能低于500GP）",
+    "duration": "直到被解除"
   },
   {
     "id": "Mass_Suggestion",
@@ -5001,7 +6268,11 @@
       "法师"
     ],
     "path": "spells/Mass_Suggestion.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、M（一条蛇的舌头）",
+    "duration": "24小时"
   },
   {
     "id": "Move_Earth",
@@ -5017,7 +6288,11 @@
       "法师"
     ],
     "path": "spells/Move_Earth.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一个微缩模型的铲子）",
+    "duration": "专注，至多2小时"
   },
   {
     "id": "Otiluke_s_Freezing_Sphere",
@@ -5032,7 +6307,11 @@
       "法师"
     ],
     "path": "spells/Otiluke_s_Freezing_Sphere.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "300尺",
+    "components": "V、S、M（一颗微缩水晶球）",
+    "duration": "立即"
   },
   {
     "id": "Otto_s_Irresistible_Dance",
@@ -5047,7 +6326,11 @@
       "法师"
     ],
     "path": "spells/Otto_s_Irresistible_Dance.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Planar_Ally",
@@ -5061,7 +6344,11 @@
       "牧师"
     ],
     "path": "spells/Planar_Ally.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "10分钟",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Programmed_Illusion",
@@ -5076,7 +6363,11 @@
       "法师"
     ],
     "path": "spells/Programmed_Illusion.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（价值25GP+的玉粉）",
+    "duration": "直至被解除"
   },
   {
     "id": "Summon_Fiend",
@@ -5091,7 +6382,11 @@
       "法师"
     ],
     "path": "spells/Summon_Fiend.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V, S, M（一小瓶价值600GP+的血）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Sunbeam",
@@ -5108,7 +6403,11 @@
       "法师"
     ],
     "path": "spells/Sunbeam.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一面放大镜）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Tasha_s_Bubbling_Cauldron",
@@ -5123,7 +6422,11 @@
       "法师"
     ],
     "path": "spells/Tasha_s_Bubbling_Cauldron.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "5尺",
+    "components": "V、S、M（一支价值500GP+的镀金长柄勺）",
+    "duration": "10分钟"
   },
   {
     "id": "Transport_via_Plants",
@@ -5137,7 +6440,11 @@
       "德鲁伊"
     ],
     "path": "spells/Transport_via_Plants.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "10尺",
+    "components": "V、S",
+    "duration": "1分钟"
   },
   {
     "id": "True_Seeing",
@@ -5155,7 +6462,11 @@
       "法师"
     ],
     "path": "spells/True_Seeing.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（价值25GP+的蘑菇粉，作为法术耗材）",
+    "duration": "1小时"
   },
   {
     "id": "Wall_of_Ice",
@@ -5169,7 +6480,11 @@
       "法师"
     ],
     "path": "spells/Wall_of_Ice.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一块石英）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Wall_of_Thorns",
@@ -5183,7 +6498,11 @@
       "德鲁伊"
     ],
     "path": "spells/Wall_of_Thorns.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S、M（一把荆棘）",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Wind_Walk",
@@ -5197,7 +6516,11 @@
       "德鲁伊"
     ],
     "path": "spells/Wind_Walk.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "1分钟",
+    "range": "30尺",
+    "components": "V、S、M（一根蜡烛）",
+    "duration": "8小时"
   },
   {
     "id": "Word_of_Recall",
@@ -5211,7 +6534,11 @@
       "牧师"
     ],
     "path": "spells/Word_of_Recall.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "5尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Conjure_Celestial",
@@ -5225,7 +6552,11 @@
       "牧师"
     ],
     "path": "spells/Conjure_Celestial.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "90 尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Delayed_Blast_Fireball",
@@ -5240,7 +6571,11 @@
       "法师"
     ],
     "path": "spells/Delayed_Blast_Fireball.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（一颗蝙蝠粪和硫磺搓成的小球）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Divine_Word",
@@ -5254,7 +6589,11 @@
       "牧师"
     ],
     "path": "spells/Divine_Word.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "附赠动作",
+    "range": "30尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Etherealness",
@@ -5272,7 +6611,11 @@
       "法师"
     ],
     "path": "spells/Etherealness.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "至多8小时"
   },
   {
     "id": "Finger_of_Death",
@@ -5288,7 +6631,11 @@
       "法师"
     ],
     "path": "spells/Finger_of_Death.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Fire_Storm",
@@ -5304,7 +6651,11 @@
       "术士"
     ],
     "path": "spells/Fire_Storm.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Forcecage",
@@ -5320,7 +6671,11 @@
       "法师"
     ],
     "path": "spells/Forcecage.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "100尺",
+    "components": "V、S、M（价值1500GP+的红宝石尘，作为法术耗材）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Mirage_Arcane",
@@ -5336,7 +6691,11 @@
       "法师"
     ],
     "path": "spells/Mirage_Arcane.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "10分钟",
+    "range": "视野",
+    "components": "V、S",
+    "duration": "10日"
   },
   {
     "id": "Mordenkainen_s_Magnificent_Mansion",
@@ -5351,7 +6710,11 @@
       "法师"
     ],
     "path": "spells/Mordenkainen_s_Magnificent_Mansion.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "1分钟",
+    "range": "300尺",
+    "components": "V、S、M（一个价值15GP+的微缩模型门）",
+    "duration": "24小时"
   },
   {
     "id": "Mordenkainen_s_Sword",
@@ -5366,7 +6729,11 @@
       "法师"
     ],
     "path": "spells/Mordenkainen_s_Sword.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "90尺",
+    "components": "V、S、M（一把价值250GP+的微缩模型剑）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Plane_Shift",
@@ -5384,7 +6751,11 @@
       "法师"
     ],
     "path": "spells/Plane_Shift.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（一根与一个存在位面调谐的价值250GP+的分叉金属棒）",
+    "duration": "立即"
   },
   {
     "id": "Power_Word_Fortify",
@@ -5399,7 +6770,11 @@
       "牧师"
     ],
     "path": "spells/Power_Word_Fortify.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Prismatic_Spray",
@@ -5415,7 +6790,11 @@
       "法师"
     ],
     "path": "spells/Prismatic_Spray.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Project_Image",
@@ -5430,7 +6809,11 @@
       "法师"
     ],
     "path": "spells/Project_Image.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "500里",
+    "components": "V、S、M（一尊价值5GP+的自塑像）",
+    "duration": "专注，至多1日"
   },
   {
     "id": "Regenerate",
@@ -5446,7 +6829,11 @@
       "德鲁伊"
     ],
     "path": "spells/Regenerate.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "1分钟",
+    "range": "触碰",
+    "components": "V、S、M（一个转经筒）",
+    "duration": "1小时"
   },
   {
     "id": "Resurrection",
@@ -5461,7 +6848,11 @@
       "牧师"
     ],
     "path": "spells/Resurrection.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "1小时",
+    "range": "触碰",
+    "components": "V、S、M（一颗价值1000GP+的钻石，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Reverse_Gravity",
@@ -5477,7 +6868,11 @@
       "法师"
     ],
     "path": "spells/Reverse_Gravity.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "100尺",
+    "components": "V、S、M（一颗天然磁石和铁屑）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Sequester",
@@ -5491,7 +6886,11 @@
       "法师"
     ],
     "path": "spells/Sequester.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S、M（价值5000GP+宝石粉尘，作为法术耗材）",
+    "duration": "直至被解除"
   },
   {
     "id": "Simulacrum",
@@ -5505,7 +6904,11 @@
       "法师"
     ],
     "path": "spells/Simulacrum.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "12小时",
+    "range": "触碰",
+    "components": "V、S、M（价值1500GP+的红宝石粉末，作为法术耗材）",
+    "duration": "直至被解除"
   },
   {
     "id": "Symbol",
@@ -5522,7 +6925,11 @@
       "法师"
     ],
     "path": "spells/Symbol.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "1分钟",
+    "range": "触碰",
+    "components": "V、S、M（价值1000GP+的钻石粉末，作为法术耗材）",
+    "duration": "直到法术被解除或触发"
   },
   {
     "id": "Teleport",
@@ -5538,7 +6945,11 @@
       "法师"
     ],
     "path": "spells/Teleport.html",
-    "source": "7环.html"
+    "source": "7环.html",
+    "castingTime": "动作",
+    "range": "10尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Animal_Shapes",
@@ -5552,7 +6963,11 @@
       "德鲁伊"
     ],
     "path": "spells/Animal_Shapes.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "30 尺",
+    "components": "V、S",
+    "duration": "24 小时"
   },
   {
     "id": "Antimagic_Field",
@@ -5567,7 +6982,11 @@
       "法师"
     ],
     "path": "spells/Antimagic_Field.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一撮铁粉或铁屑）",
+    "duration": "专注，至多 1 小时"
   },
   {
     "id": "AntipathySympathy",
@@ -5583,7 +7002,11 @@
       "法师"
     ],
     "path": "spells/AntipathySympathy.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "1 小时",
+    "range": "60 尺",
+    "components": "V、S、M（醋和蜂蜜的混合）",
+    "duration": "10天"
   },
   {
     "id": "Befuddlement",
@@ -5600,7 +7023,11 @@
       "法师"
     ],
     "path": "spells/Befuddlement.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（一把没有钥匙的钥匙圈）",
+    "duration": "立即"
   },
   {
     "id": "Clone",
@@ -5614,7 +7041,11 @@
       "法师"
     ],
     "path": "spells/Clone.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "1 小时",
+    "range": "触碰",
+    "components": "V、S、M（一枚价值1000GP+的钻石作为法术耗材。以及一副价值2000GP+的带密封功能的大容器，其尺寸必须足以存放一个要被克隆的生物）",
+    "duration": "立即"
   },
   {
     "id": "Control_Weather",
@@ -5630,7 +7061,11 @@
       "法师"
     ],
     "path": "spells/Control_Weather.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "10分钟",
+    "range": "自身",
+    "components": "V、S、M（燃烧的熏香）",
+    "duration": "专注，至多8小时"
   },
   {
     "id": "Demiplane",
@@ -5646,7 +7081,10 @@
       "法师"
     ],
     "path": "spells/Demiplane.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "S"
   },
   {
     "id": "Dominate_Monster",
@@ -5663,7 +7101,11 @@
       "法师"
     ],
     "path": "spells/Dominate_Monster.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Earthquake",
@@ -5679,7 +7121,11 @@
       "术士"
     ],
     "path": "spells/Earthquake.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "500尺",
+    "components": "V、S、M（一块碎岩）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Glibness",
@@ -5694,7 +7140,11 @@
       "魔契师"
     ],
     "path": "spells/Glibness.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "1小时"
   },
   {
     "id": "Holy_Aura",
@@ -5708,7 +7158,11 @@
       "牧师"
     ],
     "path": "spells/Holy_Aura.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一个价值1000+GP 的小圣物箱）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Incendiary_Cloud",
@@ -5724,7 +7178,11 @@
       "法师"
     ],
     "path": "spells/Incendiary_Cloud.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Maze",
@@ -5738,7 +7196,11 @@
       "法师"
     ],
     "path": "spells/Maze.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Mind_Blank",
@@ -5753,7 +7215,11 @@
       "法师"
     ],
     "path": "spells/Mind_Blank.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "触碰",
+    "components": "V、S",
+    "duration": "24小时"
   },
   {
     "id": "Power_Word_Stun",
@@ -5770,7 +7236,11 @@
       "法师"
     ],
     "path": "spells/Power_Word_Stun.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Sunburst",
@@ -5787,7 +7257,11 @@
       "法师"
     ],
     "path": "spells/Sunburst.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（一块太阳石）",
+    "duration": "立即"
   },
   {
     "id": "Telepathy",
@@ -5801,7 +7275,11 @@
       "法师"
     ],
     "path": "spells/Telepathy.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "动作",
+    "range": "无限",
+    "components": "V、S、M（一对银连环）",
+    "duration": "24小时"
   },
   {
     "id": "Tsunami",
@@ -5815,7 +7293,11 @@
       "德鲁伊"
     ],
     "path": "spells/Tsunami.html",
-    "source": "8环.html"
+    "source": "8环.html",
+    "castingTime": "1分钟",
+    "range": "1里",
+    "components": "V、S",
+    "duration": "专注，至多6轮"
   },
   {
     "id": "Astral_Projection",
@@ -5831,7 +7313,11 @@
       "法师"
     ],
     "path": "spells/Astral_Projection.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "1 小时",
+    "range": "10 尺",
+    "components": "V、S、M（你必须为此法术的每个目标准备一枚价值1000GP+的红锆石和一根价值100GP+的银棒，两者都作为此法术耗材）",
+    "duration": "直到被解除"
   },
   {
     "id": "Foresight",
@@ -5848,7 +7334,11 @@
       "法师"
     ],
     "path": "spells/Foresight.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "1分钟",
+    "range": "触碰",
+    "components": "V、S、M（一根蜂鸟羽毛）",
+    "duration": "8小时"
   },
   {
     "id": "Gate",
@@ -5865,7 +7355,11 @@
       "法师"
     ],
     "path": "spells/Gate.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S、M（一颗价值5000GP+的钻石）",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Imprisonment",
@@ -5880,7 +7374,11 @@
       "法师"
     ],
     "path": "spells/Imprisonment.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "1分钟",
+    "range": "30尺",
+    "components": "V、S、M（一个价值5000GP+的与目标相似的小雕像）",
+    "duration": "直至解除"
   },
   {
     "id": "Mass_Heal",
@@ -5894,7 +7392,11 @@
       "牧师"
     ],
     "path": "spells/Mass_Heal.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Meteor_Swarm",
@@ -5909,7 +7411,11 @@
       "法师"
     ],
     "path": "spells/Meteor_Swarm.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "1里",
+    "components": "V、S",
+    "duration": "立即"
   },
   {
     "id": "Power_Word_Heal",
@@ -5924,7 +7430,11 @@
       "牧师"
     ],
     "path": "spells/Power_Word_Heal.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Power_Word_Kill",
@@ -5941,7 +7451,11 @@
       "法师"
     ],
     "path": "spells/Power_Word_Kill.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "Prismatic_Wall",
@@ -5956,7 +7470,11 @@
       "法师"
     ],
     "path": "spells/Prismatic_Wall.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "60尺",
+    "components": "V、S",
+    "duration": "10分钟"
   },
   {
     "id": "Shapechange",
@@ -5971,7 +7489,11 @@
       "法师"
     ],
     "path": "spells/Shapechange.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V、S、M（一只价值1500GP+的玉环）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "Storm_of_Vengeance",
@@ -5985,7 +7507,11 @@
       "德鲁伊"
     ],
     "path": "spells/Storm_of_Vengeance.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "1里",
+    "components": "V、S",
+    "duration": "专注，至多 1 分钟"
   },
   {
     "id": "Time_Stop",
@@ -6000,7 +7526,11 @@
       "法师"
     ],
     "path": "spells/Time_Stop.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   },
   {
     "id": "True_Polymorph",
@@ -6016,7 +7546,11 @@
       "法师"
     ],
     "path": "spells/True_Polymorph.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "30尺",
+    "components": "V、S、M（一滴汞、一团阿拉伯胶和一缕烟）",
+    "duration": "专注，至多1小时"
   },
   {
     "id": "True_Resurrection",
@@ -6031,7 +7565,11 @@
       "德鲁伊"
     ],
     "path": "spells/True_Resurrection.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "1小时",
+    "range": "触碰",
+    "components": "V、S、M（一颗价值25000GP+的钻石，作为法术耗材）",
+    "duration": "立即"
   },
   {
     "id": "Weird",
@@ -6046,7 +7584,11 @@
       "法师"
     ],
     "path": "spells/Weird.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "120尺",
+    "components": "V、S",
+    "duration": "专注，至多1分钟"
   },
   {
     "id": "Wish",
@@ -6061,6 +7603,10 @@
       "法师"
     ],
     "path": "spells/Wish.html",
-    "source": "9环.html"
+    "source": "9环.html",
+    "castingTime": "动作",
+    "range": "自身",
+    "components": "V",
+    "duration": "立即"
   }
 ]
