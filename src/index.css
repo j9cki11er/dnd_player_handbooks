@@ -6,10 +6,10 @@
   --bg-tertiary: #16161a;
   --text-primary: #e2e2e7;
   --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
+  --text-muted: #a3a3b0;
   --accent-gold: #C6B41D;
   --accent-gold-hover: #E5D122;
-  --accent-crimson: #911c1c;
+  --accent-crimson: #da0303;
   --border-color: rgba(198, 180, 29, 0.2);
   --glass-bg: rgba(22, 22, 26, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -147,6 +147,7 @@ body {
   color: var(--text-muted);
   margin-bottom: 1rem;
   padding: 0 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .category-list {
@@ -253,7 +254,7 @@ body {
 }
 
 .card-category {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: rgba(198, 180, 29, 0.7);
@@ -1041,7 +1042,8 @@ body {
 
 .spell-card-classes {
   font-size: 10px;
-  color: rgba(198, 180, 29, 0.9);
+  font-weight: 600;
+  color: #fce41fe6;
   opacity: 0.6;
   white-space: nowrap;
   overflow: hidden;

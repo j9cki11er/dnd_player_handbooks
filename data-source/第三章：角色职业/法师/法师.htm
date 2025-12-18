@@ -1,131 +1,529 @@
 <!-- coding: gbk -->
 <html>
-<head><title>·¨Ê¦</title>
-<meta content="text/html; charset=gb2312">
-<link rel="stylesheet" href="../../../style.css"></head>
 
-<body><h1>·¨Ê¦ Wizard</h1>
-<p class=sum>Ñ§ÊõÅÉ°ÂÊõÊ©·¨Õß</p>
-<P><STRONG> ·¨Ê¦ºËÐÄÌØÖÊCore Wizard Traits</STRONG>
-<TABLE class="basic">
-<TR><TD><STRONG> Ö÷ÒªÊôÐÔPrimary Ability</STRONG> </TD><TD>ÖÇÁ¦</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG> ÉúÃüÖµ÷»Hit Point Die</STRONG> </TD><TD>Ã¿·¨Ê¦µÈ¼¶D6</TD></TR>
-<TR><TD><STRONG>»íÃâÊìÁ·Saving Throw 
-      Proficiencies</STRONG> </TD><TD>ÖÇÁ¦Óë¸ÐÖª</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG>¼¼ÄÜÊìÁ·Skill Proficiencies</STRONG></TD><TD>Ñ¡Ôñ2Ïî£º<U>°ÂÃØ</U>¡¢<U>ÀúÊ·</U>¡¢<U>¶´Ï¤</U>¡¢<U>µ÷²é</U>¡¢<U>Ò½ÁÆ</U>¡¢<U>×ÔÈ»</U>¡¢<U>×Ú½Ì</U></TD></TR>
-<TR><TD><STRONG> ÎäÆ÷ÊìÁ·Weapon Proficiencies</STRONG>  </TD><TD>¼òÒ×ÎäÆ÷</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG> »¤¼×ÊÜÑµArmor Training</STRONG>  </TD><TD>ÎÞ</TD></TR>
-<TR><TD><STRONG> ÆðÊ¼×°±¸Starting Equipment</STRONG>  </TD><TD>Ñ¡ÔñA»òB£º(A) 2°ÑØ°Ê×£¬°ÂÊõ·¨Æ÷£¨³¤¹÷£©£¬³¤ÅÛ£¬·¨ÊõÊé£¬Ñ§ÕßÌ××éÒÔ¼°5GP£»»ò(B) 55GP</TD></TR></TABLE></P>
-<p>·¨Ê¦ÒÔËûÃÇ¶ÔÄ§·¨ÄÚÔÚÔË×÷»úÀíµÄÏê¾¡ÑÐ¾¿¶øÖø³Æ¡£ËûÃÇÊ©Õ¹µÄ·¨Êõ¼È¿ÉÒÔ»¯Îª±¬Ñæ¡¢µç»¡£¬Òà¿ÉÒÔ½øÐÐÎ¢ÃîµÄÆÛÂ÷Óë×³Àö×ª»¯¡£ËûÃÇµÄÄ§·¨¿ÉÒÔ´ÓÆäËû´æÔÚÎ»ÃæÖä»½¹ÖÎï¡¢Ô¤¼ûÎ´À´¡¢»òÐÎ³É·À»¤ÆÁÕÏ¡£ËûÃÇ×îÇ¿´óµÄ·¨Êõ¿ÉÒÔ½«Ò»ÖÖÎïÖÊ×ª»¯ÎªÁíÒ»ÖÖ£¬´ÓÌì¿ÕÕÙÀ´Á÷ÐÇ£¬ÒÖ»ò´ò¿ªÍ¨ÍùÆäËûÊÀ½çµÄ´óÃÅ¡£<BR>´ó¶àÊý·¨Ê¦½«Ä§·¨µ±×÷Ñ§ÊõÑÐ¾¿¡£ËûÃÇÑÐ¾¿Ä§·¨µÄÀíÂÛ»ù´¡£¬ÌØ±ðÊÇÖî·¨ÊõÑ§ÅÉµÄ·ÖÀà¡£ÔÚ´Ë»ù´¡ÉÏ£¬Ïñ±Ï¸ñ±ÈBigby£¬ËþÉ¯Tasha£¬Ä§µË¿ÏMordenkainenºÍÓÆÀ¼µÂYolandeµÈÖøÃû·¨Ê¦»¹·¢Ã÷ÁËËûÃÇµÄ±êÖ¾ÐÔ·¨Êõ£¬ÕâÐ©·¨ÊõÖÁ½ñÈÔÔÚ±»¶àÔªÓîÖæ¸÷´¦µÄÊ©·¨ÕßÊ¹ÓÃ¡£<BR>ÏÍÕß»ò½²Ê¦¿ÉÄÜÊÇ·¨Ê¦×î½Ó½üÆ½·²µÄÉú»î¡£ÆäËû·¨Ê¦Ôò³äµ±Ìá¹©ÓÐ³¥·þÎñµÄ¹ËÎÊ£¬ÔÚ¾ü¶ÓÖÐ·þÒÛ£¬»òÊÇÖÂÁ¦ÓÚÒÔ·¸×ïÓëÖ§ÅäÎªÉú¡£<BR>È»¶ø£¬¼´Ê¹ÊÇ×î²»Ï²Ã°ÏÕµÄ·¨Ê¦Ò²»áÒòÖªÊ¶µÄÓÕ»ó×ß³ö°²È«µÄÊµÑéÊÒºÍÍ¼Êé¹Ý£¬Ò»Í·Ôú½øÊ§ÂäµÄ³ÇÊÐºÍÒÅ¼£¡£´ó¶àÊý·¨Ê¦ÏàÐÅËûÃÇ¹Å´úÎÄÃ÷µÄÍ¬ÐÐÖªÏþÊ§ÂäÓÚÊ±¼ä³¤ºÓÖÐµÄÄ§·¨Ö®ÃØ£¬¶ø·¢ÏÖÕâÐ©ÃØÃÜÔò»á½âËøÍ¨ÍùÁ¦Á¿Ö®Â·£¬µ±´úµÄÈÎºÎÄ§·¨¶¼ÎÞ·¨ÓëÖ®Æ¥µÐ¡£</p>
-<h3>³ÉÎªÒ»Ãû·¨Ê¦¡­¡­Becoming a Wizard¡­</h3>
-<p><STRONG><FONT color=#800000>×÷Îª1¼¶½ÇÉ« As 
-a Level 1 Character</FONT>     
-</STRONG>    </p>
-<UL>
-  <LI>
-<div>»ñµÃ·¨Ê¦ºËÐÄÌØÖÊ±íÖÐµÄËùÓÐÌØÖÊ¡£</div>
-  <LI>
-<div>»ñµÃ·¨Ê¦µÄ1¼¶ÌØÐÔ£¨¼û·¨Ê¦ÌØÐÔ±í£©¡£</div></LI></UL>
-<p><STRONG><FONT color=#800000>×÷Îª¼æÖ°½ÇÉ« As 
-a Multiclass Character</FONT>    
-</STRONG>   </p>
-<UL>
-  <LI>
-<div>»ñµÃ·¨Ê¦ºËÐÄÌØÖÊ±íÖÐµÄÉúÃüÖµ÷»¡£</div>
-  <LI>
-<div>»ñµÃ·¨Ê¦µÄ1¼¶ÌØÐÔ£¨¼û·¨Ê¦ÌØÐÔ±í£©¡£ÄãµÄ¿ÉÓÃ·¨ÊõÎ»¼ûµÚ¶þÕÂÖÐµÄ¼æÖ°¹æÔò¡£</div></LI></UL>
-<h3><BR>·¨Ê¦Ö°ÒµÌØÐÔ Wizard Class Features</h3>
-<p>·¨Ê¦ÔÚµ½´ïÌØ¶¨µÈ¼¶Ê±»á»ñµÃÏÂÊöÖ°ÒµÌØÐÔ£¬Èç·¨Ê¦ÌØÐÔ±íÖÐËùÊ¾¡£</p>
-<p><STRONG>·¨Ê¦ÌØÐÔWizard Features</STRONG>
-<TABLE class=center>
-<TR><TD rowspan=2><STRONG>µÈ¼¶</STRONG></TD><TD rowspan=2><STRONG>ÊìÁ·¼ÓÖµ(PB)</STRONG></TD><TD rowspan=2><STRONG>Ö°ÒµÌØÐÔ</STRONG></TD><TD rowspan=2><STRONG>Ï··¨</STRONG></TD><TD rowspan=2><STRONG>×¼±¸·¨Êõ</STRONG></TD><TD colspan=9><STRONG>¡ª¡ª¡ª¡ª¡ª¡ªÃ¿»··¨ÊõÎ»¡ª¡ª¡ª¡ª¡ª¡ª</STRONG></TD></TR>
-<TR><TD><STRONG>Ò»»·</STRONG></TD><TD><STRONG>¶þ»·</STRONG></TD><TD><STRONG>Èý»·</STRONG></TD><TD><STRONG>ËÄ»·</STRONG></TD><TD><STRONG>Îå»·</STRONG></TD><TD><STRONG>Áù»·</STRONG></TD><TD><STRONG>Æß»·</STRONG></TD><TD><STRONG>°Ë»·</STRONG></TD><TD><STRONG>¾Å»·</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>+2</TD><TD>Ê©·¨£¬ÒÇÊ½Ñ§¼Ò£¬°ÂÊõ»ØÏë</TD><TD>3</TD><TD>4</TD><TD>2</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR><TD>2</TD><TD>+2</TD><TD>Ñ§Õß</TD><TD>3</TD><TD>5</TD><TD>3</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>+2</TD><TD>·¨Ê¦×ÓÖ°</TD><TD>3</TD><TD>6</TD><TD>4</TD><TD>2</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD< TR>
-<TR><TD>4</TD><TD>+2</TD><TD>ÊôÐÔÖµÌáÉý</TD><TD>4</TD><TD>7</TD><TD>4</TD><TD>3</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>5</TD><TD>+3</TD><TD>¼ÇÒä·¨Êõ</TD><TD>4</TD><TD>9</TD><TD>4</TD><TD>3</TD><TD>2</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR><TD>6</TD><TD>+3</TD><TD>×ÓÖ°ÌØÐÔ</TD><TD>4</TD><TD>10</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>7</TD><TD>+3</TD><TD>¡ª</TD><TD>4</TD><TD>11</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>1</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR><TD>8</TD><TD>+3</TD><TD>ÊôÐÔÖµÌáÉý</TD><TD>4</TD><TD>12</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>9</TD><TD>+4</TD><TD>¡ª</TD><TD>4</TD><TD>14</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>1</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR><TD>10</TD><TD>+4</TD><TD>×ÓÖ°ÌØÐÔ</TD><TD>5</TD><TD>15</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>11</TD><TD>+4</TD><TD>¡ª</TD><TD>5</TD><TD>16</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR><TD>12</TD><TD>+4</TD><TD>ÊôÐÔÖµÌáÉý</TD><TD>5</TD><TD>16</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>¡ª</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>13</TD><TD>+5</TD><TD>¡ª</TD><TD>5</TD><TD>17</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>1</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR><TD>14</TD><TD>+5</TD><TD>×ÓÖ°ÌØÐÔ</TD><TD>5</TD><TD>18</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>1</TD><TD>¡ª</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>15</TD><TD>+5</TD><TD>¡ª</TD><TD>5</TD><TD>19</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>¡ª</TD></TR>
-<TR><TD>16</TD><TD>+5</TD><TD>ÊôÐÔÖµÌáÉý</TD><TD>5</TD><TD>21</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>¡ª</TD></TR>
-<TR bgColor=#eeeeee><TD>17</TD><TD>+6</TD><TD>¡ª</TD><TD>5</TD><TD>22</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD></TR>
-<TR><TD>18</TD><TD>+6</TD><TD>·¨Êõ¾«Í¨</TD><TD>5</TD><TD>23</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD></TR>
-<TR bgColor=#eeeeee><TD>19</TD><TD>+6</TD><TD>´«Ææ¶÷»Ý</TD><TD>5</TD><TD>24</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>1</TD><TD>1</TD><TD>1</TD></TR>
-<TR><TD>20</TD><TD>+6</TD><TD>ÕÐÅÆ·¨Êõ</TD><TD>5</TD><TD>25</TD><TD>4</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>2</TD><TD>2</TD><TD>1</TD><TD>1</TD></TR>
-</TABLE> </p>
+<head>
+  <title>ï¿½ï¿½Ê¦</title>
+  <meta content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="../../../style.css">
+</head>
 
-<p><STRONG><FONT color=#800000>1¼¶£ºÊ©·¨ 
-Spellcasting</FONT> <BR></STRONG>ÄãÒÑ¾­ÈëÃÅÁË°ÂÊõÄ§·¨£¬Ñ§»áÁËÈçºÎÊ©Õ¹·¨Êõ¡£Ê©·¨¹æÔò¼ûµÚÆßÕÂ¡£ÏÂÎÄ½«ÏêÊöÈçºÎ½«ÕâÐ©¹æÔòÓ¦ÓÃÓÚ·¨Ê¦·¨Êõ£¬·¨Ê¦·¨ÊõÏê¼û±¾ÕÂºóÎÄÖ°ÒµÃèÊöÖÐµÄ·¨Ê¦·¨Êõ±í¡£<BR><b>Ï··¨Cantrips¡£</b>ÄãÖªÏþÈýµÀÄãÑ¡ÔñµÄ·¨Ê¦Ï··¨¡£ÍÆ¼öÑ¡Ôñ<U><EM>¹âÁÁÊõLight</EM></U>¡¢<U><EM>·¨Ê¦Ö®ÊÖMage Hand</EM></U> ºÍ<U><EM>Àä¶³ÉäÏßRay of 
-Frost</EM></U>  ¡£<BR>Ã¿µ±ÄãÍê³ÉÒ»´Î³¤ÐÝÊ±£¬Äã¶¼ÄÜ´Ó´ËÌØÐÔµÄÏ··¨ÖÐÑ¡ÔñÆäÒ»Ìæ»»ÎªÁíÒ»µÀÄãËùÑ¡ÔñµÄ·¨Ê¦Ï··¨¡£<BR>µ±ÄãµÄ·¨Ê¦µÈ¼¶µ½´ï4¼¶ºÍ10¼¶Ê±£¬Äã¶¼ÄÜÁíÑ¡Ò»µÀ·¨Ê¦Ï··¨²¢Ï°µÃ£¬Èç·¨Ê¦ÌØÐÔ±íÖÐÏ··¨Ò»ÁÐËùÊ¾¡£<BR><b>·¨ÊõÊéSpellbook¡£</b>ÄãÔÚ·¨Ê¦Ñ§Í½½×¶Î»ñÈ¡µÄËùÓÐ³É¹û»ã¼¯ÓÚÒ»±¾¶ÀÌØµÄÊé£ºÄãµÄ·¨ÊõÊé¡£ËüÊÇÒ»¸öÖØ3°õµÄÎ¢ÐÍÎï¼þ£¬ÄÚÓÐ100Ò³£¬²¢ÇÒÖ»ÄÜ±»Äã×Ô¼º»òÕßÊ©Õ¹ÁË<U><EM>¼ø¶¨ÊõIdentify</EM></U>µÄÈËÔÄ¶Á¡£ÄãÀ´¾ö¶¨·¨ÊõÊéµÄÍâÃ²ºÍ²ÄÁÏ£¬±ÈÈçÒ»±¾Ïâ½ð±ßµÄµä¼®»òÓÃÂéÉþ×°¶©µÄÅ£Æ¤Ö½¼¯¡£<BR>Õâ±¾Êé°üº¬ËùÓÐÄãÒÑÖªµÄÒ»»·¼°ÒÔÉÏµÄ·¨Êõ¡£×î³õ£¬Ëü¼ÇÂ¼×ÅÁùµÀ·¨Ê¦·¨Êõ¡£ÍÆ¼öÑ¡Ôñ<U><EM>Õì²âÄ§·¨Detect Magic</EM></U>¡¢<U><EM>ÓðÂäÊõFeather Fall</EM></U>¡¢<U><EM>·¨Ê¦»¤¼×Mage Armor</EM></U>¡¢<U><EM>Ä§·¨·Éµ¯Magic Missile</EM></U>¡¢<U><EM>Ë¯ÃßÊõSleep</EM></U>ºÍ<U><EM>À×Ãù²¨Thunderwave</EM></U>¡£<BR>1¼¶Ö®ºóÃ¿µ±Äã»ñµÃÒ»¸ö·¨Ê¦µÈ¼¶Ê±£¬Äã¾Í¿ÉÒÔÍù·¨ÊõÊéÖÐÌí¼ÓÁ½µÀÄãÑ¡ÔñµÄ·¨Ê¦·¨Êõ¡£ÄãËùÑ¡Ôñ·¨ÊõµÄ»·½×±ØÐëÊÇÄãËùÓµÓÐ·¨ÊõÎ»¶ÔÓ¦µÄ»·½×£¬ÄãËùÓµÓÐµÄ·¨ÊõÎ»Èç·¨Ê¦ÌØÐÔ±íÖÐËùÊ¾¡£ÕâÐ©·¨ÊõÊÇÄã¶¨ÆÚ½øÐÐ°ÂÊõÑÐ¾¿µÄ³É¹û¡£<BR><b>·¨ÊõÎ»Spell Slots¡£</b>·¨Ê¦ÌØÐÔ±íÏÔÊ¾ÁËÄã¿ÉÓÃÓÚÊ©Õ¹Ò»»·¼°ÒÔÉÏ·¨ÊõµÄ·¨ÊõÎ»ÊýÁ¿¡£µ±ÄãÍê³É³¤ÐÝÊ±£¬ÄãÖØ»ñËùÓÐÒÑÏûºÄµÄ·¨ÊõÎ»¡£<BR><b>Ò»»·¼°ÒÔÉÏµÄ×¼±¸·¨ÊõPrepared Spells of Level 1+¡£</b>Äã×¼±¸¿É¹©ÄãÒÔ´ËÌØÐÔÊ©Õ¹µÄÒ»»·¼°¸ü¸ß»·½×µÄ·¨ÊõÁÐ±í¡£Îª´Ë£¬´Ó·¨ÊõÊéÖÐÑ¡ÔñËÄµÀ·¨Ê¦·¨Êõ¡£ÄãËùÑ¡Ôñ·¨ÊõµÄ»·½×±ØÐëÊÇÄãËùÓµÓÐ·¨ÊõÎ»¶ÔÓ¦µÄ»·½×¡£<BR>ÒÑ×¼±¸·¨ÊõÊýÁ¿»áËæÄã·¨Ê¦µÈ¼¶µÄÌáÉý¶øÔö¼Ó£¬Èç·¨Ê¦ÌØÐÔ±íÖÐµÄ×¼±¸·¨ÊõÒ»ÁÐËùÊ¾¡£Ã¿µ±¸ÃÊý×ÖÔö¼ÓÊ±£¬´ÓÄãµÄ·¨ÊõÊéÖÐÑ¡Ôñ¶îÍâ·¨Êõ×¼±¸£¬Ö±ÖÁÒÑ×¼±¸·¨ÊõµÄÊýÁ¿Óë±í¸ñÖÐµÄÊý×ÖÒ»ÖÂ¡£ÄãËùÑ¡Ôñ·¨ÊõµÄ»·½×±ØÐëÊÇÄãËùÓµÓÐ·¨ÊõÎ»¶ÔÓ¦µÄ»·½×¡£ÀýÈç£¬Èç¹ûÄãÊÇÒ»Ãû3¼¶·¨Ê¦£¬ÔòÄãµÄ×¼±¸·¨ÊõÁÐ±íÄÜ°üÀ¨ÁùµÀÒ»»·»ò¶þ»·µÄ·¨Ê¦·¨Êõ£¨´Ó·¨ÊõÊéÖÐÑ¡È¡£©£¬ËæÒâ×éºÏ¡£<BR>Èç¹û·¨Ê¦µÄÆäËûÌØÐÔ¸øÁËÄãÊ¼ÖÕ×¼±¸×ÅµÄ·¨Êõ£¬ÕâÐ©·¨Êõ²»¼ÆÈëÄãÒÔ´Ë·¨×¼±¸µÄ·¨ÊõÊýÁ¿£¬µ«ÕâÐ©·¨Êõ¶ÔÄã¶øÑÔ¶¼ÊÓÎª·¨Ê¦·¨Êõ¡£<BR><b>¸Ä±äÄãµÄ×¼±¸·¨ÊõChanging Your Prepared Spells¡£</b>Ã¿µ±ÄãÍê³ÉÒ»´Î³¤ÐÝÊ±£¬Äã¿ÉÒÔ½«Äã×¼±¸ÁÐ±íÉÏµÄÒ»µÀ»ò¸ü¶à·¨ÊõÌæ»»ÎªÄã·¨ÊõÊéÉÏµÄÆäËû·¨Ê¦·¨Êõ¡£ <STRONG><BR></STRONG><b>Ê©·¨ÊôÐÔSpellcasting Ability¡£</b>Äã·¨Ê¦·¨ÊõµÄÊ©·¨ÊôÐÔÊÇÖÇÁ¦¡£<BR><b>Ê©·¨·¨Æ÷Spellcasting Focus¡£</b>Äã¿ÉÒÔÊ¹ÓÃ°ÂÊõ·¨Æ÷»òÄãµÄ·¨ÊõÊé×÷ÎªÄã·¨Ê¦·¨ÊõµÄÊ©·¨·¨Æ÷¡£</p>
+<body>
+  <h1>ï¿½ï¿½Ê¦ Wizard</h1>
+  <p class=sum>Ñ§ï¿½ï¿½ï¿½É°ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</p>
+  <P><STRONG> ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Core Wizard Traits</STRONG>
+  <TABLE class="basic">
+    <TR>
+      <TD><STRONG> ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Primary Ability</STRONG> </TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG> ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Hit Point Die</STRONG> </TD>
+      <TD>Ã¿ï¿½ï¿½Ê¦ï¿½È¼ï¿½D6</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Saving Throw
+          Proficiencies</STRONG> </TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öª</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Skill Proficiencies</STRONG></TD>
+      <TD>Ñ¡ï¿½ï¿½2ï¿½î£º<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½Ê·</U>ï¿½ï¿½<U>ï¿½ï¿½Ï¤</U>ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>Ò½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½È»</U>ï¿½ï¿½<U>ï¿½Ú½ï¿½</U></TD>
+    </TR>
+    <TR>
+      <TD><STRONG> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Weapon Proficiencies</STRONG> </TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÑµArmor Training</STRONG> </TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD><STRONG> ï¿½ï¿½Ê¼×°ï¿½ï¿½Starting Equipment</STRONG> </TD>
+      <TD>Ñ¡ï¿½ï¿½Aï¿½ï¿½Bï¿½ï¿½(A) 2ï¿½ï¿½Ø°ï¿½×£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½5GPï¿½ï¿½ï¿½ï¿½(B) 55GP</TD>
+    </TR>
+  </TABLE>
+  </P>
+  <p>
+    ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê¾¡ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½Ä·ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½Ô»ï¿½Îªï¿½ï¿½ï¿½æ¡¢ï¿½ç»¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×³ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ä»½ï¿½ï¿½ï¿½ï¡¢Ô¤ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³É·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½Ò»ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½Ö»ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½Å¡ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½î·¨ï¿½ï¿½Ñ§ï¿½ÉµÄ·ï¿½ï¿½à¡£ï¿½Ú´Ë»ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Bigbyï¿½ï¿½ï¿½ï¿½É¯Tashaï¿½ï¿½Ä§ï¿½Ë¿ï¿½Mordenkainenï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Yolandeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÇµÄ±ï¿½Ö¾ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½<BR>ï¿½ï¿½ï¿½ß»ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ê¦ï¿½ï¿½Ó½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½äµ±ï¿½á¹©ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Ê£ï¿½ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½Û£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½<BR>È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½î²»Ï²Ã°ï¿½ÕµÄ·ï¿½Ê¦Ò²ï¿½ï¿½ï¿½ï¿½ÖªÊ¶ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ß³ï¿½ï¿½ï¿½È«ï¿½ï¿½Êµï¿½ï¿½ï¿½Òºï¿½Í¼ï¿½ï¿½Ý£ï¿½Ò»Í·ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½Ä³ï¿½ï¿½Ðºï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Öªï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä³¤ï¿½ï¿½ï¿½Ðµï¿½Ä§ï¿½ï¿½Ö®ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½Ö®Æ¥ï¿½Ð¡ï¿½
+  </p>
+  <h3>ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Becoming a Wizardï¿½ï¿½</h3>
+  <p><STRONG>
+      <FONT color=#da0303>ï¿½ï¿½Îª1ï¿½ï¿½ï¿½ï¿½É« As
+        a Level 1 Character</FONT>
+    </STRONG> </p>
+  <UL>
+    <LI>
+      <div>ï¿½ï¿½Ã·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½</div>
+    <LI>
+      <div>ï¿½ï¿½Ã·ï¿½Ê¦ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½</div>
+    </LI>
+  </UL>
+  <p><STRONG>
+      <FONT color=#da0303>ï¿½ï¿½Îªï¿½ï¿½Ö°ï¿½ï¿½É« As
+        a Multiclass Character</FONT>
+    </STRONG> </p>
+  <UL>
+    <LI>
+      <div>ï¿½ï¿½Ã·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½</div>
+    <LI>
+      <div>ï¿½ï¿½Ã·ï¿½Ê¦ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ã·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ÐµÄ¼ï¿½Ö°ï¿½ï¿½ï¿½ï¿½</div>
+    </LI>
+  </UL>
+  <h3><BR>ï¿½ï¿½Ê¦Ö°Òµï¿½ï¿½ï¿½ï¿½ Wizard Class Features</h3>
+  <p>ï¿½ï¿½Ê¦ï¿½Úµï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½È¼ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½Ô£ï¿½ï¿½ç·¨Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½</p>
+  <p><STRONG>ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Wizard Features</STRONG>
+  <TABLE class=center>
+    <TR>
+      <TD rowspan=2><STRONG>ï¿½È¼ï¿½</STRONG></TD>
+      <TD rowspan=2><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ(PB)</STRONG></TD>
+      <TD rowspan=2><STRONG>Ö°Òµï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD rowspan=2><STRONG>Ï·ï¿½ï¿½</STRONG></TD>
+      <TD rowspan=2><STRONG>×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD colspan=9><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+    </TR>
+    <TR>
+      <TD><STRONG>Ò»ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½Ä»ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½å»·</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ß»ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½Ë»ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½Å»ï¿½</STRONG></TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>1</TD>
+      <TD>+2</TD>
+      <TD>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Ñ§ï¿½Ò£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>3</TD>
+      <TD>4</TD>
+      <TD>2</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>2</TD>
+      <TD>+2</TD>
+      <TD>Ñ§ï¿½ï¿½</TD>
+      <TD>3</TD>
+      <TD>5</TD>
+      <TD>3</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>3</TD>
+      <TD>+2</TD>
+      <TD>ï¿½ï¿½Ê¦ï¿½ï¿½Ö°</TD>
+      <TD>3</TD>
+      <TD>6</TD>
+      <TD>4</TD>
+      <TD>2</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD< TR>
+    <TR>
+      <TD>4</TD>
+      <TD>+2</TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>4</TD>
+      <TD>7</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>5</TD>
+      <TD>+3</TD>
+      <TD>ï¿½ï¿½ï¿½ä·¨ï¿½ï¿½</TD>
+      <TD>4</TD>
+      <TD>9</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>6</TD>
+      <TD>+3</TD>
+      <TD>ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>4</TD>
+      <TD>10</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>7</TD>
+      <TD>+3</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>4</TD>
+      <TD>11</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>8</TD>
+      <TD>+3</TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>4</TD>
+      <TD>12</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>9</TD>
+      <TD>+4</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>4</TD>
+      <TD>14</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>10</TD>
+      <TD>+4</TD>
+      <TD>ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>15</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>11</TD>
+      <TD>+4</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>16</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>12</TD>
+      <TD>+4</TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>16</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>13</TD>
+      <TD>+5</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>17</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>14</TD>
+      <TD>+5</TD>
+      <TD>ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>18</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>15</TD>
+      <TD>+5</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>19</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR>
+      <TD>16</TD>
+      <TD>+5</TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>21</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>ï¿½ï¿½</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>17</TD>
+      <TD>+6</TD>
+      <TD>ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>22</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+    </TR>
+    <TR>
+      <TD>18</TD>
+      <TD>+6</TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨</TD>
+      <TD>5</TD>
+      <TD>23</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>19</TD>
+      <TD>+6</TD>
+      <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>24</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+    </TR>
+    <TR>
+      <TD>20</TD>
+      <TD>+6</TD>
+      <TD>ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½</TD>
+      <TD>5</TD>
+      <TD>25</TD>
+      <TD>4</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>3</TD>
+      <TD>2</TD>
+      <TD>2</TD>
+      <TD>1</TD>
+      <TD>1</TD>
+    </TR>
+  </TABLE>
+  </p>
+
+  <p><STRONG>
+      <FONT color=#da0303>1ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½
+        Spellcasting</FONT> <BR>
+    </STRONG>ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë°ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ú·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âºï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><b>Ï·ï¿½ï¿½Cantripsï¿½ï¿½</b>ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ä·ï¿½Ê¦Ï·ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½Ñ¡ï¿½ï¿½<U><EM>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Light</EM></U>ï¿½ï¿½<U><EM>ï¿½ï¿½Ê¦Ö®ï¿½ï¿½Mage
+        Hand</EM></U> ï¿½ï¿½<U><EM>ï¿½ä¶³ï¿½ï¿½ï¿½ï¿½Ray of
+        Frost</EM></U>
+    ï¿½ï¿½<BR>Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ã¶¼ï¿½Ü´Ó´ï¿½ï¿½ï¿½ï¿½Ôµï¿½Ï·ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½æ»»Îªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ä·ï¿½Ê¦Ï·ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ê¦ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ã¶¼ï¿½ï¿½ï¿½ï¿½Ñ¡Ò»ï¿½ï¿½ï¿½ï¿½Ê¦Ï·ï¿½ï¿½ï¿½ï¿½Ï°ï¿½Ã£ï¿½ï¿½ç·¨Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ï·ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½<BR><b>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Spellbookï¿½ï¿½</b>ï¿½ï¿½ï¿½Ú·ï¿½Ê¦Ñ§Í½ï¿½×¶Î»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ð³É¹ï¿½ï¿½ã¼¯ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½é£ºï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½é¡£ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½100Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ü±ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½<U><EM>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Identify</EM></U>ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½Í²ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ßµÄµä¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Å£Æ¤Ö½ï¿½ï¿½ï¿½ï¿½<BR>ï¿½â±¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½Ñ¡ï¿½ï¿½<U><EM>ï¿½ï¿½ï¿½Ä§ï¿½ï¿½Detect
+        Magic</EM></U>ï¿½ï¿½<U><EM>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Feather Fall</EM></U>ï¿½ï¿½<U><EM>ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Mage Armor</EM></U>ï¿½ï¿½<U><EM>Ä§ï¿½ï¿½ï¿½Éµï¿½Magic
+        Missile</EM></U>ï¿½ï¿½<U><EM>Ë¯ï¿½ï¿½ï¿½ï¿½Sleep</EM></U>ï¿½ï¿½<U><EM>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Thunderwave</EM></U>ï¿½ï¿½<BR>1ï¿½ï¿½Ö®ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½È¼ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ä·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½×±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ð·ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ó¦ï¿½Ä»ï¿½ï¿½×£ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ÐµÄ·ï¿½ï¿½ï¿½Î»ï¿½ç·¨Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã¶¨ï¿½Ú½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½Ä³É¹ï¿½ï¿½ï¿½<BR><b>ï¿½ï¿½ï¿½ï¿½Î»Spell
+      Slotsï¿½ï¿½</b>ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÄµÄ·ï¿½ï¿½ï¿½Î»ï¿½ï¿½<BR><b>Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Prepared
+      Spells of Level
+      1+ï¿½ï¿½</b>ï¿½ï¿½×¼ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½ï¿½×µÄ·ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Îªï¿½Ë£ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½×±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ð·ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ó¦ï¿½Ä»ï¿½ï¿½×¡ï¿½<BR>ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨Ê¦ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ç·¨Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ðµï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½â·¨ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½×±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ð·ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ó¦ï¿½Ä»ï¿½ï¿½×¡ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½×¼ï¿½ï¿½ï¿½ÅµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë·ï¿½×¼ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><b>ï¿½Ä±ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Changing
+      Your Prepared Spellsï¿½ï¿½</b>Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Ïµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à·¨ï¿½ï¿½ï¿½æ»»Îªï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    <STRONG><BR></STRONG><b>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Spellcasting Abilityï¿½ï¿½</b>ï¿½ã·¨Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><b>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Spellcasting
+      Focusï¿½ï¿½</b>ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ã·¨Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</p>
 
 
 
-<div class="center"><h3><FONT color=#000000>À©Õ¹ÓëÌæ»»·¨ÊõÊé Expanding and Replacing a 
-Spellbook</FONT>     </h3><p>Äã»ñµÃÖ°ÒµµÈ¼¶Ê±Ìí¼Óµ½·¨ÊõÊéÖÐµÄ·¨Êõ·´Ó³ÁËÄã×Ô¼º½øÐÐµÄÄ§·¨ÑÐ¾¿£¬µ«Äã¿ÉÄÜ»áÔÚÃ°ÏÕ¹ý³ÌÖÐ·¢ÏÖÆäËû¿ÉÒÔÌí¼ÓÖÁ·¨ÊõÊéÖÐµÄ·¨Êõ¡£ÀýÈç£¬Äã¿ÉÄÜÔÚÒ»ÕÅ<EM><U>·¨Êõ¾íÖáSpell 
-Scroll</U></EM>     ÖÐ·¢ÏÖÒ»µÀ·¨Ê¦·¨Êõ£¬È»ºó½«¸Ã·¨Êõ³­µ½ÄãµÄ·¨ÊõÊéÖÐ¡£</p><p><b>½«Ò»µÀ·¨Êõ³­Ð´µ½·¨ÊõÊéÖÐCopying a Spell into the Book¡£</b> 
-µ±Äã·¢ÏÖÒ»µÀÒ»»·»ò¸ü¸ß»·½×µÄ·¨Ê¦·¨ÊõÊ±£¬Èç¹ûËüÊÇÄãÄÜ½øÐÐ×¼±¸µÄ·¨ÊõÎ»»·½×ÇÒÄãÄÜ³é³öÊ±¼äÀ´³­Ð´Ëü£¬ÔòÄã¿ÉÒÔ½«Æä³­Ð´µ½ÄãµÄ·¨ÊõÊéÖÐ¡£Ã¿¸ö·¨Êõ»·½×µÄ³­Â¼¹ý³Ì¶¼ÐèÒª2Ð¡Ê±²¢»¨·Ñ50GP¡£ÔÚ´ËÖ®ºó£¬Äã¾Í¿ÉÒÔÏñ×¼±¸·¨ÊõÊéÖÐµÄÆäËû·¨ÊõÒ»Ñù×¼±¸¸Ã·¨ÊõÁË¡£</p><p><b>Ìæ»»·¨ÊõÊéReplacing the Book¡£</b>Äã¿ÉÒÔ½«·¨Êõ´ÓÄã×Ô¼ºµÄ·¨ÊõÊé¸´ÖÆµ½ÁíÒ»±¾ÊéÖÐ¡£Õâ¾ÍÏñ½«ÐÂ·¨Êõ¸´ÖÆµ½ÄãµÄ·¨ÊõÊéÖÐÒ»Ñù£¬µ«¸ü¿ìÒ²¸ü¼òµ¥£¬ÒòÎªÄãÒÑ¾­ÖªµÀÈçºÎÊ©Õ¹ÕâÐ©·¨Êõ¡£¸´ÖÆ¹ý³ÌÖ»ÐèÃ¿¸ö·¨Êõ»·½×»¨·Ñ1Ð¡Ê±ºÍ10GP¡£<BR>     Èç¹ûÄãÊ§È¥ÁËÄãµÄ·¨ÊõÊé£¬ÔòÄã¿ÉÒÔÊ¹ÓÃÏàÍ¬µÄ¹ý³Ì½«ÄãÒÑ×¼±¸µÄ·¨Ê¦·¨Êõ×ªÂ¼µ½ÐÂµÄ·¨ÊõÊéÖÐ¡£ÄãÈÔÐèÒªÕÒµ½ÐÂµÄ·¨ÊõÀ´ÌîÂúÐÂÊéµÄÊ£Óà²¿·Ö¡£³öÓÚÕâ¸öÔ­Òò£¬Ðí¶à·¨Ê¦¶¼»á±£ÁôÒ»±¾±¸ÓÃ·¨ÊõÊé¡£</p>
-</div>
+  <div class="center">
+    <h3>
+      <FONT color=#000000>ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Expanding and Replacing a
+        Spellbook</FONT>
+    </h3>
+    <p>
+      ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½È¼ï¿½Ê±ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ä§ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü»ï¿½ï¿½ï¿½Ã°ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½<EM><U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Spell
+          Scroll</U></EM> ï¿½Ð·ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ó½«¸Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½</p>
+    <p><b>ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Copying a Spell into the Bookï¿½ï¿½</b>
+      ï¿½ï¿½ï¿½ã·¢ï¿½ï¿½Ò»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½ï¿½×µÄ·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ä³­Ð´ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µÄ³ï¿½Â¼ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½Òª2Ð¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½50GPï¿½ï¿½ï¿½Ú´ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×¼ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½
+    </p>
+    <p><b>ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Replacing the
+        Bookï¿½ï¿½</b>ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½é¸´ï¿½Æµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½òµ¥£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ñ¾ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×»ï¿½ï¿½ï¿½1Ð¡Ê±ï¿½ï¿½10GPï¿½ï¿½<BR>
+      ï¿½ï¿½ï¿½ï¿½ï¿½Ê§È¥ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Ä¹ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½Ä·ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½×ªÂ¼ï¿½ï¿½ï¿½ÂµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Òµï¿½ï¿½ÂµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½à²¿ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½à·¨Ê¦ï¿½ï¿½ï¿½á±£ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½é¡£
+    </p>
+  </div>
 
 
 
-<p><STRONG><FONT color=#800000>1¼¶£ºÒÇÊ½Ñ§¼Ò 
-Ritual Adept</FONT>  
-</STRONG> 
-<BR>ÄãÄÜÒÔÒÇÊ½Ê©Õ¹Äã·¨ÊõÊéÖÐÈÎºÎ´øÓÐÒÇÊ½±êÇ©µÄ·¨Êõ¡£Äã²»ÐèÒª×¼±¸ÕâÐ©·¨Êõ£¬µ«ÄãÒÔ´Ë·¨Ê©Õ¹·¨ÊõÊ±±ØÐëÔÄ¶ÁÕâ±¾Êé¡£</p>
+  <p><STRONG>
+      <FONT color=#da0303>1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Ñ§ï¿½ï¿½
+        Ritual Adept</FONT>
+    </STRONG>
+    <BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Ê©Õ¹ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ´ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ç©ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²»ï¿½ï¿½Òª×¼ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë·ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½â±¾ï¿½é¡£
+  </p>
 
 
 
-<p><STRONG><FONT color=#800000>1¼¶£º°ÂÊõ»ØÏë 
-Arcane Recovery</FONT>  
-<BR></STRONG>ÄãÑ§»áÁËÍ¨¹ýÑÐ¶Á·¨ÊõÊéÀ´»Ö¸´Ä§·¨ÄÜÁ¿µÄ°ì·¨¡£ÄãÍê³ÉÒ»´Î¶ÌÐÝºó£¬¿ÉÒÔÑ¡Ôñ»Ö¸´ÒÑÏûºÄµÄ·¨ÊõÎ»¡£Ëù»Ö¸´µÄ·¨ÊõÎ»»·½××ÜºÍ²»µÃ´óÓÚÄã·¨Ê¦µÈ¼¶µÄÒ»°ë£¨ÏòÉÏÈ¡Õû£©£¬ÇÒÈÎºÎÒ»¸ö·¨ÊõÎ»µÄ»·½×¶¼±ØÐëÐ¡ÓÚÁù»·¡£ÀýÈç£¬×÷ÎªÒ»Ãû4¼¶·¨Ê¦Ê±£¬Äã¿É»Ö¸´»·½××ÜÊý×î¶àÎª¶þµÄ·¨ÊõÎ»¡£Äã¿ÉÒÔÑ¡Ôñ»Ö¸´Ò»¸ö¶þ»··¨ÊõÎ»»òÁ½¸öÒ»»··¨ÊõÎ»¡£<BR>´ËÌØÐÔÒ»¾­Ê¹ÓÃ£¬Ö±ÖÁÍê³É³¤ÐÝÄã¶¼ÎÞ·¨ÔÙ´ÎÊ¹ÓÃ¡£</p>
+  <p><STRONG>
+      <FONT color=#da0303>1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        Arcane Recovery</FONT>
+      <BR>
+    </STRONG>ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä°ì·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¶ï¿½ï¿½Ýºó£¬¿ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÄµÄ·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ÜºÍ²ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ã·¨Ê¦ï¿½È¼ï¿½ï¿½ï¿½Ò»ï¿½ë£¨ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ä»ï¿½ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ÎªÒ»ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½Ê¦Ê±ï¿½ï¿½ï¿½ï¿½É»Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ö¸ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê¹ï¿½Ã£ï¿½Ö±ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½ï¿½ã¶¼ï¿½Þ·ï¿½ï¿½Ù´ï¿½Ê¹ï¿½Ã¡ï¿½
+  </p>
 
 
 
-<p><STRONG><FONT color=#800000>2¼¶£ºÑ§Õß 
-Scholar</FONT> <BR></STRONG>ÔÚÑ§Ï°·¨ÊõÖ®Óà£¬Äã»¹¶ÔÒ»ÃÅÑ§ÊõÁìÓòÓÐ¹ý×¨ÃÅµÄÑÐ¾¿¡£´ÓÏÂÁÐ¼¼ÄÜÖÐÑ¡ÔñÒ»ÏîÄã¾ßÓÐÊìÁ·µÄ¼¼ÄÜ£º<U>°ÂÃØ</U>¡¢<U>ÀúÊ·</U>¡¢<U>×ÔÈ»</U>»ò<U>×Ú½Ì</U>¡£Äã»ñµÃËùÑ¡¼¼ÄÜµÄ<U>×¨¾«</U>¡£</p>
+  <p><STRONG>
+      <FONT color=#da0303>2ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½
+        Scholar</FONT> <BR>
+    </STRONG>ï¿½ï¿½Ñ§Ï°ï¿½ï¿½ï¿½ï¿½Ö®ï¿½à£¬ï¿½ã»¹ï¿½ï¿½Ò»ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½×¨ï¿½Åµï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ü£ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½Ê·</U>ï¿½ï¿½<U>ï¿½ï¿½È»</U>ï¿½ï¿½<U>ï¿½Ú½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Üµï¿½<U>×¨ï¿½ï¿½</U>ï¿½ï¿½
+  </p>
 
 
-<p><STRONG><FONT color=#800000>3¼¶£º·¨Ê¦×ÓÖ° Wizard Subclass</FONT>  
-<BR></STRONG>ÄãÑ¡Ôñ»ñµÃÒ»Ïî·¨Ê¦×ÓÖ°¡£<font COLOR=#ffc000><STRONG>·À»¤Ê¦</STRONG></font>£¬<STRONG><FONT color=#008080>Ô¤ÑÔÊ¦</FONT></STRONG>£¬
-<FONT color=#ff0000><STRONG>ËÜÄÜÊ¦</STRONG></FONT>ÒÔ¼°<STRONG><FONT color=#800080 >»ÃÊõÊ¦</FONT></STRONG>¡£×ÓÖ°µÄÄÚÈÝ¼ûºóÎÄ¡£×ÓÖ°ÊÇÒ»ÖÖÌØ»¯£¬ÔÚÌØ¶¨µÄ·¨Ê¦µÈ¼¶¸øÓèÄã¶ÔÓ¦µÄ¶ÀÌØÄÜÁ¦¡£´ËºóÄã½«»ñµÃÄãËùÑ¡µÄ×ÓÖ°ËùÓÐÄÜÁ¦¡ª¡ªÖ»ÒªÆäËùÐèµÈ¼¶²»³¬¹ýÄãµÄ·¨Ê¦µÈ¼¶¡£·¨Ê¦Ö°ÒµÌØÐÔ±íÁÐ³öÁËÄã´Ó×ÓÖ°ÖÐ»ñµÃÐÂÌØÐÔµÄ·¨Ê¦µÈ¼¶¡£</p>
-
-
-
-<p><STRONG><FONT color=#800000>4¼¶£ºÊôÐÔÖµÌáÉý Ability Score Improvement</FONT>   
-</STRONG><BR>Äã»ñµÃÊôÐÔÖµÌáÉý×¨³¤£¨¼ûµÚÎåÕÂ£©»òÆäËûÄãÂú×ãÌõ¼þµÄ×¨³¤¡£Èç·¨Ê¦ÌØÐÔ±íËùÊ¾£¬Äã»¹»áÔÚµÚ8£¬µÚ12£¬µÚ16¼¶Ê±ÔÙ´Î»ñµÃ±¾ÌØÐÔ¡£</p>
-
-
-
-<p><STRONG><FONT color=#800000>5¼¶£º¼ÇÒä·¨Êõ 
-Memorize Spell</FONT>  
-<BR>  
-</STRONG>Ã¿µ±ÄãÍê³ÉÒ»´Î¶ÌÐÝÊ±£¬Äã¿ÉÒÔÑÐ¾¿ÄãµÄ·¨ÊõÊé²¢ÇÒ½«ÆäÖÐÒ»µÀÄãÒÔÊ©·¨ÌØÐÔ×¼±¸µÄÒ»»·¼°ÒÔÉÏµÄ·¨ÊõÌæ»»ÎªÄã·¨ÊõÊéÖÐµÄÁíÒ»µÀÒ»»·¼°ÒÔÉÏµÄ·¨Êõ¡£  </p>
-
-
-
-<p><STRONG><FONT color=#800000>18¼¶£º·¨Êõ¾«Í¨ Spell Mastery</FONT>  
-<BR>  
-</STRONG>Äã¶ÔÌØ¶¨µÄ·¨Êõ¾«ÊìÓÚÐÄ£¬ÒÔÖÁÓÚÄã¿ÉÒÔ½«ÆäËæÒâÊ©Õ¹¡£Ñ¡ÔñÄã·¨ÊõÊéÖÐµÄÒ»µÀÊ©·¨Ê±¼äÎª¶¯×÷µÄÒ»»··¨ÊõºÍÒ»¸ö¶þ»··¨Êõ£¬Äã×ÜÊÇ×¼±¸ÕâÐ©·¨Êõ£¬ÇÒÄÜ²»ÏûºÄ·¨ÊõÎ»µØÒÔ×îµÍ»·Ê©Õ¹ËüÃÇ¡£Èç¹ûÄãÏëÉý»·Ê©Õ¹ÕâÐ©·¨Êõ£¬ÔòÄã±ØÐëÏñÆ½Ê±Ò»ÑùÏûºÄÒ»¸ö·¨ÊõÎ»¡£<BR>Ã¿µ±ÄãÍê³ÉÒ»´Î³¤ÐÝÊ±£¬Äã¿ÉÒÔÑÐ¾¿ÄãµÄ·¨ÊõÊé²¢½«ÆäÖÐÒ»µÀ·¨Êõ¸ü»»ÎªÁíÒ»¸ö·ûºÏÌõ¼þµÄÍ¬»·½×·¨Êõ¡£  </p>
+  <p><STRONG>
+      <FONT color=#da0303>3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½Ö° Wizard Subclass</FONT>
+      <BR>
+    </STRONG>ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½î·¨Ê¦ï¿½ï¿½Ö°ï¿½ï¿½<font COLOR=#ffc000><STRONG>ï¿½ï¿½ï¿½ï¿½Ê¦</STRONG></font>ï¿½ï¿½<STRONG>
+      <FONT color=#008080>Ô¤ï¿½ï¿½Ê¦</FONT>
+    </STRONG>ï¿½ï¿½
+    <FONT color=#ff0000><STRONG>ï¿½ï¿½ï¿½ï¿½Ê¦</STRONG></FONT>ï¿½Ô¼ï¿½<STRONG>
+      <FONT color=#800080>ï¿½ï¿½ï¿½ï¿½Ê¦</FONT>
+    </STRONG>ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½Ý¼ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½Ö°ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½Ä·ï¿½Ê¦ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ã½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ê¦ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦Ö°Òµï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÔµÄ·ï¿½Ê¦ï¿½È¼ï¿½ï¿½ï¿½
+  </p>
 
 
 
-<p><STRONG><FONT color=#800000>19¼¶£º´«Ææ¶÷»Ý Epic Boon</FONT>  
-</STRONG><BR>Äã»ñµÃÒ»Ïî<STRONG>´«Ææ¶÷»Ý</STRONG>×¨³¤£¨¼ûµÚÎåÕÂ£©»òÆäËûÒ»ÏîÄãÑ¡ÔñµÄÊÊÓÃµÄ×¨³¤¡£ÍÆ¼öÑ¡Ôñ·¨ÊõËÝ»ØÖ®¶÷»Ý  ¡£</p>
+  <p><STRONG>
+      <FONT color=#da0303>4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ Ability Score Improvement</FONT>
+    </STRONG><BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½×¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¨ï¿½ï¿½ï¿½ï¿½ï¿½ç·¨Ê¦ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ã»¹ï¿½ï¿½ï¿½Úµï¿½8ï¿½ï¿½ï¿½ï¿½12ï¿½ï¿½ï¿½ï¿½16ï¿½ï¿½Ê±ï¿½Ù´Î»ï¿½Ã±ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½</p>
 
 
 
-<p><STRONG><FONT color=#800000>20¼¶£ºÕÐÅÆ·¨Êõ Signature Spells</FONT>  
-<BR>  
-</STRONG>´ÓÄãµÄ·¨ÊõÊéÖÐÑ¡ÔñÁ½µÀÈý»··¨Êõ×÷ÎªÄãµÄÕÐÅÆ·¨Êõ¡£Äã×ÜÊÇ×¼±¸ÕâÐ©·¨Êõ£¬ÇÒÄÜ²»ÏûºÄ·¨ÊõÎ»µØÒÔÈý»·Ê©Õ¹Ã¿µÀ·¨Êõ¸÷Ò»´Î¡£´ËÌØÐÔÒ»¾­Ê¹ÓÃ£¬Ö±µ½Íê³ÉÒ»´Î¶ÌÐÝ»ò³¤ÐÝ¶¼²»ÄÜÔÙ´ÎÒÔ´Ë·¨Ê©Õ¹ÕâÁ½µÀ·¨Êõ¡£Èç¹ûÄãÏëÉý»·Ê©Õ¹ÕâÐ©·¨Êõ£¬ÔòÄã±ØÐëÏñÆ½Ê±Ò»ÑùÏûºÄÒ»¸ö·¨ÊõÎ»¡£ 
-</p></FONT>
+  <p><STRONG>
+      <FONT color=#da0303>5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä·¨ï¿½ï¿½
+        Memorize Spell</FONT>
+      <BR>
+    </STRONG>Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½é²¢ï¿½Ò½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ·ï¿½ï¿½ï¿½ï¿½æ»»Îªï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
+  </p>
+
+
+
+  <p><STRONG>
+      <FONT color=#da0303>18ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ Spell Mastery</FONT>
+      <BR>
+    </STRONG>ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ò»ï¿½ï¿½Ê©ï¿½ï¿½Ê±ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü²ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½Ê©Õ¹ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½Ê±Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½<BR>Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½é²¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½
+  </p>
+
+
+
+  <p><STRONG>
+      <FONT color=#da0303>19ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Epic Boon</FONT>
+    </STRONG><BR>ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½<STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG>×¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½×¨ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½</p>
+
+
+
+  <p><STRONG>
+      <FONT color=#da0303>20ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ Signature Spells</FONT>
+      <BR>
+    </STRONG>ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü²ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê¹ï¿½Ã£ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¶ï¿½ï¿½Ý»ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù´ï¿½ï¿½Ô´Ë·ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½Ê±Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+  </p>
+  </FONT>
 </body>
-</html>
 
+</html>

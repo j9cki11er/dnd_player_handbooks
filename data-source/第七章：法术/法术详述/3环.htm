@@ -1,300 +1,574 @@
 <!-- coding: gbk -->
 <html>
-<head><title>Èý»·</title>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<link rel="stylesheet" href="../../style.css">
-<style>
-div.stat-block h5,div.stat-block h6{
-	color: #800000;
-	font-weight: bold;
-	border-bottom: 1px #800000 solid;
-}
-div.stat-block h5{
-	font-size: 140%;
-	margin-top: 0px;
-	margin-bottom: 5px;
-}
-div.stat-block h6{
-	font-size: 115%;
-	margin-top: 17px;
-	margin-bottom: -12px;
-}
-div.stat-block .sub-line{
-	color: #808080;
-	font-style: italic;
-	MARGIN-TOP: -3px;
-}
-div.stat-block table{
-	width: 500px;
-	color: #800000;
-	border-collapse: collapse;
-}
-table.stat-abilities{
-	text-align: center;
-	margin-bottom: 15px;
-	white-space: nowrap;
-}
-table.stat-abilities th{
-	width: 40px;
-	font-size: 75%;
-	color: #808080;
-}
-table.stat-abilities td{
-	padding: 2px 0px 0px 0px;
-	font-size: 100%;
-}
-td.c1{
-	BACKGROUND-COLOR:#e9e3d6;
-}
-td.c2{
-	BACKGROUND-COLOR: #d8d0c9
-}
-td.c3{
-	BACKGROUND-COLOR: #d2d6ce
-}
-td.c4{
-	BACKGROUND-COLOR: #cbc6c6
-}</style>
+
+<head>
+	<title>ï¿½ï¿½ï¿½ï¿½</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<link rel="stylesheet" href="../../style.css">
+	<style>
+		div.stat-block h5,
+		div.stat-block h6 {
+			color: #da0303;
+			font-weight: bold;
+			border-bottom: 1px #da0303 solid;
+		}
+
+		div.stat-block h5 {
+			font-size: 140%;
+			margin-top: 0px;
+			margin-bottom: 5px;
+		}
+
+		div.stat-block h6 {
+			font-size: 115%;
+			margin-top: 17px;
+			margin-bottom: -12px;
+		}
+
+		div.stat-block .sub-line {
+			color: #808080;
+			font-style: italic;
+			MARGIN-TOP: -3px;
+		}
+
+		div.stat-block table {
+			width: 500px;
+			color: #da0303;
+			border-collapse: collapse;
+		}
+
+		table.stat-abilities {
+			text-align: center;
+			margin-bottom: 15px;
+			white-space: nowrap;
+		}
+
+		table.stat-abilities th {
+			width: 40px;
+			font-size: 75%;
+			color: #808080;
+		}
+
+		table.stat-abilities td {
+			padding: 2px 0px 0px 0px;
+			font-size: 100%;
+		}
+
+		td.c1 {
+			BACKGROUND-COLOR: #e9e3d6;
+		}
+
+		td.c2 {
+			BACKGROUND-COLOR: #d8d0c9
+		}
+
+		td.c3 {
+			BACKGROUND-COLOR: #d2d6ce
+		}
+
+		td.c4 {
+			BACKGROUND-COLOR: #cbc6c6
+		}
+	</style>
 </head>
+
 <body>
-<H4 id="Animate_Dead">»î»¯ËÀÊ¬£üAnimate Dead</H4>
-<P><EM>Èý»· ËÀÁé£¨ÄÁÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>1 ·ÖÖÓ<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>10 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»µÎÑª¡¢Ò»¿éÈâ¡¢ÒÔ¼°Ò»µã¹Ç»Ò£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>ÔÚÊ©·¨¾àÀëÄÚÖ¸¶¨Ò»¾ßÖÐÐÍ»òÐ¡ÐÍÀàÈËÒÅ¹Ç»òÒÅÌå¡£Ä¿±ê½«±äÎªÒ»ÃûÍöÁéÉúÎï£ºÒÅ¹Ç±äÎª<STRONG><U>÷¼÷ÃSkeleton</U></STRONG>£¬ÒÅÌåÔò±äÎª<STRONG><U>É¥Ê¬Zombie</U></STRONG>¡££¨ÕâÐ©ÉúÎïµÄ×ÊÁÏ¿¨¼û¸½Â¼B£©¡£<BR>ÔÚÄãµÄÃ¿¸ö»ØºÏÄÚ£¬Äã¿ÉÒÔÊ¹ÓÃÒ»¸ö¸½Ôù¶¯×÷²¢ÒÔ¾«ÉñÃüÁî²Ù×Ý¾àÀëÄã 
-60 
-³ßÄÚ£¬ÈÎºÎÄãÓÃ´Ë·¨ÊõÖÆÔìµÄÉúÎï£¨Èç¹ûÄã²Ù×Ý¶à¸öÉúÎï£¬ÔòÄãµÄÃüÁî¿ÉÒÔÍ¬Ê±´«´ï¸øËüÃÇÈ«²¿»òÊÇÆäÖÐµÄÄ³¼¸¸ö£¬²»¹ýÃ¿´ÎÖ»ÄÜÎªËüÃÇÏÂ´ïÍ¬Ò»ÃüÁî£©¡£Äã¾ö¶¨±»²Ù×ÝÉúÎïÏÂ»ØºÏÖ´ÐÐµÄ¶¯×÷ºÍÈçºÎÒÆ¶¯¡£»òÕß£¬ÄãÒ²¿ÉÒÔÑ¡ÔñÏÂ´ïÒ»Ìõ¿í·ºµÄÃüÁî£¨±ÈÈçÊØ»¤Ä³¸ö·¿¼ä»ò×ßÀÈ£©¡£Èç¹ûÄãÃ»ÓÐÏÂ´ïÃüÁî£¬¸ÃÉúÎï½«Ö´ÐÐ<U>»Ø±Ü</U>¶¯×÷ÇÒÖ»»áÎª¶ã±ÜÎ£ÏÕ¶øÒÆ¶¯¡£Ò»µ©±»ÏÂ´ïÃüÁî£¬¸ÃÉúÎï»á³ÖÐøÖ´ÐÐÃüÁîÖ±µ½ÈÎÎñÍê³É¡£<BR>ÕâÐ©ÊÜ²Ù×ÝÉúÎïÖ»»áÔÚ 
-24Ð¡Ê±ÄÚ·þ´ÓÄãµÄÃüÁî£¬ÔÚÖ®ºó£¬ËüÃÇ»áÍ£Ö¹×ñÊØÄãÏÂ´ïµÄÃüÁî¡£ÈôÄãÏë½«¶ÔÕâÐ©ÉúÎïµÄ¿ØÖÆÊ±¼äÔÙÑÓ³¤24Ð¡Ê±£¬ÔòÄã±ØÐëÔÚµ±Ç°24Ð¡Ê±µÄÊ±¼ä¶ÎÖÕÖ¹Ç°ÔÙ´Î¶ÔÕâÐ©ÉúÎïÊ©Õ¹¸Ã·¨Êõ¡£·¨ÊõµÄ´ËÖÖÓÃ·¨Ö»ÄÜÑÓ³¤Äã¶ÔÖÁ¶àËÄ¸öÄãÊ¹ÓÃ´Ë·¨ÊõËù´´ÔìÉúÎïµÄ¿ØÖÆÊ±¼ä£¬¶ø²»»á´´ÔìÐÂµÄÉúÎï¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬Äã¾ÍÄÜ¶à»½ÆðÁ½Ö»ÍöÁéÉúÎï£¬»òÊÇ¶àÑÓ³¤¶ÔÁ½Ö»ÍöÁéÉúÎïµÄ¿ØÖÆ¡£ÄãÎÞ·¨ÓÃÍ¬Ò»¾ßº¡¹Ç»òÒÅÌå»½Æð¶à¸öÍöÁéÉúÎï¡£</P>
-<H4 id="Aura_of_Vitality">»îÁ¦Áé¹â£üAura of Vitality</H4>
-<P><EM>Èý»· ËÜÄÜ£¨ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢Ê¥ÎäÊ¿£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 1 ·ÖÖÓ<BR>Ò»µÀÁé¹â×ÔÄãÉíÉÏ·¢³ö²¢ÐÎ³É30³ß°ë¾¶µÄ<U>¹â»·</U>  ¡£µ±Äã´´ÔìÁé¹âÊ±ºÍËü³ÖÐøÊ±ÄãµÄÃ¿¸ö»ØºÏ¿ªÊ¼£¬Äã¿ÉÒÔÎªÇøÓòÄÚµÄÒ»ÃûÉúÎï»Ö¸´2d6ÉúÃüÖµ¡£</P>
-<H4 id="Beacon_of_Hope">Ï£ÍûÐÅ±ê£üBeacon of Hope</H4>
-<P><EM>Èý»· ·À»¤£¨ÄÁÊ¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>30³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶àÒ»·ÖÖÓ<BR>ÔÚÊ©·¨¾àÀëÄÚÖ¸¶¨ÈÎÒâÊýÁ¿µÄÉúÎï£¬²¢Ê¹ÆäÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ½øÐÐµÄ¸ÐÖª»íÃâºÍËÀÍö»íÃâ¾ßÓÐÓÅÊÆ¡£´ËÍâ£¬Æä»ñµÃµÄËùÓÐÖÎÁÆµÄÉúÃüÖµ»Ö¸´Á¿¶¼È¡×î´óÖµ¡£</P>
-<H4 id="Bestow_Curse">½µÖä£üBestow Curse</H4>
-<P><EM>Èý»· ËÀÁé£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>Äã´¥ÅöÒ»ÃûÉúÎï¡£¸ÃÉúÎï±ØÐë½øÐÐÒ»´Î¸ÐÖª»íÃâ²¢³É¹¦Í¨¹ý£¬·ñÔò½«ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ±»×çÖä¡£Ö±µ½¸Ã×çÖäÖÕÖ¹Ç°£¬Ä¿±ê»áÔâÊÜÒÔÏÂÒ»ÏîÐ§Ó¦£¬ÓÉÄãÑ¡Ôñ£º</P>
-<UL>
-  <LI>
-<DIV>Ñ¡ÔñÒ»ÏîÊôÐÔ¡£Ä¿±êÊ¹ÓÃ¸ÃÊôÐÔËù½øÐÐµÄÊôÐÔ¼ì¶¨ºÍ»íÃâ¼ì¶¨¾ßÓÐÁÓÊÆ¡£</DIV>
-  <LI>
-<DIV>Ä¿±ê¶ÔÄã·¢¶¯µÄ¹¥»÷¼ì¶¨¾ßÓÐÁÓÊÆ¡£</DIV>
-  <LI>
-<DIV 
-  >ÔÚÕ½¶·ÖÐ£¬Ä¿±êÔÚÆäÃ¿»ØºÏ¿ªÊ¼Ê±±ØÐë½øÐÐÒ»´Î¸ÐÖª»íÃâ£¬»íÃâÊ§°ÜÔòÔÚ¸Ã»ØºÏÖÐ±»ÆÈÖ´ÐÐ<U>»Ø±Ü</U>¶¯×÷¡£</DIV>
-  <LI>
-<DIV>ÈôÄãµÄ¹¥»÷¼ì¶¨»ò·¨Êõ¶ÔÄ¿±êÔì³ÉÁËÉËº¦£¬ÔòÄ¿±ê»¹»á¶îÍâÊÜµ½1d8°µÊ´ÉËº¦¡£</DIV></LI></UL>
-<P><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃËÄ»··¨ÊõÎ»Ê©Õ¹´Ë·¨ÊõÊ±£¬Äã¿ÉÒÔÎ¬³Ö´Ë·¨ÊõµÄ×¨×¢ÖÁ¶à10·ÖÖÓ¡£Ê¹ÓÃÎå»·¼°¸ü¸ß»·½×µÄ·¨ÊõÎ»Ê©Õ¹´Ë·¨ÊõÊ±£¬´Ë·¨ÊõÎÞÐè×¨×¢£¬²¢ÇÒ³ÖÐøÊ±¼ä±äÎª8Ð¡Ê±£¨Îå»òÁù»··¨ÊõÎ»£©»ò24Ð¡Ê±£¨Æß»ò°Ë»··¨ÊõÎ»£©¡£ÈôÄãÊ¹ÓÃ¾Å»··¨ÊõÎ»Ê©Õ¹´Ë·¨Êõ£¬Ôò´Ë·¨Êõ»áÒ»Ö±³ÖÐøµ½±»½â³ýÎªÖ¹¡£</P>
-<H4 id="Blinding_Smite">ÖÂÃ¤Õ¶£üBlinding Smite</H4>
-<P><EM>Èý»· ËÜÄÜ£¨Ê¥ÎäÊ¿£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¸½Ôù¶¯×÷£¬µ±ÄãÊ¹ÓÃ½üÕ½ÎäÆ÷»òÍ½ÊÖ´ò»÷ÃüÖÐÒ»¸öÉúÎïºóÁ¢¼´Ö´ÐÐ<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1·ÖÖÓ<BR>±»¸Ã´Î¹¥»÷¼ì¶¨ÃüÖÐµÄÄ¿±ê»áÔÚ´Ë´Î¹¥»÷ÖÐ¶îÍâÊÜµ½3d8µã¹âÒ«ÉËº¦£¬²¢ÇÒÄ¿±êÏÝÈë<U>Ä¿Ã¤</U>×´Ì¬Ö±ÖÁ·¨Êõ½áÊø¡£ÏÝÈë<U>Ä¿Ã¤</U>µÄÄ¿±êÔÚÆäÃ¿»ØºÏ½áÊøÊ±¿ÉÒÔ½øÐÐÒ»´ÎÌåÖÊ»íÃâ£¬»íÃâ³É¹¦ÔòÖÕÖ¹ÆäÉíÉÏµÄ·¨Êõ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>ÄãÊ¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄ¶îÍâÉËº¦ÌáÉý1d8¡£</P>
-<H4 id="Blink">ÉÁÏÖÊõ£üBlink</H4>
-<P><EM>Èý»· ±ä»¯£¨ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1·ÖÖÓ<BR>ÄãÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚÃ¿´Î×Ô¼º»ØºÏ½áÊøÊ±ÖÀÒ»´Îd6¡£½á¹ûÎª4~6Ê±£¬Äã´ÓÄãÏÖÔÚÉí´¦µÄ´æÔÚÎ»ÃæÏûÊ§£¬²¢³öÏÖÔÚ<STRONG>ÒÔÌ«Î»ÃæEthereal 
-Plane</STRONG> £¨ÈôÄã±¾ÒÑÉí´¦ÒÔÌ«Î»Ãæ£¬´Ë·¨Êõ»áÁ¢¼´ÖÕÖ¹£©¡£ÔÚÄãÉí´¦ÒÔÌ«Î»ÃæÆÚ¼ä£¬Äã¿ÉÒÔ¹Û²âµ½ÄãËùÀë¿ªÎ»ÃæµÄºÚ°×Ó°Ïñ£¬µ«Ö»ÏÞÓÚ60³ßÖ®ÄÚ¡£ÄãÖ»ÄÜÓ°ÏìÆäËûÉí´¦ÒÔÌ«Î»ÃæµÄÉúÎï£¬»ò±»ÆäÓ°Ïì¡£²¢ÇÒ´¦ÓÚÆäËûÎ»ÃæµÄÉúÎïÔÚÃ»ÓÐÄÜ¹»¹Û²âµ½ÒÔÌ«Î»ÃæÊÂÎïµÄÌØÊâÄÜÁ¦µÄÇé¿öÏÂ£¬Í¬ÑùÎÞ·¨¹Û²âµ½Äã¡£<BR>Äã»áÔÚÄãµÄÏÂÒ»»ØºÏ¿ªÊ¼Ê±·µ»ØÆäËûÎ»Ãæ£»Èç¹ûµ±Äã·¨ÊõÖÕÖ¹Ê±Éí´¦ÒÔÌ«Î»Ãæ£¬ÄãÍ¬Ñù»á·µ»ØÆäËûÎ»Ãæ¡£Äã·µ»ØÔ­ÏÈÎ»ÃæÊ±»á³öÏÖÔÚÒ»¸öÄãÔ­ÏÈÎ»ÖÃ10³ßÖ®ÄÚÄã¿É¼ûµÄÎ´±»Õ¼¾ÝµÄ¿Õ¼äÖ®ÖÐ¡£ÈôÔÚ´Ë·¶Î§ÄÚÃ»ÓÐÎ´±»Õ¼¾ÝµÄ¿Õ¼ä£¬ÔòÄã»á³öÏÖÔÚ×î½üµÄÎ´±»Õ¼¾ÝµÄ¿Õ¼äÖ®ÖÐ</P>
-<H4 id="Call_Lightning">ÕÙÀ×Êõ£üCall Lightning</H4>
-<P><EM>Èý»· Öä·¨£¨µÂÂ³ÒÁ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>120 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 10 ·ÖÖÓ<BR>Ò»¶ä·ç±©ÔÆÔÚÊ©·¨¾àÀëÄÚÄãÉÏ·½¿É¼ûµÄÒ»µã³öÏÖ¡£·ç±©ÔÆ±íÏÖÎª¸ß10³ß¡¢°ë¾¶60³ßµÄ<U>Öù×´</U>ÐÎ×´¡£<BR>µ±ÄãÊ©Õ¹ÕâµÀ·¨ÊõÊ±£¬Ñ¡Ôñ·ç±©ÔÆÏÂ·½Äã¿É¼ûµÄÒ»µã¡£Ò»ÊøÉÁµç´ÓÔÆ¶ËÉäÏò¸Ãµã¡£Î»ÓÚ¸Ãµã5³ßÄÚµÄÉúÎï½øÐÐÒ»´ÎÃô½Ý»íÃâ¡£»íÃâÊ§°ÜÕßÊÜµ½3d10ÉÁµçÉËº¦£¬»íÃâ³É¹¦Ôò½öÊÜ°ëÊýÉËº¦¡£<BR>Ö±ÖÁ·¨Êõ½áÊøÇ°£¬Äã¶¼¿ÉÒÔÖ´ÐÐÒ»¸öÄ§·¨¶¯×÷ÒÔ´Ë·¨ÔÙ´Î½µÏÂÉÁµç£¬²¢Ö¸¶¨ÉÁµçÉäÏòÍ¬Ò»µã»òÁíÑ¡Ò»µã¡£<BR>ÈôÊ©·¨Ê±ÄãÉí´¦±©·çÓê»·¾³ÏÂµÄÊÒÍâ£¬Ôò¸Ã·¨ÊõÁîÄãµÃÒÔ¿ØÖÆ¿ÕÖÐµÄ·ç±©¶ø·Ç´´ÔìÒ»¶äÐÂµÄ·ç±©ÔÆ¡£ÔÚÕâÖÖ×´¿öÏÂ£¬·¨ÊõÉËº¦Ôö¼Ó1d10¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÉËº¦¾ÍÔö¼Ó 1d10¡£</P>
-<H4 id="Clairvoyance">Ó¥ÑÛÊõ£üClairvoyance</H4>
-<P><EM>Èý»· Ô¤ÑÔ£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>10 ·ÖÖÓ<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>1 Àï<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¼þ¼ÛÖµ100GP+µÄ·¨¾ß£ºÑ¡ÔññöÌýÔòÎªÒ»¸öÒÔÖé±¦×°ÊÎµÄºÅ½Ç£¬Ñ¡Ôñ¹Û²ìÔòÎªÒ»¿Å²£Á§ÑÛÖé£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 10 ·ÖÖÓ<BR>ÄãÔÚÊ©·¨¾àÀëÄÚÄ³´¦´´ÔìÒ»¸öÒþÐÎµÄ´«¸ÐÆ÷£¬¸Ã´¦¿ÉÒÔÊÇÄãÊìÏ¤µÄµØµã£¨ÄãÔøµ½·Ã¹ý»ò¿´¼û¹ýµÄµØ·½£©£¬Ò²¿ÉÒÔÊÇÄã²»ÊìÏ¤µÄÏÔÑÛ´¦£¨±ÈÈçÒ»ÉÈÃÅºó£¬¹Õ½ÇÎ»ÖÃ»òÊ÷ÁÖÀï£©¡£ÕâÒ»ÎÞÐÎÌåÇÒ²»ÊÜÉËº¦µÄ´«¸ÐÆ÷»áÔÚ·¨Êõ³ÖÐøÆÚ¼äÍ£ÁôÔÚ¸ÃµØ¡£<BR>Ê©Õ¹¸Ã·¨ÊõÊ±£¬Äã¿ÉÒÔÑ¡Ôñ½øÐÐ¹Û²ì»òÊÇñöÌý¡£Äã¿ÉÒÔÍ¨¹ý´«¸ÐÆ÷ÒÔËùÑ¡µÄ¸Ð¹Ù·½Ê½¸Ð²â£¬ÈçÍ¬Äã´¦ÔÚ´«¸ÐÆ÷ËùÔÚµÄ¿Õ¼ä¡£ÄãÄÜ¹»ÒÔÒ»¸ö¸½Ôù¶¯×÷ÔÚ¹Û²ìºÍñöÌýÖ®¼äÇÐ»»¡£<BR>¿ÉÒÔ¿´¼û´«¸ÐÆ÷µÄÉúÎï£¨ÀýÈçÒ»ÃûÉúÎïÊÜÒæÓÚ<U><EM>Ê¶ÆÆÒþÐÎSee Invisibility</EM></U>»ò<U>ÕæÊµÊÓ¾õ</U>Ê±£©»á¿´µ½´«¸ÐÆ÷ÊÇÒ»¸öÈ­Í·´óÐ¡µÄ·¢¹âÇòÌå¡£</P>
-<H4 id="Conjure_Animals">Öä»½ÊÞÈº£üConjure Animals</H4>
-<P><EM>Èý»· Öä·¨£¨µÂÂ³ÒÁ¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>60 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à10·ÖÖÓ<BR>Äã½«ÏÔÏÖÎªÓÄÁé°ãÐé»ÃµÄ<U>´óÐÍ</U>ÊÞÈºµÄ×ÔÈ»¾«»êÖä»½ÔÚÊ©·¨¾àÀëÄÚÒ»´¦Äã¿É¼ûµÄÎ´Õ¼¾Ý¿Õ¼äÖÐ¡£ÊÞÈºÔÚ³ÖÐøÊ±¼äÄÚÒ»Ö±´æÔÚ£¬²¢ÇÒÄã¿ÉÒÔÑ¡Ôñ¶¯Îï¾«»êµÄÐÎÌ¬¡ª¡ªÀýÈçÀÇÈº¡¢ÉßÈº»òÊÇÄñÈº¡£<BR>ÔÚÄãÎ»ÓÚÊÞÈº5³ßÄÚÆÚ¼ä£¬ÄãµÄÁ¦Á¿»íÃâ¼ì¶¨¾ßÓÐÓÅÊÆ¡£µ±ÄãÔÚÄãµÄ»ØºÏÒÆ¶¯Ê±£¬Äã¿ÉÒÔÁîÊÞÈºÒ²ÒÆ¶¯ÖÁ¶à30³ßµ½Ò»´¦Äã¿É¼ûµÄÎ´±»Õ¼¾ÝµÄ¿Õ¼äÖÐ¡£<BR>Ã¿µ±ÊÞÈºÔÚÒÆ¶¯ÖÐ½øÈëÁËÒ»ÃûÄã¿É¼ûµÄÉúÎï10³ßÄÚÊ±¡¢Ò»ÃûÄã¿É¼ûµÄÉúÎï½øÈëÎ»ÓÚÊÞÈº10³ßÄÚµÄ¿Õ¼ä»òÊÇÔÚ¸Ã¿Õ¼ä½áÊøÆä»ØºÏÊ±£¬Äã¶¼¿ÉÒÔÆÈÊ¹¸ÃÉúÎï½øÐÐÒ»´ÎÃô½Ý»íÃâ¼ì¶¨¡£Ê§°ÜÔò¸ÃÉúÎïÊÜµ½3d10»Ó¿³ÉËº¦¡£Ò»ÃûÉúÎïÒ»»ØºÏÖ»ÐèÒª½øÐÐÒ»´Î¸Ã»íÃâ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>  Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÉËº¦¾ÍÔö¼Ó1d10¡£</P>
-<H4 id="Conjure_Barrage">¼ýÈçÓêÏÂ£üConjure Barrage</H4>
-<P><EM>Èý»· Öä·¨£¨ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»°Ñ¼ÛÖµ1+CPµÄ½üÕ½»òÔ¶³ÌÎäÆ÷£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>Äã»ÓÎè×÷ÎªÊ©·¨²ÄÁÏµÄÎäÆ÷£¬ÁîÎÞÊýÍâÐÎÏàËÆµÄÁéÌåÎäÆ÷£¨»òÊÇÊÊºÏÕâ°ÑÎäÆ÷µÄµ¯Ò©£©ÏÔÏÖ£¬ËüÃÇ½«ÏòÇ°Éä³ö²¢ÔÚÖ®ºóÏûÊ§¡£Ã¿ÃûÓÉÄãÑ¡ÔñÇÒÄã¿É¼ûµÄÎ»ÓÚ60³ß<U>×¶ÐÎ</U>ÇøÓòÄÚµÄÉúÎï½øÐÐÒ»´ÎÃô½Ý»íÃâ¼ì¶¨£¬»íÃâÊ§°ÜÕß½«ÊÜµ½5d8µãÁ¦³¡ÉËº¦£¬»íÃâ³É¹¦ÔòÖ»ÊÜÒ»°ëÉËº¦¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÉËº¦¾ÍÔö¼Ó1d8¡£</P>
-<H4 id="Counterspell">·¨Êõ·´ÖÆ£üCounterspell</H4>
-<P><EM>Èý»· ·À»¤£¨ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>·´Ó¦£¬µ±Äã¿´¼û60³ßÄÚÒ»ÃûÉúÎïÊ©Õ¹Ò»µÀ¾ßÓÐÑÔÓï¡¢×ËÊÆ»ò²ÄÁÏ³É·ÖµÄ·¨ÊõÊ±¿ÉÓÃ<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>60³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>ÄãÊÔÍ¼´ò¶ÏÒ»ÃûÕýÔÚÊ©·¨µÄÉúÎï¡£¸ÃÉúÎï½øÐÐÒ»´ÎÌåÖÊ»íÃâ¡£»íÃâÊ§°ÜÔò·¨ÊõÏûÉ¢ÇÒºÁÎÞÐ§¹û£¬²¢ÇÒÓÃÓÚÊ©Õ¹·¨ÊõµÄ¶¯×÷¡¢¸½Ôù¶¯×÷»ò·´Ó¦ËæÖ®ÀË·Ñ¡£Èç¹ûÄÇµÀ·¨ÊõÊÇÊ¹ÓÃ·¨ÊõÎ»Ê©Õ¹µÄ£¬Ôò·¨ÊõÎ»²¢²»»á±»ÏûºÄ¡£</P>
-<H4 id="Create_Food_and_Water">ÔìÁ¸Êõ£üCreate Food and Water</H4>
-<P><EM>Èý»· Öä·¨£¨ÄÁÊ¦¡¢Ê¥ÎäÊ¿£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>30³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>ÄãÔÚÊ©·¨¾àÀëÄÚµÄµØÃæÉÏ»òÈÝÆ÷ÖÐ´´Ôì45°õÊ³ÎïºÍ30¼ÓÂØµ­Ë®£¬¸Ã·¨Êõ´´ÔìµÄÊ³ÎïºÍË®¾ù¿ÉÓÃÓÚ±ÜÃâ<U>¼¢¶ö</U>ºÍ<U>ÍÑË®</U> µÄÎ£º¦¡£Ê³ÎïÎ¶µÀ¹Ñµ­È´ÓªÑø·á¸»£¬²¢ÇÒ¿´ÆðÀ´ÏñÒ»ÖÖÄãÑ¡ÔñµÄÊ³Îï£¬Ë®Ò²ÊÇ¸É¾»µÄ¡£Ê³Îï24Ð¡Ê±ÄÚÎ´±»Ê³ÓÃ¼´»á±ä»µ¡£</P>
-<H4 id="Crusader's_Mantle">Ê®×Ö¾üÅû·ç£üCrusader's Mantle</H4>
-<P><EM>Èý»· ËÜÄÜ£¨Ê¥ÎäÊ¿£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>ÄãÔÚ30³ß<U>¹â»·</U>ÇøÓòÄÚÉ¢·¢³öÄ§·¨Áé¹â¡£Î»ÓÚÁé¹â·¶Î§ÆÚ¼ä£¬ÄãºÍÄãÃËÓÑÒÔÒ»°ÑÎäÆ÷»òÒ»´ÎÍ½ÊÖ´ò»÷ÃüÖÐÊ±½«¶îÍâÔì³É1d4¹âÒ«ÉËº¦¡£</P>
-<H4 id="Daylight">ÖçÃ÷Êõ£üDaylight</H4>
-<P><EM>Èý»· ËÜÄÜ£¨ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢Ê¥ÎäÊ¿¡¢ÓÎÏÀ¡¢ÊõÊ¿£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>60³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1Ð¡Ê±<BR>·¨Êõ³ÖÐøÊ±¼äÄÚ£¬ÈÕ¹â´ÓÊ©·¨¾àÀëÄÚÒ»µã·¢É¢¶ø³ö£¬³ä³âÒ»¸ö60³ß°ë¾¶µÄÇò×´ÇøÓò¡£ÈÕ¹âÇøÓòÊÓÎª<U>Ã÷ÁÁ¹âÕÕ</U>£¬ÇÒ»áÔÙ¶îÍâÉ¢·¢³ö60³ß<U>Î¢¹â¹âÕÕ</U>¡£<BR>»òÕß£¬Äã¿ÉÒÔ½«´Ë·¨ÊõÊ©Õ¹ÓÚÒ»¸öÎ´±»×Å×°»òÐ¯´øµÄÎï¼þÉÏ£¬Ê¹ÈÕ¹â³ä³âÒÔ¸ÃÎï¼þÎªÖÐÐÄµÄ60³ß¹â»·ÇøÓò¡£½«¸ÃÎï¼þÓÃ²»Í¸Ã÷µÄ¶«Î÷ÕÚÑÚ£¨±ÈÈçÓÃÍë»òÍ·¿ø¸Ç×¡£©Ê±£¬»á½«ÈÕ¹â¸ô¾ø¡£<BR>Èç¹û·¨ÊõÇøÓòÓëÈÎºÎÈý»·»ò¸üµÍ»·½×·¨Êõ´´ÔìµÄ<U>ºÚ°µ</U> ÇøÓòÖØµþ£¬ÔòÕâÐ©Ôì°µµÄ·¨Êõ½«±»½â³ý¡£</P>
+	<H4 id="Animate_Dead">ï¿½î»¯ï¿½ï¿½Ê¬ï¿½ï¿½Animate Dead</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1 ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>10
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½Ñªï¿½ï¿½Ò»ï¿½ï¿½ï¿½â¡¢ï¿½Ô¼ï¿½Ò»ï¿½ï¿½Ç»Ò£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹Ç»ï¿½ï¿½ï¿½ï¿½å¡£Ä¿ï¿½ê½«ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£ºï¿½Å¹Ç±ï¿½Îª<STRONG><U>ï¿½ï¿½ï¿½ï¿½Skeleton</U></STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª<STRONG><U>É¥Ê¬Zombie</U></STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½Â¼Bï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Øºï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½ï¿½ï¿½
+		60
+		ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½Ã´Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ö»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½Í¬Ò»ï¿½ï¿½ï¿½î£©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â»Øºï¿½Ö´ï¿½ÐµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Â´ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¨ï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï½«Ö´ï¿½ï¿½<U>ï¿½Ø±ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Îªï¿½ï¿½ï¿½Î£ï¿½Õ¶ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¡ï¿½<BR>ï¿½ï¿½Ð©ï¿½Ü²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½
+		24Ð¡Ê±ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ï¿½î¡£ï¿½ï¿½ï¿½ï¿½ï¿½ë½«ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½24Ð¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ç°24Ð¡Ê±ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°ï¿½Ù´Î¶ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ã·ï¿½Ö»ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ê¹ï¿½Ã´Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½á´´ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¡£<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¶à»½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½Í¬Ò»ï¿½ßºï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½å»½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£
+	</P>
+	<H4 id="Aura_of_Vitality">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aura of Vitality</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>V<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		1 ï¿½ï¿½ï¿½ï¿½<BR>Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³ï¿½30ï¿½ß°ë¾¶ï¿½ï¿½<U>ï¿½â»·</U>
+		ï¿½ï¿½ï¿½ï¿½ï¿½ã´´ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ØºÏ¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½2d6ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½</P>
+	<H4 id="Beacon_of_Hope">Ï£ï¿½ï¿½ï¿½Å±ï¿½ï¿½Beacon of Hope</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>30ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ÐµÄ¸ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Öµï¿½ï¿½
+	</P>
+	<H4 id="Bestow_Curse">ï¿½ï¿½ï¿½ï¿½ï¿½Bestow Curse</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ã´¥ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â²¢ï¿½É¹ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ä¡£Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ð§Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
+	</P>
+	<UL>
+		<LI>
+			<DIV>Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½Ä¿ï¿½ï¿½Ê¹ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ô¼ì¶¨ï¿½Í»ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½</DIV>
+		<LI>
+			<DIV>Ä¿ï¿½ï¿½ï¿½ï¿½ã·¢ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½</DIV>
+		<LI>
+			<DIV>ï¿½ï¿½Õ½ï¿½ï¿½ï¿½Ð£ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ØºÏ¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸Ã»Øºï¿½ï¿½Ð±ï¿½ï¿½ï¿½Ö´ï¿½ï¿½<U>ï¿½Ø±ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</DIV>
+		<LI>
+			<DIV>ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê»¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½1d8ï¿½ï¿½Ê´ï¿½Ëºï¿½ï¿½ï¿½</DIV>
+		</LI>
+	</UL>
+	<P><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½Î»Ê©Õ¹ï¿½Ë·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¬ï¿½Ö´Ë·ï¿½ï¿½ï¿½ï¿½ï¿½×¨×¢ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½Ó¡ï¿½Ê¹ï¿½ï¿½ï¿½å»·ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½ï¿½×µÄ·ï¿½ï¿½ï¿½Î»Ê©Õ¹ï¿½Ë·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Îª8Ð¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½24Ð¡Ê±ï¿½ï¿½ï¿½ß»ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¾Å»ï¿½ï¿½ï¿½ï¿½ï¿½Î»Ê©Õ¹ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÖ¹ï¿½ï¿½
+	</P>
+	<H4 id="Blinding_Smite">ï¿½ï¿½Ã¤Õ¶ï¿½ï¿½Blinding Smite</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>V<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Ã´Î¹ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½Ðµï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ú´Ë´Î¹ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Üµï¿½3d8ï¿½ï¿½ï¿½Ò«ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>Ä¿Ã¤</U>×´Ì¬Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>Ä¿Ã¤</U>ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ØºÏ½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>ï¿½ï¿½Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½1d8ï¿½ï¿½
+	</P>
+	<H4 id="Blink">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Blink</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ò»ï¿½ï¿½d6ï¿½ï¿½ï¿½ï¿½ï¿½Îª4~6Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<STRONG>ï¿½ï¿½Ì«Î»ï¿½ï¿½Ethereal
+			Plane</STRONG>
+		ï¿½ï¿½ï¿½ï¿½ï¿½ã±¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«Î»ï¿½æ£¬ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«Î»ï¿½ï¿½ï¿½Ú¼ä£¬ï¿½ï¿½ï¿½ï¿½Ô¹Û²âµ½ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªÎ»ï¿½ï¿½ÄºÚ°ï¿½Ó°ï¿½ñ£¬µï¿½Ö»ï¿½ï¿½ï¿½ï¿½60ï¿½ï¿½Ö®ï¿½Ú¡ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ì¡£ï¿½ï¿½ï¿½Ò´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½Û²âµ½ï¿½ï¿½Ì«Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½Í¬ï¿½ï¿½ï¿½Þ·ï¿½ï¿½Û²âµ½ï¿½ã¡£<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ØºÏ¿ï¿½Ê¼Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½æ£»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½Ö¹Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«Î»ï¿½æ£¬ï¿½ï¿½Í¬ï¿½ï¿½ï¿½á·µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½æ¡£ï¿½ã·µï¿½ï¿½Ô­ï¿½ï¿½Î»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½Î»ï¿½ï¿½10ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ï¿½Ö®ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ú´Ë·ï¿½Î§ï¿½ï¿½Ã»ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ï¿½Ö®ï¿½ï¿½
+	</P>
+	<H4 id="Call_Lightning">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Call Lightning</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>120
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 10
+		ï¿½ï¿½ï¿½ï¿½<BR>Ò»ï¿½ï¿½ç±©ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½É¼ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ç±©ï¿½Æ±ï¿½ï¿½ï¿½Îªï¿½ï¿½10ï¿½ß¡ï¿½ï¿½ë¾¶60ï¿½ßµï¿½<U>ï¿½ï¿½×´</U>ï¿½ï¿½×´ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ñ¡ï¿½ï¿½ç±©ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Ò»ï¿½ã¡£Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ãµã¡£Î»ï¿½Ú¸Ãµï¿½5ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½3d10ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR>Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ã¶¼ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½Ò»ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë·ï¿½ï¿½Ù´Î½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡Ò»ï¿½ã¡£<BR>ï¿½ï¿½Ê©ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê»·ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½Æ¿ï¿½ï¿½ÐµÄ·ç±©ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÂµÄ·ç±©ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½1d10ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		1d10ï¿½ï¿½</P>
+	<H4 id="Clairvoyance">Ó¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Clairvoyance</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ Ô¤ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>10 ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>1
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Öµ100GP+ï¿½Ä·ï¿½ï¿½ß£ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½é±¦×°ï¿½ÎµÄºÅ½Ç£ï¿½Ñ¡ï¿½ï¿½Û²ï¿½ï¿½ï¿½ÎªÒ»ï¿½Å²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£©<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		10
+		ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ÎµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¤ï¿½ÄµØµã£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ò¿´¼ï¿½ï¿½ï¿½ï¿½ÄµØ·ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²»ï¿½ï¿½Ï¤ï¿½ï¿½ï¿½ï¿½ï¿½Û´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Åºó£¬¹Õ½ï¿½Î»ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£©ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½Í£ï¿½ï¿½ï¿½Ú¸ÃµØ¡ï¿½<BR>Ê©Õ¹ï¿½Ã·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ð¹Û²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½Ä¸Ð¹Ù·ï¿½Ê½ï¿½Ð²â£¬ï¿½ï¿½Í¬ï¿½ã´¦ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÚµÄ¿Õ¼ä¡£ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹Û²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¨ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U><EM>Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½See
+				Invisibility</EM></U>ï¿½ï¿½<U>ï¿½ï¿½Êµï¿½Ó¾ï¿½</U>Ê±ï¿½ï¿½ï¿½á¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½È­Í·ï¿½ï¿½Ð¡ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¡£</P>
+	<H4 id="Conjure_Animals">ï¿½ä»½ï¿½ï¿½Èºï¿½ï¿½Conjure Animals</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>60
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ã½«ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½Èºï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ä»½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î´Õ¼ï¿½Ý¿Õ¼ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Èºï¿½Ú³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ò»Ö±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¾«ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Èº5ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»Øºï¿½ï¿½Æ¶ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÈºÒ²ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½30ï¿½ßµï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ï¿½ï¿½Ð¡ï¿½<BR>Ã¿ï¿½ï¿½ï¿½ï¿½Èºï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Èº10ï¿½ï¿½ï¿½ÚµÄ¿Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸Ã¿Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øºï¿½Ê±ï¿½ï¿½ï¿½ã¶¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½3d10ï¿½Ó¿ï¿½ï¿½Ëºï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Øºï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸Ã»ï¿½ï¿½â¡£<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>
+		Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d10ï¿½ï¿½</P>
+	<H4 id="Conjure_Barrage">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½Conjure Barrage</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½Ñ¼ï¿½Öµ1+CPï¿½Ä½ï¿½Õ½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÊ©ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ò©ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î»ï¿½ï¿½60ï¿½ï¿½<U>×¶ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½Üµï¿½5d8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d8ï¿½ï¿½
+	</P>
+	<H4 id="Counterspell">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½Counterspell</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ã¿´ï¿½ï¿½60ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¡¢ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½Ï³É·ÖµÄ·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>60ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¢ï¿½Òºï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ö®ï¿½Ë·Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã·ï¿½ï¿½ï¿½Î»Ê©Õ¹ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½Ä¡ï¿½
+	</P>
+	<H4 id="Create_Food_and_Water">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Create Food and Water</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>30ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÚµÄµï¿½ï¿½ï¿½ï¿½Ï»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½45ï¿½ï¿½Ê³ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½Øµï¿½Ë®ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê³ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½Ë®</U>
+		ï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½Ê³ï¿½ï¿½Î¶ï¿½ï¿½ï¿½Ñµï¿½È´Óªï¿½ï¿½ï¿½á¸»ï¿½ï¿½ï¿½ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ê³ï¿½ï£¬Ë®Ò²ï¿½Ç¸É¾ï¿½ï¿½Ä¡ï¿½Ê³ï¿½ï¿½24Ð¡Ê±ï¿½ï¿½Î´ï¿½ï¿½Ê³ï¿½Ã¼ï¿½ï¿½ï¿½ä»µï¿½ï¿½</P>
+	<H4 id="Crusader's_Mantle">Ê®ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Crusader's Mantle</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>V<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½30ï¿½ï¿½<U>ï¿½â»·</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¢ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½â¡£Î»ï¿½ï¿½ï¿½ï¿½â·¶Î§ï¿½Ú¼ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Í½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d4ï¿½ï¿½Ò«ï¿½Ëºï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Daylight">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Daylight</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>60ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Õ¹ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã·¢É¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½60ï¿½ß°ë¾¶ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª<U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½É¢ï¿½ï¿½ï¿½ï¿½60ï¿½ï¿½<U>Î¢ï¿½ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ò»ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½Ð¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½Ê¹ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Äµï¿½60ï¿½ß¹â»·ï¿½ï¿½ï¿½ò¡£½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½Í¸ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½×¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½á½«ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½Ú°ï¿½</U>
+		ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ì°µï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</P>
 
-<H4 id="Dispel_Magic">½â³ýÄ§·¨£üDispel Magic</H4>
-<P><EM>Èý»· ·À»¤£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢Ê¥ÎäÊ¿¡¢ÓÎÏÀ¡¢ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>120³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>ÔÚÊ©·¨¾àÀëÄÚÖ¸¶¨Ò»ÃûÉúÎï¡¢Ò»¸öÎï¼þ»òÒ»´¦Ä§·¨Ð§Ó¦¡£ËùÓÐÓ°Ïì¸ÃÄ¿±êµÄÈý»·»ò¸üµÍ»·½×·¨Êõ¼´¸æÖÕÖ¹¡£Ã¿¸öÓ°ÏìÄ¿±êµÄËÄ»·»ò¸ü¸ß»·½×·¨Êõ¶¼ÐèÒªÒÔÄãµÄÊ©·¨ÊôÐÔ½øÐÐÒ»´ÎÊôÐÔ¼ì¶¨£¨DC 
-10+Ä¿±ê·¨Êõ»·½×£©£¬¼ì¶¨³É¹¦Ê±Ä¿±ê·¨ÊõÖÕÖ¹¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>ÄãÖ±½ÓÖÕÖ¹Ó°ÏìÄ¿±êµÄÐ¡ÓÚµÈÓÚ¸ÃÊ©·¨»·½×µÄ·¨ÊõÐ§Ó¦¡£</P>
-<H4 id="Elemental_Weapon">ÔªËØÎäÆ÷£üElemental Weapon</H4>
-<P><EM>Èý»· ±ä»¯£¨µÂÂ³ÒÁ¡¢Ê¥ÎäÊ¿¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1Ð¡Ê±<BR>Äã´¥ÅöµÄÒ»°Ñ·ÇÄ§·¨ÎäÆ÷±ä³ÉÄ§·¨ÎäÆ÷¡£Ñ¡ÔñÏÂÊöÉËº¦ÀàÐÍÖ®Ò»£ºÇ¿Ëá¡¢º®Àä¡¢»ðÑæ¡¢ÉÁµç¡¢À×Ãù¡£·¨Êõ³ÖÐøÊ±¼äÄÚ£¬ÓÃÄÇ°ÑÎäÆ÷·¢¶¯µÄ¹¥»÷¼ì¶¨¾ßÓÐ+1¼ÓÖµ£¬ÇÒÔÚÃüÖÐÊ±Ôì³É¶îÍâ1d4µãÄãËùÑ¡ÉËº¦ÀàÐÍµÄÉËº¦¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃÎå»·»òÁù»··¨ÊõÎ»Ê±£¬¹¥»÷¼ì¶¨µÄ¼ÓÖµ±äÎª+2£¬¶îÍâÉËº¦±äÎª2d4¡£Ê¹ÓÃÆß»·»ò¸ü¸ß·¨ÊõÎ»Ê±£¬¹¥»÷¼ì¶¨µÄ¼ÓÖµ±äÎª+3£¬¶îÍâÉËº¦±äÎª3d4¡£</P>
-<H4 id="Fear">¿Ö¾åÊõ£üFear</H4>
-<P><EM>Èý»· »ÃÊõ£¨Ò÷ÓÎÊ«ÈË¡¢ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¸ù°×ÓðÃ«£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>30³ß<U>×¶×´</U>ÇøÓòÄÚµÄËùÓÐÉúÎï±ØÐëÍ¨¹ýÒ»´Î¸ÐÖª»íÃâ£¬»íÃâÊ§°ÜÕß½«¶ªÆúÆäËùÓÐ³ÖÎÕÎï£¬²¢ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚÏÝÈë<U>¿Ö»Å</U>×´Ì¬¡£<BR>ÒÔ´Ë·¨±»<U>¿Ö»Å</U>µÄÉúÎï±ØÐëÔÚ×Ô¼º»ØºÏÖÐÖ´ÐÐ<U>¼²×ß</U>¶¯×÷£¬²¢ÒÔ´ËÑ°ÕÒ×î°²È«µÄÂ·ÏßÔ¶ÀëÄã£¬Ö±ÖÁÆäÎÞÂ·¿É×ßÎªÖ¹¡£Èç¹û¸ÃÉúÎï½áÊøÆä»ØºÏÊ±Î»ÓÚÒ»´¦Ê¹ÆäÊÓ¾õÏßÖÐÃ»ÓÐÄãµÄ¿Õ¼ä£¬ÔòÆä¿ÉÒÔÔÙ½øÐÐÒ»´Î¸ÐÖª»íÃâ£¬»íÃâ³É¹¦Ôò·¨Êõ¶Ô¸ÃÉúÎïµÄÐ§Ó¦ÖÕÖ¹¡£</P>
-<H4 id="Feign_Death">¼ÙËÀÊõ£üFeign Death</H4>
-<P><EM>Èý»· ËÀÁé£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷»òÒÇÊ½<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»´éÄ¹ÍÁ£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1Ð¡Ê±<BR>Äã´¥ÅöÒ»Ãû×ÔÔ¸ÉúÎï²¢½«Æä±äµÃÈçËÀÕß°ãµÄ½©Ö±¡£<BR>ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ£¬¶ÔÄ¿±ê½øÐÐµÄÈÎºÎÈâÌå¼ì²éºÍ·¨Êõ¼ì²â¶¼ÏÔÊ¾Ä¿±êÒÑËÀÍö¡£¸Ã×´¿öÏÂµÄÄ¿±êÏÝÈë<U>Ä¿Ã¤</U>ÒÔ¼°<U>Ê§ÄÜ</U>×´Ì¬£¬ÇÒÆäËÙ¶È½µÖÁ0¡£<BR>Ä¿±ê¶Ô³ýÁËÐÄÁéÉËº¦ÍâµÄËùÓÐÉËº¦ÀàÐÍ¾ßÓÐ¿¹ÐÔ£¬Ò²ÃâÒßÖÐ¶¾×´Ì¬¡£</P>
-<H4 id="Fireball">»ðÇòÊõ£üFireball</H4>
-<P><EM>Èý»· ËÜÄÜ£¨ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>150³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¿Åòùòð·àºÍÁò»Ç´ê³ÉµÄÐ¡Çò£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>Ã÷ÁÁµÄÉÁ¹â´ÓÄãµÄÖ¸¼ä·É³ÛÏòÊ©·¨¾àÀëÄÚÄãÖ¸¶¨µÄÒ»µã£¬²¢Ëæ×ÅÒ»ÉùµÍºð±Å³ÉÒ»Æ¬ÁÒÑæ¡£Ä¿±êµãÖÜÎ§°ë¾¶20³ß<U>Çò×´</U>ÇøÓòÄÚµÄÃ¿¸öÉúÎï±ØÐë½øÐÐÒ»´ÎÃô½Ý»íÃâ¡£»íÃâÊ§°ÜÕß½«ÊÜµ½8d6µã»ðÑæÉËº¦£¬»íÃâ³É¹¦ÔòÉËº¦¼õ°ë¡£<BR>ÇøÓòÄÚËùÓÐÎ´±»×Å×°»òÐ¯´øµÄ¿ÉÈ¼Îï¼þ»á¿ªÊ¼È¼ÉÕ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´ËÉËº¦¾ÍÔö¼Ó1d6¡£</P>
-<H4 id="Fly">·ÉÐÐÊõ£üFly</H4>
-<P><EM>Èý»· ±ä»¯£¨ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¸ùÓðÃ«£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à10·ÖÖÓ<BR>Äã´¥ÅöÒ»¸ö×ÔÔ¸ÉúÎï¡£Ä¿±êÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ»ñµÃ60³ßµÄ·ÉÐÐËÙ¶ÈÇÒ¿ÉÒÔÐü¸¡¡£·¨ÊõÖÕÖ¹Ê±£¬Èç¹ûÄ¿±êÈÔÔÚ¿ÕÖÐ£¬·ñÔòÆäËæ¼´×¹Âä£¬³ý·ÇÆäÓÐ°ì·¨×èÖ¹×¹Âä¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬Äã¾Í¿ÉÒÔ¶îÍâÔÙÖ¸¶¨Ò»ÃûÉúÎï×÷Îª·¨ÊõÄ¿±ê¡£</P>
-<H4 id="Gaseous_Form">Æø»¯ÐÎÌå£üGaseous Form</H4>
-<P><EM>Èý»· ±ä»¯£¨ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»Ð¡¿éÉ´²¼£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1Ð¡Ê±<BR>ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ£¬Äã½«´¥Åöµ½µÄÒ»Ãû×ÔÔ¸ÉúÎïÁ¬Í¬Æä´©×ÅÐ¯´øÎïÒ»Æð×ª»¯ÎªÒ»ÍÅÔÆÎí¡£Èç¹ûÄ¿±êµÄÉúÃüÖµ½µÖÁ0»òÆäÓÃÒ»¸ö<U>Ä§·¨</U>¶¯×÷ÖÕÖ¹ÆäÉíÉÏµÄ·¨ÊõÐ§Ó¦£¬Ôò¸ÃÄ¿±êÉíÉÏµÄ·¨ÊõÖÕÖ¹¡£<BR>ÔÚ¸ÃÐÎÌ¬ÏÂ£¬Ä¿±êÎ¨Ò»µÄÒÆ¶¯·½Ê½¼´ÊÇ10³ßµÄ·ÉÐÐËÙ¶È£¬ÇÒ¿ÉÒÔÐü¸¡¡£¸ÃÄ¿±ê¿ÉÒÔ½øÈë²¢Õ¼¾ÝÒ»¸öÒÑÓÐÉúÎïÕ¼¾ÝµÄ¿Õ¼ä¡£ÆäÓµÓÐ¶Û»÷¡¢´©´ÌºÍ»Ó¿³ÉËº¦µÄ¿¹ÐÔ£¬Æä¶Ôµ¹µØ×´Ì¬ÃâÒß£¬ÇÒ½øÐÐµÄÁ¦Á¿¡¢Ãô½Ý¡¢ÌåÖÊ»íÃâ¾ßÓÐ<U>ÓÅÊÆ</U>¡£¸ÃÄ¿±ê¿ÉÒÔ´©¹ýÏÁÏ¶£¬µ«»á½«ÒºÌ¬ÎïÖÊÊÓÎª¹ÌÌå±íÃæ¡£<BR>ÔÆÎíÐÎÌ¬µÄÄ¿±ê²»ÄÜ½²»°»ò²Ù×÷Îï¼þ£¬ÆäËæÉíÐ¯´ø»ò³ÖÎÕµÄÎï¼þ²»»áµôÂä£¬Ò²²»ÄÜ±»Ê¹ÓÃ»òÓëÖ®»¥¶¯¡£ÁíÍâ£¬Ä¿±êÒ²²»ÄÜ¹¥»÷»òÊ©·¨¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬Äã¾Í¿ÉÒÔ¶îÍâÔÙÖ¸¶¨Ò»ÃûÉúÎï×÷Îª·¨ÊõÄ¿±ê¡£</P>
-<H4 id="Glyph_of_Warding">ÊØÎÀ¿ÌÎÆ£üGlyph of Warding</H4>
-<P><EM>Èý»· ·À»¤£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>1Ð¡Ê±<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨¼ÛÖµ200GP+µÄ×êÊ¯³¾£¬×÷Îª·¨ÊõºÄ²Ä£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Ö±µ½±»½â³ý»ò´¥·¢<BR>Ê©Õ¹¸Ã·¨ÊõÊ±£¬ÄãÔÚÄ³¸ö±íÃæ£¨ÖîÈç×ÀÃæ»òµØ°å£©»òÄ³¸öÄÜ±»¹Ø±ÕÒÔÒþ²Ø¿ÌÎÆµÄÎï¼þÀï£¨ÖîÈçÊé±¾»ò±¦Ïä£©¿Ì»­Ò»¸ö»áÊÍ·ÅÄ§·¨Ð§Ó¦µÄ¿ÌÎÆ¡£¸Ã¿ÌÎÆ¿ÉÒÔ¸²¸ÇÖ±¾¶²»³¬¹ý10³ßµÄÇøÓò¡£Èç¹ûÊÜÊõµÄÎï¼þ»ò±íÃæ´Ó±»Ê©·¨Î»ÖÃ±»ÒÆ¿ª³¬¹ý10³ß£¬ÔòÆä¿ÌÎÆ±»ÆÆ»µÇÒ·¨Êõ²»±»´¥·¢¼´¸æÖÕÖ¹¡£<BR>½á½ç¿ÌÎÆ½üºõ²»¿É²ì¾õ£¬ÆäÐèÒªÒÔÄãµÄ·¨Êõ»íÃâDC½øÐÐÒ»´Î³É¹¦µÄ¸ÐÖª£¨²ì¾õ£©¼ì¶¨²ÅÄÜ±»·¢ÏÖ¡£<BR>¿Ì»­¿ÌÎÆÊ±£¬Äã¿ÉÒÔÉè¶¨Æä´¥·¢Ìõ¼þ£¬²¢´Ó±¬Õ¨·ûÎÄºÍ·¨Êõ¿ÌÎÆÁ½ÕßÖÐÑ¡ÔñÆäÒ»¡£</P>
-<BLOCKQUOTE><P><STRONG>Éè¶¨´¥·¢Ìõ¼þSet the 
-  Trigger¡£</STRONG>ÄãÔÚÊ©·¨Ê±Éè¶¨½á½ç¿ÌÎÆµÄ´¥·¢Ìõ¼þ¡£¿Ì»­ÓÚ±íÃæµÄ¿ÌÎÆÆä×îµäÐÍµÄ´¥·¢Ìõ¼þ°üÀ¨£º´¥Åö»òÕ¾Á¢ÔÚ¿ÌÎÆÉÏ£»ÄÃµô¸²¸ÇÔÚ¿ÌÎÆÉÏµÄÎï¼þ£»½øÈë¿ÌÎÆÒ»¶¨·¶Î§¡£¿Ì»­ÔÚÎï¼þÄÚµÄ¿ÌÎÆÆä×îµäÐÍµÄ´¥·¢Ìõ¼þ°üÀ¨£º´ò¿ªÎï¼þ£»¿´µ½¸Ã¿ÌÎÆ¡£¿ÌÎÆÒ»µ©±»´¥·¢£¬Ôò¸Ã·¨ÊõÖÕÖ¹¡£<BR>Äã¿ÉÒÔ½øÒ»²½Ï¸»¯´¥·¢Ìõ¼þ£¬±ÈÈçÉè¶¨Ö»ÓÐÌØ¶¨ÉúÎïÖÖÀà£¨ÀýÈçÉè¶¨ÎªÖ»Ó°ÏìÒì¹ÖAberration£©²ÅÄÜ´¥·¢¿ÌÎÆ¡£Äã»¹¿ÉÒÔÎªÉúÎïÉèÖÃ²»´¥·¢¿ÌÎÆµÄÌõ¼þ£¬ÖîÈçÄ³ÈËËµ³öÌØ¶¨¿ÚÁî¡£<BR><STRONG>±¬Õ¨·ûÎÄExplosive Runes¡£</STRONG>·ûÎÄ±»´¥·¢Ê±½«ÔÚ°ë¾¶ 
-20³ßÇò×´ÇøÓòÄÚ±¬·¢Ä§·¨ÄÜÁ¿¡£ÇøÓòÄÚµÄÃ¿¸öÉúÎï±ØÐë½øÐÐÒ»´ÎÃô½Ý»íÃâ¡£»íÃâÊ§°ÜÕß½«ÊÜµ½5d8µãÇ¿Ëá£¬º®Àä£¬»ðÑæ£¬ÉÁµç£¬»òÀ×ÃùÉËº¦£¨ÄãÔÚÖÆÔì¿ÌÎÆÊ±Ö¸¶¨£©£¬»íÃâ³É¹¦ÔòÉËº¦¼õ°ë¡£<BR><STRONG>·¨Êõ¿ÌÎÆSpell 
-  Glyph¡£</STRONG>×÷Îª´´Ôì·ûÎÄµÄÒ»²¿·Ö£¬Äã¿ÉÒÔÊ©Õ¹Ò»µÀÒÑ×¼±¸µÄÈý»·»ò¸üµÍ»·½×·¨Êõ£¬²¢½«Æä´¢±¸ÔÚËù´´ÔìµÄ¿ÌÎÆÖÐ¡£Ëù´¢±¸·¨Êõ±ØÐëÒÔµ¥Ò»ÉúÎï»òÒ»¸öÇøÓòÎªÄ¿±ê£¬¶ø±»´¢´æµÄ·¨ÊõÒÔ¸Ã·½Ê½Ê©Õ¹Ê±²¢²»»áÁ¢¼´ÉúÐ§¡£<BR>·ûÎÄ±»´¥·¢Ê±£¬Ëù´¢±¸µÄ·¨Êõ¼´¿ÌÉúÐ§¡£Èç¹û·¨ÊõÓÐÒ»¸öÄ¿±ê£¬ÔòÒÔ´¥·¢¿ÌÎÆµÄÉúÎïÎªÄ¿±ê£»Èç¹û·¨ÊõÓ°ÏìÒ»¸öÇøÓò£¬Ôò¸ÃÇøÓòÒÔ´ËÉúÎïÎªÖÐÐÄ£»Èç¹û·¨ÊõÕÙ»½µÐ¶ÔHostileÉúÎï»ò´´ÔìÉËº¦ÐÔÖÊµÄÎï¼þ»òÏÝÚå£¬ÔòÕâÐ©ÔìÎï½«ÏÔÏÖÔÚ¾¡¿ÉÄÜ¿¿½ü´¥·¢ÕßµÄµØ·½²¢¹¥»÷Ëü¡£Èç¹û·¨ÊõÐèÒª×¨×¢£¬ÔòÆäÐ§Ó¦½«ÔÚÆä×î´ó³ÖÐøÊ±¼äÄÚÎ¬³Ö¡£
-</P></BLOCKQUOTE>
-<P><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄ±¬Õ¨·ûÎÄµÄÉËº¦¾ÍÔö¼Ó1d8¡£Èç¹ûÄã´´ÔìÒ»¸ö·¨Êõ¿ÌÎÆ£¬ÔòÆä´¢±¸·¨ÊõµÄ»·½×ÖÁ¸ß¿ÉÒÔÓëÄãÊ©Õ¹ÊØÎÀ¿ÌÎÄÊ±Ê¹ÓÃµÄ·¨ÊõÎ»»·½×ÏàÍ¬¡£</P>
-<H4 id="Haste">¼ÓËÙÊõ£üHaste</H4>
-<P><EM>Èý»· ±ä»¯£¨ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>30³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»Æ¬¸Ê²Ý¸ùÇÐÆ¬£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>Ö¸¶¨Ê©·¨¾àÀëÄÚÒ»¸öÄãÄÜ¿´¼ûµÄ×ÔÔ¸ÉúÎï¡£Ö±ÖÁ·¨ÊõÖÕÖ¹Ç°£¬Ä¿±êËÙ¶È·­±¶£»ÆäAC»ñµÃ+2¼ÓÖµ£»Æä½øÐÐÃô½Ý»íÃâÊ±¾ßÓÐÓÅÊÆ£»ÆäÃ¿¸ö»ØºÏ¶¼¿É×÷³öÒ»¸ö¶îÍâµÄ¶¯×÷£¬µ«¸Ã¶¯×÷Ö»ÄÜÓÃÓÚÖ´ÐÐ<U>¹¥»÷</U>¶¯×÷£¨½öÒ»´Î¹¥»÷£©£¬»òÕß<U>¼²×ß</U>¡¢<U>³·Àë</U>¡¢<U>¶ã²Ø</U>ºÍ<U>²Ù×÷</U>¶¯×÷¡£<BR>·¨ÊõÖÕÖ¹Ê±£¬Ä¿±ê½«·ºÆðÒ»Õó¾ëÒâÊ¹Æä<U>Ê§ÄÜ</U>²¢ÇÒËÙ¶ÈÎª0£¬³ÖÐøÖÁÆäÏÂÒ»»ØºÏ½áÊø¡£</P>
-<H4 id="Hunger_of_Hadar">¹þ´ïÖ®Óû£üHunger of Hadar</H4>
-<P><EM>Èý»· Öä·¨£¨Ä§ÆõÊ¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>150³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»ÌõËáÏ´¹ýµÄ´¥Ðë£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>Äã´ò¿ªÁËÍ¨ÍùÒ£Ô¶¹ú¶ÈµÄ´óÃÅ£¬Õ¹ÏÖÆäÖÐÄÑÒÔÃû×´µÄ¿Ö²À¡£ÒÔÊ©·¨¾àÀëÄÚÒ»µãÎªÖÐÐÄ£¬Ò»¸ö°ë¾¶ 20 
-³ßµÄºÚ°µÇò×´ÇøÓòÏÔÏÖ²¢³ÖÐøÖÁ¸Ã·¨ÊõÖÕÖ¹¡£Õâ¸öÇò×´ÇøÓòÊÇÀ§ÄÑµØÐÎ£¬²¢Í¬Ê±·¢É¢×ÅÄÜÔÚ30³ßÄÚÌýµ½µÄ²»Ð³¶úÓïºÍà¨½ÀÔëÒô¡£ÈÎºÎ¹âÕÕ£¬ÎÞÂÛÊÇÄ§·¨¹âÕÕ»¹ÊÇÆäËû¹âÕÕ¶¼ÎÞ·¨ÕÕÁÁÕâ¸öÇøÓò£¬¶øÍêÈ«½øÈë¸ÃÇøÓòÄÚµÄÉúÎï½«ÏÝÈë<U>Ä¿Ã¤</U>×´Ì¬¡£<BR>ÈÎºÎÔÚÇøÓòÄÚ¿ªÊ¼Æä»ØºÏµÄÉúÎï½«ÊÜµ½ 
-2d6 
-µãº®ÀäÉËº¦¡£ÈÎºÎÔÚÇøÓòÄÚ½áÊøÆä»ØºÏµÄÉúÎï±ØÐë½øÐÐÒ»´ÎÃô½Ý»íÃâ£¬»íÃâÊ§°ÜÕß½«ÒòÒì½çÈíÌå´¥ÊÖµÄ´¥Åö¶øÊÜµ½2d6µãÇ¿ËáÉËº¦¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõÔì³ÉµÄº®Àä»òÕßÇ¿ËáÉËº¦£¨ÓÉÄãÑ¡Ôñ£©¾ÍÔö¼Ó1d6¡£</P>
-<H4 id="Hypnotic_Pattern">´ßÃßÍ¼ÎÆ£üHypnotic Pattern</H4>
-<P><EM>Èý»· »ÃÊõ£¨Ò÷ÓÎÊ«ÈË¡¢ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>120³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>S¡¢M£¨Ò»´éÎå²ÊÖ½Ð¼£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>ÄãÔÚÊ©·¨¾àÀëÄÚÒ»´¦±ß³¤ 30 
-³ßµÄÁ¢·½ÇøÓòÄÚ´´Ôì³öÒ»¸öÔÚ¿ÕÖÐÎè¶¯Ðý×ªµÄ²ÊÉ«Í¼ÎÆ¡£Í¼ÎÆÔÚ³öÏÖÆ¬¿ÌºóÏûÊ§£¬È»ºóÆÈÊ¹ÇøÓòÄÚÃ¿¸ö¿´µ½ËüµÄÉúÎï½øÐÐÒ»´Î¸ÐÖª»íÃâ£¬»íÃâÊ§°ÜÕß½«ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚÏÝÈë÷È»ó×´Ì¬¡£ÔÚ±»¸Ã·¨Êõ<U>÷È»ó</U>ÆÚ¼ä£¬±»¸Ã·¨Êõ÷È»óµÄÉúÎïÏÝÈë<U>Ê§ÄÜ</U>×´Ì¬£¬ÇÒËÙ¶È½µÎª0¡£<BR>Èç¹ûÊÜÊõÉúÎïÊÜµ½ÈÎºÎÉËº¦£¬»òÓÐÆäËûÉúÎïÓÃÒ»¸ö¶¯×÷½«Æä´Ó»Ðã±ÖÐÒ¡ÐÑ£¬ÔòÆäÉíÉÏµÄ´ËÐ§Ó¦½«ÌáÇ°ÖÕÖ¹¡£</P>
-<H4 id="Leomund's_Tiny_Hut">ÀîÅ·ÃÉÐ¡ÎÝ£üLeomund's Tiny Hut</H4>
-<P><EM>Èý»· ËÜÄÜ£¨Ò÷ÓÎÊ«ÈË¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>1·ÖÖÓ»òÒÇÊ½<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¸öÐ¡Ë®¾§Öé×Ó£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>8 Ð¡Ê±<BR>ÄãÊÍ·Å³ö°ë¾¶10³ßµÄ<U>¹â»·</U>£¬¹â»·»áÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ±£³Ö´æÔÚ²¢¹Ì¶¨ÔÚÔ­µØ¡£Ê©Õ¹´Ë·¨ÊõÊ±£¬Èô¹â»·µÄ´óÐ¡²»×ãÒÔÍêÈ«¸²¸ÇÆäÇøÓòÄÚµÄËùÓÐÉúÎï£¬·¨ÊõµÄÊ©Õ¹»áÊ§°Ü¡£<BR>ÔÚÊ©Õ¹´Ë·¨ÊõÊ±¼´´¦ÓÚ¹â»·ÄÚµÄÉúÎïºÍÎï¼þ¿ÉÒÔ×ÔÓÉ½ø³ö¹â»·¡£¶øËùÓÐÆäËûÉúÎïºÍÎï¼þ¶¼½«±»×èµ²¶øÎÞ·¨½ø³ö¡£Èý»·»ò¸üµÍ¼¶±ðµÄ·¨Êõ¼ÈÎÞ·¨Ö±½Ó´©¹ý¹â»·Ê©Õ¹£¬Ò²ÎÞ·¨Ê¹·¨ÊõÐ§¹ûÑÓÉìÖÁ´©¹ý¹â»·¡£<BR>¹â»·ÄÚµÄ¿ÕÆø¸ÉË¬ÊæÊÊ£¬¶øÎÞÂÛÍâ²àÆøºòÈçºÎ¡£Äã¿ÉÒÔÔÚ·¨ÊõÖÕÖ¹Ç°Ê¹¹â»·ÄÚµÄ¹âÕÕ±äÎªÎ¢¹â¹âÕÕ»òºÚ°µ£¨ÎÞÐèÈÎºÎ¶¯×÷£©¡£¹â»·´ÓÍâ²à¿´ÊÇ²»Í¸Ã÷µÄ£¬²¢ÇÒ³ÊÏÖ³öÓÉÄãÑ¡¶¨µÄÑÕÉ«£¬µ«´ÓÄÚ²à¿´ËüÔòÊÇÍ¸Ã÷µÄ¡£<BR>µ±ÄãÀë¿ª¸ÃÇøÓò£¬»òÊÔÍ¼ÔÙ´ÎÊ©Õ¹¸Ã·¨ÊõÊ±£¬·¨Êõ½«ÌáÇ°ÖÕÖ¹¡£</P>
-<H4 id="Lightning_Arrows">ÉÁµç¼ýÊ¸£üLightning Arrows</H4>
-<P><EM>Èý»· ±ä»¯£¨ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¸½Ôù¶¯×÷£¬ÔÚÄãÊ¹ÓÃÎäÆ÷·¢¶¯Ô¶³Ì¹¥»÷ÃüÖÐÒ»¸öÄ¿±ê»òÊ§ÊÖÊ±½ô½Ó¿ÉÓÃ<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>µ±ÄãµÄ¹¥»÷ÃüÖÐÒ»¸öÄ¿±ê»òÊ§ÊÖÊ±£¬¸ÃÎäÆ÷µÄµ¯Ò©»ò¸ÃÎäÆ÷±¾Éí±äÎªÒ»ÊøÉÁµç¡£×÷ÎªÄ¿±ê´ÓÕâ´Î¹¥»÷ÖÐÊÜµ½µÄÈÎºÎÉËº¦»òÆäËûÐ§¹ûµÄÌæ´ú£¬Èô¸Ã¹¥»÷ÃüÖÐ£¬ÔòÄ¿±êÊÜµ½4d8µãÉÁµçÉËº¦£¬Èô¸Ã¹¥»÷Î´ÃüÖÐ£¬ÔòÊÜµ½Ò»°ëÉËº¦¡£ÎÞÂÛÄãµÄ¹¥»÷ÊÇ·ñÃüÖÐ£¬Ä¿±êÖÜÎ§10³ß·¶Î§ÄÚµÄÃ¿¸öÉúÎï¶¼±ØÐë½øÐÐÒ»´ÎÃô½Ý»íÃâ£¬»íÃâÊ§°ÜÔòÊÜµ½2d8µãÉÁµçÉËº¦£¬»íÃâ³É¹¦ÔòÊÜµ½°ëÊýÉËº¦¡£<BR>ÔÚ´ËÖ®ºó£¬¸Ãµ¯Ò©»òÎäÆ÷±ä»ØÆäÕý³£ÐÎÌ¬¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬ÉÏÊöÁ½ÖÖÐ§Ó¦µÄÉËº¦¶¼¸÷Ôö¼Ó1d8¡£</P>
-<H4 id="Lightning_Bolt">ÉÁµçÊø£üLightning Bolt</H4>
-<P><EM>Èý»· ËÜÄÜ£¨ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»Ð©Ã«Æ¤ºÍÒ»°ÑË®¾§È¨ÕÈ£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>Ò»Êø100 
-³ß³¤£¬5³ß¿íµÄÏß×´ÉÁµç´ÓÄãµÄÎ»ÖÃÏòÄãÖ¸¶¨µÄ·½Ïò±¬·¢±Å³ö¡£ÔÚÏß×´ÇøÓòÄÚµÄÃ¿¸öÉúÎï±ØÐë½øÐÐÒ»´ÎÃô½Ý»íÃâ£¬»íÃâÊ§°ÜÕß½«ÊÜµ½8d6µãÉÁµçÉËº¦£¬»íÃâ³É¹¦ÔòÊÜµ½Ò»°ëÉËº¦¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG> Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÉËº¦¾ÍÔö¼Ó1d6¡£</P>
-<H4 id="Magic_Circle">·À»¤·¨Õó£üMagic Circle</H4>
-<P><EM>Èý»· ·À»¤£¨ÄÁÊ¦¡¢Ê¥ÎäÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>1·ÖÖÓ<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>10³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>  V¡¢S¡¢M£¨×Ü¼ÛÖµ100GP+µÄÑÎºÍÒø·Û£¬×÷Îª·¨ÊõºÄ²Ä£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1Ð¡Ê±<BR>Ö¸¶¨Ê©·¨¾àÀëÄÚµØÃæÉÏÄãÄÜ¿´¼ûµÄÒ»µã£¬²¢ÒÔ¸Ã´¦ÎªÖÐÐÄ´´ÔìÒ»¸ö 10 ³ß°ë¾¶¡¢20 
-³ß¸ßµÄÖù×´Ä§·¨ÄÜÁ¿¡£³ÐÔØÄÜÁ¿ÖùµÄµØÃæ»òÆäËûÆ½ÃæÉÏ»áÏÔÏÖ³öÉÁ¹âµÄ·ûÎÄ¡£<BR>Ö¸¶¨ÒÔÏÂÉúÎïÀàÐÍÖÐµÄÒ»ÖÖ»ò¶àÖÖ£ºÌì×å¡¢ÔªËØ¡¢Ñý¾«¡¢Ð°Ä§¡¢ÍöÁé¡£·¨Õó½«»á¶Ô±»Ö¸¶¨ÀàÐÍµÄÉúÎï²úÉúÒÔÏÂÐ§Ó¦£º</P>
-<UL>
-  <LI>
-<DIV 
-  >¸ÃÀàÉúÎï²»ÄÜÒÔ·ÇÄ§·¨ÊÖ¶ÎÖ÷¶¯½øÈëÖù×´ÇøÓòÄÚ¡£Èç¹û¸ÃÀàÉúÎïÊÔÍ¼Ê¹ÓÃ´«ËÍ»òÎ»ÃæÂÃÐÐ½øÈë´ËÇøÓò£¬ÔòËü±ØÐëÏÈ½øÐÐÒ»´Î÷ÈÁ¦»íÃâÒÔÅÐ¶¨ÆäÊÇ·ñ³É¹¦¡£</DIV>
-  <LI>
-<DIV> ¸ÃÀàÉúÎï¶ÔÖù×´ÇøÓòÄÚµÄÉúÎï½øÐÐ¹¥»÷¼ì¶¨Ê±¾ßÓÐÁÓÊÆ¡£</DIV>
-  <LI>
-<DIV 
-  >Öù×´ÇøÓòÄÚµÄÄ¿±ê²»ÊÜ¸ÃÀàÉúÎïËù<U>÷È»ó</U>¡¢<U>¿Ö»Å</U>¡¢»ò<U>¸½Éí</U> ¡£</DIV></LI></UL>
-<P>Ê©Õ¹¸Ã·¨ÊõÊ±£¬Äã¿ÉÒÔÑ¡ÔñÈÃÄ§·¨×÷ÓÃÓÚÏà·´µÄ·½ÏòÀ´×èÖ¹ÌØ¶¨ÖÖÀàµÄÉúÎïÀë¿ªÖù×´ÇøÓòÄÚ£¬ÒÔ±£»¤ÇøÓòÍâµÄÄ¿±ê¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬·¨Êõ³ÖÐøÊ±¼ä¾ÍÔö¼Ó 
-1 Ð¡Ê±¡£</P>
-<H4 id="Major_Image">¸ß¼¶»ÃÓ°£üMajor Image</H4>
-<P><EM>Èý»· »ÃÊõ£¨Ò÷ÓÎÊ«ÈË¡¢ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>120³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»´éÑòÃ«£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à10·ÖÖÓ<BR>Äã´´ÔìÒ»¸öÓ°Ïñ£¬ÆäÐÎÏóÀ´×ÔÒ»¸ö´óÐ¡²»³¬¹ý±ß³¤20³ßÁ¢·½ÌåµÄÎï¼þ»òÉúÎï£¬»òÊÇÆäËûµÄ¿ÉÊÓÏÖÏó¡£Ó°Ïñ³öÏÖÔÚÊ©·¨¾àÀëÄÚÄãÄÜ¿´¼ûµÄÒ»´¦Î»ÖÃ²¢ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚÎ¬³Ö´æÔÚ¡£Ëü¿´ÆðÀ´ÍêÈ«ÊÇÕæÊµµÄ£¬²¢ÇÒ»¹¾ßÓÐÏàÓ¦µÄÉùÒô¡¢ÆøÎ¶ºÍÎÂ¶È¡£µ«ËüÎÞ·¨Ôì³ÉÉËº¦»òÈÃÈËÏÝÈëÈÎºÎ×´Ì¬¡£<BR>ÔÚ¸Ã»ÃÏóÊ©·¨¾àÀëÄÚÊ±£¬Äã¿ÉÒÔÓÃÒ»¸öÄ§·¨¶¯×÷½«Ó°ÏñÒÆ¶¯µ½Ê©·¨¾àÀëÄÚµÄÁíÒ»¸öÎ»ÖÃ¡£Ó°Ïñ¸Ä±äÎ»ÖÃÊ±£¬Äã¿ÉÒÔ¸Ä±äÓ°ÏñµÄÍâ±íÀ´Ê¹ËüÒÆ¶¯µÃ¸ü×ÔÈ»¡£ÀýÈç£¬Èç¹ûÄã´´ÔìÁËÒ»¸öÉúÎïµÄÓ°Ïñ²¢ÒÆ¶¯Ëü£¬ÔòÄã¿ÉÒÔ¸Ä±äÓ°Ïñ£¬Ê¹Ëü¿´ÆðÀ´¾ÍÏñÊÇÔÚ×ßÂ·¡£»òÕßÄãÒ²¿ÉÒÔÈÃÓ°ÏñÔÚ²»Í¬µÄÊ±¼ä·¢³ö²»Í¬µÄÉùÒô£¬ÉõÖÁ¿ÉÒÔÈÃËü²ÎÓëÒ»³¡¶Ô»°¡£<BR>ÓÉÓÚÓ°Ïñ¿ÉÒÔ±»´©¹ý£¬ÈÎºÎÓë¸ÃÓ°Ïñ½øÐÐµÄÎïÀí»¥¶¯¶¼»á±©Â¶Æä»ÃÏóµÄ±¾ÖÊ¡£Ò»¸öÉúÎïÓÃ<U>ÑÐ¾¿</U>¶¯×÷µ÷²éÓ°ÏñÊ±£¬Ëü¿ÉÒÔ½øÐÐÒ»´Î¶Ô¿¹ÄãµÄ·¨Êõ»íÃâ 
-DC 
-µÄÖÇÁ¦£¨µ÷²é£©¼ì¶¨£¬ÒÔÅÐ¶¨ÊÇ·ñ¿´´©»ÃÏó¡£±æ³ö»ÃÏóµÄÉúÎï¿ÉÒÔ¿´ÆÆ¸ÃÓ°Ïñ£¬¶øÓ°ÏñµÄÆäËû¸Ð¹ÙÐ§Ó¦ÔÚ¸ÃÉúÎï¿´À´»á±äµÃÎ¢Èõ¶øÄ£ºý¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>  Ê¹ÓÃ¸ßÓÚÈý»·µÄ·¨ÊõÎ»Ê±£¬·¨ÊõÊ±¼ä³ÖÐøÖÁ±»½â³ýÇÒÎÞÐè×¨×¢¡£</P>
-<H4 id="Mass_Healing_Word">ÈºÌåÖÎÓúÕæÑÔ£üMass Healing Word</H4>
-<P><EM>Èý»· ·À»¤£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¸½Ôù¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>60³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>Ö¸¶¨Ê©·¨¾àÀëÄÚÖÁ¶àÁù¸öÄãÄÜ¿´¼ûµÄÉúÎï£¬Ê¹ËüÃÇ»Ö¸´ 2d4+ÄãµÄÊ©·¨ÊôÐÔµ÷ÕûÖµ 
-µãÉúÃüÖµ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÖÎÁÆÁ¿¾ÍÔö¼Ó1d4¡£</P>
-<H4 id="Meld_Into_Stone">ÈÚÉíÈëÊ¯£üMeld Into Stone</H4>
-<P><EM>Èý»· ±ä»¯£¨ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷»òÒÇÊ½<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>8Ð¡Ê±<BR>Äã½øÈëÒ»¸ö×ãÒÔÍêÈ«ÈÝÄÉÄãÉíÌåµÄÊ¯ÁÏÎï¼þ»òÊ¯ÁÏ±íÃæÄÚ£¬Ê¹Äã×Ô¼ººÍÄãÐ¯´øµÄËùÓÐ×°±¸ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚÓëÊ¯ÁÏÈÚÎªÒ»Ìå¡£Äã±ØÐë´¥Åö¸ÃÊ¯ÁÏÀ´×öµ½Õâ¼þÊÂ¡£´Ëºó£¬ÈÎºÎ·ÇÄ§·¨µÄ¸Ð¹Ù¶¼ÎÞ·¨¿´µ½»òÕì²âµ½ÄãµÄ´æÔÚ¡£<BR>ÓëÊ¯ÁÏÈÚºÏºó£¬Äã¿´²»µ½Íâ½ç·¢ÉúÁËÊ²Ã´£¬²¢ÇÒÄãÎªÁËñöÌýÍâ½çÉùÒô¶ø½øÐÐµÄÈÎºÎ¸ÐÖª£¨²ì¾õ£©¼ì¶¨¶¼¾ßÓÐÁÓÊÆ¡£ÓëÊ¯Í·ÈÚºÏÊ±£¬ÄãÈÔÄÜ¸Ð¾õµ½Ê±¼äµÄÁ÷ÊÅ£¬Ò²¿ÉÒÔ¶Ô×Ô¼ºÊ©Õ¹·¨Êõ¡£ÄãÎÞ·¨ÒÆ¶¯£¬µ«¿ÉÒÔÏûºÄ5³ßÒÆ¶¯Á¦´Ó½øÈëÊ¯Í·µÄµØ·½Àë¿ªÊ¯ÄÚ£¬·¨ÊõËæÖ®ÖÕÖ¹¡£<BR>Ê¯Í·ËùÊÜµÄÇáÎ¢ËðÉË²»»á¶ÔÄãÔì³ÉÉËº¦£¬²»¹ýÊ¯Í·²¿·ÖËð»Ù»òÕßÐÎ×´¸Ä±äÊ±£¨¸Ä±äµ½²»ÔÙÊÊºÏÈÝÄÉÄãµÄ³Ì¶È£©£¬»á½«Äã´ÓÊ¯ÖÐÅÅ¼·³ö²¢¶ÔÄãÔì³É6d6µãÁ¦³¡ÉËº¦¡£Ê¯Í·ÍêÈ«Ëð»Ù£¨»ò²ÄÖÊ¸Ä±ä£©Ê±£¬Ò²»á½«Äã´ÓÊ¯ÖÐÅÅ¼·³ö²¢¶ÔÄãÔì³É50µãÁ¦³¡ÉËº¦¡£±»ÅÅ¼·³öÊ¯Í·Ê±£¬ÄãÒÆ¶¯ÖÁ¾àÀëµÚÒ»´Î½øÈëÊ¯Í·´¦×î½üµÄÒ»´¦Î´±»Õ¼¾ÝµÄ¿Õ¼äÎ»ÖÃ£¬²¢ÏÝÈë<U>µ¹µØ</U>×´Ì¬¡£</P>
-<H4 id="Nondetection">»Ø±ÜÕì²â£üNondetection</H4>
-<P><EM>Èý»· ·À»¤£¨Ò÷ÓÎÊ«ÈË¡¢ÓÎÏÀ¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»´é¼ÛÖµ25+GPµÄ×êÊ¯³¾£¬×÷Îª·¨ÊõºÄ²Ä£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>8Ð¡Ê±<BR>    ·¨Êõ³ÖÐøÊ±¼äÄÚ£¬ÄãÊ¹Äã´¥ÅöµÄÄ¿±ê²»»á±»Ô¤ÑÔ·¨Êõ·¢ÏÖ¡£Ä¿±ê¿ÉÒÔÊÇÒ»Ãû×ÔÔ¸ÉúÎï£¬»òÕßÊÇÔÚÈÎºÎ·½ÏòÉÏ¶¼²»³¬¹ý10³ßµÄÒ»´¦µØµã»òÒ»¸öÎï¼þ¡£Ä¿±ê²»ÄÜ±»ÈÎºÎÔ¤ÑÔ·¨ÊõÑ¡ÎªÄ¿±ê£¬Ò²²»ÄÜ±»Ä§·¨Ì½Öª´«¸ÐÆ÷¸Ð²âµ½¡£</P>
-<H4 id="Phantom_Steed">÷ÈÓ°¾Ô£üPhantom Steed</H4>
-<P><EM>Èý»· »ÃÊõ£¨·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>1·ÖÖÓ»òÒÇÊ½<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>30³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1Ð¡Ê±<BR>Ò»Æ¥ÄâÕæµÄ<U>´óÐÍ</U>ÂíÐÎÉúÎï³öÏÖÔÚÊ©·¨¾àÀëÄÚÄãÑ¡ÔñµÄÒ»´¦µØÃæÉÏµÄÎ´Õ¼¾Ý¿Õ¼äÖÐ¡£Äã¾ö¶¨¸ÃÉúÎïµÄÑùÃ²£¬ÇÒËü×°±¸×Å°°×ù¡¢½À×ÓºÍçÖÉþ¡£ÕâÐ©Ëæ·¨Êõ´´ÔìµÄ×°±¸Ò»µ©Àë¿ª×øÆï10³ß¼´»¯×÷Ò»ÕóÑÌÏûÊ§²»¼û¡£<BR>ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ£¬Äã»òÕßÒ»ÃûÄãÖ¸¶¨µÄÉúÎï¿ÉÒÔÆï³Ë´Ë×øÆï¡£×øÆïÊ¹ÓÃ<STRONG><U>³ËÓÃÂíRiding 
-Horse</U></STRONG>µÄÊý¾Ý£¨¼û¸½Â¼B£©£¬²»¹ýÆä¾ßÓÐ100³ßËÙ¶È£¬Ã¿Ð¡Ê±¿ÉÐÐ½ø13Àï¡£·¨ÊõÖÕÖ¹Ê±£¬×øÆï»áÂýÂýÏûÊ§£¬ÆïÊÖÓÐ1·ÖÖÓµÄÊ±¼äÏÂÂí¡£×øÆïÊÜµ½ÉËº¦Ê±£¬·¨Êõ½«ÌáÇ°ÖÕÖ¹¡£</P>
-<H4 id="Plant_Growth">Ö²Îï×Ì³¤£üPlant Growth</H4>
-<P><EM>Èý»· ±ä»¯£¨Ò÷ÓÎÊ«ÈË¡¢µÂÂ³ÒÁ¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷£¨·±Ã¯£©»ò8Ð¡Ê±£¨·á²ú£©<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>150³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR> ¸Ã·¨Êõ½«»îÁ¦Òýµ¼¸øÌØ¶¨ÇøÓòÖÐµÄÖ²Îï¡£±¾·¨ÊõµÄÊ©·¨Ê±¼äÈ¡¾öÓÚÄãÑ¡ÔñÏÂÊöÐ§Ó¦Ö®Ò»£º·±Ã¯»ò·á²ú¡£</P>
-<BLOCKQUOTE style="MARGIN-BOTTOM: 0px"><P><STRONG>·±Ã¯Overgrowth¡£</STRONG> 
-ÄãÖ¸¶¨Ê©·¨¾àÀëÄÚÒ»µã£¬ÒÔ¸ÃµãÎªÖÐÐÄ100³ß°ë¾¶µÄÇò×´·¶Î§ÄÚµÄÆÕÍ¨Ö²Îï½«±äµÄ´Ö×³·±Ã¯¡£Ò»Ãû´©¹ý¸ÃÇøÓòµÄÉúÎïÃ¿ÒÆ¶¯1³ß±ØÐë»¨·Ñ4³ßÒÆ¶¯Á¦¡£Äã¿ÉÒÔÔÚ¸Ã·¨Êõ·¶Î§ÄÚ¿Õ³öÒ»¿é»ò¶à¿éÈÎÒâ´óÐ¡µÄÇøÓò£¬½«ÆäÅÅ³ýÔÚ·¨ÊõÐ§Ó¦Ó°ÏìÖ®Íâ¡£<BR><STRONG>·á²úEnrichment¡£</STRONG> 
-ÄãÖ¸¶¨Ê©·¨¾àÀëÄÚÒ»µã£¬¾à¸Ãµã°ëÀïÄÚµÄÖ²ÎïµÄ²úÁ¿½«ÔÚ365ÈÕÄÚ±»Ç¿»¯¡£ÕâÐ©Ö²ÎïÊÕ»ñÊ±½«²ú³öÁ½±¶ÓÚÕý³£²úÁ¿µÄ×÷Îï¡£ÕâÐ©Ö²ÎïÃ¿Äê½öÄÜ´ÓÒ»µÀÖ²Îï×Ì³¤ÖÐ»ñÒæ¡£</P></BLOCKQUOTE>
+	<H4 id="Dispel_Magic">ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½Dispel Magic</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>120ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¡¢Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä§ï¿½ï¿½Ð§Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½Ã¿ï¿½ï¿½Ó°ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ì¶¨ï¿½ï¿½DC
+		10+Ä¿ï¿½ê·¨ï¿½ï¿½ï¿½ï¿½ï¿½×£ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½É¹ï¿½Ê±Ä¿ï¿½ê·¨ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Ö¹Ó°ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ð¡ï¿½Úµï¿½ï¿½Ú¸ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½×µÄ·ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½</P>
+	<H4 id="Elemental_Weapon">Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Elemental Weapon</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1Ð¡Ê±<BR>ï¿½ã´¥ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ñ·ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ò»ï¿½ï¿½Ç¿ï¿½á¡¢ï¿½ï¿½ï¿½ä¡¢ï¿½ï¿½ï¿½æ¡¢ï¿½ï¿½ï¿½ç¡¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½+1ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½É¶ï¿½ï¿½ï¿½1d4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½Ëºï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ï¿½ï¿½å»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½Ä¼ï¿½Öµï¿½ï¿½Îª+2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½Îª2d4ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ß·ï¿½ï¿½ï¿½Î»Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½Ä¼ï¿½Öµï¿½ï¿½Îª+3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½Îª3d4ï¿½ï¿½
+	</P>
+	<H4 id="Fear">ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½Fear</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã«ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>30ï¿½ï¿½<U>×¶×´</U>ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½Ö»ï¿½</U>×´Ì¬ï¿½ï¿½<BR>ï¿½Ô´Ë·ï¿½ï¿½ï¿½<U>ï¿½Ö»ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Øºï¿½ï¿½ï¿½Ö´ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½Ñ°ï¿½ï¿½ï¿½î°²È«ï¿½ï¿½Â·ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ã£¬Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ÎªÖ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øºï¿½Ê±Î»ï¿½ï¿½Ò»ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ä¿Õ¼ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½Ö¹ï¿½ï¿½
+	</P>
+	<H4 id="Feign_Death">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Feign Death</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR>ï¿½ã´¥ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï²¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß°ï¿½Ä½ï¿½Ö±ï¿½ï¿½<BR>ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½â¶¼ï¿½ï¿½Ê¾Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½Âµï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>Ä¿Ã¤</U>ï¿½Ô¼ï¿½<U>Ê§ï¿½ï¿½</U>×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È½ï¿½ï¿½ï¿½0ï¿½ï¿½<BR>Ä¿ï¿½ï¿½Ô³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½Í¾ï¿½ï¿½Ð¿ï¿½ï¿½Ô£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½×´Ì¬ï¿½ï¿½
+	</P>
+	<H4 id="Fireball">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Fireball</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>150ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½Éµï¿½Ð¡ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½É³ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Íºï¿½Å³ï¿½Ò»Æ¬ï¿½ï¿½ï¿½æ¡£Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Î§ï¿½ë¾¶20ï¿½ï¿½<U>ï¿½ï¿½×´</U>ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½Üµï¿½8d6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ë¡£<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½Ð¯ï¿½ï¿½ï¿½Ä¿ï¿½È¼ï¿½ï¿½ï¿½ï¿½á¿ªÊ¼È¼ï¿½Õ¡ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d6ï¿½ï¿½
+	</P>
+	<H4 id="Fly">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Fly</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ã«ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ã´¥ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¡£Ä¿ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú»ï¿½ï¿½60ï¿½ßµÄ·ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¼´×¹ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ì·¨ï¿½ï¿½Ö¹×¹ï¿½ä¡£<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê¡£
+	</P>
+	<H4 id="Gaseous_Form">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Gaseous Form</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»Ð¡ï¿½ï¿½É´ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1Ð¡Ê±<BR>ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ã½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ä´©ï¿½ï¿½Ð¯ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×ªï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½<U>Ä§ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ·ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½<BR>ï¿½Ú¸ï¿½ï¿½ï¿½Ì¬ï¿½Â£ï¿½Ä¿ï¿½ï¿½Î¨Ò»ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½10ï¿½ßµÄ·ï¿½ï¿½ï¿½ï¿½Ù¶È£ï¿½ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ë²¢Õ¼ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ä¡£ï¿½ï¿½Óµï¿½Ð¶Û»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌºÍ»Ó¿ï¿½ï¿½Ëºï¿½ï¿½Ä¿ï¿½ï¿½Ô£ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ß£ï¿½ï¿½Ò½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½á½«ÒºÌ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¡£<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ä¿ï¿½ê²»ï¿½Ü½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£¬Ò²ï¿½ï¿½ï¿½Ü±ï¿½Ê¹ï¿½Ã»ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬Ä¿ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê¡£
+	</P>
+	<H4 id="Glyph_of_Warding">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½Glyph of Warding</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½ï¿½ï¿½Öµ200GP+ï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ä²Ä£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò´¥·ï¿½<BR>Ê©Õ¹ï¿½Ã·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½æ£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø°å£©ï¿½ï¿½Ä³ï¿½ï¿½ï¿½Ü±ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï£¨ï¿½ï¿½ï¿½ï¿½ï¿½é±¾ï¿½ï¿½ï¿½ä£©ï¿½Ì»ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä§ï¿½ï¿½Ð§Ó¦ï¿½Ä¿ï¿½ï¿½Æ¡ï¿½ï¿½Ã¿ï¿½ï¿½Æ¿ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó±ï¿½Ê©ï¿½ï¿½Î»ï¿½Ã±ï¿½ï¿½Æ¿ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½Æ»ï¿½ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DCï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î³É¹ï¿½ï¿½Ä¸ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½<BR>ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¶¨ï¿½ä´¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó±ï¿½Õ¨ï¿½ï¿½ï¿½ÄºÍ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+	</P>
+	<BLOCKQUOTE>
+		<P><STRONG>ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Set the
+				Triggerï¿½ï¿½</STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½Ê±ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ÆµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì»ï¿½ï¿½Ú±ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÚµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ô½ï¿½Ò»ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¶¨Ö»ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¨ï¿½ï¿½ï¿½ï¿½ï¿½è¶¨ÎªÖ»Ó°ï¿½ï¿½ï¿½ï¿½ï¿½Aberrationï¿½ï¿½ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ã»¹ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½î¡£<BR><STRONG>ï¿½ï¿½Õ¨ï¿½ï¿½ï¿½ï¿½Explosive
+				Runesï¿½ï¿½</STRONG>ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú°ë¾¶
+			20ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½Üµï¿½5d8ï¿½ï¿½Ç¿ï¿½á£¬ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½æ£¬ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ë¡£<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Spell
+				Glyphï¿½ï¿½</STRONG>ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ò»ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹Ò»ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÄ¿ï¿½ê£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½Ô¸Ã·ï¿½Ê½Ê©Õ¹Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä¿ï¿½ê£¬ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ÎªÄ¿ï¿½ê£»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¶ï¿½Hostileï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï½«ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµÄµØ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òª×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Î¬ï¿½Ö¡ï¿½
+		</P>
+	</BLOCKQUOTE>
+	<P><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Õ¨ï¿½ï¿½ï¿½Äµï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã´´ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ä´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½
+	</P>
+	<H4 id="Haste">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Haste</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>30ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»Æ¬ï¿½Ê²Ý¸ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¡£Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ù¶È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ACï¿½ï¿½ï¿½+2ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ØºÏ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½ï¿½</U>ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ê±ï¿½ï¿½Ä¿ï¿½ê½«ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½<U>Ê§ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Hunger_of_Hadar">ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Hunger of Hadar</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>150ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ë£©<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ò£Ô¶ï¿½ï¿½ï¿½ÈµÄ´ï¿½ï¿½Å£ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½Ä¿Ö²ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½ï¿½Ä£ï¿½Ò»ï¿½ï¿½ï¿½ë¾¶
+		20
+		ï¿½ßµÄºÚ°ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½Î£ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½É¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½à¨½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ¹ï¿½ï¿½Õ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¶ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬¶ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï½«ï¿½ï¿½ï¿½ï¿½<U>Ä¿Ã¤</U>×´Ì¬ï¿½ï¿½<BR>ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½Ê¼ï¿½ï¿½ØºÏµï¿½ï¿½ï¿½ï¿½ï½«ï¿½Üµï¿½
+		2d6
+		ï¿½ãº®ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ØºÏµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å´¥ï¿½ÖµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½2d6ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÄºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ£©¾ï¿½ï¿½ï¿½ï¿½ï¿½1d6ï¿½ï¿½
+	</P>
+	<H4 id="Hypnotic_Pattern">ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Æ£ï¿½Hypnotic Pattern</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>120ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ð¼ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß³ï¿½
+		30
+		ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½è¶¯ï¿½ï¿½×ªï¿½Ä²ï¿½É«Í¼ï¿½Æ¡ï¿½Í¼ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½Æ¬ï¿½Ìºï¿½ï¿½ï¿½Ê§ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½×´Ì¬ï¿½ï¿½ï¿½Ú±ï¿½ï¿½Ã·ï¿½ï¿½ï¿½<U>ï¿½È»ï¿½</U>ï¿½Ú¼ä£¬ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>Ê§ï¿½ï¿½</U>×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È½ï¿½Îª0ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½Îºï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½ï¿½Ò¡ï¿½Ñ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ´ï¿½Ð§Ó¦ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö¹ï¿½ï¿½
+	</P>
+	<H4 id="Leomund's_Tiny_Hut">ï¿½ï¿½Å·ï¿½ï¿½Ð¡ï¿½Ý£ï¿½Leomund's Tiny Hut</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1ï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½Ê½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½Ð¡Ë®ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>8
+		Ð¡Ê±<BR>ï¿½ï¿½ï¿½Í·Å³ï¿½ï¿½ë¾¶10ï¿½ßµï¿½<U>ï¿½â»·</U>ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú±ï¿½ï¿½Ö´ï¿½ï¿½Ú²ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½Ô­ï¿½Ø¡ï¿½Ê©Õ¹ï¿½Ë·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½Ä´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½Ê§ï¿½Ü¡ï¿½<BR>ï¿½ï¿½Ê©Õ¹ï¿½Ë·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹â»·ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½èµ²ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½Ö±ï¿½Ó´ï¿½ï¿½ï¿½ï¿½â»·Ê©Õ¹ï¿½ï¿½Ò²ï¿½Þ·ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½<BR>ï¿½â»·ï¿½ÚµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½Ë¬ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°Ê¹ï¿½â»·ï¿½ÚµÄ¹ï¿½ï¿½Õ±ï¿½ÎªÎ¢ï¿½ï¿½ï¿½ï¿½Õ»ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½ï¿½à¿´ï¿½Ç²ï¿½Í¸ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ö³ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²à¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½ï¿½Ä¡ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½ï¿½ï¿½ï¿½ò£¬»ï¿½ï¿½ï¿½Í¼ï¿½Ù´ï¿½Ê©Õ¹ï¿½Ã·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö¹ï¿½ï¿½
+	</P>
+	<H4 id="Lightning_Arrows">ï¿½ï¿½ï¿½ï¿½ï¿½Ê¸ï¿½ï¿½Lightning Arrows</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ê§ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ê§ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ò©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ç¡£ï¿½ï¿½ÎªÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½Î¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Üµï¿½4d8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½Üµï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Î§10ï¿½ß·ï¿½Î§ï¿½Úµï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¶¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½2d8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR>ï¿½Ú´ï¿½Ö®ï¿½ó£¬¸Ãµï¿½Ò©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d8ï¿½ï¿½
+	</P>
+	<H4 id="Lightning_Bolt">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lightning Bolt</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»Ð©Ã«Æ¤ï¿½ï¿½Ò»ï¿½ï¿½Ë®ï¿½ï¿½È¨ï¿½È£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>Ò»ï¿½ï¿½100
+		ï¿½ß³ï¿½ï¿½ï¿½5ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ò±¬·ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ß½ï¿½ï¿½Üµï¿½8d6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Üµï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>
+		Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d6ï¿½ï¿½</P>
+	<H4 id="Magic_Circle">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Magic Circle</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>10ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>
+		Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½ï¿½Ü¼ï¿½Öµ100GP+ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½Û£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ä²Ä£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR>Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã£¬ï¿½ï¿½ï¿½Ô¸Ã´ï¿½Îªï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+		10 ï¿½ß°ë¾¶ï¿½ï¿½20
+		ï¿½ß¸ßµï¿½ï¿½ï¿½×´Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½Ï»ï¿½ï¿½ï¿½ï¿½Ö³ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½Ä¡ï¿½<BR>Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ò»ï¿½Ö»ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½å¡¢Ôªï¿½Ø¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°Ä§ï¿½ï¿½ï¿½ï¿½ï¿½é¡£ï¿½ï¿½ï¿½ó½«»ï¿½Ô±ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½
+	</P>
+	<UL>
+		<LI>
+			<DIV>
+				ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï²»ï¿½ï¿½ï¿½Ô·ï¿½Ä§ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Ú¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Ê¹ï¿½Ã´ï¿½ï¿½Í»ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½
+			</DIV>
+		<LI>
+			<DIV> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ì¶¨Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½</DIV>
+		<LI>
+			<DIV>ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ä¿ï¿½ê²»ï¿½Ü¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½È»ï¿½</U>ï¿½ï¿½<U>ï¿½Ö»ï¿½</U>ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U> ï¿½ï¿½</DIV>
+		</LI>
+	</UL>
+	<P>Ê©Õ¹ï¿½Ã·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à·´ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê¡£<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		1 Ð¡Ê±ï¿½ï¿½</P>
+	<H4 id="Major_Image">ï¿½ß¼ï¿½ï¿½ï¿½Ó°ï¿½ï¿½Major Image</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>120ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ã«ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ã´´ï¿½ï¿½Ò»ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½20ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Î¬ï¿½Ö´ï¿½ï¿½Ú¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Êµï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¶ï¿½ï¿½ï¿½Â¶È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½×´Ì¬ï¿½ï¿½<BR>ï¿½Ú¸Ã»ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½Ã¡ï¿½Ó°ï¿½ï¿½Ä±ï¿½Î»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸Ä±ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ã´´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸Ä±ï¿½Ó°ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Ú²ï¿½Í¬ï¿½ï¿½Ê±ï¿½ä·¢ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á±©Â¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ê¡ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½Ð¾ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ò»ï¿½Î¶Ô¿ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		DC
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£©ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ñ¿´´ï¿½ï¿½ï¿½ï¿½ó¡£±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½Æ¸ï¿½Ó°ï¿½ñ£¬¶ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½Ð§Ó¦ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>
+		Ê¹ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¨×¢ï¿½ï¿½</P>
+	<H4 id="Mass_Healing_Word">Èºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½Mass Healing Word</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>60ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>V<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬Ê¹ï¿½ï¿½ï¿½Ç»Ö¸ï¿½
+		2d4+ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½Öµ
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d4ï¿½ï¿½</P>
+	<H4 id="Meld_Into_Stone">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½Meld Into Stone</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>8Ð¡Ê±<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¯ï¿½Ï±ï¿½ï¿½ï¿½ï¿½Ú£ï¿½Ê¹ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ð¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½ÎªÒ»ï¿½å¡£ï¿½ï¿½ï¿½ï¿½ë´¥ï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½Ëºï¿½ï¿½ÎºÎ·ï¿½Ä§ï¿½ï¿½ï¿½Ä¸Ð¹Ù¶ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½âµ½ï¿½ï¿½Ä´ï¿½ï¿½Ú¡ï¿½<BR>ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ÚºÏºï¿½ï¿½ã¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç·¢ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ÎºÎ¸ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½Ê¯Í·ï¿½Úºï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¸Ð¾ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½Ò²ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ô¼ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Ó½ï¿½ï¿½ï¿½Ê¯Í·ï¿½ÄµØ·ï¿½ï¿½ë¿ªÊ¯ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ö¹ï¿½ï¿½<BR>Ê¯Í·ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½Î¢ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¯Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½Ä±ï¿½Ê±ï¿½ï¿½ï¿½Ä±äµ½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³Ì¶È£ï¿½ï¿½ï¿½ï¿½á½«ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½6d6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½Ê¯Í·ï¿½ï¿½È«ï¿½ï¿½Ù£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¸Ä±ä£©Ê±ï¿½ï¿½Ò²ï¿½á½«ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½50ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½Ê¯Í·Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î½ï¿½ï¿½ï¿½Ê¯Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>×´Ì¬ï¿½ï¿½
+	</P>
+	<H4 id="Nondetection">ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½Nondetection</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½Öµ25+GPï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ä²Ä£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>8Ð¡Ê±<BR>
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Ê¹ï¿½ã´¥ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê²»ï¿½á±»Ô¤ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ·ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ßµï¿½Ò»ï¿½ï¿½ï¿½Øµï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê²»ï¿½Ü±ï¿½ï¿½Îºï¿½Ô¤ï¿½Ô·ï¿½ï¿½ï¿½Ñ¡ÎªÄ¿ï¿½ê£¬Ò²ï¿½ï¿½ï¿½Ü±ï¿½Ä§ï¿½ï¿½Ì½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²âµ½ï¿½ï¿½
+	</P>
+	<H4 id="Phantom_Steed">ï¿½ï¿½Ó°ï¿½Ô£ï¿½Phantom Steed</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1ï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½Ê½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>30ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR>Ò»Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Î´Õ¼ï¿½Ý¿Õ¼ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½æ·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ë¿ªï¿½ï¿½ï¿½ï¿½10ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR>ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¡£ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½<STRONG><U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Riding
+				Horse</U></STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½Â¼Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½100ï¿½ï¿½ï¿½Ù¶È£ï¿½Ã¿Ð¡Ê±ï¿½ï¿½ï¿½Ð½ï¿½13ï¿½ï¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½Ëºï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö¹ï¿½ï¿½
+	</P>
+	<H4 id="Plant_Growth">Ö²ï¿½ï¿½ï¿½Ì³ï¿½ï¿½ï¿½Plant Growth</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¯ï¿½ï¿½ï¿½ï¿½8Ð¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>150ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>
+		ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ö²ï¿½ï¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½Ê±ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ó¦Ö®Ò»ï¿½ï¿½ï¿½ï¿½Ã¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</P>
+	<BLOCKQUOTE style="MARGIN-BOTTOM: 0px">
+		<P><STRONG>ï¿½ï¿½Ã¯Overgrowthï¿½ï¿½</STRONG>
+			ï¿½ï¿½Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã£¬ï¿½Ô¸Ãµï¿½Îªï¿½ï¿½ï¿½ï¿½100ï¿½ß°ë¾¶ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½Î§ï¿½Úµï¿½ï¿½ï¿½Í¨Ö²ï¿½ï½«ï¿½ï¿½Ä´ï¿½×³ï¿½ï¿½Ã¯ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½Æ¶ï¿½1ï¿½ß±ï¿½ï¿½ë»¨ï¿½ï¿½4ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Î§ï¿½Ú¿Õ³ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ï¿½Ú·ï¿½ï¿½ï¿½Ð§Ó¦Ó°ï¿½ï¿½Ö®ï¿½â¡£<BR><STRONG>ï¿½ï¿½ï¿½Enrichmentï¿½ï¿½</STRONG>
+			ï¿½ï¿½Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã£¬ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ö²ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½365ï¿½ï¿½ï¿½Ú±ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©Ö²ï¿½ï¿½ï¿½Õ»ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£ï¿½ï¿½Ð©Ö²ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ü´ï¿½Ò»ï¿½ï¿½Ö²ï¿½ï¿½ï¿½Ì³ï¿½ï¿½Ð»ï¿½ï¿½æ¡£
+		</P>
+	</BLOCKQUOTE>
 
-<H4 id="Protection_from_Energy">·À»¤ÄÜÁ¿£üProtection from Energy</H4>
-<P><EM>Èý»· ·À»¤£¨ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢ÓÎÏÀ¡¢ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1Ð¡Ê±<BR> ·¨Êõ³ÖÐøÊ±¼äÄÚ£¬Äã´¥ÅöµÄÒ»Ãû×ÔÔ¸ÉúÎï¾ßÓÐÄãÑ¡ÔñµÄÒ»ÖÖÉËº¦ÀàÐÍµÄ¿¹ÐÔ£ºÇ¿Ëá¡¢º®Àä¡¢»ðÑæ¡¢ÉÁµç¡¢À×Ãù¡£</P>
+	<H4 id="Protection_from_Energy">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Protection from Energy</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1Ð¡Ê±<BR>
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ã´¥ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ÍµÄ¿ï¿½ï¿½Ô£ï¿½Ç¿ï¿½á¡¢ï¿½ï¿½ï¿½ä¡¢ï¿½ï¿½ï¿½æ¡¢ï¿½ï¿½ï¿½ç¡¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</P>
 
-<H4 id="Remove_Curse">ÒÆ³ý×çÖä£üRemove Curse</H4>
-<P><EM>Èý»· ·À»¤£¨ÄÁÊ¦¡¢Ê¥ÎäÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>Äã´¥ÅöÒ»ÃûÉúÎï»òÒ»¸öÎï¼þ£¬Ê¹Ó°ÏìÆäµÄËùÓÐ×çÖäÖÕÖ¹¡£Èç¹û¸ÃÎï¼þÊÇÒ»¼þ×çÖäÄ§·¨ÎïÆ·£¬ÔòÆäÉÏµÄ×çÖä½«Î¬³Ö£¬²»¹ý¸Ã·¨Êõ¿ÉÒÔ´òÆÆ×çÖäÎïÆ·ÓëÆäËùÓÐÕßÖ®¼äµÄÍ¬µ÷£¬Ê¹ÆäËùÓÐÕß¿ÉÒÔ½«ÆäÐ¶ÏÂ»ò¶ªÆú¡£</P>
-<H4 id="Revivify">»ØÉúÊõ£üRevivify</H4>
-<P><EM>Èý»· ËÀÁé£¨ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢Ê¥ÎäÊ¿¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¿Å¼ÛÖµ300+GPµÄ×êÊ¯£¬×÷Îª·¨ÊõºÄ²Ä£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>Äã½Ó´¥ÔÚÇ°Ò»·ÖÖÓÄÚ¸Õ¸ÕËÀÍöµÄÒ»ÃûÉúÎï¡£¸ÃÉúÎïÒÔ1µãÉúÃüÖµ»ØÉú¡£¸Ã·¨Êõ²»ÄÜ¸´»îÀÏËÀµÄÉúÎï£¬Ò²²»ÄÜ»Ö¸´Ê§È¥µÄÉíÌå²¿Î»¡£</P>
-<H4 id="Sending">¶ÌÑ¶Êõ£üSending</H4>
-<P><EM>Èý»· Ô¤ÑÔ£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>ÎÞÏÞ<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¶ÎÍ­Ïß£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>Á¢¼´<BR>ÄãÏòÄãËùÓöµ½¹ýµÄ»òÄ³ÈËÓöµ½¹ýÇÒÏòÄãÃèÊöµÄÒ»¸öÉúÎï·¢ËÍÒ»Ð¡¶Î¶þÊ®Îå¸ö´ÊÒÔÄÚµÄÐÅÏ¢¡£¸ÃÉúÎï½«ÔÚÐÄÖÐÌýµ½ÄãµÄÐÅÏ¢£¬Ëü¿ÉÒÔÈÏ³öÄãÊÇ·¢Ñ¶ÈË£¨Èç¹ûËûÈÏÊ¶Äã£©£¬»¹¿ÉÒÔÓÃÍ¬ÑùµÄ·½Ê½Á¢¼´»Ø¸´Ò»ÌõÑ¶Ï¢¡£·¨Êõ»áÈÃÄ¿±êÄÜ¹»Àí½âÄã¶ÌÑ¶µÄÐÅÏ¢¡£<BR>ÄãµÄ´«Ñ¶¿ÉÒÔ¿çÔ½ÈÎÒâ³¤µÄ¾àÀë£¬ÉõÖÁÄÜ¿çÔ½Î»Ãæ¡£µ«Èç¹ûÄ¿±êºÍÄã²»ÔÚÍ¬Ò»¸ö´æÔÚÎ»Ãæ£¬Ôò¶ÌÑ¶ÊõÓÐ5%µÄ¸ÅÂÊÎÞ·¨µ½´ï¡£Èç¹ûÑ¶Ï¢Ã»ÄÜ´«´ï£¬Äã½«µÃÖªÕâÒ»½á¹û¡£<BR>ÔÚÊÕµ½ÄãµÄÐÅÏ¢ºó£¬Ò»¸öÉúÎïÄÜ¹»ÆÁ±ÎÄãÒÔÕâ¸ö·¨ÊõÔÙ´Î¶ÔËû·¢ÐÅµÄÄÜÁ¦£¬³ÖÐø8Ð¡Ê±¡£Èç¹ûÄãÔÚÕâ¶ÎÊ±¼äÄÚÊÔÍ¼ËÍ³öÁíÒ»ÌõÐÅÏ¢£¬Äã»áµÃÖªÄãµÄ¶ÌÑ¶±»ÆÁ±Î£¬²¢ÇÒ·¨ÊõÊ§°Ü¡£</P>
-<H4 id="Sleet_Storm">Ñ©Óê±©£üSleet Storm</H4>
-<P><EM>Èý»· Öä·¨£¨µÂÂ³ÒÁ¡¢ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>150 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»°ÑÃÔÄãÓêÉ¡£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 1 ·ÖÖÓ<BR>ÄãÖ¸¶¨Ê©·¨¾àÀëÄÚÒ»µã£¬²¢Ê¹ÒÔ¸ÃµãÎªÖÐÐÄ£¬¸ß40³ß¡¢°ë¾¶20³ßµÄÖù×´ÇøÓòÄÚ½µÏÂÀä¶³´Ì¹ÇµÄ¶³ÓêºÍ±ù±¢Ö±ÖÁ·¨ÊõÖÕÖ¹¡£¸ÃÇøÓò½«Ôì³ÉÖØ¶ÈÕÚ±Î£¬ÇÒ¸ÃÇøÓòÄÚµÄÒ»ÇÐÍâÂ¶µÄ±©Â¶ÔÚÍâµÄÃ÷»ð¶¼½«±»½½Ï¨¡£<BR>¸ÃÇøÓòµÄµØÃæ±ä³É<U>À§ÄÑµØÐÎ</U>¡£ÉúÎïÔÚÒ»¸ö»ØºÏÄÚÊ×´Î½øÈë¸ÃÇøÓò»òÔÚÇøÓòÄÚ¿ªÊ¼Æä»ØºÏÊ±£¬Ëü±ØÐë³É¹¦Í¨¹ýÒ»´ÎÃô½Ý»íÃâ£¬·ñÔò½«ÏÝÈë<U>µ¹µØ</U>×´Ì¬²¢Ê§È¥<U>×¨×¢</U>¡£</P>
-<H4 id="Slow">»ºÂýÊõ£üSlow</H4>
-<P><EM>Èý»· ±ä»¯£¨Ò÷ÓÎÊ«ÈË¡¢ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>120 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»µÎÌÇ½¬£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 1 ·ÖÖÓ<BR>ÄãÔÚÊ©·¨¾àÀëÄÚÒ»´¦ 40 
-³ßÁ¢·½ÇøÓòÄÚÖ¸¶¨ÖÁ¶àÁù¸öÉúÎï²¢Å¤ÇúÆäÖÜÎ§µÄÊ±¼äÁ÷¡£Ã¿¸öÄ¿±ê¶¼Òª½øÐÐÒ»´Î¸ÐÖª»íÃâ£¬»íÃâÊ§°ÜÔòÊÜµ½¸Ã·¨ÊõÓ°ÏìÖ±ÖÁ·¨ÊõÖÕÖ¹¡£<BR>±»Ó°ÏìµÄÉúÎïµÄËÙ¶È¼õ°ë£¬¶øÆä AC 
-ºÍÃô½Ý»íÃâ¶¼»ñµÃ-2¼õÖµ£¬ÇÒ²»ÄÜÖ´ÐÐ·´Ó¦¡£¸ÃÉúÎïÔÚÆä»ØºÏÖÐ½ö¿ÉÒÔÖ´ÐÐÒ»¸ö¶¯×÷»òÒ»¸ö¸½Ôù¶¯×÷£¬µ«²»ÄÜÍ¬Ê±Ö´ÐÐ¶þÕß¡£ÇÒµ±ËüÖ´ÐÐ¹¥»÷¶¯×÷Ê±£¬ËüÖ»ÄÜ·¢¶¯Ò»´Î¹¥»÷¡£<BR>Èç¹û¸ÃÉúÎï³¢ÊÔÊ©Õ¹Ò»¸ö¾ßÓÐ×ËÊÆ³É·ÖµÄ·¨Êõ£¬ÔòÆä·¨ÊõÓÐ25%µÄ¸ÅÂÊ»áÒòÎªÉúÎïµÄ¶¯×÷Ì«Âý¶øÊ©Õ¹Ê§°Ü¡£<BR>ÊÜÊõÉúÎïÔÚÆäÃ¿¸ö»ØºÏ½áÊøÊ±¿ÉÒÔÔÙ½øÐÐÒ»´Î¸Ã¸ÐÖª»íÃâ£¬»íÃâ³É¹¦ÔòÖÕÖ¹ÆäÉíÉÏµÄ¸Ã·¨ÊõÐ§Ó¦¡£</P>
-<H4 id="Speak_with_Dead">ËÀÕß½»Ì¸£üSpeak with Dead</H4>
-<P><EM>Èý»· ËÀÁé£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>10 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨È¼ÉÕµÄÏã£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>10 ·ÖÖÓ<BR>Äã¸øÊ©·¨¾àÀëÄÚÒ»¾ßÄãËùÑ¡ÔñµÄÊ¬ÌåÊ©ÒÔ¸´ÉúµÄ±íÏó£¬ÈÃÆä¿É»Ø´ðÄãµÄÎÊÌâ¡£Õâ¾ßÊ¬Ìå±ØÐë»¹ÓÐÒ»ÕÅ×ì£¬ÇÒÈç¹û¸ÃÉúÎïËÀÍöÊ±ÊÇ<U>ÍöÁé</U>ÉúÎï£¬ÔòÊ©·¨Ê§°Ü¡£ÈôÄ¿±êÊ¬ÌåÔÚ×î½üÊ®ÈÕÄÚÔø±»×÷Îª¸Ã·¨ÊõµÄÄ¿±ê£¬Ôò±¾´ÎÊ©·¨Ê§°Ü¡£<BR>ÔÚ·¨ÊõÖÕÖ¹Ç°£¬Äã¿ÉÒÔÏòÊ¬ÌåÌá³ö×î¶àÎå¸öÎÊÌâ¡£Ê¬ÌåµÄÖªÊ¶ºÍËü½²ÊöµÄÓïÑÔ½öÏÞÓÚÆäÉúÇ°ËùÖª¡£»Ø´ðÍ¨³£ÊÇ¼ò¶Ì£¬º¬ºý»òÖØ¸´µÄÓï¾ä£¬¶øÇÒÈç¹ûÄã¶ÔÊ¬Ìå±§ÓÐµÐÒâ»òÕßÊ¬ÌåÈÏÎªÄãÊÇÆäµÐÈË£¬ËüÒ²²»ÊÇÒ»¶¨Òª¸øÄãÕýÈ·µÄ´ð¸´¡£¸Ã·¨Êõ²¢²»ÄÜÈÃ¸ÃÉúÎïµÄÁé»ê·µ»ØÆäÉíÌåÖÐ£¬Ö»ÊÇ»î»¯ÁËÆä¾«Éñ¡£Òò´Ë£¬¸ÃÊ¬Ìå²»ÄÜÈÏÖªÐÂµÄÐÅÏ¢£¬²»ÄÜÀí½âËüËÀºó·¢ÉúµÄÈÎºÎÊÂÇé£¬Ò²²»ÄÜ¶ÔÎ´À´µÄÊÂ¼þ×÷³ö²Â²â¡£</P>
-<H4 id="Speak_with_Plants">Ö²Îï½»Ì¸£üSpeak with Plants</H4>
-<P><EM>Èý»· ±ä»¯£¨Ò÷ÓÎÊ«ÈË¡¢µÂÂ³ÒÁ¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí£¨°ë¾¶ 30 ³ß£©<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>10 ·ÖÖÓ<BR>Äã¸øÖÜÎ§30³ß¹Ì¶¨<U>Áé¹â</U>·¶Î§ÄÚµÄÖ²Îï¸³ÓèÓÐÏÞµÄÖª¾õÓë»îÁ¦£¬Ê¹ÆäÄÜ¹»ÓëÄã¹µÍ¨ºÍ°´ÄãµÄ¼òµ¥ÃüÁîÐÐÊÂ¡£Äã¿ÉÒÔÏòÖ²ÎïÑ¯ÎÊ×î½üÒ»ÈÕ¸Ã·¨ÊõÇøÓòÄÚËù·¢ÉúµÄÊÂ£¬ÓÉ´ËÁË½âÓÐ¹ØÓÚÔøÂ·¹ýÕâÀïµÄÉúÎï¡¢ÌìÆøºÍÆäËû×´¿öµÄÐÅÏ¢¡£<BR>Äã¿ÉÒÔÈÃÇøÓòÄÚÒòÖ²ÎïÉú³¤ÐÎ³ÉµÄÀ§ÄÑµØÐÎ£¨Èç¹àÄ¾´Ô£©ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ±äÎªÆÕÍ¨µØÐÎ¡£ÄãÒ²¿ÉÒÔÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ½«ÓÐÖ²ÎïÉú³¤µÄÆÕÍ¨µØÐÎ±ä³ÉÀ§ÄÑµØÐÎ¡£<BR>ËäÈ»¸Ã·¨Êõ²¢²»ÄÜÈÃÖ²Îï°Î¸ù¶øÆð»òÒÆ¶¯Î»ÖÃ£¬µ«ËüÃÇ¿ÉÒÔÒÀÄãµÄÒâÔ¸¶ø»î¶¯×Ô¼ºµÄÊ÷Ö¦¡¢ÌÙÂûºÍ¾¥¸Ñ¡£<BR>Èç¹û·¨ÊõÇøÓòÄÚÓÐÒ»¸öÖ²ÎïÉúÎï£¬Äã¿ÉÒÔÈçÍ¬ÓÐ¹²Í¬ÓïÑÔÒ»°ãÓëÆä½»Á÷¡£</P>
-<H4 id="Spirit_Guardians">ÁéÌåÎÀÊ¿£üSpirit Guardians</H4>
-<P><EM>Èý»· Öä·¨£¨ÄÁÊ¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¾íµ»ÎÄ£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 10 ·ÖÖÓ<BR>ÔÚ·¨Êõ³ÖÐøÊ±¼äÄÚ£¬±£»¤ÐÔµÄÁéÌå»·ÈÆÔÚÄãµÄÖÜÎ§15³ßÁé¹â·¶Î§ÄÚ·ÉÎè¡£Èç¹ûÄãÊôÓÚÉÆÁ¼»òÖÐÁ¢ÕóÓª£¬ÔòËüÃÇÆ®ÃìµÄÉíÐÎ¿´ÆðÀ´ÏñÊÇÌìÊ¹»òÑý¾«£¨ÓÉÄãÑ¡Ôñ£©¡£Èç¹ûÄãÊôÓÚÐ°¶ñÕóÓª£¬ÔòËüÃÇ½«ÐÎÈçÐ°Ä§¡£<BR>Ê©Õ¹´Ë·¨ÊõÊ±£¬Äã¿ÉÒÔÖ¸¶¨ÌØ¶¨ÉúÎïÈÃÆä²»ÊÜ¸Ã·¨ÊõÓ°Ïì¡£³ý´ËÖ®ÍâµÄÉúÎïÔÚÁé¹âÇøÓòÄÚ½«ÊÜ·¨ÊõÓ°ÏìÖÂËÙ¶È±»¼õ°ë¡£µ±Áé¹â½øÈëÒ»¸öÉúÎïµÄ¿Õ¼ä¡¢Ò»¸öÉúÎï½øÈëÁé¹â»òÔÚÁé¹âÄÚ½áÊø»ØºÏÊ±£¬Æä±ØÐë½øÐÐÒ»´Î¸ÐÖª»íÃâ¡£»íÃâÊ§°Ü½«ÊÜµ½3d8µã¹âÒ«ÉËº¦£¨Èç¹ûÄãÊôÓÚÉÆÁ¼»òÖÐÁ¢£©»ò3d8µã°µÊ´ÉËº¦£¨Èç¹ûÄãÊôÓÚÐ°¶ñ£©£¬»íÃâ³É¹¦ÔòÖ»ÊÜµ½Ò»°ëÉËº¦¡£Ò»ÃûÉúÎïÒ»»ØºÏ½öÐè½øÐÐÒ»´Î¸Ã»íÃâ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>   Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÉËº¦¾ÍÔö¼Ó 1d8¡£</P>
-<H4 id="Stinking_Cloud">³ôÔÆÊõ£üStinking Cloud</H4>
-<P><EM>Èý»· Öä·¨£¨Ò÷ÓÎÊ«ÈË¡¢ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>90 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¸ö³ô¼¦µ°£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à 1 ·ÖÖÓ<BR>ÄãÒÔÊ©·¨¾àÀëÄÚÒ»µãÎªÖÐÐÄ´´Ôì³öÒ»ÍÅ°ë¾¶ 20 
-³ßµÄ»ÆÉ«¶ñÐÄÆøÌåÔÆÍÅÇò×´ÇøÓò¡£ÔÆÍÅÄÚÐÎ³ÉÖØ¶ÈÕÚ±Î¡£ÔÆÍÅ»áÒ»Ö±ÁôÔÚ¿ÕÖÐ£¬Ö±ÖÁ·¨Êõ³ÖÐøÊ±¼ä½áÊø»òÒ»ÕóÇ¿·ç£¨±ÈÈç<U><EM>Ôì·çÊõGust of 
-Wind</EM></U>´´ÔìµÄÇ¿·ç£©½«Æä´µÉ¢ÎªÖ¹¡£<BR>Èç¹ûÒ»¸öÉúÎïÔÚÆä»ØºÏ¿ªÊ¼Ê±Î»ÓÚÔÆÍÅÄÚ£¬ÔòËü±ØÐë³É¹¦Í¨¹ýÒ»´ÎÌåÖÊ»íÃâ¡£·ñÔò½«ÏÝÈë<U>ÖÐ¶¾</U>×´Ì¬Ö±µ½Æäµ±Ç°»ØºÏ½áÊø¡£Òò´Ë¶øÏÝÈë<U>ÖÐ¶¾</U>×´Ì¬ÆÚ¼ä£¬¸ÃÉúÎïÎÞ·¨Ö´ÐÐ¶¯×÷»ò¸½Ôù¶¯×÷¡£</P>
-<H4 id="Summon_Fey">Ñý¾«ÕÙ»½Êõ£üSummon Fey</H4>
-<P><EM>Èý»· Öä·¨£¨µÂÂ³ÒÁ¡¢ÓÎÏÀ¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>90 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V, S, M£¨Ò»¶ä¼ÛÖµ300+GPµÄ¶Æ½ð»¨£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1Ð¡Ê±<BR>Äã»½À´Ò»¸öÑý¾«ÁéÆÇ¡£ÆäÊ¹ÓÃÏÂÎÄÑý¾«ÁéÆÇµÄÊý¾Ý£¬²¢»áÔÚÊ©·¨¾àÀëÄÚÒ»´¦Äã¿É¼ûµÄÎ´±»Õ¼¾ÝµÄ¿Õ¼äÖÐÏÔÏÖ¡£µ±ÄãÊ©Õ¹·¨ÊõÊ±£¬´Ó·ßÅ­¡¢»¶ÐÀ¡¢¹îÕ©ÖÐÑ¡ÔñÒ»ÖÖÇéÐ÷£¬¸ÃÉúÎï»áÏÔÏÖÎªÒ»¸öÊÜÄãËùÑ¡ÇéÐ÷ËùÓ°ÏìµÄÑý¾«ÉúÎï£¬ÆäÊý¾ÝÖÐµÄ²¿·ÖÌØÐÔÒ²ÊÜ´ËÓ°Ïì¡£¸ÃÉúÎï»áÔÚÉúÃüÖµ½µÎª0»òÊÇ·¨Êõ½áÊøÊ±ÏûÊ§¡£<BR>¸ÃÉúÎïÊÇÄãµÄÃËÓÑ£¨¶ÔÄãµÄÆäËûÃËÓÑÒàÊÇÈç´Ë£©¡£ËüÔÚÕ½¶·ÖÐÊ¹ÓÃÄãµÄÏÈ¹¥£¬²¢ÔÚÄã»ØºÏ½áÊøºóÁ¢¼´ÐÐ¶¯¡£Ëü×ñ´ÓÓÚÄãµÄ¿ÚÍ·Ö¸Áî£¨ÎÞÐèÈÎºÎ¶¯×÷£©¡£Èç¹ûÄã²»·¢Áî£¬Ëü½«Ö´ÐÐ»Ø±Ü¶¯×÷²¢ÓÃÒÆ¶¯Á¦Ô¶ÀëÎ£ÏÕ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>¸ÃÉúÎïµÄÊý¾ÝÊ¹ÓÃÐÂµÄ·¨Êõ»·½×¡£</P>
-<div class="stat-block">
-<h5>Ñý¾«ÁéÆÇFey Spirit</h5>
-<div class="sub-line">Ð¡ÐÍÑý¾«£¬ÖÐÁ¢</div>
-<table><tr><td><STRONG>AC </STRONG>12+·¨Êõ»·½×</td></tr>
-<tr><td><STRONG>HP 
-  </STRONG>30+Ã¿±ÈÈý»·¸ßÒ»·¨Êõ»·½×10</td></tr>
-<tr><td><strong>ËÙ¶È </strong>30³ß£¬·ÉÐÐ30³ß</td></tr></table>
-<table class="stat-abilities"><tr><th></th><th></th><th>µ÷Õû</th><th>»íÃâ</th><td style="WIDTH: 5px"></td><th></th><th></th><th>µ÷Õû</th><th>»íÃâ</th><td style="WIDTH: 5px"></td><th></th><th></th><th>µ÷Õû</th><th>»íÃâ</th></tr>
-<tr><td class="c1"><strong>Á¦Á¿</strong></td><td class="c1">13</td><td class="c2">+1</td><td class="c2">+1</td>
-<td></td>
-<td class="c1"><strong>Ãô½Ý</strong></td><td class="c1">16</td><td class="c2">+3</td><td class="c2">+3</td>
-<td></td>
-<td class="c1"><strong>ÌåÖÊ</strong></td><td class="c1">14</td><td class="c2">+2</td><td class="c2">+2</td></tr>
-<tr><td class="c3"><strong>ÖÇÁ¦</strong></td><td class="c3">14</td><td class="c4">+2</td><td class="c4">+2</td>
-<td></td>
-<td class="c3"><strong>¸ÐÖª</strong></td><td class="c3">11</td><td class="c4">+0</td><td class="c4">+0</td>
-<td></td>
-<td class="c3"><strong>÷ÈÁ¦</strong></td><td class="c3">16</td><td class="c4">+3</td><td class="c4">+3</td></tr>
-</table>
-<table>
-<tr><td><strong>ÃâÒß </strong>÷È»ó</td></tr>
-<tr><td><strong>¸Ð¹Ù </strong>ºÚ°µÊÓ¾õ60³ß£¬±»¶¯²ì¾õ10</td></tr>
-<tr><td><strong>ÓïÑÔ </strong>Ä¾×åÓï£¬Àí½âÄãµÄÓïÑÔ</td></tr>
-<tr><td><strong>CR </strong>ÎÞ£¨XP0£»PBµÈÓÚÄãµÄÊìÁ·¼ÓÖµ£©</td></tr>
-</table>
-<P>
-</P>
-<h6>¶¯×÷Actions</h6>
-<p>
-<strong>¶àÖØ¹¥»÷Multiattack¡£</strong>ÁéÆÇ·¢¶¯µÈÓÚ·¨Êõ»·½×Ò»°ë´ÎÊýµÄÑý¾«Ö®½£¹¥»÷£¨ÏòÏÂÈ¡Õû£©¡£<br>
-<strong>Ñý¾«Ö®½£Fey Blade¡£</strong><em>½üÕ½¹¥»÷¼ì¶¨£º</em>¼ÓÖµµÈÓÚÄãµÄ·¨Êõ¹¥»÷¼ÓÖµ£¬´¥¼°5³ß¡£<em>ÃüÖÐ£º</em>2d6+3+·¨Êõ»·½×µÄÁ¦³¡ÉËº¦¡£<br>
-</p>
-<h6>¸½Ôù¶¯×÷Bonus Actions</h6>
-<p>
-<strong>Ñý¾«²½·¥Fey Step¡£</strong>ÁéÆÇÄ§·¨µØ´«ËÍÖÁ¶à30³ßÖÁÒ»´¦Ëü¿É¼ûµÄÎ´±»Õ¼¾Ý¿Õ¼ä¡£Ëæºó¸ù¾ÝËùÑ¡ÇéÐ÷£¬ÁéÆÇ´¥·¢ÒÔÏÂÐ§¹ûÖ®Ò»£º<br>
-<strong><FONT color=#ff0000><EM>·ßÅ­Fuming¡£</EM></FONT></strong>Ñý¾«ÔÚ´Ë»ØºÏ½áÊøÇ°µÄÏÂÒ»´Î¹¥»÷¼ì¶¨¾ßÓÐÓÅÊÆ¡£<br>
-<strong><EM><FONT color=#800080>»¶ÐÀMirthful¡£</FONT></EM></strong>¸ÐÖª»íÃâ£ºDCµÈÓÚÄãµÄ·¨Êõ»íÃâDC£¬µ¥Ò»ÁéÆÇ10³ßÄÚËü¿É¼ûµÄÉúÎï¡£<em>Ê§°Ü£º</em>Ä¿±êÊÜÄãºÍÁéÆÇ<u>÷È»ó</u>1·ÖÖÓ»òÔÚÄ¿±êÊÜµ½ÈÎÒâÉËº¦Ê±ÌáÇ°½áÊø¡£<br>
-<strong><FONT color=#008080><EM>¹îÕ©Tricksy¡£</EM></FONT></strong>ÁéÆÇÁîÄ§·¨<u>ºÚ°µ</u>³ä³âÓÚËü5³ßÄÚµÄÒ»´¦10³ß<u>Á¢·½</u>ÇøÓò£¬³ÖÐøÖÁÁéÆÇµÄÏÂ¸ö»ØºÏ½áÊø¡£
-</p>
-</div>
+	<H4 id="Remove_Curse">ï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Remove Curse</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ã´¥ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ä½«Î¬ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¿ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ð¶ï¿½Â»ï¿½ï¿½ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Revivify">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Revivify</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½Ê¥ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½Å¼ï¿½Öµ300+GPï¿½ï¿½ï¿½ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ä²Ä£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½Ó´ï¿½ï¿½ï¿½Ç°Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬Ò²ï¿½ï¿½ï¿½Ü»Ö¸ï¿½Ê§È¥ï¿½ï¿½ï¿½ï¿½ï¿½å²¿Î»ï¿½ï¿½
+	</P>
+	<H4 id="Sending">ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½Sending</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ Ô¤ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½Í­ï¿½ß£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï·¢ï¿½ï¿½Ò»Ð¡ï¿½Î¶ï¿½Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ñ¶ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½ã£©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½Ä·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½Ò»ï¿½ï¿½Ñ¶Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½<BR>ï¿½ï¿½Ä´ï¿½Ñ¶ï¿½ï¿½ï¿½Ô¿ï¿½Ô½ï¿½ï¿½ï¿½â³¤ï¿½Ä¾ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½Ô½Î»ï¿½æ¡£ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ã²»ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½æ£¬ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½5%ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¡£ï¿½ï¿½ï¿½Ñ¶Ï¢Ã»ï¿½Ü´ï¿½ï¿½ï£¬ï¿½ã½«ï¿½ï¿½Öªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù´Î¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½8Ð¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Í³ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½Ä¶ï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½Ò·ï¿½ï¿½ï¿½Ê§ï¿½Ü¡ï¿½
+	</P>
+	<H4 id="Sleet_Storm">Ñ©ï¿½ê±©ï¿½ï¿½Sleet Storm</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>150
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¡ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1
+		ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã£¬ï¿½ï¿½Ê¹ï¿½Ô¸Ãµï¿½Îªï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½40ï¿½ß¡ï¿½ï¿½ë¾¶20ï¿½ßµï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ä¶³ï¿½Ì¹ÇµÄ¶ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½Ú±Î£ï¿½ï¿½Ò¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ò»ï¿½ï¿½ï¿½ï¿½Â¶ï¿½Ä±ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ð¶¼½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¨ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½Ñµï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½×´Î½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½Ê¼ï¿½ï¿½Øºï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½Í¨ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>×´Ì¬ï¿½ï¿½Ê§È¥<U>×¨×¢</U>ï¿½ï¿½
+	</P>
+	<H4 id="Slow">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Slow</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>120
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1 ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+		40
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï²¢Å¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î§ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ä¿ï¿½ê¶¼Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½Ã·ï¿½ï¿½ï¿½Ó°ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½<BR>ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È¼ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½
+		AC
+		ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½â¶¼ï¿½ï¿½ï¿½-2ï¿½ï¿½Öµï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ö´ï¿½Ð·ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±Ö´ï¿½Ð¶ï¿½ï¿½ß¡ï¿½ï¿½Òµï¿½ï¿½ï¿½Ö´ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ü·ï¿½ï¿½ï¿½Ò»ï¿½Î¹ï¿½ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï³¢ï¿½ï¿½Ê©Õ¹Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³É·ÖµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½25%ï¿½Ä¸ï¿½ï¿½Ê»ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½Ì«ï¿½ï¿½ï¿½ï¿½Ê©Õ¹Ê§ï¿½Ü¡ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½Ò»ï¿½Î¸Ã¸ï¿½Öªï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ¸Ã·ï¿½ï¿½ï¿½Ð§Ó¦ï¿½ï¿½
+	</P>
+	<H4 id="Speak_with_Dead">ï¿½ï¿½ï¿½ß½ï¿½Ì¸ï¿½ï¿½Speak with Dead</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>10
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½È¼ï¿½Õµï¿½ï¿½ã£©<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>10
+		ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ê¬ï¿½ï¿½Ê©ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É»Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£ï¿½ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½ë»¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½<U>ï¿½ï¿½ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½Ê©ï¿½ï¿½Ê§ï¿½Ü¡ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê£¬ï¿½ò±¾´ï¿½Ê©ï¿½ï¿½Ê§ï¿½Ü¡ï¿½<BR>ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£Ê¬ï¿½ï¿½ï¿½ÖªÊ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Öªï¿½ï¿½ï¿½Ø´ï¿½Í¨ï¿½ï¿½ï¿½Ç¼ï¿½Ì£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¬ï¿½å±§ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ä´ð¸´¡ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê·µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Ö»ï¿½Ç»î»¯ï¿½ï¿½ï¿½ä¾«ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Ê¬ï¿½å²»ï¿½ï¿½ï¿½ï¿½Öªï¿½Âµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½é£¬Ò²ï¿½ï¿½ï¿½Ü¶ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â²â¡£
+	</P>
+	<H4 id="Speak_with_Plants">Ö²ï¿½ï½»Ì¸ï¿½ï¿½Speak with Plants</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¾¶ 30
+		ï¿½ß£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>10
+		ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Î§30ï¿½ß¹Ì¶ï¿½<U>ï¿½ï¿½ï¿½</U>ï¿½ï¿½Î§ï¿½Úµï¿½Ö²ï¿½ï¸³ï¿½ï¿½ï¿½ï¿½ï¿½Þµï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ã¹µÍ¨ï¿½Í°ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Õ¸Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½É´ï¿½ï¿½Ë½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¡¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³Éµï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½Ô£ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú±ï¿½Îªï¿½ï¿½Í¨ï¿½ï¿½ï¿½Î¡ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½Î¡ï¿½<BR>ï¿½ï¿½È»ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½Î¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½î¶¯ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ö¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¾ï¿½ï¿½Ñ¡ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Ð¹ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ä½»ï¿½ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Spirit_Guardians">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Spirit Guardians</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		10
+		ï¿½ï¿½ï¿½ï¿½<BR>ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½å»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î§15ï¿½ï¿½ï¿½ï¿½â·¶Î§ï¿½Ú·ï¿½ï¿½è¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ£©¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½Óªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°Ä§ï¿½ï¿½<BR>Ê©Õ¹ï¿½Ë·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä²»ï¿½Ü¸Ã·ï¿½ï¿½ï¿½Ó°ï¿½ì¡£ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È±ï¿½ï¿½ï¿½ï¿½ë¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Õ¼ä¡¢Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½Øºï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸ï¿½Öªï¿½ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü½ï¿½ï¿½Üµï¿½3d8ï¿½ï¿½ï¿½Ò«ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3d8ï¿½ã°µÊ´ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ñ£©£ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ö»ï¿½Üµï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¸Ã»ï¿½ï¿½â¡£<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>
+		Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1d8ï¿½ï¿½</P>
+	<H4 id="Stinking_Cloud">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Stinking Cloud</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>90
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1
+		ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Å°ë¾¶ 20
+		ï¿½ßµÄ»ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³ï¿½ï¿½Ø¶ï¿½ï¿½Ú±Î¡ï¿½ï¿½ï¿½ï¿½Å»ï¿½Ò»Ö±ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ð£ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ç¿ï¿½ç£¨ï¿½ï¿½ï¿½ï¿½<U><EM>ï¿½ï¿½ï¿½ï¿½ï¿½Gust of
+				Wind</EM></U>ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ç£©ï¿½ï¿½ï¿½ä´µÉ¢ÎªÖ¹ï¿½ï¿½<BR>ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØºÏ¿ï¿½Ê¼Ê±Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½Í¨ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½Ð¶ï¿½</U>×´Ì¬Ö±ï¿½ï¿½ï¿½äµ±Ç°ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½<U>ï¿½Ð¶ï¿½</U>×´Ì¬ï¿½Ú¼ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½Ö´ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Summon_Fey">ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½ï¿½ï¿½ï¿½Summon Fey</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä·¨ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>90
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>V, S,
+		Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½Öµ300+GPï¿½Ä¶Æ½ð»¨£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1Ð¡Ê±<BR>ï¿½ã»½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ó·ï¿½Å­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ©ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½Ü´ï¿½Ó°ï¿½ì¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Îª0ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê§ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Í·Ö¸ï¿½î£¨ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²»ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð»Ø±Ü¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Î£ï¿½Õ¡ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ÂµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¡ï¿½
+	</P>
+	<div class="stat-block">
+		<h5>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Fey Spirit</h5>
+		<div class="sub-line">Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</div>
+		<table>
+			<tr>
+				<td><STRONG>AC </STRONG>12+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+			</tr>
+			<tr>
+				<td><STRONG>HP
+					</STRONG>30+Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10</td>
+			</tr>
+			<tr>
+				<td><strong>ï¿½Ù¶ï¿½ </strong>30ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½30ï¿½ï¿½</td>
+			</tr>
+		</table>
+		<table class="stat-abilities">
+			<tr>
+				<th></th>
+				<th></th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<td style="WIDTH: 5px"></td>
+				<th></th>
+				<th></th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<td style="WIDTH: 5px"></td>
+				<th></th>
+				<th></th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+			</tr>
+			<tr>
+				<td class="c1"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c1">13</td>
+				<td class="c2">+1</td>
+				<td class="c2">+1</td>
+				<td></td>
+				<td class="c1"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c1">16</td>
+				<td class="c2">+3</td>
+				<td class="c2">+3</td>
+				<td></td>
+				<td class="c1"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c1">14</td>
+				<td class="c2">+2</td>
+				<td class="c2">+2</td>
+			</tr>
+			<tr>
+				<td class="c3"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c3">14</td>
+				<td class="c4">+2</td>
+				<td class="c4">+2</td>
+				<td></td>
+				<td class="c3"><strong>ï¿½ï¿½Öª</strong></td>
+				<td class="c3">11</td>
+				<td class="c4">+0</td>
+				<td class="c4">+0</td>
+				<td></td>
+				<td class="c3"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c3">16</td>
+				<td class="c4">+3</td>
+				<td class="c4">+3</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><strong>ï¿½ï¿½ï¿½ï¿½ </strong>ï¿½È»ï¿½</td>
+			</tr>
+			<tr>
+				<td><strong>ï¿½Ð¹ï¿½ </strong>ï¿½Ú°ï¿½ï¿½Ó¾ï¿½60ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10</td>
+			</tr>
+			<tr>
+				<td><strong>ï¿½ï¿½ï¿½ï¿½ </strong>Ä¾ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+			</tr>
+			<tr>
+				<td><strong>CR </strong>ï¿½Þ£ï¿½XP0ï¿½ï¿½PBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½</td>
+			</tr>
+		</table>
+		<P>
+		</P>
+		<h6>ï¿½ï¿½ï¿½ï¿½Actions</h6>
+		<p>
+			<strong>ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½Multiattackï¿½ï¿½</strong>ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<br>
+			<strong>ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Fey
+				Bladeï¿½ï¿½</strong><em>ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½</em>ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ß¡ï¿½<em>ï¿½ï¿½ï¿½Ð£ï¿½</em>2d6+3+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<br>
+		</p>
+		<h6>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bonus Actions</h6>
+		<p>
+			<strong>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Fey
+				Stepï¿½ï¿½</strong>ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½Ý¿Õ¼ä¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Ö®Ò»ï¿½ï¿½<br>
+			<strong>
+				<FONT color=#ff0000><EM>ï¿½ï¿½Å­Fumingï¿½ï¿½</EM></FONT>
+			</strong>ï¿½ï¿½ï¿½ï¿½ï¿½Ú´Ë»ØºÏ½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î¹ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½<br>
+			<strong><EM>
+					<FONT color=#800080>ï¿½ï¿½ï¿½ï¿½Mirthfulï¿½ï¿½</FONT>
+				</EM></strong>ï¿½ï¿½Öªï¿½ï¿½ï¿½â£ºDCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DCï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£<em>Ê§ï¿½Ü£ï¿½</em>Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<u>ï¿½È»ï¿½</u>1ï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½Ê±ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<br>
+			<strong>
+				<FONT color=#008080><EM>ï¿½ï¿½Õ©Tricksyï¿½ï¿½</EM></FONT>
+			</strong>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½<u>ï¿½Ú°ï¿½</u>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½ï¿½Úµï¿½Ò»ï¿½ï¿½10ï¿½ï¿½<u>ï¿½ï¿½ï¿½ï¿½</u>ï¿½ï¿½ï¿½ò£¬³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½Â¸ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½
+		</p>
+	</div>
 
-<H4 id="Summon_Undead">ÍöÁéÕÙ»½Êõ£üSummon Undead</H4>
-<P><EM>Èý»· ËÀÁé£¨Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>90 ³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V, S, M£¨Ò»¸ö¼ÛÖµ300+GPµÄ¶Æ½ðÍ·¹Ç£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1Ð¡Ê±<BR>Äã»½À´Ò»¸öÍöÁéÁéÆÇ¡£ÆäÊ¹ÓÃÏÂÎÄÍöÁéÁéÆÇµÄÊý¾Ý£¬²¢»áÔÚÊ©·¨¾àÀëÄÚÒ»´¦Äã¿É¼ûµÄÎ´±»Õ¼¾ÝµÄ¿Õ¼äÖÐÏÔÏÖ¡£µ±ÄãÊ©Õ¹·¨ÊõÊ±£¬´ÓÓÄÌå¡¢¸¯Ê¬¡¢º¡¹ÇÖÐÑ¡ÔñÒ»Àà£¬¸ÃÉúÎï»áÏÔÏÖÎªÄãËùÑ¡µÄÄÇÀàÐÎÌ¬µÄÍöÁéÉúÎï£¬ÆäÊý¾ÝÖÐµÄ²¿·ÖÌØÐÔÒ²ÊÜ´ËÓ°Ïì¡£¸ÃÉúÎï»áÔÚÉúÃüÖµ½µÎª0»òÊÇ·¨Êõ½áÊøÊ±ÏûÊ§¡£<BR>¸ÃÉúÎïÊÇÄãµÄÃËÓÑ£¨¶ÔÄãµÄÆäËûÃËÓÑÒàÊÇÈç´Ë£©¡£ËüÔÚÕ½¶·ÖÐÊ¹ÓÃÄãµÄÏÈ¹¥£¬²¢ÔÚÄã»ØºÏ½áÊøºóÁ¢¼´ÐÐ¶¯¡£Ëü×ñ´ÓÓÚÄãµÄ¿ÚÍ·Ö¸Áî£¨ÎÞÐèÈÎºÎ¶¯×÷£©¡£Èç¹ûÄã²»·¢Áî£¬Ëü½«Ö´ÐÐ»Ø±Ü¶¯×÷²¢ÓÃÒÆ¶¯Á¦Ô¶ÀëÎ£ÏÕ¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>¸ÃÉúÎïµÄÊý¾ÝÊ¹ÓÃÐÂµÄ·¨Êõ»·½×¡£</P>
-<div class="stat-block">
-<h5>ÍöÁéÁéÆÇUndead Spirit</h5>
-<div class="sub-line">ÖÐÐÍÍöÁé£¬ÖÐÁ¢</div>
-<table><tr><td><strong>AC </strong>11+·¨Êõ»·½×</td></tr>
-<tr><td><strong> HP </strong>30£¨½öÓÄÌåºÍ¸¯Ê¬£©»ò20£¨½öº¡¹Ç£©+Ã¿±ÈÈý»·¸ßÒ»·¨Êõ»·½×10
-</td></tr>
-<tr><td><strong>ËÙ¶È </strong>30³ß£»·ÉÐÐ40³ß£¨Ðü¸¡£»½öÓÄÌå£©</td></tr></table>
-<table class="stat-abilities"><tr><th></th><th></th><th>µ÷Õû</th><th>»íÃâ</th><td style="WIDTH: 5px"></td><th></th><th></th><th>µ÷Õû</th><th>»íÃâ</th><td style="WIDTH: 5px"></td><th></th><th></th><th>µ÷Õû</th><th>»íÃâ</th></tr>
-<tr><td class="c1"><strong>Á¦Á¿</strong></td><td class="c1">12</td><td class="c2">+1</td><td class="c2">+1</td>
-<td></td>
-<td class="c1"><strong>Ãô½Ý</strong></td><td class="c1">16</td><td class="c2">+3</td><td class="c2">+3</td>
-<td></td>
-<td class="c1"><strong>ÌåÖÊ</strong></td><td class="c1">15</td><td class="c2">+2</td><td class="c2">+2</td></tr>
-<tr><td class="c3"><strong>ÖÇÁ¦</strong></td><td class="c3">4</td><td class="c4">-3</td><td class="c4">-3</td>
-<td></td>
-<td class="c3"><strong>¸ÐÖª</strong></td><td class="c3">10</td><td class="c4">+0</td><td class="c4">+0</td>
-<td></td>
-<td class="c3"><strong>÷ÈÁ¦</strong></td><td class="c3">9</td><td class="c4">-1</td><td class="c4">-1</td></tr>
-</table>
-<table>
-<tr><td><strong>ÃâÒß </strong>°µÊ´£¬¶¾ËØ£»Á¦½ß£¬¿Ö»Å£¬Âé±Ô£¬ÖÐ¶¾</td></tr>
-<tr><td><strong>¸Ð¹Ù </strong>ºÚ°µÊÓ¾õ60³ß£¬±»¶¯²ì¾õ10</td></tr>
-<tr><td><strong>ÓïÑÔ </strong>Àí½âÄãËµµÄÓïÑÔ</td></tr>
-<tr><td><strong>CR </strong>ÎÞ£¨XP0£»PBµÈÓÚÄãµÄÊìÁ·¼ÓÖµ£©</td></tr>
-</table>
-<P>
-</P>
-<h6>ÌØÖÊTraits</h6>
-<p>
-<strong>¸¯ÃðÁé¹âFestering Aura£¨½ö¸¯Ê¬£©¡£</strong>ÌåÖÊ»íÃâ£ºDCµÈÓÚÄãµÄ·¨Êõ»íÃâDC£¬Ô´×ÔÁéÆÇµÄ5³ß<u>¹â»·</u>ÇøÓòÄÚ¿ªÊ¼Æä»ØºÏµÄÃ¿ÃûÉúÎï£¨³ýÄãÒÔÍâ£©¡£<em>Ê§°Ü£º</em>¸ÃÉúÎïÏÝÈë<u>ÖÐ¶¾</u>×´Ì¬£¬Ö±ÖÁÆäÏÂ¸ö»ØºÏ¿ªÊ¼¡£<br>
-<strong>ÐéÌåÍ¨ÐÐIncorporeal Passage£¨½öÓÄÌå£©¡£</strong>ÁéÆÇ¿ÉÒÔÒÆ¶¯´©¹ýÆäËûÉúÎï»òÎï¼þ£¬ÈçÍ¬´©¹ýÀ§ÄÑµØÐÎÒ»°ã¡£ÔÚÆä»ØºÏ½áÊøÊ±£¬ÈôÁéÆÇ»¹´¦ÓÚÎï¼þÄÚ£¬ÔòÆä±»Å²µ½¾àÀë×î½üµÄÎ´Õ¼¾Ý¿Õ¼ä£¬ÇÒÃ¿Òò´ËÒÆ¶¯5³ß±ãÊÜµ½1d10Á¦³¡ÉËº¦¡£
-</p>
-<h6>¶¯×÷Actions</h6>
-<p>
-<strong>¶àÖØ¹¥»÷Multiattack¡£</strong>ÁéÆÇ·¢¶¯µÈÓÚ·¨Êõ»·½×Ò»°ë´ÎÊýµÄ¹¥»÷£¨ÏòÏÂÈ¡Õû£©¡£<br>
-<strong>ÖÂËÀÖ®´¥Deathly Touch£¨½öÓÄÌå£©¡£</strong><em>½üÕ½¹¥»÷¼ì¶¨£º</em>¼ÓÖµµÈÓÚÄãµÄ·¨Êõ¹¥»÷¼ÓÖµ£¬´¥¼°5³ß¡£<em>ÃüÖÐ£º</em>1d8+3+·¨Êõ»·½×µÄ°µÊ´ÉËº¦£¬ÇÒÄ¿±êÏÝÈë<u>¿Ö»Å</u>×´Ì¬Ö±ÖÁÆäÏÂ¸ö»ØºÏ½áÊø¡£<br><STRONG>°µå£¼ýGrave 
-Bolt£¨½öº¡¹Ç£©¡£</STRONG><em>Ô¶³Ì¹¥»÷¼ì¶¨£º</em>¼ÓÖµµÈÓÚÄãµÄ·¨Êõ¹¥»÷¼ÓÖµ£¬Éä³Ì150³ß¡£<em>ÃüÖÐ£º</em>2d4+3+·¨Êõ»·½×µÄ°µÊ´ÉËº¦¡£<br>
-<strong>¸¯Ãð×¦»÷Rotting Claw£¨½ö¸¯Ê¬£©¡£</strong><em>½üÕ½¹¥»÷¼ì¶¨£º</em>¼ÓÖµµÈÓÚÄãµÄ·¨Êõ¹¥»÷¼ÓÖµ£¬´¥¼°5³ß¡£<em>ÃüÖÐ£º</em>1d6+3+·¨Êõ»·½×µÄ»Ó¿³ÉËº¦¡£ÈôÄ¿±êÒÑÏÝÈë<u>ÖÐ¶¾</u>×´Ì¬£¬ÔòÆä»¹»áÏÝÈë<u>Âé±Ô</u>×´Ì¬£¬Ö±ÖÁÆäÏÂ¸ö»ØºÏ½áÊø¡£
-</p>
-</div>
+	<H4 id="Summon_Undead">ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½ï¿½ï¿½ï¿½Summon Undead</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM> <BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>90
+		ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>V, S,
+		Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Öµ300+GPï¿½Ä¶Æ½ï¿½Í·ï¿½Ç£ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1Ð¡Ê±<BR>ï¿½ã»½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Î´ï¿½ï¿½Õ¼ï¿½ÝµÄ¿Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½Ê©Õ¹ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¡¢ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½Ü´ï¿½Ó°ï¿½ì¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Îª0ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê§ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Í·Ö¸ï¿½î£¨ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²»ï¿½ï¿½ï¿½î£¬ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð»Ø±Ü¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Î£ï¿½Õ¡ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ÂµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¡ï¿½
+	</P>
+	<div class="stat-block">
+		<h5>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Undead Spirit</h5>
+		<div class="sub-line">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½</div>
+		<table>
+			<tr>
+				<td><strong>AC </strong>11+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+			</tr>
+			<tr>
+				<td><strong> HP </strong>30ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½20ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½+Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10
+				</td>
+			</tr>
+			<tr>
+				<td><strong>ï¿½Ù¶ï¿½ </strong>30ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½40ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£©</td>
+			</tr>
+		</table>
+		<table class="stat-abilities">
+			<tr>
+				<th></th>
+				<th></th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<td style="WIDTH: 5px"></td>
+				<th></th>
+				<th></th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<td style="WIDTH: 5px"></td>
+				<th></th>
+				<th></th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+				<th>ï¿½ï¿½ï¿½ï¿½</th>
+			</tr>
+			<tr>
+				<td class="c1"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c1">12</td>
+				<td class="c2">+1</td>
+				<td class="c2">+1</td>
+				<td></td>
+				<td class="c1"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c1">16</td>
+				<td class="c2">+3</td>
+				<td class="c2">+3</td>
+				<td></td>
+				<td class="c1"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c1">15</td>
+				<td class="c2">+2</td>
+				<td class="c2">+2</td>
+			</tr>
+			<tr>
+				<td class="c3"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c3">4</td>
+				<td class="c4">-3</td>
+				<td class="c4">-3</td>
+				<td></td>
+				<td class="c3"><strong>ï¿½ï¿½Öª</strong></td>
+				<td class="c3">10</td>
+				<td class="c4">+0</td>
+				<td class="c4">+0</td>
+				<td></td>
+				<td class="c3"><strong>ï¿½ï¿½ï¿½ï¿½</strong></td>
+				<td class="c3">9</td>
+				<td class="c4">-1</td>
+				<td class="c4">-1</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><strong>ï¿½ï¿½ï¿½ï¿½ </strong>ï¿½ï¿½Ê´ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ß£ï¿½ï¿½Ö»Å£ï¿½ï¿½ï¿½Ô£ï¿½ï¿½Ð¶ï¿½</td>
+			</tr>
+			<tr>
+				<td><strong>ï¿½Ð¹ï¿½ </strong>ï¿½Ú°ï¿½ï¿½Ó¾ï¿½60ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10</td>
+			</tr>
+			<tr>
+				<td><strong>ï¿½ï¿½ï¿½ï¿½ </strong>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+			</tr>
+			<tr>
+				<td><strong>CR </strong>ï¿½Þ£ï¿½XP0ï¿½ï¿½PBï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½</td>
+			</tr>
+		</table>
+		<P>
+		</P>
+		<h6>ï¿½ï¿½ï¿½ï¿½Traits</h6>
+		<p>
+			<strong>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Festering
+				Auraï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½</strong>ï¿½ï¿½ï¿½Ê»ï¿½ï¿½â£ºDCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DCï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½5ï¿½ï¿½<u>ï¿½â»·</u>ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½Ê¼ï¿½ï¿½ØºÏµï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£©ï¿½ï¿½<em>Ê§ï¿½Ü£ï¿½</em>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<u>ï¿½Ð¶ï¿½</u>×´Ì¬ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Â¸ï¿½ï¿½ØºÏ¿ï¿½Ê¼ï¿½ï¿½<br>
+			<strong>ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Incorporeal
+				Passageï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£©ï¿½ï¿½</strong>ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½ï¿½Ò»ï¿½ã¡£ï¿½ï¿½ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ä±»Å²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´Õ¼ï¿½Ý¿Õ¼ä£¬ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½5ï¿½ß±ï¿½ï¿½Üµï¿½1d10ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½
+		</p>
+		<h6>ï¿½ï¿½ï¿½ï¿½Actions</h6>
+		<p>
+			<strong>ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½Multiattackï¿½ï¿½</strong>ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<br>
+			<strong>ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Deathly
+				Touchï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£©ï¿½ï¿½</strong><em>ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½</em>ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ß¡ï¿½<em>ï¿½ï¿½ï¿½Ð£ï¿½</em>1d8+3+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µÄ°ï¿½Ê´ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<u>ï¿½Ö»ï¿½</u>×´Ì¬Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Â¸ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½<br><STRONG>ï¿½ï¿½å£¼ï¿½Grave
+				Boltï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½</STRONG><em>Ô¶ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½</em>ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½150ï¿½ß¡ï¿½<em>ï¿½ï¿½ï¿½Ð£ï¿½</em>2d4+3+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µÄ°ï¿½Ê´ï¿½Ëºï¿½ï¿½ï¿½<br>
+			<strong>ï¿½ï¿½ï¿½ï¿½×¦ï¿½ï¿½Rotting
+				Clawï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½ï¿½</strong><em>ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ì¶¨ï¿½ï¿½</em>ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ß¡ï¿½<em>ï¿½ï¿½ï¿½Ð£ï¿½</em>1d6+3+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µÄ»Ó¿ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<u>ï¿½Ð¶ï¿½</u>×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ä»¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<u>ï¿½ï¿½ï¿½</u>×´Ì¬ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½Â¸ï¿½ï¿½ØºÏ½ï¿½ï¿½ï¿½ï¿½ï¿½
+		</p>
+	</div>
 
-<H4 id="Tongues">ÇÉÑÔÊõ£üTongues</H4>
-<P><EM>Èý»· Ô¤ÑÔ£¨Ò÷ÓÎÊ«ÈË¡¢ÄÁÊ¦¡¢ÊõÊ¿¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>´¥Åö<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢M£¨Ò»×ùÎ¢ËõÃíËþ£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1Ð¡Ê±<BR>´Ë·¨Êõ¸³ÓèÄã´¥ÅöµÄÒ»ÃûÉúÎïÀí½âÈÎºÎÆäÄÜ¿´¼û»òÌý¼ûµÄ¿ÚÓï»òÊÖÓïµÄÄÜÁ¦¡£´ËÍâ£¬µ±Ä¿±êÉúÎïÒÔ¿ÚÓï»òÊÖÓï½øÐÐ½»Á÷Ê±£¬ÈÎºÎÄÜÌý¼ûÆä»°Óï»ò¿´¼ûÆäÊÖÓï£¬ÇÒÖªµÀÖÁÉÙÒ»ÃÅÓïÑÔµÄÉúÎï¶¼ÄÜÀí½âËü¡£</P>
-<H4 id="Vampiric_Touch">¼³ÑªÖ®´¥£üVampiric Touch</H4>
-<P><EM>Èý»· ËÀÁé£¨ÊõÊ¿¡¢¡¢Ä§ÆõÊ¦¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>×ÔÉí<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>ÄãµÄÒõÓ°»·ÈÆ×ÅµÄÊÖ¿ÉÒÔÎüÈ¡ËûÈËµÄÉúÃüÁ¦À´Îª×Ô¼ºÁÆÉË¡£¶ÔÄã´¥¼°·¶Î§ÄÚµÄÒ»ÃûÉúÎï½øÐÐÒ»´Î½üÕ½·¨Êõ¹¥»÷¡£ÈôÃüÖÐ£¬ÔòÄ¿±êÊÜµ½3d6µã°µÊ´ÉËº¦£¬¶øÄãÔò»Ö¸´ÊýÖµµÈÍ¬ÓÚËùÔì³É°µÊ´ÉËº¦Ò»°ëµÄÉúÃüÖµ¡£<BR>¸Ã·¨ÊõÖÕÖ¹Ç°£¬Äã¿ÉÒÔÔÚÄãµÄÃ¿¸ö»ØºÏÄÚÓÃ<U>Ä§·¨</U>¶¯×÷¶ÔÏàÍ¬»ò²»Í¬µÄÉúÎï½øÐÐÒ»´ÎÕâÑùµÄ¹¥»÷¡£<BR><STRONG>Éý»·Ê©·¨¡£</STRONG>Ê¹ÓÃµÄ·¨ÊõÎ»Ã¿±ÈÈý»·¸ßÒ»»·£¬´Ë·¨ÊõµÄÉËº¦¾ÍÌá¸ß1d6¡£</P>
-<H4 id="Water_Breathing">Ë®ÏÂºôÎü£üWater Breathing</H4>
-<P><EM>Èý»· ±ä»¯£¨µÂÂ³ÒÁ¡¢ÓÎÏÀ¡¢ÊõÊ¿¡¢·¨Ê¦£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷»òÒÇÊ½<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>30³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¸ù¶ÌÂ«Î­£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>24Ð¡Ê±<BR>ÔÚ·¨ÊõÖÕÖ¹Ç°£¬¸Ã·¨ÊõÈÃÊ©·¨¾àÀëÄÚÄãËùÑ¡ÔñµÄÖÁ¶àÊ®¸ö×ÔÔ¸ÉúÎï»ñµÃÔÚË®ÏÂºôÎüµÄÄÜÁ¦¡£´ËÍâ£¬ÊÜÊõÕßÒÀÈ»±£ÓÐÕý³£µÄºôÎüÄÜÁ¦¡£</P>
-<H4 id="Water_Walk">Ë®ÉÏÐÐ×ß£üWater Walk</H4>
-<P><EM>Èý»· ±ä»¯£¨ÄÁÊ¦¡¢µÂÂ³ÒÁ¡¢ÓÎÏÀ¡¢ÊõÊ¿£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷»òÒÇÊ½<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>30³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»¸öÈíÄ¾Èû£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>1Ð¡Ê±<BR>´Ë·¨Êõ¸³ÓèÄãÑ¡ÔñµÄÎ»ÓÚÊ©·¨¾àÀëÄÚµÄÖÁ¶àÊ®ÃûÉúÎïÔÚ³ÖÐøÊ±¼äÄÚ½«ÈÎºÎÒºÌå±íÃæ£¨±ÈÈçË®¡¢Ëá¡¢Äà¡¢Ñ©¡¢Á÷É³¡¢ÑÒ½¬µÈ£©ÊÓ×÷ÎÞº¦µÄ¹ÌÌåµØÃæ´©Ô½µÄÄÜÁ¦£¨´©Ô½ÈÛÑÒµÄÉúÎïÈÔÈ»»áÒò³ãÈÈÊÜµ½ÉËº¦£©¡£<BR>Ò»ÃûÊÜÓ°ÏìµÄÄ¿±ê±ØÐëÓÃÒ»¸ö¸½Ôù¶¯×÷²ÅÄÜ´©¹ýÒºÌå±íÃæ½øÈëÆäÄÚ²¿£¬·´Ö®ÒàÈ»¡£È»¶øÈôÄ¿±ê½«Òò×¹Âä¶ø½øÈëÒºÌåÖÐ£¬ÔòÆä»áÖ±½Ó´©¹ýÒºÌå±íÃæ£¬Èç³£½øÈëÆäÄÚ²¿¡£</P>
-<H4 id="Wind_Wall">·çÇ½Êõ£üWind Wall</H4>
-<P><EM>Èý»· ËÜÄÜ£¨µÂÂ³ÒÁ¡¢ÓÎÏÀ£©</EM> <BR><STRONG>Ê©·¨Ê±¼ä£º</STRONG>¶¯×÷<BR><STRONG>Ê©·¨¾àÀë£º</STRONG>120³ß<BR><STRONG>·¨Êõ³É·Ö£º</STRONG>V¡¢S¡¢M£¨Ò»°ÑÉÈ×ÓºÍÒ»¸ùÓðÃ«£©<BR><STRONG>³ÖÐøÊ±¼ä£º</STRONG>×¨×¢£¬ÖÁ¶à1·ÖÖÓ<BR>ÄãÖ¸¶¨Ê©·¨¾àÀëÄÚµØÃæÉÏÒ»µã²¢´ÓÖÐÉýÆðÁËÒ»µÀÁÒ·çÐÎ³ÉµÄÇ½±Ú¡£Äã¿ÉÒÔÔì³ö³¤¶ÈÖÁ¶à 50 
-³ß¡¢¸ß¶ÈÖÁ¶à15³ß¡¢ºñ¶ÈÖÁ¶à1³ßµÄ·çÇ½¡£Äã¿ÉÒÔ×ÔÓÉËÜÔì¸ÃÇ½µÄÐÎ×´£¬²»¹ýËü±ØÐëÑØ×ÅµØÃæÐÎ³ÉÒ»ÌõÁ¬ÐøµÄ¹ìµÀ¡£·çÇ½³ÖÐø´æÔÚÖÁ·¨ÊõÖÕÖ¹¡£<BR>·çÇ½³öÏÖÊ±£¬ËùÓÐÎ»ÓÚ·çÇ½ËùÕ¼¾ÝÇøÓòÄÚµÄÉúÎï±ØÐë½øÐÐÒ»´ÎÁ¦Á¿»íÃâ¡£»íÃâÊ§°Ü£¬ÊÜµ½4d8µã¶Û»÷ÉËº¦¡£»íÃâ³É¹¦£¬ÔòÖ»ÊÜÒ»°ëÉËº¦¡£<BR>ÁÒ·ç¿ÉÒÔ×è¸ôÅ¨Îí¡¢ÑÌ³¾ºÍÆäËûÆøÌå¡£ÌåÐÍÎªÐ¡ÐÍ»ò¸üÐ¡µÄ·ÉÐÐÉúÎï»òÎï¼þÎÞ·¨´©¹ý·çÇ½¡£ÖØÁ¿ÇáµÄÎïÖÊ´ø½ø·çÇ½ÖÐÊ±½«±»ÏòÉÏ´µ·É¡£¶ÔÇ½ºóÄ¿±êÉä³öµÄ¼ý¡¢Ê¸ºÍÆäËûÆÕÍ¨·ÉÐÐÎï»á±»³¯ÉÏ´µ×ß¶øÖ±½ÓÅÐÎª´òÊ§¡£¾ÞÈË»ò¹¥³ÇÆ÷ÐµÍ¶³öµÄ¾ÞÊ¯ºÍÀàËÆµÄ·ÉÐÐÎï²»ÊÜÓ°Ïì¡£´¦ÓÚÆø»¯ÐÎÌ¬µÄÉúÎïÎÞ·¨´©¹ý·çÇ½¡£</P></body>
+	<H4 id="Tongues">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tongues</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ Ô¤ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Ê«ï¿½Ë¡ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½Î¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR>ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã´¥ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»°ï¿½ï¿½ò¿´¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¶¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Vampiric_Touch">ï¿½ï¿½ÑªÖ®ï¿½ï¿½ï¿½ï¿½Vampiric Touch</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é£¨ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ä§ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½S<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½Ö¿ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ô¼ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½ï¿½ï¿½ï¿½ã´¥ï¿½ï¿½ï¿½ï¿½Î§ï¿½Úµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Üµï¿½3d6ï¿½ã°µÊ´ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Öµï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É°ï¿½Ê´ï¿½Ëºï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½<BR>ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½<U>Ä§ï¿½ï¿½</U>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½</STRONG>Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½Î»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1d6ï¿½ï¿½
+	</P>
+	<H4 id="Water_Breathing">Ë®ï¿½Âºï¿½ï¿½ï¿½ï¿½ï¿½Water Breathing</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>30ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Â«Î­ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>24Ð¡Ê±<BR>ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹Ç°ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½Âºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Water_Walk">Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½Water Walk</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>30ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>1Ð¡Ê±<BR>ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Îºï¿½Òºï¿½ï¿½ï¿½ï¿½æ£¨ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½á¡¢ï¿½à¡¢Ñ©ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½Ò½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þºï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½æ´©Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½<BR>Ò»ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½È»ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ê½«ï¿½ï¿½×¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó´ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½ï¿½æ£¬ï¿½ç³£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½
+	</P>
+	<H4 id="Wind_Wall">ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½Wind Wall</H4>
+	<P><EM>ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</EM>
+		<BR><STRONG>Ê©ï¿½ï¿½Ê±ï¿½ä£º</STRONG>ï¿½ï¿½ï¿½ï¿½<BR><STRONG>Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</STRONG>120ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½É·Ö£ï¿½</STRONG>Vï¿½ï¿½Sï¿½ï¿½Mï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ã«ï¿½ï¿½<BR><STRONG>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</STRONG>×¨×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½<BR>ï¿½ï¿½Ö¸ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã²¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ò·ï¿½ï¿½Î³Éµï¿½Ç½ï¿½Ú¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		50
+		ï¿½ß¡ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½15ï¿½ß¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ßµÄ·ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½Î³ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½<BR>ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ú·ï¿½Ç½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½Üµï¿½4d8ï¿½ï¿½Û»ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½<BR>ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¨ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¡£ï¿½ï¿½ï¿½ï¿½ÎªÐ¡ï¿½Í»ï¿½ï¿½Ð¡ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½É¡ï¿½ï¿½ï¿½Ç½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ê¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ß¶ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ò¹¥³ï¿½ï¿½ï¿½ÐµÍ¶ï¿½ï¿½ï¿½Ä¾ï¿½Ê¯ï¿½ï¿½ï¿½ï¿½ï¿½ÆµÄ·ï¿½ï¿½ï¿½ï¿½ï²»ï¿½ï¿½Ó°ï¿½ì¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½
+	</P>
+</body>
+
 </html>

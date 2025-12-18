@@ -1,116 +1,475 @@
 <!-- coding: gbk -->
 <html>
-<head><title>µÚÈý²½£ºÈ·¶¨ÊôÐÔÖµ</title>
-<meta content="text/html; charset=gb2312">
-<link rel="stylesheet" href="../../style.css"></head>
 
-<body><h3> µÚÈý²½£ºÈ·¶¨ÊôÐÔÖµ Determine Ability Scores</h3>
-<p>ÒªÈ·¶¨Äã½ÇÉ«µÄÊôÐÔÖµ£¬ÄãÐèÒªÏÈ°´ÕÕÏÂÁÐÖ¸µ¼Éú³ÉÒ»×é6¸öÊý×Ö£¬È»ºó½«ÕâÐ©Êý×Ö·ÖÅä¸øÄãµÄÁùÏîÊôÐÔ¡£µÚÒ»ÕÂ½âÊÍÁËÃ¿ÏîÊôÐÔµÄÒâÒå¡£</p>
+<head>
+  <title>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ</title>
+  <meta content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+  <h3> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ Determine Ability Scores</h3>
+  <p>ÒªÈ·ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½6ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½È»ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½Ò»ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½å¡£</p>
 
 
-<p><STRONG><FONT color=#800000>Éú³ÉÄãµÄÊýÖµ 
-Generate Your Scores</FONT>   
-<BR></STRONG>ÒÔÏÂÁÐÈýÖÖ·½·¨Ö®Ò»È·¶¨ÄãµÄÊôÐÔÖµ¡£ÄãµÄDMÒ²Ðí»áÆ«ºÃÆäÖÐÌØ¶¨µÄÄ³Ò»¸ö¡£</p>
-<UL>
-  <LI>
-<div><b><FONT face=·ÂËÎ>±ê×¼ÊýÁÐ</FONT><EM><FONT face="Times New Roman">Standard 
-  Array</FONT></EM>¡£</b>Ê¹ÓÃÏÂÃæÁù¸öÊýÖµ×÷ÎªÄãµÄÊôÐÔÖµ£º15¡¢14¡¢13¡¢12¡¢10¡¢8</div>
-  <LI>
-<div><b><FONT face=·ÂËÎ>Ëæ»úÉú³É</FONT><FONT face="Times New Roman"><EM>Random 
-  Generation</EM></FONT>¡£</b>Í¶ÖÀ4¸öd6£¬½«µãÊý×î¸ßµÄÈý¸ö÷»×ÓµÄ×ÜºÍ¼ÇÂ¼ÏÂÀ´¡£ÔÙÕâÃ´×öÎå´Î£¬ÕâÑù¾ÍÓÐÁù¸öÊý×ÖÁË¡£</div>
-  <LI>
-<div><b><FONT face=·ÂËÎ>¹ºµã·¨</FONT><EM><FONT face="Times New Roman">Point Cost</FONT></EM></b><b>¡£</b>ÄãÓÐ27µã¿ÉÒÔ»¨·ÑÔÚÊôÐÔÖµÉÏ¡£Ã¿Ò»¸öÊýÖµµÄ·ÑÓÃ¶¼ÔÚ<STRONG>ÊôÐÔÖµµãÊý»¨·Ñ</STRONG>±íÖÐ¸ø³ö¡£±ÈÈç£¬14Õâ¸öÊýÖµ»áÓÃµôÄã27µãÖÐµÄ7µã¡£</div></LI></UL>
+  <p><STRONG>
+      <FONT color=#da0303>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        Generate Your Scores</FONT>
+      <BR>
+    </STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ö®Ò»È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½DMÒ²ï¿½ï¿½ï¿½ï¿½Æ«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ä³Ò»ï¿½ï¿½ï¿½ï¿½</p>
+  <UL>
+    <LI>
+      <div><b>
+          <FONT face=ï¿½ï¿½ï¿½ï¿½>ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½</FONT><EM>
+            <FONT face="Times New Roman">Standard
+              Array</FONT>
+          </EM>ï¿½ï¿½
+        </b>Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½15ï¿½ï¿½14ï¿½ï¿½13ï¿½ï¿½12ï¿½ï¿½10ï¿½ï¿½8</div>
+    <LI>
+      <div><b>
+          <FONT face=ï¿½ï¿½ï¿½ï¿½>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</FONT>
+          <FONT face="Times New Roman"><EM>Random
+              Generation</EM></FONT>ï¿½ï¿½
+        </b>Í¶ï¿½ï¿½4ï¿½ï¿½d6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ÜºÍ¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½</div>
+    <LI>
+      <div><b>
+          <FONT face=ï¿½ï¿½ï¿½ï¿½>ï¿½ï¿½ï¿½ã·¨</FONT><EM>
+            <FONT face="Times New Roman">Point Cost</FONT>
+          </EM>
+        </b><b>ï¿½ï¿½</b>ï¿½ï¿½ï¿½ï¿½27ï¿½ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ï¡ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä·ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½<STRONG>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG>ï¿½ï¿½ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬14ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½27ï¿½ï¿½ï¿½Ðµï¿½7ï¿½ã¡£
+      </div>
+    </LI>
+  </UL>
 
-<p><STRONG> ÊôÐÔÖµµãÊý»¨·ÑAbility Score Point Costs</STRONG>
-<TABLE style="WIDTH: 360px; BORDER-COLLAPSE: collapse; TEXT-ALIGN: 
+  <p><STRONG> ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ability Score Point Costs</STRONG>
+  <TABLE style="WIDTH: 360px; BORDER-COLLAPSE: collapse; TEXT-ALIGN: 
 center" cellSpacing=0 cellPadding=2 border=0>
-<TR><TD><STRONG>ÊýÖµ</STRONG></TD><TD><STRONG>»¨·Ñ</STRONG></TD><TD><STRONG>ÊýÖµ</STRONG></TD><TD><STRONG>»¨·Ñ</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>8</TD><TD>0</TD><TD>12</TD><TD>4</TD></TR>
-<TR><TD>9</TD><TD>1</TD><TD>13</TD><TD>5</TD></TR>
-<TR bgColor=#eeeeee><TD>10</TD><TD>2</TD><TD>14</TD><TD>7</TD></TR>
-<TR><TD>11</TD><TD>3</TD><TD>15</TD><TD>9</TD></TR></TABLE></p>
-<p><STRONG><FONT color=#800000>·ÖÅäÊôÐÔÖµ 
-Assign Ability Scores</FONT>   </STRONG><BR>ÔÚÄãÉú³ÉÁËÁù¸öÊýÖµÖ®ºó£¬¾Í°ÑËüÃÇ·ÖÅä¸øÁ¦Á¿¡¢Ãô½Ý¡¢ÌåÖÊ¡¢ÖÇÁ¦¡¢¸ÐÖªºÍ÷ÈÁ¦ÁùÏîÊôÐÔ£¬±ðÍüÁËÄãÖ°ÒµµÄÖ÷ÒªÊôÐÔ¡£Ò²°ÑÊôÐÔµ÷ÕûÖµÌîÉÏ¡£<BR>Èç¹ûÄãÕýÊ¹ÓÃ±ê×¼ÊýÁÐÑ¡Ïî£¬Çë²éÑ¯<STRONG>°´Ö°Òµ¸ø³öµÄ±ê×¼ÊýÁÐ</STRONG>±í£¬»ñÈ¡¶ÔÓÚÄãµÄÖ°Òµ¶øÑÔÓ¦¸Ã°ÑÄÄ¸öÊýÖµ·ÖÅä¸øÊ²Ã´ÊôÐÔµÄ½¨Òé¡£ÕâÕÅ±í¸ñ°Ñ×î´óµÄÊý×Ö·ÖÅä¸øÁËÖ°ÒµµÄÖ÷ÒªÊôÐÔ¡£Èç¹ûÄãÊ¹ÓÃÆäËû·½·¨Éú³ÉÊý×Ö£¬ÄãÈÔÈ»¿ÉÒÔ½«ÕâÕÅ±íÓÃ×÷·ÖÅä×î¸ßºÍ×îµÍÊýÖµµÄÖ¸µ¼¡£   </p>
-<p><STRONG> °´Ö°Òµ¸ø³öµÄ±ê×¼ÊýÁÐStandard Array by Class</STRONG>
-<TABLE style="WIDTH: 600px; BORDER-COLLAPSE: collapse; TEXT-ALIGN: 
+    <TR>
+      <TD><STRONG>ï¿½ï¿½Öµ</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½Öµ</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>8</TD>
+      <TD>0</TD>
+      <TD>12</TD>
+      <TD>4</TD>
+    </TR>
+    <TR>
+      <TD>9</TD>
+      <TD>1</TD>
+      <TD>13</TD>
+      <TD>5</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>10</TD>
+      <TD>2</TD>
+      <TD>14</TD>
+      <TD>7</TD>
+    </TR>
+    <TR>
+      <TD>11</TD>
+      <TD>3</TD>
+      <TD>15</TD>
+      <TD>9</TD>
+    </TR>
+  </TABLE>
+  </p>
+  <p><STRONG>
+      <FONT color=#da0303>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        Assign Ability Scores</FONT>
+    </STRONG><BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÖ®ï¿½ó£¬¾Í°ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ô¡ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ï¡ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã±ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½î£¬ï¿½ï¿½ï¿½Ñ¯<STRONG>ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½×¼ï¿½ï¿½ï¿½ï¿½</STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã°ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½ï¿½ï¿½ÔµÄ½ï¿½ï¿½é¡£ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½
+  </p>
+  <p><STRONG> ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½×¼ï¿½ï¿½ï¿½ï¿½Standard Array by Class</STRONG>
+  <TABLE style="WIDTH: 600px; BORDER-COLLAPSE: collapse; TEXT-ALIGN: 
 center" cellSpacing=0 cellPadding=2 border=0 width=600>
-<TR><TD><STRONG>Ö°Òµ</STRONG></TD><TD><STRONG>Á¦Á¿</STRONG></TD><TD><STRONG>Ãô½Ý</STRONG></TD><TD><STRONG>ÌåÖÊ</STRONG></TD><TD><STRONG>ÖÇÁ¦</STRONG></TD><TD><STRONG>¸ÐÖª</STRONG></TD><TD><STRONG>÷ÈÁ¦</STRONG></TD></TR>
-<TR bgColor=#eeeeee>
-<TD><STRONG>Ò°ÂùÈË</STRONG></TD><TD>15</TD><TD>13</TD><TD>14</TD><TD>10</TD><TD>12</TD><TD>8</TD></TR>
-<TR><TD><STRONG>Ò÷ÓÎÊ«ÈË</STRONG></TD><TD>8</TD><TD>14</TD><TD>12</TD><TD>13</TD><TD>10</TD><TD>15</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG>ÄÁÊ¦</STRONG></TD><TD>14</TD><TD>8</TD><TD>13</TD><TD>10</TD><TD>15</TD><TD>12</TD></TR>
-<TR><TD><STRONG>µÂÂ³ÒÁ</STRONG></TD><TD>8</TD><TD>12</TD><TD>14</TD><TD>13</TD><TD>15</TD><TD>10</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG>Õ½Ê¿</STRONG></TD><TD>15</TD><TD>14</TD><TD>13</TD><TD>8</TD><TD>10</TD><TD>12</TD></TR>
-<TR><TD><STRONG>ÎäÉ®</STRONG></TD><TD>12</TD><TD>15</TD><TD>13</TD><TD>10</TD><TD>14</TD><TD>8</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG>Ê¥ÎäÊ¿</STRONG></TD><TD>15</TD><TD>10</TD><TD>13</TD><TD>8</TD><TD>12</TD><TD>14</TD></TR>
-<TR><TD><STRONG>ÓÎÏÀ</STRONG></TD><TD>12</TD><TD>15</TD><TD>13</TD><TD>8</TD><TD>14</TD><TD>10</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG>ÓÎµ´Õß</STRONG></TD><TD>12</TD><TD>15</TD><TD>13</TD><TD>14</TD><TD>10</TD><TD>8</TD></TR>
-<TR><TD><STRONG>ÊõÊ¿</STRONG></TD><TD>10</TD><TD>13</TD><TD>14</TD><TD>8</TD><TD>12</TD><TD>15</TD></TR>
-<TR bgColor=#eeeeee><TD><STRONG>Ä§ÆõÊ¦</STRONG></TD><TD>8</TD><TD>14</TD><TD>13</TD><TD>12</TD><TD>10</TD><TD>15</TD></TR>
-<TR><TD><STRONG>·¨Ê¦</STRONG></TD><TD>8</TD><TD>12</TD><TD>13</TD><TD>15</TD><TD>14</TD><TD>10</TD></TR></TABLE></p>
-<p><STRONG><FONT color=#800000>ÐÞ¸ÄÊôÐÔÖµ 
-Adjust Ability Scores</FONT>   
-<BR></STRONG>ÔÚÄãµÄÊôÐÔÖµ·ÖÅäÍê±ÏÖ®ºó£¬¸ù¾ÝÄãµÄ±³¾°À´ÐÞ¸ÄËüÃÇ¡£ÄãµÄ±³¾°ÁÐ³öÁËÈýÏîÊôÐÔ£¬½«ÆäÖÐÒ»ÏîÊôÐÔÖµÌáÉý2²¢½«ÁíÒ»ÏîÊôÐÔÖµÌáÉý1£¬ÓÖ»òÕßÁîÕâÈýÏîÊôÐÔ¸÷ÌáÉý1¡£ÕâÐ©ÌáÉýÎÞ·¨½«Ä³ÏîÊôÐÔÔö¼Óµ½20ÒÔÉÏ¡£<BR>   Ä³Ð©Íæ¼Ò»áÏ²»¶ÌáÉýËûÃÇÖ°ÒµµÄÖ÷ÒªÊôÐÔ£¬¶øÆäËûÒ»Ð©Íæ¼ÒÔò»á¸üÇãÏòÓÚÌáÉýÄ³Ïî½ÏµÍµÄÊýÖµ¡£ </p>
-<div class="center">
-<p><STRONG>À´×Ô¾ÉÊéµÄ±³¾°ºÍÖÖ×å Backgrounds and 
-Species from Older 
-Books¡£<BR>      
-</STRONG>ÔÚ±È½Ï¾ÉµÄD&amp;DÊé¼®ÖÐ£¬±³¾°²¢²»°üÀ¨ÊôÐÔÖµµÄÐÞ¸Ä¡£Èç¹ûÄãÕýÊ¹ÓÃÒ»¸öÀ´×Ô¾ÉÊéµÄ±³¾°£¬¾ÍÕâÑùÐÞ¸ÄÄãµÄÊôÐÔÖµ£º½«Ò»ÏîÊôÐÔÖµÌáÉý2²¢½«ÁíÒ»ÏîÊôÐÔÖµÌáÉý1£¬»òÕß½«ÈýÏîÊôÐÔÖµ¸÷ÌáÉý1¡£ÕâÐ©ÌáÉýÎÞ·¨½«Ä³ÏîÊôÐÔÔö¼Óµ½20ÒÔÉÏ¡£ÀàËÆµØ£¬¾ÉÊéÖÐµÄÖÖ×å°üÀ¨ÁËÊôÐÔÖµÌáÉý¡£Èç¹ûÄãÕýÊ¹ÓÃÒ»¸öÀ´×Ô¾ÉÊéµÄÖÖ×å£¬ÎÞÊÓÕâÐ©ÌáÉý£¬Ö»Ê¹ÓÃÀ´×ÔÄã±³¾°µÄÊôÐÔÖµÐÞ¸Ä¡£<BR>     ´ËÍâ£¬Èç¹ûÄãÑ¡ÔñµÄ±³¾°Ã»ÓÐÌá¹©×¨³¤£¬ÄÇÃ´Äã»ñµÃÒ»¸ö×ÔÑ¡µÄÆðÔ´×¨³¤¡£</p></div>
-<P><STRONG><FONT color=#800000>È·¶¨ÊôÐÔµ÷ÕûÖµ Determine Ability 
-Modifiers</FONT></STRONG><BR>×îºó£¬Ê¹ÓÃ<STRONG>ÊôÐÔÖµÓëµ÷ÕûÖµ</STRONG>  
-±íÈ·¶¨ÄãµÄÊôÐÔµ÷ÕûÖµ¡£°ÑÕâÐ©µ÷ÕûÖµÐ´ÔÚÃ¿Ò»¸öÊôÐÔÖµÅÔ±ß¡£</P>
-<P><STRONG>ÊôÐÔÖµÓëµ÷ÕûÖµ Ability Scores and Modifiers</STRONG>   
-<TABLE style="WIDTH: 480px; BORDER-COLLAPSE: collapse; TEXT-ALIGN: center" cellSpacing=0 cellPadding=2 border=0>
-<TR><TD><STRONG>ÊôÐÔÖµ</STRONG></TD><TD><STRONG>µ÷ÕûÖµ</STRONG></TD><TD><STRONG>ÊôÐÔÖµ</STRONG></TD><TD><STRONG>µ÷ÕûÖµ</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>-4</TD><TD>12-13</TD><TD>+1</TD></TR>
-<TR><TD>4-5</TD><TD>-3</TD><TD>14-15</TD><TD>+2</TD></TR>
-<TR bgColor=#eeeeee><TD>6-7</TD><TD>-2</TD><TD>16-17</TD><TD>+3</TD></TR>
-<TR><TD>8-9</TD><TD>-1</TD><TD>18-19</TD><TD>+4</TD></TR>
-<TR bgColor=#eeeeee><TD>10-11</TD><TD>0</TD><TD>20</TD><TD>+5</TD></TR>
-</TABLE></P>
-<p><STRONG><FONT color=#800000>ÃèÊöÍâÃ²Óë¸öÐÔ 
-Describe Appearance and Personality</FONT>    </STRONG><BR>ÊôÐÔÖµÊÇ¹æÔòµÄ±ØÒª²¿·Ö£¬µ«ËüÃÇ¿ÉÒÔ²»Ö¹ÓÚ´Ë¡£·ÖÅäÍêÊôÐÔÖµÖ®ºó£¬ÏëÒ»ÏëÕâÐ©Êý×Ö¿ÉÄÜ»á¶ÔÄã½ÇÉ«µÄÍâÃ²ºÍ¸öÐÔÓÐÊ²Ã´Ó°Ïì¡£·Ç³£Ç¿×³¶øµÍ÷ÈÁ¦µÄ½ÇÉ«£¬ËûµÄÍâÃ²ºÍ¾ÙÖ¹ÓëÒ»Î»³äÂú÷ÈÁ¦µ«µÍÁ¦Á¿µÄ½ÇÉ«¿ÉÄÜÊÇ²»Í¬µÄ¡£ÏÂÁÐ¹ØÓÚÃèÊöÐÔ´ÊÓïµÄ±í¸ø³öÁËÒ»Ð©½¨Òé£¬ÈÃÄãÖªµÀ¿ÉÒÔÈçºÎ¸ù¾ÝÄ³ÏîÊôÐÔÊýÖµµÄ¸ßµÍÀ´ÃèÊöÄãµÄ½ÇÉ«¡£<BR>½«Äã½ÇÉ«µÄÍâÃ²Óë¸öÐÔ±ê×¢ÔÚ½ÇÉ«¿¨ÉÏ¡£   </p>
-<div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> Á¦Á¿Strength</STRONG> 
-<TABLE cellSpacing=0 cellPadding  =2 border=0 >
-<TR><TD><STRONG>1d4</STRONG></TD><TD><STRONG>¸ßÁ¦Á¿</STRONG></TD><TD><STRONG>1d4</STRONG></TD><TD><STRONG>µÍÁ¦Á¿</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>½îÈâ</TD><TD>1</TD><TD>ÐéÈõ</TD></TR>
-<TR><TD>2</TD><TD>½Ã½¡</TD><TD>2</TD><TD>ÏËÏ¸</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>°²È«¸Ð</TD><TD>3</TD><TD>¾Ö´Ù</TD></TR>
-<TR><TD>4</TD><TD>Ö±Ë¬</TD><TD>4</TD><TD>¹ÕÍäÄ¨½Ç</TD></TR></TABLE></div>
-<div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> Ãô½ÝDexterity</STRONG>
-<TABLE cellSpacing=0 cellPadding  =2 border=0 >
-<TR><TD><STRONG>1d4</STRONG></TD><TD><STRONG>¸ßÃô½Ý</STRONG></TD><TD><STRONG>1d4</STRONG></TD><TD><STRONG>µÍÃô½Ý</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>ÈáÈÍ</TD><TD>1</TD><TD>½ôÕÅ</TD></TR>
-<TR><TD>2</TD><TD>»îÁ¦ËÄÉä</TD><TD>2</TD><TD>±¿×¾</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>ºÃ¶¯</TD><TD>3</TD><TD>ÓÌÔ¥</TD></TR>
-<TR><TD>4</TD><TD>Æ½ºâ</TD><TD>4</TD><TD>²»ÎÈ¶¨</TD></TR></TABLE></div>
-<div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ÌåÖÊConstitution</STRONG>
-<TABLE cellSpacing=0 cellPadding  =2 border=0 >
-<TR><TD><STRONG>1d4</STRONG></TD><TD><STRONG>¸ßÌåÖÊ</STRONG></TD><TD><STRONG>1d4</STRONG></TD><TD><STRONG>µÍÌåÖÊ</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>¾«Á¦³äÅæ</TD><TD>1</TD><TD>ÊÝÈõ</TD></TR>
-<TR><TD>2</TD><TD>½¡×³</TD><TD>2</TD><TD>Éñ¾­´àÈõ</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>Ë¬ÀÊ</TD><TD>3</TD><TD>ÎÞ¾«´ò²É</TD></TR>
-<TR><TD>4</TD><TD>³ÁÎÈ</TD><TD>4</TD><TD>ÎÞÁ¦</TD></TR></TABLE></div><BR>
-<div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ÖÇÁ¦Intelligence</STRONG> 
-<TABLE cellSpacing=0 cellPadding  =2 border=0 >
-<TR><TD><STRONG>1d4</STRONG></TD><TD><STRONG>¸ßÖÇÁ¦</STRONG></TD><TD><STRONG>1d4</STRONG></TD><TD><STRONG>µÍÖÇÁ¦</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>¹û¶Ï</TD><TD>1</TD><TD>ÌìÕæ</TD></TR>
-<TR><TD>2</TD><TD>Âß¼­ÐÔÇ¿</TD><TD>2</TD><TD>Âß¼­ÐÔ²î</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>ÓÐ¼ûµØ</TD><TD>3</TD><TD>Ã»¼ûÊ¶</TD></TR>
-<TR><TD>4</TD><TD>ºÃÆæ</TD><TD>4</TD><TD>ÓÞ´À</TD></TR></TABLE></div>
-<div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG>  ¸ÐÖªWisdom</STRONG>
-<TABLE cellSpacing=0 cellPadding  =2 border=0 >
-<TR><TD><STRONG>1d4</STRONG></TD><TD><STRONG>¸ß¸ÐÖª</STRONG></TD><TD><STRONG>1d4</STRONG></TD><TD><STRONG>µÍ¸ÐÖª</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>ÎÈÖØ</TD><TD>1</TD><TD>ÇáÂÊ</TD></TR>
-<TR><TD>2</TD><TD>ÌåÌù</TD><TD>2</TD><TD>Ò×·ÖÐÄ</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>×¨×¢</TD><TD>3</TD><TD>½¡Íü</TD></TR>
-<TR><TD>4</TD><TD>¾¯¾õ</TD><TD>4</TD><TD>Ó×ÖÉ</TD></TR></TABLE></div>
-<div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ÷ÈÁ¦Charisma</STRONG>
-<TABLE cellSpacing=0 cellPadding  =2 border=0 >
-<TR><TD><STRONG>1d4</STRONG></TD><TD><STRONG>¸ß÷ÈÁ¦</STRONG></TD><TD><STRONG>1d4</STRONG></TD><TD><STRONG>µÍ÷ÈÁ¦</STRONG></TD></TR>
-<TR bgColor=#eeeeee><TD>1</TD><TD>ÓÐÎüÒýÁ¦</TD><TD>1</TD><TD>ÓØ¸¯</TD></TR>
-<TR><TD>2</TD><TD>ÍþÑÏ</TD><TD>2</TD><TD>È±·¦ÓÄÄ¬</TD></TR>
-<TR bgColor=#eeeeee><TD>3</TD><TD>·çÈ¤</TD><TD>3</TD><TD>ÄÚÏò</TD></TR>
-<TR><TD>4</TD><TD>¹ÄÎèÈËÐÄ</TD><TD>4</TD><TD>²»µÃÌå</TD></TR></TABLE></div>
+    <TR>
+      <TD><STRONG>Ö°Òµ</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½Öª</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>Ò°ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD>15</TD>
+      <TD>13</TD>
+      <TD>14</TD>
+      <TD>10</TD>
+      <TD>12</TD>
+      <TD>8</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½Ê«ï¿½ï¿½</STRONG></TD>
+      <TD>8</TD>
+      <TD>14</TD>
+      <TD>12</TD>
+      <TD>13</TD>
+      <TD>10</TD>
+      <TD>15</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>ï¿½ï¿½Ê¦</STRONG></TD>
+      <TD>14</TD>
+      <TD>8</TD>
+      <TD>13</TD>
+      <TD>10</TD>
+      <TD>15</TD>
+      <TD>12</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½Â³ï¿½ï¿½</STRONG></TD>
+      <TD>8</TD>
+      <TD>12</TD>
+      <TD>14</TD>
+      <TD>13</TD>
+      <TD>15</TD>
+      <TD>10</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>Õ½Ê¿</STRONG></TD>
+      <TD>15</TD>
+      <TD>14</TD>
+      <TD>13</TD>
+      <TD>8</TD>
+      <TD>10</TD>
+      <TD>12</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½É®</STRONG></TD>
+      <TD>12</TD>
+      <TD>15</TD>
+      <TD>13</TD>
+      <TD>10</TD>
+      <TD>14</TD>
+      <TD>8</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>Ê¥ï¿½ï¿½Ê¿</STRONG></TD>
+      <TD>15</TD>
+      <TD>10</TD>
+      <TD>13</TD>
+      <TD>8</TD>
+      <TD>12</TD>
+      <TD>14</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      <TD>12</TD>
+      <TD>15</TD>
+      <TD>13</TD>
+      <TD>8</TD>
+      <TD>14</TD>
+      <TD>10</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>ï¿½Îµï¿½ï¿½ï¿½</STRONG></TD>
+      <TD>12</TD>
+      <TD>15</TD>
+      <TD>13</TD>
+      <TD>14</TD>
+      <TD>10</TD>
+      <TD>8</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½Ê¿</STRONG></TD>
+      <TD>10</TD>
+      <TD>13</TD>
+      <TD>14</TD>
+      <TD>8</TD>
+      <TD>12</TD>
+      <TD>15</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD><STRONG>Ä§ï¿½ï¿½Ê¦</STRONG></TD>
+      <TD>8</TD>
+      <TD>14</TD>
+      <TD>13</TD>
+      <TD>12</TD>
+      <TD>10</TD>
+      <TD>15</TD>
+    </TR>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½Ê¦</STRONG></TD>
+      <TD>8</TD>
+      <TD>12</TD>
+      <TD>13</TD>
+      <TD>15</TD>
+      <TD>14</TD>
+      <TD>10</TD>
+    </TR>
+  </TABLE>
+  </p>
+  <p><STRONG>
+      <FONT color=#da0303>ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        Adjust Ability Scores</FONT>
+      <BR>
+    </STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ó£¬¸ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½20ï¿½ï¿½ï¿½Ï¡ï¿½<BR>
+    Ä³Ð©ï¿½ï¿½Ò»ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ÏµÍµï¿½ï¿½ï¿½Öµï¿½ï¿½ </p>
+  <div class="center">
+    <p><STRONG>ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Backgrounds and
+        Species from Older
+        Booksï¿½ï¿½<BR>
+      </STRONG>ï¿½Ú±È½Ï¾Éµï¿½D&amp;Dï¿½é¼®ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Þ¸Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½20ï¿½ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ÆµØ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã±³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Þ¸Ä¡ï¿½<BR>
+      ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½á¹©×¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ô´×¨ï¿½ï¿½ï¿½ï¿½</p>
+  </div>
+  <P><STRONG>
+      <FONT color=#da0303>È·ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½Öµ Determine Ability
+        Modifiers</FONT>
+    </STRONG><BR>ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½<STRONG>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Öµ</STRONG>
+    ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ÖµÐ´ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ô±ß¡ï¿½</P>
+  <P><STRONG>ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Öµ Ability Scores and Modifiers</STRONG>
+  <TABLE style="WIDTH: 480px; BORDER-COLLAPSE: collapse; TEXT-ALIGN: center" cellSpacing=0 cellPadding=2 border=0>
+    <TR>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½Öµ</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½Öµ</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½Öµ</STRONG></TD>
+      <TD><STRONG>ï¿½ï¿½ï¿½ï¿½Öµ</STRONG></TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>3</TD>
+      <TD>-4</TD>
+      <TD>12-13</TD>
+      <TD>+1</TD>
+    </TR>
+    <TR>
+      <TD>4-5</TD>
+      <TD>-3</TD>
+      <TD>14-15</TD>
+      <TD>+2</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>6-7</TD>
+      <TD>-2</TD>
+      <TD>16-17</TD>
+      <TD>+3</TD>
+    </TR>
+    <TR>
+      <TD>8-9</TD>
+      <TD>-1</TD>
+      <TD>18-19</TD>
+      <TD>+4</TD>
+    </TR>
+    <TR bgColor=#eeeeee>
+      <TD>10-11</TD>
+      <TD>0</TD>
+      <TD>20</TD>
+      <TD>+5</TD>
+    </TR>
+  </TABLE>
+  </P>
+  <p><STRONG>
+      <FONT color=#da0303>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½
+        Describe Appearance and Personality</FONT>
+    </STRONG><BR>ï¿½ï¿½ï¿½ï¿½Öµï¿½Ç¹ï¿½ï¿½ï¿½Ä±ï¿½Òªï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Ô²ï¿½Ö¹ï¿½Ú´Ë¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÖ®ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ö¿ï¿½ï¿½Ü»ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½Ã²ï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´Ó°ï¿½ì¡£ï¿½Ç³ï¿½Ç¿×³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½Í¾ï¿½Ö¹ï¿½ï¿½Ò»Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Í¬ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ð©ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¸ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä¸ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½É«ï¿½ï¿½<BR>ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½Ô±ï¿½×¢ï¿½Ú½ï¿½É«ï¿½ï¿½ï¿½Ï¡ï¿½
+  </p>
+  <div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ï¿½ï¿½ï¿½ï¿½Strength</STRONG>
+    <TABLE cellSpacing=0 cellPadding=2 border=0>
+      <TR>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>2</TD>
+        <TD>ï¿½Ã½ï¿½</TD>
+        <TD>2</TD>
+        <TD>ï¿½ï¿½Ï¸</TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>3</TD>
+        <TD>ï¿½ï¿½È«ï¿½ï¿½</TD>
+        <TD>3</TD>
+        <TD>ï¿½Ö´ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>4</TD>
+        <TD>Ö±Ë¬</TD>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½Ä¨ï¿½ï¿½</TD>
+      </TR>
+    </TABLE>
+  </div>
+  <div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ï¿½ï¿½ï¿½ï¿½Dexterity</STRONG>
+    <TABLE cellSpacing=0 cellPadding=2 border=0>
+      <TR>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>2</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>2</TD>
+        <TD>ï¿½ï¿½×¾</TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>3</TD>
+        <TD>ï¿½Ã¶ï¿½</TD>
+        <TD>3</TD>
+        <TD>ï¿½ï¿½Ô¥</TD>
+      </TR>
+      <TR>
+        <TD>4</TD>
+        <TD>Æ½ï¿½ï¿½</TD>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½È¶ï¿½</TD>
+      </TR>
+    </TABLE>
+  </div>
+  <div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ï¿½ï¿½ï¿½ï¿½Constitution</STRONG>
+    <TABLE cellSpacing=0 cellPadding=2 border=0>
+      <TR>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>2</TD>
+        <TD>ï¿½ï¿½×³</TD>
+        <TD>2</TD>
+        <TD>ï¿½ñ¾­´ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>3</TD>
+        <TD>Ë¬ï¿½ï¿½</TD>
+        <TD>3</TD>
+        <TD>ï¿½Þ¾ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+    </TABLE>
+  </div><BR>
+  <div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ï¿½ï¿½ï¿½ï¿½Intelligence</STRONG>
+    <TABLE cellSpacing=0 cellPadding=2 border=0>
+      <TR>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>2</TD>
+        <TD>ï¿½ß¼ï¿½ï¿½ï¿½Ç¿</TD>
+        <TD>2</TD>
+        <TD>ï¿½ß¼ï¿½ï¿½Ô²ï¿½</TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>3</TD>
+        <TD>ï¿½Ð¼ï¿½ï¿½ï¿½</TD>
+        <TD>3</TD>
+        <TD>Ã»ï¿½ï¿½Ê¶</TD>
+      </TR>
+      <TR>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>4</TD>
+        <TD>ï¿½Þ´ï¿½</TD>
+      </TR>
+    </TABLE>
+  </div>
+  <div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ï¿½ï¿½ÖªWisdom</STRONG>
+    <TABLE cellSpacing=0 cellPadding=2 border=0>
+      <TR>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ß¸ï¿½Öª</STRONG></TD>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½Í¸ï¿½Öª</STRONG></TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>2</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>2</TD>
+        <TD>ï¿½×·ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>3</TD>
+        <TD>×¨×¢</TD>
+        <TD>3</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+    </TABLE>
+  </div>
+  <div style="WIDTH: 33.33%; DISPLAY: inline"><STRONG> ï¿½ï¿½ï¿½ï¿½Charisma</STRONG>
+    <TABLE cellSpacing=0 cellPadding=2 border=0>
+      <TR>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+        <TD><STRONG>1d4</STRONG></TD>
+        <TD><STRONG>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</STRONG></TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>1</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>1</TD>
+        <TD>ï¿½Ø¸ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>2</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>2</TD>
+        <TD>È±ï¿½ï¿½ï¿½ï¿½Ä¬</TD>
+      </TR>
+      <TR bgColor=#eeeeee>
+        <TD>3</TD>
+        <TD>ï¿½ï¿½È¤</TD>
+        <TD>3</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+      <TR>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+        <TD>4</TD>
+        <TD>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</TD>
+      </TR>
+    </TABLE>
+  </div>
 </body>
+
 </html>
