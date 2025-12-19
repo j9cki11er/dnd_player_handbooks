@@ -878,7 +878,7 @@ export default function App() {
                         {isFolderExpanded && (
                           <div className="folder-content pl-4 border-l border-gold/10 ml-2 py-2">
                             {folderItems.length > 0 ? (
-                              <div className="flex flex-col gap-8">
+                              <div className="flex flex-col gap-4">
                                 {/* Group 1: 职业 背景 专长 */}
                                 {(() => {
                                   const catId = `${folder}-classes`;
@@ -1312,8 +1312,7 @@ function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, acti
           </AnimatePresence>
         </div>
       </div>
-      <h3 className="card-title group-hover:text-gold transition-colors">{item?.title}</h3>
-      {item?.isOverview && <p className="card-subtitle text-gold">概览</p>}
+      <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
     </motion.div >
   );
 }
