@@ -39,6 +39,10 @@ export default function App() {
   // New State for Spell Browser
   const [spellFilters, setSpellFilters] = useState({ class: '全部', level: '0' });
 
+  // New State for Folder Management
+  const [isAddingFolder, setIsAddingFolder] = useState(false);
+  const [newFolderName, setNewFolderName] = useState('');
+
   // Mobile detection
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   useEffect(() => {
@@ -828,8 +832,8 @@ export default function App() {
                     </button>
                     <button
                       onClick={() => {
-                        const name = prompt('输入新的分类文件夹名称:');
-                        if (name) createFolder(name);
+                        setIsAddingFolder(true);
+                        setNewFolderName('');
                       }}
                       className="gold-button py-2 px-4 h-auto"
                     >
@@ -838,6 +842,57 @@ export default function App() {
                     </button>
                   </div>
                 </div>
+
+                <AnimatePresence>
+                  {isAddingFolder && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0, marginBottom: 0 }}
+                      animate={{ height: 'auto', opacity: 1, marginBottom: 24 }}
+                      exit={{ height: 0, opacity: 0, marginBottom: 0 }}
+                      className="new-folder-input-container glass-panel overflow-hidden"
+                    >
+                      <div className="p-4 flex flex-col md:flex-row items-center gap-4">
+                        <div className="flex-1 w-full relative">
+                          <FolderPlus className="absolute left-3 top-1/2 -translate-y-1/2 text-gold opacity-50" size={18} />
+                          <input
+                            autoFocus
+                            type="text"
+                            placeholder="输入文件夹名称..."
+                            className="new-folder-input w-full pl-10 pr-4 py-2"
+                            value={newFolderName}
+                            onChange={(e) => setNewFolderName(e.target.value)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') {
+                                createFolder(newFolderName);
+                                setIsAddingFolder(false);
+                              } else if (e.key === 'Escape') {
+                                setIsAddingFolder(false);
+                              }
+                            }}
+                          />
+                        </div>
+                        <div className="flex items-center gap-2 w-full md:w-auto">
+                          <button
+                            onClick={() => {
+                              createFolder(newFolderName);
+                              setIsAddingFolder(false);
+                            }}
+                            className="gold-button flex-1 md:flex-none justify-center"
+                            disabled={!newFolderName.trim()}
+                          >
+                            确认
+                          </button>
+                          <button
+                            onClick={() => setIsAddingFolder(false)}
+                            className="action-btn-small flex-1 md:flex-none justify-center py-2 px-4"
+                          >
+                            取消
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
                 <div className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar">
                   {Object.keys(bookmarks).map(folder => {
