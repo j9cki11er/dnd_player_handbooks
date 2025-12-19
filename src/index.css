@@ -83,6 +83,7 @@ body {
   gap: 0.75rem;
   padding: 0 0.5rem;
   margin-bottom: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .logo-icon {
@@ -99,8 +100,14 @@ body {
 }
 
 .logo-text {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.sidebar-page-title {
+  width: 100%;
+  display: block;
+  font-size: 1.75rem;
 }
 
 /* Nav Menu */
@@ -478,7 +485,7 @@ body {
 
 .welcome-desc {
   color: var(--text-muted);
-  max-width: 450px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -1194,8 +1201,8 @@ body {
 
 /* Logo Styling */
 .sidebar-logo {
-  width: 34px;
-  height: 34px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -1215,6 +1222,7 @@ body {
   text-align: center;
   max-width: 450px;
   margin: 0 auto;
+  font-size: 1rem;
 }
 
 .whatsapp-link {
@@ -1327,8 +1335,20 @@ body {
   border-radius: 12px;
   padding: 0.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  z-index: 101;
 }
+
+.popover-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: transparent;
+}
+
+.z-above-overlay {
+  z-index: 100 !important;
+}
+
 
 .popover-header {
   font-size: 0.7rem;

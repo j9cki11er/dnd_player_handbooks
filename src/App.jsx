@@ -352,9 +352,11 @@ export default function App() {
         <div className="sidebar-header">
           <img src="/DFD logo-01.png" alt="Logo" className="sidebar-logo" />
           <div className="flex flex-col">
-            <span className="logo-text dnd-font gold-text leading-tight">不要喂龙公会</span>
-            <span className="text-xs gold-text opacity-80">DnD 玩家手册</span>
+            <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
           </div>
+          <br></br>
+          <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册</span>
+
         </div>
 
         <nav className="nav-menu">
@@ -493,8 +495,8 @@ export default function App() {
               ) : (
                 <div className="glass-panel welcome-panel">
                   <img src="/DFD logo-01.png" alt="Welcome Logo" className="welcome-logo" />
-                  <h3 className="welcome-title text-2xl mb-2">开始您的冒险</h3>
-                  <p className="welcome-desc mb-6">从左侧选择一个分类，或者使用全局搜索寻找您需要的规则、法术或职业信息。</p>
+                  <h3 className="welcome-title text-2xl mb-2">进入冒险手册</h3>
+                  <p className="welcome-desc mb-6">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。<br></br>常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
                   <div className="disclaimer-box mb-8">
                     <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
                       <strong>冒险者须知 · Beta 测试</strong><br></br>
@@ -935,7 +937,16 @@ export default function App() {
         </AnimatePresence>
       </main>
 
+      {/* Popover Overlay for closing on outside click */}
+      {activePopover && (
+        <div
+          className="popover-overlay"
+          onClick={() => setActivePopover(null)}
+        />
+      )}
+
       {/* Bookmark Dialog */}
+
       <AnimatePresence>
         {isBookmarkModalOpen && (
           <div className="modal-overlay" onClick={() => setIsBookmarkModalOpen(false)}>
@@ -1068,8 +1079,9 @@ function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, acti
       whileHover={{ scale: 1.02, y: -4 }}
       transition={{ type: "spring", stiffness: 300 }}
       onClick={onClick}
-      className={`item-card glass-panel group relative ${isPopoverOpen ? 'z-10' : ''}`}
+      className={`item-card glass-panel group relative ${isPopoverOpen ? 'z-above-overlay' : ''}`}
     >
+
       <div className="card-top">
         <span className="card-category truncate mr-8">{item?.pathParts?.join(' > ') || ''}</span>
         <div className="item-card-actions">
@@ -1113,7 +1125,7 @@ function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, acti
       </div>
       <h3 className="card-title group-hover:text-gold transition-colors">{item?.title}</h3>
       {item?.isOverview && <p className="card-subtitle text-gold">概览</p>}
-    </motion.div>
+    </motion.div >
   );
 }
 
@@ -1132,7 +1144,7 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
     setActivePopover(isPopoverOpen ? null : item.id);
   };
   return (
-    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''}`}>
+    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''} ${isPopoverOpen ? 'z-above-overlay' : ''}`}>
       <div
         onClick={onClick}
         className="spell-card-inner"
