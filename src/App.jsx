@@ -255,6 +255,38 @@ export default function App() {
     setIsBookmarkModalOpen(true);
   };
 
+  const resolveBookmarkItem = (id) => {
+    if (id.startsWith('dir:')) {
+      const pathStr = id.replace('dir:', '');
+      const parts = pathStr.split('/');
+      let current = categoryTree;
+      let node = null;
+      for (const part of parts) {
+        if (current && current[part]) {
+          node = current[part];
+          current = current[part]._children;
+        } else {
+          return null;
+        }
+      }
+      if (!node) return null;
+      return {
+        id: node._id,
+        title: node._title,
+        pathParts: node._path,
+        isDir: true
+      };
+    }
+    // Check if it's a spell first for better matching
+    const spell = spellData.find(s => s.id === id);
+    if (spell) return spell;
+    // Then check files
+    const file = data.find(i => i.id === id);
+    if (file) return file;
+    return null;
+  };
+
+
   // Sidebar Recursive Component
   const SidebarItem = ({ name, node, depth = 0 }) => {
     const pathStr = node._path.join('/');
@@ -393,13 +425,16 @@ export default function App() {
                     <div className="overview-section glass-panel mb-8 p-6">
                       <div className="detail-header mb-4">
                         <h2 className="detail-title gold-text">{loadedOverview.title}</h2>
-                        <button
-                          onClick={() => openBookmarkDialog(loadedOverview.item)}
-                          className={`bookmark-btn ${isBookmarkedAnywhere(loadedOverview.item.id) ? 'active' : ''}`}
-                        >
-                          <Heart fill={isBookmarkedAnywhere(loadedOverview.item.id) ? "currentColor" : "none"} size={20} />
-                        </button>
+                        {loadedOverview.item && (
+                          <button
+                            onClick={() => openBookmarkDialog(loadedOverview.item)}
+                            className={`bookmark-btn ${isBookmarkedAnywhere(loadedOverview.item.id) ? 'active' : ''}`}
+                          >
+                            <Heart fill={isBookmarkedAnywhere(loadedOverview.item.id) ? "currentColor" : "none"} size={20} />
+                          </button>
+                        )}
                       </div>
+
                       <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
                     </div>
                   ) : (
@@ -726,8 +761,9 @@ export default function App() {
                     <div className="flex flex-col gap-8">
                       {/* Set 1: 职业 背景 专长 */}
                       {(() => {
-                        const items = bookmarks[folder].map(id => data.find(i => i.id === id)).filter(item => {
+                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
                           if (!item) return false;
+                          if (item.isDir) return false; // Folders go to "Other" or their own check
                           const path = item.pathParts.join(' ');
                           return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
                         });
@@ -740,23 +776,28 @@ export default function App() {
                                 <ItemCard
                                   key={item.id}
                                   item={item}
-                                  onClick={() => setSelectedItem(item)}
+                                  onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
                                   isBookmarked={true}
                                   toggleBookmark={toggleBookmark}
                                   bookmarks={bookmarks}
                                   activePopover={activePopover}
                                   setActivePopover={setActivePopover}
                                 />
-
                               ))}
                             </div>
                           </div>
                         );
+
                       })()}
 
                       {/* Set 2: 法术 */}
                       {(() => {
-                        const items = bookmarks[folder].map(id => spellData.find(s => s.id === id) || data.find(i => i.id === id && i.pathParts.join(' ').includes('法术'))).filter(Boolean);
+                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
+                          if (!item) return false;
+                          // Spells have special handling or can be identified by path
+                          return item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
+                        });
+
                         if (items.length === 0) return null;
                         return (
                           <div className="bookmark-group">
@@ -786,8 +827,9 @@ export default function App() {
 
                       {/* Set 3: 装备 道具 */}
                       {(() => {
-                        const items = bookmarks[folder].map(id => data.find(i => i.id === id)).filter(item => {
+                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
                           if (!item) return false;
+                          if (item.isDir) return false;
                           const path = item.pathParts.join(' ');
                           return (path.includes('装备') || path.includes('道具')) && !path.includes('法术');
                         });
@@ -800,27 +842,29 @@ export default function App() {
                                 <ItemCard
                                   key={item.id}
                                   item={item}
-                                  onClick={() => setSelectedItem(item)}
+                                  onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
                                   isBookmarked={true}
                                   toggleBookmark={toggleBookmark}
                                   bookmarks={bookmarks}
                                   activePopover={activePopover}
                                   setActivePopover={setActivePopover}
                                 />
-
                               ))}
                             </div>
                           </div>
                         );
+
                       })()}
 
                       {/* Other Items */}
                       {(() => {
-                        const items = bookmarks[folder].map(id => data.find(i => i.id === id)).filter(item => {
+                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
                           if (!item) return false;
+                          // Spells are already handled
+                          if (item.castingTime) return false;
                           const path = item.pathParts.join(' ');
                           const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('法术') || path.includes('装备') || path.includes('道具');
-                          return !isSpecial;
+                          return !isSpecial || item.isDir;
                         });
                         if (items.length === 0) return null;
                         return (
@@ -831,18 +875,18 @@ export default function App() {
                                 <ItemCard
                                   key={item.id}
                                   item={item}
-                                  onClick={() => setSelectedItem(item)}
+                                  onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
                                   isBookmarked={true}
                                   toggleBookmark={toggleBookmark}
                                   bookmarks={bookmarks}
                                   activePopover={activePopover}
                                   setActivePopover={setActivePopover}
                                 />
-
                               ))}
                             </div>
                           </div>
                         );
+
                       })()}
                     </div>
                   ) : (
