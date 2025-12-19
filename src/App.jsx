@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
 import spellData from './data-spells.json';
-import { Search, Bookmark, Book, Layout, ChevronRight, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu } from 'lucide-react';
+import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -32,6 +32,8 @@ export default function App() {
   const [pendingBookmark, setPendingBookmark] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activePopover, setActivePopover] = useState(null); // Track which spell card has the bookmark popover open
+  const [expandedFolders, setExpandedFolders] = useState({}); // { folderName: boolean }
+  const [expandedCategories, setExpandedCategories] = useState({}); // { "folderName-catName": boolean }
 
   // New State for Spell Browser
   const [spellFilters, setSpellFilters] = useState({ class: '全部', level: '0' });
@@ -250,6 +252,31 @@ export default function App() {
     return Object.values(bookmarks).some(folder => folder.includes(id));
   };
 
+  const clearFolder = (folderName) => {
+    if (!window.confirm(`确定要清空“${folderName}”中的所有收藏吗？`)) return;
+    setBookmarks(prev => ({
+      ...prev,
+      [folderName]: []
+    }));
+  };
+
+  const clearAllBookmarks = () => {
+    if (!window.confirm('确定要清除所有收藏并重置吗？这将清除所有文件夹中的内容。')) return;
+    setBookmarks({ '默认': [] });
+    // Also clear localStorage to be sure
+    localStorage.setItem('dnd-bookmarks', JSON.stringify({ '默认': [] }));
+  };
+
+  const toggleAllFolders = (expand) => {
+    const newState = {};
+    if (expand) {
+      Object.keys(bookmarks).forEach(f => {
+        newState[f] = true;
+      });
+    }
+    setExpandedFolders(newState);
+  };
+
   const openBookmarkDialog = (item) => {
     setPendingBookmark(item);
     setIsBookmarkModalOpen(true);
@@ -279,7 +306,12 @@ export default function App() {
     }
     // Check if it's a spell first for better matching
     const spell = spellData.find(s => s.id === id);
-    if (spell) return spell;
+    if (spell) {
+      return {
+        ...spell,
+        pathParts: spell.pathParts || ['法术']
+      };
+    }
     // Then check files
     const file = data.find(i => i.id === id);
     if (file) return file;
@@ -350,12 +382,12 @@ export default function App() {
       {/* Sidebar */}
       <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
-          <img src="/DFD logo-01.png" alt="Logo" className="sidebar-logo" />
+          <img src="/DFD logo-cropped.png" alt="Logo" className="sidebar-logo" />
           <div className="flex flex-col">
             <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
           </div>
           <br></br>
-          <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册</span>
+          <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册2024</span>
 
         </div>
 
@@ -494,8 +526,9 @@ export default function App() {
                 </div>
               ) : (
                 <div className="glass-panel welcome-panel">
-                  <img src="/DFD logo-01.png" alt="Welcome Logo" className="welcome-logo" />
-                  <h3 className="welcome-title text-2xl mb-2">进入冒险手册</h3>
+                  <img src="/DFD logo-cropped.png" alt="Welcome Logo" className="welcome-logo" />
+                  <h2 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">Don't Feed Dragon <br></br>不要喂龙公会</h2>
+                  <h3 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h3>
                   <p className="welcome-desc mb-6">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。<br></br>常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
                   <div className="disclaimer-box mb-8">
                     <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
@@ -521,7 +554,7 @@ export default function App() {
                   </div>
 
                   <div className="welcome-directory mt-12">
-                    <h3 className="section-title text-center mb-6">快速访问</h3>
+                    <h3 className="section-title text-center mb-6">分类目录</h3>
                     <div className="item-grid">
                       {CHAPTERS_TO_SHOW.map(name => {
                         const node = categoryTree[name];
@@ -540,6 +573,15 @@ export default function App() {
                       })}
                     </div>
                   </div>
+
+                  <footer className="welcome-footer mt-16 pt-8 border-t border-gold/10 text-center">
+                    <p className="footer-text text-xs opacity-60 leading-relaxed">
+                      Provided by Don't Feed Dragon 不要喂龙公会 & Powered by <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
+                    </p>
+                    <p className="footer-link text-xs opacity-60 mt-1">
+                      查看更多玩家手册在: <a href="https://5echm.kagangtuya.top/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">https://5echm.kagangtuya.top/</a>
+                    </p>
+                  </footer>
                 </div>
               )}
             </motion.div>
@@ -727,179 +769,242 @@ export default function App() {
             </motion.div>
           )}
 
-          {activeTab === 'bookmarks' && !selectedItem && (
-            <motion.div
-              key="bookmarks"
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            >
-              <div className="view-header">
-                <h2 className="view-title gold-text">我的收藏</h2>
-                <button
-                  onClick={() => {
-                    const name = prompt('输入新的分类文件夹名称:');
-                    if (name) createFolder(name);
-                  }}
-                  className="gold-button"
-                >
-                  <FolderPlus size={18} />
-                  新建文件夹
-                </button>
-              </div>
-
-              {Object.keys(bookmarks).map(folder => (
-                <div key={folder} className="bookmark-section">
-                  <div className="folder-header group">
-                    <div className="folder-info">
-                      <h3 className="folder-name">{folder}</h3>
-                      <span className="count-badge">{bookmarks[folder].length} 项</span>
-                    </div>
-                    {folder !== '默认' && (
-                      <button onClick={() => deleteFolder(folder)} className="delete-folder-btn">
-                        <Trash2 size={16} />
-                      </button>
-                    )}
+          {activeTab === 'bookmarks' && (
+            <div className={`spell-browser-container glass-panel p-4 ${selectedItem ? 'has-detail' : ''}`}>
+              <div className="spell-list-panel">
+                <div className="view-header flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                  <h2 className="view-title gold-text m-0">我的收藏</h2>
+                  <div className="flex flex-wrap gap-2">
+                    <button onClick={() => toggleAllFolders(true)} className="action-btn-small" title="全部展开">
+                      <ChevronDown size={16} /> <span>全部展开</span>
+                    </button>
+                    <button onClick={() => toggleAllFolders(false)} className="action-btn-small" title="全部折叠">
+                      <ChevronUp size={16} /> <span>全部折叠</span>
+                    </button>
+                    <button onClick={clearAllBookmarks} className="action-btn-small text-red-400" title="清空所有 (Cookies)">
+                      <Trash2 size={16} /> <span>全局清空</span>
+                    </button>
+                    <button
+                      onClick={() => {
+                        const name = prompt('输入新的分类文件夹名称:');
+                        if (name) createFolder(name);
+                      }}
+                      className="gold-button py-2 px-4 h-auto"
+                    >
+                      <FolderPlus size={18} />
+                      新建文件夹
+                    </button>
                   </div>
-                  {bookmarks[folder].length > 0 ? (
-                    <div className="flex flex-col gap-8">
-                      {/* Set 1: 职业 背景 专长 */}
-                      {(() => {
-                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
-                          if (!item) return false;
-                          if (item.isDir) return false; // Folders go to "Other" or their own check
-                          const path = item.pathParts.join(' ');
-                          return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
-                        });
-                        if (items.length === 0) return null;
-                        return (
-                          <div className="bookmark-group">
-                            <h4 className="section-title mb-4">职业 背景 专长</h4>
-                            <div className="item-grid">
-                              {items.map(item => (
-                                <ItemCard
-                                  key={item.id}
-                                  item={item}
-                                  onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
-                                  isBookmarked={true}
-                                  toggleBookmark={toggleBookmark}
-                                  bookmarks={bookmarks}
-                                  activePopover={activePopover}
-                                  setActivePopover={setActivePopover}
-                                />
-                              ))}
-                            </div>
+                </div>
+
+                <div className="overflow-y-auto flex-1 min-h-0 pr-2 pb-20 custom-scrollbar">
+                  {Object.keys(bookmarks).map(folder => {
+                    const isFolderExpanded = expandedFolders[folder] !== false; // Default expanded
+                    const folderItems = bookmarks[folder];
+
+                    return (
+                      <div key={folder} className={`bookmark-section mb-6 ${!isFolderExpanded ? 'collapsed' : ''}`}>
+                        <div
+                          className="folder-header group cursor-pointer flex items-center justify-between p-3 glass-panel mb-2"
+                          onClick={() => setExpandedFolders(prev => ({ ...prev, [folder]: !isFolderExpanded }))}
+                        >
+                          <div className="flex items-center gap-3">
+                            {isFolderExpanded ? <ChevronDown size={18} className="text-gold" /> : <ChevronRight size={18} className="text-gold" />}
+                            <h3 className="folder-name text-lg gold-text">{folder}</h3>
+                            <span className="count-badge opacity-60 text-xs bg-gold/10 px-2 py-0.5 rounded-full">{folderItems.length} 项</span>
                           </div>
-                        );
-
-                      })()}
-
-                      {/* Set 2: 法术 */}
-                      {(() => {
-                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
-                          if (!item) return false;
-                          // Spells have special handling or can be identified by path
-                          return item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
-                        });
-
-                        if (items.length === 0) return null;
-                        return (
-                          <div className="bookmark-group">
-                            <h4 className="section-title mb-4">法术列表</h4>
-                            <div className="spell-grid">
-                              {items.map(spell => (
-                                <SpellListItem
-                                  key={spell.id}
-                                  item={spell}
-                                  isSelected={selectedItem?.id === spell.id}
-                                  onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
-                                  isBookmarked={true}
-                                  isMobile={isMobile}
-                                  content={selectedItem?.id === spell.id ? loadedContent : null}
-                                  loading={contentLoading}
-                                  onBookmark={() => openBookmarkDialog(spell)}
-                                  activePopover={activePopover}
-                                  setActivePopover={setActivePopover}
-                                  bookmarks={bookmarks}
-                                  toggleBookmark={toggleBookmark}
-                                />
-                              ))}
-                            </div>
+                          <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                              onClick={(e) => { e.stopPropagation(); clearFolder(folder); }}
+                              className="action-icon-btn text-muted hover:text-red-400"
+                              title="清空文件夹"
+                            >
+                              <FilterX size={16} />
+                            </button>
+                            {folder !== '默认' && (
+                              <button
+                                onClick={(e) => { e.stopPropagation(); deleteFolder(folder); }}
+                                className="action-icon-btn text-muted hover:text-red-400"
+                                title="删除文件夹"
+                              >
+                                <Trash2 size={16} />
+                              </button>
+                            )}
                           </div>
-                        );
-                      })()}
+                        </div>
 
-                      {/* Set 3: 装备 道具 */}
-                      {(() => {
-                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
-                          if (!item) return false;
-                          if (item.isDir) return false;
-                          const path = item.pathParts.join(' ');
-                          return (path.includes('装备') || path.includes('道具')) && !path.includes('法术');
-                        });
-                        if (items.length === 0) return null;
-                        return (
-                          <div className="bookmark-group">
-                            <h4 className="section-title mb-4">装备 道具</h4>
-                            <div className="item-grid">
-                              {items.map(item => (
-                                <ItemCard
-                                  key={item.id}
-                                  item={item}
-                                  onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
-                                  isBookmarked={true}
-                                  toggleBookmark={toggleBookmark}
-                                  bookmarks={bookmarks}
-                                  activePopover={activePopover}
-                                  setActivePopover={setActivePopover}
-                                />
-                              ))}
-                            </div>
+                        {isFolderExpanded && (
+                          <div className="folder-content pl-4 border-l border-gold/10 ml-2 py-2">
+                            {folderItems.length > 0 ? (
+                              <div className="flex flex-col gap-8">
+                                {/* Group 1: 职业 背景 专长 */}
+                                {(() => {
+                                  const catId = `${folder}-classes`;
+                                  const isCatExpanded = expandedCategories[catId] !== false;
+                                  const items = folderItems.map(resolveBookmarkItem).filter(item => {
+                                    if (!item || item.isDir) return false;
+                                    const path = item.pathParts?.join(' ') || '';
+                                    return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
+                                  });
+                                  if (items.length === 0) return null;
+                                  return (
+                                    <div className="bookmark-group">
+                                      <div
+                                        className="flex items-center gap-2 mb-3 cursor-pointer group/cat"
+                                        onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
+                                      >
+                                        {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                                        <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">职业 背景 专长</h4>
+                                      </div>
+                                      {isCatExpanded && (
+                                        <div className="item-grid">
+                                          {items.map(item => (
+                                            <ItemCard
+                                              key={item.id}
+                                              item={item}
+                                              onClick={() => setSelectedItem(item)}
+                                              isBookmarked={true}
+                                              toggleBookmark={toggleBookmark}
+                                              bookmarks={bookmarks}
+                                              activePopover={activePopover}
+                                              setActivePopover={setActivePopover}
+                                            />
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })()}
+
+                                {/* Group 2: 装备 道具 其他 */}
+                                {(() => {
+                                  const catId = `${folder}-others`;
+                                  const isCatExpanded = expandedCategories[catId] !== false;
+                                  const items = folderItems.map(resolveBookmarkItem).filter(item => {
+                                    if (!item) return false;
+                                    // Not a class/origin/feat and not a spell
+                                    const isSpell = item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
+                                    const path = item.pathParts?.join(' ') || '';
+                                    const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
+                                    return !isSpecial && !isSpell;
+                                  });
+                                  if (items.length === 0) return null;
+                                  return (
+                                    <div className="bookmark-group">
+                                      <div
+                                        className="flex items-center gap-2 mb-3 cursor-pointer group/cat"
+                                        onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
+                                      >
+                                        {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                                        <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">装备 道具 其他</h4>
+                                      </div>
+                                      {isCatExpanded && (
+                                        <div className="item-grid">
+                                          {items.map(item => (
+                                            <ItemCard
+                                              key={item.id}
+                                              item={item}
+                                              onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
+                                              isBookmarked={true}
+                                              toggleBookmark={toggleBookmark}
+                                              bookmarks={bookmarks}
+                                              activePopover={activePopover}
+                                              setActivePopover={setActivePopover}
+                                            />
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })()}
+
+                                {/* Group 3: 法术 (Bottom) */}
+                                {(() => {
+                                  const catId = `${folder}-spells`;
+                                  const isCatExpanded = expandedCategories[catId] !== false;
+                                  const items = folderItems.map(resolveBookmarkItem).filter(item => {
+                                    if (!item) return false;
+                                    return item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
+                                  });
+                                  if (items.length === 0) return null;
+                                  return (
+                                    <div className="bookmark-group">
+                                      <div
+                                        className="flex items-center gap-2 mb-3 cursor-pointer group/cat"
+                                        onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
+                                      >
+                                        {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                                        <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">法术列表</h4>
+                                      </div>
+                                      {isCatExpanded && (
+                                        <div className="spell-grid">
+                                          {items.map(spell => (
+                                            <SpellListItem
+                                              key={spell.id}
+                                              item={spell}
+                                              isSelected={selectedItem?.id === spell.id}
+                                              onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                                              isBookmarked={true}
+                                              isMobile={isMobile}
+                                              content={selectedItem?.id === spell.id ? loadedContent : null}
+                                              loading={contentLoading}
+                                              onBookmark={() => openBookmarkDialog(spell)}
+                                              activePopover={activePopover}
+                                              setActivePopover={setActivePopover}
+                                              bookmarks={bookmarks}
+                                              toggleBookmark={toggleBookmark}
+                                            />
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })()}
+                              </div>
+                            ) : (
+                              <div className="empty-folder py-4 text-center opacity-40 text-sm italic">此文件夹为空</div>
+                            )}
                           </div>
-                        );
-
-                      })()}
-
-                      {/* Other Items */}
-                      {(() => {
-                        const items = bookmarks[folder].map(resolveBookmarkItem).filter(item => {
-                          if (!item) return false;
-                          // Spells are already handled
-                          if (item.castingTime) return false;
-                          const path = item.pathParts.join(' ');
-                          const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('法术') || path.includes('装备') || path.includes('道具');
-                          return !isSpecial || item.isDir;
-                        });
-                        if (items.length === 0) return null;
-                        return (
-                          <div className="bookmark-group">
-                            <h4 className="section-title mb-4">其他</h4>
-                            <div className="item-grid">
-                              {items.map(item => (
-                                <ItemCard
-                                  key={item.id}
-                                  item={item}
-                                  onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
-                                  isBookmarked={true}
-                                  toggleBookmark={toggleBookmark}
-                                  bookmarks={bookmarks}
-                                  activePopover={activePopover}
-                                  setActivePopover={setActivePopover}
-                                />
-                              ))}
-                            </div>
-                          </div>
-                        );
-
-                      })()}
-                    </div>
-                  ) : (
-                    <div className="empty-folder">此文件夹为空</div>
+                        )}
+                      </div>
+                    );
+                  })}
+                  {Object.keys(bookmarks).length === 0 && (
+                    <div className="text-center py-20 text-gray-500">您还没有任何收藏</div>
                   )}
                 </div>
-              ))}
-              {Object.keys(bookmarks).length === 0 && (
-                <div className="text-center py-20 text-gray-500">您还没有任何收藏</div>
+              </div>
+
+              {/* Right Panel: Desktop Details for Bookmarks too */}
+              {!isMobile && (
+                <div className={`spell-detail-panel ${selectedItem && activeTab === 'bookmarks' ? 'active' : ''}`}>
+                  {selectedItem && activeTab === 'bookmarks' && (
+                    <div className="p-6 h-full overflow-y-auto custom-scrollbar">
+                      <div className="detail-header">
+                        <div className="flex flex-col gap-1">
+                          <span className="text-xs text-gold/60 uppercase tracking-widest">{selectedItem.pathParts?.join(' > ') || '收藏条目'}</span>
+                          <h1 className="detail-title gold-text">{selectedItem.title}</h1>
+                        </div>
+                        <button
+                          onClick={() => openBookmarkDialog(selectedItem)}
+                          className={`bookmark-btn ${isBookmarkedAnywhere(selectedItem.id) ? 'active' : ''}`}
+                        >
+                          <Heart fill={isBookmarkedAnywhere(selectedItem.id) ? "currentColor" : "none"} size={20} />
+                        </button>
+                      </div>
+
+                      {contentLoading ? (
+                        <div className="flex justify-center py-20">
+                          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
+                        </div>
+                      ) : (
+                        <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+                      )}
+                    </div>
+                  )}
+                </div>
               )}
-            </motion.div>
+            </div>
           )}
 
           {selectedItem && activeTab !== 'spells' && (

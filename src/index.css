@@ -107,7 +107,8 @@ body {
 .sidebar-page-title {
   width: 100%;
   display: block;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 /* Nav Menu */
@@ -148,7 +149,7 @@ body {
 }
 
 .section-title {
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -478,6 +479,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.welcome-logo-text {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
 .welcome-title {
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -487,6 +493,24 @@ body {
   color: var(--text-muted);
   max-width: 550px;
   margin: 0 auto;
+}
+
+.welcome-footer {
+  border-top: 1px solid var(--border-color);
+  opacity: 0.8;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.welcome-footer a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.welcome-footer a:hover {
+  color: var(--accent-gold-hover);
+  text-decoration: underline;
 }
 
 /* Buttons */
@@ -1210,7 +1234,7 @@ body {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   opacity: 0.8;
 }
 
@@ -1324,85 +1348,101 @@ body {
   color: #ef4444;
 }
 
-/* Bookmark Popover */
-.bookmark-popover {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  width: 160px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  z-index: 101;
-}
 
-.popover-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 95;
-  background: transparent;
-}
-
-.z-above-overlay {
-  z-index: 100 !important;
-}
-
-
-.popover-header {
-  font-size: 0.7rem;
+/* Enhanced Bookmarks Styles */
+.action-btn-small {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.5rem 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  margin-bottom: 0.25rem;
-}
-
-.popover-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.popover-item {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  border-radius: 6px;
-  background: transparent;
-  border: none;
-  color: var(--text-secondary);
-  font-size: 0.8rem;
+  gap: 0.4rem;
   cursor: pointer;
   transition: all 0.2s;
-  text-align: left;
 }
 
-.popover-item:hover {
-  background: rgba(198, 180, 29, 0.1);
-  color: var(--accent-gold);
+.action-btn-small:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border-color: var(--accent-gold);
 }
 
-.popover-item.active {
-  color: var(--accent-gold);
+.action-btn-small.text-red-400:hover {
+  border-color: #ef4444;
+  color: #ef4444 !important;
+}
+
+.action-icon-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.folder-header.glass-panel {
   background: rgba(198, 180, 29, 0.05);
+  border: 1px solid rgba(198, 180, 29, 0.15);
+  transition: all 0.2s;
 }
 
-.popover-item.active Heart {
-  color: #ef4444;
+.folder-header:hover {
+  background: rgba(198, 180, 29, 0.1);
+  border-color: rgba(198, 180, 29, 0.3);
 }
 
-.popover-arrow {
-  position: absolute;
-  top: -5px;
-  right: 12px;
-  width: 10px;
-  height: 10px;
-  background: var(--bg-secondary);
-  border-left: 1px solid var(--border-color);
-  border-top: 1px solid var(--border-color);
-  transform: rotate(45deg);
+.bookmark-section.collapsed .folder-header {
+  margin-bottom: 0;
+  opacity: 0.7;
+}
+
+.bookmark-group {
+  position: relative;
+}
+
+.has-detail .spell-list-panel {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .spell-browser-container.has-detail .spell-list-panel {
+    display: none;
+  }
+}
+
+.action-btn-small span {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .action-btn-small span {
+    display: inline;
+  }
+}
+
+/* Mobile specific for collections */
+@media (max-width: 768px) {
+  .view-header .flex-wrap {
+    justify-content: flex-start;
+  }
+
+  .bookmark-section .folder-header {
+    padding: 0.75rem;
+  }
+
+  .folder-content {
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+  }
 }
