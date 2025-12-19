@@ -682,6 +682,8 @@ body {
   color: var(--accent-gold);
   margin-top: 1.5rem;
   font-size: 1.25rem;
+  overflow-x: auto;
+
 }
 
 .dnd-content p {
@@ -694,14 +696,20 @@ body {
   margin: 1.5rem 0;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
+  overflow-x: auto;
+  width: 100%;
+  /* Can be set to 'auto' if you want the table to be as wide as its content */
+  border-collapse: collapse;
+
 }
 
 .dnd-content th,
 .dnd-content td {
-  padding: 0.75rem;
+  padding: 0.25rem;
   border: 1px solid var(--border-color);
   text-align: left;
   background: rgba(255, 255, 255, 0.02);
+  font-size: 1rem;
 }
 
 .dnd-content th {
@@ -977,6 +985,7 @@ body {
 
   .sidebar.mobile-open {
     transform: translateX(0);
+    padding-bottom: 10vh;
   }
 
   .mobile-backdrop {
@@ -1071,7 +1080,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.3s;
   position: relative;
   display: flex;
@@ -1552,12 +1561,12 @@ body {
 } */
 
 /* Modal and Popover Overlays */
-.popover-overlay {
+/* .popover-overlay {
   position: fixed;
   inset: 0;
-  z-index: 1100;
+  z-index: 0;
   background: transparent;
-}
+} */
 
 .z-above-overlay {
   z-index: 1200 !important;
@@ -1571,8 +1580,10 @@ body {
   border: 1px solid var(--border-color) !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(198, 180, 29, 0.1);
   padding: 0.5rem;
-  z-index: 100;
+  z-index: 1200;
   margin-top: 0.5rem;
+  right: 0;
+  top: 2rem;
 }
 
 .popover-header {
