@@ -322,7 +322,8 @@ export default function App() {
         id: node._id,
         title: node._title,
         pathParts: node._path,
-        isDir: true
+        isDir: true,
+        path: node._selfFile?.path // Include path for overview if available
       };
     }
     // Check if it's a spell first for better matching
@@ -663,7 +664,7 @@ export default function App() {
 
                 {/* Spell List */}
                 {/* Spell List */}
-                <div className="overflow-y-auto flex-1 min-h-0 pr-2 pb-20 custom-scrollbar">
+                <div className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar">
                   <div className="spell-grid">
                     {filteredSpells.slice(0, 100).map(spell => (
                       <SpellListItem
@@ -818,7 +819,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="overflow-y-auto flex-1 min-h-0 pr-2 pb-20 custom-scrollbar">
+                <div className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar">
                   {Object.keys(bookmarks).map(folder => {
                     const isFolderExpanded = expandedFolders[folder] !== false; // Default expanded
                     const folderItems = bookmarks[folder];
@@ -925,7 +926,7 @@ export default function App() {
                                             <ItemCard
                                               key={item.id}
                                               item={item}
-                                              onClick={() => item.isDir ? navigateTo(item.pathParts) : setSelectedItem(item)}
+                                              onClick={() => setSelectedItem(item)}
                                               isBookmarked={true}
                                               toggleBookmark={toggleBookmark}
                                               bookmarks={bookmarks}

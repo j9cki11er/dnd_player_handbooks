@@ -52,6 +52,7 @@ body {
   padding: 3rem;
   max-width: 1200px;
   transition: max-width 0.3s;
+  overflow-x: hidden;
 }
 
 .main-viewport.wide-view {
@@ -825,6 +826,10 @@ body {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .flex {
