@@ -59,10 +59,18 @@ export default function App() {
     threshold: 0.3
   }), []);
 
+  const spellFuse = useMemo(() => new Fuse(spellData, {
+    keys: ['title', 'titleEn'],
+    threshold: 0.3
+  }), []);
+
   const searchResults = useMemo(() => {
-    if (!searchQuery) return [];
-    return fuse.search(searchQuery).map(r => r.item);
-  }, [searchQuery, fuse]);
+    if (!searchQuery) return { categories: [], spells: [] };
+    return {
+      categories: fuse.search(searchQuery).map(r => r.item),
+      spells: spellFuse.search(searchQuery).map(r => r.item)
+    };
+  }, [searchQuery, fuse, spellFuse]);
 
   // Memoize filtered spells
   const filteredSpells = useMemo(() => {
@@ -596,14 +604,50 @@ export default function App() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
-              <div className="item-grid">
-                {searchResults.map(item => (
-                  <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={isBookmarkedAnywhere(item.id)} />
-                ))}
-                {searchQuery && searchResults.length === 0 && (
-                  <div className="no-results">没找到匹配的结果</div>
-                )}
-              </div>
+
+              {searchQuery && (
+                <div className="flex flex-col gap-10 pb-20">
+                  {searchResults.categories.length > 0 && (
+                    <div className="search-section">
+                      <h3 className="section-title mb-4">分类目录</h3>
+                      <div className="item-grid">
+                        {searchResults.categories.map(item => (
+                          <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={isBookmarkedAnywhere(item.id)} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {searchResults.spells.length > 0 && (
+                    <div className="search-section">
+                      <h3 className="section-title mb-4">法术列表</h3>
+                      <div className="spell-grid">
+                        {searchResults.spells.map(spell => (
+                          <SpellListItem
+                            key={spell.id}
+                            item={spell}
+                            isSelected={selectedItem?.id === spell.id}
+                            onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                            isBookmarked={isBookmarkedAnywhere(spell.id)}
+                            isMobile={isMobile}
+                            content={selectedItem?.id === spell.id ? loadedContent : null}
+                            loading={contentLoading}
+                            onBookmark={() => openBookmarkDialog(spell)}
+                            activePopover={activePopover}
+                            setActivePopover={setActivePopover}
+                            bookmarks={bookmarks}
+                            toggleBookmark={toggleBookmark}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {searchResults.categories.length === 0 && searchResults.spells.length === 0 && (
+                    <div className="no-results py-20 text-center text-gray-500">没找到匹配的结果</div>
+                  )}
+                </div>
+              )}
             </motion.div>
           )}
 
@@ -864,7 +908,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
         onClick={() => setActiveTab('spells')}
       >
         <Book size={24} />
-        <span>法术</span>
+        <span>法术详述</span>
       </button>
 
       <button
@@ -888,7 +932,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
         onClick={toggleMenu}
       >
         <Menu size={24} />
-        <span>Menu</span>
+        <span>分类目录</span>
       </button>
     </nav>
   );
