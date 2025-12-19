@@ -34,6 +34,7 @@ export default function App() {
   const [activePopover, setActivePopover] = useState(null); // Track which spell card has the bookmark popover open
   const [expandedFolders, setExpandedFolders] = useState({}); // { folderName: boolean }
   const [expandedCategories, setExpandedCategories] = useState({}); // { "folderName-catName": boolean }
+  const [confirmConfig, setConfirmConfig] = useState(null);
 
   // New State for Spell Browser
   const [spellFilters, setSpellFilters] = useState({ class: '全部', level: '0' });
@@ -241,10 +242,19 @@ export default function App() {
 
   const deleteFolder = (name) => {
     if (name === '默认') return;
-    setBookmarks(prev => {
-      const next = { ...prev };
-      delete next[name];
-      return next;
+    setConfirmConfig({
+      title: '删除文件夹',
+      message: `确定要删除文件夹“${name}”吗？其中包含的所有收藏项也将被移除。`,
+      confirmText: '确认删除',
+      isDanger: true,
+      onConfirm: () => {
+        setBookmarks(prev => {
+          const next = { ...prev };
+          delete next[name];
+          return next;
+        });
+        setConfirmConfig(null);
+      }
     });
   };
 
@@ -253,27 +263,38 @@ export default function App() {
   };
 
   const clearFolder = (folderName) => {
-    if (!window.confirm(`确定要清空“${folderName}”中的所有收藏吗？`)) return;
-    setBookmarks(prev => ({
-      ...prev,
-      [folderName]: []
-    }));
+    setConfirmConfig({
+      title: '清空文件夹',
+      message: `确定要清空“${folderName}”中的所有收藏吗？`,
+      onConfirm: () => {
+        setBookmarks(prev => ({
+          ...prev,
+          [folderName]: []
+        }));
+        setConfirmConfig(null);
+      }
+    });
   };
 
   const clearAllBookmarks = () => {
-    if (!window.confirm('确定要清除所有收藏并重置吗？这将清除所有文件夹中的内容。')) return;
-    setBookmarks({ '默认': [] });
-    // Also clear localStorage to be sure
-    localStorage.setItem('dnd-bookmarks', JSON.stringify({ '默认': [] }));
+    setConfirmConfig({
+      title: '全局清空',
+      message: '确定要清除所有收藏并重置吗？这将清除所有文件夹中的内容。',
+      confirmText: '全部清空',
+      isDanger: true,
+      onConfirm: () => {
+        setBookmarks({ '默认': [] });
+        localStorage.setItem('dnd-bookmarks', JSON.stringify({ '默认': [] }));
+        setConfirmConfig(null);
+      }
+    });
   };
 
   const toggleAllFolders = (expand) => {
     const newState = {};
-    if (expand) {
-      Object.keys(bookmarks).forEach(f => {
-        newState[f] = true;
-      });
-    }
+    Object.keys(bookmarks).forEach(f => {
+      newState[f] = expand;
+    });
     setExpandedFolders(newState);
   };
 
@@ -429,7 +450,7 @@ export default function App() {
       </aside>
 
       {/* Main Content */}
-      <main className={`main-viewport ${activeTab === 'spells' ? 'wide-view' : ''}`}>
+      <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks') ? 'wide-view' : ''}`}>
         <AnimatePresence mode="wait">
           {activeTab === 'browser' && !selectedItem && (
             <motion.div
@@ -816,7 +837,7 @@ export default function App() {
                           <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
                               onClick={(e) => { e.stopPropagation(); clearFolder(folder); }}
-                              className="action-icon-btn text-muted hover:text-red-400"
+                              className="action-icon-btn text-white/80 hover:text-red-400"
                               title="清空文件夹"
                             >
                               <FilterX size={16} />
@@ -824,7 +845,7 @@ export default function App() {
                             {folder !== '默认' && (
                               <button
                                 onClick={(e) => { e.stopPropagation(); deleteFolder(folder); }}
-                                className="action-icon-btn text-muted hover:text-red-400"
+                                className="action-icon-btn text-white/80 hover:text-red-400"
                                 title="删除文件夹"
                               >
                                 <Trash2 size={16} />
@@ -1106,6 +1127,16 @@ export default function App() {
         navigateTo={navigateTo}
         toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       />
+
+      {/* Confirmation Modal */}
+      <AnimatePresence>
+        {confirmConfig && (
+          <ConfirmModal
+            {...confirmConfig}
+            onClose={() => setConfirmConfig(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -1164,6 +1195,38 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
         <span>分类目录</span>
       </button>
     </nav>
+  );
+}
+
+function ConfirmModal({ title, message, onConfirm, onClose, confirmText = '确认', cancelText = '取消', isDanger = false }) {
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="modal-content glass-panel confirm-modal"
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="modal-header">
+          <h3 className="modal-title gold-text">{title}</h3>
+        </div>
+        <div className="modal-body my-4">
+          <p className="text-gray-300">{message}</p>
+        </div>
+        <div className="modal-actions gap-3 mt-6">
+          <button onClick={onClose} className="action-btn-small px-6 py-2">
+            {cancelText}
+          </button>
+          <button
+            onClick={onConfirm}
+            className={`gold-button py-2 px-6 h-auto ${isDanger ? 'red-button' : ''}`}
+          >
+            {confirmText}
+          </button>
+        </div>
+      </motion.div>
+    </div>
   );
 }
 
