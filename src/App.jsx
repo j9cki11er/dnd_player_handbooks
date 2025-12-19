@@ -100,8 +100,11 @@ export default function App() {
             _children: {},
             _files: [],
             _path: item.pathParts.slice(0, index + 1),
-            _selfFile: null // For merging file with same name as folder
+            _selfFile: null,
+            _id: `dir:${item.pathParts.slice(0, index + 1).join('/')}`,
+            _title: part
           };
+
         }
         current = current[part]._children;
       });
@@ -181,9 +184,10 @@ export default function App() {
         fetch(`/content/${overview.path}`)
           .then(res => res.text())
           .then(html => {
-            setLoadedOverview({ html, title: overview.title });
+            setLoadedOverview({ html, title: overview.title, item: overview });
             setOverviewLoading(false);
           })
+
           .catch(err => {
             console.error('Failed to load overview:', err);
             setLoadedOverview(null);
@@ -387,7 +391,15 @@ export default function App() {
                     </div>
                   ) : loadedOverview ? (
                     <div className="overview-section glass-panel mb-8 p-6">
-                      <h2 className="detail-title gold-text mb-4">{loadedOverview.title}</h2>
+                      <div className="detail-header mb-4">
+                        <h2 className="detail-title gold-text">{loadedOverview.title}</h2>
+                        <button
+                          onClick={() => openBookmarkDialog(loadedOverview.item)}
+                          className={`bookmark-btn ${isBookmarkedAnywhere(loadedOverview.item.id) ? 'active' : ''}`}
+                        >
+                          <Heart fill={isBookmarkedAnywhere(loadedOverview.item.id) ? "currentColor" : "none"} size={20} />
+                        </button>
+                      </div>
                       <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
                     </div>
                   ) : (
@@ -400,16 +412,23 @@ export default function App() {
                       <h3 className="section-title mb-4">子目录</h3>
                       <div className="item-grid">
                         {Object.entries(currentCategoryData._children).map(([name, node]) => (
-                          <motion.div
-                            key={name}
-                            whileHover={{ scale: 1.02 }}
+                          <ItemCard
+                            key={node._id}
+                            item={{
+                              id: node._id,
+                              title: node._title,
+                              pathParts: node._path,
+                              isDir: true
+                            }}
                             onClick={() => navigateTo(node._path)}
-                            className="item-card glass-panel flex flex-col items-center justify-center py-8"
-                          >
-                            <Folder size={40} className="text-gold opacity-60 mb-3" />
-                            <h4 className="card-title text-center">{name}</h4>
-                          </motion.div>
+                            isBookmarked={isBookmarkedAnywhere(node._id)}
+                            toggleBookmark={toggleBookmark}
+                            bookmarks={bookmarks}
+                            activePopover={activePopover}
+                            setActivePopover={setActivePopover}
+                          />
                         ))}
+
                       </div>
                     </div>
                   )}
@@ -420,9 +439,19 @@ export default function App() {
                       <h3 className="section-title mb-4">内容条目</h3>
                       <div className="item-grid">
                         {currentCategoryData._files.filter(f => !f.isOverview).map(item => (
-                          <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={isBookmarkedAnywhere(item.id)} />
+                          <ItemCard
+                            key={item.id}
+                            item={item}
+                            onClick={() => setSelectedItem(item)}
+                            isBookmarked={isBookmarkedAnywhere(item.id)}
+                            toggleBookmark={toggleBookmark}
+                            bookmarks={bookmarks}
+                            activePopover={activePopover}
+                            setActivePopover={setActivePopover}
+                          />
                         ))}
                       </div>
+
                     </div>
                   )}
                 </div>
@@ -612,9 +641,19 @@ export default function App() {
                       <h3 className="section-title mb-4">分类目录</h3>
                       <div className="item-grid">
                         {searchResults.categories.map(item => (
-                          <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={isBookmarkedAnywhere(item.id)} />
+                          <ItemCard
+                            key={item.id}
+                            item={item}
+                            onClick={() => setSelectedItem(item)}
+                            isBookmarked={isBookmarkedAnywhere(item.id)}
+                            toggleBookmark={toggleBookmark}
+                            bookmarks={bookmarks}
+                            activePopover={activePopover}
+                            setActivePopover={setActivePopover}
+                          />
                         ))}
                       </div>
+
                     </div>
                   )}
 
@@ -698,7 +737,17 @@ export default function App() {
                             <h4 className="section-title mb-4">职业 背景 专长</h4>
                             <div className="item-grid">
                               {items.map(item => (
-                                <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />
+                                <ItemCard
+                                  key={item.id}
+                                  item={item}
+                                  onClick={() => setSelectedItem(item)}
+                                  isBookmarked={true}
+                                  toggleBookmark={toggleBookmark}
+                                  bookmarks={bookmarks}
+                                  activePopover={activePopover}
+                                  setActivePopover={setActivePopover}
+                                />
+
                               ))}
                             </div>
                           </div>
@@ -748,7 +797,17 @@ export default function App() {
                             <h4 className="section-title mb-4">装备 道具</h4>
                             <div className="item-grid">
                               {items.map(item => (
-                                <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />
+                                <ItemCard
+                                  key={item.id}
+                                  item={item}
+                                  onClick={() => setSelectedItem(item)}
+                                  isBookmarked={true}
+                                  toggleBookmark={toggleBookmark}
+                                  bookmarks={bookmarks}
+                                  activePopover={activePopover}
+                                  setActivePopover={setActivePopover}
+                                />
+
                               ))}
                             </div>
                           </div>
@@ -769,7 +828,17 @@ export default function App() {
                             <h4 className="section-title mb-4">其他</h4>
                             <div className="item-grid">
                               {items.map(item => (
-                                <ItemCard key={item.id} item={item} onClick={() => setSelectedItem(item)} isBookmarked={true} />
+                                <ItemCard
+                                  key={item.id}
+                                  item={item}
+                                  onClick={() => setSelectedItem(item)}
+                                  isBookmarked={true}
+                                  toggleBookmark={toggleBookmark}
+                                  bookmarks={bookmarks}
+                                  activePopover={activePopover}
+                                  setActivePopover={setActivePopover}
+                                />
+
                               ))}
                             </div>
                           </div>
@@ -938,23 +1007,72 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
   );
 }
 
-function ItemCard({ item, onClick, isBookmarked }) {
+function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, activePopover, setActivePopover }) {
+  const isPopoverOpen = activePopover === item.id;
+
+  const handleBookmarkClick = (e) => {
+    e.stopPropagation();
+    const isInDefault = bookmarks['默认']?.includes(item.id);
+    if (!isInDefault) {
+      toggleBookmark(item.id, '默认');
+    }
+    setActivePopover(isPopoverOpen ? null : item.id);
+  };
+
   return (
     <motion.div
       whileHover={{ scale: 1.02, y: -4 }}
       transition={{ type: "spring", stiffness: 300 }}
       onClick={onClick}
-      className="item-card glass-panel group relative"
+      className={`item-card glass-panel group relative ${isPopoverOpen ? 'z-10' : ''}`}
     >
       <div className="card-top">
-        <span className="card-category">{item?.pathParts?.join(' > ') || ''}</span>
-        {isBookmarked && <Heart size={14} className="heart-active" fill="currentColor" />}
+        <span className="card-category truncate mr-8">{item?.pathParts?.join(' > ') || ''}</span>
+        <div className="item-card-actions">
+          {item?.isDir && <Folder size={14} className="text-gold opacity-50 mr-2" />}
+          <button
+            className={`item-card-bookmark-btn ${isBookmarked ? 'active' : ''}`}
+            onClick={handleBookmarkClick}
+          >
+            <Heart size={14} fill={isBookmarked ? "currentColor" : "none"} />
+          </button>
+
+
+          <AnimatePresence>
+            {isPopoverOpen && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                className="bookmark-popover glass-panel"
+                onClick={(e) => e.stopPropagation()}
+                style={{ top: '100%', right: '0' }}
+              >
+                <div className="popover-header">添加到收藏</div>
+                <div className="popover-list">
+                  {Object.keys(bookmarks).map(folder => (
+                    <button
+                      key={folder}
+                      className={`popover-item ${bookmarks[folder].includes(item.id) ? 'active' : ''}`}
+                      onClick={() => toggleBookmark(item.id, folder)}
+                    >
+                      <span className="truncate">{folder}</span>
+                      {bookmarks[folder].includes(item.id) && <Heart size={10} fill="currentColor" />}
+                    </button>
+                  ))}
+                </div>
+                <div className="popover-arrow"></div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
       <h3 className="card-title group-hover:text-gold transition-colors">{item?.title}</h3>
       {item?.isOverview && <p className="card-subtitle text-gold">概览</p>}
     </motion.div>
   );
 }
+
 
 function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, onBookmark, activePopover, setActivePopover, bookmarks, toggleBookmark }) {
   const isPopoverOpen = activePopover === item.id;

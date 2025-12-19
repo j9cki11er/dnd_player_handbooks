@@ -261,9 +261,35 @@ body {
   font-weight: 700;
 }
 
-.heart-active {
+.item-card-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.item-card-bookmark-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.item-card-bookmark-btn:hover {
+  color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.item-card-bookmark-btn.active {
   color: #ef4444;
 }
+
 
 .card-title {
   font-size: 1.25rem;
