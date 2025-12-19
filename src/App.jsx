@@ -428,15 +428,16 @@ export default function App() {
     <div className="app-container">
       {/* Sidebar */}
       <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-        <div className="sidebar-header">
+        <a href="/" className="sidebar-header">
           <img src="/DFD logo-cropped.png" alt="Logo" className="sidebar-logo" />
           <div className="flex flex-col">
             <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
           </div>
-          <br></br>
-          <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册2024</span>
+        </a>
+        <br></br>
+        <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册2024</span>
 
-        </div>
+
 
         <nav className="nav-menu">
           <NavItem
