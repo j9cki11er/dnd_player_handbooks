@@ -352,17 +352,18 @@ export default function App() {
 
   const showGlobalDetail = useMemo(() => {
     if (!selectedItem) return false;
-    // Spells tab handles its own detail view (split pane or accordion)
+    // On mobile, all items should open the global detail view
+    if (isMobile) return true;
+
+    // Desktop behavior remains unchanged:
+    // Spells tab handles its own detail view (split pane)
     if (activeTab === 'spells') return false;
     // Bookmarks handles its own detail view on desktop (split pane)
-    // and accordion on mobile for spells.
-    if (activeTab === 'bookmarks') {
-      if (!isMobile) return false;
-      if (isSelectedSpell) return false;
-    }
-    // Browser and Search always use the global detail view
+    if (activeTab === 'bookmarks') return false;
+
+    // Browser and Search use the global detail view
     return true;
-  }, [selectedItem, activeTab, isMobile, isSelectedSpell]);
+  }, [selectedItem, activeTab, isMobile]);
 
 
   // Sidebar Recursive Component
@@ -820,6 +821,7 @@ export default function App() {
               <div className="spell-list-panel">
                 <div className="view-header flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   <h2 className="view-title gold-text m-0">我的收藏</h2>
+                  <span className="collection-info text-gray-500">我的收藏”会保存在您目前使用的装置中，更换手机或浏览器后将不会保留。</span>
                   <div className="flex flex-wrap gap-2">
                     <button onClick={() => toggleAllFolders(true)} className="action-btn-small" title="全部展开">
                       <ChevronDown size={16} /> <span>全部展开</span>
@@ -842,57 +844,6 @@ export default function App() {
                     </button>
                   </div>
                 </div>
-
-                <AnimatePresence>
-                  {isAddingFolder && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0, marginBottom: 0 }}
-                      animate={{ height: 'auto', opacity: 1, marginBottom: 24 }}
-                      exit={{ height: 0, opacity: 0, marginBottom: 0 }}
-                      className="new-folder-input-container glass-panel overflow-hidden"
-                    >
-                      <div className="p-4 flex flex-col md:flex-row items-center gap-4">
-                        <div className="flex-1 w-full relative">
-                          <FolderPlus className="absolute left-3 top-1/2 -translate-y-1/2 text-gold opacity-50" size={18} />
-                          <input
-                            autoFocus
-                            type="text"
-                            placeholder="输入文件夹名称..."
-                            className="new-folder-input w-full pl-10 pr-4 py-2"
-                            value={newFolderName}
-                            onChange={(e) => setNewFolderName(e.target.value)}
-                            onKeyDown={(e) => {
-                              if (e.key === 'Enter') {
-                                createFolder(newFolderName);
-                                setIsAddingFolder(false);
-                              } else if (e.key === 'Escape') {
-                                setIsAddingFolder(false);
-                              }
-                            }}
-                          />
-                        </div>
-                        <div className="flex items-center gap-2 w-full md:w-auto">
-                          <button
-                            onClick={() => {
-                              createFolder(newFolderName);
-                              setIsAddingFolder(false);
-                            }}
-                            className="gold-button flex-1 md:flex-none justify-center"
-                            disabled={!newFolderName.trim()}
-                          >
-                            确认
-                          </button>
-                          <button
-                            onClick={() => setIsAddingFolder(false)}
-                            className="action-btn-small flex-1 md:flex-none justify-center py-2 px-4"
-                          >
-                            取消
-                          </button>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
 
                 <div className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar">
                   {Object.keys(bookmarks).map(folder => {
@@ -1150,6 +1101,64 @@ export default function App() {
       {/* Bookmark Dialog */}
 
       <AnimatePresence>
+        {isAddingFolder && (
+          <div className="modal-overlay" onClick={() => setIsAddingFolder(false)}>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="modal-content glass-panel"
+              onClick={e => e.stopPropagation()}
+            >
+              <h3 className="modal-title gold-text">新建收藏文件夹</h3>
+              <p className="modal-subtitle">请输入新的文件夹名称</p>
+
+              <div className="new-folder-modal-body mb-6">
+                <div className="relative">
+                  <FolderPlus className="absolute left-3 top-1/2 -translate-y-1/2 text-gold opacity-50" size={18} />
+                  <input
+                    autoFocus
+                    type="text"
+                    placeholder="例如：我的常用规则..."
+                    className="new-folder-input w-full pl-10 pr-4 py-2"
+                    value={newFolderName}
+                    onChange={(e) => setNewFolderName(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && newFolderName.trim()) {
+                        createFolder(newFolderName);
+                        setIsAddingFolder(false);
+                      } else if (e.key === 'Escape') {
+                        setIsAddingFolder(false);
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="modal-actions gap-3">
+                <button
+                  onClick={() => setIsAddingFolder(false)}
+                  className="action-btn-small px-6 py-2 h-auto"
+                >
+                  取消
+                </button>
+                <button
+                  onClick={() => {
+                    createFolder(newFolderName);
+                    setIsAddingFolder(false);
+                  }}
+                  className="gold-button px-6"
+                  disabled={!newFolderName.trim()}
+                >
+                  确认
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
         {isBookmarkModalOpen && (
           <div className="modal-overlay" onClick={() => setIsBookmarkModalOpen(false)}>
             <motion.div
@@ -1387,7 +1396,7 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
     setActivePopover(isPopoverOpen ? null : item.id);
   };
   return (
-    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''} ${isMobile && isSelected ? 'mobile-expanded' : ''} ${isPopoverOpen ? 'z-above-overlay' : ''}`}>
+    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''} ${isPopoverOpen ? 'z-above-overlay' : ''}`}>
       <div
         onClick={onClick}
         className="spell-card-inner"
@@ -1455,41 +1464,15 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
           </div>
         </div>
 
-        {/* Mobile Indicator */}
-        {isMobile && !isSelected && (
+        {/* Desktop Indicator (optional, but keep it consistent for now) */}
+        {!isMobile && !isSelected && (
           <div className="spell-card-indicator">
-            <ChevronDown size={14} />
+            <ChevronRight size={14} />
           </div>
         )}
       </div>
 
-      {/* Mobile Accordion Content */}
-      <AnimatePresence>
-        {isMobile && isSelected && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="spell-card-accordion"
-          >
-            <div className="p-3 relative">
-              <button
-                onClick={(e) => { e.stopPropagation(); onBookmark(); }}
-                className="spell-card-float-heart"
-              >
-                <Heart size={18} fill={isBookmarked ? "currentColor" : "none"} className={isBookmarked ? "text-red-500" : ""} />
-              </button>
-              {loading ? (
-                <div className="py-8 flex justify-center">
-                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-gold"></div>
-                </div>
-              ) : (
-                <div className="dnd-content text-sm" dangerouslySetInnerHTML={{ __html: content }} />
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Mobile Accordion Content removed - now uses global detail view */}
     </div>
   );
 }
