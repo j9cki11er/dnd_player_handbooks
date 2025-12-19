@@ -340,6 +340,26 @@ export default function App() {
     return null;
   };
 
+  const isSelectedSpell = useMemo(() => {
+    if (!selectedItem) return false;
+    const item = resolveBookmarkItem(selectedItem.id) || selectedItem;
+    return item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
+  }, [selectedItem, resolveBookmarkItem]);
+
+  const showGlobalDetail = useMemo(() => {
+    if (!selectedItem) return false;
+    // Spells tab handles its own detail view (split pane or accordion)
+    if (activeTab === 'spells') return false;
+    // Bookmarks handles its own detail view on desktop (split pane)
+    // and accordion on mobile for spells.
+    if (activeTab === 'bookmarks') {
+      if (!isMobile) return false;
+      if (isSelectedSpell) return false;
+    }
+    // Browser and Search always use the global detail view
+    return true;
+  }, [selectedItem, activeTab, isMobile, isSelectedSpell]);
+
 
   // Sidebar Recursive Component
   const SidebarItem = ({ name, node, depth = 0 }) => {
@@ -453,7 +473,7 @@ export default function App() {
       {/* Main Content */}
       <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks') ? 'wide-view' : ''}`}>
         <AnimatePresence mode="wait">
-          {activeTab === 'browser' && !selectedItem && (
+          {activeTab === 'browser' && !showGlobalDetail && (
             <motion.div
               key="browser"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
@@ -609,7 +629,7 @@ export default function App() {
             </motion.div>
           )}
 
-          {activeTab === 'spells' && (
+          {activeTab === 'spells' && !showGlobalDetail && (
             <div className="spell-browser-container glass-panel p-4">
               {/* Left Panel: List & Filters */}
               <div className="spell-list-panel">
@@ -718,7 +738,7 @@ export default function App() {
             </div>
           )}
 
-          {activeTab === 'search' && !selectedItem && (
+          {activeTab === 'search' && !showGlobalDetail && (
             <motion.div
               key="search"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
@@ -791,7 +811,7 @@ export default function App() {
             </motion.div>
           )}
 
-          {activeTab === 'bookmarks' && (
+          {activeTab === 'bookmarks' && !showGlobalDetail && (
             <div className={`spell-browser-container glass-panel p-4 ${selectedItem ? 'has-detail' : ''}`}>
               <div className="spell-list-panel">
                 <div className="view-header flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
@@ -1029,7 +1049,7 @@ export default function App() {
             </div>
           )}
 
-          {selectedItem && activeTab !== 'spells' && (
+          {showGlobalDetail && (
             <motion.div
               key="detail-view"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
