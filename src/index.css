@@ -779,8 +779,8 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
-  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
 }
 
@@ -1059,6 +1059,14 @@ a {
 
   .pr-10 {
     padding-right: 0rem;
+  }
+
+
+  .dnd-content table {
+    transform: scale(0.95);
+    transform-origin: top left;
+    margin-left: -1rem;
+    width: 97vw;
   }
 
 }
