@@ -700,7 +700,7 @@ export default function App() {
 
                   <footer className="welcome-footer mt-16 pt-8 border-t border-gold/10 text-center">
                     <p className="footer-text text-xs opacity-60 leading-relaxed">
-                      Provided by Don't Feed Dragon 不要喂龙公会 & Powered by <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
+                      Provided by Don't Feed Dragon 不要喂龙公会 <br></br> Powered by <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
                     </p>
                     <p className="footer-link text-xs opacity-60 mt-1">
                       查看更多玩家手册在: <a href="https://5echm.kagangtuya.top/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">https://5echm.kagangtuya.top/</a>
