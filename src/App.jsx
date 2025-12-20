@@ -625,7 +625,7 @@ export default function App() {
                   ) : loadedOverview ? (
                     <div className="overview-section mb-8">
                       <div className="detail-header">
-                        <h2 className="detail-title gold-text">{loadedOverview.title}</h2>
+                        {/* <h2 className="detail-title gold-text">{loadedOverview.title}</h2> */}
                         {loadedOverview.item && (
                           <button
                             onClick={() => openBookmarkDialog(loadedOverview.item)}
@@ -635,7 +635,7 @@ export default function App() {
                           </button>
                         )}
                       </div>
-                      <div className="breadcrumb">
+                      {/* <div className="breadcrumb">
                         <span onClick={() => navigateTo([])} className="breadcrumb-item">首页</span>
                         {currentPath.map((part, i) => (
                           <React.Fragment key={i}>
@@ -645,7 +645,7 @@ export default function App() {
                             </span>
                           </React.Fragment>
                         ))}
-                      </div>
+                      </div> */}
 
                       <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
                     </div>
@@ -705,9 +705,9 @@ export default function App() {
               ) : (
                 <div className="welcome-panel">
                   <img src="/DFD logo-cropped.png" alt="Welcome Logo" className="welcome-logo" />
-                  <h2 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">Don't Feed Dragon <br></br>不要喂龙公会</h2>
-                  <h3 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h3>
-                  <p className="welcome-desc mb-6">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。<br></br>常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
+                  <h3 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">不要喂龙公会</h3>
+                  <h2 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h2>
+                  <p className="welcome-desc mb-6">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
                   <div className="disclaimer-box mb-8">
                     <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
                       <strong>冒险者须知 · Beta 测试</strong><br></br>
@@ -770,7 +770,7 @@ export default function App() {
               {/* Left Panel: List & Filters */}
               <div className="spell-list-panel">
                 <div className="view-header mb-4 shrink-0">
-                  <h2 className="view-title gold-text">法术列表</h2>
+                  {/* <h2 className="view-title gold-text">法术列表</h2> */}
 
                   {/* Unified Spell Filters */}
                   <div className="unified-filter-bar mb-4 shrink-0">
@@ -952,7 +952,7 @@ export default function App() {
             <div className={`spell-browser-container p-4 ${selectedItem ? 'has-detail' : ''}`}>
               <div className="spell-list-panel">
                 <div className="view-header flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                  <h2 className="view-title gold-text m-0">我的收藏</h2>
+                  {/* <h2 className="view-title gold-text m-0">我的收藏</h2> */}
                   <span className="collection-info text-muted">我的收藏”会保存在您目前使用的装置中，更换手机或浏览器后将不会保留。</span>
                   <div className="flex flex-wrap gap-2">
                     <button onClick={() => toggleAllFolders(true)} className="action-btn-small" title="全部展开">
@@ -1194,7 +1194,7 @@ export default function App() {
             >
               <div className="content-view relative">
                 <div className="detail-header">
-                  <h1 className="detail-title gold-text">{selectedItem.title}</h1>
+                  {/* <h1 className="detail-title gold-text">{selectedItem.title}</h1> */}
                   <button
                     onClick={() => openBookmarkDialog(selectedItem)}
                     className={`bookmark-btn ${isBookmarkedAnywhere(selectedItem.id) ? 'active' : ''}`}
