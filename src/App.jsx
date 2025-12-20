@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
 import spellData from './data-spells.json';
-import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX } from 'lucide-react';
+import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -35,6 +35,16 @@ export default function App() {
   const [expandedFolders, setExpandedFolders] = useState({}); // { folderName: boolean }
   const [expandedCategories, setExpandedCategories] = useState({}); // { "folderName-catName": boolean }
   const [confirmConfig, setConfirmConfig] = useState(null);
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.body.className = theme === 'light' ? 'light-theme' : '';
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   // New State for Spell Browser
   const [spellFilters, setSpellFilters] = useState({ class: '全部', level: '0' });
@@ -532,6 +542,13 @@ export default function App() {
               <SidebarItem key={catName} name={catName} node={catNode} />
             ))}
           </div>
+        </div>
+
+        <div className="theme-toggle-container">
+          <button onClick={toggleTheme} className="theme-toggle-btn">
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            <span>{theme === 'dark' ? '切换浅色模式' : '切换深色模式'}</span>
+          </button>
         </div>
       </aside>
 
@@ -1272,6 +1289,8 @@ export default function App() {
         navigateTo={navigateTo}
         setSelectedItem={setSelectedItem}
         toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
 
       {/* Confirmation Modal */}
@@ -1296,7 +1315,7 @@ function NavItem({ icon, label, active, onClick }) {
   );
 }
 
-function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, toggleMenu }) {
+function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, toggleMenu, theme, toggleTheme }) {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     setSelectedItem(null);
@@ -1308,7 +1327,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
         className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
         onClick={() => handleTabClick('browser')}
       >
-        <Layout size={24} />
+        <Layout size={20} />
         <span>资料游览</span>
       </button>
 
@@ -1316,24 +1335,24 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
         className={`mobile-nav-item ${activeTab === 'spells' ? 'active' : ''}`}
         onClick={() => handleTabClick('spells')}
       >
-        <Book size={24} />
+        <Book size={20} />
         <span>法术详述</span>
-      </button>
-
-      <button
-        className={`mobile-nav-item ${activeTab === 'search' ? 'active' : ''}`}
-        onClick={() => handleTabClick('search')}
-      >
-        <Search size={24} />
-        <span>全局搜索</span>
       </button>
 
       <button
         className={`mobile-nav-item ${activeTab === 'bookmarks' ? 'active' : ''}`}
         onClick={() => handleTabClick('bookmarks')}
       >
-        <Heart size={24} />
+        <Heart size={20} />
         <span>我的收藏</span>
+      </button>
+
+      <button
+        className="mobile-nav-item"
+        onClick={toggleTheme}
+      >
+        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+        <span>{theme === 'dark' ? '浅色模式' : '深色模式'}</span>
       </button>
 
       <button
@@ -1343,8 +1362,8 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
           setSelectedItem(null);
         }}
       >
-        <Menu size={24} />
-        <span>分类目录</span>
+        <Menu size={20} />
+        <span>更多</span>
       </button>
     </nav>
   );
