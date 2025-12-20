@@ -242,6 +242,16 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .bookmark-group .item-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
+    padding-right: 1rem;
+  }
+
+}
+
+
 /* Cards */
 .item-card {
   padding: 1rem;
@@ -1025,13 +1035,13 @@ a {
     font-size: 2rem;
   }
 
-  .item-grid {
+  /* .item-grid {
     grid-template-columns: repeat(1, 1fr) !important;
-  }
+  } */
 
   .card-category {
     font-size: 0.75rem;
-    max-width: 50%;
+    max-width: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
