@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
 import spellData from './data-spells.json';
-import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon } from 'lucide-react';
+import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon, ArrowLeft } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -272,6 +272,9 @@ export default function App() {
       } else {
         setLoadedOverview(null);
       }
+    } else if (activeTab === 'browser' && !selectedItem && !currentCategoryData) {
+      // Clear overview when returning to home screen
+      setLoadedOverview(null);
     }
   }, [currentCategoryData, selectedItem, activeTab]);
 
@@ -493,8 +496,58 @@ export default function App() {
     );
   };
 
+  const TopBar = () => {
+    const getTitle = () => {
+      if (selectedItem) return selectedItem.title;
+
+      switch (activeTab) {
+        case 'browser':
+          if (loadedOverview) return loadedOverview.title;
+          return '资料浏览';
+        case 'spells': return '法术列表';
+        case 'search': return '全局搜索';
+        case 'bookmarks': return '我的收藏';
+        default: return '资料浏览';
+      }
+    };
+
+    const handleBack = () => {
+      if (selectedItem) {
+        setSelectedItem(null);
+      } else if (currentPath.length > 0) {
+        // Go up one level
+        const newPath = currentPath.slice(0, currentPath.length - 1);
+        setCurrentPath(newPath);
+      }
+    };
+
+    const showBackButton = (activeTab === 'browser' && (currentPath.length > 0 || selectedItem)) ||
+      (activeTab !== 'browser' && selectedItem);
+
+    return (
+      <header className="sticky-top-bar">
+        <div className="top-bar-left">
+          {showBackButton && (
+            <button onClick={handleBack} className="top-bar-back-btn">
+              <ArrowLeft size={20} />
+            </button>
+          )}
+          <h1 className="top-bar-title">{getTitle()}</h1>
+        </div>
+        <div className="top-bar-actions">
+          {activeTab !== 'search' && (
+            <button onClick={() => { setActiveTab('search'); setSelectedItem(null); }} className="top-bar-search-btn">
+              <Search size={22} />
+            </button>
+          )}
+        </div>
+      </header>
+    );
+  };
+
   return (
     <div className="app-container">
+      <TopBar />
       {/* Sidebar */}
       <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <a href="/" className="sidebar-header">
@@ -560,17 +613,7 @@ export default function App() {
               key="browser"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             >
-              <div className="breadcrumb">
-                <span onClick={() => navigateTo([])} className="breadcrumb-item">首页</span>
-                {currentPath.map((part, i) => (
-                  <React.Fragment key={i}>
-                    <ChevronRight size={14} className="mx-1 text-muted" />
-                    <span onClick={() => navigateTo(currentPath.slice(0, i + 1))} className="breadcrumb-item">
-                      {part}
-                    </span>
-                  </React.Fragment>
-                ))}
-              </div>
+
 
               {currentCategoryData ? (
                 <div className="directory-view">
@@ -581,7 +624,7 @@ export default function App() {
                     </div>
                   ) : loadedOverview ? (
                     <div className="overview-section mb-8">
-                      <div className="detail-header mb-4">
+                      <div className="detail-header">
                         <h2 className="detail-title gold-text">{loadedOverview.title}</h2>
                         {loadedOverview.item && (
                           <button
@@ -591,6 +634,17 @@ export default function App() {
                             <Heart fill={isBookmarkedAnywhere(loadedOverview.item.id) ? "currentColor" : "none"} size={20} />
                           </button>
                         )}
+                      </div>
+                      <div className="breadcrumb">
+                        <span onClick={() => navigateTo([])} className="breadcrumb-item">首页</span>
+                        {currentPath.map((part, i) => (
+                          <React.Fragment key={i}>
+                            <ChevronRight size={14} className="mx-1 text-muted" />
+                            <span onClick={() => navigateTo(currentPath.slice(0, i + 1))} className="breadcrumb-item">
+                              {part}
+                            </span>
+                          </React.Fragment>
+                        ))}
                       </div>
 
                       <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
@@ -678,7 +732,7 @@ export default function App() {
                   </div>
 
                   <div className="welcome-directory mt-12">
-                    <h3 className="section-title text-center mb-6">分类目录</h3>
+                    {/* <h3 className="section-title text-center mb-6">分类目录</h3> */}
                     <div className="item-grid">
                       {CHAPTERS_TO_SHOW.map(name => {
                         const node = categoryTree[name];
@@ -1138,12 +1192,6 @@ export default function App() {
               key="detail-view"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             >
-              <button
-                onClick={() => setSelectedItem(null)}
-                className="back-btn"
-              >
-                <X size={20} /> 返回列表
-              </button>
               <div className="content-view relative">
                 <div className="detail-header">
                   <h1 className="detail-title gold-text">{selectedItem.title}</h1>
@@ -1289,6 +1337,7 @@ export default function App() {
         activePath={currentPath}
         navigateTo={navigateTo}
         setSelectedItem={setSelectedItem}
+        setCurrentPath={setCurrentPath}
         toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         theme={theme}
         toggleTheme={toggleTheme}
@@ -1316,7 +1365,7 @@ function NavItem({ icon, label, active, onClick }) {
   );
 }
 
-function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, toggleMenu, theme, toggleTheme }) {
+function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, setCurrentPath, toggleMenu, theme, toggleTheme }) {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     setSelectedItem(null);
@@ -1326,7 +1375,11 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
     <nav className="mobile-navbar">
       <button
         className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
-        onClick={() => handleTabClick('browser')}
+        onClick={() => {
+          setActiveTab('browser');
+          setCurrentPath([]);
+          setSelectedItem(null);
+        }}
       >
         <Layout size={20} />
         <span>资料游览</span>
