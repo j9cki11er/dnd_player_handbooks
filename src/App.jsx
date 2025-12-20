@@ -717,52 +717,53 @@ export default function App() {
               <div className="spell-list-panel">
                 <div className="view-header mb-4 shrink-0">
                   <h2 className="view-title gold-text">法术列表</h2>
+
+                  {/* Unified Spell Filters */}
+                  <div className="unified-filter-bar mb-4 shrink-0">
+                    <div className="filter-item">
+                      <select
+                        value={spellFilters.class}
+                        onChange={(e) => setSpellFilters(prev => ({ ...prev, class: e.target.value }))}
+                        className="filter-select"
+                      >
+                        <option value="全部">全部职业</option>
+                        {['吟游诗人', '牧师', '德鲁伊', '圣武士', '游侠', '术士', '魔契师', '法师'].map(c => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="filter-divider"></div>
+
+                    <div className="filter-item">
+                      <select
+                        value={spellFilters.level}
+                        onChange={(e) => setSpellFilters(prev => ({ ...prev, level: e.target.value }))}
+                        className="filter-select"
+                      >
+                        <option value="全部">全部环阶</option>
+                        <option value="0">戏法</option>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(l => (
+                          <option key={l} value={l}>{l}环</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="filter-divider"></div>
+
+                    <div className="filter-search flex-grow">
+                      <Search size={14} className="search-icon" />
+                      <input
+                        type="text"
+                        placeholder="搜索法术..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="search-input"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                {/* Unified Spell Filters */}
-                <div className="unified-filter-bar mb-4 shrink-0">
-                  <div className="filter-item">
-                    <select
-                      value={spellFilters.class}
-                      onChange={(e) => setSpellFilters(prev => ({ ...prev, class: e.target.value }))}
-                      className="filter-select"
-                    >
-                      <option value="全部">全部职业</option>
-                      {['吟游诗人', '牧师', '德鲁伊', '圣武士', '游侠', '术士', '魔契师', '法师'].map(c => (
-                        <option key={c} value={c}>{c}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="filter-divider"></div>
-
-                  <div className="filter-item">
-                    <select
-                      value={spellFilters.level}
-                      onChange={(e) => setSpellFilters(prev => ({ ...prev, level: e.target.value }))}
-                      className="filter-select"
-                    >
-                      <option value="全部">全部环阶</option>
-                      <option value="0">戏法</option>
-                      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(l => (
-                        <option key={l} value={l}>{l}环</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="filter-divider"></div>
-
-                  <div className="filter-search flex-grow">
-                    <Search size={14} className="search-icon" />
-                    <input
-                      type="text"
-                      placeholder="搜索法术..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="search-input"
-                    />
-                  </div>
-                </div>
 
                 {/* Spell List */}
                 {/* Spell List */}
