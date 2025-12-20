@@ -576,11 +576,11 @@ export default function App() {
                 <div className="directory-view">
                   {/* Overview content if exists */}
                   {overviewLoading ? (
-                    <div className="overview-section glass-panel mb-8 p-12 flex justify-center">
+                    <div className="overview-section mb-8 p-12 flex justify-center">
                       <div className="animate-pulse text-gold">正在加载概览...</div>
                     </div>
                   ) : loadedOverview ? (
-                    <div className="overview-section glass-panel mb-8 p-6">
+                    <div className="overview-section mb-8">
                       <div className="detail-header mb-4">
                         <h2 className="detail-title gold-text">{loadedOverview.title}</h2>
                         {loadedOverview.item && (
@@ -649,7 +649,7 @@ export default function App() {
                   )}
                 </div>
               ) : (
-                <div className="glass-panel welcome-panel">
+                <div className="welcome-panel">
                   <img src="/DFD logo-cropped.png" alt="Welcome Logo" className="welcome-logo" />
                   <h2 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">Don't Feed Dragon <br></br>不要喂龙公会</h2>
                   <h3 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h3>
@@ -712,7 +712,7 @@ export default function App() {
           )}
 
           {activeTab === 'spells' && !showGlobalDetail && (
-            <div className="spell-browser-container glass-panel p-4">
+            <div className="spell-browser-container p-4">
               {/* Left Panel: List & Filters */}
               <div className="spell-list-panel">
                 <div className="view-header mb-4 shrink-0">
@@ -720,7 +720,7 @@ export default function App() {
                 </div>
 
                 {/* Unified Spell Filters */}
-                <div className="unified-filter-bar glass-panel mb-4 shrink-0">
+                <div className="unified-filter-bar mb-4 shrink-0">
                   <div className="filter-item">
                     <select
                       value={spellFilters.class}
@@ -785,8 +785,8 @@ export default function App() {
                         toggleBookmark={toggleBookmark}
                       />
                     ))}
-                    {filteredSpells.length === 0 && <div className="col-span-full text-center text-gray-500 py-10">未找到匹配的法术</div>}
-                    {filteredSpells.length > 100 && <div className="col-span-full text-center text-gray-500 py-4 text-xs">显示前 100 个结果</div>}
+                    {filteredSpells.length === 0 && <div className="col-span-full text-center text-muted py-10">未找到匹配的法术</div>}
+                    {filteredSpells.length > 100 && <div className="col-span-full text-center text-muted py-4 text-xs">显示前 100 个结果</div>}
                   </div>
                 </div>
               </div>
@@ -886,7 +886,7 @@ export default function App() {
                   )}
 
                   {searchResults.categories.length === 0 && searchResults.spells.length === 0 && (
-                    <div className="no-results py-20 text-center text-gray-500">没找到匹配的结果</div>
+                    <div className="no-results py-20 text-center text-muted">没找到匹配的结果</div>
                   )}
                 </div>
               )}
@@ -894,11 +894,11 @@ export default function App() {
           )}
 
           {activeTab === 'bookmarks' && !showGlobalDetail && (
-            <div className={`spell-browser-container glass-panel p-4 ${selectedItem ? 'has-detail' : ''}`}>
+            <div className={`spell-browser-container p-4 ${selectedItem ? 'has-detail' : ''}`}>
               <div className="spell-list-panel">
                 <div className="view-header flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   <h2 className="view-title gold-text m-0">我的收藏</h2>
-                  <span className="collection-info text-gray-500">我的收藏”会保存在您目前使用的装置中，更换手机或浏览器后将不会保留。</span>
+                  <span className="collection-info text-muted">我的收藏”会保存在您目前使用的装置中，更换手机或浏览器后将不会保留。</span>
                   <div className="flex flex-wrap gap-2">
                     <button onClick={() => toggleAllFolders(true)} className="action-btn-small" title="全部展开">
                       <ChevronDown size={16} /> <span>全部展开</span>
@@ -941,7 +941,7 @@ export default function App() {
                           <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
                               onClick={(e) => { e.stopPropagation(); clearFolder(folder); }}
-                              className="action-icon-btn text-white/80 hover:text-red-400"
+                              className="action-icon-btn text-muted hover:text-red-400"
                               title="清空文件夹"
                             >
                               <FilterX size={16} />
@@ -949,7 +949,7 @@ export default function App() {
                             {folder !== '默认' && (
                               <button
                                 onClick={(e) => { e.stopPropagation(); deleteFolder(folder); }}
-                                className="action-icon-btn text-white/80 hover:text-red-400"
+                                className="action-icon-btn text-muted hover:text-red-400"
                                 title="删除文件夹"
                               >
                                 <Trash2 size={16} />
@@ -1095,7 +1095,7 @@ export default function App() {
                     );
                   })}
                   {Object.keys(bookmarks).length === 0 && (
-                    <div className="text-center py-20 text-gray-500">您还没有任何收藏</div>
+                    <div className="text-center py-20 text-muted">您还没有任何收藏</div>
                   )}
                 </div>
               </div>
@@ -1143,7 +1143,7 @@ export default function App() {
               >
                 <X size={20} /> 返回列表
               </button>
-              <div className="glass-panel content-view relative">
+              <div className="content-view relative">
                 <div className="detail-header">
                   <h1 className="detail-title gold-text">{selectedItem.title}</h1>
                   <button
@@ -1322,7 +1322,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
   };
 
   return (
-    <nav className="mobile-navbar glass-panel">
+    <nav className="mobile-navbar">
       <button
         className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
         onClick={() => handleTabClick('browser')}
@@ -1383,7 +1383,7 @@ function ConfirmModal({ title, message, onConfirm, onClose, confirmText = '确�
           <h3 className="modal-title gold-text">{title}</h3>
         </div>
         <div className="modal-body my-4">
-          <p className="text-gray-300">{message}</p>
+          <p className="text-secondary">{message}</p>
         </div>
         <div className="modal-actions gap-3 mt-6">
           <button onClick={onClose} className="action-btn-small px-6 py-2">
@@ -1534,18 +1534,21 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
             </div>
           </div>
 
-          <div className="spell-card-meta">
-            <span className="meta-item">{item.level || '环阶未知'}</span>
-            <span className="meta-divider">•</span>
-            <span className="meta-item">{item.castingTime || '1 动作'}</span>
-          </div>
+          <div className="spell-card-footer">
+            <div className="spell-card-meta">
+              <span className="meta-item">{item.level || '环阶未知'}</span>
+              <span className="meta-divider">•</span>
+              <span className="meta-item">{item.castingTime || '1 动作'}</span>
+            </div>
 
-          <div className="spell-card-extra">
-            <div className="extra-item">
-              <span className="label">时间:</span>
-              <span className="value">{item.duration || '瞬时'}</span>
-              <span className="label">| 成分:</span>
-              <span className="value">{item.components || 'V, S'}</span>
+            <div className="spell-card-extra">
+              <div className="extra-item">
+                <span className="label">时间:</span>
+                <span className="value">{item.duration || '瞬时'}</span>
+                <span className="meta-divider">•</span>
+                <span className="label">成分:</span>
+                <span className="value">{item.components || 'V, S'}</span>
+              </div>
             </div>
           </div>
         </div>
