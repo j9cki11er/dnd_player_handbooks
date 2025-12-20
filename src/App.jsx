@@ -61,6 +61,65 @@ export default function App() {
     localStorage.setItem('dnd-bookmarks', JSON.stringify(bookmarks));
   }, [bookmarks]);
 
+  // --- START BACK BUTTON SUPPORT ---
+  // Sync state to history when important navigation state changes
+  useEffect(() => {
+    const currentState = {
+      activeTab,
+      currentPath,
+      selectedId: selectedItem?.id || null
+    };
+
+    // Replace state if it's the initial load or a minor change we don't want to push
+    // For now, let's push for all major transitions.
+    // To prevent infinite loops with popstate, we'll check a flag.
+    if (!window._isPopStateNavigating) {
+      // Check if the state is actually different from current history state to avoid duplicates
+      const historyState = window.history.state;
+      const isDifferent = !historyState ||
+        historyState.activeTab !== currentState.activeTab ||
+        JSON.stringify(historyState.currentPath) !== JSON.stringify(currentState.currentPath) ||
+        historyState.selectedId !== currentState.selectedId;
+
+      if (isDifferent) {
+        window.history.pushState(currentState, '', '');
+      }
+    }
+    window._isPopStateNavigating = false;
+  }, [activeTab, currentPath, selectedItem]);
+
+  // Listen for back/forward buttons
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (event.state) {
+        window._isPopStateNavigating = true;
+        const { activeTab, currentPath, selectedId } = event.state;
+
+        setActiveTab(activeTab);
+        setCurrentPath(currentPath);
+
+        if (selectedId) {
+          // Find the item object from our data
+          const item = resolveBookmarkItem(selectedId);
+          setSelectedItem(item);
+        } else {
+          setSelectedItem(null);
+        }
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    // Initialize history state on first load
+    window.history.replaceState({
+      activeTab,
+      currentPath,
+      selectedId: selectedItem?.id || null
+    }, '', '');
+
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+  // --- END BACK BUTTON SUPPORT ---
+
   const fuse = useMemo(() => new Fuse(data, {
     keys: ['title', 'category', 'pathParts'],
     threshold: 0.3
@@ -1211,6 +1270,7 @@ export default function App() {
         setActiveTab={setActiveTab}
         activePath={currentPath}
         navigateTo={navigateTo}
+        setSelectedItem={setSelectedItem}
         toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       />
 
@@ -1236,14 +1296,17 @@ function NavItem({ icon, label, active, onClick }) {
   );
 }
 
-function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleMenu }) {
+function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, toggleMenu }) {
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    setSelectedItem(null);
+  };
+
   return (
     <nav className="mobile-navbar glass-panel">
       <button
         className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
-        onClick={() => {
-          setActiveTab('browser');
-        }}
+        onClick={() => handleTabClick('browser')}
       >
         <Layout size={24} />
         <span>资料游览</span>
@@ -1251,7 +1314,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
 
       <button
         className={`mobile-nav-item ${activeTab === 'spells' ? 'active' : ''}`}
-        onClick={() => setActiveTab('spells')}
+        onClick={() => handleTabClick('spells')}
       >
         <Book size={24} />
         <span>法术详述</span>
@@ -1259,7 +1322,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
 
       <button
         className={`mobile-nav-item ${activeTab === 'search' ? 'active' : ''}`}
-        onClick={() => setActiveTab('search')}
+        onClick={() => handleTabClick('search')}
       >
         <Search size={24} />
         <span>全局搜索</span>
@@ -1267,7 +1330,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
 
       <button
         className={`mobile-nav-item ${activeTab === 'bookmarks' ? 'active' : ''}`}
-        onClick={() => setActiveTab('bookmarks')}
+        onClick={() => handleTabClick('bookmarks')}
       >
         <Heart size={24} />
         <span>我的收藏</span>
@@ -1275,7 +1338,10 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, toggleM
 
       <button
         className="mobile-nav-item"
-        onClick={toggleMenu}
+        onClick={() => {
+          toggleMenu();
+          setSelectedItem(null);
+        }}
       >
         <Menu size={24} />
         <span>分类目录</span>
