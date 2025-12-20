@@ -39,13 +39,19 @@ body.light-theme {
   padding: 0;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+  /* Prevents all overscroll effects */
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: 500;
   line-height: 1.6;
-  background-image: url('/dfd_background.webp');
+  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -61,6 +67,7 @@ a {
   display: flex;
   min-height: 100vh;
   overflow: hidden;
+
 }
 
 .sidebar {
@@ -81,7 +88,6 @@ a {
   /* max-width: 1200px; */
   transition: max-width 0.3s;
   overflow-x: hidden;
-  background-color: var(--glass-bg);
 }
 
 .main-viewport.wide-view {
@@ -1022,7 +1028,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 70px;
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -1066,7 +1072,7 @@ a {
 
 @media (max-width: 768px) {
   body {
-    background-image: url('/dfd_background_mobile.webp');
+    background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background_mobile.webp');
   }
 
   .sidebar {
@@ -1102,24 +1108,22 @@ a {
 
   .welcome-panel {
     padding: 0;
-    padding-bottom: 92px;
+    /* padding-bottom: 92px; */
   }
 
-  .main-viewport>div,
+  /* .main-viewport>div,
   .main-viewport.wide-view>div {
     height: 99vh;
-    /* padding: 0.5rem */
-  }
+  } */
 
   .unified-filter-bar {
     margin-bottom: 0.5rem;
   }
 
-  .spell-list-panel .spell-grid {
-    /* padding-top: 0.75rem; */
+  /* .spell-list-panel .spell-grid {
     padding-bottom: 92px;
 
-  }
+  } */
 
   .mobile-navbar {
     display: flex;
@@ -1127,6 +1131,10 @@ a {
 
   .view-title {
     font-size: 1.75rem;
+  }
+
+  .view-header {
+    margin-bottom: 0;
   }
 
   .content-view {
@@ -1240,6 +1248,7 @@ a {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
+  max-width: 90vw;
 }
 
 .spell-card-header {
@@ -1319,14 +1328,14 @@ a {
 }
 
 @media (max-width: 767px) {
-  .spell-card-footer {
+  /* .spell-card-footer {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
     overflow: hidden;
     flex-direction: row;
-  }
+  } */
 
   .spell-card-meta,
   .spell-card-extra {
@@ -1347,20 +1356,20 @@ a {
     margin-left: 0.1rem;
   }
 
-  .spell-card-extra::before {
+  /* .spell-card-extra::before {
     content: "|";
     color: var(--text-muted);
     margin-right: 0.1re0m;
     font-size: 0.75rem;
     flex-shrink: 0;
-  }
+  } */
 
-  .extra-item {
+  /* .extra-item {
     font-size: 0.75rem !important;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
+  } */
 }
 
 .extra-item {
@@ -1422,8 +1431,8 @@ a {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  height: calc(100vh - 2.5rem);
-  overflow: hidden;
+  /* height: calc(100vh - 70px); */
+  /* overflow: hidden; */
   position: relative;
 }
 
