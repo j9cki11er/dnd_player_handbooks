@@ -320,19 +320,62 @@ a {
   padding-right: 0.5rem;
 }
 
+.category-list>.sidebar-node>.category-item {
+  border: solid 1px var(--border-color);
+}
+
 .category-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 0.75rem;
   background: transparent;
   border: none;
   color: var(--text-secondary);
   border-radius: 6px;
-  cursor: pointer;
   transition: all 0.2s;
   text-align: left;
   font-size: 0.875rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chevron-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: all 0.2s;
+  margin: 0.25rem;
+  color: var(--text-muted);
+}
+
+.chevron-wrapper:hover {
+  background: rgba(198, 180, 29, 0.2);
+  color: var(--accent-gold);
+}
+
+.category-item-btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+  height: 100%;
+}
+
+.category-item.file-item {
+  padding: 0 0.75rem;
+  height: 36px;
+  cursor: pointer;
 }
 
 .category-item .arrow {

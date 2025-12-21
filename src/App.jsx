@@ -417,21 +417,28 @@ export default function App() {
 
     return (
       <div className="sidebar-node" style={{ marginLeft: depth > 0 ? '12px' : '0' }}>
-        <button
-          onClick={() => {
-            toggleExpand(pathStr);
-            navigateTo(node._path, false);
-          }}
-          className={`category-item ${isActive ? 'active' : ''}`}
-        >
-          <div className="flex items-center gap-2 overflow-hidden">
+        <div className={`category-item ${isActive ? 'active' : ''}`}>
+          <div
+            className="chevron-wrapper cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleExpand(pathStr);
+            }}
+          >
             {hasChildren || nonOverviewFiles.length > 0 ? (
-              isExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />
-            ) : <div style={{ width: 14 }} />}
+              isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />
+            ) : <div style={{ width: 18 }} />}
+          </div>
+          <button
+            onClick={() => {
+              navigateTo(node._path, false);
+            }}
+            className="category-item-btn flex items-center gap-2 overflow-hidden flex-1 text-left"
+          >
             <Folder size={14} className="opacity-50" />
             <span className="truncate">{name}</span>
-          </div>
-        </button>
+          </button>
+        </div>
         {isExpanded && (
           <div className="sidebar-children border-l border-gold/10 ml-2">
             {/* Sub-folders */}
