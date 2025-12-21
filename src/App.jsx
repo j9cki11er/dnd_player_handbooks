@@ -22,6 +22,15 @@ const CHAPTERS_TO_SHOW = [
   '附录 C：术语汇编'
 ];
 
+const parseCR = (cr) => {
+  if (!cr || cr === 'Unknown') return 999;
+  if (cr === '1/8') return 0.125;
+  if (cr === '1/4') return 0.25;
+  if (cr === '1/2') return 0.5;
+  const num = parseFloat(cr);
+  return isNaN(num) ? 999 : num;
+};
+
 // Enrich data with monster metadata
 const data = rawData.map(item => {
   if (item.category === '附录 B：生物数据卡' && !item.isOverview) {
@@ -1504,22 +1513,37 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
               )}
 
               {/* Files */}
-              {currentCategoryData._files.filter(f => !f.isOverview).length > 0 && (
-                <div>
-                  <h3 className="section-title mb-4">内容条目</h3>
-                  <div className="item-grid">
-                    {currentCategoryData._files.filter(f => !f.isOverview).map(item => (
-                      <ItemCard
-                        key={item.id}
-                        item={item}
-                        onClick={() => onSelectItem(item)}
-                        isBookmarked={isBookmarkedAnywhere(item.id)}
-                        openBookmarkDialog={openBookmarkDialog}
-                      />
-                    ))}
+              {(() => {
+                const files = currentCategoryData._files.filter(f => !f.isOverview);
+                const isAppendixB = entry.path && entry.path.some(p => p.includes('附录 B'));
+                const sortedFiles = isAppendixB
+                  ? [...files].sort((a, b) => {
+                    const crA = parseCR(a.cr);
+                    const crB = parseCR(b.cr);
+                    if (crA !== crB) return crA - crB;
+                    return a.title.localeCompare(b.title, 'zh-CN');
+                  })
+                  : files;
+
+                if (sortedFiles.length === 0) return null;
+
+                return (
+                  <div>
+                    <h3 className="section-title mb-4">内容条目</h3>
+                    <div className="item-grid">
+                      {sortedFiles.map(item => (
+                        <ItemCard
+                          key={item.id}
+                          item={item}
+                          onClick={() => onSelectItem(item)}
+                          isBookmarked={isBookmarkedAnywhere(item.id)}
+                          openBookmarkDialog={openBookmarkDialog}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                );
+              })()}
             </div>
           ) : null}
         </div>
