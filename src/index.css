@@ -158,19 +158,37 @@ a {
 @media (max-width: 1024px) {
   .sidebar {
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .sidebar.mobile-open {
     transform: translateX(0);
+    padding-bottom: 10vh;
+    width: 100%;
   }
 
   .sticky-top-bar {
     left: 0;
   }
 
-  .main-viewport {
+  .main-viewport,
+  .main-viewport.wide-view {
     margin-left: 0;
+    padding: 1rem;
+    padding-bottom: 92px;
+  }
+
+  .mobile-navbar {
+    display: flex;
+  }
+
+  .mobile-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 90;
   }
 }
 
@@ -1224,61 +1242,6 @@ a {
     background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background_mobile.webp');
   }
 
-  .sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    /* box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5); */
-  }
-
-  .sidebar.mobile-open {
-    transform: translateX(0);
-    padding-bottom: 10vh;
-    width: 100%;
-  }
-
-  .mobile-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 90;
-  }
-
-  .main-viewport,
-  .main-viewport.wide-view {
-    margin-left: 0;
-    padding: 1rem;
-    padding-bottom: 92px;
-    /* overflow: hidden; */
-    /* padding: 0.5rem 0.75rem 0.5rem 0.75rem; */
-    /* padding-bottom: 100px; */
-    /* Space for navbar */
-  }
-
-  .welcome-panel {
-    padding: 0;
-    /* padding-bottom: 92px; */
-  }
-
-  /* .main-viewport>div,
-  .main-viewport.wide-view>div {
-    height: 99vh;
-  } */
-
-  .unified-filter-bar {
-    margin-bottom: 0.5rem;
-  }
-
-  /* .spell-list-panel .spell-grid {
-    padding-bottom: 92px;
-
-  } */
-
-  .mobile-navbar {
-    display: flex;
-  }
-
   .view-title {
     font-size: 1.75rem;
   }
@@ -2043,4 +2006,69 @@ a {
 
 .new-folder-modal-body svg {
   font-size: 1.25rem;
+}
+
+/* Weapon Details Table */
+.weapon-table-container {
+  width: 100%;
+}
+
+.weapon-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.weapon-details-table th,
+.weapon-details-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  min-width: 5rem;
+}
+
+.weapon-details-table th {
+  background: rgba(198, 180, 29, 0.1);
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.weapon-details-table tr.even {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.weapon-details-table tr:hover {
+  background: rgba(198, 180, 29, 0.05);
+}
+
+.weapon-details-table .weapon-name div:first-child {
+  color: var(--text-primary);
+}
+
+.weapon-details-table .weapon-damage {
+  font-family: monospace;
+  color: var(--accent-gold);
+}
+
+.weapon-details-table .weapon-properties {
+  font-size: 0.8rem;
+  max-width: 250px;
+}
+
+.weapon-details-table .weapon-cost {
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+
+  .weapon-details-table th,
+  .weapon-details-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
 }

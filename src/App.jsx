@@ -3,6 +3,7 @@ import data from './data.json';
 import spellData from './data-spells.json';
 import featData from './data-feats.json';
 import masteryData from './data-masteries.json';
+import weaponData from './data-weapons.json';
 import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon, ArrowLeft } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -56,9 +57,9 @@ export default function App() {
   const [newFolderName, setNewFolderName] = useState('');
 
   // Mobile detection
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -1199,6 +1200,43 @@ export default function App() {
   );
 }
 
+const WeaponTable = ({ weapons }) => {
+  if (!weapons || weapons.length === 0) return null;
+
+  return (
+    <div className="weapon-table-container mt-6">
+      <h3 className="section-title mb-4">关联武器</h3>
+      <div className="glass-panel overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="weapon-details-table">
+            <thead>
+              <tr>
+                <th>武器名称</th>
+                <th>分类</th>
+                <th>伤害</th>
+                <th>属性</th>
+                <th>分类 & 价格</th>
+              </tr>
+            </thead>
+            <tbody>
+              {weapons.map((weapon, idx) => (
+                <tr key={weapon.id} className={idx % 2 === 0 ? 'even' : 'odd'}>
+                  <td className="weapon-name">
+                    <div className="font-bold">{weapon.title}</div>                  </td>
+                  <td className="weapon-category">{weapon.category}</td>
+                  <td className="weapon-damage">{weapon.damage}</td>
+                  <td className="weapon-properties">{weapon.properties}</td>
+                  <td className="weapon-cost">{weapon.cost}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile }) {
   const [loadedContent, setLoadedContent] = useState('');
   const [contentLoading, setContentLoading] = useState(false);
@@ -1302,6 +1340,11 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
     return masteryData;
   }, [isMasteryCategory, currentCategoryData]);
 
+  const associatedWeapons = useMemo(() => {
+    if (!selectedItem || selectedItem.category !== '精通词条') return [];
+    return weaponData.filter(w => w.mastery === selectedItem.title);
+  }, [selectedItem]);
+
   const isMasteryDirectory = useMemo(() => {
     return entry.type === 'dir' && entry.path && entry.path.join('/') === '第六章：装备/精通词条';
   }, [entry]);
@@ -1381,7 +1424,12 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
                   <p className="text-gold opacity-60">加载中...</p>
                 </div>
               ) : (
-                <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+                <>
+                  <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+                  {selectedItem.category === '精通词条' && (
+                    <WeaponTable weapons={associatedWeapons} />
+                  )}
+                </>
               )}
             </>
           ) : currentCategoryData ? (
