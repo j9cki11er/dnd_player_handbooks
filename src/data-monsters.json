@@ -1,0 +1,5942 @@
+[
+  {
+    "id": "green-hag",
+    "title": "绿鬼婆",
+    "titleEn": "Green Hag",
+    "type": "多类型",
+    "subDivision": "中型妖精",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/多类型/绿鬼婆.html"
+  },
+  {
+    "id": "arch-hag",
+    "title": "大鬼婆",
+    "titleEn": "Arch-hag",
+    "type": "多类型",
+    "subDivision": "大型妖精",
+    "alignment": "中立邪恶",
+    "cr": "21",
+    "path": "monsters/多类型/大鬼婆.html"
+  },
+  {
+    "id": "night-hag",
+    "title": "夜鬼婆",
+    "titleEn": "Night Hag",
+    "type": "多类型",
+    "subDivision": "中型邪魔",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/多类型/夜鬼婆.html"
+  },
+  {
+    "id": "sea-hag",
+    "title": "海鬼婆",
+    "titleEn": "Sea Hag",
+    "type": "多类型",
+    "subDivision": "中型妖精",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/多类型/海鬼婆.html"
+  },
+  {
+    "id": "spectator",
+    "title": "观察者眼魔",
+    "titleEn": "Spectator",
+    "type": "多类型",
+    "subDivision": "中型异怪（眼魔）",
+    "alignment": "守序中立",
+    "cr": "3",
+    "path": "monsters/多类型/观察者眼魔.html"
+  },
+  {
+    "id": "beholder",
+    "title": "眼魔",
+    "titleEn": "Beholder",
+    "type": "多类型",
+    "subDivision": "大型异怪",
+    "alignment": "守序邪恶",
+    "cr": "13",
+    "path": "monsters/多类型/眼魔.html"
+  },
+  {
+    "id": "death-tyrant",
+    "title": "亡眼暴君",
+    "titleEn": "Death Tyrant",
+    "type": "多类型",
+    "subDivision": "大型亡灵（眼魔）",
+    "alignment": "守序邪恶",
+    "cr": "14",
+    "path": "monsters/多类型/亡眼暴君.html"
+  },
+  {
+    "id": "elemental-cataclysm",
+    "title": "元初天劫",
+    "titleEn": "Elemental Cataclysm",
+    "type": "多类型",
+    "subDivision": "超巨型元素（泰坦）",
+    "alignment": "混乱邪恶",
+    "cr": "22",
+    "path": "monsters/多类型/元初天劫.html"
+  },
+  {
+    "id": "colossus",
+    "title": "巨神兵",
+    "titleEn": "Colossus",
+    "type": "多类型",
+    "subDivision": "超巨型构装（泰坦）",
+    "alignment": "无阵营",
+    "cr": "25",
+    "path": "monsters/多类型/巨神兵.html"
+  },
+  {
+    "id": "tarrasque",
+    "title": "泰拉斯奎",
+    "titleEn": "Tarrasque",
+    "type": "多类型",
+    "subDivision": "超巨型怪兽（泰坦）",
+    "alignment": "无阵营",
+    "cr": "30",
+    "path": "monsters/多类型/泰拉斯奎.html"
+  },
+  {
+    "id": "empyrean",
+    "title": "至高天",
+    "titleEn": "Empyrean",
+    "type": "多类型",
+    "subDivision": "巨型天族或邪魔（泰坦）",
+    "alignment": "中立",
+    "cr": "23",
+    "path": "monsters/多类型/至高天.html"
+  },
+  {
+    "id": "kraken",
+    "title": "克拉肯",
+    "titleEn": "Kraken",
+    "type": "多类型",
+    "subDivision": "超巨型怪兽（泰坦）",
+    "alignment": "混乱邪恶",
+    "cr": "23",
+    "path": "monsters/多类型/克拉肯.html"
+  },
+  {
+    "id": "blob-of-annihilation",
+    "title": "吞世黏浆",
+    "titleEn": "Blob of Annihilation",
+    "type": "多类型",
+    "subDivision": "超巨型泥怪（泰坦）",
+    "alignment": "中立邪恶",
+    "cr": "23",
+    "path": "monsters/多类型/吞世黏浆.html"
+  },
+  {
+    "id": "empyreans",
+    "title": "至高天",
+    "titleEn": "Empyreans",
+    "type": "多类型",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/多类型/至高天总.html"
+  },
+  {
+    "id": "empyrean-iota",
+    "title": "至高天微尘",
+    "titleEn": "Empyrean Iota",
+    "type": "多类型",
+    "subDivision": "中型天族或邪魔（泰坦）",
+    "alignment": "中立",
+    "cr": "1",
+    "path": "monsters/多类型/至高天微尘.html"
+  },
+  {
+    "id": "guardian-naga",
+    "title": "守秘纳迦",
+    "titleEn": "Guardian Naga",
+    "type": "多类型",
+    "subDivision": "大型天族",
+    "alignment": "守序善良",
+    "cr": "10",
+    "path": "monsters/多类型/守秘纳迦.html"
+  },
+  {
+    "id": "bone-naga",
+    "title": "骸骨纳迦",
+    "titleEn": "Bone Naga",
+    "type": "多类型",
+    "subDivision": "大型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "4",
+    "path": "monsters/多类型/骸骨纳迦.html"
+  },
+  {
+    "id": "spirit-naga",
+    "title": "阴魂纳迦",
+    "titleEn": "Spirit Naga",
+    "type": "多类型",
+    "subDivision": "大型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "8",
+    "path": "monsters/多类型/阴魂纳迦.html"
+  },
+  {
+    "id": "vampire-nightbringer",
+    "title": "吸血夜魇",
+    "titleEn": "Vampire Nightbringer",
+    "type": "多类型",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "8",
+    "path": "monsters/多类型/吸血夜魇.html"
+  },
+  {
+    "id": "vampire-spawn",
+    "title": "初生吸血鬼",
+    "titleEn": "Vampire Spawn",
+    "type": "多类型",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/多类型/初生吸血鬼.html"
+  },
+  {
+    "id": "vampire-familiar",
+    "title": "血仆",
+    "titleEn": "Vampire Familiar",
+    "type": "多类型",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/多类型/血仆.html"
+  },
+  {
+    "id": "vampires",
+    "title": "吸血鬼",
+    "titleEn": "Vampires",
+    "type": "多类型",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/多类型/吸血鬼总.html"
+  },
+  {
+    "id": "vampire-umbral-lord",
+    "title": "吸血鬼暗影尊主",
+    "titleEn": "Vampire Umbral Lord",
+    "type": "多类型",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "15",
+    "path": "monsters/多类型/吸血鬼暗影尊主.html"
+  },
+  {
+    "id": "vampire",
+    "title": "吸血鬼",
+    "titleEn": "Vampire",
+    "type": "多类型",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "13",
+    "path": "monsters/多类型/吸血鬼.html"
+  },
+  {
+    "id": "fomorian",
+    "title": "废陋巨人",
+    "titleEn": "Fomorian",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "8",
+    "path": "monsters/巨人/废陋巨人.html"
+  },
+  {
+    "id": "ettin",
+    "title": "双头巨人",
+    "titleEn": "Ettin",
+    "type": "巨人",
+    "subDivision": "大型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/巨人/双头巨人.html"
+  },
+  {
+    "id": "stone-giant",
+    "title": "石巨人",
+    "titleEn": "Stone Giant",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "中立",
+    "cr": "7",
+    "path": "monsters/巨人/石巨人.html"
+  },
+  {
+    "id": "fire-giant",
+    "title": "火巨人",
+    "titleEn": "Fire Giant",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "守序邪恶",
+    "cr": "9",
+    "path": "monsters/巨人/火巨人.html"
+  },
+  {
+    "id": "cloud-giant",
+    "title": "云巨人",
+    "titleEn": "Cloud Giant",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "中立",
+    "cr": "9",
+    "path": "monsters/巨人/云巨人.html"
+  },
+  {
+    "id": "storm-giant",
+    "title": "风暴巨人",
+    "titleEn": "Storm Giant",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "混乱善良",
+    "cr": "13",
+    "path": "monsters/巨人/风暴巨人.html"
+  },
+  {
+    "id": "hill-giant",
+    "title": "山丘巨人",
+    "titleEn": "Hill Giant",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "5",
+    "path": "monsters/巨人/山丘巨人.html"
+  },
+  {
+    "id": "frost-giant",
+    "title": "霜巨人",
+    "titleEn": "Frost Giant",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "中立邪恶",
+    "cr": "8",
+    "path": "monsters/巨人/霜巨人.html"
+  },
+  {
+    "id": "ogrillon-ogre",
+    "title": "半食人魔",
+    "titleEn": "Ogrillon Ogre",
+    "type": "巨人",
+    "subDivision": "大型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/巨人/半食人魔.html"
+  },
+  {
+    "id": "ogres",
+    "title": "食人魔",
+    "titleEn": "Ogres",
+    "type": "巨人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/巨人/食人魔总.html"
+  },
+  {
+    "id": "ogre",
+    "title": "食人魔",
+    "titleEn": "Ogre",
+    "type": "巨人",
+    "subDivision": "大型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/巨人/食人魔.html"
+  },
+  {
+    "id": "cyclops-oracle",
+    "title": "独眼巨人先知",
+    "titleEn": "Cyclops Oracle",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "混乱中立",
+    "cr": "10",
+    "path": "monsters/巨人/独眼巨人先知.html"
+  },
+  {
+    "id": "cyclopes",
+    "title": "独眼巨人",
+    "titleEn": "Cyclopes",
+    "type": "巨人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/巨人/独眼巨人.html"
+  },
+  {
+    "id": "cyclops-sentry",
+    "title": "独眼巨人哨卫",
+    "titleEn": "Cyclops Sentry",
+    "type": "巨人",
+    "subDivision": "巨型巨人",
+    "alignment": "混乱中立",
+    "cr": "6",
+    "path": "monsters/巨人/独眼巨人哨卫.html"
+  },
+  {
+    "id": "troll",
+    "title": "巨魔",
+    "titleEn": "Troll",
+    "type": "巨人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/巨人/巨魔总.html"
+  },
+  {
+    "id": "troll-limb",
+    "title": "巨魔断肢",
+    "titleEn": "Troll Limb",
+    "type": "巨人",
+    "subDivision": "小型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "1/2",
+    "path": "monsters/巨人/巨魔断肢.html"
+  },
+  {
+    "id": "troll",
+    "title": "巨魔",
+    "titleEn": "Troll",
+    "type": "巨人",
+    "subDivision": "大型巨人",
+    "alignment": "混乱邪恶",
+    "cr": "5",
+    "path": "monsters/巨人/巨魔.html"
+  },
+  {
+    "id": "xorn",
+    "title": "石鼎兽",
+    "titleEn": "Xorn",
+    "type": "元素",
+    "subDivision": "中型元素生物",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/元素/石鼎兽.html"
+  },
+  {
+    "id": "galeb-duhr",
+    "title": "石人",
+    "titleEn": "Galeb Duhr",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "6",
+    "path": "monsters/元素/石人.html"
+  },
+  {
+    "id": "water-weird",
+    "title": "水诡",
+    "titleEn": "Water Weird",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立",
+    "cr": "3",
+    "path": "monsters/元素/水诡.html"
+  },
+  {
+    "id": "magmin",
+    "title": "火童",
+    "titleEn": "Magmin",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "混乱中立",
+    "cr": "1/2",
+    "path": "monsters/元素/火童.html"
+  },
+  {
+    "id": "gargoyle",
+    "title": "石像鬼",
+    "titleEn": "Gargoyle",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/元素/石像鬼.html"
+  },
+  {
+    "id": "invisible-stalker",
+    "title": "隐形追猎者",
+    "titleEn": "Invisible Stalker",
+    "type": "元素",
+    "subDivision": "大型元素生物",
+    "alignment": "中立",
+    "cr": "6",
+    "path": "monsters/元素/隐形追猎者.html"
+  },
+  {
+    "id": "earth-elemental",
+    "title": "土元素",
+    "titleEn": "Earth Elemental",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/元素/土元素.html"
+  },
+  {
+    "id": "air-elemental",
+    "title": "气元素",
+    "titleEn": "Air Elemental",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/元素/气元素.html"
+  },
+  {
+    "id": "water-elemental",
+    "title": "水元素",
+    "titleEn": "Water Elemental",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/元素/水元素.html"
+  },
+  {
+    "id": "fire-elemental",
+    "title": "火元素",
+    "titleEn": "Fire Elemental",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/元素/火元素.html"
+  },
+  {
+    "id": "dao",
+    "title": "土巨灵",
+    "titleEn": "Dao",
+    "type": "元素",
+    "subDivision": "大型元素（巨灵）",
+    "alignment": "中立",
+    "cr": "11",
+    "path": "monsters/元素/土巨灵.html"
+  },
+  {
+    "id": "efreeti",
+    "title": "火巨灵",
+    "titleEn": "Efreeti",
+    "type": "元素",
+    "subDivision": "大型元素（巨灵）",
+    "alignment": "中立",
+    "cr": "11",
+    "path": "monsters/元素/火巨灵.html"
+  },
+  {
+    "id": "djinni",
+    "title": "气巨灵",
+    "titleEn": "Djinni",
+    "type": "元素",
+    "subDivision": "大型元素（巨灵）",
+    "alignment": "混乱中立",
+    "cr": "11",
+    "path": "monsters/元素/气巨灵.html"
+  },
+  {
+    "id": "marid",
+    "title": "水巨灵",
+    "titleEn": "Marid",
+    "type": "元素",
+    "subDivision": "大型元素（巨灵）",
+    "alignment": "混乱中立",
+    "cr": "11",
+    "path": "monsters/元素/水巨灵.html"
+  },
+  {
+    "id": "azer-pyromancer",
+    "title": "火矮人烈炎术师",
+    "titleEn": "Azer Pyromancer",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "守序中立",
+    "cr": "6",
+    "path": "monsters/元素/火矮人烈炎术士.html"
+  },
+  {
+    "id": "azer-sentinel",
+    "title": "火矮人哨兵",
+    "titleEn": "Azer Sentinel",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "守序中立",
+    "cr": "2",
+    "path": "monsters/元素/火矮人哨兵.html"
+  },
+  {
+    "id": "azer",
+    "title": "火矮人",
+    "titleEn": "Azer",
+    "type": "元素",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/元素/火矮人.html"
+  },
+  {
+    "id": "merfolk-wavebender",
+    "title": "御浪人鱼",
+    "titleEn": "Merfolk Wavebender",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "6",
+    "path": "monsters/元素/御浪人鱼.html"
+  },
+  {
+    "id": "merfolk",
+    "title": "人鱼",
+    "titleEn": "Merfolk",
+    "type": "元素",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/元素/人鱼.html"
+  },
+  {
+    "id": "merfolk-skirmisher",
+    "title": "巡海人鱼",
+    "titleEn": "Merfolk Skirmisher",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/元素/巡海人鱼.html"
+  },
+  {
+    "id": "salamander",
+    "title": "火蜥蜴",
+    "titleEn": "Salamander",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/元素/火蜥蜴.html"
+  },
+  {
+    "id": "salamander-fire-snake",
+    "title": "火蜥蜴火蛇",
+    "titleEn": "Salamander Fire Snake",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立邪恶",
+    "cr": "1",
+    "path": "monsters/元素/火蜥蜴火蛇.html"
+  },
+  {
+    "id": "salamander-inferno-master",
+    "title": "火蜥蜴炎狱之主",
+    "titleEn": "Salamander Inferno Master",
+    "type": "元素",
+    "subDivision": "大型元素",
+    "alignment": "中立邪恶",
+    "cr": "15",
+    "path": "monsters/元素/火蜥蜴炎狱之主.html"
+  },
+  {
+    "id": "salamanders",
+    "title": "火蜥蜴",
+    "titleEn": "Salamanders",
+    "type": "元素",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/元素/火蜥蜴总.html"
+  },
+  {
+    "id": "lizardfolk-sovereign",
+    "title": "蜥蜴人大王",
+    "titleEn": "Lizardfolk Sovereign",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/元素/蜥蜴人大王.html"
+  },
+  {
+    "id": "lizardfolk",
+    "title": "蜥蜴人",
+    "titleEn": "Lizardfolk",
+    "type": "元素",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/元素/蜥蜴人.html"
+  },
+  {
+    "id": "lizardfolk-geomancer",
+    "title": "蜥蜴人地脉术师",
+    "titleEn": "Lizardfolk Geomancer",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/元素/蜥蜴人地脉术师.html"
+  },
+  {
+    "id": "steam-mephit",
+    "title": "蒸汽魔蝠",
+    "titleEn": "Steam Mephit",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/元素/蒸汽魔蝠.html"
+  },
+  {
+    "id": "magma-mephit",
+    "title": "熔岩魔蝠",
+    "titleEn": "Magma Mephit",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "中立邪恶",
+    "cr": "1/2",
+    "path": "monsters/元素/熔岩魔蝠.html"
+  },
+  {
+    "id": "mephits",
+    "title": "魔蝠",
+    "titleEn": "Mephits",
+    "type": "元素",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/元素/魔蝠.html"
+  },
+  {
+    "id": "dust-mephit",
+    "title": "尘魔蝠",
+    "titleEn": "Dust Mephit",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "中立邪恶",
+    "cr": "1/2",
+    "path": "monsters/元素/尘魔蝠.html"
+  },
+  {
+    "id": "smoke-mephit",
+    "title": "烟魔蝠",
+    "titleEn": "Smoke Mephit",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/元素/烟魔蝠.html"
+  },
+  {
+    "id": "ice-mephit",
+    "title": "冰魔蝠",
+    "titleEn": "Ice Mephit",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "中立邪恶",
+    "cr": "1/2",
+    "path": "monsters/元素/冰魔蝠.html"
+  },
+  {
+    "id": "mud-mephit",
+    "title": "泥魔蝠",
+    "titleEn": "Mud Mephit",
+    "type": "元素",
+    "subDivision": "小型元素",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/元素/泥魔蝠.html"
+  },
+  {
+    "id": "aarakocra",
+    "title": "鸟羽人",
+    "titleEn": "Aarakocra",
+    "type": "元素",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/元素/鸟羽人.html"
+  },
+  {
+    "id": "aarakocra-aeromancer",
+    "title": "鸟羽人风舞术师",
+    "titleEn": "Aarakocra Aeromancer",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/元素/鸟羽人风舞术士.html"
+  },
+  {
+    "id": "aarakocra-skirmisher",
+    "title": "鸟羽人翔空士",
+    "titleEn": "Aarakocra Skirmisher",
+    "type": "元素",
+    "subDivision": "中型元素",
+    "alignment": "中立",
+    "cr": "1/4",
+    "path": "monsters/元素/鸟羽人翔空士.html"
+  },
+  {
+    "id": "shield-guardian",
+    "title": "盾卫",
+    "titleEn": "Shield Guardian",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "7",
+    "path": "monsters/构装/盾卫.html"
+  },
+  {
+    "id": "helmed-horror",
+    "title": "恐怖铠甲",
+    "titleEn": "Helmed Horror",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/构装/恐怖铠甲.html"
+  },
+  {
+    "id": "scarecrow",
+    "title": "稻草人",
+    "titleEn": "Scarecrow",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/构装/稻草人.html"
+  },
+  {
+    "id": "homunculus",
+    "title": "人工生命体",
+    "titleEn": "Homunculus",
+    "type": "构装",
+    "subDivision": "微型构装",
+    "alignment": "中立",
+    "cr": "0",
+    "path": "monsters/构装/人工生命体.html"
+  },
+  {
+    "id": "modron-tridrone",
+    "title": "魔冢·三元冢",
+    "titleEn": "Modron Tridrone",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "守序中立",
+    "cr": "1/2",
+    "path": "monsters/构装/魔冢·三元冢.html"
+  },
+  {
+    "id": "modron-duodrone",
+    "title": "魔冢·二元冢",
+    "titleEn": "Modron Duodrone",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "守序中立",
+    "cr": "1/4",
+    "path": "monsters/构装/魔冢·二元冢.html"
+  },
+  {
+    "id": "modron-pentadrone",
+    "title": "魔冢·五元冢",
+    "titleEn": "Modron Pentadrone",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "守序中立",
+    "cr": "2",
+    "path": "monsters/构装/魔冢·五元冢.html"
+  },
+  {
+    "id": "modron-monodrone",
+    "title": "魔冢·单元冢",
+    "titleEn": "Modron Monodrone",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "守序中立",
+    "cr": "1/8",
+    "path": "monsters/构装/魔冢·单元冢.html"
+  },
+  {
+    "id": "modrons",
+    "title": "魔冢",
+    "titleEn": "Modrons",
+    "type": "构装",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/构装/魔冢.html"
+  },
+  {
+    "id": "modron-quadrone",
+    "title": "魔冢·四元冢",
+    "titleEn": "Modron Quadrone",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "守序中立",
+    "cr": "1",
+    "path": "monsters/构装/魔冢·四元冢.html"
+  },
+  {
+    "id": "gorgon",
+    "title": "石化铁牛",
+    "titleEn": "Gorgon",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/构装/石化铁牛.html"
+  },
+  {
+    "id": "brazen-gorgon",
+    "title": "焚化铜牛",
+    "titleEn": "Brazen Gorgon",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "9",
+    "path": "monsters/构装/焚化铜牛.html"
+  },
+  {
+    "id": "gorgon",
+    "title": "石化铁牛",
+    "titleEn": "Gorgon",
+    "type": "构装",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/构装/石化铁牛总.html"
+  },
+  {
+    "id": "animated-broom",
+    "title": "活化扫帚",
+    "titleEn": "Animated Broom",
+    "type": "构装",
+    "subDivision": "小型构装",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/构装/活化扫帚.html"
+  },
+  {
+    "id": "animated-rug-of-smothering",
+    "title": "活化闷人毯",
+    "titleEn": "Animated Rug of Smothering",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/构装/活化闷人毯.html"
+  },
+  {
+    "id": "animated-objects",
+    "title": "活化物件",
+    "titleEn": "Animated Objects",
+    "type": "构装",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/构装/活化物件.html"
+  },
+  {
+    "id": "animated-armor",
+    "title": "活化盔甲",
+    "titleEn": "Animated Armor",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/构装/活化盔甲.html"
+  },
+  {
+    "id": "animated-flying-sword",
+    "title": "活化凌空剑",
+    "titleEn": "Animated Flying Sword",
+    "type": "构装",
+    "subDivision": "小型构装",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/构装/活化凌空剑.html"
+  },
+  {
+    "id": "iron-golem",
+    "title": "铁魔像",
+    "titleEn": "Iron Golem",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "16",
+    "path": "monsters/构装/铁魔像.html"
+  },
+  {
+    "id": "stone-golem",
+    "title": "石魔像",
+    "titleEn": "Stone Golem",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "10",
+    "path": "monsters/构装/石魔像.html"
+  },
+  {
+    "id": "clay-golem",
+    "title": "黏土魔像",
+    "titleEn": "Clay Golem",
+    "type": "构装",
+    "subDivision": "大型构装",
+    "alignment": "无阵营",
+    "cr": "9",
+    "path": "monsters/构装/黏土魔像.html"
+  },
+  {
+    "id": "flesh-golem",
+    "title": "血肉魔像",
+    "titleEn": "Flesh Golem",
+    "type": "构装",
+    "subDivision": "中型构装",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/构装/血肉魔像.html"
+  },
+  {
+    "id": "banshee",
+    "title": "报丧妖",
+    "titleEn": "Banshee",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/亡灵/报丧妖.html"
+  },
+  {
+    "id": "shadow",
+    "title": "幽影",
+    "titleEn": "Shadow",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "1/2",
+    "path": "monsters/亡灵/幽影.html"
+  },
+  {
+    "id": "-wisp",
+    "title": "鬼火Will-o'",
+    "titleEn": "-Wisp",
+    "type": "亡灵",
+    "subDivision": "微型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/亡灵/鬼火.html"
+  },
+  {
+    "id": "specter",
+    "title": "恶灵",
+    "titleEn": "Specter",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/亡灵/恶灵.html"
+  },
+  {
+    "id": "poltergeist",
+    "title": "骚灵",
+    "titleEn": "Poltergeist",
+    "type": "亡灵",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "混乱中立",
+    "cr": "2",
+    "path": "monsters/亡灵/骚灵.html"
+  },
+  {
+    "id": "wight",
+    "title": "尸妖",
+    "titleEn": "Wight",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/亡灵/尸妖.html"
+  },
+  {
+    "id": "demilich",
+    "title": "半巫妖",
+    "titleEn": "Demilich",
+    "type": "亡灵",
+    "subDivision": "微型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "18",
+    "path": "monsters/亡灵/半巫妖.html"
+  },
+  {
+    "id": "lacedon-ghoul",
+    "title": "食尸水鬼",
+    "titleEn": "Lacedon Ghoul",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/亡灵/食尸水鬼.html"
+  },
+  {
+    "id": "flameskull",
+    "title": "燃焰之颅",
+    "titleEn": "Flameskull",
+    "type": "亡灵",
+    "subDivision": "微型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "4",
+    "path": "monsters/亡灵/燃焰之颅.html"
+  },
+  {
+    "id": "dracolich",
+    "title": "龙巫妖",
+    "titleEn": "Dracolich",
+    "type": "亡灵",
+    "subDivision": "巨型或超巨型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "17",
+    "path": "monsters/亡灵/龙巫妖.html"
+  },
+  {
+    "id": "lich",
+    "title": "巫妖",
+    "titleEn": "Lich",
+    "type": "亡灵",
+    "subDivision": "中型亡灵（法师）",
+    "alignment": "中立邪恶",
+    "cr": "21",
+    "path": "monsters/亡灵/巫妖.html"
+  },
+  {
+    "id": "ghost",
+    "title": "幽魂",
+    "titleEn": "Ghost",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/亡灵/幽魂.html"
+  },
+  {
+    "id": "wraith",
+    "title": "邪灵",
+    "titleEn": "Wraith",
+    "type": "亡灵",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "5",
+    "path": "monsters/亡灵/邪灵.html"
+  },
+  {
+    "id": "graveyard-revenant",
+    "title": "还魂尸山",
+    "titleEn": "Graveyard Revenant",
+    "type": "亡灵",
+    "subDivision": "巨型亡灵",
+    "alignment": "中立",
+    "cr": "7",
+    "path": "monsters/亡灵/还魂尸山.html"
+  },
+  {
+    "id": "revenant",
+    "title": "还魂鬼",
+    "titleEn": "Revenant",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/亡灵/还魂鬼.html"
+  },
+  {
+    "id": "haunting-revenant",
+    "title": "还魂巨构",
+    "titleEn": "Haunting Revenant",
+    "type": "亡灵",
+    "subDivision": "超巨型亡灵",
+    "alignment": "中立",
+    "cr": "10",
+    "path": "monsters/亡灵/还魂巨构.html"
+  },
+  {
+    "id": "revenants",
+    "title": "还魂鬼",
+    "titleEn": "Revenants",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/还魂鬼总.html"
+  },
+  {
+    "id": "ghast",
+    "title": "妖鬼",
+    "titleEn": "Ghast",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/妖鬼总.html"
+  },
+  {
+    "id": "ghast",
+    "title": "妖鬼",
+    "titleEn": "Ghast",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/亡灵/妖鬼.html"
+  },
+  {
+    "id": "ghast-gravecaller",
+    "title": "妖鬼坟语者",
+    "titleEn": "Ghast Gravecaller",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "6",
+    "path": "monsters/亡灵/妖鬼坟语者.html"
+  },
+  {
+    "id": "mummy-lord",
+    "title": "木乃伊领主",
+    "titleEn": "Mummy Lord",
+    "type": "亡灵",
+    "subDivision": "中型或小型亡灵（牧师）",
+    "alignment": "守序邪恶",
+    "cr": "15",
+    "path": "monsters/亡灵/木乃伊领主.html"
+  },
+  {
+    "id": "mummy",
+    "title": "木乃伊",
+    "titleEn": "Mummy",
+    "type": "亡灵",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/亡灵/木乃伊.html"
+  },
+  {
+    "id": "mummy",
+    "title": "木乃伊",
+    "titleEn": "Mummy",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/木乃伊总.html"
+  },
+  {
+    "id": "death-knight",
+    "title": "死亡骑士",
+    "titleEn": "Death Knight",
+    "type": "亡灵",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "17",
+    "path": "monsters/亡灵/死亡骑士.html"
+  },
+  {
+    "id": "death-knight",
+    "title": "死亡骑士",
+    "titleEn": "Death Knight",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/死亡骑士总.html"
+  },
+  {
+    "id": "death-knight-aspirant",
+    "title": "死亡骑士志从",
+    "titleEn": "Death Knight Aspirant",
+    "type": "亡灵",
+    "subDivision": "中型或小型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "11",
+    "path": "monsters/亡灵/死亡骑士志从.html"
+  },
+  {
+    "id": "crawling-claws",
+    "title": "蠕行之爪",
+    "titleEn": "Crawling Claws",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/蠕行之爪总.html"
+  },
+  {
+    "id": "crawling-claw",
+    "title": "蠕行之爪",
+    "titleEn": "Crawling Claw",
+    "type": "亡灵",
+    "subDivision": "微型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "0",
+    "path": "monsters/亡灵/蠕行之爪.html"
+  },
+  {
+    "id": "swarm-of-crawling-claw",
+    "title": "蠕行之爪集群",
+    "titleEn": "Swarm of Crawling Claw",
+    "type": "亡灵",
+    "subDivision": "微型亡灵的中型集群",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/亡灵/蠕行之爪集群.html"
+  },
+  {
+    "id": "ghoul",
+    "title": "食尸鬼",
+    "titleEn": "Ghoul",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/食尸鬼总.html"
+  },
+  {
+    "id": "ghoul",
+    "title": "食尸鬼",
+    "titleEn": "Ghoul",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/亡灵/食尸鬼.html"
+  },
+  {
+    "id": "flaming-skeleton",
+    "title": "燃火骷髅",
+    "titleEn": "Flaming Skeleton",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/亡灵/燃火骷髅.html"
+  },
+  {
+    "id": "skeleton",
+    "title": "骷髅",
+    "titleEn": "Skeleton",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "1/4",
+    "path": "monsters/亡灵/骷髅.html"
+  },
+  {
+    "id": "skeleton",
+    "title": "骷髅",
+    "titleEn": "Skeleton",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/骷髅总.html"
+  },
+  {
+    "id": "warhorse-skeleton",
+    "title": "骷髅战马",
+    "titleEn": "Warhorse Skeleton",
+    "type": "亡灵",
+    "subDivision": "大型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "1/2",
+    "path": "monsters/亡灵/骷髅战马.html"
+  },
+  {
+    "id": "minotaur-skeleton",
+    "title": "骷髅牛头人",
+    "titleEn": "Minotaur Skeleton",
+    "type": "亡灵",
+    "subDivision": "大型亡灵",
+    "alignment": "守序邪恶",
+    "cr": "2",
+    "path": "monsters/亡灵/骷髅牛头人.html"
+  },
+  {
+    "id": "zombies",
+    "title": "丧尸",
+    "titleEn": "Zombies",
+    "type": "亡灵",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/亡灵/丧尸总.html"
+  },
+  {
+    "id": "zombie",
+    "title": "丧尸",
+    "titleEn": "Zombie",
+    "type": "亡灵",
+    "subDivision": "中型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/亡灵/丧尸.html"
+  },
+  {
+    "id": "beholder-zombie",
+    "title": "眼魔丧尸",
+    "titleEn": "Beholder Zombie",
+    "type": "亡灵",
+    "subDivision": "大型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/亡灵/眼魔丧尸.html"
+  },
+  {
+    "id": "ogre-zombie",
+    "title": "食人魔丧尸",
+    "titleEn": "Ogre Zombie",
+    "type": "亡灵",
+    "subDivision": "大型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "2",
+    "path": "monsters/亡灵/食人魔丧尸.html"
+  },
+  {
+    "id": "seahorse",
+    "title": "海马",
+    "titleEn": "Seahorse",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/海马.html"
+  },
+  {
+    "id": "frog",
+    "title": "蛙",
+    "titleEn": "Frog",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/蛙.html"
+  },
+  {
+    "id": "giant-seahorse",
+    "title": "巨海马",
+    "titleEn": "Giant Seahorse",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/巨海马.html"
+  },
+  {
+    "id": "blood-hawk",
+    "title": "血鹰",
+    "titleEn": "Blood Hawk",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/血鹰.html"
+  },
+  {
+    "id": "hyena",
+    "title": "鬣狗",
+    "titleEn": "Hyena",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/鬣狗.html"
+  },
+  {
+    "id": "giant-rat",
+    "title": "巨鼠",
+    "titleEn": "Giant Rat",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/巨鼠.html"
+  },
+  {
+    "id": "giant-hyena",
+    "title": "巨鬣狗",
+    "titleEn": "Giant Hyena",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/巨鬣狗.html"
+  },
+  {
+    "id": "baboon",
+    "title": "狒狒",
+    "titleEn": "Baboon",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/狒狒.html"
+  },
+  {
+    "id": "giant-lizard",
+    "title": "巨蜥蜴",
+    "titleEn": "Giant Lizard",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨蜥蜴.html"
+  },
+  {
+    "id": "lizard",
+    "title": "蜥蜴",
+    "titleEn": "Lizard",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/蜥蜴.html"
+  },
+  {
+    "id": "mammoth",
+    "title": "猛犸",
+    "titleEn": "Mammoth",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "6",
+    "path": "monsters/动物/猛犸.html"
+  },
+  {
+    "id": "warhorse",
+    "title": "战马",
+    "titleEn": "Warhorse",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/战马.html"
+  },
+  {
+    "id": "giant-fire-beetle",
+    "title": "巨火甲虫",
+    "titleEn": "Giant Fire Beetle",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/巨火甲虫.html"
+  },
+  {
+    "id": "hunter-shark",
+    "title": "寻猎鲨",
+    "titleEn": "Hunter Shark",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/寻猎鲨.html"
+  },
+  {
+    "id": "giant-goat",
+    "title": "巨山羊",
+    "titleEn": "Giant Goat",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/巨山羊.html"
+  },
+  {
+    "id": "giant-toad",
+    "title": "巨蟾蜍",
+    "titleEn": "Giant Toad",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/巨蟾蜍.html"
+  },
+  {
+    "id": "giant-scorpion",
+    "title": "巨蝎",
+    "titleEn": "Giant Scorpion",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "3",
+    "path": "monsters/动物/巨蝎.html"
+  },
+  {
+    "id": "goat",
+    "title": "山羊",
+    "titleEn": "Goat",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/山羊.html"
+  },
+  {
+    "id": "scorpion",
+    "title": "蝎",
+    "titleEn": "Scorpion",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/蝎.html"
+  },
+  {
+    "id": "octopus",
+    "title": "章鱼",
+    "titleEn": "Octopus",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/章鱼.html"
+  },
+  {
+    "id": "deer",
+    "title": "鹿",
+    "titleEn": "Deer",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/鹿.html"
+  },
+  {
+    "id": "giant-octopus",
+    "title": "巨章鱼",
+    "titleEn": "Giant Octopus",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/巨章鱼.html"
+  },
+  {
+    "id": "giant-constrictor-snake",
+    "title": "巨蟒蛇",
+    "titleEn": "Giant Constrictor Snake",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/巨蟒蛇.html"
+  },
+  {
+    "id": "boar",
+    "title": "野猪",
+    "titleEn": "Boar",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/野猪.html"
+  },
+  {
+    "id": "mastiff",
+    "title": "獒犬",
+    "titleEn": "Mastiff",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/獒犬.html"
+  },
+  {
+    "id": "elk",
+    "title": "赤鹿",
+    "titleEn": "Elk",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/赤鹿.html"
+  },
+  {
+    "id": "giant-boar",
+    "title": "巨野猪",
+    "titleEn": "Giant Boar",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/巨野猪.html"
+  },
+  {
+    "id": "constrictor-snake",
+    "title": "蟒蛇",
+    "titleEn": "Constrictor Snake",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/蟒蛇.html"
+  },
+  {
+    "id": "animals",
+    "title": "附录A：动物",
+    "titleEn": "Animals",
+    "type": "动物",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/动物/附录A：动物.html"
+  },
+  {
+    "id": "elephant",
+    "title": "象",
+    "titleEn": "Elephant",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "4",
+    "path": "monsters/动物/象.html"
+  },
+  {
+    "id": "polar-bear",
+    "title": "白熊",
+    "titleEn": "Polar Bear",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/白熊.html"
+  },
+  {
+    "id": "killer-whale",
+    "title": "虎鲸",
+    "titleEn": "Killer Whale",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "3",
+    "path": "monsters/动物/虎鲸.html"
+  },
+  {
+    "id": "rat",
+    "title": "鼠",
+    "titleEn": "Rat",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/鼠.html"
+  },
+  {
+    "id": "black-bear",
+    "title": "黑熊",
+    "titleEn": "Black Bear",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/黑熊.html"
+  },
+  {
+    "id": "camel",
+    "title": "骆驼",
+    "titleEn": "Camel",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/骆驼.html"
+  },
+  {
+    "id": "giant-frog",
+    "title": "巨蛙",
+    "titleEn": "Giant Frog",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨蛙.html"
+  },
+  {
+    "id": "giant-wolf-spider",
+    "title": "巨狼蛛",
+    "titleEn": "Giant Wolf Spider",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨狼蛛.html"
+  },
+  {
+    "id": "cat",
+    "title": "猫",
+    "titleEn": "Cat",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/猫.html"
+  },
+  {
+    "id": "reef-shark",
+    "title": "礁鲨",
+    "titleEn": "Reef Shark",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/礁鲨.html"
+  },
+  {
+    "id": "saber-toothed-tiger",
+    "title": "剑齿虎",
+    "titleEn": "Saber-Toothed Tiger",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/剑齿虎.html"
+  },
+  {
+    "id": "panther",
+    "title": "豹",
+    "titleEn": "Panther",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/豹.html"
+  },
+  {
+    "id": "dire-wolf",
+    "title": "恐狼",
+    "titleEn": "Dire Wolf",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/恐狼.html"
+  },
+  {
+    "id": "badger",
+    "title": "獾",
+    "titleEn": "Badger",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/獾.html"
+  },
+  {
+    "id": "ape",
+    "title": "猿",
+    "titleEn": "Ape",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/猿.html"
+  },
+  {
+    "id": "venomous-snake",
+    "title": "毒蛇",
+    "titleEn": "Venomous Snake",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/毒蛇.html"
+  },
+  {
+    "id": "owl",
+    "title": "猫头鹰",
+    "titleEn": "Owl",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/猫头鹰.html"
+  },
+  {
+    "id": "lion",
+    "title": "狮子",
+    "titleEn": "Lion",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/狮子.html"
+  },
+  {
+    "id": "giant-venomous-snake",
+    "title": "巨毒蛇",
+    "titleEn": "Giant Venomous Snake",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨毒蛇.html"
+  },
+  {
+    "id": "piranha",
+    "title": "食人鱼",
+    "titleEn": "Piranha",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/食人鱼.html"
+  },
+  {
+    "id": "weasel",
+    "title": "鼬",
+    "titleEn": "Weasel",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/鼬.html"
+  },
+  {
+    "id": "eagle",
+    "title": "鹰",
+    "titleEn": "Eagle",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/鹰.html"
+  },
+  {
+    "id": "giant-centipede",
+    "title": "巨蜈蚣",
+    "titleEn": "Giant Centipede",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨蜈蚣.html"
+  },
+  {
+    "id": "hippopotamus",
+    "title": "河马",
+    "titleEn": "Hippopotamus",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "4",
+    "path": "monsters/动物/河马.html"
+  },
+  {
+    "id": "tiger",
+    "title": "虎",
+    "titleEn": "Tiger",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/虎.html"
+  },
+  {
+    "id": "spider",
+    "title": "蜘蛛",
+    "titleEn": "Spider",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/蜘蛛.html"
+  },
+  {
+    "id": "bat",
+    "title": "蝙蝠",
+    "titleEn": "Bat",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/蝙蝠.html"
+  },
+  {
+    "id": "crab",
+    "title": "蟹",
+    "titleEn": "Crab",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/蟹.html"
+  },
+  {
+    "id": "pony",
+    "title": "矮种马",
+    "titleEn": "Pony",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/矮种马.html"
+  },
+  {
+    "id": "giant-bat",
+    "title": "巨蝙蝠",
+    "titleEn": "Giant Bat",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨蝙蝠.html"
+  },
+  {
+    "id": "giant-spider",
+    "title": "巨蜘蛛",
+    "titleEn": "Giant Spider",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/巨蜘蛛.html"
+  },
+  {
+    "id": "jackal",
+    "title": "胡狼",
+    "titleEn": "Jackal",
+    "type": "动物",
+    "subDivision": "小型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/胡狼.html"
+  },
+  {
+    "id": "giant-crocodile",
+    "title": "巨鳄鱼",
+    "titleEn": "Giant Crocodile",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/动物/巨鳄鱼.html"
+  },
+  {
+    "id": "draft-horse",
+    "title": "驮用马",
+    "titleEn": "Draft Horse",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/驮用马.html"
+  },
+  {
+    "id": "giant-crab",
+    "title": "巨蟹",
+    "titleEn": "Giant Crab",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/巨蟹.html"
+  },
+  {
+    "id": "crocodile",
+    "title": "鳄鱼",
+    "titleEn": "Crocodile",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/鳄鱼.html"
+  },
+  {
+    "id": "wolf",
+    "title": "狼",
+    "titleEn": "Wolf",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/狼.html"
+  },
+  {
+    "id": "giant-squid",
+    "title": "巨乌贼",
+    "titleEn": "Giant Squid",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "6",
+    "path": "monsters/动物/巨乌贼.html"
+  },
+  {
+    "id": "giant-wasp",
+    "title": "巨黄蜂",
+    "titleEn": "Giant Wasp",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/巨黄蜂.html"
+  },
+  {
+    "id": "vulture",
+    "title": "秃鹫",
+    "titleEn": "Vulture",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/秃鹫.html"
+  },
+  {
+    "id": "riding-horse",
+    "title": "乘用马",
+    "titleEn": "Riding Horse",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/乘用马.html"
+  },
+  {
+    "id": "giant-weasel",
+    "title": "巨鼬",
+    "titleEn": "Giant Weasel",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/巨鼬.html"
+  },
+  {
+    "id": "giant-badger",
+    "title": "巨獾",
+    "titleEn": "Giant Badger",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/巨獾.html"
+  },
+  {
+    "id": "giant-ape",
+    "title": "巨猿",
+    "titleEn": "Giant Ape",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "7",
+    "path": "monsters/动物/巨猿.html"
+  },
+  {
+    "id": "hawk",
+    "title": "隼",
+    "titleEn": "Hawk",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/隼.html"
+  },
+  {
+    "id": "giant-shark",
+    "title": "巨鲨",
+    "titleEn": "Giant Shark",
+    "type": "动物",
+    "subDivision": "巨型野兽",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/动物/巨鲨.html"
+  },
+  {
+    "id": "mule",
+    "title": "骡",
+    "titleEn": "Mule",
+    "type": "动物",
+    "subDivision": "中型野兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/骡.html"
+  },
+  {
+    "id": "raven",
+    "title": "渡鸦",
+    "titleEn": "Raven",
+    "type": "动物",
+    "subDivision": "微型野兽",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/动物/渡鸦.html"
+  },
+  {
+    "id": "brown-bear",
+    "title": "棕熊",
+    "titleEn": "Brown Bear",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/棕熊.html"
+  },
+  {
+    "id": "rhinoceros",
+    "title": "犀牛",
+    "titleEn": "Rhinoceros",
+    "type": "动物",
+    "subDivision": "大型野兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/犀牛.html"
+  },
+  {
+    "id": "swarm-of-bats",
+    "title": "蝙蝠集群",
+    "titleEn": "Swarm of Bats",
+    "type": "动物",
+    "subDivision": "微型野兽的大型集群",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/蝙蝠集群.html"
+  },
+  {
+    "id": "swarm-of-rats",
+    "title": "鼠集群",
+    "titleEn": "Swarm of Rats",
+    "type": "动物",
+    "subDivision": "微型野兽的中型集群",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/鼠集群.html"
+  },
+  {
+    "id": "swarm-of-ravens",
+    "title": "渡鸦集群",
+    "titleEn": "Swarm of Ravens",
+    "type": "动物",
+    "subDivision": "微型野兽的中型集群",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/渡鸦集群.html"
+  },
+  {
+    "id": "swarm-of-piranhas",
+    "title": "食人鱼集群",
+    "titleEn": "Swarm of Piranhas",
+    "type": "动物",
+    "subDivision": "微型野兽的中型集群",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/动物/食人鱼集群.html"
+  },
+  {
+    "id": "swarm-of-venomous-snakes",
+    "title": "毒蛇集群",
+    "titleEn": "Swarm of Venomous Snakes",
+    "type": "动物",
+    "subDivision": "微型野兽的中型集群",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/毒蛇集群.html"
+  },
+  {
+    "id": "swarm-of-insects",
+    "title": "昆虫集群",
+    "titleEn": "Swarm of Insects",
+    "type": "动物",
+    "subDivision": "微型野兽的中型集群",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/动物/昆虫集群.html"
+  },
+  {
+    "id": "plesiosaurus",
+    "title": "蛇颈龙",
+    "titleEn": "Plesiosaurus",
+    "type": "动物",
+    "subDivision": "大型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/蛇颈龙.html"
+  },
+  {
+    "id": "tyrannosaurus-rex",
+    "title": "霸王龙",
+    "titleEn": "Tyrannosaurus Rex",
+    "type": "动物",
+    "subDivision": "巨型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "8",
+    "path": "monsters/动物/霸王龙.html"
+  },
+  {
+    "id": "allosaurus",
+    "title": "异特龙",
+    "titleEn": "Allosaurus",
+    "type": "动物",
+    "subDivision": "大型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/动物/异特龙.html"
+  },
+  {
+    "id": "archelon",
+    "title": "帝龟",
+    "titleEn": "Archelon",
+    "type": "动物",
+    "subDivision": "巨型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "4",
+    "path": "monsters/动物/帝龟.html"
+  },
+  {
+    "id": "triceratops",
+    "title": "三角龙",
+    "titleEn": "Triceratops",
+    "type": "动物",
+    "subDivision": "巨型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/动物/三角龙.html"
+  },
+  {
+    "id": "ankylosaurus",
+    "title": "甲龙",
+    "titleEn": "Ankylosaurus",
+    "type": "动物",
+    "subDivision": "巨型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "3",
+    "path": "monsters/动物/甲龙.html"
+  },
+  {
+    "id": "pteranodon",
+    "title": "无齿翼龙",
+    "titleEn": "Pteranodon",
+    "type": "动物",
+    "subDivision": "中型野兽（恐龙）",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/动物/无齿翼龙.html"
+  },
+  {
+    "id": "giant-elk",
+    "title": "巨赤鹿",
+    "titleEn": "Giant Elk",
+    "type": "动物",
+    "subDivision": "巨型天族",
+    "alignment": "中立善良",
+    "cr": "2",
+    "path": "monsters/动物/巨赤鹿.html"
+  },
+  {
+    "id": "giant-owl",
+    "title": "巨猫头鹰",
+    "titleEn": "Giant Owl",
+    "type": "动物",
+    "subDivision": "大型天族",
+    "alignment": "中立",
+    "cr": "1/4",
+    "path": "monsters/动物/巨猫头鹰.html"
+  },
+  {
+    "id": "giant-eagle",
+    "title": "巨鹰",
+    "titleEn": "Giant Eagle",
+    "type": "动物",
+    "subDivision": "大型天族",
+    "alignment": "中立善良",
+    "cr": "1",
+    "path": "monsters/动物/巨鹰.html"
+  },
+  {
+    "id": "flying-snake",
+    "title": "飞蛇",
+    "titleEn": "Flying Snake",
+    "type": "动物",
+    "subDivision": "微型怪兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/动物/飞蛇.html"
+  },
+  {
+    "id": "giant-vulture",
+    "title": "巨秃鹫",
+    "titleEn": "Giant Vulture",
+    "type": "动物",
+    "subDivision": "大型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "1",
+    "path": "monsters/动物/巨秃鹫.html"
+  },
+  {
+    "id": "dragon-turtle",
+    "title": "龙龟",
+    "titleEn": "Dragon Turtle",
+    "type": "龙类",
+    "subDivision": "超巨型龙类",
+    "alignment": "中立",
+    "cr": "17",
+    "path": "monsters/龙类/龙龟.html"
+  },
+  {
+    "id": "half-dragon",
+    "title": "半龙",
+    "titleEn": "Half-Dragon",
+    "type": "龙类",
+    "subDivision": "中型龙类",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/龙类/半龙.html"
+  },
+  {
+    "id": "pseudodragon",
+    "title": "伪龙",
+    "titleEn": "Pseudodragon",
+    "type": "龙类",
+    "subDivision": "微型龙类",
+    "alignment": "中立善良",
+    "cr": "1/4",
+    "path": "monsters/龙类/伪龙.html"
+  },
+  {
+    "id": "wyvern",
+    "title": "飞龙",
+    "titleEn": "Wyvern",
+    "type": "龙类",
+    "subDivision": "大型龙类",
+    "alignment": "无阵营",
+    "cr": "6",
+    "path": "monsters/龙类/飞龙.html"
+  },
+  {
+    "id": "black-dragons",
+    "title": "黑龙",
+    "titleEn": "Black Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/黑龙.html"
+  },
+  {
+    "id": "black-dragon-wyrmling",
+    "title": "黑龙雏龙",
+    "titleEn": "Black Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/龙类/黑龙雏龙.html"
+  },
+  {
+    "id": "adult-black-dragon",
+    "title": "成年黑龙",
+    "titleEn": "Adult Black Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "14",
+    "path": "monsters/龙类/成年黑龙.html"
+  },
+  {
+    "id": "young-black-dragon",
+    "title": "青年黑龙",
+    "titleEn": "Young Black Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "7",
+    "path": "monsters/龙类/青年黑龙.html"
+  },
+  {
+    "id": "ancient-black-dragon",
+    "title": "远古黑龙",
+    "titleEn": "Ancient Black Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "21",
+    "path": "monsters/龙类/远古黑龙.html"
+  },
+  {
+    "id": "young-copper-dragon",
+    "title": "青年赤铜龙",
+    "titleEn": "Young Copper Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "7",
+    "path": "monsters/龙类/青年赤铜龙.html"
+  },
+  {
+    "id": "copper-dragons",
+    "title": "赤铜龙",
+    "titleEn": "Copper Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/赤铜龙.html"
+  },
+  {
+    "id": "copper-dragon-wyrmling",
+    "title": "赤铜龙雏龙",
+    "titleEn": "Copper Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "1",
+    "path": "monsters/龙类/赤铜龙雏龙.html"
+  },
+  {
+    "id": "ancient-copper-dragon",
+    "title": "远古赤铜龙",
+    "titleEn": "Ancient Copper Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "21",
+    "path": "monsters/龙类/远古赤铜龙.html"
+  },
+  {
+    "id": "adult-copper-dragon",
+    "title": "成年赤铜龙",
+    "titleEn": "Adult Copper Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "14",
+    "path": "monsters/龙类/成年赤铜龙.html"
+  },
+  {
+    "id": "juvenile-shadow-dragon",
+    "title": "少年幽影龙",
+    "titleEn": "Juvenile Shadow Dragon",
+    "type": "龙类",
+    "subDivision": "中型龙类",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/龙类/少年幽影龙.html"
+  },
+  {
+    "id": "shadow-dragon",
+    "title": "幽影龙",
+    "titleEn": "Shadow Dragon",
+    "type": "龙类",
+    "subDivision": "大型或巨型龙类",
+    "alignment": "混乱邪恶",
+    "cr": "13",
+    "path": "monsters/龙类/幽影龙.html"
+  },
+  {
+    "id": "shadow-dragons",
+    "title": "幽影龙",
+    "titleEn": "Shadow Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/幽影龙总.html"
+  },
+  {
+    "id": "white-dragons",
+    "title": "白龙",
+    "titleEn": "White Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/白龙.html"
+  },
+  {
+    "id": "white-dragon-wyrmling",
+    "title": "白龙雏龙",
+    "titleEn": "White Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/龙类/白龙雏龙.html"
+  },
+  {
+    "id": "adult-white-dragon",
+    "title": "成年白龙",
+    "titleEn": "Adult White Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "13",
+    "path": "monsters/龙类/成年白龙.html"
+  },
+  {
+    "id": "young-white-dragon",
+    "title": "青年白龙",
+    "titleEn": "Young White Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "6",
+    "path": "monsters/龙类/青年白龙.html"
+  },
+  {
+    "id": "ancient-white-dragon",
+    "title": "远古白龙",
+    "titleEn": "Ancient White Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "20",
+    "path": "monsters/龙类/远古白龙.html"
+  },
+  {
+    "id": "ancient-gold-dragon",
+    "title": "远古金龙",
+    "titleEn": "Ancient Gold Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "24",
+    "path": "monsters/龙类/远古金龙.html"
+  },
+  {
+    "id": "young-gold-dragon",
+    "title": "青年金龙",
+    "titleEn": "Young Gold Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "10",
+    "path": "monsters/龙类/青年金龙.html"
+  },
+  {
+    "id": "adult-gold-dragon",
+    "title": "成年金龙",
+    "titleEn": "Adult Gold Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "17",
+    "path": "monsters/龙类/成年金龙.html"
+  },
+  {
+    "id": "gold-dragon-wyrmling",
+    "title": "金龙雏龙",
+    "titleEn": "Gold Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "3",
+    "path": "monsters/龙类/New_Item.html"
+  },
+  {
+    "id": "gold-dragons",
+    "title": "金龙",
+    "titleEn": "Gold Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/金龙.html"
+  },
+  {
+    "id": "ancient-blue-dragon",
+    "title": "远古蓝龙",
+    "titleEn": "Ancient Blue Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "23",
+    "path": "monsters/龙类/远古蓝龙.html"
+  },
+  {
+    "id": "adult-blue-dragon",
+    "title": "成年蓝龙",
+    "titleEn": "Adult Blue Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "16",
+    "path": "monsters/龙类/成年蓝龙.html"
+  },
+  {
+    "id": "young-blue-dragon",
+    "title": "青年蓝龙",
+    "titleEn": "Young Blue Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "9",
+    "path": "monsters/龙类/青年蓝龙.html"
+  },
+  {
+    "id": "blue-dragons",
+    "title": "蓝龙",
+    "titleEn": "Blue Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/蓝龙.html"
+  },
+  {
+    "id": "blue-dragon-wyrmling",
+    "title": "蓝龙雏龙",
+    "titleEn": "Blue Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/龙类/蓝龙雏龙.html"
+  },
+  {
+    "id": "faerie-dragon-adult",
+    "title": "妖精龙成体",
+    "titleEn": "Faerie Dragon Adult",
+    "type": "龙类",
+    "subDivision": "微型龙类",
+    "alignment": "混乱善良",
+    "cr": "2",
+    "path": "monsters/龙类/妖精龙成体.html"
+  },
+  {
+    "id": "faerie-dragon-youth",
+    "title": "妖精龙青年体",
+    "titleEn": "Faerie Dragon Youth",
+    "type": "龙类",
+    "subDivision": "微型龙类",
+    "alignment": "混乱善良",
+    "cr": "1",
+    "path": "monsters/龙类/妖精龙青年体.html"
+  },
+  {
+    "id": "faerie-dragons",
+    "title": "妖精龙",
+    "titleEn": "Faerie Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/妖精龙.html"
+  },
+  {
+    "id": "ancient-green-dragon",
+    "title": "远古绿龙",
+    "titleEn": "Ancient Green Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "22",
+    "path": "monsters/龙类/远古绿龙.html"
+  },
+  {
+    "id": "adult-green-dragon",
+    "title": "成年绿龙",
+    "titleEn": "Adult Green Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "15",
+    "path": "monsters/龙类/成年绿龙.html"
+  },
+  {
+    "id": "green-dragon-wyrmling",
+    "title": "绿龙雏龙",
+    "titleEn": "Green Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "2",
+    "path": "monsters/龙类/绿龙雏龙.html"
+  },
+  {
+    "id": "young-green-dragon",
+    "title": "青年绿龙",
+    "titleEn": "Young Green Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（色彩龙）",
+    "alignment": "守序邪恶",
+    "cr": "8",
+    "path": "monsters/龙类/青年绿龙.html"
+  },
+  {
+    "id": "green-dragons",
+    "title": "绿龙",
+    "titleEn": "Green Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/绿龙.html"
+  },
+  {
+    "id": "ancient-silver-dragon",
+    "title": "远古银龙",
+    "titleEn": "Ancient Silver Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "23",
+    "path": "monsters/龙类/远古银龙.html"
+  },
+  {
+    "id": "silver-dragon-wyrmling",
+    "title": "银龙雏龙",
+    "titleEn": "Silver Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "2",
+    "path": "monsters/龙类/银龙雏龙.html"
+  },
+  {
+    "id": "silver-dragons",
+    "title": "银龙",
+    "titleEn": "Silver Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/银龙.html"
+  },
+  {
+    "id": "young-silver-dragon",
+    "title": "青年银龙",
+    "titleEn": "Young Silver Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "9",
+    "path": "monsters/龙类/青年银龙.html"
+  },
+  {
+    "id": "adult-silver-dragon",
+    "title": "成年银龙",
+    "titleEn": "Adult Silver Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "16",
+    "path": "monsters/龙类/成年银龙.html"
+  },
+  {
+    "id": "red-dragon-wyrmling",
+    "title": "红龙雏龙",
+    "titleEn": "Red Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/龙类/红龙雏龙.html"
+  },
+  {
+    "id": "ancient-red-dragon",
+    "title": "远古红龙",
+    "titleEn": "Ancient Red Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "24",
+    "path": "monsters/龙类/远古红龙.html"
+  },
+  {
+    "id": "red-dragons",
+    "title": "红龙",
+    "titleEn": "Red Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/红龙.html"
+  },
+  {
+    "id": "adult-red-dragon",
+    "title": "成年红龙",
+    "titleEn": "Adult Red Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "17",
+    "path": "monsters/龙类/成年红龙.html"
+  },
+  {
+    "id": "young-red-dragon",
+    "title": "青年红龙",
+    "titleEn": "Young Red Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（色彩龙）",
+    "alignment": "混乱邪恶",
+    "cr": "10",
+    "path": "monsters/龙类/青年红龙.html"
+  },
+  {
+    "id": "kobold-warrior",
+    "title": "狗头人武者",
+    "titleEn": "Kobold Warrior",
+    "type": "龙类",
+    "subDivision": "小型龙类",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/龙类/狗头人武者.html"
+  },
+  {
+    "id": "winged-kobold",
+    "title": "带翼狗头人",
+    "titleEn": "Winged Kobold",
+    "type": "龙类",
+    "subDivision": "小型龙类",
+    "alignment": "中立",
+    "cr": "1/4",
+    "path": "monsters/龙类/带翼狗头人.html"
+  },
+  {
+    "id": "kobolds",
+    "title": "狗头人",
+    "titleEn": "Kobolds",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/狗头人.html"
+  },
+  {
+    "id": "ancient-brass-dragon",
+    "title": "远古黄铜龙",
+    "titleEn": "Ancient Brass Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "20",
+    "path": "monsters/龙类/远古黄铜龙.html"
+  },
+  {
+    "id": "adult-brass-dragon",
+    "title": "成年黄铜龙",
+    "titleEn": "Adult Brass Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "13",
+    "path": "monsters/龙类/成年黄铜龙.html"
+  },
+  {
+    "id": "brass-dragon-wyrmling",
+    "title": "黄铜龙雏龙",
+    "titleEn": "Brass Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "1",
+    "path": "monsters/龙类/黄铜龙雏龙.html"
+  },
+  {
+    "id": "young-brass-dragon",
+    "title": "青年黄铜龙",
+    "titleEn": "Young Brass Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（金属龙）",
+    "alignment": "混乱善良",
+    "cr": "6",
+    "path": "monsters/龙类/青年黄铜龙.html"
+  },
+  {
+    "id": "brass-dragons",
+    "title": "黄铜龙",
+    "titleEn": "Brass Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/黄铜龙.html"
+  },
+  {
+    "id": "bronze-dragons",
+    "title": "青铜龙",
+    "titleEn": "Bronze Dragons",
+    "type": "龙类",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/龙类/青铜龙.html"
+  },
+  {
+    "id": "young-bronze-dragon",
+    "title": "青年青铜龙",
+    "titleEn": "Young Bronze Dragon",
+    "type": "龙类",
+    "subDivision": "大型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "8",
+    "path": "monsters/龙类/青年青铜龙.html"
+  },
+  {
+    "id": "ancient-bronze-dragon",
+    "title": "远古青铜龙",
+    "titleEn": "Ancient Bronze Dragon",
+    "type": "龙类",
+    "subDivision": "超巨型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "22",
+    "path": "monsters/龙类/远古青铜龙.html"
+  },
+  {
+    "id": "bronze-dragon-wyrmling",
+    "title": "青铜龙雏龙",
+    "titleEn": "Bronze Dragon Wyrmling",
+    "type": "龙类",
+    "subDivision": "中型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "2",
+    "path": "monsters/龙类/青铜龙雏龙.html"
+  },
+  {
+    "id": "adult-bronze-dragon",
+    "title": "成年青铜龙",
+    "titleEn": "Adult Bronze Dragon",
+    "type": "龙类",
+    "subDivision": "巨型龙类（金属龙）",
+    "alignment": "守序善良",
+    "cr": "15",
+    "path": "monsters/龙类/成年青铜龙.html"
+  },
+  {
+    "id": "treant",
+    "title": "树人",
+    "titleEn": "Treant",
+    "type": "植物",
+    "subDivision": "巨型植物",
+    "alignment": "混乱善良",
+    "cr": "9",
+    "path": "monsters/植物/树人.html"
+  },
+  {
+    "id": "shambling-mound",
+    "title": "蔓生怪",
+    "titleEn": "Shambling Mound",
+    "type": "植物",
+    "subDivision": "大型植物",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/植物/蔓生怪.html"
+  },
+  {
+    "id": "myconid-spore-servant",
+    "title": "蕈人孢子奴仆",
+    "titleEn": "Myconid Spore Servant",
+    "type": "植物",
+    "subDivision": "中型或小型植物",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/植物/蕈人孢子奴仆.html"
+  },
+  {
+    "id": "myconid-adult",
+    "title": "蕈人成体",
+    "titleEn": "Myconid Adult",
+    "type": "植物",
+    "subDivision": "中型植物",
+    "alignment": "守序中立",
+    "cr": "1/2",
+    "path": "monsters/植物/蕈人成体.html"
+  },
+  {
+    "id": "myconid-sprout",
+    "title": "蕈人幼体",
+    "titleEn": "Myconid Sprout",
+    "type": "植物",
+    "subDivision": "小型植物",
+    "alignment": "守序中立",
+    "cr": "0",
+    "path": "monsters/植物/蕈人幼体.html"
+  },
+  {
+    "id": "myconids",
+    "title": "蕈人",
+    "titleEn": "Myconids",
+    "type": "植物",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/植物/蕈人.html"
+  },
+  {
+    "id": "myconid-sovereign",
+    "title": "蕈人王",
+    "titleEn": "Myconid Sovereign",
+    "type": "植物",
+    "subDivision": "大型植物",
+    "alignment": "守序中立",
+    "cr": "2",
+    "path": "monsters/植物/蕈人王.html"
+  },
+  {
+    "id": "twig-blight",
+    "title": "枯枝怪",
+    "titleEn": "Twig Blight",
+    "type": "植物",
+    "subDivision": "小型植物",
+    "alignment": "中立邪恶",
+    "cr": "1/8",
+    "path": "monsters/植物/枯枝怪.html"
+  },
+  {
+    "id": "tree-blight",
+    "title": "枯树怪",
+    "titleEn": "Tree Blight",
+    "type": "植物",
+    "subDivision": "巨型植物",
+    "alignment": "中立邪恶",
+    "cr": "7",
+    "path": "monsters/植物/枯树怪.html"
+  },
+  {
+    "id": "vine-blight",
+    "title": "枯藤怪",
+    "titleEn": "Vine Blight",
+    "type": "植物",
+    "subDivision": "中型植物",
+    "alignment": "中立邪恶",
+    "cr": "1/2",
+    "path": "monsters/植物/枯藤怪.html"
+  },
+  {
+    "id": "blight",
+    "title": "枯萎怪",
+    "titleEn": "Blight",
+    "type": "植物",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/植物/枯萎怪.html"
+  },
+  {
+    "id": "gulthias-blight",
+    "title": "甘提亚斯枯殖巨树",
+    "titleEn": "Gulthias Blight",
+    "type": "植物",
+    "subDivision": "超巨型植物",
+    "alignment": "中立邪恶",
+    "cr": "16",
+    "path": "monsters/植物/甘提亚斯枯殖巨树.html"
+  },
+  {
+    "id": "needle-blight",
+    "title": "枯针怪",
+    "titleEn": "Needle Blight",
+    "type": "植物",
+    "subDivision": "中型植物",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/植物/枯针怪.html"
+  },
+  {
+    "id": "violet-fungus-necrohulk",
+    "title": "紫腐菌尸聚怪",
+    "titleEn": "Violet Fungus Necrohulk",
+    "type": "植物",
+    "subDivision": "大型植物",
+    "alignment": "中立邪恶",
+    "cr": "7",
+    "path": "monsters/植物/紫腐菌尸聚怪.html"
+  },
+  {
+    "id": "gas-spore-fungus",
+    "title": "气孢菌",
+    "titleEn": "Gas Spore Fungus",
+    "type": "植物",
+    "subDivision": "大型植物",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/植物/气孢菌.html"
+  },
+  {
+    "id": "shrieker-fungus",
+    "title": "尖叫菌",
+    "titleEn": "Shrieker Fungus",
+    "type": "植物",
+    "subDivision": "中型植物",
+    "alignment": "无阵营",
+    "cr": "0",
+    "path": "monsters/植物/尖叫菌.html"
+  },
+  {
+    "id": "violet-fungus",
+    "title": "紫腐菌",
+    "titleEn": "Violet Fungus",
+    "type": "植物",
+    "subDivision": "中型植物",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/植物/紫腐菌.html"
+  },
+  {
+    "id": "fungi",
+    "title": "真菌",
+    "titleEn": "Fungi",
+    "type": "植物",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/植物/真菌.html"
+  },
+  {
+    "id": "awakened-plants",
+    "title": "启蒙植物",
+    "titleEn": "Awakened Plants",
+    "type": "植物",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/植物/启蒙植物.html"
+  },
+  {
+    "id": "awakened-shrub",
+    "title": "启蒙灌木",
+    "titleEn": "Awakened Shrub",
+    "type": "植物",
+    "subDivision": "小型植物",
+    "alignment": "中立",
+    "cr": "0",
+    "path": "monsters/植物/启蒙灌木.html"
+  },
+  {
+    "id": "awakened-tree",
+    "title": "启蒙大树",
+    "titleEn": "Awakened Tree",
+    "type": "植物",
+    "subDivision": "巨型植物",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/植物/启蒙大树.html"
+  },
+  {
+    "id": "commoner",
+    "title": "平民",
+    "titleEn": "Commoner",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "0",
+    "path": "monsters/类人/平民.html"
+  },
+  {
+    "id": "druid",
+    "title": "德鲁伊",
+    "titleEn": "Druid",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/类人/德鲁伊.html"
+  },
+  {
+    "id": "gladiator",
+    "title": "角斗士",
+    "titleEn": "Gladiator",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/类人/角斗士.html"
+  },
+  {
+    "id": "assassin",
+    "title": "刺客",
+    "titleEn": "Assassin",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "8",
+    "path": "monsters/类人/刺客.html"
+  },
+  {
+    "id": "tough",
+    "title": "打手",
+    "titleEn": "Tough",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/2",
+    "path": "monsters/类人/打手.html"
+  },
+  {
+    "id": "toughs",
+    "title": "打手",
+    "titleEn": "Toughs",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/打手总.html"
+  },
+  {
+    "id": "tough-boss",
+    "title": "打手老大",
+    "titleEn": "Tough Boss",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/类人/打手老大.html"
+  },
+  {
+    "id": "pirate-captain",
+    "title": "海盗船长",
+    "titleEn": "Pirate Captain",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "6",
+    "path": "monsters/类人/海盗船长.html"
+  },
+  {
+    "id": "pirate",
+    "title": "海盗",
+    "titleEn": "Pirate",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1",
+    "path": "monsters/类人/海盗.html"
+  },
+  {
+    "id": "pirates",
+    "title": "海盗",
+    "titleEn": "Pirates",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/海盗总.html"
+  },
+  {
+    "id": "pirate-admiral",
+    "title": "海盗将军",
+    "titleEn": "Pirate Admiral",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "12",
+    "path": "monsters/类人/海盗将军.html"
+  },
+  {
+    "id": "mage-apprentice",
+    "title": "魔法学徒",
+    "titleEn": "Mage Apprentice",
+    "type": "类人",
+    "subDivision": "中型或小型类人（法师）",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/类人/魔法学徒.html"
+  },
+  {
+    "id": "mages",
+    "title": "魔法师",
+    "titleEn": "Mages",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/魔法师总.html"
+  },
+  {
+    "id": "archmage",
+    "title": "大法师",
+    "titleEn": "Archmage",
+    "type": "类人",
+    "subDivision": "中型或小型类人（法师）",
+    "alignment": "中立",
+    "cr": "12",
+    "path": "monsters/类人/大法师.html"
+  },
+  {
+    "id": "mage",
+    "title": "魔法师",
+    "titleEn": "Mage",
+    "type": "类人",
+    "subDivision": "中型或小型类人（法师）",
+    "alignment": "中立",
+    "cr": "6",
+    "path": "monsters/类人/魔法师.html"
+  },
+  {
+    "id": "questing-knight",
+    "title": "天命骑士",
+    "titleEn": "Questing Knight",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "12",
+    "path": "monsters/类人/天命骑士.html"
+  },
+  {
+    "id": "knight",
+    "title": "骑士",
+    "titleEn": "Knight",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "3",
+    "path": "monsters/类人/骑士.html"
+  },
+  {
+    "id": "knights",
+    "title": "骑士",
+    "titleEn": "Knights",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/骑士总.html"
+  },
+  {
+    "id": "scouts",
+    "title": "斥候",
+    "titleEn": "Scouts",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/斥候总.html"
+  },
+  {
+    "id": "scout-captain",
+    "title": "斥候队长",
+    "titleEn": "Scout Captain",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "3",
+    "path": "monsters/类人/斥候队长.html"
+  },
+  {
+    "id": "scout",
+    "title": "斥候",
+    "titleEn": "Scout",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/2",
+    "path": "monsters/类人/斥候.html"
+  },
+  {
+    "id": "noble",
+    "title": "贵族",
+    "titleEn": "Noble",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/类人/贵族.html"
+  },
+  {
+    "id": "nobles",
+    "title": "贵族",
+    "titleEn": "Nobles",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/贵族总.html"
+  },
+  {
+    "id": "noble-prodigy",
+    "title": "贵血天骄",
+    "titleEn": "Noble Prodigy",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "10",
+    "path": "monsters/类人/贵血天骄.html"
+  },
+  {
+    "id": "spy",
+    "title": "间谍",
+    "titleEn": "Spy",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1",
+    "path": "monsters/类人/间谍.html"
+  },
+  {
+    "id": "spies",
+    "title": "间谍",
+    "titleEn": "Spies",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/间谍总.html"
+  },
+  {
+    "id": "spy-master",
+    "title": "间谍大师",
+    "titleEn": "Spy Master",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "10",
+    "path": "monsters/类人/间谍大师.html"
+  },
+  {
+    "id": "berserkers",
+    "title": "狂战士",
+    "titleEn": "Berserkers",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/狂战士总.html"
+  },
+  {
+    "id": "berserker-commander",
+    "title": "狂战将",
+    "titleEn": "Berserker Commander",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "8",
+    "path": "monsters/类人/狂战将.html"
+  },
+  {
+    "id": "berserker",
+    "title": "狂战士",
+    "titleEn": "Berserker",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/类人/狂战士.html"
+  },
+  {
+    "id": "cultist-fanatic",
+    "title": "邪教狂信者",
+    "titleEn": "Cultist Fanatic",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/类人/邪教狂信者.html"
+  },
+  {
+    "id": "cultist-hierophant",
+    "title": "邪教教宗",
+    "titleEn": "Cultist Hierophant",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "10",
+    "path": "monsters/类人/邪教教宗.html"
+  },
+  {
+    "id": "aberrant-cultist",
+    "title": "异怪邪教徒",
+    "titleEn": "Aberrant Cultist",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立邪恶",
+    "cr": "8",
+    "path": "monsters/类人/异怪邪教徒.html"
+  },
+  {
+    "id": "elemental-cultist",
+    "title": "元素邪教徒",
+    "titleEn": "Elemental Cultist",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "混乱邪恶",
+    "cr": "8",
+    "path": "monsters/类人/元素邪教徒.html"
+  },
+  {
+    "id": "cultists",
+    "title": "邪教徒",
+    "titleEn": "Cultists",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/邪教徒总.html"
+  },
+  {
+    "id": "death-cultist",
+    "title": "死亡邪教徒",
+    "titleEn": "Death Cultist",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立邪恶",
+    "cr": "8",
+    "path": "monsters/类人/死亡邪教徒.html"
+  },
+  {
+    "id": "cultist",
+    "title": "邪教徒",
+    "titleEn": "Cultist",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/类人/邪教徒.html"
+  },
+  {
+    "id": "fiend-cultist",
+    "title": "邪魔邪教徒",
+    "titleEn": "Fiend Cultist",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立邪恶",
+    "cr": "8",
+    "path": "monsters/类人/邪魔邪教徒.html"
+  },
+  {
+    "id": "warrior-infantry",
+    "title": "新晋武者",
+    "titleEn": "Warrior Infantry",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/类人/新晋武者.html"
+  },
+  {
+    "id": "warrior-veteran",
+    "title": "历战武者",
+    "titleEn": "Warrior Veteran",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "3",
+    "path": "monsters/类人/历战武者.html"
+  },
+  {
+    "id": "warriors",
+    "title": "武者",
+    "titleEn": "Warriors",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/武者.html"
+  },
+  {
+    "id": "warrior-commander",
+    "title": "武将",
+    "titleEn": "Warrior Commander",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "10",
+    "path": "monsters/类人/武将.html"
+  },
+  {
+    "id": "guard-captain",
+    "title": "警卫队长",
+    "titleEn": "Guard Captain",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/类人/警卫队长.html"
+  },
+  {
+    "id": "guards",
+    "title": "警卫",
+    "titleEn": "Guards",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/警卫总.html"
+  },
+  {
+    "id": "guard",
+    "title": "警卫",
+    "titleEn": "Guard",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/类人/警卫.html"
+  },
+  {
+    "id": "bandit-crime-lord",
+    "title": "匪帮祸首",
+    "titleEn": "Bandit Crime Lord",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "11",
+    "path": "monsters/类人/匪帮祸首.html"
+  },
+  {
+    "id": "bandit-deceiver",
+    "title": "匪帮欺诈师",
+    "titleEn": "Bandit Deceiver",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "7",
+    "path": "monsters/类人/匪帮欺诈师.html"
+  },
+  {
+    "id": "bandit",
+    "title": "匪徒",
+    "titleEn": "Bandit",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/8",
+    "path": "monsters/类人/匪徒.html"
+  },
+  {
+    "id": "bandit-captain",
+    "title": "匪帮队长",
+    "titleEn": "Bandit Captain",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/类人/匪帮队长.html"
+  },
+  {
+    "id": "bandits",
+    "title": "匪徒",
+    "titleEn": "Bandits",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/匪徒总.html"
+  },
+  {
+    "id": "performer",
+    "title": "演艺者",
+    "titleEn": "Performer",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "1/2",
+    "path": "monsters/类人/演艺者.html"
+  },
+  {
+    "id": "performers",
+    "title": "演艺者",
+    "titleEn": "Performers",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/演艺者总.html"
+  },
+  {
+    "id": "performer-legend",
+    "title": "演艺传奇",
+    "titleEn": "Performer Legend",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "10",
+    "path": "monsters/类人/演艺传奇.html"
+  },
+  {
+    "id": "performer-maestro",
+    "title": "演艺尊师",
+    "titleEn": "Performer Maestro",
+    "type": "类人",
+    "subDivision": "中型或小型类人",
+    "alignment": "中立",
+    "cr": "6",
+    "path": "monsters/类人/演艺尊师.html"
+  },
+  {
+    "id": "archpriest",
+    "title": "大祭司",
+    "titleEn": "Archpriest",
+    "type": "类人",
+    "subDivision": "中型或小型类人（牧师）",
+    "alignment": "中立",
+    "cr": "12",
+    "path": "monsters/类人/大祭司.html"
+  },
+  {
+    "id": "priest",
+    "title": "祭司",
+    "titleEn": "Priest",
+    "type": "类人",
+    "subDivision": "中型或小型类人（牧师）",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/类人/祭司.html"
+  },
+  {
+    "id": "priests",
+    "title": "祭司",
+    "titleEn": "Priests",
+    "type": "类人",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/类人/祭司总.html"
+  },
+  {
+    "id": "priest-acolyte",
+    "title": "侍祭僧侣",
+    "titleEn": "Priest Acolyte",
+    "type": "类人",
+    "subDivision": "中型或小型类人（牧师）",
+    "alignment": "中立",
+    "cr": "1/4",
+    "path": "monsters/类人/侍祭僧侣.html"
+  },
+  {
+    "id": "sprite",
+    "title": "小仙灵",
+    "titleEn": "Sprite",
+    "type": "妖精",
+    "subDivision": "微型妖精",
+    "alignment": "中立善良",
+    "cr": "1/4",
+    "path": "monsters/妖精/小仙灵.html"
+  },
+  {
+    "id": "dryad",
+    "title": "树精",
+    "titleEn": "Dryad",
+    "type": "妖精",
+    "subDivision": "中型妖精",
+    "alignment": "中立",
+    "cr": "1",
+    "path": "monsters/妖精/树精.html"
+  },
+  {
+    "id": "blink-dog",
+    "title": "闪现犬",
+    "titleEn": "Blink Dog",
+    "type": "妖精",
+    "subDivision": "中型妖精",
+    "alignment": "守序善良",
+    "cr": "1/4",
+    "path": "monsters/妖精/闪现犬.html"
+  },
+  {
+    "id": "centaur-warden",
+    "title": "人马守望者",
+    "titleEn": "Centaur Warden",
+    "type": "妖精",
+    "subDivision": "大型妖精",
+    "alignment": "中立善良",
+    "cr": "7",
+    "path": "monsters/妖精/人马守望者.html"
+  },
+  {
+    "id": "centaurs",
+    "title": "人马",
+    "titleEn": "Centaurs",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/人马.html"
+  },
+  {
+    "id": "centaur-trooper",
+    "title": "人马骠骑",
+    "titleEn": "Centaur Trooper",
+    "type": "妖精",
+    "subDivision": "大型妖精",
+    "alignment": "中立善良",
+    "cr": "2",
+    "path": "monsters/妖精/人马骠骑.html"
+  },
+  {
+    "id": "satyr",
+    "title": "半羊人",
+    "titleEn": "Satyr",
+    "type": "妖精",
+    "subDivision": "中型妖精",
+    "alignment": "混乱中立",
+    "cr": "1/2",
+    "path": "monsters/妖精/半羊人.html"
+  },
+  {
+    "id": "satyr-revelmaster",
+    "title": "半羊人欢庆之主",
+    "titleEn": "Satyr Revelmaster",
+    "type": "妖精",
+    "subDivision": "中型妖精",
+    "alignment": "混乱中立",
+    "cr": "6",
+    "path": "monsters/妖精/半羊人欢庆之主.html"
+  },
+  {
+    "id": "satyrs",
+    "title": "半羊人",
+    "titleEn": "Satyrs",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/半羊人总.html"
+  },
+  {
+    "id": "goblin-warrior",
+    "title": "地精武者",
+    "titleEn": "Goblin Warrior",
+    "type": "妖精",
+    "subDivision": "小型妖精（类地精）",
+    "alignment": "混乱中立",
+    "cr": "1/4",
+    "path": "monsters/妖精/地精武者.html"
+  },
+  {
+    "id": "goblins",
+    "title": "地精",
+    "titleEn": "Goblins",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/地精.html"
+  },
+  {
+    "id": "goblin-minion",
+    "title": "地精喽啰",
+    "titleEn": "Goblin Minion",
+    "type": "妖精",
+    "subDivision": "小型妖精（类地精）",
+    "alignment": "混乱中立",
+    "cr": "1/8",
+    "path": "monsters/妖精/地精喽啰.html"
+  },
+  {
+    "id": "goblin-boss",
+    "title": "地精老大",
+    "titleEn": "Goblin Boss",
+    "type": "妖精",
+    "subDivision": "小型妖精（类地精）",
+    "alignment": "混乱中立",
+    "cr": "1",
+    "path": "monsters/妖精/地精老大.html"
+  },
+  {
+    "id": "goblin-hexer",
+    "title": "地精咒术师",
+    "titleEn": "Goblin Hexer",
+    "type": "妖精",
+    "subDivision": "小型妖精（类地精）",
+    "alignment": "混乱中立",
+    "cr": "3",
+    "path": "monsters/妖精/地精咒术师.html"
+  },
+  {
+    "id": "worgs",
+    "title": "座狼",
+    "titleEn": "Worgs",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/座狼总.html"
+  },
+  {
+    "id": "worg",
+    "title": "座狼",
+    "titleEn": "Worg",
+    "type": "妖精",
+    "subDivision": "大型妖精",
+    "alignment": "中立邪恶",
+    "cr": "1/2",
+    "path": "monsters/妖精/座狼.html"
+  },
+  {
+    "id": "dire-worg",
+    "title": "恐座狼",
+    "titleEn": "Dire Worg",
+    "type": "妖精",
+    "subDivision": "巨型妖精",
+    "alignment": "中立邪恶",
+    "cr": "10",
+    "path": "monsters/妖精/恐座狼.html"
+  },
+  {
+    "id": "bugbear-stalker",
+    "title": "熊地精追猎者",
+    "titleEn": "Bugbear Stalker",
+    "type": "妖精",
+    "subDivision": "中型妖精（类地精）",
+    "alignment": "混乱邪恶",
+    "cr": "3",
+    "path": "monsters/妖精/熊地精追猎者.html"
+  },
+  {
+    "id": "bugbear-warrior",
+    "title": "熊地精武者",
+    "titleEn": "Bugbear Warrior",
+    "type": "妖精",
+    "subDivision": "中型妖精（类地精）",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/妖精/熊地精武者.html"
+  },
+  {
+    "id": "bugbears",
+    "title": "熊地精",
+    "titleEn": "Bugbears",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/熊地精.html"
+  },
+  {
+    "id": "bullywug",
+    "title": "啵灵蛙",
+    "titleEn": "Bullywug",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/啵灵蛙.html"
+  },
+  {
+    "id": "bullywug-bog-sage",
+    "title": "啵灵蛙沼地大贤",
+    "titleEn": "Bullywug Bog Sage",
+    "type": "妖精",
+    "subDivision": "中型妖精",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/妖精/啵灵蛙沼地大贤.html"
+  },
+  {
+    "id": "bullywug-warrior",
+    "title": "啵灵蛙武者",
+    "titleEn": "Bullywug Warrior",
+    "type": "妖精",
+    "subDivision": "中型妖精",
+    "alignment": "中立",
+    "cr": "1/4",
+    "path": "monsters/妖精/啵灵蛙武者.html"
+  },
+  {
+    "id": "pixie",
+    "title": "皮克精",
+    "titleEn": "Pixie",
+    "type": "妖精",
+    "subDivision": "微型妖精",
+    "alignment": "中立善良",
+    "cr": "1/4",
+    "path": "monsters/妖精/皮克精.html"
+  },
+  {
+    "id": "pixies",
+    "title": "皮克精",
+    "titleEn": "Pixies",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/皮克精总.html"
+  },
+  {
+    "id": "pixie-wonderbringer",
+    "title": "皮克妙妙精",
+    "titleEn": "Pixie Wonderbringer",
+    "type": "妖精",
+    "subDivision": "微型妖精",
+    "alignment": "中立善良",
+    "cr": "5",
+    "path": "monsters/妖精/皮克妙妙精.html"
+  },
+  {
+    "id": "hobgoblin-warrior",
+    "title": "大地精武者",
+    "titleEn": "Hobgoblin Warrior",
+    "type": "妖精",
+    "subDivision": "中型妖精（类地精）",
+    "alignment": "守序邪恶",
+    "cr": "1/2",
+    "path": "monsters/妖精/大地精武者.html"
+  },
+  {
+    "id": "hobgoblin-warlord",
+    "title": "大地精军阀",
+    "titleEn": "Hobgoblin Warlord",
+    "type": "妖精",
+    "subDivision": "中型妖精（类地精）",
+    "alignment": "守序邪恶",
+    "cr": "6",
+    "path": "monsters/妖精/大地精军阀.html"
+  },
+  {
+    "id": "hobgoblin-captain",
+    "title": "大地精长官",
+    "titleEn": "Hobgoblin Captain",
+    "type": "妖精",
+    "subDivision": "中型妖精（类地精）",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/妖精/大地精长官.html"
+  },
+  {
+    "id": "hobgoblins",
+    "title": "大地精",
+    "titleEn": "Hobgoblins",
+    "type": "妖精",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/妖精/大地精.html"
+  },
+  {
+    "id": "gibbering-mouther",
+    "title": "呓语之口",
+    "titleEn": "Gibbering Mouther",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "混乱中立",
+    "cr": "2",
+    "path": "monsters/异怪/呓语之口.html"
+  },
+  {
+    "id": "grimlock",
+    "title": "幽邃盲族",
+    "titleEn": "Grimlock",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/异怪/幽邃盲族.html"
+  },
+  {
+    "id": "cloaker",
+    "title": "斗篷怪",
+    "titleEn": "Cloaker",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "混乱中立",
+    "cr": "8",
+    "path": "monsters/异怪/斗篷怪.html"
+  },
+  {
+    "id": "nothic",
+    "title": "诺斯怪",
+    "titleEn": "Nothic",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "2",
+    "path": "monsters/异怪/诺斯怪.html"
+  },
+  {
+    "id": "flumph",
+    "title": "呋噜",
+    "titleEn": "Flumph",
+    "type": "异怪",
+    "subDivision": "小型异怪",
+    "alignment": "守序善良",
+    "cr": "1/8",
+    "path": "monsters/异怪/呋噜.html"
+  },
+  {
+    "id": "piercer",
+    "title": "石锥怪",
+    "titleEn": "Piercer",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/异怪/石锥怪.html"
+  },
+  {
+    "id": "darkmantle",
+    "title": "暗幕魔兽",
+    "titleEn": "Darkmantle",
+    "type": "异怪",
+    "subDivision": "小型异怪",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/异怪/暗幕魔兽.html"
+  },
+  {
+    "id": "roper",
+    "title": "石绳怪",
+    "titleEn": "Roper",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/异怪/石绳怪.html"
+  },
+  {
+    "id": "intellect-devourer",
+    "title": "噬脑怪",
+    "titleEn": "Intellect Devourer",
+    "type": "异怪",
+    "subDivision": "微型异怪",
+    "alignment": "守序邪恶",
+    "cr": "2",
+    "path": "monsters/异怪/噬脑怪.html"
+  },
+  {
+    "id": "grell",
+    "title": "触须怪",
+    "titleEn": "Grell",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/异怪/触须怪.html"
+  },
+  {
+    "id": "chuul",
+    "title": "甲伏怪",
+    "titleEn": "Chuul",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/异怪/甲伏怪.html"
+  },
+  {
+    "id": "otyugh",
+    "title": "食腐兽",
+    "titleEn": "Otyugh",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "中立",
+    "cr": "5",
+    "path": "monsters/异怪/食腐兽.html"
+  },
+  {
+    "id": "aboleth",
+    "title": "底栖魔鱼",
+    "titleEn": "Aboleth",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "守序邪恶",
+    "cr": "10",
+    "path": "monsters/异怪/底栖魔鱼.html"
+  },
+  {
+    "id": "gricks",
+    "title": "穴居攫怪",
+    "titleEn": "Gricks",
+    "type": "异怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/异怪/穴居攫怪总.html"
+  },
+  {
+    "id": "grick",
+    "title": "穴居攫怪",
+    "titleEn": "Grick",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/异怪/穴居攫怪.html"
+  },
+  {
+    "id": "grick-ancient",
+    "title": "远古穴居攫怪",
+    "titleEn": "Grick Ancient",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "无阵营",
+    "cr": "7",
+    "path": "monsters/异怪/远古穴居攫怪.html"
+  },
+  {
+    "id": "kuo-toa-archpriest",
+    "title": "寇涛大祭司",
+    "titleEn": "Kuo-toa Archpriest",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "6",
+    "path": "monsters/异怪/寇涛大祭司.html"
+  },
+  {
+    "id": "kuo-toa",
+    "title": "寇涛",
+    "titleEn": "Kuo-toa",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
+    "path": "monsters/异怪/寇涛.html"
+  },
+  {
+    "id": "kuo-toa-monitor",
+    "title": "寇涛监察者",
+    "titleEn": "Kuo-toa Monitor",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/异怪/寇涛监察者.html"
+  },
+  {
+    "id": "kuo-toa-whip",
+    "title": "寇涛驱策者",
+    "titleEn": "Kuo-toa Whip",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "中立邪恶",
+    "cr": "1",
+    "path": "monsters/异怪/寇涛驱策者.html"
+  },
+  {
+    "id": "kuo-toa",
+    "title": "寇涛",
+    "titleEn": "Kuo-toa",
+    "type": "异怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/异怪/寇涛总.html"
+  },
+  {
+    "id": "githzerai-zerth",
+    "title": "吉斯泽莱泽锡修士",
+    "titleEn": "Githzerai Zerth",
+    "type": "异怪",
+    "subDivision": "中型异怪（吉斯人）",
+    "alignment": "守序中立",
+    "cr": "6",
+    "path": "monsters/异怪/吉斯泽莱泽锡修士.html"
+  },
+  {
+    "id": "githyanki-warrior",
+    "title": "吉斯洋基武者",
+    "titleEn": "Githyanki Warrior",
+    "type": "异怪",
+    "subDivision": "中型异怪（吉斯人）",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/异怪/吉斯洋基武者.html"
+  },
+  {
+    "id": "githzerai-monk",
+    "title": "吉斯泽莱武僧",
+    "titleEn": "Githzerai Monk",
+    "type": "异怪",
+    "subDivision": "中型异怪（吉斯人）",
+    "alignment": "守序中立",
+    "cr": "2",
+    "path": "monsters/异怪/吉斯泽莱武僧.html"
+  },
+  {
+    "id": "githzerai",
+    "title": "吉斯泽莱人",
+    "titleEn": "Githzerai",
+    "type": "异怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/异怪/吉斯泽莱人.html"
+  },
+  {
+    "id": "githyanki",
+    "title": "吉斯洋基人",
+    "titleEn": "Githyanki",
+    "type": "异怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/异怪/吉斯洋基人.html"
+  },
+  {
+    "id": "githyanki-knight",
+    "title": "吉斯洋基骑士",
+    "titleEn": "Githyanki Knight",
+    "type": "异怪",
+    "subDivision": "中型异怪（吉斯人）",
+    "alignment": "守序邪恶",
+    "cr": "8",
+    "path": "monsters/异怪/吉斯洋基骑士.html"
+  },
+  {
+    "id": "githyanki-dracomancer",
+    "title": "吉斯洋基龙巫",
+    "titleEn": "Githyanki Dracomancer",
+    "type": "异怪",
+    "subDivision": "中型异怪（吉斯人）",
+    "alignment": "守序邪恶",
+    "cr": "16",
+    "path": "monsters/异怪/吉斯洋基龙巫.html"
+  },
+  {
+    "id": "githzerai-psion",
+    "title": "吉斯泽莱灵能使",
+    "titleEn": "Githzerai Psion",
+    "type": "异怪",
+    "subDivision": "中型异怪（吉斯人）",
+    "alignment": "守序中立",
+    "cr": "12",
+    "path": "monsters/异怪/吉斯泽莱灵能使.html"
+  },
+  {
+    "id": "gray-slaad",
+    "title": "史拉灰蟾",
+    "titleEn": "Gray Slaad",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "混乱中立",
+    "cr": "9",
+    "path": "monsters/异怪/史拉灰蟾.html"
+  },
+  {
+    "id": "death-slaad",
+    "title": "史拉亡蟾",
+    "titleEn": "Death Slaad",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "混乱邪恶",
+    "cr": "10",
+    "path": "monsters/异怪/史拉亡蟾.html"
+  },
+  {
+    "id": "slaadi",
+    "title": "史拉蟾",
+    "titleEn": "Slaadi",
+    "type": "异怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/异怪/史拉蟾.html"
+  },
+  {
+    "id": "red-slaad",
+    "title": "史拉红蟾",
+    "titleEn": "Red Slaad",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "混乱中立",
+    "cr": "5",
+    "path": "monsters/异怪/史拉红蟾.html"
+  },
+  {
+    "id": "green-slaad",
+    "title": "史拉绿蟾",
+    "titleEn": "Green Slaad",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "混乱中立",
+    "cr": "8",
+    "path": "monsters/异怪/史拉绿蟾.html"
+  },
+  {
+    "id": "slaad-tadpole",
+    "title": "史拉蟾蝌蚪",
+    "titleEn": "Slaad Tadpole",
+    "type": "异怪",
+    "subDivision": "微型异怪",
+    "alignment": "混乱中立",
+    "cr": "1/8",
+    "path": "monsters/异怪/史拉蟾蝌蚪.html"
+  },
+  {
+    "id": "blue-slaad",
+    "title": "史拉蓝蟾",
+    "titleEn": "Blue Slaad",
+    "type": "异怪",
+    "subDivision": "大型异怪",
+    "alignment": "混乱中立",
+    "cr": "7",
+    "path": "monsters/异怪/史拉蓝蟾.html"
+  },
+  {
+    "id": "mind-flayer-arcanist",
+    "title": "夺心魔奥术师",
+    "titleEn": "Mind Flayer Arcanist",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "守序邪恶",
+    "cr": "11",
+    "path": "monsters/异怪/夺心魔奥术师.html"
+  },
+  {
+    "id": "mind-flayer",
+    "title": "夺心魔",
+    "titleEn": "Mind Flayer",
+    "type": "异怪",
+    "subDivision": "中型异怪",
+    "alignment": "守序邪恶",
+    "cr": "7",
+    "path": "monsters/异怪/夺心魔.html"
+  },
+  {
+    "id": "mind-flayers",
+    "title": "夺心魔",
+    "titleEn": "Mind Flayers",
+    "type": "异怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/异怪/夺心魔总.html"
+  },
+  {
+    "id": "pegasus",
+    "title": "天马",
+    "titleEn": "Pegasus",
+    "type": "天族",
+    "subDivision": "大型天族",
+    "alignment": "混乱善良",
+    "cr": "2",
+    "path": "monsters/天族/天马.html"
+  },
+  {
+    "id": "couatl",
+    "title": "羽蛇",
+    "titleEn": "Couatl",
+    "type": "天族",
+    "subDivision": "中型天族",
+    "alignment": "守序善良",
+    "cr": "4",
+    "path": "monsters/天族/羽蛇.html"
+  },
+  {
+    "id": "animal-lord",
+    "title": "兽主",
+    "titleEn": "Animal Lord",
+    "type": "天族",
+    "subDivision": "中型天族",
+    "alignment": "中立",
+    "cr": "20",
+    "path": "monsters/天族/兽主.html"
+  },
+  {
+    "id": "unicorn",
+    "title": "独角兽",
+    "titleEn": "Unicorn",
+    "type": "天族",
+    "subDivision": "大型天族",
+    "alignment": "守序善良",
+    "cr": "5",
+    "path": "monsters/天族/独角兽.html"
+  },
+  {
+    "id": "sphinx-of-wonder",
+    "title": "求索斯芬克斯",
+    "titleEn": "Sphinx of Wonder",
+    "type": "天族",
+    "subDivision": "微型天族",
+    "alignment": "守序中立",
+    "cr": "1",
+    "path": "monsters/天族/求索斯芬克斯.html"
+  },
+  {
+    "id": "sphinx-of-valor",
+    "title": "勇气斯芬克斯",
+    "titleEn": "Sphinx of Valor",
+    "type": "天族",
+    "subDivision": "大型天族",
+    "alignment": "守序中立",
+    "cr": "17",
+    "path": "monsters/天族/勇气斯芬克斯.html"
+  },
+  {
+    "id": "sphinx-of-secrets",
+    "title": "隐秘斯芬克斯",
+    "titleEn": "Sphinx of Secrets",
+    "type": "天族",
+    "subDivision": "大型天族",
+    "alignment": "守序中立",
+    "cr": "8",
+    "path": "monsters/天族/隐秘斯芬克斯.html"
+  },
+  {
+    "id": "sphinx-of-lore",
+    "title": "晓谕斯芬克斯",
+    "titleEn": "Sphinx of Lore",
+    "type": "天族",
+    "subDivision": "大型天族",
+    "alignment": "守序中立",
+    "cr": "11",
+    "path": "monsters/天族/晓谕斯芬克斯.html"
+  },
+  {
+    "id": "sphinx",
+    "title": "斯芬克斯",
+    "titleEn": "Sphinx",
+    "type": "天族",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/天族/斯芬克斯.html"
+  },
+  {
+    "id": "solar",
+    "title": "炽天神使",
+    "titleEn": "Solar",
+    "type": "天族",
+    "subDivision": "大型天族（天使）",
+    "alignment": "守序善良",
+    "cr": "21",
+    "path": "monsters/天族/炽天神使.html"
+  },
+  {
+    "id": "planetar",
+    "title": "星天神使",
+    "titleEn": "Planetar",
+    "type": "天族",
+    "subDivision": "大型天族（天使）",
+    "alignment": "守序善良",
+    "cr": "16",
+    "path": "monsters/天族/星天神使.html"
+  },
+  {
+    "id": "deva",
+    "title": "天神使徒",
+    "titleEn": "Deva",
+    "type": "天族",
+    "subDivision": "中型天族（天使）",
+    "alignment": "守序善良",
+    "cr": "10",
+    "path": "monsters/天族/天神使徒.html"
+  },
+  {
+    "id": "gelatinous-cube",
+    "title": "凝胶方块",
+    "titleEn": "Gelatinous Cube",
+    "type": "泥怪",
+    "subDivision": "大型泥怪",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/泥怪/凝胶方块.html"
+  },
+  {
+    "id": "black-pudding",
+    "title": "黑布丁",
+    "titleEn": "Black Pudding",
+    "type": "泥怪",
+    "subDivision": "大型泥怪",
+    "alignment": "无阵营",
+    "cr": "4",
+    "path": "monsters/泥怪/黑布丁.html"
+  },
+  {
+    "id": "ochre-jelly",
+    "title": "赭果冻",
+    "titleEn": "Ochre Jelly",
+    "type": "泥怪",
+    "subDivision": "大型泥怪",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/泥怪/赭果冻.html"
+  },
+  {
+    "id": "gray-oozes",
+    "title": "灰泥怪",
+    "titleEn": "Gray Oozes",
+    "type": "泥怪",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/泥怪/灰泥怪总.html"
+  },
+  {
+    "id": "gray-ooze",
+    "title": "灰泥怪",
+    "titleEn": "Gray Ooze",
+    "type": "泥怪",
+    "subDivision": "中型泥怪",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/泥怪/灰泥怪.html"
+  },
+  {
+    "id": "psychic-gray-ooze",
+    "title": "心能灰泥怪",
+    "titleEn": "Psychic Gray Ooze",
+    "type": "泥怪",
+    "subDivision": "中型泥怪",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/泥怪/心能灰泥怪.html"
+  },
+  {
+    "id": "monster-conversions",
+    "title": "怪物转换",
+    "titleEn": "Monster Conversions",
+    "type": "附录B",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/附录B/怪物转换.html"
+  },
+  {
+    "id": "monster-lists",
+    "title": "附录B：怪物速查",
+    "titleEn": "Monster Lists",
+    "type": "附录B",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/附录B/附录B：怪物速查.html"
+  },
+  {
+    "id": "monster-by-habiat",
+    "title": "栖息地分组",
+    "titleEn": "Monster by Habiat",
+    "type": "附录B",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/附录B/栖息地分组.html"
+  },
+  {
+    "id": "monster-by-challenge-rating",
+    "title": "挑战等级分组",
+    "titleEn": "Monster by Challenge Rating",
+    "type": "附录B",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/附录B/挑战等级分组.html"
+  },
+  {
+    "id": "monsters-by-group",
+    "title": "怪物群类",
+    "titleEn": "Monsters by Group",
+    "type": "附录B",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/附录B/怪物群类.html"
+  },
+  {
+    "id": "doppelganger",
+    "title": "变形怪",
+    "titleEn": "Doppelganger",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立",
+    "cr": "3",
+    "path": "monsters/怪兽/变形怪.html"
+  },
+  {
+    "id": "mimic",
+    "title": "拟身怪",
+    "titleEn": "Mimic",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立",
+    "cr": "2",
+    "path": "monsters/怪兽/拟身怪.html"
+  },
+  {
+    "id": "phase-spider",
+    "title": "相位蜘蛛",
+    "titleEn": "Phase Spider",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "3",
+    "path": "monsters/怪兽/相位蜘蛛.html"
+  },
+  {
+    "id": "rust-monster",
+    "title": "锈蚀怪",
+    "titleEn": "Rust Monster",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/怪兽/锈蚀怪.html"
+  },
+  {
+    "id": "displacer-beast",
+    "title": "移位兽",
+    "titleEn": "Displacer Beast",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/移位兽.html"
+  },
+  {
+    "id": "behir",
+    "title": "青足龙蛇",
+    "titleEn": "Behir",
+    "type": "怪兽",
+    "subDivision": "巨型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "11",
+    "path": "monsters/怪兽/青足龙蛇.html"
+  },
+  {
+    "id": "umber-hulk",
+    "title": "掘土巨怪",
+    "titleEn": "Umber Hulk",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "5",
+    "path": "monsters/怪兽/掘土巨怪.html"
+  },
+  {
+    "id": "death-dog",
+    "title": "亡命恶犬",
+    "titleEn": "Death Dog",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "1",
+    "path": "monsters/怪兽/亡命恶犬.html"
+  },
+  {
+    "id": "peryton",
+    "title": "鹿鹰",
+    "titleEn": "Peryton",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/怪兽/鹿鹰.html"
+  },
+  {
+    "id": "griffon",
+    "title": "狮鹫",
+    "titleEn": "Griffon",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/怪兽/狮鹫.html"
+  },
+  {
+    "id": "hydra",
+    "title": "多头蛇",
+    "titleEn": "Hydra",
+    "type": "怪兽",
+    "subDivision": "巨型怪兽",
+    "alignment": "无阵营",
+    "cr": "8",
+    "path": "monsters/怪兽/多头蛇.html"
+  },
+  {
+    "id": "carrion-crawler",
+    "title": "食腐虫",
+    "titleEn": "Carrion Crawler",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/怪兽/食腐虫.html"
+  },
+  {
+    "id": "manticore",
+    "title": "刺尾狮",
+    "titleEn": "Manticore",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/刺尾狮.html"
+  },
+  {
+    "id": "ettercap",
+    "title": "伊特怪",
+    "titleEn": "Ettercap",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "2",
+    "path": "monsters/怪兽/伊特怪.html"
+  },
+  {
+    "id": "troglodyte",
+    "title": "穴蜥人",
+    "titleEn": "Troglodyte",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "1/4",
+    "path": "monsters/怪兽/穴蜥人.html"
+  },
+  {
+    "id": "hook-horror",
+    "title": "恐爪怪",
+    "titleEn": "Hook Horror",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "中立",
+    "cr": "3",
+    "path": "monsters/怪兽/恐爪怪.html"
+  },
+  {
+    "id": "ankheg",
+    "title": "掘地虫",
+    "titleEn": "Ankheg",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/怪兽/掘地虫.html"
+  },
+  {
+    "id": "roc",
+    "title": "鹏鸟",
+    "titleEn": "Roc",
+    "type": "怪兽",
+    "subDivision": "超巨型怪兽",
+    "alignment": "无阵营",
+    "cr": "11",
+    "path": "monsters/怪兽/鹏鸟.html"
+  },
+  {
+    "id": "harpy",
+    "title": "鸟妖",
+    "titleEn": "Harpy",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/怪兽/鸟妖.html"
+  },
+  {
+    "id": "drider",
+    "title": "蛛化卓尔",
+    "titleEn": "Drider",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "6",
+    "path": "monsters/怪兽/蛛化卓尔.html"
+  },
+  {
+    "id": "minotaur-of-baphomet",
+    "title": "巴弗灭的牛头人",
+    "titleEn": "Minotaur of Baphomet",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/巴弗灭的牛头人.html"
+  },
+  {
+    "id": "medusa",
+    "title": "美杜莎",
+    "titleEn": "Medusa",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "守序邪恶",
+    "cr": "6",
+    "path": "monsters/怪兽/美杜莎.html"
+  },
+  {
+    "id": "basilisk",
+    "title": "石化蜥蜴",
+    "titleEn": "Basilisk",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "无阵营",
+    "cr": "3",
+    "path": "monsters/怪兽/石化蜥蜴.html"
+  },
+  {
+    "id": "chimera",
+    "title": "奇美拉",
+    "titleEn": "Chimera",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "6",
+    "path": "monsters/怪兽/奇美拉.html"
+  },
+  {
+    "id": "winter-wolf",
+    "title": "冬狼",
+    "titleEn": "Winter Wolf",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/冬狼.html"
+  },
+  {
+    "id": "merrow",
+    "title": "梅洛人鱼",
+    "titleEn": "Merrow",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/怪兽/梅洛人鱼.html"
+  },
+  {
+    "id": "purple-worm",
+    "title": "紫虫",
+    "titleEn": "Purple Worm",
+    "type": "怪兽",
+    "subDivision": "超巨型怪兽",
+    "alignment": "无阵营",
+    "cr": "15",
+    "path": "monsters/怪兽/紫虫.html"
+  },
+  {
+    "id": "hippogriff",
+    "title": "骏鹰",
+    "titleEn": "Hippogriff",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "1",
+    "path": "monsters/怪兽/骏鹰.html"
+  },
+  {
+    "id": "kenku",
+    "title": "天狗",
+    "titleEn": "Kenku",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立",
+    "cr": "1/4",
+    "path": "monsters/怪兽/天狗.html"
+  },
+  {
+    "id": "yuan-ti-malisons",
+    "title": "恶咒蛇人",
+    "titleEn": "Yuan-ti Malisons",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/恶咒蛇人（2型）.html"
+  },
+  {
+    "id": "yuan-ti-infiltrator",
+    "title": "渗蚀蛇人",
+    "titleEn": "Yuan-ti Infiltrator",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "1",
+    "path": "monsters/怪兽/渗蚀蛇人.html"
+  },
+  {
+    "id": "yuan-ti-abomination",
+    "title": "憎恶蛇人",
+    "titleEn": "Yuan-ti Abomination",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "7",
+    "path": "monsters/怪兽/憎恶蛇人.html"
+  },
+  {
+    "id": "yuan-ti-malisons",
+    "title": "恶咒蛇人",
+    "titleEn": "Yuan-ti Malisons",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/恶咒蛇人（1型）.html"
+  },
+  {
+    "id": "yuan-ti-malisons",
+    "title": "恶咒蛇人",
+    "titleEn": "Yuan-ti Malisons",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/恶咒蛇人（3型）.html"
+  },
+  {
+    "id": "yuan-ti",
+    "title": "蛇人",
+    "titleEn": "Yuan-ti",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/蛇人.html"
+  },
+  {
+    "id": "bulette",
+    "title": "鲨蜥",
+    "titleEn": "Bulette",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/怪兽/鲨蜥.html"
+  },
+  {
+    "id": "bulette-pup",
+    "title": "鲨蜥仔",
+    "titleEn": "Bulette Pup",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/怪兽/鲨蜥仔.html"
+  },
+  {
+    "id": "bulettes",
+    "title": "鲨蜥",
+    "titleEn": "Bulettes",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/鲨蜥总.html"
+  },
+  {
+    "id": "remorhaz",
+    "title": "百足魔兽",
+    "titleEn": "Remorhaz",
+    "type": "怪兽",
+    "subDivision": "巨型怪兽",
+    "alignment": "无阵营",
+    "cr": "11",
+    "path": "monsters/怪兽/百足魔兽.html"
+  },
+  {
+    "id": "young-remorhaz",
+    "title": "青年百足魔兽",
+    "titleEn": "Young Remorhaz",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/怪兽/青年百足魔兽.html"
+  },
+  {
+    "id": "remorhazes",
+    "title": "百足魔兽",
+    "titleEn": "Remorhazes",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/百足魔兽总.html"
+  },
+  {
+    "id": "cockatrices",
+    "title": "蛇鸡",
+    "titleEn": "Cockatrices",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/蛇鸡总.html"
+  },
+  {
+    "id": "cockatrice",
+    "title": "蛇鸡",
+    "titleEn": "Cockatrice",
+    "type": "怪兽",
+    "subDivision": "小型怪兽",
+    "alignment": "无阵营",
+    "cr": "1/2",
+    "path": "monsters/怪兽/蛇鸡.html"
+  },
+  {
+    "id": "cockatrice-regent",
+    "title": "蛇鸡王",
+    "titleEn": "Cockatrice Regent",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "8",
+    "path": "monsters/怪兽/蛇鸡王.html"
+  },
+  {
+    "id": "owlbears",
+    "title": "枭熊",
+    "titleEn": "Owlbears",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/枭熊总.html"
+  },
+  {
+    "id": "owlbear",
+    "title": "枭熊",
+    "titleEn": "Owlbear",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "3",
+    "path": "monsters/怪兽/枭熊.html"
+  },
+  {
+    "id": "primeval-owlbear",
+    "title": "原初枭熊",
+    "titleEn": "Primeval Owlbear",
+    "type": "怪兽",
+    "subDivision": "巨型怪兽",
+    "alignment": "无阵营",
+    "cr": "7",
+    "path": "monsters/怪兽/原初枭熊.html"
+  },
+  {
+    "id": "stirges",
+    "title": "蚊蝠",
+    "titleEn": "Stirges",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/蚊蝠总.html"
+  },
+  {
+    "id": "swarm-of-stirges",
+    "title": "蚊蝠集群",
+    "titleEn": "Swarm of Stirges",
+    "type": "怪兽",
+    "subDivision": "微型怪兽的中型集群",
+    "alignment": "无阵营",
+    "cr": "2",
+    "path": "monsters/怪兽/蚊蝠集群.html"
+  },
+  {
+    "id": "stirge",
+    "title": "蚊蝠",
+    "titleEn": "Stirge",
+    "type": "怪兽",
+    "subDivision": "微型怪兽",
+    "alignment": "无阵营",
+    "cr": "1/8",
+    "path": "monsters/怪兽/蚊蝠.html"
+  },
+  {
+    "id": "axe-beak",
+    "title": "斧嘴鸟",
+    "titleEn": "Axe Beak",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "无阵营",
+    "cr": "1/4",
+    "path": "monsters/怪兽/斧嘴鸟.html"
+  },
+  {
+    "id": "giant-axe-beak",
+    "title": "巨斧嘴鸟",
+    "titleEn": "Giant Axe Beak",
+    "type": "怪兽",
+    "subDivision": "巨型怪兽",
+    "alignment": "无阵营",
+    "cr": "5",
+    "path": "monsters/怪兽/巨斧嘴鸟.html"
+  },
+  {
+    "id": "axe-beaks",
+    "title": "斧嘴鸟",
+    "titleEn": "Axe Beaks",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/斧嘴鸟总.html"
+  },
+  {
+    "id": "yeti",
+    "title": "雪怪",
+    "titleEn": "Yeti",
+    "type": "怪兽",
+    "subDivision": "大型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/雪怪.html"
+  },
+  {
+    "id": "yeti",
+    "title": "雪怪",
+    "titleEn": "Yeti",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/雪怪总.html"
+  },
+  {
+    "id": "abominable-yeti",
+    "title": "巨恶雪怪",
+    "titleEn": "Abominable Yeti",
+    "type": "怪兽",
+    "subDivision": "巨型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "9",
+    "path": "monsters/怪兽/巨恶雪怪.html"
+  },
+  {
+    "id": "wererat",
+    "title": "鼠人",
+    "titleEn": "Wererat",
+    "type": "怪兽",
+    "subDivision": "中型或小型怪兽（兽化人）",
+    "alignment": "中立邪恶",
+    "cr": "2",
+    "path": "monsters/怪兽/鼠人.html"
+  },
+  {
+    "id": "werewolf",
+    "title": "狼人",
+    "titleEn": "Werewolf",
+    "type": "怪兽",
+    "subDivision": "中型或小型怪兽（兽化人）",
+    "alignment": "混乱邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/狼人.html"
+  },
+  {
+    "id": "wereboar",
+    "title": "野猪人",
+    "titleEn": "Wereboar",
+    "type": "怪兽",
+    "subDivision": "中型或小型怪兽（兽化人）",
+    "alignment": "中立邪恶",
+    "cr": "4",
+    "path": "monsters/怪兽/野猪人.html"
+  },
+  {
+    "id": "werebear",
+    "title": "熊人",
+    "titleEn": "Werebear",
+    "type": "怪兽",
+    "subDivision": "中型或小型怪兽（兽化人）",
+    "alignment": "中立善良",
+    "cr": "5",
+    "path": "monsters/怪兽/熊人.html"
+  },
+  {
+    "id": "weretiger",
+    "title": "虎人",
+    "titleEn": "Weretiger",
+    "type": "怪兽",
+    "subDivision": "中型或小型怪兽（兽化人）",
+    "alignment": "中立",
+    "cr": "4",
+    "path": "monsters/怪兽/虎人.html"
+  },
+  {
+    "id": "quaggoth",
+    "title": "幽邃熊怪",
+    "titleEn": "Quaggoth",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/怪兽/幽邃熊怪.html"
+  },
+  {
+    "id": "quaggoth-thonot",
+    "title": "幽邃熊怪脑头",
+    "titleEn": "Quaggoth Thonot",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "混乱邪恶",
+    "cr": "3",
+    "path": "monsters/怪兽/幽邃熊怪脑头.html"
+  },
+  {
+    "id": "quaggoths",
+    "title": "幽邃熊怪",
+    "titleEn": "Quaggoths",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/幽邃熊怪总.html"
+  },
+  {
+    "id": "thri-kreen",
+    "title": "螳螂人",
+    "titleEn": "Thri-kreen",
+    "type": "怪兽",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/怪兽/螳螂人.html"
+  },
+  {
+    "id": "thri-kreen-marauder",
+    "title": "螳螂人劫掠者",
+    "titleEn": "Thri-kreen Marauder",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立",
+    "cr": "1",
+    "path": "monsters/怪兽/螳螂人劫掠者.html"
+  },
+  {
+    "id": "thri-kreen-psion",
+    "title": "螳螂人灵能使",
+    "titleEn": "Thri-kreen Psion",
+    "type": "怪兽",
+    "subDivision": "中型怪兽",
+    "alignment": "中立",
+    "cr": "8",
+    "path": "monsters/怪兽/螳螂人灵能使.html"
+  },
+  {
+    "id": "nightmare",
+    "title": "梦魇",
+    "titleEn": "Nightmare",
+    "type": "邪魔",
+    "subDivision": "大型邪魔",
+    "alignment": "中立邪恶",
+    "cr": "3",
+    "path": "monsters/邪魔/梦魇.html"
+  },
+  {
+    "id": "lamia",
+    "title": "拉迷亚",
+    "titleEn": "Lamia",
+    "type": "邪魔",
+    "subDivision": "大型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/邪魔/拉迷亚.html"
+  },
+  {
+    "id": "cambion",
+    "title": "坎比翁",
+    "titleEn": "Cambion",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/邪魔/坎比翁.html"
+  },
+  {
+    "id": "incubus",
+    "title": "梦魔",
+    "titleEn": "Incubus",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "中立邪恶",
+    "cr": "4",
+    "path": "monsters/邪魔/梦魔.html"
+  },
+  {
+    "id": "jackalwere",
+    "title": "化形胡狼",
+    "titleEn": "Jackalwere",
+    "type": "邪魔",
+    "subDivision": "小型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "1/2",
+    "path": "monsters/邪魔/化形胡狼.html"
+  },
+  {
+    "id": "oni",
+    "title": "恶鬼",
+    "titleEn": "Oni",
+    "type": "邪魔",
+    "subDivision": "大型邪魔",
+    "alignment": "守序邪恶",
+    "cr": "7",
+    "path": "monsters/邪魔/恶鬼.html"
+  },
+  {
+    "id": "rakshasa",
+    "title": "罗刹",
+    "titleEn": "Rakshasa",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "守序邪恶",
+    "cr": "13",
+    "path": "monsters/邪魔/罗刹.html"
+  },
+  {
+    "id": "succubus",
+    "title": "魅魔",
+    "titleEn": "Succubus",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "中立邪恶",
+    "cr": "4",
+    "path": "monsters/邪魔/魅魔.html"
+  },
+  {
+    "id": "hell-hound",
+    "title": "地狱犬",
+    "titleEn": "Hell Hound",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/邪魔/地狱犬.html"
+  },
+  {
+    "id": "sahuagin-baron",
+    "title": "鲨华男爵",
+    "titleEn": "Sahuagin Baron",
+    "type": "邪魔",
+    "subDivision": "大型邪魔",
+    "alignment": "守序邪恶",
+    "cr": "5",
+    "path": "monsters/邪魔/鲨华男爵.html"
+  },
+  {
+    "id": "sahuagin-priest",
+    "title": "鲨华祭司",
+    "titleEn": "Sahuagin Priest",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "守序邪恶",
+    "cr": "2",
+    "path": "monsters/邪魔/鲨华祭司.html"
+  },
+  {
+    "id": "sahuagin",
+    "title": "鲨华鱼人",
+    "titleEn": "Sahuagin",
+    "type": "邪魔",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/邪魔/鲨华鱼人.html"
+  },
+  {
+    "id": "sahuagin-warrior",
+    "title": "鲨华武者",
+    "titleEn": "Sahuagin Warrior",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "守序邪恶",
+    "cr": "1/2",
+    "path": "monsters/邪魔/鲨华武者.html"
+  },
+  {
+    "id": "gnoll-demoniac",
+    "title": "鬣狗人魔头",
+    "titleEn": "Gnoll Demoniac",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "8",
+    "path": "monsters/邪魔/鬣狗人魔头.html"
+  },
+  {
+    "id": "gnoll-fang-of-yeenoghu",
+    "title": "鬣狗人耶诺古之牙",
+    "titleEn": "Gnoll Fang of Yeenoghu",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/邪魔/鬣狗人耶诺古之牙.html"
+  },
+  {
+    "id": "gnoll-pack-lord",
+    "title": "鬣狗人头目",
+    "titleEn": "Gnoll Pack Lord",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "2",
+    "path": "monsters/邪魔/鬣狗人头目.html"
+  },
+  {
+    "id": "gnolls",
+    "title": "鬣狗人",
+    "titleEn": "Gnolls",
+    "type": "邪魔",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/邪魔/鬣狗人.html"
+  },
+  {
+    "id": "gnoll-warrior",
+    "title": "鬣狗人武者",
+    "titleEn": "Gnoll Warrior",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "混乱邪恶",
+    "cr": "1/2",
+    "path": "monsters/邪魔/鬣狗人武者.html"
+  },
+  {
+    "id": "larvae",
+    "title": "幼虫魔",
+    "titleEn": "Larvae",
+    "type": "邪魔",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/邪魔/幼虫魔总.html"
+  },
+  {
+    "id": "swarm-of-larvae",
+    "title": "幼虫魔集群",
+    "titleEn": "Swarm of Larvae",
+    "type": "邪魔",
+    "subDivision": "中型邪魔的大型集群",
+    "alignment": "中立邪恶",
+    "cr": "1",
+    "path": "monsters/邪魔/幼虫魔集群.html"
+  },
+  {
+    "id": "larva",
+    "title": "幼虫魔",
+    "titleEn": "Larva",
+    "type": "邪魔",
+    "subDivision": "中型邪魔",
+    "alignment": "中立邪恶",
+    "cr": "0",
+    "path": "monsters/邪魔/幼虫魔.html"
+  },
+  {
+    "id": "marilith",
+    "title": "六臂蛇魔",
+    "titleEn": "Marilith",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "16",
+    "path": "monsters/邪魔/六臂蛇魔.html"
+  },
+  {
+    "id": "yochlol",
+    "title": "蜡融妖",
+    "titleEn": "Yochlol",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "10",
+    "path": "monsters/邪魔/蜡融妖.html"
+  },
+  {
+    "id": "vrock",
+    "title": "鹫魔",
+    "titleEn": "Vrock",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "6",
+    "path": "monsters/邪魔/鹫魔.html"
+  },
+  {
+    "id": "glabrezu",
+    "title": "迷诱魔",
+    "titleEn": "Glabrezu",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "9",
+    "path": "monsters/邪魔/迷诱魔.html"
+  },
+  {
+    "id": "balor",
+    "title": "炎魔",
+    "titleEn": "Balor",
+    "type": "邪魔",
+    "subDivision": "巨型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "19",
+    "path": "monsters/邪魔/炎魔.html"
+  },
+  {
+    "id": "shadow-demon",
+    "title": "幽影恶魔",
+    "titleEn": "Shadow Demon",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/邪魔/幽影恶魔.html"
+  },
+  {
+    "id": "barlgura",
+    "title": "恶猿魔",
+    "titleEn": "Barlgura",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "5",
+    "path": "monsters/邪魔/恶猿魔.html"
+  },
+  {
+    "id": "chasme",
+    "title": "喀嘶魔",
+    "titleEn": "Chasme",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "6",
+    "path": "monsters/邪魔/喀嘶魔.html"
+  },
+  {
+    "id": "hezrou",
+    "title": "狂蟾魔",
+    "titleEn": "Hezrou",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "8",
+    "path": "monsters/邪魔/狂蟾魔.html"
+  },
+  {
+    "id": "goristro",
+    "title": "巨牛魔",
+    "titleEn": "Goristro",
+    "type": "邪魔",
+    "subDivision": "巨型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "17",
+    "path": "monsters/邪魔/巨牛魔.html"
+  },
+  {
+    "id": "quasit",
+    "title": "小恶魔",
+    "titleEn": "Quasit",
+    "type": "邪魔",
+    "subDivision": "微型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/邪魔/小恶魔.html"
+  },
+  {
+    "id": "nalfeshnee",
+    "title": "判魂魔",
+    "titleEn": "Nalfeshnee",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "13",
+    "path": "monsters/邪魔/判魂魔.html"
+  },
+  {
+    "id": "swarm-of-dretch",
+    "title": "怯魔集群",
+    "titleEn": "Swarm of Dretch",
+    "type": "邪魔",
+    "subDivision": "小型邪魔的大型集群（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "4",
+    "path": "monsters/邪魔/怯魔集群.html"
+  },
+  {
+    "id": "dretch",
+    "title": "怯魔",
+    "titleEn": "Dretch",
+    "type": "邪魔",
+    "subDivision": "小型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "1/4",
+    "path": "monsters/邪魔/怯魔.html"
+  },
+  {
+    "id": "dretches",
+    "title": "怯魔",
+    "titleEn": "Dretches",
+    "type": "邪魔",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/邪魔/怯魔总.html"
+  },
+  {
+    "id": "manes-vaporspawn",
+    "title": "原魔汽化体",
+    "titleEn": "Manes Vaporspawn",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "1",
+    "path": "monsters/邪魔/原魔汽化体.html"
+  },
+  {
+    "id": "manes",
+    "title": "原魔",
+    "titleEn": "Manes",
+    "type": "邪魔",
+    "subDivision": "小型邪魔（恶魔）",
+    "alignment": "混乱邪恶",
+    "cr": "1/8",
+    "path": "monsters/邪魔/原魔.html"
+  },
+  {
+    "id": "manes",
+    "title": "原魔",
+    "titleEn": "Manes",
+    "type": "邪魔",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/邪魔/原魔总.html"
+  },
+  {
+    "id": "arcanaloth",
+    "title": "奥法罗斯魔",
+    "titleEn": "Arcanaloth",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（尤格罗斯魔）",
+    "alignment": "中立邪恶",
+    "cr": "12",
+    "path": "monsters/邪魔/奥法罗斯魔.html"
+  },
+  {
+    "id": "nycaloth",
+    "title": "征伐罗斯魔",
+    "titleEn": "Nycaloth",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（尤格罗斯魔）",
+    "alignment": "中立邪恶",
+    "cr": "9",
+    "path": "monsters/邪魔/征伐罗斯魔.html"
+  },
+  {
+    "id": "ultroloth",
+    "title": "超等罗斯魔",
+    "titleEn": "Ultroloth",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（尤格罗斯魔）",
+    "alignment": "中立邪恶",
+    "cr": "13",
+    "path": "monsters/邪魔/超等罗斯魔.html"
+  },
+  {
+    "id": "mezzoloth",
+    "title": "毒虫罗斯魔",
+    "titleEn": "Mezzoloth",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（尤格罗斯魔）",
+    "alignment": "中立邪恶",
+    "cr": "5",
+    "path": "monsters/邪魔/毒虫罗斯魔.html"
+  },
+  {
+    "id": "barbed-devil",
+    "title": "猬魔",
+    "titleEn": "Barbed Devil",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "5",
+    "path": "monsters/邪魔/猬魔.html"
+  },
+  {
+    "id": "pit-fiend",
+    "title": "深狱炼魔",
+    "titleEn": "Pit Fiend",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "20",
+    "path": "monsters/邪魔/深狱炼魔.html"
+  },
+  {
+    "id": "imp",
+    "title": "小魔鬼",
+    "titleEn": "Imp",
+    "type": "邪魔",
+    "subDivision": "微型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "1",
+    "path": "monsters/邪魔/小魔鬼.html"
+  },
+  {
+    "id": "bone-devil",
+    "title": "骨魔",
+    "titleEn": "Bone Devil",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "9",
+    "path": "monsters/邪魔/骨魔.html"
+  },
+  {
+    "id": "spined-devil",
+    "title": "棘魔",
+    "titleEn": "Spined Devil",
+    "type": "邪魔",
+    "subDivision": "小型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "2",
+    "path": "monsters/邪魔/棘魔.html"
+  },
+  {
+    "id": "ice-devil",
+    "title": "冰魔",
+    "titleEn": "Ice Devil",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "14",
+    "path": "monsters/邪魔/冰魔.html"
+  },
+  {
+    "id": "bearded-devil",
+    "title": "须魔",
+    "titleEn": "Bearded Devil",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/邪魔/须魔.html"
+  },
+  {
+    "id": "chain-devil",
+    "title": "链魔",
+    "titleEn": "Chain Devil",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "8",
+    "path": "monsters/邪魔/链魔.html"
+  },
+  {
+    "id": "erinyes",
+    "title": "罪魔",
+    "titleEn": "Erinyes",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "12",
+    "path": "monsters/邪魔/罪魔.html"
+  },
+  {
+    "id": "horned-devil",
+    "title": "角魔",
+    "titleEn": "Horned Devil",
+    "type": "邪魔",
+    "subDivision": "大型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "11",
+    "path": "monsters/邪魔/角魔.html"
+  },
+  {
+    "id": "swarm-of-lemures",
+    "title": "劣魔集群",
+    "titleEn": "Swarm of Lemures",
+    "type": "邪魔",
+    "subDivision": "中型邪魔的大型集群（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "3",
+    "path": "monsters/邪魔/劣魔集群.html"
+  },
+  {
+    "id": "lemures",
+    "title": "劣魔",
+    "titleEn": "Lemures",
+    "type": "邪魔",
+    "subDivision": "Unknown",
+    "alignment": "Unknown",
+    "cr": "Unknown",
+    "path": "monsters/邪魔/劣魔总.html"
+  },
+  {
+    "id": "lemure",
+    "title": "劣魔",
+    "titleEn": "Lemure",
+    "type": "邪魔",
+    "subDivision": "中型邪魔（魔鬼）",
+    "alignment": "守序邪恶",
+    "cr": "0",
+    "path": "monsters/邪魔/劣魔.html"
+  }
+]
