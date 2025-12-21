@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import data from './data.json';
+import rawData from './data.json';
 import spellData from './data-spells.json';
 import featData from './data-feats.json';
 import masteryData from './data-masteries.json';
 import weaponData from './data-weapons.json';
+import monsterData from './data-monsters.json';
 import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon, ArrowLeft } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,6 +21,23 @@ const CHAPTERS_TO_SHOW = [
   '附录 B：生物数据卡',
   '附录 C：术语汇编'
 ];
+
+// Enrich data with monster metadata
+const data = rawData.map(item => {
+  if (item.category === '附录 B：生物数据卡' && !item.isOverview) {
+    const monsterMatch = monsterData.find(m => m.path === item.path || (m.path && item.path && m.path.replace(/\.htm$/, '.html') === item.path.replace(/\.htm$/, '.html')));
+    if (monsterMatch) {
+      return {
+        ...item,
+        cr: monsterMatch.cr,
+        subDivision: monsterMatch.subDivision,
+        alignment: monsterMatch.alignment,
+        titleEn: monsterMatch.titleEn
+      };
+    }
+  }
+  return item;
+});
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('browser'); // browser, bookmarks, search, spells
@@ -1651,6 +1669,11 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
         <span className="spell-card-extra truncate">
           {item.prerequisite}
         </span>)}
+      {item?.cr && (
+        <span className="spell-card-extra truncate">
+          CR {item.cr} • {item.subDivision} • {item.alignment}
+        </span>
+      )}
     </motion.div >
   );
 }

@@ -1455,6 +1455,7 @@ a {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 10px;
 }
 
 .spell-card-footer {
@@ -1593,7 +1594,7 @@ a {
   background: var(--bg-primary);
   display: flex;
   flex-direction: column;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  /* box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3); */
 }
 
 .overlay-top-bar {
