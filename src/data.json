@@ -2237,6 +2237,934 @@
     "isOverview": true
   },
   {
+    "id": "zombie",
+    "title": "丧尸",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/亡灵/丧尸.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pseudodragon",
+    "title": "伪龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/龙类/伪龙.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "slaad-tadpole",
+    "title": "史拉蟾蝌蚪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/异怪/史拉蟾蝌蚪.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "sprite",
+    "title": "小仙灵",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/妖精/小仙灵.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "quasit",
+    "title": "小恶魔",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/邪魔/小恶魔.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "imp",
+    "title": "小魔鬼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/邪魔/小魔鬼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "sphinx-of-wonder",
+    "title": "求索斯芬克斯",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/天族/求索斯芬克斯.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "skeleton",
+    "title": "骷髅",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/亡灵/骷髅.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "riding-horse",
+    "title": "乘用马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/乘用马.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "goat",
+    "title": "山羊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/山羊.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-venomous-snake",
+    "title": "巨毒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨毒蛇.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-fire-beetle",
+    "title": "巨火甲虫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨火甲虫.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-wolf-spider",
+    "title": "巨狼蛛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨狼蛛.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-badger",
+    "title": "巨獾",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨獾.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-frog",
+    "title": "巨蛙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蛙.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-centipede",
+    "title": "巨蜈蚣",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蜈蚣.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-lizard",
+    "title": "巨蜥蜴",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蜥蜴.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-bat",
+    "title": "巨蝙蝠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蝙蝠.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-crab",
+    "title": "巨蟹",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蟹.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-rat",
+    "title": "巨鼠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨鼠.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-weasel",
+    "title": "巨鼬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨鼬.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pteranodon",
+    "title": "无齿翼龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/无齿翼龙.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "venomous-snake",
+    "title": "毒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/毒蛇.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "seahorse",
+    "title": "海马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/海马.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "raven",
+    "title": "渡鸦",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/渡鸦.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "swarm-of-ravens",
+    "title": "渡鸦集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/渡鸦集群.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "baboon",
+    "title": "狒狒",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/狒狒.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "wolf",
+    "title": "狼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/狼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "cat",
+    "title": "猫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/猫.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "owl",
+    "title": "猫头鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/猫头鹰.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "mastiff",
+    "title": "獒犬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/獒犬.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "badger",
+    "title": "獾",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/獾.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pony",
+    "title": "矮种马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/矮种马.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "vulture",
+    "title": "秃鹫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/秃鹫.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "octopus",
+    "title": "章鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/章鱼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "jackal",
+    "title": "胡狼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/胡狼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "frog",
+    "title": "蛙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蛙.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "spider",
+    "title": "蜘蛛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蜘蛛.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "lizard",
+    "title": "蜥蜴",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蜥蜴.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "scorpion",
+    "title": "蝎",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蝎.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "bat",
+    "title": "蝙蝠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蝙蝠.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "swarm-of-bats",
+    "title": "蝙蝠集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蝙蝠集群.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "constrictor-snake",
+    "title": "蟒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蟒蛇.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "crab",
+    "title": "蟹",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/蟹.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "blood-hawk",
+    "title": "血鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/血鹰.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "panther",
+    "title": "豹",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/豹.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "elk",
+    "title": "赤鹿",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/赤鹿.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "boar",
+    "title": "野猪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/野猪.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "hawk",
+    "title": "隼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/隼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "piranha",
+    "title": "食人鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/食人鱼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "draft-horse",
+    "title": "驮用马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/驮用马.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "camel",
+    "title": "骆驼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/骆驼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "mule",
+    "title": "骡",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/骡.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "hyena",
+    "title": "鬣狗",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鬣狗.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "eagle",
+    "title": "鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鹰.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "deer",
+    "title": "鹿",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鹿.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "rat",
+    "title": "鼠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鼠.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "swarm-of-rats",
+    "title": "鼠集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鼠集群.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "weasel",
+    "title": "鼬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鼬.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 0-1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-octopus",
+    "title": "巨章鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨章鱼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-spider",
+    "title": "巨蜘蛛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蜘蛛.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-toad",
+    "title": "巨蟾蜍",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨蟾蜍.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-hyena",
+    "title": "巨鬣狗",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨鬣狗.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "dire-wolf",
+    "title": "恐狼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/恐狼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "brown-bear",
+    "title": "棕熊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/棕熊.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "lion",
+    "title": "狮子",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/狮子.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "tiger",
+    "title": "虎",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/虎.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "swarm-of-piranhas",
+    "title": "食人鱼集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/食人鱼集群.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-goat",
+    "title": "巨山羊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨山羊.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-seahorse",
+    "title": "巨海马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨海马.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-wasp",
+    "title": "巨黄蜂",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/巨黄蜂.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "warhorse",
+    "title": "战马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/战马.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "swarm-of-insects",
+    "title": "昆虫集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/昆虫集群.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "ape",
+    "title": "猿",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/猿.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "reef-shark",
+    "title": "礁鲨",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/礁鲨.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "crocodile",
+    "title": "鳄鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/鳄鱼.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "black-bear",
+    "title": "黑熊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/黑熊.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "elephant",
+    "title": "象",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters/动物/象.html",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "野兽",
+      "象"
+    ],
+    "isOverview": false
+  },
+  {
     "id": "附录 C：术语汇编/_概述.htm",
     "title": "附录C：术语汇编",
     "category": "附录 C：术语汇编",
