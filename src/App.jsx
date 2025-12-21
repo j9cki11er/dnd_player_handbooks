@@ -931,7 +931,7 @@ export default function App() {
                                         onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
                                       >
                                         {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                                        <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">职业 背景 专长</h4>
+                                        <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">职业 背景 专长 精通词条</h4>
                                       </div>
                                       {isCatExpanded && (
                                         <div className="item-grid">
