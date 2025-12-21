@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
 import spellData from './data-spells.json';
 import featData from './data-feats.json';
+import masteryData from './data-masteries.json';
 import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon, ArrowLeft } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -147,14 +148,20 @@ export default function App() {
     threshold: 0.3
   }), []);
 
+  const masteryFuse = useMemo(() => new Fuse(masteryData, {
+    keys: ['title', 'titleEn', 'category'],
+    threshold: 0.3
+  }), []);
+
   const searchResults = useMemo(() => {
-    if (!searchQuery) return { categories: [], spells: [], feats: [] };
+    if (!searchQuery) return { categories: [], spells: [], feats: [], masteries: [] };
     return {
       categories: fuse.search(searchQuery).map(r => r.item),
       spells: spellFuse.search(searchQuery).map(r => r.item),
-      feats: featFuse.search(searchQuery).map(r => r.item)
+      feats: featFuse.search(searchQuery).map(r => r.item),
+      masteries: masteryFuse.search(searchQuery).map(r => r.item)
     };
-  }, [searchQuery, fuse, spellFuse, featFuse]);
+  }, [searchQuery, fuse, spellFuse, featFuse, masteryFuse]);
 
   // Memoize filtered spells
   const filteredSpells = useMemo(() => {
@@ -403,6 +410,15 @@ export default function App() {
       return {
         ...feat,
         pathParts: ['第五章：专长', feat.category]
+      };
+    }
+
+    // Then check masteries
+    const mastery = masteryData.find(m => m.id === id);
+    if (mastery) {
+      return {
+        ...mastery,
+        pathParts: ['第六章：装备', '武器', '精通词条']
       };
     }
 
@@ -785,6 +801,23 @@ export default function App() {
                     </div>
                   )}
 
+                  {searchResults.masteries.length > 0 && (
+                    <div className="search-section">
+                      <h3 className="section-title mb-4">精通词条</h3>
+                      <div className="item-grid">
+                        {searchResults.masteries.map(item => (
+                          <ItemCard
+                            key={item.id}
+                            item={item}
+                            onClick={() => selectItem(item, false)}
+                            isBookmarked={isBookmarkedAnywhere(item.id)}
+                            openBookmarkDialog={openBookmarkDialog}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {searchResults.spells.length > 0 && (
                     <div className="search-section">
                       <h3 className="section-title mb-4">法术列表</h3>
@@ -804,7 +837,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {searchResults.categories.length === 0 && searchResults.spells.length === 0 && searchResults.feats.length === 0 && (
+                  {searchResults.categories.length === 0 && searchResults.spells.length === 0 && searchResults.feats.length === 0 && searchResults.masteries.length === 0 && (
                     <div className="no-results py-20 text-center text-muted">没找到匹配的结果</div>
                   )}
                 </div>
@@ -1254,11 +1287,20 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
     );
   }, [selectedItem]);
 
+  const isMasteryCategory = useMemo(() => {
+    return selectedItem && selectedItem.id === '第六章：装备/武器/精通词条.htm';
+  }, [selectedItem]);
+
   const featsInCategory = useMemo(() => {
     if (!isFeatCategory) return [];
     const catName = selectedItem.title;
     return featData.filter(f => f.category === catName);
   }, [isFeatCategory, selectedItem]);
+
+  const masteriesInCategory = useMemo(() => {
+    if (!isMasteryCategory) return [];
+    return masteryData;
+  }, [isMasteryCategory]);
 
   return (
     <motion.div
@@ -1309,6 +1351,21 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
                         item={feat}
                         onClick={() => onSelectItem(feat)}
                         isBookmarked={isBookmarkedAnywhere(feat.id)}
+                        openBookmarkDialog={openBookmarkDialog}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : isMasteryCategory ? (
+                <div className="directory-view">
+                  <h3 className="section-title mb-4">精通词条</h3>
+                  <div className="item-grid">
+                    {masteriesInCategory.map(mastery => (
+                      <ItemCard
+                        key={mastery.id}
+                        item={mastery}
+                        onClick={() => onSelectItem(mastery)}
+                        isBookmarked={isBookmarkedAnywhere(mastery.id)}
                         openBookmarkDialog={openBookmarkDialog}
                       />
                     ))}
