@@ -1500,7 +1500,15 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
     >
 
       <div className="card-top">
-        <span className="card-category truncate mr-8">{item?.fullCategory || item?.pathParts?.join(' > ') || ''}</span>
+        <div className="flex flex-col overflow-hidden mr-8 flex-1 min-w-0">
+          {item?.prerequisite ? (
+            <>
+              <span className="card-category truncate">{item.category}</span>
+            </>
+          ) : (
+            <span className="card-category truncate">{item?.fullCategory || item?.pathParts?.join(' > ') || ''}</span>
+          )}
+        </div>
         <div className="item-card-actions">
           {item?.isDir && <Folder size={14} className="text-gold opacity-50 mr-2" />}
           <button
@@ -1513,8 +1521,9 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
       </div>
       <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
       {item?.prerequisite && (
-        <div className="text-[10px] opacity-40 mt-1 uppercase tracking-wider">{item.titleEn}</div>
-      )}
+        <span className="spell-card-extra truncate">
+          {item.prerequisite}
+        </span>)}
     </motion.div >
   );
 }
