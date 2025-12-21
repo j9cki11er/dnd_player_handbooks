@@ -418,7 +418,7 @@ export default function App() {
     if (mastery) {
       return {
         ...mastery,
-        pathParts: ['第六章：装备', '武器', '精通词条']
+        pathParts: ['第六章：装备', '精通词条']
       };
     }
 
@@ -1288,7 +1288,7 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
   }, [selectedItem]);
 
   const isMasteryCategory = useMemo(() => {
-    return selectedItem && selectedItem.id === '第六章：装备/武器/精通词条.htm';
+    return selectedItem && selectedItem.id === '第六章：装备/精通词条/精通词条.htm';
   }, [selectedItem]);
 
   const featsInCategory = useMemo(() => {
@@ -1298,9 +1298,13 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
   }, [isFeatCategory, selectedItem]);
 
   const masteriesInCategory = useMemo(() => {
-    if (!isMasteryCategory) return [];
+    if (!isMasteryCategory && !currentCategoryData) return [];
     return masteryData;
-  }, [isMasteryCategory]);
+  }, [isMasteryCategory, currentCategoryData]);
+
+  const isMasteryDirectory = useMemo(() => {
+    return entry.type === 'dir' && entry.path && entry.path.join('/') === '第六章：装备/精通词条';
+  }, [entry]);
 
   return (
     <motion.div
@@ -1391,6 +1395,24 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
                   <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
                 </div>
               ) : null}
+
+              {/* Mastery Grid in Directory View */}
+              {isMasteryDirectory && (
+                <div className="directory-view mb-8">
+                  {/* <h3 className="section-title mb-4">精通词条</h3> */}
+                  <div className="item-grid">
+                    {masteriesInCategory.map(mastery => (
+                      <ItemCard
+                        key={mastery.id}
+                        item={mastery}
+                        onClick={() => onSelectItem(mastery)}
+                        isBookmarked={isBookmarkedAnywhere(mastery.id)}
+                        openBookmarkDialog={openBookmarkDialog}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Subdirectories */}
               {Object.keys(currentCategoryData._children).length > 0 && (
