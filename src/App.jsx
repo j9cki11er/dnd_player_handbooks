@@ -31,7 +31,6 @@ export default function App() {
   const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
   const [pendingBookmark, setPendingBookmark] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activePopover, setActivePopover] = useState(null); // Track which spell card has the bookmark popover open
   const [expandedFolders, setExpandedFolders] = useState({}); // { folderName: boolean }
   const [expandedCategories, setExpandedCategories] = useState({}); // { "folderName-catName": boolean }
   const [confirmConfig, setConfirmConfig] = useState(null);
@@ -669,10 +668,7 @@ export default function App() {
                             }}
                             onClick={() => navigateTo(node._path)}
                             isBookmarked={isBookmarkedAnywhere(node._id)}
-                            toggleBookmark={toggleBookmark}
-                            bookmarks={bookmarks}
-                            activePopover={activePopover}
-                            setActivePopover={setActivePopover}
+                            openBookmarkDialog={openBookmarkDialog}
                           />
                         ))}
 
@@ -691,10 +687,7 @@ export default function App() {
                             item={item}
                             onClick={() => setSelectedItem(item)}
                             isBookmarked={isBookmarkedAnywhere(item.id)}
-                            toggleBookmark={toggleBookmark}
-                            bookmarks={bookmarks}
-                            activePopover={activePopover}
-                            setActivePopover={setActivePopover}
+                            openBookmarkDialog={openBookmarkDialog}
                           />
                         ))}
                       </div>
@@ -831,13 +824,8 @@ export default function App() {
                         onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
                         isBookmarked={isBookmarkedAnywhere(spell.id)}
                         isMobile={isMobile}
-                        content={selectedItem?.id === spell.id ? loadedContent : null}
                         loading={contentLoading}
-                        onBookmark={() => openBookmarkDialog(spell)}
-                        activePopover={activePopover}
-                        setActivePopover={setActivePopover}
-                        bookmarks={bookmarks}
-                        toggleBookmark={toggleBookmark}
+                        openBookmarkDialog={openBookmarkDialog}
                       />
                     ))}
                     {filteredSpells.length === 0 && <div className="col-span-full text-center text-muted py-10">未找到匹配的法术</div>}
@@ -904,10 +892,7 @@ export default function App() {
                             item={item}
                             onClick={() => setSelectedItem(item)}
                             isBookmarked={isBookmarkedAnywhere(item.id)}
-                            toggleBookmark={toggleBookmark}
-                            bookmarks={bookmarks}
-                            activePopover={activePopover}
-                            setActivePopover={setActivePopover}
+                            openBookmarkDialog={openBookmarkDialog}
                           />
                         ))}
                       </div>
@@ -927,13 +912,8 @@ export default function App() {
                             onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
                             isBookmarked={isBookmarkedAnywhere(spell.id)}
                             isMobile={isMobile}
-                            content={selectedItem?.id === spell.id ? loadedContent : null}
                             loading={contentLoading}
-                            onBookmark={() => openBookmarkDialog(spell)}
-                            activePopover={activePopover}
-                            setActivePopover={setActivePopover}
-                            bookmarks={bookmarks}
-                            toggleBookmark={toggleBookmark}
+                            openBookmarkDialog={openBookmarkDialog}
                           />
                         ))}
                       </div>
@@ -1044,10 +1024,7 @@ export default function App() {
                                               item={item}
                                               onClick={() => setSelectedItem(item)}
                                               isBookmarked={true}
-                                              toggleBookmark={toggleBookmark}
-                                              bookmarks={bookmarks}
-                                              activePopover={activePopover}
-                                              setActivePopover={setActivePopover}
+                                              openBookmarkDialog={openBookmarkDialog}
                                             />
                                           ))}
                                         </div>
@@ -1086,10 +1063,7 @@ export default function App() {
                                               item={item}
                                               onClick={() => setSelectedItem(item)}
                                               isBookmarked={true}
-                                              toggleBookmark={toggleBookmark}
-                                              bookmarks={bookmarks}
-                                              activePopover={activePopover}
-                                              setActivePopover={setActivePopover}
+                                              openBookmarkDialog={openBookmarkDialog}
                                             />
                                           ))}
                                         </div>
@@ -1126,13 +1100,8 @@ export default function App() {
                                               onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
                                               isBookmarked={true}
                                               isMobile={isMobile}
-                                              content={selectedItem?.id === spell.id ? loadedContent : null}
                                               loading={contentLoading}
-                                              onBookmark={() => openBookmarkDialog(spell)}
-                                              activePopover={activePopover}
-                                              setActivePopover={setActivePopover}
-                                              bookmarks={bookmarks}
-                                              toggleBookmark={toggleBookmark}
+                                              openBookmarkDialog={openBookmarkDialog}
                                             />
                                           ))}
                                         </div>
@@ -1216,13 +1185,7 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      {/* Popover Overlay for closing on outside click */}
-      {activePopover && (
-        <div
-          className="popover-overlay"
-          onClick={() => setActivePopover(null)}
-        />
-      )}
+      {/* Popover Overlay for closing on outside click (No longer needed) */}
 
       {/* Bookmark Dialog */}
 
@@ -1455,16 +1418,10 @@ function ConfirmModal({ title, message, onConfirm, onClose, confirmText = '确�
   );
 }
 
-function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, activePopover, setActivePopover }) {
-  const isPopoverOpen = activePopover === item.id;
-
+function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
   const handleBookmarkClick = (e) => {
     e.stopPropagation();
-    const isInDefault = bookmarks['默认']?.includes(item.id);
-    if (!isInDefault) {
-      toggleBookmark(item.id, '默认');
-    }
-    setActivePopover(isPopoverOpen ? null : item.id);
+    openBookmarkDialog(item);
   };
 
   return (
@@ -1472,7 +1429,7 @@ function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, acti
       whileHover={{ scale: 1.02, y: -4 }}
       transition={{ type: "spring", stiffness: 300 }}
       onClick={onClick}
-      className={`item-card glass-panel group relative ${isPopoverOpen ? 'z-above-overlay' : ''}`}
+      className="item-card glass-panel group relative"
     >
 
       <div className="card-top">
@@ -1485,35 +1442,6 @@ function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, acti
           >
             <Heart size={14} fill={isBookmarked ? "currentColor" : "none"} />
           </button>
-
-
-          <AnimatePresence>
-            {isPopoverOpen && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 10 }}
-                className="bookmark-popover glass-panel"
-                onClick={(e) => e.stopPropagation()}
-                style={{ top: '100%', right: '0' }}
-              >
-                <div className="popover-header">添加到收藏</div>
-                <div className="popover-list">
-                  {Object.keys(bookmarks).map(folder => (
-                    <button
-                      key={folder}
-                      className={`popover-item ${bookmarks[folder].includes(item.id) ? 'active' : ''}`}
-                      onClick={() => toggleBookmark(item.id, folder)}
-                    >
-                      <span className="truncate">{folder}</span>
-                      {bookmarks[folder].includes(item.id) && <Heart size={10} fill="currentColor" />}
-                    </button>
-                  ))}
-                </div>
-                <div className="popover-arrow"></div>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
       </div>
       <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
@@ -1522,21 +1450,13 @@ function ItemCard({ item, onClick, isBookmarked, toggleBookmark, bookmarks, acti
 }
 
 
-function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, onBookmark, activePopover, setActivePopover, bookmarks, toggleBookmark }) {
-  const isPopoverOpen = activePopover === item.id;
-
+function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, openBookmarkDialog }) {
   const handleBookmarkClick = (e) => {
     e.stopPropagation();
-    // 默认的会自动被点击: Toggle bookmark in "默认" folder
-    const isInDefault = bookmarks['默认']?.includes(item.id);
-    if (!isInDefault) {
-      toggleBookmark(item.id, '默认');
-    }
-    // Show popover
-    setActivePopover(isPopoverOpen ? null : item.id);
+    openBookmarkDialog(item);
   };
   return (
-    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''} ${isPopoverOpen ? 'z-above-overlay' : ''}`}>
+    <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''}`}>
       <div
         onClick={onClick}
         className="spell-card-inner"
@@ -1558,33 +1478,6 @@ function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, cont
               >
                 <Heart size={14} fill={isBookmarked ? "currentColor" : "none"} />
               </button>
-
-              <AnimatePresence>
-                {isPopoverOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, y: 10 }}
-                    className="bookmark-popover glass-panel"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <div className="popover-header">添加到收藏</div>
-                    <div className="popover-list">
-                      {Object.keys(bookmarks).map(folder => (
-                        <button
-                          key={folder}
-                          className={`popover-item ${bookmarks[folder].includes(item.id) ? 'active' : ''}`}
-                          onClick={() => toggleBookmark(item.id, folder)}
-                        >
-                          <span className="truncate">{folder}</span>
-                          {bookmarks[folder].includes(item.id) && <Heart size={10} fill="currentColor" />}
-                        </button>
-                      ))}
-                    </div>
-                    <div className="popover-arrow"></div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
             </div>
           </div>
 
