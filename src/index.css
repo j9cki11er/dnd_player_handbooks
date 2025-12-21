@@ -1869,6 +1869,11 @@ a {
   }
 }
 
+.folder-content {
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
 /* Mobile specific for collections */
 @media (max-width: 768px) {
   .view-header .flex-wrap {
@@ -1876,19 +1881,16 @@ a {
   }
 
   .bookmark-section .folder-header {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .folder-content {
-    padding-left: 1rem;
+    padding-left: 0.75rem;
     margin-left: 0.5rem;
   }
 }
 
-.folder-content {
-  padding-left: 1rem;
-  margin-left: 0.5rem;
-}
+
 
 /* Confirmation Modal & Enhanced Styles */
 .confirm-modal {
