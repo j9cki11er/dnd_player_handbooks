@@ -972,7 +972,7 @@ export default function App() {
                       className="gold-button py-2 px-4 h-auto"
                     >
                       <FolderPlus size={18} />
-                      新建文件夹
+                      <span>新建文件夹</span>
                     </button>
                   </div>
                 </div>
