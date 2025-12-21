@@ -921,7 +921,7 @@ export default function App() {
                                   const items = folderItems.map(resolveBookmarkItem).filter(item => {
                                     if (!item || item.isDir) return false;
                                     const path = item.pathParts?.join(' ') || '';
-                                    return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
+                                    return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
                                   });
                                   if (items.length === 0) return null;
                                   return (
@@ -959,7 +959,7 @@ export default function App() {
                                     // Not a class/origin/feat and not a spell
                                     const isSpell = item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
                                     const path = item.pathParts?.join(' ') || '';
-                                    const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长');
+                                    const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
                                     return !isSpecial && !isSpell;
                                   });
                                   if (items.length === 0) return null;
@@ -1580,7 +1580,7 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
 
       <div className="card-top">
         <div className="flex flex-col overflow-hidden mr-8 flex-1 min-w-0">
-          {item?.prerequisite ? (
+          {item?.prerequisite || item?.category === '精通词条' ? (
             <>
               <span className="card-category truncate">{item.category}</span>
             </>

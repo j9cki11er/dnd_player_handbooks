@@ -1513,6 +1513,7 @@ a {
     align-items: center;
     flex-shrink: 1;
     min-width: 0;
+    font-size: 10px;
   }
 
   .spell-card-extra {
