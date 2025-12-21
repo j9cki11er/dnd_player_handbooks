@@ -1,0 +1,677 @@
+[
+  {
+    "id": "警戒_Alert",
+    "title": "警戒",
+    "titleEn": "Alert",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/警戒_Alert.html"
+  },
+  {
+    "id": "巧匠_Crafter",
+    "title": "巧匠",
+    "titleEn": "Crafter",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/巧匠_Crafter.html"
+  },
+  {
+    "id": "医疗师_Healer",
+    "title": "医疗师",
+    "titleEn": "Healer",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/医疗师_Healer.html"
+  },
+  {
+    "id": "幸运_Lucky",
+    "title": "幸运",
+    "titleEn": "Lucky",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/幸运_Lucky.html"
+  },
+  {
+    "id": "魔法学徒_Magic_Initiate",
+    "title": "魔法学徒",
+    "titleEn": "Magic Initiate",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/魔法学徒_Magic_Initiate.html"
+  },
+  {
+    "id": "音乐家_Musician",
+    "title": "音乐家",
+    "titleEn": "Musician",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/音乐家_Musician.html"
+  },
+  {
+    "id": "凶蛮打手_Savage_Attacker",
+    "title": "凶蛮打手",
+    "titleEn": "Savage Attacker",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/凶蛮打手_Savage_Attacker.html"
+  },
+  {
+    "id": "熟习_Skilled",
+    "title": "熟习",
+    "titleEn": "Skilled",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/熟习_Skilled.html"
+  },
+  {
+    "id": "酒馆斗殴者_Tavern_Brawler",
+    "title": "酒馆斗殴者",
+    "titleEn": "Tavern Brawler",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/酒馆斗殴者_Tavern_Brawler.html"
+  },
+  {
+    "id": "健壮_Tough",
+    "title": "健壮",
+    "titleEn": "Tough",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "起源专长",
+    "path": "feats/健壮_Tough.html"
+  },
+  {
+    "id": "属性值提升_Ability_Score_Improvement",
+    "title": "属性值提升",
+    "titleEn": "Ability Score Improvement",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/属性值提升_Ability_Score_Improvement.html"
+  },
+  {
+    "id": "演员_Actor",
+    "title": "演员",
+    "titleEn": "Actor",
+    "category": "通用专长",
+    "prerequisite": "等级4+，魅力13+",
+    "fullCategory": "通用专长（先决：等级4+，魅力13+）",
+    "path": "feats/演员_Actor.html"
+  },
+  {
+    "id": "运动精英_Athlete",
+    "title": "运动精英",
+    "titleEn": "Athlete",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量或敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，力量或敏捷13+）",
+    "path": "feats/运动精英_Athlete.html"
+  },
+  {
+    "id": "冲锋手_Charger",
+    "title": "冲锋手",
+    "titleEn": "Charger",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量或敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，力量或敏捷13+）",
+    "path": "feats/冲锋手_Charger.html"
+  },
+  {
+    "id": "大厨_Chef",
+    "title": "大厨",
+    "titleEn": "Chef",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/大厨_Chef.html"
+  },
+  {
+    "id": "强弩专家_Crossbow_Expert",
+    "title": "强弩专家",
+    "titleEn": "Crossbow Expert",
+    "category": "通用专长",
+    "prerequisite": "等级4+，敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，敏捷13+）",
+    "path": "feats/强弩专家_Crossbow_Expert.html"
+  },
+  {
+    "id": "粉碎者_Crusher",
+    "title": "粉碎者",
+    "titleEn": "Crusher",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/粉碎者_Crusher.html"
+  },
+  {
+    "id": "防御式决斗_Defensive_Duelist",
+    "title": "防御式决斗",
+    "titleEn": "Defensive Duelist",
+    "category": "通用专长",
+    "prerequisite": "等级4+，敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，敏捷13+）",
+    "path": "feats/防御式决斗_Defensive_Duelist.html"
+  },
+  {
+    "id": "双持客_Dual_Wielder",
+    "title": "双持客",
+    "titleEn": "Dual Wielder",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量或敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，力量或敏捷13+）",
+    "path": "feats/双持客_Dual_Wielder.html"
+  },
+  {
+    "id": "耐性_Durable",
+    "title": "耐性",
+    "titleEn": "Durable",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/耐性_Durable.html"
+  },
+  {
+    "id": "元素掌控_Elemental_Adept",
+    "title": "元素掌控",
+    "titleEn": "Elemental Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "通用专长（先决：等级4+，施法或契约魔法特性）",
+    "path": "feats/元素掌控_Elemental_Adept.html"
+  },
+  {
+    "id": "妖精触碰_Fey-Touched",
+    "title": "妖精触碰",
+    "titleEn": "Fey-Touched",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/妖精触碰_Fey-Touched.html"
+  },
+  {
+    "id": "擒抱者_Grappler",
+    "title": "擒抱者",
+    "titleEn": "Grappler",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量或敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，力量或敏捷13+）",
+    "path": "feats/擒抱者_Grappler.html"
+  },
+  {
+    "id": "巨武器大师_Great_Weapon_Master",
+    "title": "巨武器大师",
+    "titleEn": "Great Weapon Master",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量13+",
+    "fullCategory": "通用专长（先决：等级4+，力量13+）",
+    "path": "feats/巨武器大师_Great_Weapon_Master.html"
+  },
+  {
+    "id": "重甲运用_Heavily_Armored",
+    "title": "重甲运用",
+    "titleEn": "Heavily Armored",
+    "category": "通用专长",
+    "prerequisite": "等级4+，中甲受训",
+    "fullCategory": "通用专长（先决：等级4+，中甲受训）",
+    "path": "feats/重甲运用_Heavily_Armored.html"
+  },
+  {
+    "id": "重甲大师_Heavy_Armor_Master",
+    "title": "重甲大师",
+    "titleEn": "Heavy Armor Master",
+    "category": "通用专长",
+    "prerequisite": "等级4+，重甲受训",
+    "fullCategory": "通用专长（先决：等级4+，重甲受训）",
+    "path": "feats/重甲大师_Heavy_Armor_Master.html"
+  },
+  {
+    "id": "领袖之证_Inspiring_Leader",
+    "title": "领袖之证",
+    "titleEn": "Inspiring Leader",
+    "category": "通用专长",
+    "prerequisite": "等级4+，感知或魅力13+",
+    "fullCategory": "通用专长（先决：等级4+，感知或魅力13+）",
+    "path": "feats/领袖之证_Inspiring_Leader.html"
+  },
+  {
+    "id": "敏锐心灵_Keen_Mind",
+    "title": "敏锐心灵",
+    "titleEn": "Keen Mind",
+    "category": "通用专长",
+    "prerequisite": "等级4+，智力13+",
+    "fullCategory": "通用专长（先决：等级4+，智力13+）",
+    "path": "feats/敏锐心灵_Keen_Mind.html"
+  },
+  {
+    "id": "轻甲运用_Lightly_Armored",
+    "title": "轻甲运用",
+    "titleEn": "Lightly Armored",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/轻甲运用_Lightly_Armored.html"
+  },
+  {
+    "id": "巫师杀手_Mage_Slayer",
+    "title": "巫师杀手",
+    "titleEn": "Mage Slayer",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/巫师杀手_Mage_Slayer.html"
+  },
+  {
+    "id": "军用武器训练_Martial_Weapon_Training",
+    "title": "军用武器训练",
+    "titleEn": "Martial Weapon Training",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/军用武器训练_Martial_Weapon_Training.html"
+  },
+  {
+    "id": "中甲大师_Medium_Armor_Master",
+    "title": "中甲大师",
+    "titleEn": "Medium Armor Master",
+    "category": "通用专长",
+    "prerequisite": "等级4+，中甲受训",
+    "fullCategory": "通用专长（先决：等级4+，中甲受训）",
+    "path": "feats/中甲大师_Medium_Armor_Master.html"
+  },
+  {
+    "id": "中甲运用_Moderately_Armored",
+    "title": "中甲运用",
+    "titleEn": "Moderately Armored",
+    "category": "通用专长",
+    "prerequisite": "等级4+，轻甲受训",
+    "fullCategory": "通用专长（先决：等级4+，轻甲受训）",
+    "path": "feats/中甲运用_Moderately_Armored.html"
+  },
+  {
+    "id": "骑乘战斗_Mounted_Combatant",
+    "title": "骑乘战斗",
+    "titleEn": "Mounted Combatant",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/骑乘战斗_Mounted_Combatant.html"
+  },
+  {
+    "id": "观察力_Observant",
+    "title": "观察力",
+    "titleEn": "Observant",
+    "category": "通用专长",
+    "prerequisite": "等级4+，智力或感知13+",
+    "fullCategory": "通用专长（先决：等级4+，智力或感知13+）",
+    "path": "feats/观察力_Observant.html"
+  },
+  {
+    "id": "穿刺者_Piercer",
+    "title": "穿刺者",
+    "titleEn": "Piercer",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/穿刺者_Piercer.html"
+  },
+  {
+    "id": "毒师_Poisoner",
+    "title": "毒师",
+    "titleEn": "Poisoner",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/毒师_Poisoner.html"
+  },
+  {
+    "id": "长柄武器大师_Polearm_Master",
+    "title": "长柄武器大师",
+    "titleEn": "Polearm Master",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量或敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，力量或敏捷13+）",
+    "path": "feats/长柄武器大师_Polearm_Master.html"
+  },
+  {
+    "id": "强健身心_Resilient",
+    "title": "强健身心",
+    "titleEn": "Resilient",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/强健身心_Resilient.html"
+  },
+  {
+    "id": "仪式施法者_Ritual_Caster",
+    "title": "仪式施法者",
+    "titleEn": "Ritual Caster",
+    "category": "通用专长",
+    "prerequisite": "等级4+，智力、感知或魅力13+",
+    "fullCategory": "通用专长（先决：等级4+，智力、感知或魅力13+）",
+    "path": "feats/仪式施法者_Ritual_Caster.html"
+  },
+  {
+    "id": "哨兵_Sentinel",
+    "title": "哨兵",
+    "titleEn": "Sentinel",
+    "category": "通用专长",
+    "prerequisite": "等级4+，力量或敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，力量或敏捷13+）",
+    "path": "feats/哨兵_Sentinel.html"
+  },
+  {
+    "id": "影界触碰_Shadow_Touched",
+    "title": "影界触碰",
+    "titleEn": "Shadow Touched",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/影界触碰_Shadow_Touched.html"
+  },
+  {
+    "id": "神射手_Sharpshooter",
+    "title": "神射手",
+    "titleEn": "Sharpshooter",
+    "category": "通用专长",
+    "prerequisite": "等级4+，敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，敏捷13+）",
+    "path": "feats/神射手_Sharpshooter.html"
+  },
+  {
+    "id": "盾牌大师_Shield_Master",
+    "title": "盾牌大师",
+    "titleEn": "Shield Master",
+    "category": "通用专长",
+    "prerequisite": "等级4+，盾牌受训",
+    "fullCategory": "通用专长（先决：等级4+，盾牌受训）",
+    "path": "feats/盾牌大师_Shield_Master.html"
+  },
+  {
+    "id": "技艺专家_Skill_Expert",
+    "title": "技艺专家",
+    "titleEn": "Skill Expert",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/技艺专家_Skill_Expert.html"
+  },
+  {
+    "id": "隐伏者_Skulker",
+    "title": "隐伏者",
+    "titleEn": "Skulker",
+    "category": "通用专长",
+    "prerequisite": "等级4+，敏捷13+",
+    "fullCategory": "通用专长（先决：等级4+，敏捷13+）",
+    "path": "feats/隐伏者_Skulker.html"
+  },
+  {
+    "id": "劈砍者_Slasher",
+    "title": "劈砍者",
+    "titleEn": "Slasher",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/劈砍者_Slasher.html"
+  },
+  {
+    "id": "飙速跑者_Speedy",
+    "title": "飙速跑者",
+    "titleEn": "Speedy",
+    "category": "通用专长",
+    "prerequisite": "等级4+，敏捷或体质13+",
+    "fullCategory": "通用专长（先决：等级4+，敏捷或体质13+）",
+    "path": "feats/飙速跑者_Speedy.html"
+  },
+  {
+    "id": "法术射手_Spell_Sniper",
+    "title": "法术射手",
+    "titleEn": "Spell Sniper",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "通用专长（先决：等级4+，施法或契约魔法特性）",
+    "path": "feats/法术射手_Spell_Sniper.html"
+  },
+  {
+    "id": "念动力_Telekinetic",
+    "title": "念动力",
+    "titleEn": "Telekinetic",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/念动力_Telekinetic.html"
+  },
+  {
+    "id": "心灵感应_Telepathic",
+    "title": "心灵感应",
+    "titleEn": "Telepathic",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/心灵感应_Telepathic.html"
+  },
+  {
+    "id": "战地施法者_War_Caster",
+    "title": "战地施法者",
+    "titleEn": "War Caster",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "通用专长（先决：等级4+，施法或契约魔法特性）",
+    "path": "feats/战地施法者_War_Caster.html"
+  },
+  {
+    "id": "武器大师_Weapon_Master",
+    "title": "武器大师",
+    "titleEn": "Weapon Master",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "通用专长（先决：等级4+）",
+    "path": "feats/武器大师_Weapon_Master.html"
+  },
+  {
+    "id": "箭术_Archery",
+    "title": "箭术",
+    "titleEn": "Archery",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/箭术_Archery.html"
+  },
+  {
+    "id": "盲斗_Blind_Fighting",
+    "title": "盲斗",
+    "titleEn": "Blind Fighting",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/盲斗_Blind_Fighting.html"
+  },
+  {
+    "id": "防御_Defense",
+    "title": "防御",
+    "titleEn": "Defense",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/防御_Defense.html"
+  },
+  {
+    "id": "对决_Dueling",
+    "title": "对决",
+    "titleEn": "Dueling",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/对决_Dueling.html"
+  },
+  {
+    "id": "巨武器战斗_Great_Weapon_Fighting",
+    "title": "巨武器战斗",
+    "titleEn": "Great Weapon Fighting",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/巨武器战斗_Great_Weapon_Fighting.html"
+  },
+  {
+    "id": "拦截_Interception",
+    "title": "拦截",
+    "titleEn": "Interception",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/拦截_Interception.html"
+  },
+  {
+    "id": "守护_Protection",
+    "title": "守护",
+    "titleEn": "Protection",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/守护_Protection.html"
+  },
+  {
+    "id": "投掷武器战斗_Thrown_Weapon_Fighting",
+    "title": "投掷武器战斗",
+    "titleEn": "Thrown Weapon Fighting",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/投掷武器战斗_Thrown_Weapon_Fighting.html"
+  },
+  {
+    "id": "双武器战斗_Two-Weapon_Fighting",
+    "title": "双武器战斗",
+    "titleEn": "Two-Weapon Fighting",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/双武器战斗_Two-Weapon_Fighting.html"
+  },
+  {
+    "id": "徒手战斗_Unarmed_Fighting",
+    "title": "徒手战斗",
+    "titleEn": "Unarmed Fighting",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "战斗风格专长（先决：战斗风格特性）",
+    "path": "feats/徒手战斗_Unarmed_Fighting.html"
+  },
+  {
+    "id": "英勇战斗之恩惠_Boon_of_Combat_Prowess",
+    "title": "英勇战斗之恩惠",
+    "titleEn": "Boon of Combat Prowess",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/英勇战斗之恩惠_Boon_of_Combat_Prowess.html"
+  },
+  {
+    "id": "次元旅行之恩惠_Boon_of_Dimensional_Travel",
+    "title": "次元旅行之恩惠",
+    "titleEn": "Boon of Dimensional Travel",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/次元旅行之恩惠_Boon_of_Dimensional_Travel.html"
+  },
+  {
+    "id": "能量抗性之恩惠_Boon_of_Energy_Resistance",
+    "title": "能量抗性之恩惠",
+    "titleEn": "Boon of Energy Resistance",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/能量抗性之恩惠_Boon_of_Energy_Resistance.html"
+  },
+  {
+    "id": "扭曲命运之恩惠_Boon_of_Fate",
+    "title": "扭曲命运之恩惠",
+    "titleEn": "Boon of Fate",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/扭曲命运之恩惠_Boon_of_Fate.html"
+  },
+  {
+    "id": "超凡强韧之恩惠_Boon_of_Fortitude",
+    "title": "超凡强韧之恩惠",
+    "titleEn": "Boon of Fortitude",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/超凡强韧之恩惠_Boon_of_Fortitude.html"
+  },
+  {
+    "id": "无敌攻势之恩惠_Boon_of_Irresistible_Offense",
+    "title": "无敌攻势之恩惠",
+    "titleEn": "Boon of Irresistible Offense",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/无敌攻势之恩惠_Boon_of_Irresistible_Offense.html"
+  },
+  {
+    "id": "强力恢复之恩惠_Boon_of_Recovery",
+    "title": "强力恢复之恩惠",
+    "titleEn": "Boon of Recovery",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/强力恢复之恩惠_Boon_of_Recovery.html"
+  },
+  {
+    "id": "博学多才之恩惠_Boon_of_Skill",
+    "title": "博学多才之恩惠",
+    "titleEn": "Boon of Skill",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/博学多才之恩惠_Boon_of_Skill.html"
+  },
+  {
+    "id": "神行无拘之恩惠_Boon_of_Speed",
+    "title": "神行无拘之恩惠",
+    "titleEn": "Boon of Speed",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/神行无拘之恩惠_Boon_of_Speed.html"
+  },
+  {
+    "id": "法术溯回之恩惠_Boon_of_Spell_Recall",
+    "title": "法术溯回之恩惠",
+    "titleEn": "Boon of Spell Recall",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/法术溯回之恩惠_Boon_of_Spell_Recall.html"
+  },
+  {
+    "id": "暗夜精魂之恩惠_Boon_of_the_Night_Spirit",
+    "title": "暗夜精魂之恩惠",
+    "titleEn": "Boon of the Night Spirit",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/暗夜精魂之恩惠_Boon_of_the_Night_Spirit.html"
+  },
+  {
+    "id": "真实视觉之恩惠_Boon_of_Truesight",
+    "title": "真实视觉之恩惠",
+    "titleEn": "Boon of Truesight",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "传奇恩惠专长（先决：等级19+）",
+    "path": "feats/真实视觉之恩惠_Boon_of_Truesight.html"
+  }
+]

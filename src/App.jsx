@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import data from './data.json';
 import spellData from './data-spells.json';
+import featData from './data-feats.json';
 import { Search, Bookmark, Book, Layout, ChevronRight, ChevronUp, X, FolderPlus, Trash2, Heart, Plus, Folder, FileText, ChevronDown, Menu, FilterX, Sun, Moon, ArrowLeft } from 'lucide-react';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -141,13 +142,19 @@ export default function App() {
     threshold: 0.3
   }), []);
 
+  const featFuse = useMemo(() => new Fuse(featData, {
+    keys: ['title', 'titleEn', 'category'],
+    threshold: 0.3
+  }), []);
+
   const searchResults = useMemo(() => {
-    if (!searchQuery) return { categories: [], spells: [] };
+    if (!searchQuery) return { categories: [], spells: [], feats: [] };
     return {
       categories: fuse.search(searchQuery).map(r => r.item),
-      spells: spellFuse.search(searchQuery).map(r => r.item)
+      spells: spellFuse.search(searchQuery).map(r => r.item),
+      feats: featFuse.search(searchQuery).map(r => r.item)
     };
-  }, [searchQuery, fuse, spellFuse]);
+  }, [searchQuery, fuse, spellFuse, featFuse]);
 
   // Memoize filtered spells
   const filteredSpells = useMemo(() => {
@@ -390,6 +397,15 @@ export default function App() {
         pathParts: spell.pathParts || ['法术']
       };
     }
+    // Then check feats
+    const feat = featData.find(f => f.id === id);
+    if (feat) {
+      return {
+        ...feat,
+        pathParts: ['第五章：专长', feat.category]
+      };
+    }
+
     // Then check files
     const file = data.find(i => i.id === id);
     if (file) return file;
@@ -752,6 +768,23 @@ export default function App() {
                     </div>
                   )}
 
+                  {searchResults.feats.length > 0 && (
+                    <div className="search-section">
+                      <h3 className="section-title mb-4">专长列表</h3>
+                      <div className="item-grid">
+                        {searchResults.feats.map(item => (
+                          <ItemCard
+                            key={item.id}
+                            item={item}
+                            onClick={() => selectItem(item, false)}
+                            isBookmarked={isBookmarkedAnywhere(item.id)}
+                            openBookmarkDialog={openBookmarkDialog}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {searchResults.spells.length > 0 && (
                     <div className="search-section">
                       <h3 className="section-title mb-4">法术列表</h3>
@@ -771,7 +804,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {searchResults.categories.length === 0 && searchResults.spells.length === 0 && (
+                  {searchResults.categories.length === 0 && searchResults.spells.length === 0 && searchResults.feats.length === 0 && (
                     <div className="no-results py-20 text-center text-muted">没找到匹配的结果</div>
                   )}
                 </div>
@@ -1212,6 +1245,21 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
   const selectedItem = entry.type === 'file' ? entry.item : null;
   const currentPath = entry.type === 'dir' ? entry.path : [];
 
+  const isFeatCategory = useMemo(() => {
+    return selectedItem && (
+      selectedItem.id === '第五章：专长/起源专长.htm' ||
+      selectedItem.id === '第五章：专长/通用专长.htm' ||
+      selectedItem.id === '第五章：专长/战斗风格专长.htm' ||
+      selectedItem.id === '第五章：专长/传奇恩惠专长.htm'
+    );
+  }, [selectedItem]);
+
+  const featsInCategory = useMemo(() => {
+    if (!isFeatCategory) return [];
+    const catName = selectedItem.title;
+    return featData.filter(f => f.category === catName);
+  }, [isFeatCategory, selectedItem]);
+
   return (
     <motion.div
       initial={{ x: '100%' }}
@@ -1251,7 +1299,22 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
                   {selectedItem.pathParts.join(' > ')}
                 </div>
               )}
-              {contentLoading ? (
+              {isFeatCategory ? (
+                <div className="directory-view">
+                  <h3 className="section-title mb-4">专长列表</h3>
+                  <div className="item-grid">
+                    {featsInCategory.map(feat => (
+                      <ItemCard
+                        key={feat.id}
+                        item={feat}
+                        onClick={() => onSelectItem(feat)}
+                        isBookmarked={isBookmarkedAnywhere(feat.id)}
+                        openBookmarkDialog={openBookmarkDialog}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : contentLoading ? (
                 <div className="py-20 flex flex-col items-center gap-4">
                   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
                   <p className="text-gold opacity-60">加载中...</p>
@@ -1437,7 +1500,7 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
     >
 
       <div className="card-top">
-        <span className="card-category truncate mr-8">{item?.pathParts?.join(' > ') || ''}</span>
+        <span className="card-category truncate mr-8">{item?.fullCategory || item?.pathParts?.join(' > ') || ''}</span>
         <div className="item-card-actions">
           {item?.isDir && <Folder size={14} className="text-gold opacity-50 mr-2" />}
           <button
@@ -1449,6 +1512,9 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
         </div>
       </div>
       <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
+      {item?.prerequisite && (
+        <div className="text-[10px] opacity-40 mt-1 uppercase tracking-wider">{item.titleEn}</div>
+      )}
     </motion.div >
   );
 }

@@ -1299,10 +1299,10 @@ a {
 
   .card-category {
     font-size: 0.75rem;
-    max-width: 70%;
-    overflow: hidden;
+    /* max-width: 70%; */
+    overflow: visible;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: wrap;
   }
 
   .card-top {
