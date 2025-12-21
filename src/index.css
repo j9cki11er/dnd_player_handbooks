@@ -137,6 +137,10 @@ a {
   color: var(--accent-gold);
 }
 
+.top-bar-search-btn.active {
+  color: #ef4444;
+}
+
 .main-viewport {
   margin-left: 280px;
   margin-top: 60px;
@@ -741,7 +745,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 3000;
   padding: 1rem;
 }
 
@@ -1132,7 +1136,7 @@ a {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid var(--border-color);
-  z-index: 1000;
+  z-index: 5000;
   padding: 0 1rem;
   justify-content: space-around;
   align-items: center;
@@ -1555,27 +1559,62 @@ a {
   transition: all 0.3s;
 }
 
-.spell-detail-panel {
-  display: none;
-  flex-direction: column;
-  height: 100%;
-  /* background: rgba(0, 0, 0, 0.4); */
-  border-left: 1px solid var(--border-color);
-  transition: all 0.3s;
-  width: 0;
-  opacity: 0;
-  transform: translateX(20px);
-  overflow: hidden;
-  position: sticky;
+.detail-overlay {
+  position: fixed;
   top: 0;
+  left: 280px;
+  right: 0;
+  bottom: 0;
+  z-index: 1500;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 768px) {
-  .spell-detail-panel.active {
-    display: flex;
-    width: 450px;
-    opacity: 1;
-    transform: translateX(0);
+.overlay-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0 !important;
+  /* Override left: 280px from sticky-top-bar */
+  right: 0;
+  width: 100% !important;
+}
+
+.detail-overlay-content {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  margin-top: 60px;
+  /* Match height of sticky-top-bar */
+  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+}
+
+@media (max-width: 768px) {
+  .detail-overlay-content {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .detail-overlay {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-overlay {
+    top: 0;
+    bottom: 0;
+    padding-bottom: 70px;
+  }
+
+  .modal-overlay {
+    padding-bottom: 80px;
   }
 }
 
@@ -1776,15 +1815,6 @@ a {
   position: relative;
 }
 
-.has-detail .spell-list-panel {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .spell-browser-container.has-detail .spell-list-panel {
-    display: none;
-  }
-}
 
 .action-btn-small span {
   display: none;

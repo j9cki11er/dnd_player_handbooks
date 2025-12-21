@@ -35,6 +35,7 @@ export default function App() {
   const [expandedCategories, setExpandedCategories] = useState({}); // { "folderName-catName": boolean }
   const [confirmConfig, setConfirmConfig] = useState(null);
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
+  const [detailStack, setDetailStack] = useState([]); // Array of { id, type, item, path }
 
   useEffect(() => {
     document.body.className = theme === 'light' ? 'light-theme' : '';
@@ -60,11 +61,7 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Content loading states
-  const [loadedContent, setLoadedContent] = useState('');
-  const [contentLoading, setContentLoading] = useState(false);
-  const [loadedOverview, setLoadedOverview] = useState('');
-  const [overviewLoading, setOverviewLoading] = useState(false);
+  // Content loading states moved to DetailScreen
 
   useEffect(() => {
     localStorage.setItem('dnd-bookmarks', JSON.stringify(bookmarks));
@@ -76,7 +73,8 @@ export default function App() {
     const currentState = {
       activeTab,
       currentPath,
-      selectedId: selectedItem?.id || null
+      selectedId: selectedItem?.id || null,
+      detailStack
     };
 
     // Replace state if it's the initial load or a minor change we don't want to push
@@ -88,14 +86,15 @@ export default function App() {
       const isDifferent = !historyState ||
         historyState.activeTab !== currentState.activeTab ||
         JSON.stringify(historyState.currentPath) !== JSON.stringify(currentState.currentPath) ||
-        historyState.selectedId !== currentState.selectedId;
+        historyState.selectedId !== currentState.selectedId ||
+        JSON.stringify(historyState.detailStack) !== JSON.stringify(currentState.detailStack);
 
       if (isDifferent) {
         window.history.pushState(currentState, '', '');
       }
     }
     window._isPopStateNavigating = false;
-  }, [activeTab, currentPath, selectedItem]);
+  }, [activeTab, currentPath, selectedItem, detailStack]);
 
   // Listen for back/forward buttons
   useEffect(() => {
@@ -114,6 +113,8 @@ export default function App() {
         } else {
           setSelectedItem(null);
         }
+
+        setDetailStack(event.state.detailStack || []);
       }
     };
 
@@ -122,7 +123,8 @@ export default function App() {
     window.history.replaceState({
       activeTab,
       currentPath,
-      selectedId: selectedItem?.id || null
+      selectedId: selectedItem?.id || null,
+      detailStack: []
     }, '', '');
 
     return () => window.removeEventListener('popstate', handlePopState);
@@ -230,52 +232,7 @@ export default function App() {
     return current;
   }, [currentPath, categoryTree]);
 
-  // Fetch item content
-  useEffect(() => {
-    if (selectedItem && selectedItem.path) {
-      setContentLoading(true);
-      fetch(`/content/${selectedItem.path}`)
-        .then(res => res.text())
-        .then(html => {
-          setLoadedContent(html);
-          setContentLoading(false);
-        })
-        .catch(err => {
-          console.error('Failed to load content:', err);
-          setLoadedContent('<p class="text-red-500">内容加载失败。</p>');
-          setContentLoading(false);
-        });
-    } else {
-      setLoadedContent('');
-    }
-  }, [selectedItem]);
-
-  // Fetch overview content
-  useEffect(() => {
-    if (activeTab === 'browser' && !selectedItem && currentCategoryData) {
-      const overview = currentCategoryData._selfFile;
-      if (overview) {
-        setOverviewLoading(true);
-        fetch(`/content/${overview.path}`)
-          .then(res => res.text())
-          .then(html => {
-            setLoadedOverview({ html, title: overview.title, item: overview });
-            setOverviewLoading(false);
-          })
-
-          .catch(err => {
-            console.error('Failed to load overview:', err);
-            setLoadedOverview(null);
-            setOverviewLoading(false);
-          });
-      } else {
-        setLoadedOverview(null);
-      }
-    } else if (activeTab === 'browser' && !selectedItem && !currentCategoryData) {
-      // Clear overview when returning to home screen
-      setLoadedOverview(null);
-    }
-  }, [currentCategoryData, selectedItem, activeTab]);
+  // Fetching logic moved to DetailScreen component
 
 
   const toggleExpand = (pathStr) => {
@@ -285,10 +242,15 @@ export default function App() {
     }));
   };
 
-  const navigateTo = (path, shouldExpand = true) => {
-    setCurrentPath(path);
-    setSelectedItem(null);
-    setActiveTab('browser');
+  const navigateTo = (path, shouldExpand = true, push = false) => {
+    if (push) {
+      setDetailStack(prev => [...prev, { id: Date.now(), type: 'dir', path }]);
+    } else {
+      setCurrentPath(path);
+      setSelectedItem(null);
+      setActiveTab('browser');
+      setDetailStack([{ id: Date.now(), type: 'dir', path }]);
+    }
 
     // Auto expand parent
     if (shouldExpand) {
@@ -296,6 +258,25 @@ export default function App() {
       setExpandedPaths(prev => ({ ...prev, [pathStr]: true }));
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const handleBack = () => {
+    // We use window.history.back() to trigger the popstate listener which handles everything
+    if (window.history.state && (window.history.state.detailStack?.length > 1 || window.history.state.selectedId || (window.history.state.activeTab === 'browser' && window.history.state.currentPath.length > 0))) {
+      window.history.back();
+    } else if (detailStack.length > 0 || selectedItem || currentPath.length > 0) {
+      // Fallback if history state isn't perfect
+      window.history.back();
+    }
+  };
+
+  const selectItem = (item, push = false) => {
+    if (push) {
+      setDetailStack(prev => [...prev, { id: Date.now(), type: 'file', item }]);
+    } else {
+      setSelectedItem(item);
+      setDetailStack([{ id: Date.now(), type: 'file', item }]);
+    }
   };
 
   const toggleBookmark = (id, folder) => {
@@ -422,19 +403,8 @@ export default function App() {
   }, [selectedItem, resolveBookmarkItem]);
 
   const showGlobalDetail = useMemo(() => {
-    if (!selectedItem) return false;
-    // On mobile, all items should open the global detail view
-    if (isMobile) return true;
-
-    // Desktop behavior remains unchanged:
-    // Spells tab handles its own detail view (split pane)
-    if (activeTab === 'spells') return false;
-    // Bookmarks handles its own detail view on desktop (split pane)
-    if (activeTab === 'bookmarks') return false;
-
-    // Browser and Search use the global detail view
-    return true;
-  }, [selectedItem, activeTab, isMobile]);
+    return detailStack.length > 0;
+  }, [detailStack]);
 
 
   // Sidebar Recursive Component
@@ -475,7 +445,7 @@ export default function App() {
                 <button
                   key={file.id}
                   onClick={() => {
-                    setSelectedItem(file);
+                    selectItem(file, false);
                     setCurrentPath(node._path);
                     setActiveTab('browser');
                   }}
@@ -501,7 +471,6 @@ export default function App() {
 
       switch (activeTab) {
         case 'browser':
-          if (loadedOverview) return loadedOverview.title;
           return '资料浏览';
         case 'spells': return '法术列表';
         case 'search': return '全局搜索';
@@ -510,18 +479,8 @@ export default function App() {
       }
     };
 
-    const handleBack = () => {
-      if (selectedItem) {
-        setSelectedItem(null);
-      } else if (currentPath.length > 0) {
-        // Go up one level
-        const newPath = currentPath.slice(0, currentPath.length - 1);
-        setCurrentPath(newPath);
-      }
-    };
-
-    const showBackButton = (activeTab === 'browser' && (currentPath.length > 0 || selectedItem)) ||
-      (activeTab !== 'browser' && selectedItem);
+    const showBackButton = (activeTab === 'browser' && (currentPath.length > 0 || selectedItem || detailStack.length > 0)) ||
+      (activeTab !== 'browser' && (selectedItem || detailStack.length > 0));
 
     return (
       <header className="sticky-top-bar">
@@ -535,7 +494,7 @@ export default function App() {
         </div>
         <div className="top-bar-actions">
           {activeTab !== 'search' && (
-            <button onClick={() => { setActiveTab('search'); setSelectedItem(null); }} className="top-bar-search-btn">
+            <button onClick={() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); }} className="top-bar-search-btn">
               <Search size={22} />
             </button>
           )}
@@ -577,13 +536,13 @@ export default function App() {
             icon={<Search size={20} />}
             label="全局搜索"
             active={activeTab === 'search'}
-            onClick={() => { setActiveTab('search'); setSelectedItem(null); }}
+            onClick={() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); }}
           />
           <NavItem
             icon={<Heart size={20} />}
             label="我的收藏"
             active={activeTab === 'bookmarks'}
-            onClick={() => { setActiveTab('bookmarks'); setSelectedItem(null); }}
+            onClick={() => { setActiveTab('bookmarks'); setSelectedItem(null); setDetailStack([]); }}
           />
         </nav>
 
@@ -607,158 +566,72 @@ export default function App() {
       {/* Main Content */}
       <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks') ? 'wide-view' : ''}`}>
         <AnimatePresence mode="wait">
-          {activeTab === 'browser' && !showGlobalDetail && (
+          {activeTab === 'browser' && (
             <motion.div
               key="browser"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             >
-
-
-              {currentCategoryData ? (
-                <div className="directory-view">
-                  {/* Overview content if exists */}
-                  {overviewLoading ? (
-                    <div className="overview-section mb-8 p-12 flex justify-center">
-                      <div className="animate-pulse text-gold">正在加载概览...</div>
-                    </div>
-                  ) : loadedOverview ? (
-                    <div className="overview-section mb-8">
-                      <div className="detail-header">
-                        {/* <h2 className="detail-title gold-text">{loadedOverview.title}</h2> */}
-                        {loadedOverview.item && (
-                          <button
-                            onClick={() => openBookmarkDialog(loadedOverview.item)}
-                            className={`bookmark-btn ${isBookmarkedAnywhere(loadedOverview.item.id) ? 'active' : ''}`}
-                          >
-                            <Heart fill={isBookmarkedAnywhere(loadedOverview.item.id) ? "currentColor" : "none"} size={20} />
-                          </button>
-                        )}
-                      </div>
-                      {/* <div className="breadcrumb">
-                        <span onClick={() => navigateTo([])} className="breadcrumb-item">首页</span>
-                        {currentPath.map((part, i) => (
-                          <React.Fragment key={i}>
-                            <ChevronRight size={14} className="mx-1 text-muted" />
-                            <span onClick={() => navigateTo(currentPath.slice(0, i + 1))} className="breadcrumb-item">
-                              {part}
-                            </span>
-                          </React.Fragment>
-                        ))}
-                      </div> */}
-
-                      <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
-                    </div>
-                  ) : (
-                    <h2 className="view-title gold-text mb-6">{currentPath[currentPath.length - 1]}</h2>
-                  )}
-
-                  {/* Subdirectories */}
-                  {Object.keys(currentCategoryData._children).length > 0 && (
-                    <div className="mb-8">
-                      <h3 className="section-title mb-4">子目录</h3>
-                      <div className="item-grid">
-                        {Object.entries(currentCategoryData._children).map(([name, node]) => (
-                          <ItemCard
-                            key={node._id}
-                            item={{
-                              id: node._id,
-                              title: node._title,
-                              pathParts: node._path,
-                              isDir: true
-                            }}
-                            onClick={() => navigateTo(node._path)}
-                            isBookmarked={isBookmarkedAnywhere(node._id)}
-                            openBookmarkDialog={openBookmarkDialog}
-                          />
-                        ))}
-
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Files (excluding overview which is shown above) */}
-                  {currentCategoryData._files.filter(f => !f.isOverview).length > 0 && (
-                    <div>
-                      <h3 className="section-title mb-4">内容条目</h3>
-                      <div className="item-grid">
-                        {currentCategoryData._files.filter(f => !f.isOverview).map(item => (
-                          <ItemCard
-                            key={item.id}
-                            item={item}
-                            onClick={() => setSelectedItem(item)}
-                            isBookmarked={isBookmarkedAnywhere(item.id)}
-                            openBookmarkDialog={openBookmarkDialog}
-                          />
-                        ))}
-                      </div>
-
-                    </div>
-                  )}
+              <div className="welcome-panel">
+                <img src="/DFD logo-cropped.png" alt="Welcome Logo" className="welcome-logo" />
+                <h3 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">不要喂龙公会</h3>
+                <h2 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h2>
+                <p className="welcome-desc mb-6">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
+                <div className="disclaimer-box mb-8">
+                  <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
+                    <strong>冒险者须知 · Beta 测试</strong><br></br>
+                    {"\n"}
+                    此玩家手册仍在锻造之中（Beta 测试阶段）。<br></br>
+                    {"\n"}
+                    若你在冒险途中发现任何异常、错误，或有改进建议，<br></br>
+                    {"\n"}
+                    请透过 WhatsApp 将情报送达：<br></br>
+                    {"\n"}
+                    <a
+                      href="https://wa.me/60175815819"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-link text-lg block my-1"
+                    >
+                      +60 17-581 5819
+                    </a>
+                    {"\n"}<br></br>
+                    你的反馈，将决定下一次升级的命运。
+                  </p>
                 </div>
-              ) : (
-                <div className="welcome-panel">
-                  <img src="/DFD logo-cropped.png" alt="Welcome Logo" className="welcome-logo" />
-                  <h3 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">不要喂龙公会</h3>
-                  <h2 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h2>
-                  <p className="welcome-desc mb-6">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
-                  <div className="disclaimer-box mb-8">
-                    <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
-                      <strong>冒险者须知 · Beta 测试</strong><br></br>
-                      {"\n"}
-                      此玩家手册仍在锻造之中（Beta 测试阶段）。<br></br>
-                      {"\n"}
-                      若你在冒险途中发现任何异常、错误，或有改进建议，<br></br>
-                      {"\n"}
-                      请透过 WhatsApp 将情报送达：<br></br>
-                      {"\n"}
-                      <a
-                        href="https://wa.me/60175815819"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="whatsapp-link text-lg block my-1"
-                      >
-                        +60 17-581 5819
-                      </a>
-                      {"\n"}<br></br>
-                      你的反馈，将决定下一次升级的命运。
-                    </p>
-                  </div>
 
-                  <div className="welcome-directory mt-12">
-                    {/* <h3 className="section-title text-center mb-6">分类目录</h3> */}
-                    <div className="item-grid">
-                      {CHAPTERS_TO_SHOW.map(name => {
-                        const node = categoryTree[name];
-                        if (!node) return null;
-                        return (
-                          <motion.div
-                            key={name}
-                            whileHover={{ scale: 1.02, y: -4 }}
-                            onClick={() => navigateTo(node._path)}
-                            className="item-card glass-panel flex flex-col items-center justify-center py-6"
-                          >
-                            <Folder size={32} className="text-gold opacity-60 mb-2" />
-                            <h4 className="card-title text-center text-sm">{name}</h4>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
+                <div className="welcome-directory mt-12">
+                  <div className="item-grid">
+                    {CHAPTERS_TO_SHOW.map(name => {
+                      const node = categoryTree[name];
+                      if (!node) return null;
+                      return (
+                        <motion.div
+                          key={name}
+                          whileHover={{ scale: 1.02, y: -4 }}
+                          onClick={() => navigateTo(node._path, true, false)}
+                          className="item-card glass-panel flex flex-col items-center justify-center py-6"
+                        >
+                          <Folder size={32} className="text-gold opacity-60 mb-2" />
+                          <h4 className="card-title text-center text-sm">{name}</h4>
+                        </motion.div>
+                      );
+                    })}
                   </div>
-
-                  <footer className="welcome-footer mt-16 pt-8 border-t border-gold/10 text-center">
-                    <p className="footer-text text-xs opacity-60 leading-relaxed">
-                      Provided by Don't Feed Dragon 不要喂龙公会 <br></br> Powered by <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
-                    </p>
-                    <p className="footer-link text-xs opacity-60 mt-1">
-                      查看更多玩家手册在: <a href="https://5echm.kagangtuya.top/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">https://5echm.kagangtuya.top/</a>
-                    </p>
-                  </footer>
                 </div>
-              )}
+
+                <footer className="welcome-footer mt-16 pt-8 border-t border-gold/10 text-center">
+                  <p className="footer-text text-xs opacity-60 leading-relaxed">
+                    Provided by Don't Feed Dragon 不要喂龙公会 <br></br> Powered by <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
+                  </p>
+                  <p className="footer-link text-xs opacity-60 mt-1">
+                    查看更多玩家手册在: <a href="https://5echm.kagangtuya.top/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">https://5echm.kagangtuya.top/</a>
+                  </p>
+                </footer>
+              </div>
             </motion.div>
           )}
 
-          {activeTab === 'spells' && !showGlobalDetail && (
+          {activeTab === 'spells' && (
             <div className="spell-browser-container p-4">
               {/* Left Panel: List & Filters */}
               <div className="spell-list-panel">
@@ -821,10 +694,9 @@ export default function App() {
                         key={spell.id}
                         item={spell}
                         isSelected={selectedItem?.id === spell.id}
-                        onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                        onClick={() => selectItem(spell, false)}
                         isBookmarked={isBookmarkedAnywhere(spell.id)}
                         isMobile={isMobile}
-                        loading={contentLoading}
                         openBookmarkDialog={openBookmarkDialog}
                       />
                     ))}
@@ -833,37 +705,10 @@ export default function App() {
                   </div>
                 </div>
               </div>
-
-              {/* Right Panel: Desktop Details */}
-              {!isMobile && (
-                <div className={`spell-detail-panel ${selectedItem ? 'active' : ''}`}>
-                  {selectedItem && (
-                    <div className="p-6 h-full overflow-y-auto custom-scrollbar">
-                      <div className="detail-header">
-                        <h1 className="detail-title gold-text">{selectedItem.title}</h1>
-                        <button
-                          onClick={() => openBookmarkDialog(selectedItem)}
-                          className={`bookmark-btn ${isBookmarkedAnywhere(selectedItem.id) ? 'active' : ''}`}
-                        >
-                          <Heart fill={isBookmarkedAnywhere(selectedItem.id) ? "currentColor" : "none"} size={20} />
-                        </button>
-                      </div>
-
-                      {contentLoading ? (
-                        <div className="flex justify-center py-20">
-                          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
-                        </div>
-                      ) : (
-                        <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
-                      )}
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
           )}
 
-          {activeTab === 'search' && !showGlobalDetail && (
+          {activeTab === 'search' && (
             <motion.div
               key="search"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
@@ -890,7 +735,7 @@ export default function App() {
                           <ItemCard
                             key={item.id}
                             item={item}
-                            onClick={() => setSelectedItem(item)}
+                            onClick={() => selectItem(item, false)}
                             isBookmarked={isBookmarkedAnywhere(item.id)}
                             openBookmarkDialog={openBookmarkDialog}
                           />
@@ -909,10 +754,9 @@ export default function App() {
                             key={spell.id}
                             item={spell}
                             isSelected={selectedItem?.id === spell.id}
-                            onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                            onClick={() => selectItem(spell, false)}
                             isBookmarked={isBookmarkedAnywhere(spell.id)}
                             isMobile={isMobile}
-                            loading={contentLoading}
                             openBookmarkDialog={openBookmarkDialog}
                           />
                         ))}
@@ -928,8 +772,8 @@ export default function App() {
             </motion.div>
           )}
 
-          {activeTab === 'bookmarks' && !showGlobalDetail && (
-            <div className={`spell-browser-container p-4 ${selectedItem ? 'has-detail' : ''}`}>
+          {activeTab === 'bookmarks' && (
+            <div className="spell-browser-container p-4">
               <div className="spell-list-panel">
                 <div className="view-header flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   {/* <h2 className="view-title gold-text m-0">我的收藏</h2> */}
@@ -1022,7 +866,7 @@ export default function App() {
                                             <ItemCard
                                               key={item.id}
                                               item={item}
-                                              onClick={() => setSelectedItem(item)}
+                                              onClick={() => selectItem(item, false)}
                                               isBookmarked={true}
                                               openBookmarkDialog={openBookmarkDialog}
                                             />
@@ -1061,7 +905,7 @@ export default function App() {
                                             <ItemCard
                                               key={item.id}
                                               item={item}
-                                              onClick={() => setSelectedItem(item)}
+                                              onClick={() => selectItem(item, false)}
                                               isBookmarked={true}
                                               openBookmarkDialog={openBookmarkDialog}
                                             />
@@ -1097,10 +941,9 @@ export default function App() {
                                               key={spell.id}
                                               item={spell}
                                               isSelected={selectedItem?.id === spell.id}
-                                              onClick={() => setSelectedItem(selectedItem?.id === spell.id ? null : spell)}
+                                              onClick={() => selectItem(spell, false)}
                                               isBookmarked={true}
                                               isMobile={isMobile}
-                                              loading={contentLoading}
                                               openBookmarkDialog={openBookmarkDialog}
                                             />
                                           ))}
@@ -1123,65 +966,26 @@ export default function App() {
                   )}
                 </div>
               </div>
-
-              {/* Right Panel: Desktop Details for Bookmarks too */}
-              {!isMobile && (
-                <div className={`spell-detail-panel ${selectedItem && activeTab === 'bookmarks' ? 'active' : ''}`}>
-                  {selectedItem && activeTab === 'bookmarks' && (
-                    <div className="p-6 h-full overflow-y-auto custom-scrollbar">
-                      <div className="detail-header">
-                        <div className="flex flex-col gap-1">
-                          <span className="text-xs text-gold/60 uppercase tracking-widest">{selectedItem.pathParts?.join(' > ') || '收藏条目'}</span>
-                          <h1 className="detail-title gold-text">{selectedItem.title}</h1>
-                        </div>
-                        <button
-                          onClick={() => openBookmarkDialog(selectedItem)}
-                          className={`bookmark-btn ${isBookmarkedAnywhere(selectedItem.id) ? 'active' : ''}`}
-                        >
-                          <Heart fill={isBookmarkedAnywhere(selectedItem.id) ? "currentColor" : "none"} size={20} />
-                        </button>
-                      </div>
-
-                      {contentLoading ? (
-                        <div className="flex justify-center py-20">
-                          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
-                        </div>
-                      ) : (
-                        <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
-                      )}
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
           )}
 
-          {showGlobalDetail && (
-            <motion.div
-              key="detail-view"
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            >
-              <div className="content-view relative">
-                <div className="detail-header">
-                  {/* <h1 className="detail-title gold-text">{selectedItem.title}</h1> */}
-                  <button
-                    onClick={() => openBookmarkDialog(selectedItem)}
-                    className={`bookmark-btn ${isBookmarkedAnywhere(selectedItem.id) ? 'active' : ''}`}
-                  >
-                    <Heart fill={isBookmarkedAnywhere(selectedItem.id) ? "currentColor" : "none"} />
-                  </button>
-                </div>
-                {contentLoading ? (
-                  <div className="py-20 flex flex-col items-center gap-4">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
-                    <p className="text-gold opacity-60">加载中...</p>
-                  </div>
-                ) : (
-                  <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
-                )}
-              </div>
-            </motion.div>
-          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {detailStack.map((entry, index) => (
+            <DetailScreen
+              key={entry.id}
+              entry={entry}
+              index={index}
+              onBack={handleBack}
+              onNavigate={(path) => navigateTo(path, true, true)}
+              onSelectItem={(item) => selectItem(item, true)}
+              openBookmarkDialog={openBookmarkDialog}
+              isBookmarkedAnywhere={isBookmarkedAnywhere}
+              categoryTree={categoryTree}
+              isMobile={isMobile}
+            />
+          ))}
         </AnimatePresence>
       </main>
 
@@ -1286,12 +1090,14 @@ export default function App() {
 
 
       {/* Mobile Menu Backdrop */}
-      {isMobileMenuOpen && (
-        <div
-          className="mobile-backdrop"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
+      {
+        isMobileMenuOpen && (
+          <div
+            className="mobile-backdrop"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )
+      }
 
       {/* Mobile Navigation Bar */}
       <MobileNavBar
@@ -1300,6 +1106,7 @@ export default function App() {
         activePath={currentPath}
         navigateTo={navigateTo}
         setSelectedItem={setSelectedItem}
+        setDetailStack={setDetailStack}
         setCurrentPath={setCurrentPath}
         toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         theme={theme}
@@ -1315,7 +1122,194 @@ export default function App() {
           />
         )}
       </AnimatePresence>
-    </div>
+    </div >
+  );
+}
+
+function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile }) {
+  const [loadedContent, setLoadedContent] = useState('');
+  const [contentLoading, setContentLoading] = useState(false);
+  const [loadedOverview, setLoadedOverview] = useState(null);
+  const [overviewLoading, setOverviewLoading] = useState(false);
+
+  // Fetch item content
+  useEffect(() => {
+    if (entry.type === 'file' && entry.item && entry.item.path) {
+      setContentLoading(true);
+      fetch(`/content/${entry.item.path}`)
+        .then(res => res.text())
+        .then(html => {
+          setLoadedContent(html);
+          setContentLoading(false);
+        })
+        .catch(err => {
+          console.error('Failed to load content:', err);
+          setLoadedContent('<p class="text-red-500">内容加载失败。</p>');
+          setContentLoading(false);
+        });
+    } else {
+      setLoadedContent('');
+    }
+  }, [entry]);
+
+  // Fetch overview content
+  useEffect(() => {
+    if (entry.type === 'dir' && entry.path) {
+      const getCategoryData = () => {
+        let current = { _children: categoryTree };
+        for (const part of entry.path) {
+          if (current._children && current._children[part]) {
+            current = current._children[part];
+          } else {
+            return null;
+          }
+        }
+        return current;
+      };
+
+      const categoryData = getCategoryData();
+      if (categoryData && categoryData._selfFile) {
+        setOverviewLoading(true);
+        fetch(`/content/${categoryData._selfFile.path}`)
+          .then(res => res.text())
+          .then(html => {
+            setLoadedOverview({ html, title: categoryData._selfFile.title, item: categoryData._selfFile });
+            setOverviewLoading(false);
+          })
+          .catch(err => {
+            console.error('Failed to load overview:', err);
+            setLoadedOverview(null);
+            setOverviewLoading(false);
+          });
+      } else {
+        setLoadedOverview(null);
+      }
+    } else {
+      setLoadedOverview(null);
+    }
+  }, [entry, categoryTree]);
+
+  const currentCategoryData = useMemo(() => {
+    if (entry.type !== 'dir' || !entry.path) return null;
+    let current = { _children: categoryTree };
+    for (const part of entry.path) {
+      if (current._children && current._children[part]) {
+        current = current._children[part];
+      } else {
+        return null;
+      }
+    }
+    return current;
+  }, [entry, categoryTree]);
+
+  const selectedItem = entry.type === 'file' ? entry.item : null;
+  const currentPath = entry.type === 'dir' ? entry.path : [];
+
+  return (
+    <motion.div
+      initial={{ x: '100%' }}
+      animate={{ x: 0 }}
+      exit={{ x: '100%' }}
+      transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+      className="detail-overlay"
+      style={{ zIndex: 1500 + index }}
+    >
+      <header className="sticky-top-bar overlay-top-bar">
+        <div className="top-bar-left">
+          <button onClick={onBack} className="top-bar-back-btn">
+            <ArrowLeft size={20} />
+          </button>
+          <h1 className="top-bar-title truncate max-w-[200px] sm:max-w-md">
+            {selectedItem ? selectedItem.title : (currentPath[currentPath.length - 1] || '目录')}
+          </h1>
+        </div>
+        <div className="top-bar-actions">
+          {(selectedItem || loadedOverview?.item) && (
+            <button
+              onClick={() => openBookmarkDialog(selectedItem || loadedOverview.item)}
+              className={`top-bar-search-btn ${isBookmarkedAnywhere((selectedItem || loadedOverview.item).id) ? 'active' : ''}`}
+            >
+              <Heart fill={isBookmarkedAnywhere((selectedItem || loadedOverview.item).id) ? "currentColor" : "none"} size={22} />
+            </button>
+          )}
+        </div>
+      </header>
+
+      <div className="detail-overlay-content custom-scrollbar">
+        <div className="p-6">
+          {selectedItem ? (
+            <>
+              {selectedItem.pathParts && (
+                <div className="mb-4 opacity-60 text-xs uppercase tracking-widest overflow-hidden text-ellipsis whitespace-nowrap">
+                  {selectedItem.pathParts.join(' > ')}
+                </div>
+              )}
+              {contentLoading ? (
+                <div className="py-20 flex flex-col items-center gap-4">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
+                  <p className="text-gold opacity-60">加载中...</p>
+                </div>
+              ) : (
+                <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+              )}
+            </>
+          ) : currentCategoryData ? (
+            <div className="directory-view">
+              {overviewLoading ? (
+                <div className="overview-section mb-8 p-12 flex justify-center">
+                  <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
+                </div>
+              ) : loadedOverview ? (
+                <div className="overview-section mb-8">
+                  <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
+                </div>
+              ) : null}
+
+              {/* Subdirectories */}
+              {Object.keys(currentCategoryData._children).length > 0 && (
+                <div className="mb-8">
+                  <h3 className="section-title mb-4">子目录</h3>
+                  <div className="item-grid">
+                    {Object.entries(currentCategoryData._children).map(([name, node]) => (
+                      <ItemCard
+                        key={node._id}
+                        item={{
+                          id: node._id,
+                          title: node._title,
+                          pathParts: node._path,
+                          isDir: true
+                        }}
+                        onClick={() => onNavigate(node._path)}
+                        isBookmarked={isBookmarkedAnywhere(node._id)}
+                        openBookmarkDialog={openBookmarkDialog}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Files */}
+              {currentCategoryData._files.filter(f => !f.isOverview).length > 0 && (
+                <div>
+                  <h3 className="section-title mb-4">内容条目</h3>
+                  <div className="item-grid">
+                    {currentCategoryData._files.filter(f => !f.isOverview).map(item => (
+                      <ItemCard
+                        key={item.id}
+                        item={item}
+                        onClick={() => onSelectItem(item)}
+                        isBookmarked={isBookmarkedAnywhere(item.id)}
+                        openBookmarkDialog={openBookmarkDialog}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
@@ -1328,10 +1322,11 @@ function NavItem({ icon, label, active, onClick }) {
   );
 }
 
-function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, setCurrentPath, toggleMenu, theme, toggleTheme }) {
+function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, toggleMenu, theme, toggleTheme }) {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     setSelectedItem(null);
+    setDetailStack([]);
   };
 
   return (
@@ -1342,6 +1337,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
           setActiveTab('browser');
           setCurrentPath([]);
           setSelectedItem(null);
+          setDetailStack([]);
         }}
       >
         <Layout size={20} />
@@ -1377,6 +1373,7 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
         onClick={() => {
           toggleMenu();
           setSelectedItem(null);
+          setDetailStack([]);
         }}
       >
         <Menu size={20} />
@@ -1450,7 +1447,7 @@ function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
 }
 
 
-function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, content, loading, openBookmarkDialog }) {
+function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, openBookmarkDialog }) {
   const handleBookmarkClick = (e) => {
     e.stopPropagation();
     openBookmarkDialog(item);
