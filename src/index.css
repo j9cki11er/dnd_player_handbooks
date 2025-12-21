@@ -682,6 +682,11 @@ a {
   font-size: 0.9rem;
 }
 
+.welcome-directory .item-grid {
+  max-width: 800px;
+  margin: auto;
+}
+
 .welcome-footer {
   border-top: 1px solid var(--text-secondary);
   opacity: 0.8;
