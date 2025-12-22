@@ -11,7 +11,11 @@ export function useBookmarks() {
     const [expandedCategories, setExpandedCategories] = useState({});
     const [confirmConfig, setConfirmConfig] = useState(null);
     const [isAddingFolder, setIsAddingFolder] = useState(false);
+    const [isRenameModalOpen, setIsRenameModalOpen] = useState(false);
+    const [folderToRename, setFolderToRename] = useState('');
     const [newFolderName, setNewFolderName] = useState('');
+    const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+    const [isImporting, setIsImporting] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('dnd-bookmarks', JSON.stringify(bookmarks));
@@ -32,6 +36,24 @@ export function useBookmarks() {
     const createFolder = (name) => {
         if (!name || bookmarks[name]) return;
         setBookmarks(prev => ({ ...prev, [name]: [] }));
+    };
+
+    const renameFolder = (oldName, newName) => {
+        if (!newName || newName === oldName || bookmarks[newName]) return;
+        setBookmarks(prev => {
+            const next = { ...prev };
+            next[newName] = next[oldName];
+            delete next[oldName];
+            return next;
+        });
+        if (expandedFolders[oldName] !== undefined) {
+            setExpandedFolders(prev => {
+                const next = { ...prev };
+                next[newName] = next[oldName];
+                delete next[oldName];
+                return next;
+            });
+        }
     };
 
     const deleteFolder = (name) => {
@@ -106,9 +128,14 @@ export function useBookmarks() {
         expandedCategories, setExpandedCategories,
         confirmConfig, setConfirmConfig,
         isAddingFolder, setIsAddingFolder,
+        isRenameModalOpen, setIsRenameModalOpen,
+        folderToRename, setFolderToRename,
         newFolderName, setNewFolderName,
+        isShareModalOpen, setIsShareModalOpen,
+        isImporting, setIsImporting,
         toggleBookmark,
         createFolder,
+        renameFolder,
         deleteFolder,
         isBookmarkedAnywhere,
         clearFolder,

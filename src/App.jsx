@@ -23,6 +23,7 @@ import SearchPanel from './components/SearchPanel';
 import BookmarkPanel from './components/BookmarkPanel';
 import FolderModal from './components/FolderModal';
 import BookmarkModal from './components/BookmarkModal';
+import ShareModal from './components/ShareModal';
 
 // Extracted Utilities
 import { parseCR, resolveBookmarkItem } from './utils/helpers';
@@ -93,9 +94,11 @@ export default function App() {
   } = useNavigation({ categoryTree, spellData, featData, masteryData, data });
 
   const {
-    bookmarks, isBookmarkModalOpen, setIsBookmarkModalOpen, pendingBookmark, expandedFolders, setExpandedFolders,
+    bookmarks, setBookmarks, isBookmarkModalOpen, setIsBookmarkModalOpen, pendingBookmark, expandedFolders, setExpandedFolders,
     expandedCategories, setExpandedCategories, confirmConfig, setConfirmConfig, isAddingFolder, setIsAddingFolder,
-    newFolderName, setNewFolderName, toggleBookmark, createFolder, deleteFolder, isBookmarkedAnywhere, clearFolder,
+    isRenameModalOpen, setIsRenameModalOpen, folderToRename, setFolderToRename,
+    newFolderName, setNewFolderName, isShareModalOpen, setIsShareModalOpen, isImporting, setIsImporting,
+    toggleBookmark, createFolder, renameFolder, deleteFolder, isBookmarkedAnywhere, clearFolder,
     clearAllBookmarks, toggleAllFolders, openBookmarkDialog
   } = useBookmarks();
 
@@ -154,6 +157,8 @@ export default function App() {
               setIsAddingFolder={setIsAddingFolder} setNewFolderName={setNewFolderName} expandedFolders={expandedFolders}
               setExpandedFolders={setExpandedFolders} clearFolder={clearFolder} deleteFolder={deleteFolder}
               resolveItem={resolveItem} expandedCategories={expandedCategories} setExpandedCategories={setExpandedCategories}
+              setIsShareModalOpen={setIsShareModalOpen} setIsImporting={setIsImporting}
+              setIsRenameModalOpen={setIsRenameModalOpen} setFolderToRename={setFolderToRename}
               {...commonProps}
             />
           )}
@@ -181,9 +186,20 @@ export default function App() {
         setNewFolderName={setNewFolderName} onCreate={createFolder}
       />
 
+      <FolderModal
+        isOpen={isRenameModalOpen} onClose={() => setIsRenameModalOpen(false)} newFolderName={newFolderName}
+        setNewFolderName={setNewFolderName} onCreate={(name) => renameFolder(folderToRename, name)}
+        title="重命名文件夹" buttonText="保存"
+      />
+
       <BookmarkModal
         isOpen={isBookmarkModalOpen} onClose={() => setIsBookmarkModalOpen(false)} pendingBookmark={pendingBookmark}
         bookmarks={bookmarks} toggleBookmark={toggleBookmark} isBookmarkedAnywhere={isBookmarkedAnywhere}
+      />
+
+      <ShareModal
+        isOpen={isShareModalOpen} onClose={() => setIsShareModalOpen(false)}
+        bookmarks={bookmarks} setBookmarks={setBookmarks}
       />
 
       <MobileNavBar

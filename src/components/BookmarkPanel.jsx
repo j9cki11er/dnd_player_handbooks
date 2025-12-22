@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart, Edit2, Share2 } from 'lucide-react';
 import { ItemCard, SpellListItem } from './Common';
 
 export default function BookmarkPanel({
@@ -18,7 +18,11 @@ export default function BookmarkPanel({
     selectedItemId,
     selectItem,
     openBookmarkDialog,
-    isMobile
+    isMobile,
+    setIsShareModalOpen,
+    setIsImporting,
+    setIsRenameModalOpen,
+    setFolderToRename
 }) {
     return (
         <div className="spell-browser-container p-4">
@@ -34,6 +38,13 @@ export default function BookmarkPanel({
                         </button>
                         <button onClick={clearAllBookmarks} className="action-btn-small text-red-400" title="清空所有 (Cookies)">
                             <Trash2 size={16} /> <span>全局清空</span>
+                        </button>
+                        <button
+                            onClick={() => setIsShareModalOpen(true)}
+                            className="action-btn-small"
+                            title="导入/导出"
+                        >
+                            <Share2 size={16} /> <span>导入 / 导出</span>
                         </button>
                         <button
                             onClick={() => {
@@ -65,6 +76,18 @@ export default function BookmarkPanel({
                                         <span className="count-badge opacity-60 text-xs bg-gold/10 px-2 py-0.5 rounded-full">{folderItems.length} 项</span>
                                     </div>
                                     <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setFolderToRename(folder);
+                                                setNewFolderName(folder);
+                                                setIsRenameModalOpen(true);
+                                            }}
+                                            className="action-icon-btn text-muted hover:text-gold"
+                                            title="重命名文件夹"
+                                        >
+                                            <Edit2 size={16} />
+                                        </button>
                                         <button
                                             onClick={(e) => { e.stopPropagation(); clearFolder(folder); }}
                                             className="action-icon-btn text-muted hover:text-red-400"

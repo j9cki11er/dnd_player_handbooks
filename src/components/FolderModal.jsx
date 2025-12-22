@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FolderPlus } from 'lucide-react';
 
-export default function FolderModal({ isOpen, onClose, newFolderName, setNewFolderName, onCreate }) {
+export default function FolderModal({ isOpen, onClose, newFolderName, setNewFolderName, onCreate, title, buttonText }) {
     if (!isOpen) return null;
 
     return (
@@ -14,8 +14,8 @@ export default function FolderModal({ isOpen, onClose, newFolderName, setNewFold
                 className="modal-content glass-panel"
                 onClick={e => e.stopPropagation()}
             >
-                <h3 className="modal-title gold-text">新建收藏文件夹</h3>
-                <p className="modal-subtitle">请输入新的文件夹名称</p>
+                <h3 className="modal-title gold-text">{title || '新建收藏文件夹'}</h3>
+                <p className="modal-subtitle">请输入文件夹名称</p>
 
                 <div className="new-folder-modal-body mb-6">
                     <div className="relative">
@@ -54,7 +54,7 @@ export default function FolderModal({ isOpen, onClose, newFolderName, setNewFold
                         className="gold-button px-6"
                         disabled={!newFolderName.trim()}
                     >
-                        确认
+                        {buttonText || '确认'}
                     </button>
                 </div>
             </motion.div>
