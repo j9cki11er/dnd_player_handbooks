@@ -371,7 +371,11 @@ a {
   color: var(--text-primary);
   margin-bottom: 0.25rem;
   padding: 0 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.bookmark-group .items-center>svg {
+  margin-bottom: -8px;
 }
 
 .category-list {
@@ -1813,6 +1817,24 @@ a {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   transform: scale(1.02);
   border-color: var(--gold-color) !important;
+}
+
+.reorderable-item.is-holding>* {
+  transform: scale(0.98);
+  opacity: 0.8;
+  border-color: var(--accent-gold) !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bookmark-section.is-holding .folder-header {
+  transform: scale(0.98);
+  border-color: var(--accent-gold) !important;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.bookmark-section[data-framer-component-type="ReorderItem"]:active {
+  z-index: 1000 !important;
 }
 
 .bookmark-section .folder-header {
