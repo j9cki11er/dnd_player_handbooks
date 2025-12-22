@@ -112,6 +112,13 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Reset scroll to top when tab changes on mobile
+  useEffect(() => {
+    if (isMobile) {
+      window.scrollTo(0, 0);
+    }
+  }, [activeTab, isMobile]);
+
   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   const resolveItem = (id) => resolveBookmarkItem(id, { categoryTree, spellData, featData, masteryData, data });
 
