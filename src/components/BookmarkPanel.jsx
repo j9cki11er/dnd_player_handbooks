@@ -27,21 +27,22 @@ export default function BookmarkPanel({
     reorderFolders,
     reorderItemsInFolder
 }) {
+    const [draggingId, setDraggingId] = React.useState(null);
+    const lastReorderTime = React.useRef(0);
     const handleReorderItems = (folder, categoryType, newCategoryItems) => {
         // newCategoryItems is an array of items (objects)
         const newItemIds = newCategoryItems.map(item => item.id);
 
-        // We need to merge these new IDs back into the folder's full list,
-        // maintaining the relative order of items in other categories.
         const currentFolderItems = bookmarks[folder];
-        const allResolved = currentFolderItems.map(resolveItem).filter(Boolean);
 
-        // Categorize all items in the folder
+        // Categorize all items in the folder to preserve order of other categories
         const classesIds = [];
         const spellsIds = [];
         const othersIds = [];
 
-        allResolved.forEach(item => {
+        currentFolderItems.forEach(itemId => {
+            const item = resolveItem(itemId);
+            if (!item) return;
             const isSpell = !!item.castingTime;
             const path = item.pathParts?.join(' ') || '';
             const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
@@ -61,6 +62,29 @@ export default function BookmarkPanel({
         }
 
         reorderItemsInFolder(folder, updatedFullList);
+    };
+
+    const handleDragMove = (e, info, item, items, folder, categoryType) => {
+        // Simple throttle to avoid too many state updates
+        const now = Date.now();
+        if (now - lastReorderTime.current < 50) return;
+
+        const target = document.elementFromPoint(info.point.x, info.point.y);
+        const card = target?.closest('.reorderable-item');
+
+        if (card && card.dataset.id !== item.id) {
+            const targetId = card.dataset.id;
+            const currentIndex = items.findIndex(i => i.id === item.id);
+            const targetIndex = items.findIndex(i => i.id === targetId);
+
+            if (currentIndex !== -1 && targetIndex !== -1) {
+                lastReorderTime.current = now;
+                const newItems = [...items];
+                const [movedItem] = newItems.splice(currentIndex, 1);
+                newItems.splice(targetIndex, 0, movedItem);
+                handleReorderItems(folder, categoryType, newItems);
+            }
+        }
     };
 
     return (
@@ -193,23 +217,31 @@ export default function BookmarkPanel({
                                                                             exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
                                                                             transition={{ duration: 0.25, ease: 'easeInOut' }}
                                                                         >
-                                                                            <Reorder.Group
-                                                                                axis="y"
-                                                                                values={items}
-                                                                                onReorder={(newItems) => handleReorderItems(folder, 'classes', newItems)}
-                                                                                className="item-grid"
-                                                                            >
+                                                                            <div className="item-grid">
                                                                                 {items.map(item => (
-                                                                                    <Reorder.Item key={item.id} value={item}>
+                                                                                    <motion.div
+                                                                                        key={item.id}
+                                                                                        layout
+                                                                                        drag
+                                                                                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                                                                        dragElastic={1}
+                                                                                        dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                                                                                        onDragStart={() => setDraggingId(item.id)}
+                                                                                        onDragEnd={() => setDraggingId(null)}
+                                                                                        onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'classes')}
+                                                                                        className={`reorderable-item ${draggingId === item.id ? 'is-dragging' : ''}`}
+                                                                                        data-id={item.id}
+                                                                                        style={{ touchAction: 'none' }}
+                                                                                    >
                                                                                         <ItemCard
                                                                                             item={item}
                                                                                             onClick={() => selectItem(item, false)}
                                                                                             isBookmarked={true}
                                                                                             openBookmarkDialog={openBookmarkDialog}
                                                                                         />
-                                                                                    </Reorder.Item>
+                                                                                    </motion.div>
                                                                                 ))}
-                                                                            </Reorder.Group>
+                                                                            </div>
                                                                         </motion.div>
                                                                     )}
                                                                 </AnimatePresence>
@@ -245,23 +277,31 @@ export default function BookmarkPanel({
                                                                             exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
                                                                             transition={{ duration: 0.25, ease: 'easeInOut' }}
                                                                         >
-                                                                            <Reorder.Group
-                                                                                axis="y"
-                                                                                values={items}
-                                                                                onReorder={(newItems) => handleReorderItems(folder, 'others', newItems)}
-                                                                                className="item-grid"
-                                                                            >
+                                                                            <div className="item-grid">
                                                                                 {items.map(item => (
-                                                                                    <Reorder.Item key={item.id} value={item}>
+                                                                                    <motion.div
+                                                                                        key={item.id}
+                                                                                        layout
+                                                                                        drag
+                                                                                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                                                                        dragElastic={1}
+                                                                                        dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                                                                                        onDragStart={() => setDraggingId(item.id)}
+                                                                                        onDragEnd={() => setDraggingId(null)}
+                                                                                        onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'others')}
+                                                                                        className={`reorderable-item ${draggingId === item.id ? 'is-dragging' : ''}`}
+                                                                                        data-id={item.id}
+                                                                                        style={{ touchAction: 'none' }}
+                                                                                    >
                                                                                         <ItemCard
                                                                                             item={item}
                                                                                             onClick={() => selectItem(item, false)}
                                                                                             isBookmarked={true}
                                                                                             openBookmarkDialog={openBookmarkDialog}
                                                                                         />
-                                                                                    </Reorder.Item>
+                                                                                    </motion.div>
                                                                                 ))}
-                                                                            </Reorder.Group>
+                                                                            </div>
                                                                         </motion.div>
                                                                     )}
                                                                 </AnimatePresence>
@@ -294,14 +334,22 @@ export default function BookmarkPanel({
                                                                             exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
                                                                             transition={{ duration: 0.25, ease: 'easeInOut' }}
                                                                         >
-                                                                            <Reorder.Group
-                                                                                axis="y"
-                                                                                values={items}
-                                                                                onReorder={(newItems) => handleReorderItems(folder, 'spells', newItems)}
-                                                                                className="spell-grid"
-                                                                            >
+                                                                            <div className="spell-grid">
                                                                                 {items.map(spell => (
-                                                                                    <Reorder.Item key={spell.id} value={spell}>
+                                                                                    <motion.div
+                                                                                        key={spell.id}
+                                                                                        layout
+                                                                                        drag
+                                                                                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                                                                        dragElastic={1}
+                                                                                        dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                                                                                        onDragStart={() => setDraggingId(spell.id)}
+                                                                                        onDragEnd={() => setDraggingId(null)}
+                                                                                        onDrag={(e, info) => handleDragMove(e, info, spell, items, folder, 'spells')}
+                                                                                        className={`reorderable-item ${draggingId === spell.id ? 'is-dragging' : ''}`}
+                                                                                        data-id={spell.id}
+                                                                                        style={{ touchAction: 'none' }}
+                                                                                    >
                                                                                         <SpellListItem
                                                                                             item={spell}
                                                                                             isSelected={selectedItemId === spell.id}
@@ -310,9 +358,9 @@ export default function BookmarkPanel({
                                                                                             isMobile={isMobile}
                                                                                             openBookmarkDialog={openBookmarkDialog}
                                                                                         />
-                                                                                    </Reorder.Item>
+                                                                                    </motion.div>
                                                                                 ))}
-                                                                            </Reorder.Group>
+                                                                            </div>
                                                                         </motion.div>
                                                                     )}
                                                                 </AnimatePresence>

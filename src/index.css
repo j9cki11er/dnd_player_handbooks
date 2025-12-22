@@ -547,11 +547,55 @@ a {
 
 @media (max-width: 768px) {
   .bookmark-group .item-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.75rem;
     padding-right: 0;
   }
+
+  .bookmark-group .item-grid>* {
+    width: calc(50% - 0.375rem);
+    flex-shrink: 0;
+
+  }
 }
+
+.bookmark-group .item-grid,
+.bookmark-group .spell-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.bookmark-group .item-grid>* {
+  width: calc(50% - 0.625rem);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .bookmark-group .item-grid>* {
+    width: calc(25% - 0.833rem);
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .bookmark-group .item-grid>* {
+    width: calc(25% - 0.9375rem);
+  }
+}
+
+.bookmark-group .spell-grid>* {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .bookmark-group .spell-grid>* {
+    width: calc(33.33% - 0.625rem);
+  }
+}
+
 
 
 /* Cards */
@@ -562,6 +606,16 @@ a {
   min-width: 0;
   /* Prevent grid overflow */
   word-wrap: break-word;
+  position: relative;
+  z-index: 1;
+}
+
+[data-framer-component-type="ReorderItem"] {
+  z-index: 1;
+}
+
+[data-framer-component-type="ReorderItem"]:active {
+  z-index: 100 !important;
 }
 
 @media (min-width: 768px) {
@@ -1381,7 +1435,7 @@ a {
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   /* overflow: hidden; */
-  transition: all 0.3s;
+  transition: border-color 0.3s;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1736,14 +1790,29 @@ a {
   user-select: none;
 }
 
-.bookmark-group .item-grid,
-.bookmark-group .spell-grid {
+.bookmark-group .item-grid {
   list-style: none;
 }
 
 /* Ensure cards look good when being dragged */
-.bookmark-section>[data-framer-component-type="ReorderItem"] {
-  z-index: 100;
+.reorderable-item {
+  position: relative;
+  z-index: 1;
+  transition: z-index 0s;
+  /* Instant z-index change */
+}
+
+.reorderable-item.is-dragging {
+  z-index: 1000 !important;
+  pointer-events: none;
+  /* Critical for hit detection of items underneath */
+  cursor: grabbing;
+}
+
+.reorderable-item.is-dragging>* {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+  border-color: var(--gold-color) !important;
 }
 
 .bookmark-section .folder-header {

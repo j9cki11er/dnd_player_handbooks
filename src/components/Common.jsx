@@ -108,7 +108,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
     return (
         <motion.div
             whileHover={{ scale: 1.02, y: -4 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
             onClick={onClick}
             className="item-card glass-panel group relative"
         >
@@ -146,7 +146,10 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
         openBookmarkDialog(item);
     };
     return (
-        <div className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''}`}>
+        <motion.div
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''}`}
+        >
             <div
                 onClick={onClick}
                 className="spell-card-inner"
@@ -195,7 +198,7 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                     </div>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 }
 
