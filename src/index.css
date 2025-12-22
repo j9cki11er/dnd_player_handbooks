@@ -493,8 +493,8 @@ a {
 }
 
 .collapsible-content {
-  border-left: 1px solid var(--border-color);
-  margin-left: 1.5rem;
+  /* border-left: 1px solid var(--border-color); */
+  /* margin-left: 1.5rem; */
 }
 
 .collapsible-content .dnd-content h1:first-child,
@@ -508,7 +508,7 @@ a {
 }
 
 .collapsible-content .dnd-content {
-  padding-top: 0;
+  padding-top: 1rem;
 }
 
 /* Views */
