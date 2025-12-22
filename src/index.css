@@ -498,8 +498,9 @@ a {
 }
 
 .collapsible-content .dnd-content h1:first-child,
+.collapsible-content .dnd-content h2:first-child,
 .collapsible-content .dnd-content h3:first-child {
-  display: none;
+  display: none !important;
 }
 
 .collapsible-content .overview-section {

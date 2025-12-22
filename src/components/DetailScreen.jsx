@@ -68,7 +68,16 @@ export default function DetailScreen({
                 fetch(`/content/${categoryData._selfFile.path}`)
                     .then(res => res.text())
                     .then(html => {
-                        setLoadedOverview({ html, title: categoryData._selfFile.title, item: categoryData._selfFile });
+                        // Extract first H1 or H2 as bilingual title
+                        const match = html.match(/<(h[123])>(.*?)<\/\1>/i);
+                        const displayTitle = match ? match[2].replace(/<[^>]+>/g, '').trim() : categoryData._selfFile.title;
+
+                        setLoadedOverview({
+                            html,
+                            title: categoryData._selfFile.title,
+                            displayTitle,
+                            item: categoryData._selfFile
+                        });
                         setOverviewLoading(false);
                     })
                     .catch(err => {
@@ -244,7 +253,7 @@ export default function DetailScreen({
 
                                         if (hasItemsBelow) {
                                             return (
-                                                <CollapsibleSection title={loadedOverview.title} icon={Folder} defaultExpanded={false}>
+                                                <CollapsibleSection title={loadedOverview.displayTitle || loadedOverview.title} icon={Folder} defaultExpanded={false}>
                                                     {overviewContent}
                                                 </CollapsibleSection>
                                             );
