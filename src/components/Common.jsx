@@ -1,6 +1,6 @@
 import React from 'react';
 import { Folder, Heart, Bookmark, ChevronRight, ChevronDown, ChevronUp, Layout, Book, Search, FilterX, Trash2, Menu } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function NavItem({ icon, label, active, onClick }) {
     return (
@@ -195,6 +195,51 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                     </div>
                 )}
             </div>
+        </div>
+    );
+}
+
+export function CollapsibleSection({ title, icon: Icon, children, defaultExpanded = true, headerClassName = "" }) {
+    const [isExpanded, setIsExpanded] = React.useState(defaultExpanded);
+
+    return (
+        <div className="collapsible-section mb-8">
+            <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className={`collapsible-header category-item ${headerClassName}`}
+            >
+                <div className="chevron-wrapper">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={isExpanded ? 'down' : 'right'}
+                            initial={{ rotate: isExpanded ? -90 : 0 }}
+                            animate={{ rotate: 0 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            {isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+                <div className="flex items-center gap-2 overflow-hidden flex-1 text-left py-2">
+                    {Icon && <Icon size={16} className="text-gold opacity-70" />}
+                    <h1 className="collapsible-title truncate">{title}</h1>
+                </div>
+            </button>
+            <AnimatePresence>
+                {isExpanded && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="collapsible-content overflow-hidden"
+                    >
+                        <div className="pt-6">
+                            {children}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

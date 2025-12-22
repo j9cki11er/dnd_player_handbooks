@@ -463,6 +463,53 @@ a {
   transform: rotate(90deg);
 }
 
+/* Collapsible Section */
+.collapsible-section {
+  width: 100%;
+}
+
+.collapsible-header {
+  cursor: pointer;
+  padding: 0;
+  border: 1px solid var(--border-color) !important;
+  background: var(--glass-bg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: auto !important;
+  min-height: 48px;
+}
+
+.collapsible-header:hover {
+  background: rgba(198, 180, 29, 0.1);
+  border-color: var(--accent-gold) !important;
+}
+
+.collapsible-title {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin: 0;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.collapsible-content {
+  border-left: 1px solid var(--border-color);
+  margin-left: 1.5rem;
+}
+
+.collapsible-content .dnd-content h1:first-child,
+.collapsible-content .dnd-content h3:first-child {
+  display: none;
+}
+
+.collapsible-content .overview-section {
+  margin-bottom: 0;
+}
+
+.collapsible-content .dnd-content {
+  padding-top: 0;
+}
+
 /* Views */
 .view-header {
   /* display: flex; */

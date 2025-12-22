@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Heart } from 'lucide-react';
-import { ItemCard, WeaponTable } from './Common';
+import { ArrowLeft, Heart, Folder } from 'lucide-react';
+import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
 
 export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
@@ -231,9 +231,26 @@ export default function DetailScreen({
                                         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
                                     </div>
                                 ) : loadedOverview ? (
-                                    <div className="overview-section mb-8">
-                                        <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
-                                    </div>
+                                    (() => {
+                                        const hasItemsBelow = isMasteryDirectory ||
+                                            Object.keys(currentCategoryData._children).length > 0 ||
+                                            currentCategoryData._files.filter(f => !f.isOverview).length > 0;
+
+                                        const overviewContent = (
+                                            <div className="overview-section mb-8">
+                                                <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
+                                            </div>
+                                        );
+
+                                        if (hasItemsBelow) {
+                                            return (
+                                                <CollapsibleSection title={loadedOverview.title} icon={Folder} defaultExpanded={false}>
+                                                    {overviewContent}
+                                                </CollapsibleSection>
+                                            );
+                                        }
+                                        return overviewContent;
+                                    })()
                                 ) : null}
 
                                 {isMasteryDirectory && (
