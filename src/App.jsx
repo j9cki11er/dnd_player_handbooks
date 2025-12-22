@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useLayoutEffect, useRef } from 'react';
 import rawData from './data.json';
 import spellData from './data-spells.json';
 import featData from './data-feats.json';
@@ -1327,6 +1327,14 @@ function DetailScreen({
   const [contentLoading, setContentLoading] = useState(false);
   const [loadedOverview, setLoadedOverview] = useState(null);
   const [overviewLoading, setOverviewLoading] = useState(false);
+  const scrollRef = useRef(null);
+
+  // Ensure new pages start at the top
+  useLayoutEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = 0;
+    }
+  }, [entry.id]); // Run when the entry ID changes (new overlay content)
 
   // Fetch item content
   useEffect(() => {
@@ -1464,7 +1472,7 @@ function DetailScreen({
         </div>
       </header>
 
-      <div className="detail-overlay-content custom-scrollbar">
+      <div className="detail-overlay-content custom-scrollbar" ref={scrollRef}>
         {entry.type === 'menu' ? (
           <div className="mobile-sidebar-overlay">
             <SidebarContent
