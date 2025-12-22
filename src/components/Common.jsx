@@ -87,6 +87,24 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
         openBookmarkDialog(item);
     };
 
+    const displayCategory = React.useMemo(() => {
+        if (item?.prerequisite || item?.category === '精通词条') return item.category;
+
+        const pathStr = item?.fullCategory || item?.pathParts?.join(' > ') || '';
+        const parts = pathStr.split(' > ').filter(Boolean);
+        // Strip "Chapter X:" prefixes like "第三章：角色职业" -> "角色职业"
+        const cleanParts = parts.map(p => p.replace(/^第.*?章[:：]\s*/, ''));
+
+        let cat = cleanParts[cleanParts.length - 1] || '';
+
+        // If the category matches the title (redundant), show the parent category instead
+        if (cat === item?.title && cleanParts.length > 1) {
+            cat = cleanParts[cleanParts.length - 2];
+        }
+
+        return cat;
+    }, [item]);
+
     return (
         <motion.div
             whileHover={{ scale: 1.02, y: -4 }}
@@ -96,13 +114,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
         >
             <div className="card-top">
                 <div className="flex flex-col overflow-hidden mr-8 flex-1 min-w-0">
-                    {item?.prerequisite || item?.category === '精通词条' ? (
-                        <>
-                            <span className="card-category truncate">{item.category}</span>
-                        </>
-                    ) : (
-                        <span className="card-category truncate">{item?.fullCategory || item?.pathParts?.join(' > ') || ''}</span>
-                    )}
+                    <span className="card-category truncate">{displayCategory}</span>
                 </div>
                 <div className="item-card-actions">
                     {item?.isDir && <Folder size={14} className="text-gold opacity-50 mr-2" />}
