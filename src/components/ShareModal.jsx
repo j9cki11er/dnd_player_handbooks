@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Share2, Download, Upload, Copy, Check } from 'lucide-react';
+import { Bookmark, Share2, Download, Upload, Copy, Check } from 'lucide-react';
 
 export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks }) {
     const [importText, setImportText] = useState('');
@@ -83,78 +83,89 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
             >
                 <div className="flex items-center gap-3 mb-2">
                     <Share2 className="text-gold" size={24} />
-                    <h3 className="modal-title gold-text m-0">导入 / 导出收藏</h3>
+                    <h3 className="modal-title gold-text m-0 font-bold uppercase tracking-wide">导入 / 导出收藏</h3>
                 </div>
-                <p className="modal-subtitle mb-6 text-sm opacity-70">通过分享代码将您的收藏同步到其他设备或分享给好友。</p>
+                <p className="modal-subtitle mb-8 text-sm opacity-60 italic">通过分享代码将您的收藏同步到其他设备或分享给好友。</p>
 
-                <div className="share-section mb-6">
-                    <label className="block text-xs uppercase tracking-wider opacity-50 mb-3">选择导出文件夹</label>
-                    <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto custom-scrollbar p-1">
+                <div className="share-section mb-8">
+                    <label className="text-xs uppercase tracking-widest opacity-80 mb-4 block">
+                        <Download size={14} className="text-gold" />
+                        选择导出文件夹
+                    </label>
+                    <div className="folder-selection-list max-h-48 overflow-y-auto custom-scrollbar pr-2">
                         {Object.keys(bookmarks).map(folder => (
-                            <label
+                            <div
                                 key={folder}
-                                className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs cursor-pointer transition-all ${selectedFolders[folder]
-                                        ? 'bg-gold/20 border-gold/50 text-gold'
-                                        : 'bg-white/5 border-white/10 text-muted hover:border-white/30'
-                                    }`}
+                                onClick={() => setSelectedFolders(prev => ({
+                                    ...prev,
+                                    [folder]: !prev[folder]
+                                }))}
+                                className={`folder-select-item ${selectedFolders[folder] ? 'active' : ''}`}
                             >
-                                <input
-                                    type="checkbox"
-                                    className="hidden"
-                                    checked={!!selectedFolders[folder]}
-                                    onChange={() => setSelectedFolders(prev => ({
-                                        ...prev,
-                                        [folder]: !prev[folder]
-                                    }))}
-                                />
-                                {folder}
-                                <span className="opacity-50">({bookmarks[folder]?.length || 0})</span>
-                            </label>
+                                <div className="flex items-center gap-2">
+                                    <Bookmark size={16} className={selectedFolders[folder] ? 'text-gold' : 'text-muted'} />
+                                    <span className="text-sm">{folder}</span>
+                                    <span className="opacity-40 text-[10px]">[{bookmarks[folder]?.length || 0} 项]</span>
+                                </div>
+                                <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedFolders[folder] ? 'bg-gold border-gold text-black' : 'border-white/20'}`}>
+                                    {selectedFolders[folder] && <Check size={14} strokeWidth={3} />}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="share-section mb-6">
-                    <label className="block text-xs uppercase tracking-wider opacity-50 mb-2">导出代码</label>
-                    <div className="relative">
+                <div className="share-section mb-8">
+                    <label className="text-xs uppercase tracking-widest opacity-80 mb-3 block">
+                        <Copy size={14} className="text-gold" />
+                        导出代码 (点击代码以复制)
+                    </label>
+                    <div className="relative share-code-area group">
                         <textarea
-                            readOnly
-                            className="w-full h-24 bg-black/30 border border-gold/20 rounded p-3 text-xs font-mono break-all focus:outline-none custom-scrollbar"
-                            value={exportData}
-                        />
-                        <button
                             onClick={handleCopy}
-                            className={`absolute right-2 bottom-2 p-2 rounded flex items-center gap-1 text-xs transition-colors ${copied ? 'bg-green-500/20 text-green-400' : 'bg-gold/10 hover:bg-gold/20 text-gold'}`}
+                            readOnly
+                            className="w-full h-28 bg-transparent border-none rounded text-xs font-mono break-all focus:outline-none custom-scrollbar text-gold/80 cursor-copy"
+                            value={copied ? '已复制' : exportData}
+
+                        />
+                        {/* <button
+                            onClick={handleCopy}
+                            className={`absolute right-3 bottom-3 px-3 py-1.5 rounded-md flex items-center gap-2 text-[11px] font-bold transition-all ${copied ? 'bg-green-500/20 text-green-400 border border-green-500/30' : 'bg-gold/10 hover:bg-gold/20 text-gold border border-gold/20'}`}
                         >
                             {copied ? <Check size={14} /> : <Copy size={14} />}
                             {copied ? '已复制' : '复制代码'}
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 
-                <div className="share-section mb-6">
-                    <label className="block text-xs uppercase tracking-wider opacity-50 mb-2">导入代码</label>
-                    <textarea
-                        placeholder="在此粘贴分享代码..."
-                        className={`w-full h-24 bg-black/30 border rounded p-3 text-xs font-mono break-all focus:outline-none custom-scrollbar ${error ? 'border-red-500/50' : 'border-gold/20'}`}
-                        value={importText}
-                        onChange={(e) => {
-                            setImportText(e.target.value);
-                            setError('');
-                        }}
-                    />
-                    {error && <p className="text-red-400 text-xs mt-1">{error}</p>}
+                <div className="share-section mb-8">
+                    <label className="text-xs uppercase tracking-widest opacity-80 mb-3 block">
+                        <Upload size={14} className="text-gold" />
+                        导入代码
+                    </label>
+                    <div className={`share-code-area ${error ? 'border-red-500/50' : ''}`}>
+                        <textarea
+                            placeholder="在此粘贴分享代码..."
+                            className="w-full h-28 bg-transparent border-none rounded p-4 text-xs font-mono break-all focus:outline-none custom-scrollbar"
+                            value={importText}
+                            onChange={(e) => {
+                                setImportText(e.target.value);
+                                setError('');
+                            }}
+                        />
+                    </div>
+                    {error && <p className="text-red-400 text-[11px] mt-2 font-medium flex items-center gap-1">⚠ {error}</p>}
                 </div>
 
-                <div className="modal-actions gap-3">
-                    <button onClick={onClose} className="action-btn-small px-6 py-2 h-auto">取消</button>
+                <div className="modal-actions gap-4">
+                    <button onClick={onClose} className="action-btn-small px-8 py-2.5 h-auto opacity-70 hover:opacity-100 transition-opacity">取消</button>
                     <button
                         onClick={handleImport}
-                        className="gold-button px-6"
+                        className="gold-button px-8 py-2.5 h-auto text-sm font-bold shadow-lg shadow-gold/10"
                         disabled={!importText.trim()}
                     >
-                        <Download size={16} />
-                        <span>立即导入</span>
+                        <Download size={18} />
+                        <span>确认导入</span>
                     </button>
                 </div>
             </motion.div>

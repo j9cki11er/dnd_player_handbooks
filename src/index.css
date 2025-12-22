@@ -856,9 +856,17 @@ a {
 .modal-content {
   width: 100%;
   max-width: 400px;
-  padding: 2rem;
+  padding: 2.5rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
 }
 
 .modal-title {
@@ -2119,4 +2127,48 @@ a {
     padding: 0.75rem 0.5rem;
     font-size: 0.8rem;
   }
+}
+
+/* Share Modal Specifics */
+.share-section label {
+  color: var(--accent-gold);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-code-area {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.share-code-area textarea {
+  background: none;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 0.25rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  height: 2.5rem;
+
+}
+
+.share-code-area:focus-within {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px rgba(198, 180, 29, 0.1);
+}
+
+.folder-select-item.active {
+  background: rgba(198, 180, 29, 0.1);
+  border-color: rgba(198, 180, 29, 0.4);
+  color: var(--accent-gold);
 }
