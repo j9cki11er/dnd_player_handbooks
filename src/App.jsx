@@ -67,9 +67,9 @@ const SidebarContent = ({
   onNavigate
 }) => {
   const handleNavClick = (callback) => {
-    callback();
-    // No longer calling onNavigate() (handleBack) here as it creates race conditions 
-    // when pushState is also happening. The menu closes naturally via state changes.
+    // When onNavigate is present (mobile menu context), we push to the stack
+    // instead of replacing it, so the menu stays "on the back".
+    callback(!!onNavigate);
   };
 
   const SidebarItem = ({ name, node, depth = 0 }) => {
@@ -95,7 +95,7 @@ const SidebarContent = ({
           </div>
           <button
             onClick={() => {
-              handleNavClick(() => navigateTo(node._path, false));
+              handleNavClick((push) => navigateTo(node._path, false, push));
             }}
             className="category-item-btn flex items-center gap-2 overflow-hidden flex-1 text-left"
           >
@@ -114,8 +114,8 @@ const SidebarContent = ({
                 <button
                   key={file.id}
                   onClick={() => {
-                    handleNavClick(() => {
-                      selectItem(file, false);
+                    handleNavClick((push) => {
+                      selectItem(file, push);
                       setCurrentPath(node._path);
                       setActiveTab('browser');
                     });
