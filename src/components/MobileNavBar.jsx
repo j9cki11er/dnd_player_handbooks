@@ -51,7 +51,11 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
                 className="mobile-nav-item"
                 onClick={() => {
                     setSelectedItem(null);
-                    setDetailStack(prev => [...prev, { id: 'mobile-menu', type: 'menu' }]);
+                    setDetailStack(prev => {
+                        // Avoid pushing duplicate menu if it's already the top item
+                        if (prev.length > 0 && prev[prev.length - 1].type === 'menu') return prev;
+                        return [...prev, { id: `menu-${Date.now()}`, type: 'menu' }];
+                    });
                 }}
             >
                 <Menu size={20} />

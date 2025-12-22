@@ -1256,8 +1256,7 @@ a {
   } */
 
   .card-category {
-    font-size: 0.75rem;
-    /* max-width: 70%; */
+    font-size: 0.7rem;
     overflow: visible;
     text-overflow: ellipsis;
     white-space: wrap;
