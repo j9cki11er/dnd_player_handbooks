@@ -1364,9 +1364,9 @@
     "title": "丧尸",
     "titleEn": "Zombies",
     "type": "亡灵",
-    "subDivision": "Unknown",
-    "alignment": "Unknown",
-    "cr": "Unknown",
+    "subDivision": "中型亡灵",
+    "alignment": "中立邪恶",
+    "cr": "1/4",
     "path": "monsters_original/亡灵/丧尸/丧尸.htm"
   },
   {

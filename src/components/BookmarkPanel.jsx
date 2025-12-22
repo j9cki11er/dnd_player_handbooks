@@ -37,22 +37,27 @@ export default function BookmarkPanel({
 
         // Categorize all items in the folder to preserve order of other categories
         const rulesIds = [];
+        const creaturesIds = [];
         const spellsIds = [];
 
         currentFolderItems.forEach(itemId => {
             const item = resolveItem(itemId);
             if (!item) return;
             const isSpell = !!item.castingTime;
+            const isCreature = item.pathParts?.some(p => p.includes('附录 B') || p.includes('生物数据卡'));
 
             if (isSpell) spellsIds.push(item.id);
+            else if (isCreature) creaturesIds.push(item.id);
             else rulesIds.push(item.id);
         });
 
         let updatedFullList = [];
         if (categoryType === 'rules') {
-            updatedFullList = [...newItemIds, ...spellsIds];
+            updatedFullList = [...newItemIds, ...creaturesIds, ...spellsIds];
+        } else if (categoryType === 'creatures') {
+            updatedFullList = [...rulesIds, ...newItemIds, ...spellsIds];
         } else if (categoryType === 'spells') {
-            updatedFullList = [...rulesIds, ...newItemIds];
+            updatedFullList = [...rulesIds, ...creaturesIds, ...newItemIds];
         }
 
         reorderItemsInFolder(folder, updatedFullList);
@@ -190,7 +195,9 @@ export default function BookmarkPanel({
                                                         const isCatExpanded = expandedCategories[catId] !== false;
                                                         const items = folderItems.map(resolveItem).filter(item => {
                                                             if (!item) return false;
-                                                            return !item.castingTime;
+                                                            const isSpell = !!item.castingTime;
+                                                            const isCreature = item.pathParts?.some(p => p.includes('附录 B') || p.includes('生物数据卡'));
+                                                            return !isSpell && !isCreature;
                                                         });
                                                         if (items.length === 0) return null;
                                                         return (
@@ -222,6 +229,63 @@ export default function BookmarkPanel({
                                                                                         onDragStart={() => setDraggingId(item.id)}
                                                                                         onDragEnd={() => setDraggingId(null)}
                                                                                         onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'rules')}
+                                                                                        className={`reorderable-item ${draggingId === item.id ? 'is-dragging' : ''}`}
+                                                                                        data-id={item.id}
+                                                                                        style={{ touchAction: 'none' }}
+                                                                                    >
+                                                                                        <ItemCard
+                                                                                            item={item}
+                                                                                            onClick={() => selectItem(item, false)}
+                                                                                            isBookmarked={true}
+                                                                                            openBookmarkDialog={openBookmarkDialog}
+                                                                                        />
+                                                                                    </motion.div>
+                                                                                ))}
+                                                                            </div>
+                                                                        </motion.div>
+                                                                    )}
+                                                                </AnimatePresence>
+                                                            </div>
+                                                        );
+                                                    })()}
+
+                                                    {(() => {
+                                                        const catId = `${folder}-creatures`;
+                                                        const isCatExpanded = expandedCategories[catId] !== false;
+                                                        const items = folderItems.map(resolveItem).filter(item => {
+                                                            if (!item) return false;
+                                                            return item.pathParts?.some(p => p.includes('附录 B') || p.includes('生物数据卡'));
+                                                        });
+                                                        if (items.length === 0) return null;
+                                                        return (
+                                                            <div className="bookmark-group">
+                                                                <div
+                                                                    className="flex items-center gap-2 mb-3 cursor-pointer group/cat"
+                                                                    onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
+                                                                >
+                                                                    {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                                                                    <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">生物和魔宠数据卡</h4>
+                                                                </div>
+                                                                <AnimatePresence initial={false}>
+                                                                    {isCatExpanded && (
+                                                                        <motion.div
+                                                                            initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
+                                                                            animate={{ height: 'auto', opacity: 1, overflow: 'visible' }}
+                                                                            exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
+                                                                            transition={{ duration: 0.25, ease: 'easeInOut' }}
+                                                                        >
+                                                                            <div className="item-grid">
+                                                                                {items.map(item => (
+                                                                                    <motion.div
+                                                                                        key={item.id}
+                                                                                        layout
+                                                                                        drag
+                                                                                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                                                                        dragElastic={1}
+                                                                                        dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                                                                                        onDragStart={() => setDraggingId(item.id)}
+                                                                                        onDragEnd={() => setDraggingId(null)}
+                                                                                        onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'creatures')}
                                                                                         className={`reorderable-item ${draggingId === item.id ? 'is-dragging' : ''}`}
                                                                                         data-id={item.id}
                                                                                         style={{ touchAction: 'none' }}
