@@ -212,9 +212,7 @@ a {
   }
 
   .sidebar.mobile-open {
-    transform: translateX(0);
-    padding-bottom: 10vh;
-    width: 100%;
+    display: none;
   }
 
   .sticky-top-bar {
@@ -233,12 +231,7 @@ a {
   }
 
   .mobile-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 90;
+    display: none;
   }
 }
 
@@ -1641,6 +1634,29 @@ a {
   .modal-overlay {
     padding-bottom: 80px;
   }
+}
+
+.mobile-sidebar-overlay {
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.mobile-sidebar-overlay .sidebar-header {
+  margin-bottom: 1rem;
+}
+
+.mobile-sidebar-overlay .nav-menu {
+  margin-bottom: 2rem;
+}
+
+.mobile-sidebar-overlay .sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.mobile-sidebar-overlay .category-item {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
 }
 
 /* Logo Styling */

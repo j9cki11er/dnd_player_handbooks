@@ -48,6 +48,151 @@ const data = rawData.map(item => {
   return item;
 });
 
+const SidebarContent = ({
+  categoryTree,
+  activeTab,
+  setActiveTab,
+  setCurrentPath,
+  setSelectedItem,
+  setDetailStack,
+  theme,
+  toggleTheme,
+  currentPath,
+  selectedItem,
+  toggleExpand,
+  expandedPaths,
+  setSearchQuery,
+  navigateTo,
+  selectItem,
+  onNavigate
+}) => {
+  const handleNavClick = (callback) => {
+    callback();
+    // No longer calling onNavigate() (handleBack) here as it creates race conditions 
+    // when pushState is also happening. The menu closes naturally via state changes.
+  };
+
+  const SidebarItem = ({ name, node, depth = 0 }) => {
+    const pathStr = node._path.join('/');
+    const isExpanded = expandedPaths[pathStr];
+    const isActive = currentPath.join('/') === pathStr && !selectedItem;
+    const hasChildren = Object.keys(node._children).length > 0;
+    const nonOverviewFiles = node._files.filter(f => !f.isOverview);
+
+    return (
+      <div className="sidebar-node" style={{ marginLeft: depth > 0 ? '12px' : '0' }}>
+        <div className={`category-item ${isActive ? 'active' : ''}`}>
+          <div
+            className="chevron-wrapper cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleExpand(pathStr);
+            }}
+          >
+            {hasChildren || nonOverviewFiles.length > 0 ? (
+              isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />
+            ) : <div style={{ width: 18 }} />}
+          </div>
+          <button
+            onClick={() => {
+              handleNavClick(() => navigateTo(node._path, false));
+            }}
+            className="category-item-btn flex items-center gap-2 overflow-hidden flex-1 text-left"
+          >
+            <Folder size={14} className="opacity-50" />
+            <span className="truncate">{name}</span>
+          </button>
+        </div>
+        {isExpanded && (
+          <div className="sidebar-children border-l border-gold/10 ml-2">
+            {Object.entries(node._children).map(([childName, childNode]) => (
+              <SidebarItem key={childName} name={childName} node={childNode} depth={depth + 1} />
+            ))}
+            {nonOverviewFiles.map(file => {
+              const fileActive = selectedItem?.id === file.id;
+              return (
+                <button
+                  key={file.id}
+                  onClick={() => {
+                    handleNavClick(() => {
+                      selectItem(file, false);
+                      setCurrentPath(node._path);
+                      setActiveTab('browser');
+                    });
+                  }}
+                  className={`category-item file-item ${fileActive ? 'active' : ''}`}
+                  style={{ marginLeft: '12px' }}
+                >
+                  <div className="flex items-center gap-2 overflow-hidden">
+                    <FileText size={14} className="opacity-50" />
+                    <span className="truncate text-xs">{file.title}</span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <>
+      <a href="/" className="sidebar-header" onClick={(e) => { e.preventDefault(); handleNavClick(() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); setDetailStack([]); }); }}>
+        <img src="/DFD logo-cropped.png" alt="Logo" className="sidebar-logo" />
+        <div className="flex flex-col">
+          <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
+        </div>
+      </a>
+      <br></br>
+      <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册2024</span>
+
+      <nav className="nav-menu">
+        <NavItem
+          icon={<Layout size={20} />}
+          label="资料游览"
+          active={activeTab === 'browser'}
+          onClick={() => handleNavClick(() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); setDetailStack([]); })}
+        />
+        <NavItem
+          icon={<Book size={20} />}
+          label="法术列表"
+          active={activeTab === 'spells'}
+          onClick={() => handleNavClick(() => { setActiveTab('spells'); setSelectedItem(null); setDetailStack([]); setSearchQuery(''); })}
+        />
+        <NavItem
+          icon={<Search size={20} />}
+          label="全局搜索"
+          active={activeTab === 'search'}
+          onClick={() => handleNavClick(() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); })}
+        />
+        <NavItem
+          icon={<Heart size={20} />}
+          label="我的收藏"
+          active={activeTab === 'bookmarks'}
+          onClick={() => handleNavClick(() => { setActiveTab('bookmarks'); setSelectedItem(null); setDetailStack([]); })}
+        />
+      </nav>
+
+      <div className="sidebar-section">
+        <h3 className="section-title">分类目录</h3>
+        <div className="category-list">
+          {Object.entries(categoryTree).map(([catName, catNode]) => (
+            <SidebarItem key={catName} name={catName} node={catNode} />
+          ))}
+        </div>
+      </div>
+
+      <div className="theme-toggle-container">
+        <button onClick={toggleTheme} className="theme-toggle-btn">
+          {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          <span>{theme === 'dark' ? '切换浅色模式' : '切换深色模式'}</span>
+        </button>
+      </div>
+    </>
+  );
+};
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('browser'); // browser, bookmarks, search, spells
   const [selectedItem, setSelectedItem] = useState(null); // The actual content item to show (file)
@@ -60,7 +205,6 @@ export default function App() {
   const [expandedPaths, setExpandedPaths] = useState({}); // Track expanded folders in sidebar
   const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
   const [pendingBookmark, setPendingBookmark] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedFolders, setExpandedFolders] = useState({}); // { folderName: boolean }
   const [expandedCategories, setExpandedCategories] = useState({}); // { "folderName-catName": boolean }
   const [confirmConfig, setConfirmConfig] = useState(null);
@@ -299,7 +443,6 @@ export default function App() {
       const pathStr = path.join('/');
       setExpandedPaths(prev => ({ ...prev, [pathStr]: true }));
     }
-    setIsMobileMenuOpen(false);
   };
 
   const handleBack = () => {
@@ -467,70 +610,6 @@ export default function App() {
   }, [detailStack]);
 
 
-  // Sidebar Recursive Component
-  const SidebarItem = ({ name, node, depth = 0 }) => {
-    const pathStr = node._path.join('/');
-    const isExpanded = expandedPaths[pathStr];
-    const isActive = currentPath.join('/') === pathStr && !selectedItem;
-    const hasChildren = Object.keys(node._children).length > 0;
-    const nonOverviewFiles = node._files.filter(f => !f.isOverview);
-
-    return (
-      <div className="sidebar-node" style={{ marginLeft: depth > 0 ? '12px' : '0' }}>
-        <div className={`category-item ${isActive ? 'active' : ''}`}>
-          <div
-            className="chevron-wrapper cursor-pointer"
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleExpand(pathStr);
-            }}
-          >
-            {hasChildren || nonOverviewFiles.length > 0 ? (
-              isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />
-            ) : <div style={{ width: 18 }} />}
-          </div>
-          <button
-            onClick={() => {
-              navigateTo(node._path, false);
-            }}
-            className="category-item-btn flex items-center gap-2 overflow-hidden flex-1 text-left"
-          >
-            <Folder size={14} className="opacity-50" />
-            <span className="truncate">{name}</span>
-          </button>
-        </div>
-        {isExpanded && (
-          <div className="sidebar-children border-l border-gold/10 ml-2">
-            {/* Sub-folders */}
-            {Object.entries(node._children).map(([childName, childNode]) => (
-              <SidebarItem key={childName} name={childName} node={childNode} depth={depth + 1} />
-            ))}
-            {/* Files directly under this folder */}
-            {nonOverviewFiles.map(file => {
-              const fileActive = selectedItem?.id === file.id;
-              return (
-                <button
-                  key={file.id}
-                  onClick={() => {
-                    selectItem(file, false);
-                    setCurrentPath(node._path);
-                    setActiveTab('browser');
-                  }}
-                  className={`category-item file-item ${fileActive ? 'active' : ''}`}
-                  style={{ marginLeft: '12px' }}
-                >
-                  <div className="flex items-center gap-2 overflow-hidden">
-                    <FileText size={14} className="opacity-50" />
-                    <span className="truncate text-xs">{file.title}</span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </div>
-    );
-  };
 
   const TopBar = () => {
     const getTitle = () => {
@@ -573,61 +652,25 @@ export default function App() {
   return (
     <div className="app-container">
       <TopBar />
-      {/* Sidebar */}
-      <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-        <a href="/" className="sidebar-header">
-          <img src="/DFD logo-cropped.png" alt="Logo" className="sidebar-logo" />
-          <div className="flex flex-col">
-            <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
-          </div>
-        </a>
-        <br></br>
-        <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册2024</span>
-
-
-
-        <nav className="nav-menu">
-          <NavItem
-            icon={<Layout size={20} />}
-            label="资料游览"
-            active={activeTab === 'browser'}
-            onClick={() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); }}
-          />
-          <NavItem
-            icon={<Book size={20} />}
-            label="法术列表"
-            active={activeTab === 'spells'}
-            onClick={() => { setActiveTab('spells'); setSelectedItem(null); setSearchQuery(''); }}
-          />
-          <NavItem
-            icon={<Search size={20} />}
-            label="全局搜索"
-            active={activeTab === 'search'}
-            onClick={() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); }}
-          />
-          <NavItem
-            icon={<Heart size={20} />}
-            label="我的收藏"
-            active={activeTab === 'bookmarks'}
-            onClick={() => { setActiveTab('bookmarks'); setSelectedItem(null); setDetailStack([]); }}
-          />
-        </nav>
-
-        <div className="sidebar-section">
-          <h3 className="section-title">分类目录</h3>
-          <div className="category-list">
-            {Object.entries(categoryTree).map(([catName, catNode]) => (
-              <SidebarItem key={catName} name={catName} node={catNode} />
-            ))}
-          </div>
-        </div>
-
-        <div className="theme-toggle-container">
-          <button onClick={toggleTheme} className="theme-toggle-btn">
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            <span>{theme === 'dark' ? '切换浅色模式' : '切换深色模式'}</span>
-          </button>
-        </div>
+      {/* Desktop Sidebar */}
+      <aside className="sidebar">
+        <SidebarContent
+          categoryTree={categoryTree}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          setCurrentPath={setCurrentPath}
+          setSelectedItem={setSelectedItem}
+          setDetailStack={setDetailStack}
+          theme={theme}
+          toggleTheme={toggleTheme}
+          currentPath={currentPath}
+          selectedItem={selectedItem}
+          toggleExpand={toggleExpand}
+          expandedPaths={expandedPaths}
+          setSearchQuery={setSearchQuery}
+          navigateTo={navigateTo}
+          selectItem={selectItem}
+        />
       </aside>
 
       {/* Main Content */}
@@ -1085,6 +1128,21 @@ export default function App() {
               isBookmarkedAnywhere={isBookmarkedAnywhere}
               categoryTree={categoryTree}
               isMobile={isMobile}
+              SidebarContent={SidebarContent}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+              setCurrentPath={setCurrentPath}
+              setSelectedItem={setSelectedItem}
+              setDetailStack={setDetailStack}
+              theme={theme}
+              toggleTheme={toggleTheme}
+              currentPath={currentPath}
+              selectedItem={selectedItem}
+              toggleExpand={toggleExpand}
+              expandedPaths={expandedPaths}
+              setSearchQuery={setSearchQuery}
+              navigateTo={navigateTo}
+              selectItem={selectItem}
             />
           ))}
         </AnimatePresence>
@@ -1190,15 +1248,7 @@ export default function App() {
       </AnimatePresence>
 
 
-      {/* Mobile Menu Backdrop */}
-      {
-        isMobileMenuOpen && (
-          <div
-            className="mobile-backdrop"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-        )
-      }
+      {/* Mobile Navigation Bar */}
 
       {/* Mobile Navigation Bar */}
       <MobileNavBar
@@ -1209,7 +1259,6 @@ export default function App() {
         setSelectedItem={setSelectedItem}
         setDetailStack={setDetailStack}
         setCurrentPath={setCurrentPath}
-        toggleMenu={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         theme={theme}
         toggleTheme={toggleTheme}
       />
@@ -1264,7 +1313,16 @@ const WeaponTable = ({ weapons }) => {
   );
 };
 
-function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile }) {
+function DetailScreen({
+  entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
+  SidebarContent, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
+  currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery, navigateTo, selectItem
+}) {
+  const sidebarProps = {
+    categoryTree, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack,
+    theme, toggleTheme, currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery,
+    navigateTo, selectItem
+  };
   const [loadedContent, setLoadedContent] = useState('');
   const [contentLoading, setContentLoading] = useState(false);
   const [loadedOverview, setLoadedOverview] = useState(null);
@@ -1391,7 +1449,7 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
             <ArrowLeft size={20} />
           </button>
           <h1 className="top-bar-title truncate max-w-[200px] sm:max-w-md">
-            {selectedItem ? selectedItem.title : (currentPath[currentPath.length - 1] || '目录')}
+            {entry.type === 'menu' ? '目录' : (selectedItem ? selectedItem.title : (currentPath[currentPath.length - 1] || '目录'))}
           </h1>
         </div>
         <div className="top-bar-actions">
@@ -1407,146 +1465,155 @@ function DetailScreen({ entry, index, onBack, onNavigate, onSelectItem, openBook
       </header>
 
       <div className="detail-overlay-content custom-scrollbar">
-        <div className="p-6">
-          {selectedItem ? (
-            <>
-              {selectedItem.pathParts && (
-                <div className="mb-4 opacity-60 text-xs uppercase tracking-widest overflow-hidden text-ellipsis whitespace-nowrap">
-                  {selectedItem.pathParts.join(' > ')}
-                </div>
-              )}
-              {isFeatCategory ? (
-                <div className="directory-view">
-                  <h3 className="section-title mb-4">专长列表</h3>
-                  <div className="item-grid">
-                    {featsInCategory.map(feat => (
-                      <ItemCard
-                        key={feat.id}
-                        item={feat}
-                        onClick={() => onSelectItem(feat)}
-                        isBookmarked={isBookmarkedAnywhere(feat.id)}
-                        openBookmarkDialog={openBookmarkDialog}
-                      />
-                    ))}
+        {entry.type === 'menu' ? (
+          <div className="mobile-sidebar-overlay">
+            <SidebarContent
+              {...sidebarProps}
+              onNavigate={onBack}
+            />
+          </div>
+        ) : (
+          <div className="p-6">
+            {selectedItem ? (
+              <>
+                {selectedItem.pathParts && (
+                  <div className="mb-4 opacity-60 text-xs uppercase tracking-widest overflow-hidden text-ellipsis whitespace-nowrap">
+                    {selectedItem.pathParts.join(' > ')}
                   </div>
-                </div>
-              ) : isMasteryCategory ? (
-                <div className="directory-view">
-                  <h3 className="section-title mb-4">精通词条</h3>
-                  <div className="item-grid">
-                    {masteriesInCategory.map(mastery => (
-                      <ItemCard
-                        key={mastery.id}
-                        item={mastery}
-                        onClick={() => onSelectItem(mastery)}
-                        isBookmarked={isBookmarkedAnywhere(mastery.id)}
-                        openBookmarkDialog={openBookmarkDialog}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ) : contentLoading ? (
-                <div className="py-20 flex flex-col items-center gap-4">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
-                  <p className="text-gold opacity-60">加载中...</p>
-                </div>
-              ) : (
-                <>
-                  <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
-                  {selectedItem.category === '精通词条' && (
-                    <WeaponTable weapons={associatedWeapons} />
-                  )}
-                </>
-              )}
-            </>
-          ) : currentCategoryData ? (
-            <div className="directory-view">
-              {overviewLoading ? (
-                <div className="overview-section mb-8 p-12 flex justify-center">
-                  <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
-                </div>
-              ) : loadedOverview ? (
-                <div className="overview-section mb-8">
-                  <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
-                </div>
-              ) : null}
-
-              {/* Mastery Grid in Directory View */}
-              {isMasteryDirectory && (
-                <div className="directory-view mb-8">
-                  {/* <h3 className="section-title mb-4">精通词条</h3> */}
-                  <div className="item-grid">
-                    {masteriesInCategory.map(mastery => (
-                      <ItemCard
-                        key={mastery.id}
-                        item={mastery}
-                        onClick={() => onSelectItem(mastery)}
-                        isBookmarked={isBookmarkedAnywhere(mastery.id)}
-                        openBookmarkDialog={openBookmarkDialog}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Subdirectories */}
-              {Object.keys(currentCategoryData._children).length > 0 && (
-                <div className="mb-8">
-                  <h3 className="section-title mb-4">子目录</h3>
-                  <div className="item-grid">
-                    {Object.entries(currentCategoryData._children).map(([name, node]) => (
-                      <ItemCard
-                        key={node._id}
-                        item={{
-                          id: node._id,
-                          title: node._title,
-                          pathParts: node._path,
-                          isDir: true
-                        }}
-                        onClick={() => onNavigate(node._path)}
-                        isBookmarked={isBookmarkedAnywhere(node._id)}
-                        openBookmarkDialog={openBookmarkDialog}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Files */}
-              {(() => {
-                const files = currentCategoryData._files.filter(f => !f.isOverview);
-                const isAppendixB = entry.path && entry.path.some(p => p.includes('附录 B'));
-                const sortedFiles = isAppendixB
-                  ? [...files].sort((a, b) => {
-                    const crA = parseCR(a.cr);
-                    const crB = parseCR(b.cr);
-                    if (crA !== crB) return crA - crB;
-                    return a.title.localeCompare(b.title, 'zh-CN');
-                  })
-                  : files;
-
-                if (sortedFiles.length === 0) return null;
-
-                return (
-                  <div>
-                    <h3 className="section-title mb-4">内容条目</h3>
+                )}
+                {isFeatCategory ? (
+                  <div className="directory-view">
+                    <h3 className="section-title mb-4">专长列表</h3>
                     <div className="item-grid">
-                      {sortedFiles.map(item => (
+                      {featsInCategory.map(feat => (
                         <ItemCard
-                          key={item.id}
-                          item={item}
-                          onClick={() => onSelectItem(item)}
-                          isBookmarked={isBookmarkedAnywhere(item.id)}
+                          key={feat.id}
+                          item={feat}
+                          onClick={() => onSelectItem(feat)}
+                          isBookmarked={isBookmarkedAnywhere(feat.id)}
                           openBookmarkDialog={openBookmarkDialog}
                         />
                       ))}
                     </div>
                   </div>
-                );
-              })()}
-            </div>
-          ) : null}
-        </div>
+                ) : isMasteryCategory ? (
+                  <div className="directory-view">
+                    <h3 className="section-title mb-4">精通词条</h3>
+                    <div className="item-grid">
+                      {masteriesInCategory.map(mastery => (
+                        <ItemCard
+                          key={mastery.id}
+                          item={mastery}
+                          onClick={() => onSelectItem(mastery)}
+                          isBookmarked={isBookmarkedAnywhere(mastery.id)}
+                          openBookmarkDialog={openBookmarkDialog}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ) : contentLoading ? (
+                  <div className="py-20 flex flex-col items-center gap-4">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
+                    <p className="text-gold opacity-60">加载中...</p>
+                  </div>
+                ) : (
+                  <>
+                    <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+                    {selectedItem.category === '精通词条' && (
+                      <WeaponTable weapons={associatedWeapons} />
+                    )}
+                  </>
+                )}
+              </>
+            ) : currentCategoryData ? (
+              <div className="directory-view">
+                {overviewLoading ? (
+                  <div className="overview-section mb-8 p-12 flex justify-center">
+                    <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
+                  </div>
+                ) : loadedOverview ? (
+                  <div className="overview-section mb-8">
+                    <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
+                  </div>
+                ) : null}
+
+                {/* Mastery Grid in Directory View */}
+                {isMasteryDirectory && (
+                  <div className="directory-view mb-8">
+                    {/* <h3 className="section-title mb-4">精通词条</h3> */}
+                    <div className="item-grid">
+                      {masteriesInCategory.map(mastery => (
+                        <ItemCard
+                          key={mastery.id}
+                          item={mastery}
+                          onClick={() => onSelectItem(mastery)}
+                          isBookmarked={isBookmarkedAnywhere(mastery.id)}
+                          openBookmarkDialog={openBookmarkDialog}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Subdirectories */}
+                {Object.keys(currentCategoryData._children).length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="section-title mb-4">子目录</h3>
+                    <div className="item-grid">
+                      {Object.entries(currentCategoryData._children).map(([name, node]) => (
+                        <ItemCard
+                          key={node._id}
+                          item={{
+                            id: node._id,
+                            title: node._title,
+                            pathParts: node._path,
+                            isDir: true
+                          }}
+                          onClick={() => onNavigate(node._path)}
+                          isBookmarked={isBookmarkedAnywhere(node._id)}
+                          openBookmarkDialog={openBookmarkDialog}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Files */}
+                {(() => {
+                  const files = currentCategoryData._files.filter(f => !f.isOverview);
+                  const isAppendixB = entry.path && entry.path.some(p => p.includes('附录 B'));
+                  const sortedFiles = isAppendixB
+                    ? [...files].sort((a, b) => {
+                      const crA = parseCR(a.cr);
+                      const crB = parseCR(b.cr);
+                      if (crA !== crB) return crA - crB;
+                      return a.title.localeCompare(b.title, 'zh-CN');
+                    })
+                    : files;
+
+                  if (sortedFiles.length === 0) return null;
+
+                  return (
+                    <div>
+                      <h3 className="section-title mb-4">内容条目</h3>
+                      <div className="item-grid">
+                        {sortedFiles.map(item => (
+                          <ItemCard
+                            key={item.id}
+                            item={item}
+                            onClick={() => onSelectItem(item)}
+                            isBookmarked={isBookmarkedAnywhere(item.id)}
+                            openBookmarkDialog={openBookmarkDialog}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            ) : null}
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -1561,7 +1628,7 @@ function NavItem({ icon, label, active, onClick }) {
   );
 }
 
-function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, toggleMenu, theme, toggleTheme }) {
+function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, theme, toggleTheme }) {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     setSelectedItem(null);
@@ -1610,9 +1677,8 @@ function MobileNavBar({ activeTab, setActiveTab, activePath, navigateTo, setSele
       <button
         className="mobile-nav-item"
         onClick={() => {
-          toggleMenu();
           setSelectedItem(null);
-          setDetailStack([]);
+          setDetailStack(prev => [...prev, { id: 'mobile-menu', type: 'menu' }]);
         }}
       >
         <Menu size={20} />
