@@ -99,7 +99,7 @@ export default function App() {
     isRenameModalOpen, setIsRenameModalOpen, folderToRename, setFolderToRename,
     newFolderName, setNewFolderName, isShareModalOpen, setIsShareModalOpen, isImporting, setIsImporting,
     toggleBookmark, createFolder, renameFolder, deleteFolder, isBookmarkedAnywhere, clearFolder,
-    clearAllBookmarks, toggleAllFolders, openBookmarkDialog
+    clearAllBookmarks, toggleAllFolders, openBookmarkDialog, reorderFolders, reorderItemsInFolder
   } = useBookmarks();
 
   const { searchResults } = useSearch({ data, spellData, featData, masteryData, searchQuery });
@@ -159,6 +159,7 @@ export default function App() {
               resolveItem={resolveItem} expandedCategories={expandedCategories} setExpandedCategories={setExpandedCategories}
               setIsShareModalOpen={setIsShareModalOpen} setIsImporting={setIsImporting}
               setIsRenameModalOpen={setIsRenameModalOpen} setFolderToRename={setFolderToRename}
+              reorderFolders={reorderFolders} reorderItemsInFolder={reorderItemsInFolder}
               {...commonProps}
             />
           )}

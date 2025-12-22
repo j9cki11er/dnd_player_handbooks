@@ -6,10 +6,26 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
     const [importText, setImportText] = useState('');
     const [copied, setCopied] = useState(false);
     const [error, setError] = useState('');
+    const [selectedFolders, setSelectedFolders] = useState(() => {
+        const folders = Object.keys(bookmarks);
+        const state = {};
+        folders.forEach(f => state[f] = true);
+        return state;
+    });
 
     if (!isOpen) return null;
 
-    const exportData = btoa(encodeURIComponent(JSON.stringify(bookmarks)));
+    const getExportData = () => {
+        const filteredBookmarks = {};
+        Object.keys(bookmarks).forEach(folder => {
+            if (selectedFolders[folder]) {
+                filteredBookmarks[folder] = bookmarks[folder];
+            }
+        });
+        return btoa(encodeURIComponent(JSON.stringify(filteredBookmarks)));
+    };
+
+    const exportData = getExportData();
 
     const handleCopy = () => {
         navigator.clipboard.writeText(exportData);
@@ -33,7 +49,23 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                 }
             }
 
-            setBookmarks(parsed);
+            setBookmarks(prev => {
+                const newBookmarks = { ...prev };
+
+                Object.keys(parsed).forEach(folderName => {
+                    let finalName = folderName;
+                    let counter = 2;
+
+                    // Collision resolution: keep original, rename incoming
+                    while (newBookmarks[finalName]) {
+                        finalName = `${folderName}_${counter++}`;
+                    }
+
+                    newBookmarks[finalName] = parsed[folderName];
+                });
+
+                return newBookmarks;
+            });
             onClose();
         } catch (e) {
             setError(e.message === '数据结构无效' || e.message === '格式不正确' ? e.message : '无效的分享代码');
@@ -54,6 +86,33 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                     <h3 className="modal-title gold-text m-0">导入 / 导出收藏</h3>
                 </div>
                 <p className="modal-subtitle mb-6 text-sm opacity-70">通过分享代码将您的收藏同步到其他设备或分享给好友。</p>
+
+                <div className="share-section mb-6">
+                    <label className="block text-xs uppercase tracking-wider opacity-50 mb-3">选择导出文件夹</label>
+                    <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto custom-scrollbar p-1">
+                        {Object.keys(bookmarks).map(folder => (
+                            <label
+                                key={folder}
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs cursor-pointer transition-all ${selectedFolders[folder]
+                                        ? 'bg-gold/20 border-gold/50 text-gold'
+                                        : 'bg-white/5 border-white/10 text-muted hover:border-white/30'
+                                    }`}
+                            >
+                                <input
+                                    type="checkbox"
+                                    className="hidden"
+                                    checked={!!selectedFolders[folder]}
+                                    onChange={() => setSelectedFolders(prev => ({
+                                        ...prev,
+                                        [folder]: !prev[folder]
+                                    }))}
+                                />
+                                {folder}
+                                <span className="opacity-50">({bookmarks[folder]?.length || 0})</span>
+                            </label>
+                        ))}
+                    </div>
+                </div>
 
                 <div className="share-section mb-6">
                     <label className="block text-xs uppercase tracking-wider opacity-50 mb-2">导出代码</label>

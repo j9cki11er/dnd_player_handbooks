@@ -115,6 +115,31 @@ export function useBookmarks() {
         setExpandedFolders(newState);
     };
 
+    const reorderFolders = (newOrder) => {
+        setBookmarks(prev => {
+            const next = {};
+            newOrder.forEach(folder => {
+                if (prev[folder]) {
+                    next[folder] = prev[folder];
+                }
+            });
+            // Ensure any missed folders are added at the end (safety)
+            Object.keys(prev).forEach(folder => {
+                if (!next[folder]) {
+                    next[folder] = prev[folder];
+                }
+            });
+            return next;
+        });
+    };
+
+    const reorderItemsInFolder = (folderName, newItemIds) => {
+        setBookmarks(prev => ({
+            ...prev,
+            [folderName]: newItemIds
+        }));
+    };
+
     const openBookmarkDialog = (item) => {
         setPendingBookmark(item);
         setIsBookmarkModalOpen(true);
@@ -141,6 +166,8 @@ export function useBookmarks() {
         clearFolder,
         clearAllBookmarks,
         toggleAllFolders,
-        openBookmarkDialog
+        openBookmarkDialog,
+        reorderFolders,
+        reorderItemsInFolder
     };
 }

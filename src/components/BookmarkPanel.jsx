@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart, Edit2, Share2 } from 'lucide-react';
+import { motion, Reorder } from 'framer-motion';
 import { ItemCard, SpellListItem } from './Common';
 
 export default function BookmarkPanel({
@@ -22,8 +23,46 @@ export default function BookmarkPanel({
     setIsShareModalOpen,
     setIsImporting,
     setIsRenameModalOpen,
-    setFolderToRename
+    setFolderToRename,
+    reorderFolders,
+    reorderItemsInFolder
 }) {
+    const handleReorderItems = (folder, categoryType, newCategoryItems) => {
+        // newCategoryItems is an array of items (objects)
+        const newItemIds = newCategoryItems.map(item => item.id);
+
+        // We need to merge these new IDs back into the folder's full list,
+        // maintaining the relative order of items in other categories.
+        const currentFolderItems = bookmarks[folder];
+        const allResolved = currentFolderItems.map(resolveItem).filter(Boolean);
+
+        // Categorize all items in the folder
+        const classesIds = [];
+        const spellsIds = [];
+        const othersIds = [];
+
+        allResolved.forEach(item => {
+            const isSpell = !!item.castingTime;
+            const path = item.pathParts?.join(' ') || '';
+            const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
+
+            if (isSpecial) classesIds.push(item.id);
+            else if (isSpell) spellsIds.push(item.id);
+            else othersIds.push(item.id);
+        });
+
+        let updatedFullList = [];
+        if (categoryType === 'classes') {
+            updatedFullList = [...newItemIds, ...othersIds, ...spellsIds];
+        } else if (categoryType === 'others') {
+            updatedFullList = [...classesIds, ...newItemIds, ...spellsIds];
+        } else if (categoryType === 'spells') {
+            updatedFullList = [...classesIds, ...othersIds, ...newItemIds];
+        }
+
+        reorderItemsInFolder(folder, updatedFullList);
+    };
+
     return (
         <div className="spell-browser-container p-4">
             <div className="spell-list-panel">
@@ -59,20 +98,29 @@ export default function BookmarkPanel({
                     </div>
                 </div>
 
-                <div className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar">
+                <Reorder.Group
+                    axis="y"
+                    values={Object.keys(bookmarks)}
+                    onReorder={reorderFolders}
+                    className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar"
+                >
                     {Object.keys(bookmarks).map(folder => {
                         const isFolderExpanded = expandedFolders[folder] !== false;
                         const folderItems = bookmarks[folder];
 
                         return (
-                            <div key={folder} className={`bookmark-section mb-6 ${!isFolderExpanded ? 'collapsed' : ''}`}>
+                            <Reorder.Item
+                                key={folder}
+                                value={folder}
+                                className={`bookmark-section mb-6 ${!isFolderExpanded ? 'collapsed' : ''}`}
+                            >
                                 <div
                                     className="folder-header group cursor-pointer flex items-center justify-between p-3 glass-panel mb-2"
                                     onClick={() => setExpandedFolders(prev => ({ ...prev, [folder]: !isFolderExpanded }))}
                                 >
                                     <div className="flex items-center gap-3">
                                         {isFolderExpanded ? <ChevronDown size={18} className="text-gold" /> : <ChevronRight size={18} className="text-gold" />}
-                                        <h3 className="folder-name text-lg gold-text">{folder}</h3>
+                                        <h3 className="folder-name text-lg gold-text m-0">{folder}</h3>
                                         <span className="count-badge opacity-60 text-xs bg-gold/10 px-2 py-0.5 rounded-full">{folderItems.length} 项</span>
                                     </div>
                                     <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -108,14 +156,14 @@ export default function BookmarkPanel({
                                 </div>
 
                                 {isFolderExpanded && (
-                                    <div className="folder-content pl-4 border-l border-gold/10 ml-2 py-2">
+                                    <div className="folder-content pl-2 md:pl-4 border-l border-gold/10 ml-[1.15rem] py-2">
                                         {folderItems.length > 0 ? (
-                                            <div className="flex flex-col gap-4">
+                                            <div className="flex flex-col gap-6">
                                                 {(() => {
                                                     const catId = `${folder}-classes`;
                                                     const isCatExpanded = expandedCategories[catId] !== false;
                                                     const items = folderItems.map(resolveItem).filter(item => {
-                                                        if (!item || item.isDir) return false;
+                                                        if (!item) return false;
                                                         const path = item.pathParts?.join(' ') || '';
                                                         return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
                                                     });
@@ -127,20 +175,26 @@ export default function BookmarkPanel({
                                                                 onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
                                                             >
                                                                 {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">职业 背景 专长 精通词条</h4>
+                                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">职业 背景 专长 精通词条</h4>
                                                             </div>
                                                             {isCatExpanded && (
-                                                                <div className="item-grid">
+                                                                <Reorder.Group
+                                                                    axis="y"
+                                                                    values={items}
+                                                                    onReorder={(newItems) => handleReorderItems(folder, 'classes', newItems)}
+                                                                    className="item-grid"
+                                                                >
                                                                     {items.map(item => (
-                                                                        <ItemCard
-                                                                            key={item.id}
-                                                                            item={item}
-                                                                            onClick={() => selectItem(item, false)}
-                                                                            isBookmarked={true}
-                                                                            openBookmarkDialog={openBookmarkDialog}
-                                                                        />
+                                                                        <Reorder.Item key={item.id} value={item}>
+                                                                            <ItemCard
+                                                                                item={item}
+                                                                                onClick={() => selectItem(item, false)}
+                                                                                isBookmarked={true}
+                                                                                openBookmarkDialog={openBookmarkDialog}
+                                                                            />
+                                                                        </Reorder.Item>
                                                                     ))}
-                                                                </div>
+                                                                </Reorder.Group>
                                                             )}
                                                         </div>
                                                     );
@@ -151,7 +205,7 @@ export default function BookmarkPanel({
                                                     const isCatExpanded = expandedCategories[catId] !== false;
                                                     const items = folderItems.map(resolveItem).filter(item => {
                                                         if (!item) return false;
-                                                        const isSpell = item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
+                                                        const isSpell = !!item.castingTime;
                                                         const path = item.pathParts?.join(' ') || '';
                                                         const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
                                                         return !isSpecial && !isSpell;
@@ -164,20 +218,26 @@ export default function BookmarkPanel({
                                                                 onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
                                                             >
                                                                 {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">装备 道具 其他</h4>
+                                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">装备 道具 其他</h4>
                                                             </div>
                                                             {isCatExpanded && (
-                                                                <div className="item-grid">
+                                                                <Reorder.Group
+                                                                    axis="y"
+                                                                    values={items}
+                                                                    onReorder={(newItems) => handleReorderItems(folder, 'others', newItems)}
+                                                                    className="item-grid"
+                                                                >
                                                                     {items.map(item => (
-                                                                        <ItemCard
-                                                                            key={item.id}
-                                                                            item={item}
-                                                                            onClick={() => selectItem(item, false)}
-                                                                            isBookmarked={true}
-                                                                            openBookmarkDialog={openBookmarkDialog}
-                                                                        />
+                                                                        <Reorder.Item key={item.id} value={item}>
+                                                                            <ItemCard
+                                                                                item={item}
+                                                                                onClick={() => selectItem(item, false)}
+                                                                                isBookmarked={true}
+                                                                                openBookmarkDialog={openBookmarkDialog}
+                                                                            />
+                                                                        </Reorder.Item>
                                                                     ))}
-                                                                </div>
+                                                                </Reorder.Group>
                                                             )}
                                                         </div>
                                                     );
@@ -188,7 +248,7 @@ export default function BookmarkPanel({
                                                     const isCatExpanded = expandedCategories[catId] !== false;
                                                     const items = folderItems.map(resolveItem).filter(item => {
                                                         if (!item) return false;
-                                                        return item.castingTime || (item.pathParts && item.pathParts.join(' ').includes('法术'));
+                                                        return !!item.castingTime;
                                                     });
                                                     if (items.length === 0) return null;
                                                     return (
@@ -198,22 +258,28 @@ export default function BookmarkPanel({
                                                                 onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
                                                             >
                                                                 {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold">法术列表</h4>
+                                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">法术列表</h4>
                                                             </div>
                                                             {isCatExpanded && (
-                                                                <div className="spell-grid">
+                                                                <Reorder.Group
+                                                                    axis="y"
+                                                                    values={items}
+                                                                    onReorder={(newItems) => handleReorderItems(folder, 'spells', newItems)}
+                                                                    className="spell-grid"
+                                                                >
                                                                     {items.map(spell => (
-                                                                        <SpellListItem
-                                                                            key={spell.id}
-                                                                            item={spell}
-                                                                            isSelected={selectedItemId === spell.id}
-                                                                            onClick={() => selectItem(spell, false)}
-                                                                            isBookmarked={true}
-                                                                            isMobile={isMobile}
-                                                                            openBookmarkDialog={openBookmarkDialog}
-                                                                        />
+                                                                        <Reorder.Item key={spell.id} value={spell}>
+                                                                            <SpellListItem
+                                                                                item={spell}
+                                                                                isSelected={selectedItemId === spell.id}
+                                                                                onClick={() => selectItem(spell, false)}
+                                                                                isBookmarked={true}
+                                                                                isMobile={isMobile}
+                                                                                openBookmarkDialog={openBookmarkDialog}
+                                                                            />
+                                                                        </Reorder.Item>
                                                                     ))}
-                                                                </div>
+                                                                </Reorder.Group>
                                                             )}
                                                         </div>
                                                     );
@@ -224,13 +290,13 @@ export default function BookmarkPanel({
                                         )}
                                     </div>
                                 )}
-                            </div>
+                            </Reorder.Item>
                         );
                     })}
                     {Object.keys(bookmarks).length === 0 && (
                         <div className="text-center py-20 text-muted">您还没有任何收藏</div>
                     )}
-                </div>
+                </Reorder.Group>
             </div>
         </div>
     );

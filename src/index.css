@@ -1673,6 +1673,36 @@ a {
   opacity: 0.8;
 }
 
+/* Bookmark Reordering Styles */
+.bookmark-section {
+  list-style: none;
+  /* In case Reorder.Item defaults to li */
+  user-select: none;
+}
+
+.bookmark-group .item-grid,
+.bookmark-group .spell-grid {
+  list-style: none;
+}
+
+/* Ensure cards look good when being dragged */
+.bookmark-section>[data-framer-component-type="ReorderItem"] {
+  z-index: 100;
+}
+
+.bookmark-section .folder-header {
+  user-select: none;
+}
+
+/* Adjustments for the content nesting */
+.folder-content {
+  transition: border-color 0.3s ease;
+}
+
+.bookmark-section:hover .folder-content {
+  border-color: rgba(198, 180, 29, 0.3);
+}
+
 .disclaimer-box {
   background: var(--glass-gold);
   border: 1px solid rgba(198, 180, 29, 0.2);
