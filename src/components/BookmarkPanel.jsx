@@ -36,29 +36,23 @@ export default function BookmarkPanel({
         const currentFolderItems = bookmarks[folder];
 
         // Categorize all items in the folder to preserve order of other categories
-        const classesIds = [];
+        const rulesIds = [];
         const spellsIds = [];
-        const othersIds = [];
 
         currentFolderItems.forEach(itemId => {
             const item = resolveItem(itemId);
             if (!item) return;
             const isSpell = !!item.castingTime;
-            const path = item.pathParts?.join(' ') || '';
-            const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
 
-            if (isSpecial) classesIds.push(item.id);
-            else if (isSpell) spellsIds.push(item.id);
-            else othersIds.push(item.id);
+            if (isSpell) spellsIds.push(item.id);
+            else rulesIds.push(item.id);
         });
 
         let updatedFullList = [];
-        if (categoryType === 'classes') {
-            updatedFullList = [...newItemIds, ...othersIds, ...spellsIds];
-        } else if (categoryType === 'others') {
-            updatedFullList = [...classesIds, ...newItemIds, ...spellsIds];
+        if (categoryType === 'rules') {
+            updatedFullList = [...newItemIds, ...spellsIds];
         } else if (categoryType === 'spells') {
-            updatedFullList = [...classesIds, ...othersIds, ...newItemIds];
+            updatedFullList = [...rulesIds, ...newItemIds];
         }
 
         reorderItemsInFolder(folder, updatedFullList);
@@ -192,12 +186,11 @@ export default function BookmarkPanel({
                                             {folderItems.length > 0 ? (
                                                 <div className="flex flex-col gap-6">
                                                     {(() => {
-                                                        const catId = `${folder}-classes`;
+                                                        const catId = `${folder}-rules`;
                                                         const isCatExpanded = expandedCategories[catId] !== false;
                                                         const items = folderItems.map(resolveItem).filter(item => {
                                                             if (!item) return false;
-                                                            const path = item.pathParts?.join(' ') || '';
-                                                            return path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
+                                                            return !item.castingTime;
                                                         });
                                                         if (items.length === 0) return null;
                                                         return (
@@ -207,7 +200,7 @@ export default function BookmarkPanel({
                                                                     onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
                                                                 >
                                                                     {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                                                                    <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">职业 背景 专长 精通词条</h4>
+                                                                    <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">资料与规则</h4>
                                                                 </div>
                                                                 <AnimatePresence initial={false}>
                                                                     {isCatExpanded && (
@@ -228,67 +221,7 @@ export default function BookmarkPanel({
                                                                                         dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
                                                                                         onDragStart={() => setDraggingId(item.id)}
                                                                                         onDragEnd={() => setDraggingId(null)}
-                                                                                        onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'classes')}
-                                                                                        className={`reorderable-item ${draggingId === item.id ? 'is-dragging' : ''}`}
-                                                                                        data-id={item.id}
-                                                                                        style={{ touchAction: 'none' }}
-                                                                                    >
-                                                                                        <ItemCard
-                                                                                            item={item}
-                                                                                            onClick={() => selectItem(item, false)}
-                                                                                            isBookmarked={true}
-                                                                                            openBookmarkDialog={openBookmarkDialog}
-                                                                                        />
-                                                                                    </motion.div>
-                                                                                ))}
-                                                                            </div>
-                                                                        </motion.div>
-                                                                    )}
-                                                                </AnimatePresence>
-                                                            </div>
-                                                        );
-                                                    })()}
-
-                                                    {(() => {
-                                                        const catId = `${folder}-others`;
-                                                        const isCatExpanded = expandedCategories[catId] !== false;
-                                                        const items = folderItems.map(resolveItem).filter(item => {
-                                                            if (!item) return false;
-                                                            const isSpell = !!item.castingTime;
-                                                            const path = item.pathParts?.join(' ') || '';
-                                                            const isSpecial = path.includes('角色职业') || path.includes('角色起源') || path.includes('专长') || path.includes('精通词条');
-                                                            return !isSpecial && !isSpell;
-                                                        });
-                                                        if (items.length === 0) return null;
-                                                        return (
-                                                            <div className="bookmark-group">
-                                                                <div
-                                                                    className="flex items-center gap-2 mb-3 cursor-pointer group/cat"
-                                                                    onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
-                                                                >
-                                                                    {isCatExpanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                                                                    <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">装备 道具 其他</h4>
-                                                                </div>
-                                                                <AnimatePresence initial={false}>
-                                                                    {isCatExpanded && (
-                                                                        <motion.div
-                                                                            initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
-                                                                            animate={{ height: 'auto', opacity: 1, overflow: 'visible' }}
-                                                                            exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
-                                                                            transition={{ duration: 0.25, ease: 'easeInOut' }}
-                                                                        >
-                                                                            <div className="item-grid">
-                                                                                {items.map(item => (
-                                                                                    <motion.div
-                                                                                        key={item.id}
-                                                                                        layout
-                                                                                        drag
-                                                                                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                                                                                        dragElastic={1}
-                                                                                        dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-                                                                                        onDragStart={() => setDraggingId(item.id)}
-                                                                                        onDragEnd={() => setDraggingId(null)}
-                                                                                        onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'others')}
+                                                                                        onDrag={(e, info) => handleDragMove(e, info, item, items, folder, 'rules')}
                                                                                         className={`reorderable-item ${draggingId === item.id ? 'is-dragging' : ''}`}
                                                                                         data-id={item.id}
                                                                                         style={{ touchAction: 'none' }}
