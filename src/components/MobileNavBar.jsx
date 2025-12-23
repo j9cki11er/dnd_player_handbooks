@@ -28,7 +28,7 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
                 onClick={() => handleTabClick('spells')}
             >
                 <Book size={20} />
-                <span>法术详述</span>
+                <span>法术列表</span>
             </button>
 
             {showDev && (

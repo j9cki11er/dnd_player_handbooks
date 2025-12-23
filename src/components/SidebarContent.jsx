@@ -98,6 +98,13 @@ const SidebarContent = ({
                 </div>
             </a>
 
+            <div className="theme-toggle-container">
+                <button onClick={toggleTheme} className="theme-toggle-btn">
+                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    <span>{theme === 'dark' ? '切换浅色模式' : '切换深色模式'}</span>
+                </button>
+            </div>
+
             <span className="sidebar-page-title">DnD 玩家手册2024</span>
 
             <nav className="nav-menu">
@@ -144,12 +151,7 @@ const SidebarContent = ({
                 </div>
             </div>
 
-            <div className="theme-toggle-container">
-                <button onClick={toggleTheme} className="theme-toggle-btn">
-                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                    <span>{theme === 'dark' ? '切换浅色模式' : '切换深色模式'}</span>
-                </button>
-            </div>
+
         </>
     );
 };

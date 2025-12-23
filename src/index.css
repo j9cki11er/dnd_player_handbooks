@@ -334,9 +334,9 @@ a {
 }
 
 .theme-toggle-container {
-  margin-top: 1rem;
-  padding: 1rem 0.5rem;
-  border-top: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  /* padding: 1rem 0.5rem; */
+  /* border-bottom: 1px solid var(--border-color); */
 }
 
 .theme-toggle-btn {
