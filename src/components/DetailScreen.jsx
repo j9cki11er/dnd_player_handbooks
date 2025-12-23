@@ -161,14 +161,25 @@ export default function DetailScreen({
                     </h1>
                 </div>
                 <div className="top-bar-actions">
-                    {(selectedItem || loadedOverview?.item) && (
-                        <button
-                            onClick={() => openBookmarkDialog(selectedItem || loadedOverview.item)}
-                            className={`top-bar-search-btn ${isBookmarkedAnywhere((selectedItem || loadedOverview.item).id) ? 'active' : ''}`}
-                        >
-                            <Heart fill={isBookmarkedAnywhere((selectedItem || loadedOverview.item).id) ? "currentColor" : "none"} size={22} />
-                        </button>
-                    )}
+                    {(() => {
+                        const bookmarkItem = selectedItem || loadedOverview?.item || (currentCategoryData ? {
+                            id: currentCategoryData._id,
+                            title: currentCategoryData._title,
+                            pathParts: currentCategoryData._path,
+                            isDir: true
+                        } : null);
+
+                        if (!bookmarkItem) return null;
+
+                        return (
+                            <button
+                                onClick={() => openBookmarkDialog(bookmarkItem)}
+                                className={`top-bar-search-btn ${isBookmarkedAnywhere(bookmarkItem.id) ? 'active' : ''}`}
+                            >
+                                <Heart fill={isBookmarkedAnywhere(bookmarkItem.id) ? "currentColor" : "none"} size={22} />
+                            </button>
+                        );
+                    })()}
                 </div>
             </header>
 
