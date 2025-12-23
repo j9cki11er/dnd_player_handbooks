@@ -97,8 +97,8 @@ const SidebarContent = ({
                     <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
                 </div>
             </a>
-            <br></br>
-            <span className="sidebar-page-title gold-text opacity-80">DnD 玩家手册2024</span>
+
+            <span className="sidebar-page-title">DnD 玩家手册2024</span>
 
             <nav className="nav-menu">
                 <NavItem
