@@ -7,7 +7,7 @@ export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
     SidebarContent, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
     currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery, navigateTo, selectItem,
-    parseCR, featData, masteryData, weaponData
+    parseCR, featData, masteryData, weaponData, isLocked
 }) {
     const sidebarProps = {
         categoryTree, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack,
@@ -183,7 +183,7 @@ export default function DetailScreen({
                 </div>
             </header>
 
-            <div className="detail-overlay-content custom-scrollbar" ref={scrollRef}>
+            <div className={`detail-overlay-content custom-scrollbar ${isLocked ? 'locked' : ''}`} ref={scrollRef}>
                 {entry.type === 'menu' ? (
                     <div className="mobile-sidebar-overlay">
                         <SidebarContent

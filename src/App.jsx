@@ -133,6 +133,15 @@ export default function App() {
     }
   }, [activeTab, isMobile]);
 
+  // Lock body scroll when any detail overlay is open
+  useEffect(() => {
+    if (detailStack.length > 0) {
+      document.body.classList.add('overlay-open');
+    } else {
+      document.body.classList.remove('overlay-open');
+    }
+  }, [detailStack.length]);
+
   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   const resolveItem = (id) => resolveBookmarkItem(id, { categoryTree, spellData, featData, masteryData, data });
 
@@ -190,6 +199,7 @@ export default function App() {
               toggleExpand={toggleExpand} expandedPaths={expandedPaths} setSearchQuery={setSearchQuery}
               navigateTo={navigateTo} selectItem={selectItem} parseCR={parseCR} featData={featData}
               masteryData={masteryData} weaponData={weaponData}
+              isLocked={index < detailStack.length - 1}
             />
           ))}
         </AnimatePresence>

@@ -1233,6 +1233,22 @@ a {
 }
 
 /* Utilities */
+.locked {
+  overflow: hidden !important;
+}
+
+body.overlay-open {
+  overflow: hidden;
+}
+
+body.overlay-open .sidebar {
+  overflow: hidden !important;
+}
+
+body.overlay-open .main-viewport .overflow-y-auto {
+  overflow: hidden !important;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
