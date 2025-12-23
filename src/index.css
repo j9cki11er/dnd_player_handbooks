@@ -1403,12 +1403,16 @@ a {
 
 
   .dnd-content table {
-    display: block;
+    /* display: block; */
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     transform: none;
     margin-left: 0;
+  }
+
+  .dnd-content h5 {
+    font-size: 1.25rem;
   }
 
   .nav-menu {
@@ -1850,7 +1854,8 @@ a {
   border-color: rgba(198, 180, 29, 0.3);
 }
 
-.disclaimer-box {
+.disclaimer-box,
+.little-paper {
   background: var(--glass-gold);
   border: 1px solid rgba(198, 180, 29, 0.2);
   border-radius: 8px;
