@@ -222,7 +222,7 @@ a {
   .main-viewport,
   .main-viewport.wide-view {
     margin-left: 0;
-    padding: 1rem;
+    padding: 0.5rem;
     padding-bottom: 92px;
   }
 
@@ -2045,7 +2045,7 @@ a {
 }
 
 .folder-content {
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   margin-left: 0.5rem;
 }
 
@@ -2060,7 +2060,7 @@ a {
   }
 
   .folder-content {
-    padding-left: 0.75rem;
+    /* padding-left: 0.75rem; */
     margin-left: 0.5rem;
   }
 }
@@ -2311,247 +2311,263 @@ a {
   border-color: rgba(198, 180, 29, 0.4);
   color: var(--accent-gold);
 }
+
 /* Character Sheet Styles */
 .character-panel {
-    max-width: 1200px;
-    margin: 0 auto;
-    animation: fadeIn 0.4s ease-out;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
 }
 
 .char-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
 }
 
 @media (max-width: 1200px) {
-    .char-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+  .char-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-    .char-grid {
-        grid-template-columns: 1fr;
-    }
+  .char-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .char-name-input {
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    width: 100%;
-    outline: none;
-    font-weight: 700;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  width: 100%;
+  outline: none;
+  font-weight: 700;
 }
 
 .inline-input {
-    background: transparent;
-    border: none;
-    color: inherit;
-    font: inherit;
-    outline: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
 }
 
 .inline-input:focus {
-    border-bottom-color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
 }
 
 .stats-header-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
 }
 
 .stat-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.75rem;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+  text-align: center;
 }
 
 .stat-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 700;
 }
 
 .stat-value-input {
-    background: transparent;
-    border: none;
-    color: var(--accent-gold);
-    font-size: 1.5rem;
-    font-weight: 700;
-    width: 100%;
-    text-align: center;
-    outline: none;
+  background: transparent;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  outline: none;
 }
 
 .hp-input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-size: 1.25rem;
-    font-weight: 700;
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-    outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  outline: none;
 }
 
-.hp-input.current { color: #f87171; }
-.hp-input.max { color: #4ade80; }
-.hp-input.temp { color: #60a5fa; }
+.hp-input.current {
+  color: #f87171;
+}
+
+.hp-input.max {
+  color: #4ade80;
+}
+
+.hp-input.temp {
+  color: #60a5fa;
+}
 
 .attributes-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
 }
 
 .attribute-card {
-    padding: 1rem;
-    position: relative;
+  padding: 1rem;
+  position: relative;
 }
 
 .attr-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .attr-label {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
 }
 
 .attr-mod {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--accent-gold);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-gold);
 }
 
 .attr-score-input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    color: var(--text-primary);
-    font-size: 1rem;
-    text-align: center;
-    width: 100%;
-    padding: 0.25rem;
-    margin-bottom: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  padding: 0.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .attr-save-skill {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .attr-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
 }
 
 .attr-row:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .skill-label {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .char-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-    margin: 0.5rem 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  margin: 0.5rem 0;
 }
 
 .add-btn {
-    background: var(--glass-gold);
-    border: 1px solid var(--border-color);
-    color: var(--accent-gold);
-    border-radius: 4px;
-    padding: 2px 6px;
-    cursor: pointer;
-    transition: all 0.2s;
+  background: var(--glass-gold);
+  border: 1px solid var(--border-color);
+  color: var(--accent-gold);
+  border-radius: 4px;
+  padding: 2px 6px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .add-btn:hover {
-    background: var(--accent-gold);
-    color: var(--bg-primary);
+  background: var(--accent-gold);
+  color: var(--bg-primary);
 }
 
 .attack-row input {
-    background: transparent;
-    border: none;
-    color: inherit;
-    font: inherit;
-    outline: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
 }
 
 .stat-mini {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stat-mini .label {
-    font-size: 0.6rem;
-    color: var(--text-muted);
+  font-size: 0.6rem;
+  color: var(--text-muted);
 }
 
 .stat-mini input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    color: var(--text-primary);
-    font-size: 0.8rem;
-    outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  outline: none;
 }
 
 .slot-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
-    padding: 2px 4px;
-    border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
 .roleplay-textarea {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    padding: 0.75rem;
-    min-height: 80px;
-    resize: vertical;
-    outline: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 0.75rem;
+  min-height: 80px;
+  resize: vertical;
+  outline: none;
 }
 
 .roleplay-textarea:focus {
-    border-color: var(--accent-gold);
+  border-color: var(--accent-gold);
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
