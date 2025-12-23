@@ -44,8 +44,7 @@ body.light-theme {
 
 html,
 body {
-  overscroll-behavior: none;
-  /* Prevents all overscroll effects */
+  overscroll-behavior: auto;
 }
 
 body {
@@ -625,7 +624,7 @@ a {
 
 @media (min-width: 768px) {
   .item-card {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 }
 
@@ -1241,9 +1240,9 @@ body.overlay-open {
   overflow: hidden;
 }
 
-body.overlay-open .sidebar {
+/* body.overlay-open .sidebar {
   overflow: hidden !important;
-}
+} */
 
 body.overlay-open .main-viewport .overflow-y-auto {
   overflow: hidden !important;
@@ -1306,7 +1305,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
 
 .justify-center {
   justify-content: start;
-  gap: 1rem;
+  gap: 0.2rem;
 }
 
 .gap-2 {
@@ -1419,7 +1418,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
   }
 
   .item-card {
-    padding: 0.75rem;
+    padding: 0.35rem;
   }
 
   .p-4 {
