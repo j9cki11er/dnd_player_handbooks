@@ -247,7 +247,7 @@ const CharacterPanel = () => {
             <div className="character-panel">
                 <div className="list-view-header mb-6 flex justify-between items-center">
                     <h2 className="text-2xl dnd-font gold-text m-0">我的角色卡</h2>
-                    <button className="gold-button flex items-center gap-2" onClick={addNewCharacter}>
+                    <button className="gold-button flex items-center " onClick={addNewCharacter}>
                         <Plus size={18} /> 新建角色
                     </button>
                 </div>
@@ -311,7 +311,7 @@ const CharacterPanel = () => {
                             onChange={(e) => updateNested('identity.name', e.target.value)}
                             placeholder="角色姓名"
                         />
-                        <div className="flex gap-2 text-sm opacity-70">
+                        <div className="flex  text-sm opacity-70">
                             <input value={char.identity.race} onChange={(e) => updateNested('identity.race', e.target.value)} placeholder="种族" className="inline-input" />
                             <span>•</span>
                             <input value={char.identity.class} onChange={(e) => updateNested('identity.class', e.target.value)} placeholder="职业" className="inline-input" />
@@ -333,11 +333,11 @@ const CharacterPanel = () => {
                     </div>
 
                     <div className="vitals-panel glass-panel mb-6">
-                        <div className="section-title flex items-center gap-2 m-0 p-4 border-b border-white/10 text-crimson">
+                        <div className="section-title flex items-center  m-0 p-4 border-b border-white/10 text-crimson">
                             <Heart size={18} /> 生命值
                         </div>
-                        <div className="p-4 flex flex-col gap-4">
-                            <div className="flex gap-4">
+                        <div className="p-4 flex flex-row gap-4">
+                            <div className="flex flex-row gap-4 vitals-grid">
                                 <div className="flex-1">
                                     <span className="stat-label block mb-1">当前</span>
                                     <input
@@ -368,12 +368,12 @@ const CharacterPanel = () => {
                             </div>
                             <div className="char-divider" />
                             <div className="flex justify-between items-center">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center ">
                                     <span className="stat-label">生命骰:</span>
                                     <input className="inline-input w-12" value={char.vitals.hit_dice.total} onChange={(e) => updateNested('vitals.hit_dice.total', parseInt(e.target.value) || 0)} />
                                     <input className="inline-input w-12" value={char.vitals.hit_dice.type} onChange={(e) => updateNested('vitals.hit_dice.type', e.target.value)} />
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center ">
                                     <span className="stat-label">豁免:</span>
                                     <div className="flex gap-1 text-green-500">
                                         {[1, 2, 3].map(i => (
@@ -402,7 +402,7 @@ const CharacterPanel = () => {
                     {/* Attacks */}
                     <div className="combat-section glass-panel">
                         <div className="section-title flex items-center justify-between p-4 border-b border-white/10">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center ">
                                 <Sword size={18} /> 攻击与动作
                             </div>
                             <button className="add-btn" onClick={() => addListItem('attacks', { name: "新攻击", type: "melee", attack_bonus: 0, damage: "1d8", damage_type: "挥砍", notes: "" })}>
@@ -412,14 +412,14 @@ const CharacterPanel = () => {
                         <div className="p-2">
                             {char.attacks.map((atk, idx) => (
                                 <div key={idx} className="attack-row p-2 flex flex-col gap-1 border-b border-white/5 last:border-0 relative group">
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center ">
                                         <input className="font-bold flex-1" value={atk.name} onChange={(e) => updateNested(`attacks.${idx}.name`, e.target.value)} />
                                         <span className="text-gold">+{atk.attack_bonus}</span>
                                         <button className="opacity-0 group-hover:opacity-100 transition-opacity" onClick={() => removeListItem('attacks', idx)}>
                                             <Trash2 size={14} className="text-red-500" />
                                         </button>
                                     </div>
-                                    <div className="flex gap-2 text-xs opacity-70">
+                                    <div className="flex  text-xs opacity-70">
                                         <input className="w-16" value={atk.damage} onChange={(e) => updateNested(`attacks.${idx}.damage`, e.target.value)} />
                                         <input className="flex-1" value={atk.damage_type} onChange={(e) => updateNested(`attacks.${idx}.damage_type`, e.target.value)} />
                                         <input className="flex-1 text-right" value={atk.notes} onChange={(e) => updateNested(`attacks.${idx}.notes`, e.target.value)} placeholder="备注" />
@@ -433,7 +433,7 @@ const CharacterPanel = () => {
                     {/* Features */}
                     <div className="features-section glass-panel">
                         <div className="section-title flex items-center justify-between p-4 border-b border-white/10">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center ">
                                 <Star size={18} /> 特性与专长
                             </div>
                             <button className="add-btn" onClick={() => addListItem('features.feats', { name: "新特性", source: "", desc: "" })}>
@@ -463,7 +463,7 @@ const CharacterPanel = () => {
                     {/* Spellcasting if enabled */}
                     <div className="spell-section glass-panel">
                         <div className="section-title flex items-center justify-between p-4 border-b border-white/10">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center ">
                                 <Book size={18} /> 施法
                             </div>
                             <input
@@ -474,7 +474,7 @@ const CharacterPanel = () => {
                         </div>
                         {char.spellcasting.enabled && (
                             <div className="p-4 flex flex-col gap-4">
-                                <div className="grid grid-cols-3 gap-2 text-center">
+                                <div className="grid grid-cols-3  text-center">
                                     <div className="stat-mini">
                                         <span className="label">能力</span>
                                         <input className="w-full text-center" value={char.spellcasting.ability} onChange={(e) => updateNested('spellcasting.ability', e.target.value)} />
@@ -489,7 +489,7 @@ const CharacterPanel = () => {
                                     </div>
                                 </div>
                                 <div className="char-divider" />
-                                <div className="flex flex-wrap gap-2 justify-center">
+                                <div className="flex flex-wrap  justify-center">
                                     {Object.entries(char.spellcasting.slots).map(([lvl, info]) => (
                                         <div key={lvl} className="slot-box">
                                             <span className="text-[10px] opacity-50">{lvl}环</span>
@@ -514,7 +514,7 @@ const CharacterPanel = () => {
                 <div className="char-col-equipment flex flex-col gap-6">
                     <div className="equipment-section glass-panel">
                         <div className="section-title flex items-center justify-between p-4 border-b border-white/10">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center ">
                                 <Backpack size={18} /> 装备物品
                             </div>
                             <button className="add-btn" onClick={() => addListItem('equipment.gear', "新物品")}>
@@ -534,10 +534,10 @@ const CharacterPanel = () => {
                     </div>
 
                     <div className="wealth-section glass-panel">
-                        <div className="section-title flex items-center gap-2 p-4 border-b border-white/10">
+                        <div className="section-title flex items-center  p-4 border-b border-white/10">
                             <Coins size={18} /> 资产
                         </div>
-                        <div className="p-4 grid grid-cols-5 gap-2">
+                        <div className="p-4 grid grid-cols-5 ">
                             {['cp', 'sp', 'ep', 'gp', 'pp'].map(curr => (
                                 <div key={curr} className="stat-mini">
                                     <span className="label font-bold uppercase">{curr}</span>
@@ -554,7 +554,7 @@ const CharacterPanel = () => {
 
                     {/* Roleplay */}
                     <div className="roleplay-section glass-panel">
-                        <div className="section-title flex items-center gap-2 p-4 border-b border-white/10">
+                        <div className="section-title flex items-center  p-4 border-b border-white/10">
                             <User size={18} /> 角色描述
                         </div>
                         <div className="p-4 flex flex-col gap-3">

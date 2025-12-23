@@ -1298,6 +1298,14 @@ body.overlay-open .main-viewport .overflow-y-auto {
   flex-direction: column;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1774,7 +1782,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
   position: relative;
   margin-top: 60px;
   /* Match height of sticky-top-bar */
-  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
+  /* background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp'); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -2375,27 +2383,21 @@ body.overlay-open .main-viewport .overflow-y-auto {
 
 /* Character Sheet Styles */
 .character-panel {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   animation: fadeIn 0.4s ease-out;
 }
 
 .char-grid {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
 }
 
-@media (max-width: 1200px) {
-  .char-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (max-width: 768px) {
-  .char-grid {
-    grid-template-columns: 1fr;
-  }
+.char-col-combat, .char-col-equipment{
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .char-name-input {
@@ -2405,6 +2407,12 @@ body.overlay-open .main-viewport .overflow-y-auto {
   width: 100%;
   outline: none;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .char-name-input {
+    font-size: 1.5rem;
+  }
 }
 
 .inline-input {
@@ -2440,6 +2448,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
   grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
 }
+
 
 .stat-box {
   display: flex;
@@ -2495,7 +2504,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
 
 .attributes-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.75rem;
 }
 
@@ -2614,8 +2623,16 @@ body.overlay-open .main-viewport .overflow-y-auto {
   align-items: center;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
-  padding: 2px 4px;
+  padding: 4px;
   border-radius: 4px;
+  min-width: 40px;
+}
+
+@media (max-width: 400px) {
+  .slot-box {
+    padding: 2px;
+    min-width: 35px;
+  }
 }
 
 .roleplay-textarea {
@@ -2629,6 +2646,14 @@ body.overlay-open .main-viewport .overflow-y-auto {
   min-height: 80px;
   resize: vertical;
   outline: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .roleplay-textarea {
+    font-size: 1rem;
+    /* Better for mobile typing to prevent zoom */
+  }
 }
 
 .roleplay-textarea:focus {
@@ -2646,6 +2671,38 @@ body.overlay-open .main-viewport .overflow-y-auto {
     transform: translateY(0);
   }
 }
+
+
+@media (max-width: 1200px) {
+  .char-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .char-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+
+  .character-panel {
+    padding: 0 0.5rem;
+  }
+
+  /* .character-panel .flex {
+    display: block;
+  } */
+
+  .attributes-grid, .stats-header-grid, .vitals-grid { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
 
 /* Character List Styles */
 .character-list-grid {
