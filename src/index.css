@@ -2647,3 +2647,70 @@ body.overlay-open .main-viewport .overflow-y-auto {
     transform: translateY(0);
   }
 }
+
+/* Character List Styles */
+.character-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.character-summary-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 140px;
+}
+
+.character-summary-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.character-summary-card .card-content {
+  padding: 1.5rem;
+}
+
+.character-summary-card .gold-text {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.delete-char-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
+  background: transparent;
+  border: none;
+  z-index: 10;
+}
+
+.delete-char-btn:hover {
+  color: #ef4444;
+  background: rgba(220, 38, 38, 0.1);
+  transform: scale(1.1);
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}

@@ -7,6 +7,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 
 const DEFAULT_CHARACTER = {
+    "id": null,
     "meta": {
         "system": "DND5E_2024",
         "language": "zh-CN",
@@ -95,19 +96,36 @@ const DEFAULT_CHARACTER = {
 const calcModifier = (score) => Math.floor((score - 10) / 2);
 
 const CharacterPanel = () => {
-    const [char, setChar] = useState(() => {
-        const saved = localStorage.getItem('dnd_character_2024');
-        return saved ? JSON.parse(saved) : DEFAULT_CHARACTER;
+    const [characters, setCharacters] = useState(() => {
+        const saved = localStorage.getItem('dnd_characters_2024');
+        if (saved) return JSON.parse(saved);
+
+        // Migration from single char
+        const legacy = localStorage.getItem('dnd_character_2024');
+        if (legacy) {
+            const legacyChar = JSON.parse(legacy);
+            legacyChar.id = legacyChar.id || Date.now();
+            return [legacyChar];
+        }
+        return [];
     });
 
+    const [selectedId, setSelectedId] = useState(null);
+
     useEffect(() => {
-        localStorage.setItem('dnd_character_2024', JSON.stringify(char));
-    }, [char]);
+        localStorage.setItem('dnd_characters_2024', JSON.stringify(characters));
+    }, [characters]);
+
+    const char = characters.find(c => c.id === selectedId) || null;
 
     const updateNested = (path, value) => {
-        setChar(prev => {
+        if (!selectedId) return;
+        setCharacters(prev => {
             const next = JSON.parse(JSON.stringify(prev));
-            let curr = next;
+            const charIdx = next.findIndex(c => c.id === selectedId);
+            if (charIdx === -1) return prev;
+
+            let curr = next[charIdx];
             const parts = path.split('.');
             for (let i = 0; i < parts.length - 1; i++) {
                 curr = curr[parts[i]];
@@ -118,7 +136,7 @@ const CharacterPanel = () => {
             if (path.includes('attributes') && path.endsWith('score')) {
                 const attrKey = parts[1];
                 const newScore = value;
-                next.attributes[attrKey].modifier = calcModifier(newScore);
+                next[charIdx].attributes[attrKey].modifier = calcModifier(newScore);
             }
 
             return next;
@@ -126,9 +144,13 @@ const CharacterPanel = () => {
     };
 
     const addListItem = (path, item) => {
-        setChar(prev => {
+        if (!selectedId) return;
+        setCharacters(prev => {
             const next = JSON.parse(JSON.stringify(prev));
-            let curr = next;
+            const charIdx = next.findIndex(c => c.id === selectedId);
+            if (charIdx === -1) return prev;
+
+            let curr = next[charIdx];
             const parts = path.split('.');
             for (let i = 0; i < parts.length; i++) {
                 curr = curr[parts[i]];
@@ -139,9 +161,13 @@ const CharacterPanel = () => {
     };
 
     const removeListItem = (path, index) => {
-        setChar(prev => {
+        if (!selectedId) return;
+        setCharacters(prev => {
             const next = JSON.parse(JSON.stringify(prev));
-            let curr = next;
+            const charIdx = next.findIndex(c => c.id === selectedId);
+            if (charIdx === -1) return prev;
+
+            let curr = next[charIdx];
             const parts = path.split('.');
             for (let i = 0; i < parts.length; i++) {
                 curr = curr[parts[i]];
@@ -149,6 +175,22 @@ const CharacterPanel = () => {
             curr.splice(index, 1);
             return next;
         });
+    };
+
+    const addNewCharacter = () => {
+        const newChar = JSON.parse(JSON.stringify(DEFAULT_CHARACTER));
+        newChar.id = Date.now();
+        newChar.identity.name = "新角色";
+        setCharacters(prev => [...prev, newChar]);
+        setSelectedId(newChar.id);
+    };
+
+    const deleteCharacter = (e, id) => {
+        e.stopPropagation();
+        if (confirm('确定要删除这个角色吗？')) {
+            setCharacters(prev => prev.filter(c => c.id !== id));
+            if (selectedId === id) setSelectedId(null);
+        }
     };
 
     const StatBox = ({ label, value, path, type = "number" }) => (
@@ -200,10 +242,68 @@ const CharacterPanel = () => {
         </div>
     );
 
+    if (!selectedId || !char) {
+        return (
+            <div className="character-panel">
+                <div className="list-view-header mb-6 flex justify-between items-center">
+                    <h2 className="text-2xl dnd-font gold-text m-0">我的角色卡</h2>
+                    <button className="gold-button flex items-center gap-2" onClick={addNewCharacter}>
+                        <Plus size={18} /> 新建角色
+                    </button>
+                </div>
+
+                <div className="character-list-grid">
+                    {characters.map(c => (
+                        <motion.div
+                            key={c.id}
+                            layout
+                            whileHover={{ scale: 1.02, y: -4 }}
+                            whileTap={{ scale: 0.98 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="character-summary-card glass-panel cursor-pointer group"
+                            onClick={() => setSelectedId(c.id)}
+                        >
+                            <div className="card-content">
+                                <h3 className="gold-text dnd-font text-xl mb-1">{c.identity.name}</h3>
+                                <div className="text-sm opacity-70">
+                                    {c.identity.race} • {c.identity.class} • 等级 {c.identity.level}
+                                </div>
+                                <div className="mt-4 flex gap-4 text-xs opacity-50">
+                                    <span>AC: {c.combat.armor_class}</span>
+                                    <span>HP: {c.vitals.hp.current}/{c.vitals.hp.max}</span>
+                                </div>
+                            </div>
+                            <button
+                                className="delete-char-btn opacity-0 group-hover:opacity-100 transition-opacity"
+                                onClick={(e) => deleteCharacter(e, c.id)}
+                            >
+                                <Trash2 size={16} />
+                            </button>
+                            <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-30" />
+                        </motion.div>
+                    ))}
+
+                    {characters.length === 0 && (
+                        <div className="col-span-full py-12 text-center opacity-50 italic">
+                            暂无角色卡，点击右上角新建一个吧
+                        </div>
+                    )}
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="character-panel">
             <div className="character-header p-4 glass-panel mb-6">
                 <div className="flex flex-wrap gap-4 items-center">
+                    <button
+                        className="back-btn mr-2 p-2 hover:bg-white/5 rounded-full transition-colors"
+                        onClick={() => setSelectedId(null)}
+                    >
+                        <ChevronRight className="rotate-180" size={24} />
+                    </button>
                     <div className="flex-1 min-w-[200px]">
                         <input
                             className="char-name-input dnd-font gold-text"
@@ -218,11 +318,6 @@ const CharacterPanel = () => {
                             <span>等级</span>
                             <input type="number" value={char.identity.level} onChange={(e) => updateNested('identity.level', parseInt(e.target.value) || 1)} className="inline-input w-8" />
                         </div>
-                    </div>
-                    <div className="flex gap-3">
-                        <button className="gold-button flex items-center gap-2" onClick={() => localStorage.removeItem('dnd_character_2024') || window.location.reload()}>
-                            <RefreshCw size={16} /> 重置
-                        </button>
                     </div>
                 </div>
             </div>
