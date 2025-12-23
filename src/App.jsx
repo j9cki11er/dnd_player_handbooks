@@ -24,6 +24,7 @@ import BookmarkPanel from './components/BookmarkPanel';
 import FolderModal from './components/FolderModal';
 import BookmarkModal from './components/BookmarkModal';
 import ShareModal from './components/ShareModal';
+import CharacterPanel from './components/CharacterPanel';
 
 // Extracted Utilities
 import { parseCR, resolveBookmarkItem } from './utils/helpers';
@@ -87,6 +88,16 @@ export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showDev, setShowDev] = useState(() => localStorage.getItem('dev_mode') === 'true');
+
+  useEffect(() => {
+    if (window.location.pathname === '/dev') {
+      const newDevMode = !showDev;
+      setShowDev(newDevMode);
+      localStorage.setItem('dev_mode', newDevMode.toString());
+      window.history.replaceState(null, '', '/');
+    }
+  }, [showDev]);
 
   const {
     activeTab, setActiveTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
@@ -143,6 +154,7 @@ export default function App() {
           setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} theme={theme} toggleTheme={toggleTheme}
           currentPath={currentPath} selectedItem={selectedItem} toggleExpand={toggleExpand} expandedPaths={expandedPaths}
           setSearchQuery={setSearchQuery} navigateTo={navigateTo} selectItem={selectItem}
+          showDev={showDev}
         />
       </aside>
 
@@ -163,6 +175,7 @@ export default function App() {
               {...commonProps}
             />
           )}
+          {activeTab === 'character' && showDev && <CharacterPanel />}
         </AnimatePresence>
 
         <AnimatePresence>
@@ -206,7 +219,7 @@ export default function App() {
       <MobileNavBar
         activeTab={activeTab} setActiveTab={setActiveTab} currentPath={currentPath} navigateTo={navigateTo}
         setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} setCurrentPath={setCurrentPath}
-        theme={theme} toggleTheme={toggleTheme}
+        theme={theme} toggleTheme={toggleTheme} showDev={showDev}
       />
 
       <AnimatePresence>

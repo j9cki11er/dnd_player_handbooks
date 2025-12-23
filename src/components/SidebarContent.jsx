@@ -1,5 +1,5 @@
 import React from 'react';
-import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Search, Heart, Sun, Moon } from 'lucide-react';
+import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
 
 const SidebarContent = ({
@@ -18,7 +18,8 @@ const SidebarContent = ({
     setSearchQuery,
     navigateTo,
     selectItem,
-    onNavigate
+    onNavigate,
+    showDev
 }) => {
     const handleNavClick = (callback) => {
         callback(!!onNavigate);
@@ -112,6 +113,14 @@ const SidebarContent = ({
                     active={activeTab === 'spells'}
                     onClick={() => handleNavClick(() => { setActiveTab('spells'); setSelectedItem(null); setDetailStack([]); setSearchQuery(''); })}
                 />
+                {showDev && (
+                    <NavItem
+                        icon={<User size={20} />}
+                        label="角色卡"
+                        active={activeTab === 'character'}
+                        onClick={() => handleNavClick(() => { setActiveTab('character'); setSelectedItem(null); setDetailStack([]); })}
+                    />
+                )}
                 <NavItem
                     icon={<Search size={20} />}
                     label="全局搜索"

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Layout, Book, Heart, Sun, Moon, Menu } from 'lucide-react';
+import { Layout, Book, Heart, Sun, Moon, Menu, User } from 'lucide-react';
 
-export default function MobileNavBar({ activeTab, setActiveTab, currentPath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, theme, toggleTheme }) {
+export default function MobileNavBar({ activeTab, setActiveTab, currentPath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, theme, toggleTheme, showDev }) {
     const handleTabClick = (tab) => {
         setActiveTab(tab);
         setSelectedItem(null);
@@ -30,6 +30,16 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
                 <Book size={20} />
                 <span>法术详述</span>
             </button>
+
+            {showDev && (
+                <button
+                    className={`mobile-nav-item ${activeTab === 'character' ? 'active' : ''}`}
+                    onClick={() => handleTabClick('character')}
+                >
+                    <User size={20} />
+                    <span>角色卡</span>
+                </button>
+            )}
 
             <button
                 className={`mobile-nav-item ${activeTab === 'bookmarks' ? 'active' : ''}`}
