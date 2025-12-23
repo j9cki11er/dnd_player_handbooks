@@ -103,7 +103,7 @@ const SidebarContent = ({
             <nav className="nav-menu">
                 <NavItem
                     icon={<Layout size={20} />}
-                    label="资料游览"
+                    label="玩家手册"
                     active={activeTab === 'browser'}
                     onClick={() => handleNavClick(() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); setDetailStack([]); })}
                 />

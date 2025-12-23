@@ -20,7 +20,7 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
                 }}
             >
                 <Layout size={20} />
-                <span>资料游览</span>
+                <span>玩家手册</span>
             </button>
 
             <button

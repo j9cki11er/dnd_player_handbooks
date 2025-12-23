@@ -7,11 +7,11 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
 
         switch (activeTab) {
             case 'browser':
-                return '资料浏览';
+                return '玩家手册';
             case 'spells': return '法术列表';
             case 'search': return '全局搜索';
             case 'bookmarks': return '我的收藏';
-            default: return '资料浏览';
+            default: return '玩家手册';
         }
     };
 
