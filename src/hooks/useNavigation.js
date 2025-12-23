@@ -96,11 +96,18 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     };
 
     const selectItem = (item, push = false) => {
+        const isDir = item.isDir;
+        const entry = {
+            id: Date.now(),
+            type: isDir ? 'dir' : 'file',
+            [isDir ? 'path' : 'item']: isDir ? item.pathParts : item
+        };
+
         if (push) {
-            setDetailStack(prev => [...prev, { id: Date.now(), type: 'file', item }]);
+            setDetailStack(prev => [...prev, entry]);
         } else {
-            setSelectedItem(item);
-            setDetailStack([{ id: Date.now(), type: 'file', item }]);
+            setSelectedItem(isDir ? null : item);
+            setDetailStack([entry]);
         }
     };
 
