@@ -345,7 +345,7 @@ a {
   gap: 0.75rem;
   padding: 0.75rem 1rem;
   width: 100%;
-  background: transparent;
+  background: var(--glass-bg);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   border-radius: 8px;
@@ -371,7 +371,7 @@ a {
   letter-spacing: 0.1em;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   margin-top: 1rem;
 }
 
@@ -1303,8 +1303,10 @@ body.overlay-open .main-viewport .overflow-y-auto {
   align-items: center;
 }
 
+
 .justify-center {
-  justify-content: center;
+  justify-content: start;
+  gap: 1rem;
 }
 
 .gap-2 {
@@ -1417,7 +1419,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
   }
 
   .item-card {
-    padding: 0.5rem;
+    padding: 0.75rem;
   }
 
   .p-4 {
