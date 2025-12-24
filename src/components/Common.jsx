@@ -123,7 +123,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
                         onClick={handleBookmarkClick}
                         onPointerDown={e => e.stopPropagation()}
                     >
-                        <Heart size={14} fill={isBookmarked ? "currentColor" : "none"} />
+                        <Heart size={18} fill={isBookmarked ? "currentColor" : "none"} />
                     </button>
                 </div>
             </div>
@@ -170,7 +170,7 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                                 onClick={handleBookmarkClick}
                                 onPointerDown={e => e.stopPropagation()}
                             >
-                                <Heart size={14} fill={isBookmarked ? "currentColor" : "none"} />
+                                <Heart size={18} fill={isBookmarked ? "currentColor" : "none"} />
                             </button>
                         </div>
                     </div>

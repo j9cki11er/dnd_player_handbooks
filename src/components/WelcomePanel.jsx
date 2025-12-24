@@ -28,7 +28,7 @@ export default function WelcomePanel({ chapters, categoryTree, navigateTo }) {
                                 key={name}
                                 whileHover={{ scale: 1.02, y: -4 }}
                                 onClick={() => navigateTo(node._path, true, false)}
-                                className="item-card glass-panel flex flex-row items-center justify-center py-6"
+                                className="item-card glass-panel flex flex-col items-center justify-center py-6"
                             >
                                 <Folder size={24} className="text-gold opacity-60 mb-2" />
                                 <h4 className="card-title text-center text-sm">{name}</h4>

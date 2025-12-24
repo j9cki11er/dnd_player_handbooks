@@ -296,8 +296,8 @@ const CharacterPanel = () => {
 
     return (
         <div className="character-panel">
-            <div className="character-header p-4 glass-panel mb-6">
-                <div className="flex flex-wrap gap-4 items-center">
+            <div className="character-header">
+                <div className="flex flex-wrap gap-4 mb-6 items-center">
                     <button
                         className="back-btn mr-2 p-2 hover:bg-white/5 rounded-full transition-colors"
                         onClick={() => setSelectedId(null)}
@@ -320,20 +320,8 @@ const CharacterPanel = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="char-grid">
-                {/* Main Stats Column */}
-                <div className="char-col-stats">
-                    <div className="stats-header-grid mb-4">
-                        <StatBox label="护甲等级" value={char.combat.armor_class} path="combat.armor_class" />
-                        <StatBox label="先攻" value={char.combat.initiative} path="combat.initiative" />
-                        <StatBox label="速度" value={char.body.speed} path="body.speed" />
-                        <StatBox label="熟练加值" value={char.combat.proficiency_bonus} path="combat.proficiency_bonus" />
-                    </div>
-
                     <div className="vitals-panel glass-panel mb-6">
-                        <div className="section-title flex items-center  m-0 p-4 border-b border-white/10 text-crimson">
+                        <div className="section-title flex items-center  m-0 p-4 border-b border-white/10">
                             <Heart size={18} /> 生命值
                         </div>
                         <div className="p-4 flex flex-row gap-4">
@@ -389,6 +377,19 @@ const CharacterPanel = () => {
                             </div>
                         </div>
                     </div>
+            </div>
+
+            <div className="char-grid">
+                {/* Main Stats Column */}
+                <div className="char-col-stats">
+                    <div className="stats-header-grid mb-4">
+                        <StatBox label="护甲等级" value={char.combat.armor_class} path="combat.armor_class" />
+                        <StatBox label="先攻" value={char.combat.initiative} path="combat.initiative" />
+                        <StatBox label="速度" value={char.body.speed} path="body.speed" />
+                        <StatBox label="熟练加值" value={char.combat.proficiency_bonus} path="combat.proficiency_bonus" />
+                    </div>
+
+                
 
                     <div className="attributes-grid mb-6">
                         {Object.entries(char.attributes).map(([key, attr]) => (
@@ -537,7 +538,7 @@ const CharacterPanel = () => {
                         <div className="section-title flex items-center  p-4 border-b border-white/10">
                             <Coins size={18} /> 资产
                         </div>
-                        <div className="p-4 grid grid-cols-5 ">
+                        <div className="wealth-grid p-4 grid grid-cols-5 ">
                             {['cp', 'sp', 'ep', 'gp', 'pp'].map(curr => (
                                 <div key={curr} className="stat-mini">
                                     <span className="label font-bold uppercase">{curr}</span>
