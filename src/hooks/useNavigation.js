@@ -7,6 +7,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     const [currentPath, setCurrentPath] = useState([]);
     const [detailStack, setDetailStack] = useState([]);
     const [expandedPaths, setExpandedPaths] = useState({});
+    const [shouldReplaceState, setShouldReplaceState] = useState(false);
 
     // Sync state to history when important navigation state changes
     useEffect(() => {
@@ -26,11 +27,16 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
                 JSON.stringify(historyState.detailStack) !== JSON.stringify(currentState.detailStack);
 
             if (isDifferent) {
-                window.history.pushState(currentState, '', '');
+                if (shouldReplaceState) {
+                    window.history.replaceState(currentState, '', '');
+                    setShouldReplaceState(false);
+                } else {
+                    window.history.pushState(currentState, '', '');
+                }
             }
         }
         window._isPopStateNavigating = false;
-    }, [activeTab, currentPath, selectedItem, detailStack]);
+    }, [activeTab, currentPath, selectedItem, detailStack, shouldReplaceState]);
 
     // Listen for back/forward buttons
     useEffect(() => {
@@ -73,7 +79,15 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
 
     const navigateTo = (path, shouldExpand = true, push = false) => {
         if (push) {
-            setDetailStack(prev => [...prev, { id: Date.now(), type: 'dir', path }]);
+            setDetailStack(prev => {
+                const newEntry = { id: Date.now(), type: 'dir', path };
+                if (prev.length > 0 && prev[prev.length - 1].type === 'menu') {
+                    // Replace menu with the new directory entry
+                    setShouldReplaceState(true);
+                    return [...prev.slice(0, -1), newEntry];
+                }
+                return [...prev, newEntry];
+            });
         } else {
             setCurrentPath(path);
             setSelectedItem(null);
@@ -104,7 +118,14 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
         };
 
         if (push) {
-            setDetailStack(prev => [...prev, entry]);
+            setDetailStack(prev => {
+                if (prev.length > 0 && prev[prev.length - 1].type === 'menu') {
+                    // Replace menu with the new item entry
+                    setShouldReplaceState(true);
+                    return [...prev.slice(0, -1), entry];
+                }
+                return [...prev, entry];
+            });
         } else {
             setSelectedItem(isDir ? null : item);
             setDetailStack([entry]);
