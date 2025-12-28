@@ -39,7 +39,37 @@ function parseFiles() {
         try {
             const relativePath = path.relative(SOURCE_DIR, fullPath);
             const buffer = fs.readFileSync(fullPath);
-            const html = iconv.decode(buffer, 'GBK');
+
+            // Detect encoding
+            let encoding = 'utf8';
+
+            // 1. Check for UTF-8 BOM
+            if (buffer[0] === 0xEF && buffer[1] === 0xBB && buffer[2] === 0xBF) {
+                encoding = 'utf8';
+            } else {
+                // 2. Check for meta charset or comment
+                const head = buffer.slice(0, 1024).toString('ascii').toLowerCase();
+                if (head.includes('charset=gb2312') || head.includes('charset=gbk') || head.includes('coding: gbk')) {
+                    encoding = 'gbk';
+                } else if (head.includes('charset=utf-8')) {
+                    encoding = 'utf8';
+                } else {
+                    // 3. Heuristic: try to decode as UTF-8, if it fails or contains invalid chars, fallback to GBK
+                    try {
+                        const utf8String = buffer.toString('utf8');
+                        // Basic check for common replacement characters if it was actually GBK
+                        if (utf8String.includes('\ufffd')) {
+                            encoding = 'gbk';
+                        } else {
+                            encoding = 'utf8';
+                        }
+                    } catch (e) {
+                        encoding = 'gbk';
+                    }
+                }
+            }
+
+            const html = iconv.decode(buffer, encoding);
 
             const root = parse(html);
             const titleElement = root.querySelector('title');

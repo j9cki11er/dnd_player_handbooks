@@ -145,9 +145,22 @@ const SidebarContent = ({
             <div className="sidebar-section">
                 <h3 className="section-title">分类目录</h3>
                 <div className="category-list">
-                    {Object.entries(categoryTree).map(([catName, catNode]) => (
-                        <SidebarItem key={catName} name={catName} node={catNode} />
-                    ))}
+                    {Object.entries(categoryTree)
+                        .filter(([catName]) => !catName.includes('MPMM'))
+                        .map(([catName, catNode]) => (
+                            <SidebarItem key={catName} name={catName} node={catNode} />
+                        ))}
+                </div>
+            </div>
+
+            <div className="sidebar-section">
+                <h3 className="section-title">扩充手册</h3>
+                <div className="category-list">
+                    {Object.entries(categoryTree)
+                        .filter(([catName]) => catName.includes('MPMM'))
+                        .map(([catName, catNode]) => (
+                            <SidebarItem key={catName} name={catName} node={catNode} />
+                        ))}
                 </div>
             </div>
 
