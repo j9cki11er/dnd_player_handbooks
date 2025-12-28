@@ -38,15 +38,49 @@ const CHAPTERS_TO_SHOW = [
   '序章：欢迎来到冒险世界', '第一章：进行游戏', '第二章：创建角色', '第三章：角色职业', '第四章：角色起源', '第五章：专长', '第六章：装备', '第七章：法术', '附录 A：多元宇宙', '附录 B：生物数据卡', '附录 C：术语汇编'
 ];
 
+const EXPANSIONS_TO_SHOW = [
+  '瓦罗怪物指南 (VGM)'
+];
+
 // Enrich data with monster metadata
 const data = rawData.map(item => {
-  if (item.category === '附录 B：生物数据卡' && !item.isOverview) {
-    const monsterMatch = monsterData.find(m => m.path === item.path || (m.path && item.path && m.path.replace(/\.htm$/, '.html') === item.path.replace(/\.htm$/, '.html')));
-    if (monsterMatch) {
-      return { ...item, cr: monsterMatch.cr, subDivision: monsterMatch.subDivision, alignment: monsterMatch.alignment, titleEn: monsterMatch.titleEn };
+  let updatedItem = { ...item };
+
+  // Consistently rename MPMM to VGM and handle category
+  if (updatedItem.category.includes('MPMM')) {
+    updatedItem.category = updatedItem.category.replace('MPMM', 'VGM');
+  }
+  if (updatedItem.pathParts) {
+    updatedItem.pathParts = updatedItem.pathParts.map(p => p.replace('MPMM', 'VGM'));
+  }
+
+  // Flatten VGM races and handle specific files
+  if (updatedItem.id.includes('瓦罗怪物指南 (MPMM)/玩家可用种族/')) {
+    updatedItem.category = '瓦罗怪物指南 (VGM)';
+
+    // Move "怪物冒险者" and "身高与体重" to top-level VGM content items
+    if (updatedItem.id.includes('怪物冒险者.html') || updatedItem.id.includes('身高与体重.html')) {
+      updatedItem.pathParts = ['瓦罗怪物指南 (VGM)'];
+    }
+    // Flatten the "怪物冒险者" directory races
+    else if (updatedItem.id.includes('怪物冒险者/')) {
+      updatedItem.pathParts = ['瓦罗怪物指南 (VGM)', '玩家可用种族'];
     }
   }
-  return item;
+
+  // Force category for any item in VGM
+  if (updatedItem.pathParts && (updatedItem.pathParts[0].includes('VGM') || updatedItem.pathParts[0].includes('瓦罗怪物指南'))) {
+    updatedItem.category = '瓦罗怪物指南 (VGM)';
+    updatedItem.fullCategory = '瓦罗怪物指南 (VGM)';
+  }
+
+  if (updatedItem.category === '附录 B：生物数据卡' && !updatedItem.isOverview) {
+    const monsterMatch = monsterData.find(m => m.path === updatedItem.path || (m.path && updatedItem.path && m.path.replace(/\.htm$/, '.html') === updatedItem.path.replace(/\.htm$/, '.html')));
+    if (monsterMatch) {
+      updatedItem = { ...updatedItem, cr: monsterMatch.cr, subDivision: monsterMatch.subDivision, alignment: monsterMatch.alignment, titleEn: monsterMatch.titleEn };
+    }
+  }
+  return updatedItem;
 });
 
 // Category tree generation
@@ -183,7 +217,7 @@ export default function App() {
 
       <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks') ? 'wide-view' : ''}`}>
         <AnimatePresence mode="wait">
-          {activeTab === 'browser' && <WelcomePanel chapters={CHAPTERS_TO_SHOW} categoryTree={categoryTree} navigateTo={navigateTo} />}
+          {activeTab === 'browser' && <WelcomePanel chapters={CHAPTERS_TO_SHOW} expansions={EXPANSIONS_TO_SHOW} categoryTree={categoryTree} navigateTo={navigateTo} />}
           {activeTab === 'spells' && <SpellBrowser spellData={spellData} {...commonProps} />}
           {activeTab === 'search' && <SearchPanel searchResults={searchResults} {...commonProps} />}
           {activeTab === 'bookmarks' && (

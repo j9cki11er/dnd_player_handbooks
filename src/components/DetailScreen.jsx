@@ -160,14 +160,7 @@ export default function DetailScreen({
             }
         });
 
-        // Races in 怪物冒险者
-        const adventurerNode = raceNode._children['怪物冒险者'];
-        if (adventurerNode) {
-            adventurerNode._files.forEach(f => {
-                if (!f.isOverview) races.push(f);
-            });
-        }
-
+        // Note: 怪物冒险者 files are now moved to raceNode._files by App.jsx data remapping
         const order = ["兽人", "地精", "大地精", "熊地精", "狗头人", "纯血原体蛇人", "天狗", "斑猫人", "梭螺鱼人", "歌利亚", "蜥蜴人", "费尔伯格人", "阿斯莫"];
         return races.sort((a, b) => {
             let titleA = a.title.replace('.html', '').replace('.htm', '').trim();
@@ -336,7 +329,7 @@ export default function DetailScreen({
                                         <h3 className="section-title mb-4">子目录</h3>
                                         <div className="item-grid">
                                             {Object.entries(currentCategoryData._children)
-                                                .filter(([name]) => name !== '怪物冒险者')
+                                                .filter(([name]) => name !== '怪物冒险者' && name !== '玩家可用种族')
                                                 .map(([name, node]) => (
                                                     <ItemCard
                                                         key={node._id}

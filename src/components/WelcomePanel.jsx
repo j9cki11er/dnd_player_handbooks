@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Folder } from 'lucide-react';
 
-export default function WelcomePanel({ chapters, categoryTree, navigateTo }) {
+export default function WelcomePanel({ chapters, expansions = [], categoryTree, navigateTo }) {
     return (
         <div className="welcome-panel">
             <div className="logo flex items-center gap-2">
@@ -18,6 +18,7 @@ export default function WelcomePanel({ chapters, categoryTree, navigateTo }) {
             {/* <h3 className="welcome-logo-text dnd-font gold-text text-2xl mb-2">不要喂龙公会</h3> */}
             <h2 className="welcome-title text-2xl mb-2">DnD 玩家手册2024</h2>
             <p className="welcome-desc">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
+
             <div className="welcome-directory mt-6">
                 <div className="item-grid">
                     {chapters.map(name => {
@@ -37,6 +38,31 @@ export default function WelcomePanel({ chapters, categoryTree, navigateTo }) {
                     })}
                 </div>
             </div>
+
+            {expansions.length > 0 && (
+                <>
+                    <h2 className="welcome-title text-2xl mb-2 mt-12">扩充手册</h2>
+                    <div className="welcome-directory mt-6">
+                        <div className="item-grid">
+                            {expansions.map(name => {
+                                const node = categoryTree[name];
+                                if (!node) return null;
+                                return (
+                                    <motion.div
+                                        key={name}
+                                        whileHover={{ scale: 1.02, y: -4 }}
+                                        onClick={() => navigateTo(node._path, true, false)}
+                                        className="item-card glass-panel flex flex-col items-center justify-center py-6"
+                                    >
+                                        <Folder size={24} className="text-gold opacity-60 mb-2" />
+                                        <h4 className="card-title text-center text-sm">{name}</h4>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </>
+            )}
 
             <div className="disclaimer-box">
                 <p className="text-gold opacity-90 text-sm leading-relaxed whitespace-pre-line">
