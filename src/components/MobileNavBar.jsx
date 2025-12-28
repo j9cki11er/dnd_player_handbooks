@@ -49,15 +49,15 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
                 <span>我的收藏</span>
             </button>
 
-            {/* <button
+            <button
                 className="mobile-nav-item"
                 onClick={toggleTheme}
             >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                 <span>{theme === 'dark' ? '浅色模式' : '深色模式'}</span>
-            </button> */}
+            </button>
 
-            {/* <button
+            <button
                 className="mobile-nav-item"
                 onClick={() => {
                     setSelectedItem(null);
@@ -70,7 +70,7 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
             >
                 <Menu size={20} />
                 <span>更多</span>
-            </button> */}
+            </button>
         </nav>
     );
 }
