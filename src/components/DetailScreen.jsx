@@ -142,6 +142,48 @@ export default function DetailScreen({
         return entry.type === 'dir' && entry.path && entry.path.join('/') === '第六章：装备/精通词条';
     }, [entry]);
 
+    const vgmRaces = useMemo(() => {
+        if (!categoryTree) return [];
+        // Find VGM directory
+        const vgmKey = Object.keys(categoryTree).find(k => k.includes('VGM') || k.includes('瓦罗怪物指南'));
+        if (!vgmKey) return [];
+
+        const vgmNode = categoryTree[vgmKey];
+        const raceNode = vgmNode._children['玩家可用种族'];
+        if (!raceNode) return [];
+
+        const races = [];
+        // Direct races
+        raceNode._files.forEach(f => {
+            if (!f.isOverview && !f.title.includes('身高与体重')) {
+                races.push(f);
+            }
+        });
+
+        // Races in 怪物冒险者
+        const adventurerNode = raceNode._children['怪物冒险者'];
+        if (adventurerNode) {
+            adventurerNode._files.forEach(f => {
+                if (!f.isOverview) races.push(f);
+            });
+        }
+
+        const order = ["兽人", "地精", "大地精", "熊地精", "狗头人", "纯血原体蛇人", "天狗", "斑猫人", "梭螺鱼人", "歌利亚", "蜥蜴人", "费尔伯格人", "阿斯莫"];
+        return races.sort((a, b) => {
+            let titleA = a.title.replace('.html', '').replace('.htm', '').trim();
+            let titleB = b.title.replace('.html', '').replace('.htm', '').trim();
+            let idxA = order.indexOf(titleA);
+            let idxB = order.indexOf(titleB);
+            if (idxA === -1) idxA = 999;
+            if (idxB === -1) idxB = 999;
+            return idxA - idxB;
+        });
+    }, [categoryTree]);
+
+    const isVgmMain = useMemo(() => {
+        return entry.type === 'dir' && entry.path && entry.path.length === 1 && (entry.path[0].includes('VGM') || entry.path[0].includes('瓦罗怪物指南'));
+    }, [entry]);
+
     return (
         <motion.div
             initial={{ x: '100%' }}
@@ -293,20 +335,22 @@ export default function DetailScreen({
                                     <div className="mb-8">
                                         <h3 className="section-title mb-4">子目录</h3>
                                         <div className="item-grid">
-                                            {Object.entries(currentCategoryData._children).map(([name, node]) => (
-                                                <ItemCard
-                                                    key={node._id}
-                                                    item={{
-                                                        id: node._id,
-                                                        title: node._title,
-                                                        pathParts: node._path,
-                                                        isDir: true
-                                                    }}
-                                                    onClick={() => onNavigate(node._path)}
-                                                    isBookmarked={isBookmarkedAnywhere(node._id)}
-                                                    openBookmarkDialog={openBookmarkDialog}
-                                                />
-                                            ))}
+                                            {Object.entries(currentCategoryData._children)
+                                                .filter(([name]) => name !== '怪物冒险者')
+                                                .map(([name, node]) => (
+                                                    <ItemCard
+                                                        key={node._id}
+                                                        item={{
+                                                            id: node._id,
+                                                            title: node._title,
+                                                            pathParts: node._path,
+                                                            isDir: true
+                                                        }}
+                                                        onClick={() => onNavigate(node._path)}
+                                                        isBookmarked={isBookmarkedAnywhere(node._id)}
+                                                        openBookmarkDialog={openBookmarkDialog}
+                                                    />
+                                                ))}
                                         </div>
                                     </div>
                                 )}
@@ -339,6 +383,23 @@ export default function DetailScreen({
                                                     />
                                                 ))}
                                             </div>
+
+                                            {isVgmMain && vgmRaces.length > 0 && (
+                                                <div className="mt-8">
+                                                    <h3 className="section-title mb-4">玩家可用种族</h3>
+                                                    <div className="item-grid">
+                                                        {vgmRaces.map(race => (
+                                                            <ItemCard
+                                                                key={race.id}
+                                                                item={race}
+                                                                onClick={() => onSelectItem(race)}
+                                                                isBookmarked={isBookmarkedAnywhere(race.id)}
+                                                                openBookmarkDialog={openBookmarkDialog}
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     );
                                 })()}
