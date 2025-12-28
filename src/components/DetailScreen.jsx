@@ -308,21 +308,7 @@ export default function DetailScreen({
                                     })()
                                 ) : null}
 
-                                {isMasteryDirectory && (
-                                    <div className="directory-view mb-8">
-                                        <div className="item-grid">
-                                            {masteriesInCategory.map(mastery => (
-                                                <ItemCard
-                                                    key={mastery.id}
-                                                    item={mastery}
-                                                    onClick={() => onSelectItem(mastery)}
-                                                    isBookmarked={isBookmarkedAnywhere(mastery.id)}
-                                                    openBookmarkDialog={openBookmarkDialog}
-                                                />
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
+
 
                                 {Object.keys(currentCategoryData._children).length > 0 && (
                                     <div className="mb-8">
@@ -368,7 +354,7 @@ export default function DetailScreen({
 
                                     return (
                                         <div>
-                                            <h3 className="section-title mb-4">内容条目</h3>
+                                            <h3 className="section-title mb-4">{isMasteryDirectory ? '精通词条' : '内容条目'}</h3>
                                             <div className="item-grid">
                                                 {sortedFiles.map(item => (
                                                     <ItemCard

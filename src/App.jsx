@@ -84,7 +84,7 @@ const processedData = rawData.map(item => {
 });
 
 // Merged data for category tree (sidebar and folder views)
-const data = [...processedData, ...masteryData, ...featData];
+const data = [...processedData, ...masteryData];
 
 // Category tree generation
 const categoryTree = (() => {
