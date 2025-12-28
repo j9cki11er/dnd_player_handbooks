@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Heart, Folder } from 'lucide-react';
+import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
 import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
 
 export default function DetailScreen({
@@ -196,6 +196,9 @@ export default function DetailScreen({
                     </h1>
                 </div>
                 <div className="top-bar-actions">
+                    <button onClick={toggleTheme} className="top-bar-theme-toggle" title={theme === 'dark' ? '切换浅色模式' : '切换深色模式'}>
+                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
                     {(() => {
                         const bookmarkItem = selectedItem || loadedOverview?.item || (currentCategoryData ? {
                             id: currentCategoryData._id,
@@ -230,11 +233,6 @@ export default function DetailScreen({
                     <div className="p-6">
                         {selectedItem ? (
                             <>
-                                {/* {selectedItem.pathParts && (
-                                    <div className="mb-4 opacity-60 text-xs uppercase tracking-widest overflow-hidden text-ellipsis whitespace-nowrap">
-                                        {selectedItem.pathParts.join(' > ')}
-                                    </div>
-                                )} */}
                                 {isFeatCategory ? (
                                     <div className="directory-view">
                                         <h3 className="section-title mb-4">专长列表</h3>

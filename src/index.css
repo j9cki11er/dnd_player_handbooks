@@ -26,11 +26,11 @@ body.light-theme {
   --bg-tertiary: #f1f3f5;
   --text-primary: #1a1a1a;
   --text-secondary: #495057;
-  --text-muted: #6c757d;
-  --accent-gold: #3A3A3A;
-  --accent-gold-hover: #555555;
+  --text-muted: #40474d;
+  --accent-gold: #8f5815;
+  --accent-gold-hover: #8f5815;
   --border-color: rgba(58, 58, 58, 0.3);
-  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-bg: rgba(255, 255, 255, 0.85);
   /* --glass-bg: rgba(255, 255, 255, 0.1); */
   --glass-border: rgba(0, 0, 0, 0.1);
   --glass-gold: rgba(198, 181, 29, 0.36);
@@ -515,7 +515,7 @@ a {
 }
 
 .collapsible-title {
-  font-size: 1.25rem !important;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--accent-gold);
   margin: 0;
