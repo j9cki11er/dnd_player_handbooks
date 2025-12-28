@@ -136,8 +136,33 @@ a {
   color: var(--accent-gold);
 }
 
+.top-bar-theme-toggle,
 .top-bar-search-btn.active {
   color: #ef4444;
+}
+
+.top-bar-theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.top-bar-theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-gold);
+}
+
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .main-viewport {

@@ -1,7 +1,6 @@
-import React from 'react';
-import { ArrowLeft, Search } from 'lucide-react';
+import { ArrowLeft, Search, Sun, Moon } from 'lucide-react';
 
-export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, setActiveTab, setSelectedItem, setDetailStack }) {
+export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, setActiveTab, setSelectedItem, setDetailStack, theme, toggleTheme }) {
     const getTitle = () => {
         if (selectedItem) return selectedItem.title;
 
@@ -29,6 +28,9 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
                 <h1 className="top-bar-title">{getTitle()}</h1>
             </div>
             <div className="top-bar-actions">
+                <button onClick={toggleTheme} className="top-bar-theme-toggle" title={theme === 'dark' ? '切换浅色模式' : '切换深色模式'}>
+                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                </button>
                 {activeTab !== 'search' && (
                     <button onClick={() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); }} className="top-bar-search-btn">
                         <Search size={22} />

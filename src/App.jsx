@@ -203,6 +203,7 @@ export default function App() {
       <TopBar
         activeTab={activeTab} selectedItem={selectedItem} currentPath={currentPath} detailStack={detailStack}
         handleBack={handleBack} setActiveTab={setActiveTab} setSelectedItem={setSelectedItem} setDetailStack={setDetailStack}
+        theme={theme} toggleTheme={toggleTheme}
       />
 
       <aside className="sidebar">
