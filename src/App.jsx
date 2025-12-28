@@ -43,7 +43,7 @@ const EXPANSIONS_TO_SHOW = [
 ];
 
 // Enrich data with monster metadata
-const data = rawData.map(item => {
+const processedData = rawData.map(item => {
   let updatedItem = { ...item };
 
   // Consistently rename MPMM to VGM and handle category
@@ -82,6 +82,9 @@ const data = rawData.map(item => {
   }
   return updatedItem;
 });
+
+// Merged data for category tree (sidebar and folder views)
+const data = [...processedData, ...masteryData, ...featData];
 
 // Category tree generation
 const categoryTree = (() => {

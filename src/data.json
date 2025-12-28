@@ -5021,15 +5021,15 @@
     "isOverview": true
   },
   {
-    "id": "第六章：装备/武器/精通词条.htm",
+    "id": "第六章：装备/精通词条/精通词条.htm",
     "title": "精通词条",
     "category": "第六章：装备",
-    "path": "第六章：装备/武器/精通词条.html",
+    "path": "第六章：装备/精通词条/精通词条.html",
     "pathParts": [
       "第六章：装备",
-      "武器"
+      "精通词条"
     ],
-    "isOverview": false
+    "isOverview": true
   },
   {
     "id": "第六章：装备/武器/词条.htm",

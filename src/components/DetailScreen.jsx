@@ -128,19 +128,19 @@ export default function DetailScreen({
         return featData.filter(f => f.category === catName);
     }, [isFeatCategory, selectedItem, featData]);
 
+    const isMasteryDirectory = useMemo(() => {
+        return entry.type === 'dir' && entry.path && entry.path.join('/') === '第六章：装备/精通词条';
+    }, [entry]);
+
     const masteriesInCategory = useMemo(() => {
-        if (!isMasteryCategory && !currentCategoryData) return [];
+        if (!isMasteryCategory && !isMasteryDirectory) return [];
         return masteryData;
-    }, [isMasteryCategory, currentCategoryData, masteryData]);
+    }, [isMasteryCategory, isMasteryDirectory, masteryData]);
 
     const associatedWeapons = useMemo(() => {
         if (!selectedItem || selectedItem.category !== '精通词条') return [];
         return weaponData.filter(w => w.mastery === selectedItem.title);
     }, [selectedItem, weaponData]);
-
-    const isMasteryDirectory = useMemo(() => {
-        return entry.type === 'dir' && entry.path && entry.path.join('/') === '第六章：装备/精通词条';
-    }, [entry]);
 
     const vgmRaces = useMemo(() => {
         if (!categoryTree) return [];
