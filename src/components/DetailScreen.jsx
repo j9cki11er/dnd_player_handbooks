@@ -230,11 +230,11 @@ export default function DetailScreen({
                     <div className="p-6">
                         {selectedItem ? (
                             <>
-                                {selectedItem.pathParts && (
+                                {/* {selectedItem.pathParts && (
                                     <div className="mb-4 opacity-60 text-xs uppercase tracking-widest overflow-hidden text-ellipsis whitespace-nowrap">
                                         {selectedItem.pathParts.join(' > ')}
                                     </div>
-                                )}
+                                )} */}
                                 {isFeatCategory ? (
                                     <div className="directory-view">
                                         <h3 className="section-title mb-4">专长列表</h3>
