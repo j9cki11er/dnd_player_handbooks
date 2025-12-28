@@ -137,6 +137,7 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [searchQuery, setSearchQuery] = useState('');
   const [showDev, setShowDev] = useState(() => localStorage.getItem('dev_mode') === 'true');
+  const [showDM, setShowDM] = useState(() => localStorage.getItem('dm_mode') === 'true');
 
   useEffect(() => {
     if (window.location.pathname === '/dev') {
@@ -145,7 +146,13 @@ export default function App() {
       localStorage.setItem('dev_mode', newDevMode.toString());
       window.history.replaceState(null, '', '/');
     }
-  }, [showDev]);
+    if (window.location.pathname === '/dm') {
+      const newDMMode = !showDM;
+      setShowDM(newDMMode);
+      localStorage.setItem('dm_mode', newDMMode.toString());
+      window.history.replaceState(null, '', '/');
+    }
+  }, [showDev, showDM]);
 
   const {
     activeTab, setActiveTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
@@ -212,7 +219,7 @@ export default function App() {
           setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} theme={theme} toggleTheme={toggleTheme}
           currentPath={currentPath} selectedItem={selectedItem} toggleExpand={toggleExpand} expandedPaths={expandedPaths}
           setSearchQuery={setSearchQuery} navigateTo={navigateTo} selectItem={selectItem}
-          showDev={showDev}
+          showDev={showDev} showDM={showDM}
         />
       </aside>
 
@@ -249,6 +256,7 @@ export default function App() {
               navigateTo={navigateTo} selectItem={selectItem} parseCR={parseCR} featData={featData}
               masteryData={masteryData} weaponData={weaponData}
               isLocked={index < detailStack.length - 1}
+              showDM={showDM}
             />
           ))}
         </AnimatePresence>

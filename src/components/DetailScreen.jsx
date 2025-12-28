@@ -7,12 +7,12 @@ export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
     SidebarContent, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
     currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery, navigateTo, selectItem,
-    parseCR, featData, masteryData, weaponData, isLocked
+    parseCR, featData, masteryData, weaponData, isLocked, showDev, showDM
 }) {
     const sidebarProps = {
         categoryTree, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack,
         theme, toggleTheme, currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery,
-        navigateTo, selectItem
+        navigateTo, selectItem, showDev, showDM
     };
     const [loadedContent, setLoadedContent] = useState('');
     const [contentLoading, setContentLoading] = useState(false);
@@ -329,7 +329,11 @@ export default function DetailScreen({
                                         <h3 className="section-title mb-4">子目录</h3>
                                         <div className="item-grid">
                                             {Object.entries(currentCategoryData._children)
-                                                .filter(([name]) => name !== '怪物冒险者' && name !== '玩家可用种族')
+                                                .filter(([name]) => {
+                                                    if (name === '怪物冒险者' || name === '玩家可用种族') return false;
+                                                    if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(name)) return false;
+                                                    return true;
+                                                })
                                                 .map(([name, node]) => (
                                                     <ItemCard
                                                         key={node._id}
