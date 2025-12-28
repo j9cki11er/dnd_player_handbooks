@@ -44,7 +44,7 @@ export default function WelcomePanel({ chapters, expansions = [], categoryTree, 
                     <h2 className="welcome-title text-2xl mb-2 mt-12">扩充手册</h2>
                     <p className="welcome-desc">
                         扩充手册包含额外的角色创建选项与规则模块。
-                        想要更强并非是毫无代价的——使用扩充手册创建的角色将比标准规则低 1️⃣ 个等级。
+                        但力量并非毫无代价——使用扩充手册创建的角色将比标准规则低 1️⃣ 个等级。
                     </p>
                     <div className="welcome-directory mt-6">
                         <div className="item-grid">
