@@ -5429,6 +5429,204 @@
     "isOverview": true
   },
   {
+    "id": "skeleton_appendix_b",
+    "title": "骷髅",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/亡灵/骷髅/骷髅.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "zombie_appendix_b",
+    "title": "丧尸",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/亡灵/丧尸/丧尸.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pseudodragon_appendix_b",
+    "title": "伪龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/龙类/伪龙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "sprite_appendix_b",
+    "title": "小仙灵",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/妖精/小仙灵.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "slaad-tadpole_appendix_b",
+    "title": "史拉蟾蝌蚪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/异怪/史拉蟾/史拉蟾蝌蚪.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "sphinx-of-wonder_appendix_b",
+    "title": "求索斯芬克斯",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/天族/斯芬克斯/求索斯芬克斯.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "quasit_appendix_b",
+    "title": "小恶魔",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/邪魔/恶魔/小恶魔.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "imp_appendix_b",
+    "title": "小魔鬼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/邪魔/魔鬼/小魔鬼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "魔契师魔宠"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "bat_appendix_b",
+    "title": "蝙蝠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蝙蝠.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "cat_appendix_b",
+    "title": "猫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/猫.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "frog_appendix_b",
+    "title": "蛙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蛙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "hawk_appendix_b",
+    "title": "隼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/隼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "owl_appendix_b",
+    "title": "猫头鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/猫头鹰.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "rat_appendix_b",
+    "title": "鼠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鼠.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "raven_appendix_b",
+    "title": "渡鸦",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/渡鸦.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "seahorse_appendix_b",
+    "title": "海马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/海马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "spider_appendix_b",
+    "title": "蜘蛛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蜘蛛.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "weasel_appendix_b",
+    "title": "鼬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鼬.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "其他生物"
+    ],
+    "isOverview": false
+  },
+  {
     "id": "附录 C：术语汇编/_概述.htm",
     "title": "附录C：术语汇编",
     "category": "附录 C：术语汇编",
