@@ -5429,101 +5429,13 @@
     "isOverview": true
   },
   {
-    "id": "skeleton_appendix_b",
-    "title": "骷髅",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/亡灵/骷髅/骷髅.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "zombie_appendix_b",
-    "title": "丧尸",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/亡灵/丧尸/丧尸.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "pseudodragon_appendix_b",
-    "title": "伪龙",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/龙类/伪龙.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "sprite_appendix_b",
-    "title": "小仙灵",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/妖精/小仙灵.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "slaad-tadpole_appendix_b",
-    "title": "史拉蟾蝌蚪",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/异怪/史拉蟾/史拉蟾蝌蚪.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "sphinx-of-wonder_appendix_b",
-    "title": "求索斯芬克斯",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/天族/斯芬克斯/求索斯芬克斯.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "quasit_appendix_b",
-    "title": "小恶魔",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/邪魔/恶魔/小恶魔.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "imp_appendix_b",
-    "title": "小魔鬼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/邪魔/魔鬼/小魔鬼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "魔契师魔宠"
-    ],
-    "isOverview": false
-  },
-  {
     "id": "bat_appendix_b",
     "title": "蝙蝠",
     "category": "附录 B：生物数据卡",
     "path": "monsters_original/附录A/蝙蝠.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5534,7 +5446,7 @@
     "path": "monsters_original/附录A/猫.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5545,7 +5457,7 @@
     "path": "monsters_original/附录A/蛙.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5556,7 +5468,7 @@
     "path": "monsters_original/附录A/隼.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5567,7 +5479,7 @@
     "path": "monsters_original/附录A/猫头鹰.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5578,7 +5490,7 @@
     "path": "monsters_original/附录A/鼠.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5589,7 +5501,7 @@
     "path": "monsters_original/附录A/渡鸦.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5600,7 +5512,7 @@
     "path": "monsters_original/附录A/海马.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5611,7 +5523,7 @@
     "path": "monsters_original/附录A/蜘蛛.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
     ],
     "isOverview": false
   },
@@ -5622,7 +5534,117 @@
     "path": "monsters_original/附录A/鼬.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "其他生物"
+      "CR 0"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "slaad-tadpole_appendix_b",
+    "title": "史拉蟾蝌蚪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/异怪/史拉蟾/史拉蟾蝌蚪.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/8"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "skeleton_appendix_b",
+    "title": "骷髅",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/亡灵/骷髅/骷髅.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "zombie_appendix_b",
+    "title": "丧尸",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/亡灵/丧尸/丧尸.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pseudodragon_appendix_b",
+    "title": "伪龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/龙类/伪龙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "sprite_appendix_b",
+    "title": "小仙灵",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/妖精/小仙灵.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "warhorse_appendix_b",
+    "title": "战马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/战马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "black-bear_appendix_b",
+    "title": "黑熊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/黑熊.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "sphinx-of-wonder_appendix_b",
+    "title": "求索斯芬克斯",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/天族/斯芬克斯/求索斯芬克斯.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "quasit_appendix_b",
+    "title": "小恶魔",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/邪魔/恶魔/小恶魔.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "imp_appendix_b",
+    "title": "小魔鬼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/邪魔/魔鬼/小魔鬼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 1"
     ],
     "isOverview": false
   },
