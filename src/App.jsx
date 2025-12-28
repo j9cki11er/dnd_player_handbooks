@@ -35,7 +35,7 @@ import { useBookmarks } from './hooks/useBookmarks';
 import { useSearch } from './hooks/useSearch';
 
 const CHAPTERS_TO_SHOW = [
-  '第一章：进行游戏', '第二章：创建角色', '第三章：角色职业', '第四章：角色起源', '第五章：专长', '第六章：装备', '第七章：法术', '附录 A：多元宇宙', '附录 B：生物数据卡', '附录 C：术语汇编'
+  '序章：欢迎来到冒险世界', '第一章：进行游戏', '第二章：创建角色', '第三章：角色职业', '第四章：角色起源', '第五章：专长', '第六章：装备', '第七章：法术', '附录 A：多元宇宙', '附录 B：生物数据卡', '附录 C：术语汇编'
 ];
 
 // Enrich data with monster metadata
@@ -54,15 +54,29 @@ const categoryTree = (() => {
   const tree = {};
   const norm = (s) => s ? s.replace(/\s+/g, '').toLocaleLowerCase() : '';
   data.forEach(item => {
+    // Rename MPMM to VGM in category and pathParts
+    const itemCategory = item.category.replace('MPMM', 'VGM');
+    const itemPathParts = item.pathParts.map(p => p.replace('MPMM', 'VGM'));
+
+    // Filter out unwanted categories
+    if (itemCategory.includes('VGM')) {
+      if (itemPathParts.some(p => ['图鉴', '怪物学识', '野兽'].includes(p))) {
+        return;
+      }
+      if (['图鉴', '怪物学识', '野兽'].some(hide => item.title.includes(hide) || item.id.includes(hide))) {
+        return;
+      }
+    }
+
     let current = tree;
-    item.pathParts.forEach((part, index) => {
+    itemPathParts.forEach((part, index) => {
       if (!current[part]) {
-        current[part] = { _isDir: true, _children: {}, _files: [], _path: item.pathParts.slice(0, index + 1), _selfFile: null, _id: `dir:${item.pathParts.slice(0, index + 1).join('/')}`, _title: part };
+        current[part] = { _isDir: true, _children: {}, _files: [], _path: itemPathParts.slice(0, index + 1), _selfFile: null, _id: `dir:${itemPathParts.slice(0, index + 1).join('/')}`, _title: part };
       }
       current = current[part]._children;
     });
-    const parent = item.pathParts.reduce((acc, part) => acc._children[part], { _children: tree });
-    parent._files.push(item);
+    const parent = itemPathParts.reduce((acc, part) => acc._children[part], { _children: tree });
+    parent._files.push({ ...item, category: itemCategory, pathParts: itemPathParts });
   });
   const visit = (node, parentNode = null) => {
     Object.entries(node).forEach(([name, d]) => {

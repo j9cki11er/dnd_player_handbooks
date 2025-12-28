@@ -146,7 +146,19 @@ const SidebarContent = ({
                 <h3 className="section-title">分类目录</h3>
                 <div className="category-list">
                     {Object.entries(categoryTree)
-                        .filter(([catName]) => !catName.includes('MPMM'))
+                        .filter(([catName]) => !catName.includes('VGM'))
+                        .sort(([a], [b]) => {
+                            const order = [
+                                '序章', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '附录 A', '附录 B', '附录 C'
+                            ];
+                            const getIndex = (name) => {
+                                for (let i = 0; i < order.length; i++) {
+                                    if (name.includes(order[i])) return i;
+                                }
+                                return 999;
+                            };
+                            return getIndex(a) - getIndex(b);
+                        })
                         .map(([catName, catNode]) => (
                             <SidebarItem key={catName} name={catName} node={catNode} />
                         ))}
@@ -157,7 +169,7 @@ const SidebarContent = ({
                 <h3 className="section-title">扩充手册</h3>
                 <div className="category-list">
                     {Object.entries(categoryTree)
-                        .filter(([catName]) => catName.includes('MPMM'))
+                        .filter(([catName]) => catName.includes('VGM'))
                         .map(([catName, catNode]) => (
                             <SidebarItem key={catName} name={catName} node={catNode} />
                         ))}
