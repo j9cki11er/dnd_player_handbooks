@@ -7,7 +7,7 @@ export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
     SidebarContent, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
     currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery, navigateTo, selectItem,
-    parseCR, featData, masteryData, weaponData, isLocked, showDev, showDM,
+    parseCR, featData, masteryData, weaponData, invocationData, isLocked, showDev, showDM,
     isExternalBack
 }) {
     const sidebarProps = {
@@ -122,6 +122,33 @@ export default function DetailScreen({
     const isMasteryCategory = useMemo(() => {
         return selectedItem && selectedItem.id === '第六章：装备/精通词条/精通词条.htm';
     }, [selectedItem]);
+
+    const isInvocationCategory = useMemo(() => {
+        return selectedItem && selectedItem.id === '第三章：角色职业/魔契师/魔能祈唤选项.htm';
+    }, [selectedItem]);
+
+    const invocationsByLevel = useMemo(() => {
+        if (!isInvocationCategory) return {};
+        const groups = {
+            0: [], 2: [], 5: [], 7: [], 9: [], 12: [], 15: []
+        };
+        invocationData.forEach(inv => {
+            const level = inv.reqLevel || 0;
+            if (!groups[level]) groups[level] = [];
+            groups[level].push(inv);
+        });
+        return groups;
+    }, [isInvocationCategory, invocationData]);
+
+    const levelLabels = {
+        0: '先决：无',
+        2: '魔契师等级 2+',
+        5: '魔契师等级 5+',
+        7: '魔契师等级 7+',
+        9: '魔契师等级 9+',
+        12: '魔契师等级 12+',
+        15: '魔契师等级 15+'
+    };
 
     const featsInCategory = useMemo(() => {
         if (!isFeatCategory) return [];
@@ -264,6 +291,34 @@ export default function DetailScreen({
                                                     openBookmarkDialog={openBookmarkDialog}
                                                 />
                                             ))}
+                                        </div>
+                                    </div>
+                                ) : isInvocationCategory ? (
+                                    <div className="directory-view">
+                                        <h3 className="section-title mb-4">魔能祈唤选项</h3>
+                                        <div className="flex flex-col gap-8">
+                                            {Object.keys(invocationsByLevel).sort((a, b) => Number(a) - Number(b)).map(level => {
+                                                const group = invocationsByLevel[level];
+                                                if (group.length === 0) return null;
+                                                return (
+                                                    <div key={level} className="invocation-group">
+                                                        <h4 className="text-gold opacity-80 mb-3 px-1 border-l-2 border-gold/30 pl-3">
+                                                            {levelLabels[level] || `魔契师等级 ${level}+`}
+                                                        </h4>
+                                                        <div className="item-grid">
+                                                            {group.map(inv => (
+                                                                <ItemCard
+                                                                    key={inv.id}
+                                                                    item={inv}
+                                                                    onClick={() => onSelectItem(inv)}
+                                                                    isBookmarked={isBookmarkedAnywhere(inv.id)}
+                                                                    openBookmarkDialog={openBookmarkDialog}
+                                                                />
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 ) : contentLoading ? (

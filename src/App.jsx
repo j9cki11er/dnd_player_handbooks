@@ -8,6 +8,7 @@ import featData from './data-feats.json';
 import masteryData from './data-masteries.json';
 import weaponData from './data-weapons.json';
 import monsterData from './data-monsters.json';
+import invocationData from './data-invocations.json';
 
 // Extracted Phase 1 Components
 import SidebarContent from './components/SidebarContent';
@@ -257,7 +258,7 @@ export default function App() {
               theme={theme} toggleTheme={toggleTheme} currentPath={currentPath} selectedItem={selectedItem}
               toggleExpand={toggleExpand} expandedPaths={expandedPaths} setSearchQuery={setSearchQuery}
               navigateTo={navigateTo} selectItem={selectItem} parseCR={parseCR} featData={featData}
-              masteryData={masteryData} weaponData={weaponData}
+              masteryData={masteryData} weaponData={weaponData} invocationData={invocationData}
               isLocked={index < detailStack.length - 1}
               showDM={showDM}
               isExternalBack={isExternalBack}

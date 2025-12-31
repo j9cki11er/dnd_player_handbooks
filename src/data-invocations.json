@@ -1,0 +1,263 @@
+[
+  {
+    "id": "invocation_venomous_snake",
+    "title": "毒蛇",
+    "titleEn": "Venomous Snake",
+    "prerequisite": "",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation_venomous_snake.html"
+  },
+  {
+    "id": "invocation__pact_of_the_chain",
+    "title": "链之魔契",
+    "titleEn": "Pact of the Chain",
+    "prerequisite": "",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__pact_of_the_chain.html"
+  },
+  {
+    "id": "invocation__eldritch_mind",
+    "title": "魔能意志",
+    "titleEn": "Eldritch Mind",
+    "prerequisite": "",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__eldritch_mind.html"
+  },
+  {
+    "id": "invocation__pact_of_the_blade",
+    "title": "刃之魔契",
+    "titleEn": "Pact of the Blade",
+    "prerequisite": "",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__pact_of_the_blade.html"
+  },
+  {
+    "id": "invocation__pact_of_the_tome",
+    "title": "书之魔契",
+    "titleEn": "Pact of the Tome",
+    "prerequisite": "",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__pact_of_the_tome.html"
+  },
+  {
+    "id": "invocation__armor_of_shadows",
+    "title": "幽影护甲",
+    "titleEn": "Armor of Shadows",
+    "prerequisite": "",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__armor_of_shadows.html"
+  },
+  {
+    "id": "invocation__otherworldly_leap",
+    "title": "超凡跳跃",
+    "titleEn": "Otherworldly Leap",
+    "prerequisite": "魔契师等级2+",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__otherworldly_leap.html"
+  },
+  {
+    "id": "invocation__repelling_blast",
+    "title": "斥力魔爆",
+    "titleEn": "Repelling Blast",
+    "prerequisite": "魔契师等级2+，知晓一道通过攻击检定造成伤害的魔契师戏法",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__repelling_blast.html"
+  },
+  {
+    "id": "invocation__misty_visions",
+    "title": "幻象迷踪",
+    "titleEn": "Misty Visions",
+    "prerequisite": "魔契师等级2+",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__misty_visions.html"
+  },
+  {
+    "id": "invocation__agonizing_blast",
+    "title": "苦痛魔爆",
+    "titleEn": "Agonizing Blast",
+    "prerequisite": "魔契师等级2+，知晓一道能造成伤害的魔契师戏法",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__agonizing_blast.html"
+  },
+  {
+    "id": "invocation__devils_sight",
+    "title": "魔鬼视界",
+    "titleEn": "Devil's Sight",
+    "prerequisite": "魔契师等级2+",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__devils_sight.html"
+  },
+  {
+    "id": "invocation__eldritch_spear",
+    "title": "魔能长枪",
+    "titleEn": "Eldritch Spear",
+    "prerequisite": "魔契师等级2+，知晓一道造成伤害的魔契师戏法",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__eldritch_spear.html"
+  },
+  {
+    "id": "invocation__mask_of_many_faces",
+    "title": "千面之颜",
+    "titleEn": "Mask of Many Faces",
+    "prerequisite": "魔契师等级2+",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__mask_of_many_faces.html"
+  },
+  {
+    "id": "invocation__fiendish_vigor",
+    "title": "邪魔活力",
+    "titleEn": "Fiendish Vigor",
+    "prerequisite": "魔契师等级2+",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__fiendish_vigor.html"
+  },
+  {
+    "id": "invocation__lessons_of_the_first_ones",
+    "title": "原初之一的教习",
+    "titleEn": "Lessons of the First Ones",
+    "prerequisite": "魔契师等级2+",
+    "reqLevel": 2,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__lessons_of_the_first_ones.html"
+  },
+  {
+    "id": "invocation__gaze_of_two_minds",
+    "title": "共视感官",
+    "titleEn": "Gaze of Two Minds",
+    "prerequisite": "魔契师等级5+",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__gaze_of_two_minds.html"
+  },
+  {
+    "id": "invocation__thirsting_blade",
+    "title": "饥渴魔刃",
+    "titleEn": "Thirsting Blade",
+    "prerequisite": "魔契师等级5+，具有刃之魔契祈唤",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__thirsting_blade.html"
+  },
+  {
+    "id": "invocation__investment_of_the_chain_master",
+    "title": "链主赋能",
+    "titleEn": "Investment of the Chain Master",
+    "prerequisite": "魔契师等级5+，具有链之魔契祈唤",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__investment_of_the_chain_master.html"
+  },
+  {
+    "id": "invocation__eldritch_smite",
+    "title": "魔能斩",
+    "titleEn": "Eldritch Smite",
+    "prerequisite": "魔契师等级5+，具有刃之魔契祈唤",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__eldritch_smite.html"
+  },
+  {
+    "id": "invocation__one_with_shadows",
+    "title": "融身入影",
+    "titleEn": "One with Shadows",
+    "prerequisite": "魔契师等级5+",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__one_with_shadows.html"
+  },
+  {
+    "id": "invocation__gift_of_the_depths",
+    "title": "深海馈赠",
+    "titleEn": "Gift of the Depths",
+    "prerequisite": "魔契师等级5+",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__gift_of_the_depths.html"
+  },
+  {
+    "id": "invocation__master_of_myriad_forms",
+    "title": "万形之主",
+    "titleEn": "Master of Myriad Forms",
+    "prerequisite": "魔契师等级5+",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__master_of_myriad_forms.html"
+  },
+  {
+    "id": "invocation__ascendant_step",
+    "title": "星移步法",
+    "titleEn": "Ascendant Step",
+    "prerequisite": "魔契师等级5+",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__ascendant_step.html"
+  },
+  {
+    "id": "invocation__whispers_of_the_grave",
+    "title": "坟茔殁语",
+    "titleEn": "Whispers of the Grave",
+    "prerequisite": "魔契师等级7+",
+    "reqLevel": 7,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__whispers_of_the_grave.html"
+  },
+  {
+    "id": "invocation__visions_of_distant_realms",
+    "title": "穹宇尽视",
+    "titleEn": "Visions of Distant Realms",
+    "prerequisite": "魔契师等级9+",
+    "reqLevel": 9,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__visions_of_distant_realms.html"
+  },
+  {
+    "id": "invocation__gift_of_the_protectors",
+    "title": "守护馈赠",
+    "titleEn": "Gift of the Protectors",
+    "prerequisite": "魔契师等级9+，具有书之魔契祈唤",
+    "reqLevel": 9,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__gift_of_the_protectors.html"
+  },
+  {
+    "id": "invocation__lifedrinker",
+    "title": "饮命者",
+    "titleEn": "Lifedrinker",
+    "prerequisite": "魔契师等级9+，具有刃之魔契祈唤",
+    "reqLevel": 9,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__lifedrinker.html"
+  },
+  {
+    "id": "invocation__devouring_blade",
+    "title": "灭世魔刃",
+    "titleEn": "Devouring Blade",
+    "prerequisite": "魔契师等级12+，具有饥渴魔刃祈唤",
+    "reqLevel": 12,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation__devouring_blade.html"
+  },
+  {
+    "id": "invocation_witch_sight",
+    "title": "巫术视界",
+    "titleEn": "Witch Sight",
+    "prerequisite": "魔契师等级15+",
+    "reqLevel": 15,
+    "category": "魔能祈唤",
+    "path": "invocations/invocation_witch_sight.html"
+  }
+]

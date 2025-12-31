@@ -88,7 +88,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
     };
 
     const displayCategory = React.useMemo(() => {
-        if (item?.prerequisite || item?.category === '精通词条') return item.category;
+        if (item?.category === '魔能祈唤' || item?.category === '精通词条') return item.category;
 
         const pathStr = item?.fullCategory || item?.pathParts?.join(' > ') || '';
         const parts = pathStr.split(' > ').filter(Boolean);
@@ -128,9 +128,9 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
                 </div>
             </div>
             <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
-            {item?.prerequisite && (
-                <span className="spell-card-extra truncate">
-                    {item.prerequisite}
+            {(item?.prerequisite || item?.category === '魔能祈唤') && (
+                <span className="spell-card-extra truncate text-red-400 font-medium">
+                    先决: {item.prerequisite || '无'}
                 </span>)}
             {item?.cr && (
                 <span className="spell-card-extra truncate">
