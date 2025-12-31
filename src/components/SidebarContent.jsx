@@ -61,13 +61,17 @@ const SidebarContent = ({
                     <div className="sidebar-children border-l border-gold/10 ml-2">
                         {Object.entries(node._children)
                             .filter(([childName]) => {
-                                if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(childName)) return false;
+                                if (node._path[0] === '附录 B：生物数据卡') {
+                                    if (!showDM && ['CR 2', 'CR 3', 'CR 5', 'CR 6'].includes(childName)) return false;
+                                } else {
+                                    if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(childName)) return false;
+                                }
                                 return true;
                             })
                             .map(([childName, childNode]) => (
                                 <SidebarItem key={childName} name={childName} node={childNode} depth={depth + 1} />
                             ))}
-                        {nonOverviewFiles.map(file => {
+                        {nonOverviewFiles.filter(f => showDM || !f.dmOnly).map(file => {
                             const fileActive = selectedItem?.id === file.id;
                             return (
                                 <button

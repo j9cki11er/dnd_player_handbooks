@@ -318,7 +318,11 @@ export default function DetailScreen({
                                             {Object.entries(currentCategoryData._children)
                                                 .filter(([name]) => {
                                                     if (name === '怪物冒险者' || name === '玩家可用种族') return false;
-                                                    if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(name)) return false;
+                                                    if (entry.path && entry.path[0] === '附录 B：生物数据卡') {
+                                                        if (!showDM && ['CR 2', 'CR 3', 'CR 5', 'CR 6'].includes(name)) return false;
+                                                    } else {
+                                                        if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(name)) return false;
+                                                    }
                                                     return true;
                                                 })
                                                 .map(([name, node]) => (

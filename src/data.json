@@ -5429,486 +5429,13 @@
     "isOverview": true
   },
   {
-    "id": "bat_appendix_b",
-    "title": "蝙蝠",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/蝙蝠.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "cat_appendix_b",
-    "title": "猫",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/猫.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "frog_appendix_b",
-    "title": "蛙",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/蛙.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "hawk_appendix_b",
-    "title": "隼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/隼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "owl_appendix_b",
-    "title": "猫头鹰",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/猫头鹰.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "rat_appendix_b",
-    "title": "鼠",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/鼠.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "raven_appendix_b",
-    "title": "渡鸦",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/渡鸦.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "seahorse_appendix_b",
-    "title": "海马",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/海马.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "spider_appendix_b",
-    "title": "蜘蛛",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/蜘蛛.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "weasel_appendix_b",
-    "title": "鼬",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/鼬.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "hyena_appendix_b",
-    "title": "鬣狗",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/鬣狗.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "baboon_appendix_b",
-    "title": "狒狒",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/狒狒.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "lizard_appendix_b",
-    "title": "蜥蜴",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/蜥蜴.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "goat_appendix_b",
-    "title": "山羊",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/山羊.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "scorpion_appendix_b",
-    "title": "蝎",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/蝎.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "octopus_appendix_b",
-    "title": "章鱼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/章鱼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "deer_appendix_b",
-    "title": "鹿",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/鹿.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "badger_appendix_b",
-    "title": "獾",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/獾.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "crab_appendix_b",
-    "title": "蟹",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/蟹.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "vulture_appendix_b",
-    "title": "秃鹫",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/秃鹫.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 0"
-    ],
-    "isOverview": false
-  },
-  {
     "id": "slaad-tadpole_appendix_b",
     "title": "史拉蟾蝌蚪",
     "category": "附录 B：生物数据卡",
     "path": "monsters_original/异怪/史拉蟾/史拉蟾蝌蚪.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "blood-hawk_appendix_b",
-    "title": "血鹰",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/血鹰.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-rat_appendix_b",
-    "title": "巨鼠",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨鼠.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "mastiff_appendix_b",
-    "title": "獒犬",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/獒犬.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "camel_appendix_b",
-    "title": "骆驼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/骆驼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "pony_appendix_b",
-    "title": "矮种马",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/矮种马.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-crab_appendix_b",
-    "title": "巨蟹",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蟹.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-weasel_appendix_b",
-    "title": "巨鼬",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨鼬.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "mule_appendix_b",
-    "title": "骡",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/骡.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "flying-snake_appendix_b",
-    "title": "飞蛇",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/怪兽/飞蛇.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "stirge_appendix_b",
-    "title": "蚊蝠",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/怪兽/蚊蝠/蚊蝠.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "poisonous-snake_appendix_b",
-    "title": "毒蛇",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/毒蛇.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "merfolk-skirmisher_appendix_b",
-    "title": "巡海人鱼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/元素/人鱼/巡海人鱼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "modron-monodrone_appendix_b",
-    "title": "魔冢·单元冢",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/构装/魔冢/魔冢·单元冢.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "kobold-warrior_appendix_b",
-    "title": "狗头人武者",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/龙类/狗头人/狗头人武者.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "twig-blight_appendix_b",
-    "title": "枯枝怪",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/植物/枯萎怪/枯枝怪.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "noble_appendix_b",
-    "title": "贵族",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/类人/贵族/贵族.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "cultist_appendix_b",
-    "title": "邪教徒",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/类人/邪教徒/邪教徒.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "warrior-infantry_appendix_b",
-    "title": "新晋武者",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/类人/武者/新晋武者.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "guard_appendix_b",
-    "title": "警卫",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/类人/警卫/警卫.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "bandit_appendix_b",
-    "title": "匪徒",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/类人/匪徒/匪徒.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "goblin-minion_appendix_b",
-    "title": "地精喽啰",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/妖精/地精/地精喽啰.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "flumph_appendix_b",
-    "title": "呋噜",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/异怪/呋噜.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "manes_appendix_b",
-    "title": "原魔",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/邪魔/恶魔/原魔/原魔.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/8"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -5919,7 +5446,7 @@
     "path": "monsters_original/亡灵/骷髅/骷髅.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1/4"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -5930,7 +5457,7 @@
     "path": "monsters_original/亡灵/丧尸/丧尸.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1/4"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -5941,7 +5468,7 @@
     "path": "monsters_original/龙类/伪龙.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1/4"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -5952,282 +5479,7 @@
     "path": "monsters_original/妖精/小仙灵.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-lizard_appendix_b",
-    "title": "巨蜥蜴",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蜥蜴.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "boar_appendix_b",
-    "title": "野猪",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/野猪.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "elk_appendix_b",
-    "title": "赤鹿",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/赤鹿.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-frog_appendix_b",
-    "title": "巨蛙",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蛙.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-wolf-spider_appendix_b",
-    "title": "巨狼蛛",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨狼蛛.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "panther_appendix_b",
-    "title": "豹",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/豹.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-poisonous-snake_appendix_b",
-    "title": "巨毒蛇",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨毒蛇.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-centipede_appendix_b",
-    "title": "巨蜈蚣",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蜈蚣.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-bat_appendix_b",
-    "title": "巨蝙蝠",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蝙蝠.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "draft-horse_appendix_b",
-    "title": "驮用马",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/驮用马.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "wolf_appendix_b",
-    "title": "狼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/狼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "riding-horse_appendix_b",
-    "title": "乘用马",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/乘用马.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-badger_appendix_b",
-    "title": "巨獾",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨獾.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "swarm-of-bats_appendix_b",
-    "title": "蝙蝠集群",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/集群/蝙蝠集群.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "swarm-of-rats_appendix_b",
-    "title": "鼠集群",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/集群/鼠集群.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "swarm-of-ravens_appendix_b",
-    "title": "渡鸦集群",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/集群/渡鸦集群.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/4"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "warhorse_appendix_b",
-    "title": "战马",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/战马.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "black-bear_appendix_b",
-    "title": "黑熊",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/黑熊.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-seahorse_appendix_b",
-    "title": "巨海马",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨海马.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-goat_appendix_b",
-    "title": "巨山羊",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨山羊.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "reef-shark_appendix_b",
-    "title": "礁鲨",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/礁鲨.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "ape_appendix_b",
-    "title": "猿",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/猿.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "crocodile_appendix_b",
-    "title": "鳄鱼",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/鳄鱼.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-wasp_appendix_b",
-    "title": "巨黄蜂",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨黄蜂.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "swarm-of-insects_appendix_b",
-    "title": "昆虫集群",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/集群/昆虫集群.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 1/2"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -6238,7 +5490,7 @@
     "path": "monsters_original/天族/斯芬克斯/求索斯芬克斯.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -6249,7 +5501,7 @@
     "path": "monsters_original/邪魔/恶魔/小恶魔.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -6260,84 +5512,414 @@
     "path": "monsters_original/邪魔/魔鬼/小魔鬼.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
   {
-    "id": "giant-hyena_appendix_b",
-    "title": "巨鬣狗",
+    "id": "badger_appendix_b",
+    "title": "獾",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨鬣狗.htm",
+    "path": "monsters_original/附录A/獾.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
     ],
     "isOverview": false
   },
   {
-    "id": "giant-toad_appendix_b",
-    "title": "巨蟾蜍",
+    "id": "bat_appendix_b",
+    "title": "蝙蝠",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蟾蜍.htm",
+    "path": "monsters_original/附录A/蝙蝠.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
     ],
     "isOverview": false
   },
   {
-    "id": "giant-octopus_appendix_b",
-    "title": "巨章鱼",
+    "id": "cat_appendix_b",
+    "title": "猫",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨章鱼.htm",
+    "path": "monsters_original/附录A/猫.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
     ],
     "isOverview": false
   },
   {
-    "id": "dire-wolf_appendix_b",
-    "title": "恐狼",
+    "id": "crab_appendix_b",
+    "title": "蟹",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/恐狼.htm",
+    "path": "monsters_original/附录A/蟹.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
     ],
     "isOverview": false
   },
   {
-    "id": "lion_appendix_b",
-    "title": "狮子",
+    "id": "frog_appendix_b",
+    "title": "蛙",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/狮子.htm",
+    "path": "monsters_original/附录A/蛙.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
     ],
     "isOverview": false
   },
   {
-    "id": "tiger_appendix_b",
-    "title": "虎",
+    "id": "goat_appendix_b",
+    "title": "山羊",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/虎.htm",
+    "path": "monsters_original/附录A/山羊.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
     ],
     "isOverview": false
   },
   {
-    "id": "giant-spider_appendix_b",
-    "title": "巨蜘蛛",
+    "id": "hawk_appendix_b",
+    "title": "隼",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蜘蛛.htm",
+    "path": "monsters_original/附录A/隼.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "octopus_appendix_b",
+    "title": "章鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/章鱼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "owl_appendix_b",
+    "title": "猫头鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/猫头鹰.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "lizard_appendix_b",
+    "title": "蜥蜴",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蜥蜴.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "rat_appendix_b",
+    "title": "鼠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鼠.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "raven_appendix_b",
+    "title": "渡鸦",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/渡鸦.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "scorpion_appendix_b",
+    "title": "蝎",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蝎.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "spider_appendix_b",
+    "title": "蜘蛛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蜘蛛.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "weasel_appendix_b",
+    "title": "鼬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鼬.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "camel_appendix_b",
+    "title": "骆驼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/骆驼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-crab_appendix_b",
+    "title": "巨蟹",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蟹.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-weasel_appendix_b",
+    "title": "巨鼬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨鼬.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "mastiff_appendix_b",
+    "title": "獒犬",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/獒犬.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "mule_appendix_b",
+    "title": "骡",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/骡.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pony_appendix_b",
+    "title": "矮种马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/矮种马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "poisonous-snake_appendix_b",
+    "title": "毒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/毒蛇.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "boar_appendix_b",
+    "title": "野猪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/野猪.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "constrictor-snake_appendix_b",
+    "title": "蟒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/蟒蛇.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "draft-horse_appendix_b",
+    "title": "驮用马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/驮用马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "elk_appendix_b",
+    "title": "赤鹿",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/赤鹿.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-badger_appendix_b",
+    "title": "巨獾",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨獾.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "panther_appendix_b",
+    "title": "豹",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/豹.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "riding-horse_appendix_b",
+    "title": "乘用马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/乘用马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "wolf_appendix_b",
+    "title": "狼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/狼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "ape_appendix_b",
+    "title": "猿",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/猿.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "black-bear_appendix_b",
+    "title": "黑熊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/黑熊.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "crocodile_appendix_b",
+    "title": "鳄鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鳄鱼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-goat_appendix_b",
+    "title": "巨山羊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨山羊.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "giant-seahorse_appendix_b",
+    "title": "巨海马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨海马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "reef-shark_appendix_b",
+    "title": "礁鲨",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/礁鲨.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "warhorse_appendix_b",
+    "title": "战马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/战马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
     ],
     "isOverview": false
   },
@@ -6348,150 +5930,51 @@
     "path": "monsters_original/附录A/棕熊.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR1"
     ],
     "isOverview": false
   },
   {
-    "id": "swarm-of-quippers_appendix_b",
-    "title": "食人鱼集群",
+    "id": "dire-wolf_appendix_b",
+    "title": "恐狼",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/集群/食人鱼集群.htm",
+    "path": "monsters_original/附录A/恐狼.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 1"
+      "CR1"
     ],
     "isOverview": false
   },
   {
-    "id": "hunter-shark_appendix_b",
-    "title": "寻猎鲨",
+    "id": "giant-spider_appendix_b",
+    "title": "巨蜘蛛",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/寻猎鲨.htm",
+    "path": "monsters_original/附录A/巨蜘蛛.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 2"
+      "CR1"
     ],
     "isOverview": false
   },
   {
-    "id": "giant-constrictor-snake_appendix_b",
-    "title": "巨蟒蛇",
+    "id": "lion_appendix_b",
+    "title": "狮子",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蟒蛇.htm",
+    "path": "monsters_original/附录A/狮子.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 2"
+      "CR1"
     ],
     "isOverview": false
   },
   {
-    "id": "giant-boar_appendix_b",
-    "title": "巨野猪",
+    "id": "tiger_appendix_b",
+    "title": "虎",
     "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨野猪.htm",
+    "path": "monsters_original/附录A/虎.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "polar-bear_appendix_b",
-    "title": "白熊",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/白熊.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "saber-toothed-tiger_appendix_b",
-    "title": "剑齿虎",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/剑齿虎.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "rhinoceros_appendix_b",
-    "title": "犀牛",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/犀牛.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "plesiosaurus_appendix_b",
-    "title": "蛇颈龙",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/恐龙/蛇颈龙.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "allosaurus_appendix_b",
-    "title": "异特龙",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/恐龙/异特龙.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "swarm-of-poisonous-snakes_appendix_b",
-    "title": "毒蛇集群",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/集群/毒蛇集群.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 2"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "giant-scorpion_appendix_b",
-    "title": "巨蝎",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/巨蝎.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 3"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "killer-whale_appendix_b",
-    "title": "虎鲸",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/虎鲸.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 3"
-    ],
-    "isOverview": false
-  },
-  {
-    "id": "ankylosaurus_appendix_b",
-    "title": "甲龙",
-    "category": "附录 B：生物数据卡",
-    "path": "monsters_original/附录A/恐龙/甲龙.htm",
-    "pathParts": [
-      "附录 B：生物数据卡",
-      "CR 3"
+      "CR1"
     ],
     "isOverview": false
   },
@@ -6507,6 +5990,582 @@
     "isOverview": false
   },
   {
+    "id": "seahorse_appendix_b",
+    "title": "海马",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/海马.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "hyena_appendix_b",
+    "title": "鬣狗",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鬣狗.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "baboon_appendix_b",
+    "title": "狒狒",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/狒狒.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "deer_appendix_b",
+    "title": "鹿",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鹿.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "vulture_appendix_b",
+    "title": "秃鹫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/秃鹫.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "blood-hawk_appendix_b",
+    "title": "血鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/血鹰.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-rat_appendix_b",
+    "title": "巨鼠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨鼠.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "flying-snake_appendix_b",
+    "title": "飞蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/怪兽/飞蛇.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "stirge_appendix_b",
+    "title": "蚊蝠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/怪兽/蚊蝠/蚊蝠.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "merfolk-skirmisher_appendix_b",
+    "title": "巡海人鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/元素/人鱼/巡海人鱼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "modron-monodrone_appendix_b",
+    "title": "魔冢·单元冢",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/构装/魔冢/魔冢·单元冢.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "kobold-warrior_appendix_b",
+    "title": "狗头人武者",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/龙类/狗头人/狗头人武者.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "twig-blight_appendix_b",
+    "title": "枯枝怪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/植物/枯萎怪/枯枝怪.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "noble_appendix_b",
+    "title": "贵族",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/类人/贵族/贵族.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "cultist_appendix_b",
+    "title": "邪教徒",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/类人/邪教徒/邪教徒.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "warrior-infantry_appendix_b",
+    "title": "新晋武者",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/类人/武者/新晋武者.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "guard_appendix_b",
+    "title": "警卫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/类人/警卫/警卫.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "bandit_appendix_b",
+    "title": "匪徒",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/类人/匪徒/匪徒.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "goblin-minion_appendix_b",
+    "title": "地精喽啰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/妖精/地精/地精喽啰.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "flumph_appendix_b",
+    "title": "呋噜",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/异怪/呋噜.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "manes_appendix_b",
+    "title": "原魔",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/邪魔/恶魔/原魔/原魔.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-lizard_appendix_b",
+    "title": "巨蜥蜴",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蜥蜴.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-frog_appendix_b",
+    "title": "巨蛙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蛙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-wolf-spider_appendix_b",
+    "title": "巨狼蛛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨狼蛛.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-poisonous-snake_appendix_b",
+    "title": "巨毒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨毒蛇.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-centipede_appendix_b",
+    "title": "巨蜈蚣",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蜈蚣.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-bat_appendix_b",
+    "title": "巨蝙蝠",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蝙蝠.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "swarm-of-bats_appendix_b",
+    "title": "蝙蝠集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/集群/蝙蝠集群.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "swarm-of-rats_appendix_b",
+    "title": "鼠集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/集群/鼠集群.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "swarm-of-ravens_appendix_b",
+    "title": "渡鸦集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/集群/渡鸦集群.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-wasp_appendix_b",
+    "title": "巨黄蜂",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨黄蜂.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "swarm-of-insects_appendix_b",
+    "title": "昆虫集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/集群/昆虫集群.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1/2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-hyena_appendix_b",
+    "title": "巨鬣狗",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨鬣狗.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-toad_appendix_b",
+    "title": "巨蟾蜍",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蟾蜍.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-octopus_appendix_b",
+    "title": "巨章鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨章鱼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "swarm-of-quippers_appendix_b",
+    "title": "食人鱼集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/集群/食人鱼集群.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR1"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "hunter-shark_appendix_b",
+    "title": "寻猎鲨",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/寻猎鲨.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-constrictor-snake_appendix_b",
+    "title": "巨蟒蛇",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蟒蛇.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-boar_appendix_b",
+    "title": "巨野猪",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨野猪.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "polar-bear_appendix_b",
+    "title": "白熊",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/白熊.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "saber-toothed-tiger_appendix_b",
+    "title": "剑齿虎",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/剑齿虎.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "rhinoceros_appendix_b",
+    "title": "犀牛",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/犀牛.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "plesiosaurus_appendix_b",
+    "title": "蛇颈龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/恐龙/蛇颈龙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "allosaurus_appendix_b",
+    "title": "异特龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/恐龙/异特龙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "swarm-of-poisonous-snakes_appendix_b",
+    "title": "毒蛇集群",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/集群/毒蛇集群.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 2"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "giant-scorpion_appendix_b",
+    "title": "巨蝎",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨蝎.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 3"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "killer-whale_appendix_b",
+    "title": "虎鲸",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/虎鲸.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 3"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
+    "id": "ankylosaurus_appendix_b",
+    "title": "甲龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/恐龙/甲龙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR 3"
+    ],
+    "isOverview": false,
+    "dmOnly": true
+  },
+  {
     "id": "hippopotamus_appendix_b",
     "title": "河马",
     "category": "附录 B：生物数据卡",
@@ -6515,7 +6574,8 @@
       "附录 B：生物数据卡",
       "CR 4"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "giganotosaurus_appendix_b",
@@ -6526,7 +6586,8 @@
       "附录 B：生物数据卡",
       "CR 4"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "giant-shark_appendix_b",
@@ -6537,7 +6598,8 @@
       "附录 B：生物数据卡",
       "CR 5"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "giant-crocodile_appendix_b",
@@ -6548,7 +6610,8 @@
       "附录 B：生物数据卡",
       "CR 5"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "triceratops_appendix_b",
@@ -6559,7 +6622,8 @@
       "附录 B：生物数据卡",
       "CR 5"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "mammoth_appendix_b",
@@ -6570,7 +6634,8 @@
       "附录 B：生物数据卡",
       "CR 6"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "giant-squid_appendix_b",
@@ -6581,7 +6646,8 @@
       "附录 B：生物数据卡",
       "CR 6"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "dmOnly": true
   },
   {
     "id": "附录 C：术语汇编/_概述.htm",
