@@ -46,7 +46,7 @@ export default function DetailScreen({
         } else {
             setLoadedContent('');
         }
-    }, [entry]);
+    }, [entry.id]);
 
     // Fetch overview content
     useEffect(() => {
@@ -92,7 +92,7 @@ export default function DetailScreen({
         } else {
             setLoadedOverview(null);
         }
-    }, [entry, categoryTree]);
+    }, [entry.id, categoryTree]);
 
     const currentCategoryData = useMemo(() => {
         if (entry.type !== 'dir' || !entry.path) return null;
