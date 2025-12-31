@@ -178,11 +178,13 @@ export default function DetailScreen({
         return entry.type === 'dir' && entry.path && entry.path.length === 1 && (entry.path[0].includes('VGM') || entry.path[0].includes('瓦罗怪物指南'));
     }, [entry]);
 
+    const isIPhone = useMemo(() => /iPhone/i.test(navigator.userAgent), []);
+
     return (
         <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: '100%', transition: { duration: 0 } }}
+            exit={{ x: '100%', transition: isIPhone ? { duration: 0 } : { type: 'spring', damping: 25, stiffness: 200 } }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="detail-overlay"
             style={{ zIndex: 1500 + index }}
