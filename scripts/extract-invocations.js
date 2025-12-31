@@ -97,7 +97,14 @@ function extractInvocations() {
         } else {
             // Leaf node
             if (currentStarterIndex !== -1) {
-                const content = node.rawText || node.outerHTML || '';
+                let content = '';
+                if (node.nodeType === 3) {
+                    // Text node: replace newlines with spaces and collapse
+                    content = node.rawText.replace(/\s+/g, ' ');
+                } else {
+                    // Element node (e.g., <BR>)
+                    content = node.outerHTML || '';
+                }
                 starterInfo[currentStarterIndex].content.push(content);
             }
         }
@@ -155,12 +162,10 @@ function saveInvocation(invocation, contentArr, allInvocations) {
     invocation.path = `invocations/${filename}`;
 
     const content = contentArr.join('')
-        .replace(/\r/g, '')
-        .replace(/\n\s*\n/g, '\n') // Collapse multiple newlines
-        .replace(/\n/g, '<br>')   // Convert remaining newlines to breaks
-        .replace(/(<br>)+/g, '<br>') // Collapse multiple breaks
-        .replace(/^(<br>|\s)+/g, '') // Trim start
-        .replace(/(<br>|\s)+$/g, ''); // Trim end
+        .replace(/(<BR>|<br>)+/gi, '<br>') // Collapse multiple breaks
+        .replace(/^(<br>|\s)+/gi, '')      // Trim leading
+        .replace(/(<br>|\s)+$/gi, '')     // Trim trailing
+        .trim();
 
     const fullHtml = `<h2>${invocation.title}${invocation.titleEn ? ' ' + invocation.titleEn : ''}</h2>\n<p>` + content + '</p>';
     fs.writeFileSync(outputPath, fullHtml);
