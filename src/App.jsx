@@ -159,7 +159,7 @@ export default function App() {
 
   const {
     activeTab, setActiveTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
-    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem
+    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem, isExternalBack
   } = useNavigation({ categoryTree, spellData, featData, masteryData, data });
 
   const {
@@ -260,6 +260,7 @@ export default function App() {
               masteryData={masteryData} weaponData={weaponData}
               isLocked={index < detailStack.length - 1}
               showDM={showDM}
+              isExternalBack={isExternalBack}
             />
           ))}
         </AnimatePresence>

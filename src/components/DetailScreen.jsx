@@ -7,7 +7,8 @@ export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
     SidebarContent, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
     currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery, navigateTo, selectItem,
-    parseCR, featData, masteryData, weaponData, isLocked, showDev, showDM
+    parseCR, featData, masteryData, weaponData, isLocked, showDev, showDM,
+    isExternalBack
 }) {
     const sidebarProps = {
         categoryTree, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack,
@@ -181,7 +182,7 @@ export default function DetailScreen({
         <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: '100%', transition: { duration: 0 } }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="detail-overlay"
             style={{ zIndex: 1500 + index }}

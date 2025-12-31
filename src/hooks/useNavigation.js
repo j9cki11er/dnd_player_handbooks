@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { resolveBookmarkItem } from '../utils/helpers';
 
 export function useNavigation({ categoryTree, spellData, featData, masteryData, data }) {
@@ -8,6 +8,9 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     const [detailStack, setDetailStack] = useState([]);
     const [expandedPaths, setExpandedPaths] = useState({});
     const [shouldReplaceState, setShouldReplaceState] = useState(false);
+
+    const [isExternalBack, setIsExternalBack] = useState(false);
+    const internalBackRef = useRef(false);
 
     // Sync state to history when important navigation state changes
     useEffect(() => {
@@ -36,13 +39,26 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
             }
         }
         window._isPopStateNavigating = false;
-    }, [activeTab, currentPath, selectedItem, detailStack, shouldReplaceState]);
+        // Reset external back flag after navigation stabilizes
+        if (isExternalBack) {
+            // Small timeout to allow render cycle to pick up the flag before resetting
+            const timer = setTimeout(() => setIsExternalBack(false), 100);
+            return () => clearTimeout(timer);
+        }
+    }, [activeTab, currentPath, selectedItem, detailStack, shouldReplaceState, isExternalBack]);
 
     // Listen for back/forward buttons
     useEffect(() => {
         const handlePopState = (event) => {
             if (event.state) {
                 window._isPopStateNavigating = true;
+
+                // If internalBackRef is false, this popstate came from browser/swipe
+                if (!internalBackRef.current) {
+                    setIsExternalBack(true);
+                }
+                internalBackRef.current = false; // Reset for next time
+
                 const { activeTab, currentPath, selectedId } = event.state;
 
                 setActiveTab(activeTab);
@@ -103,8 +119,10 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
 
     const handleBack = () => {
         if (window.history.state && (window.history.state.detailStack?.length > 1 || window.history.state.selectedId || (window.history.state.activeTab === 'browser' && window.history.state.currentPath.length > 0))) {
+            internalBackRef.current = true;
             window.history.back();
         } else if (detailStack.length > 0 || selectedItem || currentPath.length > 0) {
+            internalBackRef.current = true;
             window.history.back();
         }
     };
@@ -149,6 +167,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
         navigateTo,
         handleBack,
         selectItem,
-        resetBrowser
+        resetBrowser,
+        isExternalBack
     };
 }
