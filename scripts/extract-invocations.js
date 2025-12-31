@@ -71,12 +71,24 @@ function extractInvocations() {
     function walk(node, currentStarterIndex) {
         // If node is a starter, update currentStarter
         const sIndex = starters.indexOf(node);
+        let isDescendantOfStarter = false;
+
         if (sIndex !== -1) {
             currentStarterIndex = sIndex;
-        } else if (currentStarterIndex !== -1) {
-            // Add this node's content if it's a leaf node or we want its HTML
-            // To avoid double counting, only add if it's a text node or it doesn't have children we walk into.
+            return currentStarterIndex; // Skip the starter node itself
         }
+
+        // Check if any ancestor is a starter to skip its text nodes
+        let temp = node.parentNode;
+        while (temp && temp !== body) {
+            if (starters.indexOf(temp) !== -1) {
+                isDescendantOfStarter = true;
+                break;
+            }
+            temp = temp.parentNode;
+        }
+
+        if (isDescendantOfStarter) return currentStarterIndex;
 
         if (node.childNodes && node.childNodes.length > 0) {
             node.childNodes.forEach(child => {
@@ -84,7 +96,7 @@ function extractInvocations() {
             });
         } else {
             // Leaf node
-            if (currentStarterIndex !== -1 && node !== starters[currentStarterIndex]) {
+            if (currentStarterIndex !== -1) {
                 const content = node.rawText || node.outerHTML || '';
                 starterInfo[currentStarterIndex].content.push(content);
             }
@@ -142,7 +154,15 @@ function saveInvocation(invocation, contentArr, allInvocations) {
     const outputPath = path.join(OUTPUT_DIR, filename);
     invocation.path = `invocations/${filename}`;
 
-    const fullHtml = `<h2>${invocation.title}${invocation.titleEn ? ' ' + invocation.titleEn : ''}</h2>\n<p>` + contentArr.join('').replace(/\n/g, '<br>') + '</p>';
+    const content = contentArr.join('')
+        .replace(/\r/g, '')
+        .replace(/\n\s*\n/g, '\n') // Collapse multiple newlines
+        .replace(/\n/g, '<br>')   // Convert remaining newlines to breaks
+        .replace(/(<br>)+/g, '<br>') // Collapse multiple breaks
+        .replace(/^(<br>|\s)+/g, '') // Trim start
+        .replace(/(<br>|\s)+$/g, ''); // Trim end
+
+    const fullHtml = `<h2>${invocation.title}${invocation.titleEn ? ' ' + invocation.titleEn : ''}</h2>\n<p>` + content + '</p>';
     fs.writeFileSync(outputPath, fullHtml);
     allInvocations.push(invocation);
 }

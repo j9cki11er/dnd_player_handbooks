@@ -1,14 +1,5 @@
 [
   {
-    "id": "invocation_venomous_snake",
-    "title": "毒蛇",
-    "titleEn": "Venomous Snake",
-    "prerequisite": "",
-    "reqLevel": 0,
-    "category": "魔能祈唤",
-    "path": "invocations/invocation_venomous_snake.html"
-  },
-  {
     "id": "invocation__pact_of_the_chain",
     "title": "链之魔契",
     "titleEn": "Pact of the Chain",
