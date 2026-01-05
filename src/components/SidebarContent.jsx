@@ -1,6 +1,11 @@
 import React from 'react';
 import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
+import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '../utils/helpers';
+
+
+
+
 
 const SidebarContent = ({
     categoryTree,
@@ -71,28 +76,52 @@ const SidebarContent = ({
                             .map(([childName, childNode]) => (
                                 <SidebarItem key={childName} name={childName} node={childNode} depth={depth + 1} />
                             ))}
-                        {nonOverviewFiles.filter(f => showDM || !f.dmOnly).map(file => {
-                            const fileActive = selectedItem?.id === file.id;
-                            return (
-                                <button
-                                    key={file.id}
-                                    onClick={() => {
-                                        handleNavClick((push) => {
-                                            selectItem(file, push);
-                                            setCurrentPath(node._path);
-                                            setActiveTab('browser');
-                                        });
-                                    }}
-                                    className={`category-item file-item ${fileActive ? 'active' : ''}`}
-                                    style={{ marginLeft: '12px' }}
-                                >
-                                    <div className="flex items-center gap-2 overflow-hidden">
-                                        <FileText size={14} className="opacity-50" />
-                                        <span className="truncate text-xs">{file.title}</span>
-                                    </div>
-                                </button>
-                            );
-                        })}
+                        {nonOverviewFiles
+                            .filter(f => {
+                                if (showDM) return true;
+                                if (f.dmOnly) return false;
+                                if (node._path[0] === '附录 B：生物数据卡') {
+                                    if (node._path[1] === 'CR0-CR1/4') {
+                                        return CR0_WHITELIST.includes(f.title);
+                                    }
+                                    if (node._path[1] === 'CR1/2') {
+                                        return CR1_2_WHITELIST.includes(f.title);
+                                    }
+                                    if (node._path[1] === 'CR1') {
+                                        return CR1_WHITELIST.includes(f.title);
+                                    }
+                                    if (node._path[1] === 'CR 4') {
+                                        return CR4_WHITELIST.includes(f.title);
+                                    }
+                                }
+                                return true;
+                            })
+
+
+
+                            .map(file => {
+
+                                const fileActive = selectedItem?.id === file.id;
+                                return (
+                                    <button
+                                        key={file.id}
+                                        onClick={() => {
+                                            handleNavClick((push) => {
+                                                selectItem(file, push);
+                                                setCurrentPath(node._path);
+                                                setActiveTab('browser');
+                                            });
+                                        }}
+                                        className={`category-item file-item ${fileActive ? 'active' : ''}`}
+                                        style={{ marginLeft: '12px' }}
+                                    >
+                                        <div className="flex items-center gap-2 overflow-hidden">
+                                            <FileText size={14} className="opacity-50" />
+                                            <span className="truncate text-xs">{file.title}</span>
+                                        </div>
+                                    </button>
+                                );
+                            })}
                     </div>
                 )}
             </div>

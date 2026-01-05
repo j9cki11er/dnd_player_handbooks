@@ -61,3 +61,19 @@ export const resolveBookmarkItem = (id, { categoryTree, spellData, featData, mas
     if (file) return file;
     return null;
 };
+
+export const CR0_WHITELIST = [
+    "獾", "蝙蝠", "猫", "蟹", "蛙", "山羊", "隼", "章鱼", "猫头鹰", "蜥蜴", "鼠", "渡鸦", "蝎", "蜘蛛", "鼬", "骆驼", "巨蟹", "巨鼬", "獒犬", "骡", "矮种马", "毒蛇", "野猪", "蟒蛇", "驮用马", "赤鹿", "巨獾", "豹", "乘用马", "狼"
+];
+
+export const CR1_2_WHITELIST = [
+    "猿", "黑熊", "鳄鱼", "巨山羊", "巨海马", "礁鲨", "战马"
+];
+
+export const CR1_WHITELIST = [
+    "棕熊", "恐狼", "巨蜘蛛", "狮子", "虎"
+];
+
+export const CR4_WHITELIST = [
+    "象"
+];

@@ -2,6 +2,11 @@ import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 're
 import { motion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
 import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
+import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '../utils/helpers';
+
+
+
+
 
 export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
@@ -410,13 +415,26 @@ export default function DetailScreen({
                                         })
                                         : files;
 
-                                    if (sortedFiles.length === 0) return null;
+                                    const filteredFiles = isAppendixB && !showDM
+                                        ? sortedFiles.filter(f => {
+                                            if (entry.path.includes('CR0-CR1/4')) return CR0_WHITELIST.includes(f.title);
+                                            if (entry.path.includes('CR1/2')) return CR1_2_WHITELIST.includes(f.title);
+                                            if (entry.path.includes('CR1')) return CR1_WHITELIST.includes(f.title);
+                                            if (entry.path.includes('CR 4')) return CR4_WHITELIST.includes(f.title);
+                                            return true;
+                                        })
+
+                                        : sortedFiles;
+
+
+
+                                    if (filteredFiles.length === 0) return null;
 
                                     return (
                                         <div>
                                             <h3 className="section-title mb-4">{isMasteryDirectory ? '精通词条' : '内容条目'}</h3>
                                             <div className="item-grid">
-                                                {sortedFiles.map(item => (
+                                                {filteredFiles.map(item => (
                                                     <ItemCard
                                                         key={item.id}
                                                         item={item}
@@ -426,6 +444,7 @@ export default function DetailScreen({
                                                     />
                                                 ))}
                                             </div>
+
 
                                             {isVgmMain && vgmRaces.length > 0 && (
                                                 <div className="mt-8">
