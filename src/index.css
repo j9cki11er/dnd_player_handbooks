@@ -2929,3 +2929,24 @@ body.light-theme { --weapon-row-bg: #ffffff; --weapon-row-alt-bg: #eef1f5; --wea
 .weapon-dialog-stats > div:last-child { border-bottom: 0; padding-bottom: 0; }
 .weapon-dialog-stats dt { color: var(--text-muted); font-size: 0.85rem; }
 .weapon-dialog-stats dd { margin: 0; color: var(--text-primary); font-size: 0.95rem; overflow-wrap: anywhere; }
+/* Match native mobile menus to the active theme, including option sheets. */
+:root { color-scheme: dark; }
+body.light-theme { color-scheme: light; }
+select { color: var(--text-primary); -webkit-text-fill-color: var(--text-primary); color-scheme: dark; }
+body.light-theme select { color-scheme: light; }
+select option, select optgroup { background-color: var(--bg-secondary); color: var(--text-primary); -webkit-text-fill-color: var(--text-primary); }
+select:disabled { opacity: 0.55; }
+.bookmark-qr { margin: 20px 0; padding: 16px 0; border-block: 1px solid var(--border-color); }
+.bookmark-qr h4 { margin: 12px 0 8px; color: var(--accent-gold); }
+.bookmark-qr p { color: var(--text-secondary); font-size: 0.8rem; line-height: 1.6; margin: 8px 0; }
+.bookmark-qr-image { display: block; width: min(100%, 320px); height: auto; margin: 12px auto; background: white; }
+.qr-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.qr-actions button, .qr-actions label, .qr-download { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); background: var(--bg-secondary); cursor: pointer; font: inherit; font-size: 0.8rem; }
+.qr-actions input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.qr-actions label:focus-within { outline: 2px solid var(--accent-gold); }
+.qr-actions button:disabled { opacity: 0.4; cursor: default; }
+.bookmark-qr .qr-error { color: var(--accent-crimson); }
+.share-modal { max-width: 560px; max-height: calc(100dvh - 2rem); overflow-y: auto; overscroll-behavior: contain; padding: 24px; }
+.share-modal textarea { display: block; width: 100%; min-height: 72px; color: var(--text-primary); background: transparent; border: 0; }
+@media (max-width: 600px) { .share-modal { padding: 16px; } }
+.modal-overlay.share-overlay { padding: 16px; z-index: 6000; }

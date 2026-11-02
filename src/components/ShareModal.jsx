@@ -1,3 +1,4 @@
+import BookmarkQr from './BookmarkQr';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bookmark, Share2, Download, Upload, Copy, Check } from 'lucide-react';
@@ -61,7 +62,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                         finalName = `${folderName}_${counter++}`;
                     }
 
-                    newBookmarks[finalName] = [...new Set(parsed[folderName].map(id => id.replace('瓦罗怪物指南 (MPMM)', '瓦罗怪物指南 (VGM)')))];
+                    Object.defineProperty(newBookmarks, finalName, { value: [...new Set(parsed[folderName].map(id => id.replace('瓦罗怪物指南 (MPMM)', '瓦罗怪物指南 (VGM)')))], enumerable: true, configurable: true, writable: true });
                 });
 
                 return newBookmarks;
@@ -73,12 +74,12 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
     };
 
     return (
-        <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-overlay share-overlay" onClick={onClose}>
             <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="modal-content glass-panel max-w-lg"
+                className="modal-content glass-panel share-modal"
                 onClick={e => e.stopPropagation()}
             >
                 <div className="flex items-center gap-3 mb-2">
@@ -138,6 +139,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                     </div>
                 </div>
 
+                <BookmarkQr exportData={exportData} onImportCode={code => { setImportText(code); setError(''); }} />
                 <div className="share-section mb-8">
                     <label className="text-xs uppercase tracking-widest opacity-80 mb-3 block">
                         <Upload size={14} className="text-gold" />

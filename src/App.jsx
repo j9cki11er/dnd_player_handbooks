@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 // Data
@@ -27,8 +27,8 @@ import SearchPanel from './components/SearchPanel';
 import BookmarkPanel from './components/BookmarkPanel';
 import FolderModal from './components/FolderModal';
 import BookmarkModal from './components/BookmarkModal';
-import ShareModal from './components/ShareModal';
-import CharacterPanel from './components/CharacterPanel';
+const ShareModal = lazy(() => import('./components/ShareModal'));
+const CharacterPanel = lazy(() => import('./components/CharacterPanel'));
 
 // Extracted Utilities
 import { parseCR, resolveBookmarkItem } from './utils/helpers';
@@ -244,7 +244,7 @@ export default function App() {
               {...commonProps}
             />
           )}
-          {activeTab === 'character' && showDev && <CharacterPanel />}
+          {activeTab === 'character' && showDev && <Suspense fallback={<p role="status">加载角色卡…</p>}><CharacterPanel /></Suspense>}
         </AnimatePresence>
 
         <AnimatePresence>
@@ -283,10 +283,10 @@ export default function App() {
         bookmarks={bookmarks} toggleBookmark={toggleBookmark} isBookmarkedAnywhere={isBookmarkedAnywhere}
       />
 
-      <ShareModal
+      {isShareModalOpen && <Suspense fallback={<p role="status">加载导入／导出…</p>}><ShareModal
         isOpen={isShareModalOpen} onClose={() => setIsShareModalOpen(false)}
         bookmarks={bookmarks} setBookmarks={setBookmarks}
-      />
+      /></Suspense>}
 
       <MobileNavBar
         activeTab={activeTab} setActiveTab={setActiveTab} currentPath={currentPath} navigateTo={navigateTo}
