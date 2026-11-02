@@ -12,12 +12,7 @@ export default defineConfig({
           // invalidate the application and every other cached dataset.
           const dataset = id.match(/\/src\/(data(?:-[^/]+)?)\.json$/);
           if (dataset) return dataset[1] === 'data' ? 'reference-index' : dataset[1];
-          if (id.includes('/node_modules/')) {
-            if (id.includes('/qrcode/') || id.includes('/jsqr/')) return 'qr-vendor';
-            if (id.includes('/framer-motion/') || id.includes('/motion-dom/') || id.includes('/motion-utils/')) return 'motion';
-            if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('/scheduler/')) return 'react-vendor';
-            return 'vendor';
-          }
+
         }
       }
     }
