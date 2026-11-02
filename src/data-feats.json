@@ -673,5 +673,1977 @@
     "prerequisite": "等级19+",
     "fullCategory": "传奇恩惠专长（先决：等级19+）",
     "path": "feats/真实视觉之恩惠_Boon_of_Truesight.html"
+  },
+  {
+    "id": "EFA_Abrrant_Dragonmark",
+    "title": "异种龙纹",
+    "titleEn": "Abrrant Dragonmark",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Abrrant_Dragonmark.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Detection",
+    "title": "侦测龙纹",
+    "titleEn": "Mark of Detection",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Detection.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Finding",
+    "title": "探寻龙纹",
+    "titleEn": "Mark of Finding",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Finding.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Handling",
+    "title": "畜牧龙纹",
+    "titleEn": "Mark of Handling",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Handling.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Healing",
+    "title": "医疗龙纹",
+    "titleEn": "Mark of Healing",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Healing.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Hospitality",
+    "title": "招待龙纹",
+    "titleEn": "Mark of Hospitality",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Hospitality.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Making",
+    "title": "创造龙纹",
+    "titleEn": "Mark of Making",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Making.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Passage",
+    "title": "通行龙纹",
+    "titleEn": "Mark of Passage",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Passage.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Scribing",
+    "title": "抄录龙纹",
+    "titleEn": "Mark of Scribing",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Scribing.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Sentinel",
+    "title": "哨戒龙纹",
+    "titleEn": "Mark of Sentinel",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Sentinel.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Shadow",
+    "title": "阴影龙纹",
+    "titleEn": "Mark of Shadow",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Shadow.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Storm",
+    "title": "暴风龙纹",
+    "titleEn": "Mark of Storm",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Storm.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Mark_of_Warding",
+    "title": "守御龙纹",
+    "titleEn": "Mark of Warding",
+    "category": "龙纹专长",
+    "prerequisite": "艾伯伦战役，不具有其他龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 龙纹专长",
+    "path": "feats/EFA_Mark_of_Warding.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "龙纹专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/龙纹专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Aberrant_Mark",
+    "title": "高等异种龙纹",
+    "titleEn": "Greater Aberrant Mark",
+    "category": "通用专长",
+    "prerequisite": "等级4+，异种龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Aberrant_Mark.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Detection",
+    "title": "高等侦测龙纹",
+    "titleEn": "Greater Mark of Detection",
+    "category": "通用专长",
+    "prerequisite": "等级4+，侦测龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Detection.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Finding",
+    "title": "高等探寻龙纹",
+    "titleEn": "Greater Mark of Finding",
+    "category": "通用专长",
+    "prerequisite": "等级4+，探寻龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Finding.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Handiling",
+    "title": "高等畜牧龙纹",
+    "titleEn": "Greater Mark of Handiling",
+    "category": "通用专长",
+    "prerequisite": "等级4+，畜牧龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Handiling.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Healing",
+    "title": "高等医疗龙纹",
+    "titleEn": "Greater Mark of Healing",
+    "category": "通用专长",
+    "prerequisite": "等级4+，医疗龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Healing.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Hospitality",
+    "title": "高等招待龙纹",
+    "titleEn": "Greater Mark of Hospitality",
+    "category": "通用专长",
+    "prerequisite": "等级4+，招待龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Hospitality.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Making",
+    "title": "高等创造龙纹",
+    "titleEn": "Greater Mark of Making",
+    "category": "通用专长",
+    "prerequisite": "等级4+，创造龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Making.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Passage",
+    "title": "高等通行龙纹",
+    "titleEn": "Greater Mark of Passage",
+    "category": "通用专长",
+    "prerequisite": "等级4+，通行龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Passage.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Scribing",
+    "title": "高等抄录龙纹",
+    "titleEn": "Greater Mark of Scribing",
+    "category": "通用专长",
+    "prerequisite": "等级4+，抄录龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Scribing.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Sentinel",
+    "title": "高等哨戒龙纹",
+    "titleEn": "Greater Mark of Sentinel",
+    "category": "通用专长",
+    "prerequisite": "等级4+，哨戒龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Sentinel.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Shadow",
+    "title": "高等阴影龙纹",
+    "titleEn": "Greater Mark of Shadow",
+    "category": "通用专长",
+    "prerequisite": "等级4+，阴影龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Shadow.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Storm",
+    "title": "高等暴风龙纹",
+    "titleEn": "Greater Mark of Storm",
+    "category": "通用专长",
+    "prerequisite": "等级4+，暴风龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Storm.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Greater_Mark_of_Warding",
+    "title": "高等守御龙纹",
+    "titleEn": "Greater Mark of Warding",
+    "category": "通用专长",
+    "prerequisite": "等级4+，守御龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Greater_Mark_of_Warding.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Potent_Dragonmark",
+    "title": "强效龙纹",
+    "titleEn": "Potent Dragonmark",
+    "category": "通用专长",
+    "prerequisite": "等级4+，任意龙纹专长",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 通用专长",
+    "path": "feats/EFA_Potent_Dragonmark.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/通用专长.htm"
+  },
+  {
+    "id": "EFA_Boon_of_Siberys",
+    "title": "西伯瑞斯之恩惠",
+    "titleEn": "Boon of Siberys",
+    "category": "传奇恩惠专长",
+    "prerequisite": "",
+    "fullCategory": "艾伯伦：奇械锻炉 (EFA) > 传奇恩惠专长",
+    "path": "feats/EFA_Boon_of_Siberys.html",
+    "pathParts": [
+      "艾伯伦：奇械锻炉 (EFA)",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "EFA",
+    "originalSource": "艾伯伦：奇械锻炉/第二章/传奇恩惠.htm"
+  },
+  {
+    "id": "XGE_Bountiful_Luck",
+    "title": "慷慨吉运",
+    "titleEn": "Bountiful Luck",
+    "category": "种族专长",
+    "prerequisite": "半身人",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Bountiful_Luck.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Dragon_Fear",
+    "title": "龙之威怖",
+    "titleEn": "Dragon Fear",
+    "category": "种族专长",
+    "prerequisite": "龙裔",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Dragon_Fear.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Dragon_Hide",
+    "title": "龙之鳞爪",
+    "titleEn": "Dragon Hide",
+    "category": "种族专长",
+    "prerequisite": "龙裔",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Dragon_Hide.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Drow_High_Magic",
+    "title": "高等卓尔魔法",
+    "titleEn": "Drow High Magic",
+    "category": "种族专长",
+    "prerequisite": "精灵（卓尔）",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Drow_High_Magic.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Dwarven_Fortitude",
+    "title": "矮人坚毅",
+    "titleEn": "Dwarven Fortitude",
+    "category": "种族专长",
+    "prerequisite": "矮人",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Dwarven_Fortitude.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Elven_Accuracy",
+    "title": "精灵之准",
+    "titleEn": "Elven Accuracy",
+    "category": "种族专长",
+    "prerequisite": "精灵或半精灵",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Elven_Accuracy.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Fade_Away",
+    "title": "匿影无踪",
+    "titleEn": "Fade Away",
+    "category": "种族专长",
+    "prerequisite": "侏儒",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Fade_Away.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Fey_Teleportation",
+    "title": "妖精传送",
+    "titleEn": "Fey Teleportation",
+    "category": "种族专长",
+    "prerequisite": "精灵（高等精灵）",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Fey_Teleportation.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Flames_of_Phlegethos",
+    "title": "弗莱格索斯之焰",
+    "titleEn": "Flames of Phlegethos",
+    "category": "种族专长",
+    "prerequisite": "提夫林",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Flames_of_Phlegethos.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Infernal_Constitution",
+    "title": "炼狱体质",
+    "titleEn": "Infernal Constitution",
+    "category": "种族专长",
+    "prerequisite": "提夫林",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Infernal_Constitution.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Orcish_Fury",
+    "title": "兽人狂怒",
+    "titleEn": "Orcish Fury",
+    "category": "种族专长",
+    "prerequisite": "半兽人",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Orcish_Fury.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Prodigy",
+    "title": "天赋异禀",
+    "titleEn": "Prodigy",
+    "category": "种族专长",
+    "prerequisite": "半精灵、半兽人、或人类",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Prodigy.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Second_Chance",
+    "title": "花开二度",
+    "titleEn": "Second Chance",
+    "category": "种族专长",
+    "prerequisite": "半身人",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Second_Chance.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Squat_Nimbleness",
+    "title": "低身机敏",
+    "titleEn": "Squat Nimbleness",
+    "category": "种族专长",
+    "prerequisite": "矮人或小型种族",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Squat_Nimbleness.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "XGE_Wood_Elf_Magic",
+    "title": "木精灵魔法",
+    "titleEn": "Wood Elf Magic",
+    "category": "种族专长",
+    "prerequisite": "精灵（木精灵）",
+    "fullCategory": "珊娜萨的万事指南 (XGE) > 种族专长",
+    "path": "feats/XGE_Wood_Elf_Magic.html",
+    "pathParts": [
+      "珊娜萨的万事指南 (XGE)",
+      "角色选项",
+      "专长",
+      "种族专长"
+    ],
+    "sourceBook": "XGE",
+    "originalSource": "珊娜萨的万事指南/角色选项/种族专长.html"
+  },
+  {
+    "id": "FRHF_Boon_of_Bloodshed",
+    "title": "血海漂橹之恩惠",
+    "titleEn": "Boon of Bloodshed",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Bloodshed.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Bountiful_Health",
+    "title": "生机勃发之恩惠",
+    "titleEn": "Boon of Bountiful Health",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Bountiful_Health.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Communication",
+    "title": "八面玲珑之恩惠",
+    "titleEn": "Boon of Communication",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Communication.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Desperate_Resilience",
+    "title": "绝境逢生之恩惠",
+    "titleEn": "Boon of Desperate Resilience",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Desperate_Resilience.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Exquisite_Radiance",
+    "title": "熠熠生辉之恩惠",
+    "titleEn": "Boon of Exquisite Radiance",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Exquisite_Radiance.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Fluid_Forms",
+    "title": "变幻无常之恩惠",
+    "titleEn": "Boon of Fluid Forms",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Fluid_Forms.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Fortune_s_Favor",
+    "title": "命运眷顾之恩惠",
+    "titleEn": "Boon of Fortune's Favor",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Fortune_s_Favor.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Poison_Mastery",
+    "title": "毒手殁心之恩惠",
+    "titleEn": "Boon of Poison Mastery",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Poison_Mastery.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Revelry",
+    "title": "夜宴狂欢之恩惠",
+    "titleEn": "Boon of Revelry",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Revelry.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_Terror",
+    "title": "惊魂落魄之恩惠",
+    "titleEn": "Boon of Terror",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_Terror.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_the_Bright_Sun",
+    "title": "旭日骄阳之恩惠",
+    "titleEn": "Boon of the Bright Sun",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_the_Bright_Sun.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_the_Furious_Storm",
+    "title": "暴风骤岚之恩惠",
+    "titleEn": "Boon of the Furious Storm",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+，施法或契约魔法特性",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_the_Furious_Storm.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Boon_of_the_Soul_Drinker",
+    "title": "汲魂饮魄之恩惠",
+    "titleEn": "Boon of the Soul Drinker",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 传奇恩惠专长",
+    "path": "feats/FRHF_Boon_of_the_Soul_Drinker.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/传奇恩惠.htm"
+  },
+  {
+    "id": "FRHF_Cult_of_the_Dragon_Initiate",
+    "title": "新晋龙巫教徒",
+    "titleEn": "Cult of the Dragon Initiate",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Cult_of_the_Dragon_Initiate.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Emerald_Enclave_Fledgling",
+    "title": "翠绿闲庭新羽",
+    "titleEn": "Emerald Enclave Fledgling",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Emerald_Enclave_Fledgling.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Harper_Agent",
+    "title": "竖琴手特工",
+    "titleEn": "Harper Agent",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Harper_Agent.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Lords_Alliance_Agent",
+    "title": "领主联盟特工",
+    "titleEn": "Lords’ Alliance Agent",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Lords_Alliance_Agent.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Purple_Dragon_Rook",
+    "title": "紫龙新兵",
+    "titleEn": "Purple Dragon Rook",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Purple_Dragon_Rook.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Spellfire_Spark",
+    "title": "咒火火花",
+    "titleEn": "Spellfire Spark",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Spellfire_Spark.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Tyro_of_the_Gauntlet",
+    "title": "新锻臂铠",
+    "titleEn": "Tyro of the Gauntlet",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Tyro_of_the_Gauntlet.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Zhentarim_Ruffian",
+    "title": "散塔林会暴徒",
+    "titleEn": "Zhentarim Ruffian",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 起源专长",
+    "path": "feats/FRHF_Zhentarim_Ruffian.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "FRHF_Dragonscarred",
+    "title": "龙之瘢",
+    "titleEn": "Dragonscarred",
+    "category": "通用专长",
+    "prerequisite": "等级4+，新晋龙巫教徒专长",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Dragonscarred.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Enclave_Magic",
+    "title": "翠色魔法",
+    "titleEn": "Enclave Magic",
+    "category": "通用专长",
+    "prerequisite": "等级4+，翠绿闲庭新羽专长",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Enclave_Magic.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Harper_Teamwork",
+    "title": "竖琴手协同",
+    "titleEn": "Harper Teamwork",
+    "category": "通用专长",
+    "prerequisite": "等级4+，竖琴手特工专长",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Harper_Teamwork.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Order_s_Resilience",
+    "title": "教团韧性",
+    "titleEn": "Order's Resilience",
+    "category": "通用专长",
+    "prerequisite": "等级4+，新锻臂铠专长",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Order_s_Resilience.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Lordly_Resolve",
+    "title": "贵族信念",
+    "titleEn": "Lordly Resolve",
+    "category": "通用专长",
+    "prerequisite": "等级4+，领主联盟特工专长",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Lordly_Resolve.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Purple_Dragon_Commandant",
+    "title": "紫龙指挥官",
+    "titleEn": "Purple Dragon Commandant",
+    "category": "通用专长",
+    "prerequisite": "等级4+，紫龙新兵专长或军用武器熟练",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Purple_Dragon_Commandant.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Spellfire_Adept",
+    "title": "咒火专家",
+    "titleEn": "Spellfire Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，咒火火花专长或施法或契约魔法特性",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Spellfire_Adept.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Zhentarim_Tactics",
+    "title": "散塔林会战术",
+    "titleEn": "Zhentarim Tactics",
+    "category": "通用专长",
+    "prerequisite": "等级4+，散塔林会暴徒专长",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Zhentarim_Tactics.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Cold_Caster",
+    "title": "寒地施法者",
+    "titleEn": "Cold Caster",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Cold_Caster.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Fairy_Trickster",
+    "title": "妖精诡术",
+    "titleEn": "Fairy Trickster",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Fairy_Trickster.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Genie_Magic",
+    "title": "巨灵魔法",
+    "titleEn": "Genie Magic",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Genie_Magic.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Mythal_Touched",
+    "title": "迷锁触碰",
+    "titleEn": "Mythal Touched",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Mythal_Touched.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "FRHF_Street_Justice",
+    "title": "街头正义",
+    "titleEn": "Street Justice",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "被遗忘的国度：费伦英雄 > 通用专长",
+    "path": "feats/FRHF_Street_Justice.html",
+    "pathParts": [
+      "被遗忘的国度：费伦英雄",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "FRHF",
+    "originalSource": "被遗忘的国度/费伦英雄/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "RHW_Sharp_Eye",
+    "title": "锐眼",
+    "titleEn": "Sharp Eye",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 起源专长",
+    "path": "feats/RHW_Sharp_Eye.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "RHW_Survivor",
+    "title": "幸存者",
+    "titleEn": "Survivor",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 起源专长",
+    "path": "feats/RHW_Survivor.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "RHW_Aberrant_Anatomy",
+    "title": "异变内构",
+    "titleEn": "Aberrant Anatomy",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Aberrant_Anatomy.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Echoing_Soul",
+    "title": "灵魂回响",
+    "titleEn": "Echoing Soul",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Echoing_Soul.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Gathered_Whispers",
+    "title": "汇灵低语",
+    "titleEn": "Gathered Whispers",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Gathered_Whispers.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Living_Shadow",
+    "title": "活体阴影",
+    "titleEn": "Living Shadow",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Living_Shadow.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Mist_Walker",
+    "title": "迷雾行者",
+    "titleEn": "Mist Walker",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Mist_Walker.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Second_Skin",
+    "title": "第二面目",
+    "titleEn": "Second Skin",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Second_Skin.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Symbiotic_Being",
+    "title": "共生存在",
+    "titleEn": "Symbiotic Being",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Symbiotic_Being.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Touch_of_Death",
+    "title": "死亡之触",
+    "titleEn": "Touch of Death",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Touch_of_Death.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "RHW_Watchers",
+    "title": "监视者",
+    "titleEn": "Watchers",
+    "category": "黑暗赠礼专长",
+    "prerequisite": "鸦阁魔域战役",
+    "fullCategory": "鸦阁魔域：魔障深藏 > 黑暗赠礼专长",
+    "path": "feats/RHW_Watchers.html",
+    "pathParts": [
+      "鸦阁魔域：魔障深藏",
+      "角色选项",
+      "专长",
+      "黑暗赠礼专长"
+    ],
+    "sourceBook": "RHW",
+    "originalSource": "鸦阁魔域：魔障深藏/第一章/专长/黑暗赠礼.htm"
+  },
+  {
+    "id": "AU_Boon_of_Magic_School_Mastery",
+    "title": "学派宗师之恩惠",
+    "titleEn": "Boon of Magic School Mastery",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 传奇恩惠专长",
+    "path": "feats/AU_Boon_of_Magic_School_Mastery.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/传奇恩惠专长.htm"
+  },
+  {
+    "id": "AU_Boon_of_the_Iron_Mind",
+    "title": "钢铁意志之恩惠",
+    "titleEn": "Boon of the Iron Mind",
+    "category": "传奇恩惠专长",
+    "prerequisite": "等级19+",
+    "fullCategory": "启封奥秘 > 传奇恩惠专长",
+    "path": "feats/AU_Boon_of_the_Iron_Mind.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "传奇恩惠专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/传奇恩惠专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Warrior",
+    "title": "奥法武斗家",
+    "titleEn": "Arcane Warrior",
+    "category": "战斗风格专长",
+    "prerequisite": "战斗风格特性",
+    "fullCategory": "启封奥秘 > 战斗风格专长",
+    "path": "feats/AU_Arcane_Warrior.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "战斗风格专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/战斗风格专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Artist",
+    "title": "奥法艺术家",
+    "titleEn": "Arcane Artist",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Artist.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Eloquence",
+    "title": "奥法雄辩家",
+    "titleEn": "Arcane Eloquence",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Eloquence.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Infiltrator",
+    "title": "奥法渗透者",
+    "titleEn": "Arcane Infiltrator",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Infiltrator.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Omens",
+    "title": "奥法预言家",
+    "titleEn": "Arcane Omens",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Omens.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Overload",
+    "title": "奥法超负荷",
+    "titleEn": "Arcane Overload",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Overload.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Safeguard",
+    "title": "奥法护佑者",
+    "titleEn": "Arcane Safeguard",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Safeguard.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Arcane_Undertaker",
+    "title": "奥法殡葬师",
+    "titleEn": "Arcane Undertaker",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Arcane_Undertaker.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Familiar_Friend",
+    "title": "魔宠密友",
+    "titleEn": "Familiar Friend",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Familiar_Friend.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Portal_Jumper",
+    "title": "穿界者",
+    "titleEn": "Portal Jumper",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Portal_Jumper.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Transmuted_Anatomy",
+    "title": "万化本质",
+    "titleEn": "Transmuted Anatomy",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "启封奥秘 > 起源专长",
+    "path": "feats/AU_Transmuted_Anatomy.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/起源专长.htm"
+  },
+  {
+    "id": "AU_Abjuration_Adept",
+    "title": "防护专家",
+    "titleEn": "Abjuration Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Abjuration_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Conjuration_Adept",
+    "title": "咒法专家",
+    "titleEn": "Conjuration Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Conjuration_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Divination_Adept",
+    "title": "预言专家",
+    "titleEn": "Divination Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Divination_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Enchantment_Adept",
+    "title": "惑控专家",
+    "titleEn": "Enchantment Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Enchantment_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Evocation_Adept",
+    "title": "塑能专家",
+    "titleEn": "Evocation Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Evocation_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Illusion_Adept",
+    "title": "幻术专家",
+    "titleEn": "Illusion Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Illusion_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Necromancy_Adept",
+    "title": "死灵专家",
+    "titleEn": "Necromancy Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Necromancy_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Transmutation_Adept",
+    "title": "变化专家",
+    "titleEn": "Transmutation Adept",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Transmutation_Adept.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Elemental_Familiar",
+    "title": "元素魔宠",
+    "titleEn": "Elemental Familiar",
+    "category": "通用专长",
+    "prerequisite": "等级4+，魔宠密友专长",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Elemental_Familiar.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Otherworldly_Familiar",
+    "title": "异界魔宠",
+    "titleEn": "Otherworldly Familiar",
+    "category": "通用专长",
+    "prerequisite": "等级4+，魔宠密友专长",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Otherworldly_Familiar.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Soothing_Familiar",
+    "title": "慰疗魔宠",
+    "titleEn": "Soothing Familiar",
+    "category": "通用专长",
+    "prerequisite": "等级4+，魔宠密友专长",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Soothing_Familiar.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Warlike_Familiar",
+    "title": "尚武魔宠",
+    "titleEn": "Warlike Familiar",
+    "category": "通用专长",
+    "prerequisite": "等级4+，魔宠密友专长",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Warlike_Familiar.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Magic_Connoisseur",
+    "title": "魔法行家",
+    "titleEn": "Magic Connoisseur",
+    "category": "通用专长",
+    "prerequisite": "等级4+，魔法学徒专长",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Magic_Connoisseur.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Spell_Resistant",
+    "title": "法术抗性",
+    "titleEn": "Spell Resistant",
+    "category": "通用专长",
+    "prerequisite": "等级4+",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Spell_Resistant.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "AU_Spell_Subterfuge",
+    "title": "法术诡计",
+    "titleEn": "Spell Subterfuge",
+    "category": "通用专长",
+    "prerequisite": "等级4+，施法或契约魔法特性",
+    "fullCategory": "启封奥秘 > 通用专长",
+    "path": "feats/AU_Spell_Subterfuge.html",
+    "pathParts": [
+      "启封奥秘",
+      "角色选项",
+      "专长",
+      "通用专长"
+    ],
+    "sourceBook": "AU",
+    "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
   }
 ]

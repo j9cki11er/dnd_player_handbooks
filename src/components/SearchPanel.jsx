@@ -83,6 +83,23 @@ export default function SearchPanel({
                         </div>
                     )}
 
+                    {searchResults.invocations.length > 0 && (
+                        <div className="search-section">
+                            <h3 className="section-title mb-4">魔能祈唤</h3>
+                            <div className="item-grid">
+                                {searchResults.invocations.map(item => (
+                                    <ItemCard
+                                        key={item.id}
+                                        item={item}
+                                        onClick={() => selectItem(item, false)}
+                                        isBookmarked={isBookmarkedAnywhere(item.id)}
+                                        openBookmarkDialog={openBookmarkDialog}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
                     {searchResults.spells.length > 0 && (
                         <div className="search-section">
                             <h3 className="section-title mb-4">法术列表</h3>
@@ -102,7 +119,7 @@ export default function SearchPanel({
                         </div>
                     )}
 
-                    {searchResults.categories.length === 0 && searchResults.spells.length === 0 && searchResults.feats.length === 0 && searchResults.masteries.length === 0 && (
+                    {searchResults.categories.length === 0 && searchResults.spells.length === 0 && searchResults.feats.length === 0 && searchResults.masteries.length === 0 && searchResults.invocations.length === 0 && (
                         <div className="no-results py-20 text-center text-muted">没找到匹配的结果</div>
                     )}
                 </div>

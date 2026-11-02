@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Book, Heart, Sun, Moon, Menu, User } from 'lucide-react';
+import { Layout, Book, Backpack, Heart, Sun, Moon, Menu, User } from 'lucide-react';
 
 export default function MobileNavBar({ activeTab, setActiveTab, currentPath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, theme, toggleTheme, showDev }) {
     const handleTabClick = (tab) => {
@@ -31,6 +31,7 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
                 <span>法术列表</span>
             </button>
 
+            <button className={`mobile-nav-item ${activeTab === 'items' ? 'active' : ''}`} onClick={() => handleTabClick('items')}><Backpack size={20} /><span>物品</span></button>
             {showDev && (
                 <button
                     className={`mobile-nav-item ${activeTab === 'character' ? 'active' : ''}`}

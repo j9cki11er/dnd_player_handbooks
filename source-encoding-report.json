@@ -1,0 +1,1328 @@
+{
+  "files": 1108,
+  "legacyConverted": 479,
+  "damagedFiles": 629,
+  "repairedNodes": 63430,
+  "unresolved": [
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/丧尸/丧尸总.htm",
+      "replacements": 7
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/半巫妖.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/妖鬼/妖鬼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/妖鬼/妖鬼坟语者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/幽影.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/幽魂.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/恶灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/报丧妖.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/木乃伊/木乃伊.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/木乃伊/木乃伊总.htm",
+      "replacements": 11
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/木乃伊/木乃伊领主.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/死亡骑士/死亡骑士.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/死亡骑士/死亡骑士志从.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/燃焰之颅.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/蠕行之爪/蠕行之爪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/蠕行之爪/蠕行之爪总.htm",
+      "replacements": 11
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/蠕行之爪/蠕行之爪集群.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/还魂鬼/还魂尸山.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/还魂鬼/还魂巨构.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/还魂鬼/还魂鬼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/邪灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/食尸水鬼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/食尸鬼/食尸鬼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/食尸鬼/食尸鬼总.htm",
+      "replacements": 5
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/骚灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/骷髅/骷髅总.htm",
+      "replacements": 23
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/鬼火.htm",
+      "replacements": 57
+    },
+    {
+      "file": "data-source/怪物图鉴2025/亡灵/龙巫妖.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/人鱼/巡海人鱼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/人鱼/御浪人鱼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/巨灵/土巨灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/巨灵/气巨灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/巨灵/水巨灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/巨灵/火巨灵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/水诡.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/火矮人/火矮人哨兵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/火矮人/火矮人烈炎术士.htm",
+      "replacements": 224
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/火童.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/火蜥蜴/火蜥蜴.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/火蜥蜴/火蜥蜴火蛇.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/火蜥蜴/火蜥蜴炎狱之主.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/石人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/石像鬼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/石鼎兽.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/鸟羽人/鸟羽人翔空士.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/元素/鸟羽人/鸟羽人风舞术士.htm",
+      "replacements": 166
+    },
+    {
+      "file": "data-source/怪物图鉴2025/多类型/泰坦/泰拉斯奎.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/多类型/纳迦/守秘纳迦.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/多类型/纳迦/阴魂纳迦.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/多类型/纳迦/骸骨纳迦.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/天族/兽主.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/天族/天使/天神使徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/天族/天使/星天神使.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/天族/天使/炽天神使.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/天族/天马.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/天族/独角兽.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/呋噜.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/呓语之口.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/寇涛/寇涛.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/寇涛/寇涛大祭司.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/寇涛/寇涛监察者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/寇涛/寇涛驱策者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/幽邃盲族.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/底栖魔鱼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/甲伏怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/石绳怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/石锥怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/触须怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/诺斯怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/异怪/食腐兽.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/亡命恶犬.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/伊特怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/兽化人/熊人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/兽化人/狼人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/兽化人/虎人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/兽化人/野猪人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/兽化人/鼠人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/变形怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/天狗.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/巴弗灭的牛头人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/幽邃熊怪/幽邃熊怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/幽邃熊怪/幽邃熊怪脑头.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/恐爪怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/掘土巨怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/掘地虫.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/斧嘴鸟/巨斧嘴鸟.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/斧嘴鸟/斧嘴鸟.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/梅洛人鱼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/穴蜥人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/美杜莎.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/蛇人/恶咒蛇人（1型）.htm",
+      "replacements": 34
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/蛇人/恶咒蛇人（2型）.htm",
+      "replacements": 34
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/蛇人/恶咒蛇人（3型）.htm",
+      "replacements": 34
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/蛇人/憎恶蛇人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/蛇人/渗蚀蛇人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/蛛化卓尔.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/螳螂人/螳螂人劫掠者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/螳螂人/螳螂人灵能使.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/雪怪/巨恶雪怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/雪怪/雪怪.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/食腐虫.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/怪兽/鸟妖.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/活化物件/活化凌空剑.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/活化物件/活化扫帚.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/活化物件/活化盔甲.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/活化物件/活化闷人毯.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/盾卫.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/石化铁牛/焚化铜牛.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/石化铁牛/石化铁牛.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/稻草人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/魔像/石魔像.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/魔冢/魔冢·三元冢.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/魔冢/魔冢·二元冢.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/魔冢/魔冢·五元冢.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/魔冢/魔冢·单元冢.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/构装/魔冢/魔冢·四元冢.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/刺客.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/匪徒/匪帮欺诈师.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/匪徒/匪帮祸首.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/匪徒/匪帮队长.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/匪徒/匪徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/匪徒/匪徒总.htm",
+      "replacements": 13
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/平民.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/德鲁伊.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/打手/打手.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/打手/打手总.htm",
+      "replacements": 10
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/打手/打手老大.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/斥候/斥候.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/斥候/斥候队长.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/武者/历战武者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/武者/新晋武者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/武者/武将.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/海盗/海盗.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/海盗/海盗将军.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/海盗/海盗船长.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/演艺者/演艺传奇.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/演艺者/演艺尊师.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/演艺者/演艺者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/演艺者/演艺者总.htm",
+      "replacements": 13
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/狂战士/狂战士.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/狂战士/狂战将.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/祭司/侍祭僧侣.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/祭司/大祭司.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/祭司/祭司.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/祭司/祭司总.htm",
+      "replacements": 11
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/角斗士.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/警卫/警卫.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/警卫/警卫总.htm",
+      "replacements": 12
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/警卫/警卫队长.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/贵族/贵族.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/贵族/贵血天骄.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/元素邪教徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/异怪邪教徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/死亡邪教徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/邪教徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/邪教徒总.htm",
+      "replacements": 12
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/邪教教宗.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/邪教狂信者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/邪教徒/邪魔邪教徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/间谍/间谍.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/间谍/间谍大师.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/间谍/间谍总.htm",
+      "replacements": 18
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/骑士/天命骑士.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/骑士/骑士.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/魔法师/大法师.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/魔法师/魔法学徒.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/魔法师/魔法师.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/类人/魔法师/魔法师总.htm",
+      "replacements": 10
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/化形胡狼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/坎比翁.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/尤格罗斯魔/奥法罗斯魔.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/尤格罗斯魔/超等罗斯魔.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/幼虫魔/幼虫魔.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/幼虫魔/幼虫魔集群.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/恶鬼.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/拉迷亚.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/梦魇.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/梦魔.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/罗刹.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鬣狗人/鬣狗人头目.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鬣狗人/鬣狗人武者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鬣狗人/鬣狗人耶诺古之牙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鬣狗人/鬣狗人魔头.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/魅魔.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鲨华鱼人/鲨华武者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鲨华鱼人/鲨华男爵.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/邪魔/鲨华鱼人/鲨华祭司.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/半龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/妖精龙/妖精龙成体.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/妖精龙/妖精龙青年体.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/狗头人/带翼狗头人.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/狗头人/狗头人武者.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/白龙/成年白龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/白龙/白龙雏龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/白龙/远古白龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/白龙/青年白龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/金龙/New_Item.htm",
+      "replacements": 200
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/金龙/成年金龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/金龙/远古金龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/金龙/青年金龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/银龙/成年银龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/银龙/远古银龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/银龙/银龙雏龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/银龙/青年银龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/青铜龙/成年青铜龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/青铜龙/远古青铜龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/青铜龙/青年青铜龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/青铜龙/青铜龙雏龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/飞龙.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/怪物图鉴2025/龙类/龙龟.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/主脑.htm",
+      "replacements": 309
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/云巨人欢笑者.htm",
+      "replacements": 66
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/伶盗龙.htm",
+      "replacements": 47
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/依那伏之刃_.htm",
+      "replacements": 36
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/凌弱怪.htm",
+      "replacements": 40
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/凯沃斯衍体.htm",
+      "replacements": 137
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/剑龙.htm",
+      "replacements": 11
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/半蛛人.htm",
+      "replacements": 22
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/卓格罗斯.htm",
+      "replacements": 53
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/卡托伯湿沼怪.htm",
+      "replacements": 112
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/原体坑主.htm",
+      "replacements": 144
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/原体心灵呢喃者.htm",
+      "replacements": 39
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/原体梦魇语者.htm",
+      "replacements": 53
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/原体蛇人.htm",
+      "replacements": 5
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/原体雏兽守卫.htm",
+      "replacements": 58
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/咒恨蛇人.htm",
+      "replacements": 52
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/噬魂怪.htm",
+      "replacements": 49
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/塔那罗克.htm",
+      "replacements": 54
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/夜嘶猎犬.htm",
+      "replacements": 65
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/大地精破坏者.htm",
+      "replacements": 80
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/大地精铁影.htm",
+      "replacements": 91
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/夺心巨虫.htm",
+      "replacements": 150
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/妖鬼婆.htm",
+      "replacements": 43
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/孢子人.htm",
+      "replacements": 278
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/守卫龙兽.htm",
+      "replacements": 4
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/幽影獒犬.htm",
+      "replacements": 118
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/异齿龙.htm",
+      "replacements": 10
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/弗林德豺狼人.htm",
+      "replacements": 56
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/快可灵.htm",
+      "replacements": 54
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/恐爪龙.htm",
+      "replacements": 113
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/慑心魔.htm",
+      "replacements": 18
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/暗灵.htm",
+      "replacements": 215
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/林布哥.htm",
+      "replacements": 40
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/格洛兰托之口.htm",
+      "replacements": 97
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/格龙蛙人.htm",
+      "replacements": 87
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/沙葛司红牙.htm",
+      "replacements": 68
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/沼喉怪.htm",
+      "replacements": 124
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/法特怪.htm",
+      "replacements": 102
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/波达尸.htm",
+      "replacements": 123
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/海恶灵.htm",
+      "replacements": 43
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/深潜子嗣.htm",
+      "replacements": 125
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/熔螈.htm",
+      "replacements": 149
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/狗头人.htm",
+      "replacements": 244
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/石巨人梦行者.htm",
+      "replacements": 138
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/穴钓蟹.htm",
+      "replacements": 215
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/红帽子.htm",
+      "replacements": 44
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/约卓斯育疫者.htm",
+      "replacements": 15
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/纽吉怪.htm",
+      "replacements": 130
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/考芮精.htm",
+      "replacements": 53
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/胃袋魔.htm",
+      "replacements": 61
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/茹赛可之爪.htm",
+      "replacements": 19
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/莫克鱼怪.htm",
+      "replacements": 401
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/菘蓝树人.htm",
+      "replacements": 103
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/蠕行追迹者.htm",
+      "replacements": 45
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/血糜兽.htm",
+      "replacements": 64
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/证心者.htm",
+      "replacements": 49
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/诱陷者.htm",
+      "replacements": 36
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/豺狼人凋零者.htm",
+      "replacements": 92
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/豺狼人猎手.htm",
+      "replacements": 59
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/豺狼人食腐者.htm",
+      "replacements": 62
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/连枷蜗牛.htm",
+      "replacements": 196
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/雷龙.htm",
+      "replacements": 39
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/霜巨人永恒者.htm",
+      "replacements": 87
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/颅鼠.htm",
+      "replacements": 56
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/风暴巨人升华者.htm",
+      "replacements": 42
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/风神翼龙.htm",
+      "replacements": 68
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/图鉴/麒麟.htm",
+      "replacements": 91
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/怪物学识/原体：半蛇半人.htm",
+      "replacements": 16
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/天狗.html",
+      "replacements": 16
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者/兽人.htm",
+      "replacements": 29
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者/地精.htm",
+      "replacements": 30
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者/大地精.htm",
+      "replacements": 30
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者/熊地精.htm",
+      "replacements": 30
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者/狗头人.htm",
+      "replacements": 12
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者/纯血原体蛇人.htm",
+      "replacements": 48
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/怪物冒险者.html",
+      "replacements": 60
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/斑猫人.html",
+      "replacements": 72
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/梭螺鱼人.html",
+      "replacements": 184
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/蜥蜴人.html",
+      "replacements": 172
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/费尔伯格人.html",
+      "replacements": 124
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/身高与体重.html",
+      "replacements": 4
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/玩家可用种族/阿斯莫.html",
+      "replacements": 196
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/野兽.html",
+      "replacements": 400
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/野兽汇总/原牛.htm",
+      "replacements": 91
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/野兽汇总/家牛.htm",
+      "replacements": 69
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/野兽汇总/海豚.htm",
+      "replacements": 12
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/野兽汇总/腐蛆群.htm",
+      "replacements": 66
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/侠盗.htm",
+      "replacements": 49
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/勇士.htm",
+      "replacements": 37
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/变化师.htm",
+      "replacements": 32
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/吟游诗人.htm",
+      "replacements": 111
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/咒法师.htm",
+      "replacements": 90
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/塑能师.htm",
+      "replacements": 128
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/大德鲁伊.htm",
+      "replacements": 15
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/幻术师.htm",
+      "replacements": 10
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/弓箭手.htm",
+      "replacements": 50
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/惑控师.htm",
+      "replacements": 61
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/战争祭司.htm",
+      "replacements": 33
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/旧日支配者宗主邪术师.htm",
+      "replacements": 60
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/武术高手.htm",
+      "replacements": 62
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/死灵师.htm",
+      "replacements": 93
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/法师学徒.htm",
+      "replacements": 59
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/盗贼大师.htm",
+      "replacements": 70
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/督军.htm",
+      "replacements": 88
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/至高妖精宗主邪术师.htm",
+      "replacements": 9
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/邪魔宗主邪术师.htm",
+      "replacements": 69
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/防护师.htm",
+      "replacements": 51
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/预言师.htm",
+      "replacements": 72
+    },
+    {
+      "file": "data-source/瓦罗怪物指南 (VGM)/非玩家角色/黑暗卫士.htm",
+      "replacements": 98
+    },
+    {
+      "file": "data-source/第一章：进行游戏/交涉/交涉案例.htm",
+      "replacements": 38
+    },
+    {
+      "file": "data-source/第一章：进行游戏/动作.htm",
+      "replacements": 228
+    },
+    {
+      "file": "data-source/第一章：进行游戏/战斗与伤害案例.htm",
+      "replacements": 34
+    },
+    {
+      "file": "data-source/第一章：进行游戏/探索/危害.htm",
+      "replacements": 2
+    },
+    {
+      "file": "data-source/第一章：进行游戏/探索/探索案例.htm",
+      "replacements": 28
+    },
+    {
+      "file": "data-source/第三章：角色职业/圣武士/圣武士.htm",
+      "replacements": 165
+    },
+    {
+      "file": "data-source/第三章：角色职业/游侠/游侠.htm",
+      "replacements": 21
+    },
+    {
+      "file": "data-source/第三章：角色职业/魔契师/魔能祈唤选项.htm",
+      "replacements": 28
+    },
+    {
+      "file": "data-source/第五章：专长/通用专长.htm",
+      "replacements": 160
+    },
+    {
+      "file": "data-source/附录 C：术语汇编/动作.htm",
+      "replacements": 4
+    },
+    {
+      "file": "data-source/附录 C：术语汇编/危害.htm",
+      "replacements": 2
+    }
+  ]
+}

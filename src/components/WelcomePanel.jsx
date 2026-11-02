@@ -6,7 +6,7 @@ export default function WelcomePanel({ chapters, expansions = [], categoryTree, 
     return (
         <div className="welcome-panel">
             <div className="logo flex items-center gap-2">
-                <a href="/" className="sidebar-header" onClick={(e) => { e.preventDefault(); handleNavClick(() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); setDetailStack([]); }); }}>
+                <a href="/" className="sidebar-header" onClick={(e) => { e.preventDefault(); navigateTo([], false, false); }}>
                     <img src="/DFD logo-cropped.png" alt="Logo" className="sidebar-logo" />
                     <div className="flex flex-col">
                         <span className="logo-text dnd-font gold-text leading-tight">Don't Feed Dragon <br></br>不要喂龙公会</span>
@@ -79,12 +79,12 @@ export default function WelcomePanel({ chapters, expansions = [], categoryTree, 
                     请透过 WhatsApp 将情报送达：<br></br>
                     {"\n"}
                     <a
-                        href="https://wa.me/60175815819"
+                        href="https://wa.me/60176698311"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="whatsapp-link text-lg block my-1"
                     >
-                        +60 17-581 5819
+                        0176698311
                     </a>
                     {"\n"}<br></br>
                     你的反馈，将决定下一次升级的命运。

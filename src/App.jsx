@@ -3,12 +3,14 @@ import { AnimatePresence } from 'framer-motion';
 
 // Data
 import rawData from './data.json';
+import { EXPANSION_TITLES } from './utils/expansions';
 import spellData from './data-spells.json';
 import featData from './data-feats.json';
 import masteryData from './data-masteries.json';
 import weaponData from './data-weapons.json';
 import monsterData from './data-monsters.json';
 import invocationData from './data-invocations.json';
+import { compareContentNames, compareContentItems } from './utils/contentOrder';
 
 // Extracted Phase 1 Components
 import SidebarContent from './components/SidebarContent';
@@ -18,6 +20,7 @@ import MobileNavBar from './components/MobileNavBar';
 import { ConfirmModal } from './components/Common';
 
 // Extracted Phase 2 Components
+import ItemCatalog from './components/ItemCatalog';
 import WelcomePanel from './components/WelcomePanel';
 import SpellBrowser from './components/SpellBrowser';
 import SearchPanel from './components/SearchPanel';
@@ -39,24 +42,14 @@ const CHAPTERS_TO_SHOW = [
   '序章：欢迎来到冒险世界', '第一章：进行游戏', '第二章：创建角色', '第三章：角色职业', '第四章：角色起源', '第五章：专长', '第六章：装备', '第七章：法术', '附录 A：多元宇宙', '附录 B：生物数据卡', '附录 C：术语汇编'
 ];
 
-const EXPANSIONS_TO_SHOW = [
-  '瓦罗怪物指南 (VGM)'
-];
+const EXPANSIONS_TO_SHOW = EXPANSION_TITLES;
 
 // Enrich data with monster metadata
 const processedData = rawData.map(item => {
   let updatedItem = { ...item };
 
-  // Consistently rename MPMM to VGM and handle category
-  if (updatedItem.category.includes('MPMM')) {
-    updatedItem.category = updatedItem.category.replace('MPMM', 'VGM');
-  }
-  if (updatedItem.pathParts) {
-    updatedItem.pathParts = updatedItem.pathParts.map(p => p.replace('MPMM', 'VGM'));
-  }
-
   // Flatten VGM races and handle specific files
-  if (updatedItem.id.includes('瓦罗怪物指南 (MPMM)/玩家可用种族/')) {
+  if (updatedItem.id.includes('瓦罗怪物指南 (VGM)/玩家可用种族/')) {
     updatedItem.category = '瓦罗怪物指南 (VGM)';
 
     // Move "怪物冒险者" and "身高与体重" to top-level VGM content items
@@ -81,6 +74,10 @@ const processedData = rawData.map(item => {
       updatedItem = { ...updatedItem, cr: monsterMatch.cr, subDivision: monsterMatch.subDivision, alignment: monsterMatch.alignment, titleEn: monsterMatch.titleEn };
     }
   }
+  // Show creation steps directly in chapter two while keeping IDs and URLs stable.
+  if (updatedItem.pathParts?.[0] === '第二章：创建角色' && updatedItem.pathParts[1] === '创建你的角色') {
+    updatedItem.pathParts = ['第二章：创建角色', ...updatedItem.pathParts.slice(2)];
+  }
   return updatedItem;
 });
 
@@ -92,9 +89,9 @@ const categoryTree = (() => {
   const tree = {};
   const norm = (s) => s ? s.replace(/\s+/g, '').toLocaleLowerCase() : '';
   data.forEach(item => {
-    // Rename MPMM to VGM in category and pathParts
-    const itemCategory = item.category.replace('MPMM', 'VGM');
-    const itemPathParts = item.pathParts.map(p => p.replace('MPMM', 'VGM'));
+    if (item.hiddenFromDirectory || item.id === '第二章：创建角色/创建你的角色.htm') return;
+    const itemCategory = item.category;
+    const itemPathParts = item.pathParts;
 
     // Filter out unwanted categories
     if (itemCategory.includes('VGM')) {
@@ -128,6 +125,8 @@ const categoryTree = (() => {
           });
         }
         if (overview) d._selfFile = overview;
+        d._files.sort((a, b) => compareContentItems(a, b, d._path));
+        d._children = Object.fromEntries(Object.entries(d._children).sort(([a], [b]) => compareContentNames(a, b, d._path)));
         visit(d._children, d);
       }
     });
@@ -161,7 +160,7 @@ export default function App() {
   const {
     activeTab, setActiveTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
     detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem, isExternalBack
-  } = useNavigation({ categoryTree, spellData, featData, masteryData, data });
+  } = useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data });
 
   const {
     bookmarks, setBookmarks, isBookmarkModalOpen, setIsBookmarkModalOpen, pendingBookmark, expandedFolders, setExpandedFolders,
@@ -172,7 +171,7 @@ export default function App() {
     clearAllBookmarks, toggleAllFolders, openBookmarkDialog, reorderFolders, reorderItemsInFolder
   } = useBookmarks();
 
-  const { searchResults } = useSearch({ data, spellData, featData, masteryData, searchQuery });
+  const { searchResults } = useSearch({ data, spellData, featData, masteryData, invocationData, searchQuery });
 
   useEffect(() => {
     document.body.className = theme === 'light' ? 'light-theme' : '';
@@ -202,7 +201,7 @@ export default function App() {
   }, [detailStack.length]);
 
   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  const resolveItem = (id) => resolveBookmarkItem(id, { categoryTree, spellData, featData, masteryData, data });
+  const resolveItem = (id) => resolveBookmarkItem(id, { categoryTree, spellData, featData, masteryData, invocationData, data });
 
   const commonProps = {
     searchQuery, setSearchQuery, selectedItemId: selectedItem?.id, selectItem,
@@ -227,10 +226,11 @@ export default function App() {
         />
       </aside>
 
-      <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks') ? 'wide-view' : ''}`}>
+      <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks' || activeTab === 'items') ? 'wide-view' : ''}`}>
         <AnimatePresence mode="wait">
           {activeTab === 'browser' && <WelcomePanel chapters={CHAPTERS_TO_SHOW} expansions={EXPANSIONS_TO_SHOW} categoryTree={categoryTree} navigateTo={navigateTo} />}
           {activeTab === 'spells' && <SpellBrowser spellData={spellData} {...commonProps} />}
+          {activeTab === 'items' && <ItemCatalog openBookmarkDialog={openBookmarkDialog} isBookmarkedAnywhere={isBookmarkedAnywhere} />}
           {activeTab === 'search' && <SearchPanel searchResults={searchResults} {...commonProps} />}
           {activeTab === 'bookmarks' && (
             <BookmarkPanel

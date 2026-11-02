@@ -35,10 +35,11 @@ export default function SpellBrowser({
                             <select
                                 value={spellFilters.class}
                                 onChange={(e) => setSpellFilters(prev => ({ ...prev, class: e.target.value }))}
+                                aria-label="筛选职业"
                                 className="filter-select"
                             >
                                 <option value="全部">全部职业</option>
-                                {['吟游诗人', '牧师', '德鲁伊', '圣武士', '游侠', '术士', '魔契师', '法师'].map(c => (
+                                {['吟游诗人', '牧师', '德鲁伊', '圣武士', '游侠', '术士', '魔契师', '法师', '奇械师'].map(c => (
                                     <option key={c} value={c}>{c}</option>
                                 ))}
                             </select>
@@ -50,6 +51,7 @@ export default function SpellBrowser({
                             <select
                                 value={spellFilters.level}
                                 onChange={(e) => setSpellFilters(prev => ({ ...prev, level: e.target.value }))}
+                                aria-label="筛选环阶"
                                 className="filter-select"
                             >
                                 <option value="全部">全部环阶</option>
@@ -75,9 +77,10 @@ export default function SpellBrowser({
                     </div>
                 </div>
 
-                <div className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar">
+                <div className="spell-results">
+                    <p className="spell-result-count" role="status">共 {filteredSpells.length} 个法术</p>
                     <div className="spell-grid">
-                        {filteredSpells.slice(0, 100).map(spell => (
+                        {filteredSpells.map(spell => (
                             <SpellListItem
                                 key={spell.id}
                                 item={spell}
@@ -89,7 +92,6 @@ export default function SpellBrowser({
                             />
                         ))}
                         {filteredSpells.length === 0 && <div className="col-span-full text-center text-muted py-10">未找到匹配的法术</div>}
-                        {filteredSpells.length > 100 && <div className="col-span-full text-center text-muted py-4 text-xs">显示前 100 个结果</div>}
                     </div>
                 </div>
             </div>

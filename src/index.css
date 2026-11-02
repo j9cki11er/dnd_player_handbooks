@@ -9,7 +9,10 @@
   --text-muted: #a3a3b0;
   --accent-gold: #C6B41D;
   --accent-gold-hover: #E5D122;
-  --accent-crimson: #da0303;
+  --accent-crimson: #ff8175;
+  --content-green: #8cdb94;
+  --content-blue: #9fc5ff;
+  --content-red: #ff8175;
   --border-color: rgba(198, 180, 29, 0.2);
   --glass-bg: rgba(22, 22, 26, 0.846);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -20,6 +23,10 @@
 }
 
 body.light-theme {
+  --accent-crimson: #a32424;
+  --content-green: #17632a;
+  --content-blue: #174e9b;
+  --content-red: #a32424;
   --bg-primary: #f8f9fa;
   /* --bg-primary: rgba(198, 180, 29, 0.5); */
   --bg-secondary: #ffffff;
@@ -1558,7 +1565,12 @@ body.overlay-open .main-viewport .overflow-y-auto {
   right: 0;
   bottom: 0;
   z-index: 1500;
-  background: var(--bg-primary);
+  background-color: var(--bg-primary);
+  /* Paint on the fixed panel, independently of expanding/scrolling content. */
+  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   /* box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3); */
@@ -1575,14 +1587,12 @@ body.overlay-open .main-viewport .overflow-y-auto {
 
 .detail-overlay-content {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   position: relative;
   margin-top: 60px;
-  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: transparent;
 }
 
 
@@ -2596,7 +2606,7 @@ body.overlay-open .main-viewport .overflow-y-auto {
   }
 
   body,
-  .detail-overlay-content {
+  .detail-overlay {
     background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background_mobile.webp') !important;
   }
 
@@ -2762,3 +2772,160 @@ body.overlay-open .main-viewport .overflow-y-auto {
     min-width: 35px;
   }
 }
+/* Keep long spell lists cheap to paint: no per-card blur or animation runtime. */
+.spell-card-wrapper,
+.spell-card-inner {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  min-width: 0;
+}
+.spell-card-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 150px;
+}
+.spell-card-wrapper:hover { transform: none; }
+.spell-card-inner { border-radius: inherit; }
+.spell-card-inner:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.spell-card-body { min-width: 0; }
+.spell-card-meta {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  gap: 0.25rem;
+  align-items: start;
+  font-size: 0.75rem;
+}
+.spell-card-meta .meta-item { max-width: none; min-width: 0; }
+.spell-card-meta .spell-casting-time {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow-wrap: anywhere;
+}
+/* Keep duration and compact component costs on one metadata line. */
+.spell-card-extra.spell-preview-details {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0.4rem 0 0;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.75rem;
+}
+.spell-preview-row { display: flex; min-width: 0; flex: 1; gap: 0.3rem; align-items: baseline; }
+.spell-preview-row:last-child { flex: 1.3; }
+.spell-preview-row dt { flex-shrink: 0; color: var(--text-muted); }
+.spell-preview-row dd { margin: 0; min-width: 0; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spell-preview-row dd > span { color: inherit; }
+.spell-results { min-width: 0; padding-bottom: 5rem; }
+.spell-result-count { color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.75rem; }
+
+/* Weapon references use body text, with separate category and column hierarchy. */
+:root { --weapon-row-bg: #242429; --weapon-row-alt-bg: #303037; --weapon-head-bg: #3b3824; --weapon-hover-bg: #45412b; }
+body.light-theme { --weapon-row-bg: #ffffff; --weapon-row-alt-bg: #eef1f5; --weapon-head-bg: #eee2c9; --weapon-hover-bg: #fff0ce; }
+.weapon-reference-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--border-color); border-radius: 10px; margin: 1rem 0 1.5rem; }
+.weapon-reference-scroll:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 3px; }
+.dnd-content .weapon-reference-table { margin: 0; min-width: 700px; width: 100%; font-size: 0.9rem; color: var(--text-primary); border: none; }
+.dnd-content .weapon-reference-table th,
+.dnd-content .weapon-reference-table td,
+.weapon-details-table td { padding: 0.75rem 0.9rem; line-height: 1.5; vertical-align: middle; border: none; border-bottom: 1px solid var(--border-color); font-size: 0.9rem; }
+.dnd-content .weapon-reference-table td { background: transparent; color: var(--text-primary); }
+.dnd-content .weapon-reference-table thead th { background: var(--weapon-head-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 700; }
+.dnd-content .weapon-reference-table .weapon-row,
+.weapon-details-table tbody tr.odd { background: var(--weapon-row-bg); }
+.dnd-content .weapon-reference-table .weapon-row-alt,
+.weapon-details-table tbody tr.even { background: var(--weapon-row-alt-bg); }
+.dnd-content .weapon-reference-table .weapon-group-heading td { background: var(--weapon-head-bg); color: var(--accent-gold); padding-top: 0.6rem; padding-bottom: 0.6rem; font-weight: 700; border-top: 2px solid var(--border-color); }
+.dnd-content .weapon-reference-table .weapon-group-heading em { font-style: normal; }
+.dnd-content .weapon-reference-table tbody tr:not(.weapon-group-heading):hover,
+.weapon-details-table tbody tr:hover { background: var(--weapon-hover-bg); }
+.weapon-name-zh { display: block; font-weight: 700; }
+.weapon-name-en { display: block; color: var(--text-muted); font-size: 0.75rem; font-weight: 400; margin-top: 0.15rem; }
+.dnd-content .weapon-reference-table td:nth-child(1) { min-width: 9rem; }
+.dnd-content .weapon-reference-table td:nth-child(2) { min-width: 6.5rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dnd-content .weapon-reference-table td:nth-child(3) { min-width: 12rem; color: var(--text-secondary); }
+.dnd-content .weapon-reference-table td:nth-child(4) { white-space: nowrap; }
+.dnd-content .weapon-reference-table td:nth-child(5),
+.dnd-content .weapon-reference-table td:nth-child(6) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.weapon-details-table .weapon-damage,
+.weapon-details-table .weapon-cost { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+@media (max-width: 767px) {
+  .dnd-content .weapon-reference-table th, .dnd-content .weapon-reference-table td { padding: 0.65rem 0.75rem; font-size: 0.85rem; }
+}
+
+/* Adventuring gear cards and a two-row budget toolbar. */
+.gear-browser { max-width: 1040px; margin: 0 auto; }
+.gear-browser-header h2 { color: var(--accent-gold); font-size: 1.4rem; }
+.gear-browser-header h2 span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+.gear-browser-header p, .gear-count { color: var(--text-muted); font-size: 0.8rem; margin: 0.5rem 0 0.85rem; }
+.gear-filters.unified-filter-bar { display: flex; gap: 8px; padding: 4px 8px; max-width: 100%; }
+.gear-filters select, .gear-search, .gear-price-input, .gear-reset, .gear-close { min-width: 0; min-height: 44px; border: none; border-radius: 6px; background: transparent; color: var(--text-primary); font: inherit; font-size: 0.8rem; }
+.gear-filters select { width: auto; padding: 0 4px; cursor: pointer; }
+.gear-filters option { background: var(--bg-secondary); }
+.gear-search { display: flex; flex: 1 1 180px; align-items: center; gap: 6px; padding: 0 4px; color: var(--text-muted); }
+.gear-search input { min-width: 0; width: 100%; border: 0; background: transparent; color: var(--text-primary); font: inherit; }
+.gear-price-input { display: flex; flex: 0 1 115px; align-items: center; gap: 5px; padding: 0 6px; border-left: 1px solid var(--border-color); }
+.gear-price-input > span { color: var(--text-muted); font-size: 0.75rem; flex-shrink: 0; }
+.gear-price-input input[type=number] { min-width: 0; width: 100%; border: 0; color: var(--text-primary); background: transparent; font: inherit; }
+.gear-reset { cursor: pointer; padding: 0 6px; }
+.gear-count { margin: 0.85rem 0; }
+.gear-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(210px,1fr)); gap: 12px; list-style: none; padding: 0; margin: 0; }
+.gear-grid li { min-width: 0; }
+.gear-card { width: 100%; height: 100%; min-height: 80px; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 14px 16px; text-align: left; color: var(--text-primary); cursor: pointer; font: inherit; transition: border-color 150ms; }
+.gear-card:hover { border-color: var(--accent-gold); }
+.gear-name { display: flex; align-items: baseline; gap: 7px; min-width: 0; width: 100%; }
+.gear-name strong { flex-shrink: 0; font-size: 0.95rem; }
+.gear-name small { color: var(--text-muted); font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gear-card-meta { display: flex; justify-content: space-between; gap: 6px; width: 100%; }
+.gear-weight { color: var(--text-secondary); font-size: 0.8rem; }
+.gear-price { color: var(--accent-gold); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.gear-card:focus-visible, .gear-filters :focus-visible, .gear-close:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.gear-empty { padding: 1.25rem; color: var(--text-muted); }
+.gear-browser-header .gear-error { color: var(--accent-crimson); }
+.gear-dialog { width: min(560px, calc(100vw - 2rem)); max-height: min(80dvh, 720px); margin: auto; padding: 0; border: 1px solid var(--border-color); border-radius: 14px; color: var(--text-primary); background: var(--bg-secondary); box-shadow: 0 20px 70px #0006; }
+.gear-dialog::backdrop { background: #0009; }
+.gear-dialog-surface { padding: 1.25rem; }
+.gear-dialog-header { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+.gear-dialog-header h2 { font-size: 1.25rem; color: var(--accent-gold); }
+.gear-dialog-header p { font-size: 0.85rem; color: var(--text-muted); }
+.gear-close { display: grid; place-items: center; flex-shrink: 0; padding: 0; width: 44px; }
+.gear-dialog-meta { display: flex; gap: 2rem; padding: 1rem 0; margin: 0.8rem 0; border-block: 1px solid var(--border-color); }
+.gear-dialog-meta dt { font-size: 0.75rem; color: var(--text-muted); }
+.gear-dialog-meta dd { margin: 0.25rem 0 0; }
+.gear-dialog-description { max-height: 48dvh; overflow: auto; font-size: 0.95rem; }
+.gear-dialog-description blockquote { margin: 1rem 0; }
+.gear-dialog-description table { width: 100% !important; max-width: 100%; }
+@media (max-width: 850px) {
+  .gear-filters.unified-filter-bar { flex-wrap: wrap; }
+  .gear-search { flex-basis: 35%; }
+  .gear-price-input { flex-grow: 1; }
+}
+@media (max-width: 600px) {
+  .gear-browser-header h2 span { display: block; margin-top: 0.2rem; }
+  .gear-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .gear-card { padding: 12px; }
+  .gear-name strong { flex-shrink: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+.catalog-card { position: relative; min-width: 0; transition: border-color 150ms; }
+.catalog-card:hover { border-color: var(--accent-gold); }
+.catalog-open { width: 100%; min-height: 86px; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 14px 16px; border: 0; background: transparent; color: var(--text-primary); text-align: left; font: inherit; cursor: pointer; }
+.catalog-open .gear-name { padding-right: 26px; }
+.catalog-save { position: absolute; right: 4px; top: 1px; width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; color: var(--text-muted); cursor: pointer; }
+.catalog-save.saved { color: #ef4444; }
+.catalog-save:hover { color: var(--accent-gold); }
+.catalog-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.catalog-tabs button { min-height: 44px; padding: 8px 18px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--glass-bg); color: var(--text-secondary); cursor: pointer; font: inherit; }
+.catalog-tabs button[aria-selected=true] { color: var(--accent-gold); border-color: var(--accent-gold); }
+.catalog-scroll { overflow-y: auto; flex: 1; min-height: 0; padding-bottom: 5rem; }
+.catalog-open:focus-visible, .catalog-save:focus-visible, .catalog-tabs button:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: -3px; }
+.catalog-open .gear-name strong { flex-shrink: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.catalog-open .gear-name small { flex: 1; }
+.catalog-card .gear-price { white-space: nowrap; }
+.weapon-card-classification { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 8px; width: 100%; color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; }
+.weapon-dialog-stats { margin: 18px 0 0; padding: 0; border-top: 1px solid var(--border-color); }
+.weapon-dialog-stats > div { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border-color); line-height: 1.6; }
+.weapon-dialog-stats > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.weapon-dialog-stats dt { color: var(--text-muted); font-size: 0.85rem; }
+.weapon-dialog-stats dd { margin: 0; color: var(--text-primary); font-size: 0.95rem; overflow-wrap: anywhere; }

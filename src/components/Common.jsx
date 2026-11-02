@@ -1,4 +1,5 @@
 import React from 'react';
+import { spellText, summarizeComponents, summarizeDuration } from '../utils/spellSummary';
 import { Folder, Heart, Bookmark, ChevronRight, ChevronDown, ChevronUp, Layout, Book, Search, FilterX, Trash2, Menu } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -26,7 +27,7 @@ export function WeaponTable({ weapons }) {
                                 <th>分类</th>
                                 <th>伤害</th>
                                 <th>属性</th>
-                                <th>分类 & 价格</th>
+                                <th>价格</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,6 +35,7 @@ export function WeaponTable({ weapons }) {
                                 <tr key={weapon.id} className={idx % 2 === 0 ? 'even' : 'odd'}>
                                     <td className="weapon-name">
                                         <div className="font-bold">{weapon.title}</div>
+                                        <small className="weapon-name-en">{weapon.titleEn}</small>
                                     </td>
                                     <td className="weapon-category">{weapon.category}</td>
                                     <td className="weapon-damage">{weapon.damage}</td>
@@ -88,6 +90,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
     };
 
     const displayCategory = React.useMemo(() => {
+        if (item?.itemType && item?.rarity) return `${item.itemType} · ${item.rarity}${item.requiresAttunement ? ' · 需同调' : ''}`;
         if (item?.category === '魔能祈唤' || item?.category === '精通词条') return item.category;
 
         const pathStr = item?.fullCategory || item?.pathParts?.join(' > ') || '';
@@ -102,7 +105,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
             cat = cleanParts[cleanParts.length - 2];
         }
 
-        return cat;
+        return item?.sourceBook === 'XGE' ? `XGE · ${cat}` : cat;
     }, [item]);
 
     return (
@@ -146,18 +149,25 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
         e.stopPropagation();
         openBookmarkDialog(item);
     };
+    const components = summarizeComponents(item.components);
+    const castingTime = spellText(item.castingTime || '1 动作');
+    const duration = spellText(item.duration || '瞬时');
+    const durationSummary = summarizeDuration(item.duration);
     return (
-        <motion.div
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        <div
             className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''}`}
         >
             <div
                 onClick={onClick}
                 className="spell-card-inner"
+                role="button"
+                tabIndex={0}
+                aria-label={`查看${item.title}详情`}
+                onKeyDown={e => { if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); onClick(); } }}
             >
                 <div className="spell-card-body">
                     <div className="spell-card-classes" title={item.classes?.join('、') || ''}>
-                        {item.classes?.join('、') || ''}
+                        {item.source === 'XGE' ? 'XGE · ' : ''}{item.classes?.join('、') || ''}
                     </div>
 
                     <div className="spell-card-header">
@@ -166,6 +176,7 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                         </h3>
                         <div className="spell-card-actions">
                             <button
+                                aria-label={`收藏${item.title}`}
                                 className={`spell-card-bookmark-btn ${isBookmarked ? 'active' : ''}`}
                                 onClick={handleBookmarkClick}
                                 onPointerDown={e => e.stopPropagation()}
@@ -179,18 +190,21 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                         <div className="spell-card-meta">
                             <span className="meta-item">{item.level || '环阶未知'}</span>
                             <span className="meta-divider">•</span>
-                            <span className="meta-item">{item.castingTime || '1 动作'}</span>
+                            <span className="meta-item spell-casting-time" title={castingTime}>{castingTime}</span>
                         </div>
 
-                        <div className="spell-card-extra">
-                            <div className="extra-item">
-                                <span className="label">时间:</span>
-                                <span className="value">{item.duration || '瞬时'}</span>
-                                <span className="meta-divider">•</span>
-                                <span className="label">成分:</span>
-                                <span className="value">{item.components || 'V, S'}</span>
+                        <dl className="spell-card-extra spell-preview-details">
+                            <div className="spell-preview-row">
+                                <dt>持续</dt>
+                                <dd title={duration}>{durationSummary}</dd>
                             </div>
-                        </div>
+                            <div className="spell-preview-row">
+                                <dt>成分</dt>
+                                <dd title={components.summary}>
+                                    <span>{components.summary}</span>
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
 
@@ -200,7 +214,7 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                     </div>
                 )}
             </div>
-        </motion.div>
+        </div>
     );
 }
 

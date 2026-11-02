@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { resolveBookmarkItem } from '../utils/helpers';
 
-export function useNavigation({ categoryTree, spellData, featData, masteryData, data }) {
+export function useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data }) {
     const [activeTab, setActiveTab] = useState('browser');
     const [selectedItem, setSelectedItem] = useState(null);
     const [currentPath, setCurrentPath] = useState([]);
@@ -65,7 +65,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
                 setCurrentPath(currentPath);
 
                 if (selectedId) {
-                    const item = resolveBookmarkItem(selectedId, { categoryTree, spellData, featData, masteryData, data });
+                    const item = resolveBookmarkItem(selectedId, { categoryTree, spellData, featData, masteryData, invocationData, data });
                     setSelectedItem(item);
                 } else {
                     setSelectedItem(null);
@@ -84,7 +84,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
         }, '', '');
 
         return () => window.removeEventListener('popstate', handlePopState);
-    }, [categoryTree, spellData, featData, masteryData, data]);
+    }, [categoryTree, spellData, featData, masteryData, invocationData, data]);
 
     const toggleExpand = (pathStr) => {
         setExpandedPaths(prev => ({

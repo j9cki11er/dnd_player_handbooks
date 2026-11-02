@@ -1,5 +1,6 @@
 import React from 'react';
-import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Search, Heart, Sun, Moon, User } from 'lucide-react';
+import { isExpansionBook } from '../utils/expansions';
+import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Backpack, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
 import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '../utils/helpers';
 
@@ -62,7 +63,7 @@ const SidebarContent = ({
                         <span className="truncate">{name}</span>
                     </button>
                 </div>
-                {isExpanded && (
+                {isExpanded && !(node._path[0]?.includes('DMG 2024') && node._path[1] === '物品图鉴') && (
                     <div className="sidebar-children border-l border-gold/10 ml-2">
                         {Object.entries(node._children)
                             .filter(([childName]) => {
@@ -159,6 +160,7 @@ const SidebarContent = ({
                     active={activeTab === 'spells'}
                     onClick={() => handleNavClick(() => { setActiveTab('spells'); setSelectedItem(null); setDetailStack([]); setSearchQuery(''); })}
                 />
+                <NavItem icon={<Backpack size={20} />} label="物品" active={activeTab === 'items'} onClick={() => handleNavClick(() => { setActiveTab('items'); setSelectedItem(null); setDetailStack([]); })} />
                 {showDev && (
                     <NavItem
                         icon={<User size={20} />}
@@ -185,7 +187,7 @@ const SidebarContent = ({
                 <h3 className="section-title">分类目录</h3>
                 <div className="category-list">
                     {Object.entries(categoryTree)
-                        .filter(([catName]) => !catName.includes('VGM'))
+                        .filter(([catName]) => !isExpansionBook(catName))
                         .sort(([a], [b]) => {
                             const order = [
                                 '序章', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '附录 A', '附录 B', '附录 C'
@@ -208,7 +210,7 @@ const SidebarContent = ({
                 <h3 className="section-title">扩充手册</h3>
                 <div className="category-list">
                     {Object.entries(categoryTree)
-                        .filter(([catName]) => catName.includes('VGM'))
+                        .filter(([catName]) => isExpansionBook(catName))
                         .map(([catName, catNode]) => (
                             <SidebarItem key={catName} name={catName} node={catNode} />
                         ))}

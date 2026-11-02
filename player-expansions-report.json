@@ -1,0 +1,36 @@
+[
+  {
+    "book": "珊娜萨的万事指南 (XGE)",
+    "pages": 165,
+    "feats": 15,
+    "spells": 95,
+    "skippedEmpty": [],
+    "missingAssets": []
+  },
+  {
+    "book": "被遗忘的国度：费伦英雄",
+    "pages": 46,
+    "feats": 34,
+    "spells": 19,
+    "skippedEmpty": [
+      "第一章/背景/死魔区住民.htm"
+    ],
+    "missingAssets": []
+  },
+  {
+    "book": "鸦阁魔域：魔障深藏",
+    "pages": 24,
+    "feats": 11,
+    "spells": 0,
+    "skippedEmpty": [],
+    "missingAssets": []
+  },
+  {
+    "book": "启封奥秘",
+    "pages": 46,
+    "feats": 28,
+    "spells": 33,
+    "skippedEmpty": [],
+    "missingAssets": []
+  }
+]

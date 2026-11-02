@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 export function useBookmarks() {
     const [bookmarks, setBookmarks] = useState(() => {
         const saved = localStorage.getItem('dnd-bookmarks');
-        return saved ? JSON.parse(saved) : { '默认': [] };
+        if (!saved) return { '默认': [] };
+        return Object.fromEntries(Object.entries(JSON.parse(saved)).map(([folder, ids]) => [
+            folder, ids.map(id => id.replace('瓦罗怪物指南 (MPMM)', '瓦罗怪物指南 (VGM)'))
+        ]));
     });
     const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
     const [pendingBookmark, setPendingBookmark] = useState(null);

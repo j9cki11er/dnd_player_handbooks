@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
+import { MagicBrowser } from './ItemCatalog';
+import { loadContent } from '../utils/content';
 import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
 import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '../utils/helpers';
 
@@ -35,15 +37,18 @@ export default function DetailScreen({
 
     // Fetch item content
     useEffect(() => {
+        const controller = new AbortController();
+        setLoadedContent('');
+        setContentLoading(false);
         if (entry.type === 'file' && entry.item && entry.item.path) {
             setContentLoading(true);
-            fetch(`/content/${entry.item.path}`)
-                .then(res => res.text())
+            loadContent(entry.item.path, controller.signal)
                 .then(html => {
                     setLoadedContent(html);
                     setContentLoading(false);
                 })
                 .catch(err => {
+                    if (controller.signal.aborted) return;
                     console.error('Failed to load content:', err);
                     setLoadedContent('<p class="text-red-500">内容加载失败。</p>');
                     setContentLoading(false);
@@ -51,10 +56,14 @@ export default function DetailScreen({
         } else {
             setLoadedContent('');
         }
-    }, [entry.id]);
+        return () => controller.abort();
+    }, [entry.id, entry.type, entry.item]);
 
     // Fetch overview content
     useEffect(() => {
+        const controller = new AbortController();
+        setLoadedOverview(null);
+        setOverviewLoading(false);
         if (entry.type === 'dir' && entry.path) {
             const getCategoryData = () => {
                 let current = { _children: categoryTree };
@@ -71,8 +80,7 @@ export default function DetailScreen({
             const categoryData = getCategoryData();
             if (categoryData && categoryData._selfFile) {
                 setOverviewLoading(true);
-                fetch(`/content/${categoryData._selfFile.path}`)
-                    .then(res => res.text())
+                loadContent(categoryData._selfFile.path, controller.signal)
                     .then(html => {
                         // Extract first H1 or H2 as bilingual title
                         const match = html.match(/<(h[123])>(.*?)<\/\1>/i);
@@ -87,6 +95,7 @@ export default function DetailScreen({
                         setOverviewLoading(false);
                     })
                     .catch(err => {
+                        if (controller.signal.aborted) return;
                         console.error('Failed to load overview:', err);
                         setLoadedOverview(null);
                         setOverviewLoading(false);
@@ -97,7 +106,8 @@ export default function DetailScreen({
         } else {
             setLoadedOverview(null);
         }
-    }, [entry.id, categoryTree]);
+        return () => controller.abort();
+    }, [entry.id, entry.type, entry.path, categoryTree]);
 
     const currentCategoryData = useMemo(() => {
         if (entry.type !== 'dir' || !entry.path) return null;
@@ -117,6 +127,7 @@ export default function DetailScreen({
 
     const isFeatCategory = useMemo(() => {
         return selectedItem && (
+            Boolean(selectedItem.featCategory) ||
             selectedItem.id === '第五章：专长/起源专长.htm' ||
             selectedItem.id === '第五章：专长/通用专长.htm' ||
             selectedItem.id === '第五章：专长/战斗风格专长.htm' ||
@@ -157,8 +168,8 @@ export default function DetailScreen({
 
     const featsInCategory = useMemo(() => {
         if (!isFeatCategory) return [];
-        const catName = selectedItem.title;
-        return featData.filter(f => f.category === catName);
+        const catName = selectedItem.featCategory || selectedItem.title;
+        return featData.filter(f => f.category === catName && f.sourceBook === selectedItem.sourceBook);
     }, [isFeatCategory, selectedItem, featData]);
 
     const isMasteryDirectory = useMemo(() => {
@@ -340,6 +351,8 @@ export default function DetailScreen({
                                     </>
                                 )}
                             </>
+                        ) : currentPath[0]?.includes('DMG 2024') && currentPath[1] === '物品图鉴' ? (
+                            <MagicBrowser key={currentPath.join('/')} initialType={currentPath[2] || ''} initialRarity={currentPath[3] || ''} {...{openBookmarkDialog, isBookmarkedAnywhere}} />
                         ) : currentCategoryData ? (
                             <div className="directory-view">
                                 {overviewLoading ? (

@@ -2,6 +2,16 @@ import React from 'react';
 import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart, Edit2, Share2 } from 'lucide-react';
 import { motion, Reorder, AnimatePresence, useDragControls } from 'framer-motion';
 import { ItemCard, SpellListItem } from './Common';
+import { CatalogCard, CatalogDialog } from './ItemCatalog';
+
+function SavedItems({ items, openBookmarkDialog }) {
+    const [selected, setSelected] = React.useState(null);
+    return <div className="bookmark-group">
+        <h4 className="section-title">物品</h4>
+        <div className="gear-grid">{items.map(item => <CatalogCard key={item.id} item={item} onClick={() => setSelected(item)} openBookmarkDialog={openBookmarkDialog} isBookmarkedAnywhere={() => true} />)}</div>
+        {selected && <CatalogDialog item={selected} onClose={() => setSelected(null)} />}
+    </div>;
+}
 
 // Helper hook for hold-to-drag
 const useHoldToDrag = (onStart) => {
@@ -173,6 +183,7 @@ const DraggableFolder = ({
                     >
                         {folderItems.length > 0 ? (
                             <div className="flex flex-col gap-6">
+                                {folderItems.map(resolveItem).some(item => item && (item.itemType || (item.id.startsWith('gear:') || item.id.startsWith('weapon:')))) && <SavedItems items={folderItems.map(resolveItem).filter(item => item && (item.itemType || (item.id.startsWith('gear:') || item.id.startsWith('weapon:'))))} openBookmarkDialog={openBookmarkDialog} />}
                                 {['rules', 'creatures', 'spells'].map(categoryType => {
                                     const catId = `${folder}-${categoryType}`;
                                     const isCatExpanded = expandedCategories[catId] !== false;
@@ -181,7 +192,7 @@ const DraggableFolder = ({
                                         const isSpell = !!item.castingTime;
                                         const isCreature = item.pathParts?.some(p => p.includes('附录 B') || p.includes('生物数据卡'));
 
-                                        if (categoryType === 'rules') return !isSpell && !isCreature;
+                                        if (categoryType === 'rules') return !isSpell && !isCreature && !item.itemType && !(item.id.startsWith('gear:') || item.id.startsWith('weapon:'));
                                         if (categoryType === 'creatures') return isCreature;
                                         if (categoryType === 'spells') return isSpell;
                                         return false;
@@ -271,6 +282,8 @@ export default function BookmarkPanel({
     reorderFolders,
     reorderItemsInFolder
 }) {
+    // Leave folder expansion local to each visit; the next visit starts folded.
+    React.useEffect(() => () => setExpandedFolders({}), [setExpandedFolders]);
     const [draggingId, setDraggingId] = React.useState(null);
     const lastReorderTime = React.useRef(0);
 
@@ -370,7 +383,7 @@ export default function BookmarkPanel({
                         <DraggableFolder
                             key={folder}
                             folder={folder}
-                            isFolderExpanded={expandedFolders[folder] !== false}
+                            isFolderExpanded={expandedFolders[folder] === true}
                             folderItems={bookmarks[folder]}
                             setExpandedFolders={setExpandedFolders}
                             setFolderToRename={setFolderToRename}

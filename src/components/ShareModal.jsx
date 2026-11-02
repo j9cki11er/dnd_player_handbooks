@@ -18,7 +18,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
     const getExportData = () => {
         const filteredBookmarks = {};
         Object.keys(bookmarks).forEach(folder => {
-            if (selectedFolders[folder]) {
+            if (selectedFolders[folder] !== false) {
                 filteredBookmarks[folder] = bookmarks[folder];
             }
         });
@@ -38,13 +38,13 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
             const decoded = decodeURIComponent(atob(importText.trim()));
             const parsed = JSON.parse(decoded);
 
-            if (typeof parsed !== 'object' || parsed === null) {
+            if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
                 throw new Error('格式不正确');
             }
 
             // Simple validation: check if values are arrays
             for (const key in parsed) {
-                if (!Array.isArray(parsed[key])) {
+                if (!Array.isArray(parsed[key]) || !parsed[key].every(id => typeof id === 'string')) {
                     throw new Error('数据结构无效');
                 }
             }
@@ -61,7 +61,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                         finalName = `${folderName}_${counter++}`;
                     }
 
-                    newBookmarks[finalName] = parsed[folderName];
+                    newBookmarks[finalName] = [...new Set(parsed[folderName].map(id => id.replace('瓦罗怪物指南 (MPMM)', '瓦罗怪物指南 (VGM)')))];
                 });
 
                 return newBookmarks;
@@ -98,17 +98,17 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                                 key={folder}
                                 onClick={() => setSelectedFolders(prev => ({
                                     ...prev,
-                                    [folder]: !prev[folder]
+                                    [folder]: prev[folder] === false
                                 }))}
-                                className={`folder-select-item ${selectedFolders[folder] ? 'active' : ''}`}
+                                className={`folder-select-item ${selectedFolders[folder] !== false ? 'active' : ''}`}
                             >
                                 <div className="flex items-center gap-2">
-                                    <Bookmark size={16} className={selectedFolders[folder] ? 'text-gold' : 'text-muted'} />
+                                    <Bookmark size={16} className={selectedFolders[folder] !== false ? 'text-gold' : 'text-muted'} />
                                     <span className="text-sm">{folder}</span>
                                     <span className="opacity-40 text-[10px]">[{bookmarks[folder]?.length || 0} 项]</span>
                                 </div>
-                                <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedFolders[folder] ? 'bg-gold border-gold text-black' : 'border-white/20'}`}>
-                                    {selectedFolders[folder] && <Check size={14} strokeWidth={3} />}
+                                <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedFolders[folder] !== false ? 'bg-gold border-gold text-black' : 'border-white/20'}`}>
+                                    {selectedFolders[folder] !== false && <Check size={14} strokeWidth={3} />}
                                 </div>
                             </div>
                         ))}

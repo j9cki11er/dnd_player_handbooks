@@ -557,7 +557,7 @@
     "subDivision": "中型元素",
     "alignment": "守序中立",
     "cr": "6",
-    "path": "monsters/元素/火矮人烈炎术士.html"
+    "path": "monsters/元素/火矮人/火矮人烈炎术士.htm"
   },
   {
     "id": "azer-sentinel",
@@ -767,7 +767,7 @@
     "subDivision": "中型元素",
     "alignment": "中立",
     "cr": "4",
-    "path": "monsters/元素/鸟羽人风舞术士.html"
+    "path": "monsters/元素/鸟羽人/鸟羽人风舞术士.htm"
   },
   {
     "id": "aarakocra-skirmisher",
@@ -1021,13 +1021,13 @@
   },
   {
     "id": "-wisp",
-    "title": "鬼火Will-o'",
-    "titleEn": "-Wisp",
+    "title": "鬼火",
+    "titleEn": "Will-o'-Wisp",
     "type": "亡灵",
     "subDivision": "微型亡灵",
     "alignment": "混乱邪恶",
     "cr": "2",
-    "path": "monsters/亡灵/鬼火.html"
+    "path": "monsters/亡灵/鬼火.htm"
   },
   {
     "id": "specter",
@@ -2627,7 +2627,7 @@
     "subDivision": "中型龙类（金属龙）",
     "alignment": "守序善良",
     "cr": "3",
-    "path": "monsters/龙类/New_Item.html"
+    "path": "monsters/龙类/金龙/New_Item.htm"
   },
   {
     "id": "gold-dragons",
@@ -5007,7 +5007,7 @@
     "subDivision": "中型怪兽",
     "alignment": "中立邪恶",
     "cr": "3",
-    "path": "monsters/怪兽/恶咒蛇人（2型）.html"
+    "path": "monsters/怪兽/蛇人/恶咒蛇人（2型）.htm"
   },
   {
     "id": "yuan-ti-infiltrator",
@@ -5037,7 +5037,7 @@
     "subDivision": "中型怪兽",
     "alignment": "中立邪恶",
     "cr": "3",
-    "path": "monsters/怪兽/恶咒蛇人（1型）.html"
+    "path": "monsters/怪兽/蛇人/恶咒蛇人（1型）.htm"
   },
   {
     "id": "yuan-ti-malisons",
@@ -5047,7 +5047,7 @@
     "subDivision": "中型怪兽",
     "alignment": "中立邪恶",
     "cr": "3",
-    "path": "monsters/怪兽/恶咒蛇人（3型）.html"
+    "path": "monsters/怪兽/蛇人/恶咒蛇人（3型）.htm"
   },
   {
     "id": "yuan-ti",

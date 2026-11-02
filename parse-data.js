@@ -2,7 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import iconv from 'iconv-lite';
+import { TextDecoder } from 'node:util';
 import { parse } from 'node-html-parser';
+import { compareContentNames, compareContentItems } from './src/utils/contentOrder.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -32,6 +34,19 @@ function walkDir(dir, callback) {
 
 function parseFiles() {
     console.log('Searching for files in:', SOURCE_DIR);
+    // Stop before writing anything if a source still contains irreversible damage.
+    const damagedSources = [];
+    walkDir(SOURCE_DIR, fullPath => {
+        const buffer = fs.readFileSync(fullPath);
+        let text;
+        try { text = new TextDecoder('utf-8', { fatal: true }).decode(buffer); }
+        catch { text = iconv.decode(buffer, 'gbk'); }
+        if (text.includes('\ufffd')) damagedSources.push(path.relative(SOURCE_DIR, fullPath));
+    });
+    if (damagedSources.length) {
+        throw new Error(`${damagedSources.length} source files still contain replacement characters. See source-encoding-report.json; content and indexes were not regenerated.`);
+    }
+
     ensureDir(PUBLIC_CONTENT_DIR);
     const results = [];
 
@@ -40,36 +55,16 @@ function parseFiles() {
             const relativePath = path.relative(SOURCE_DIR, fullPath);
             const buffer = fs.readFileSync(fullPath);
 
-            // Detect encoding
-            let encoding = 'utf8';
-
-            // 1. Check for UTF-8 BOM
-            if (buffer[0] === 0xEF && buffer[1] === 0xBB && buffer[2] === 0xBF) {
-                encoding = 'utf8';
-            } else {
-                // 2. Check for meta charset or comment
-                const head = buffer.slice(0, 1024).toString('ascii').toLowerCase();
-                if (head.includes('charset=gb2312') || head.includes('charset=gbk') || head.includes('coding: gbk')) {
-                    encoding = 'gbk';
-                } else if (head.includes('charset=utf-8')) {
-                    encoding = 'utf8';
-                } else {
-                    // 3. Heuristic: try to decode as UTF-8, if it fails or contains invalid chars, fallback to GBK
-                    try {
-                        const utf8String = buffer.toString('utf8');
-                        // Basic check for common replacement characters if it was actually GBK
-                        if (utf8String.includes('\ufffd')) {
-                            encoding = 'gbk';
-                        } else {
-                            encoding = 'utf8';
-                        }
-                    } catch (e) {
-                        encoding = 'gbk';
-                    }
-                }
+            // Validate bytes before consulting legacy declarations, which may be stale.
+            let html;
+            try {
+                html = new TextDecoder('utf-8', { fatal: true }).decode(buffer);
+            } catch {
+                html = iconv.decode(buffer, 'gbk');
             }
-
-            const html = iconv.decode(buffer, encoding);
+            if (html.includes('\ufffd')) {
+                throw new Error('Unrecoverable replacement characters; repair source encoding before generating content');
+            }
 
             const root = parse(html);
             const titleElement = root.querySelector('title');
@@ -174,7 +169,7 @@ function parseFiles() {
                 const orderA = getOrder(partA);
                 const orderB = getOrder(partB);
                 if (orderA !== orderB) return orderA - orderB;
-                return partA.localeCompare(partB);
+                return compareContentNames(partA, partB, a.pathParts.slice(0, i));
             }
         }
 
@@ -188,7 +183,7 @@ function parseFiles() {
         if (orderA !== orderB) return orderA - orderB;
 
         // 4. Default to title alphabetical
-        return a.title.localeCompare(b.title);
+        return compareContentItems(a, b, a.pathParts);
     });
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));

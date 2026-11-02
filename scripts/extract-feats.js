@@ -110,7 +110,9 @@ function extractFeats() {
         }
     });
 
-    fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(allFeats, null, 2));
+    const expansionFeats = fs.existsSync(JSON_OUTPUT_PATH)
+        ? JSON.parse(fs.readFileSync(JSON_OUTPUT_PATH, 'utf8')).filter(feat => feat.sourceBook) : [];
+    fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify([...allFeats, ...expansionFeats], null, 2));
     console.log(`Extracted ${allFeats.length} feats to ${JSON_OUTPUT_PATH}`);
 }
 
