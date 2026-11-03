@@ -3,12 +3,22 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
 import { MagicBrowser } from './ItemCatalog';
 import { loadContent } from '../utils/content';
+import { formatCreatureBlocks } from '../utils/spellSummary';
 import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
-import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '../utils/helpers';
 
 
 
 
+
+function scrollToContentAnchor(event) {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = link.getAttribute('href').slice(1);
+    const target = Array.from(event.currentTarget.querySelectorAll('[id]')).find(node => node.id === id);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ block: 'start' });
+}
 
 export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
@@ -44,7 +54,7 @@ export default function DetailScreen({
             setContentLoading(true);
             loadContent(entry.item.path, controller.signal)
                 .then(html => {
-                    setLoadedContent(html);
+                    setLoadedContent(formatCreatureBlocks(html).html);
                     setContentLoading(false);
                 })
                 .catch(err => {
@@ -87,7 +97,7 @@ export default function DetailScreen({
                         const displayTitle = match ? match[2].replace(/<[^>]+>/g, '').trim() : categoryData._selfFile.title;
 
                         setLoadedOverview({
-                            html,
+                            html: formatCreatureBlocks(html).html,
                             title: categoryData._selfFile.title,
                             displayTitle,
                             item: categoryData._selfFile
@@ -344,7 +354,7 @@ export default function DetailScreen({
                                     </div>
                                 ) : (
                                     <>
-                                        <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedContent }} />
+                                        <div className="dnd-content" onClick={scrollToContentAnchor} dangerouslySetInnerHTML={{ __html: loadedContent }} />
                                         {selectedItem.category === '精通词条' && (
                                             <WeaponTable weapons={associatedWeapons} />
                                         )}
@@ -367,7 +377,7 @@ export default function DetailScreen({
 
                                         const overviewContent = (
                                             <div className="overview-section mb-8">
-                                                <div className="dnd-content" dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
+                                                <div className="dnd-content" onClick={scrollToContentAnchor} dangerouslySetInnerHTML={{ __html: loadedOverview.html }} />
                                             </div>
                                         );
 
@@ -391,11 +401,8 @@ export default function DetailScreen({
                                             {Object.entries(currentCategoryData._children)
                                                 .filter(([name]) => {
                                                     if (name === '怪物冒险者' || name === '玩家可用种族') return false;
-                                                    if (entry.path && entry.path[0] === '附录 B：生物数据卡') {
-                                                        if (!showDM && ['CR 2', 'CR 3', 'CR 5', 'CR 6'].includes(name)) return false;
-                                                    } else {
-                                                        if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(name)) return false;
-                                                    }
+                                                    if (entry.path?.[0] !== '附录 B：生物数据卡' && !showDM
+                                                        && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(name)) return false;
                                                     return true;
                                                 })
                                                 .map(([name, node]) => (
@@ -428,18 +435,7 @@ export default function DetailScreen({
                                         })
                                         : files;
 
-                                    const filteredFiles = isAppendixB && !showDM
-                                        ? sortedFiles.filter(f => {
-                                            if (entry.path.includes('CR0-CR1/4')) return CR0_WHITELIST.includes(f.title);
-                                            if (entry.path.includes('CR1/2')) return CR1_2_WHITELIST.includes(f.title);
-                                            if (entry.path.includes('CR1')) return CR1_WHITELIST.includes(f.title);
-                                            if (entry.path.includes('CR 4')) return CR4_WHITELIST.includes(f.title);
-                                            return true;
-                                        })
-
-                                        : sortedFiles;
-
-
+                                    const filteredFiles = sortedFiles;
 
                                     if (filteredFiles.length === 0) return null;
 

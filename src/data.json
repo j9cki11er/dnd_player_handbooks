@@ -5459,7 +5459,8 @@
       "附录 B：生物数据卡",
       "魔契师魔宠"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "hiddenFromDirectory": true
   },
   {
     "id": "pseudodragon_appendix_b",
@@ -5754,7 +5755,7 @@
     "path": "monsters_original/附录A/毒蛇.htm",
     "pathParts": [
       "附录 B：生物数据卡",
-      "CR0-CR1/4"
+      "魔契师魔宠"
     ],
     "isOverview": false
   },
@@ -6083,7 +6084,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "stirge_appendix_b",
@@ -6095,7 +6097,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "merfolk-skirmisher_appendix_b",
@@ -6107,7 +6110,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "modron-monodrone_appendix_b",
@@ -6119,7 +6123,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "kobold-warrior_appendix_b",
@@ -6131,7 +6136,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "twig-blight_appendix_b",
@@ -6143,7 +6149,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "noble_appendix_b",
@@ -6155,7 +6162,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "cultist_appendix_b",
@@ -6167,7 +6175,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "warrior-infantry_appendix_b",
@@ -6179,7 +6188,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "guard_appendix_b",
@@ -6191,7 +6201,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "bandit_appendix_b",
@@ -6203,7 +6214,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "goblin-minion_appendix_b",
@@ -6215,7 +6227,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "flumph_appendix_b",
@@ -6227,7 +6240,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "manes_appendix_b",
@@ -6239,7 +6253,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "giant-lizard_appendix_b",
@@ -6323,7 +6338,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "swarm-of-rats_appendix_b",
@@ -6335,7 +6351,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "swarm-of-ravens_appendix_b",
@@ -6347,7 +6364,8 @@
       "CR0-CR1/4"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "giant-wasp_appendix_b",
@@ -6371,7 +6389,8 @@
       "CR1/2"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "giant-hyena_appendix_b",
@@ -6419,7 +6438,8 @@
       "CR1"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "hunter-shark_appendix_b",
@@ -6527,7 +6547,8 @@
       "CR 2"
     ],
     "isOverview": false,
-    "dmOnly": true
+    "dmOnly": true,
+    "hiddenFromDirectory": true
   },
   {
     "id": "giant-scorpion_appendix_b",
@@ -18710,5 +18731,60 @@
     "isOverview": true,
     "sourceBook": "DMG2024",
     "originalSource": "魔法物品玩家导览（本站整理）"
+  },
+  {
+    "id": "giant-fire-beetle_appendix_b",
+    "title": "巨火甲虫",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/巨火甲虫.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "piranha_appendix_b",
+    "title": "食人鱼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/食人鱼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "eagle_appendix_b",
+    "title": "鹰",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/鹰.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "jackal_appendix_b",
+    "title": "胡狼",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/胡狼.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
+  },
+  {
+    "id": "pteranodon_appendix_b",
+    "title": "无齿翼龙",
+    "category": "附录 B：生物数据卡",
+    "path": "monsters_original/附录A/恐龙/无齿翼龙.htm",
+    "pathParts": [
+      "附录 B：生物数据卡",
+      "CR0-CR1/4"
+    ],
+    "isOverview": false
   }
 ]

@@ -2,7 +2,6 @@ import React from 'react';
 import { isExpansionBook } from '../utils/expansions';
 import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Backpack, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
-import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '../utils/helpers';
 
 
 
@@ -68,11 +67,8 @@ const SidebarContent = ({
                     <div className="sidebar-children border-l border-gold/10 ml-2">
                         {Object.entries(node._children)
                             .filter(([childName]) => {
-                                if (node._path[0] === '附录 B：生物数据卡') {
-                                    if (!showDM && ['CR 2', 'CR 3', 'CR 5', 'CR 6'].includes(childName)) return false;
-                                } else {
-                                    if (!showDM && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(childName)) return false;
-                                }
+                                if (node._path[0] !== '附录 B：生物数据卡' && !showDM
+                                    && ['CR 2', 'CR 3', 'CR 4', 'CR 5', 'CR 6'].includes(childName)) return false;
                                 return true;
                             })
                             .map(([childName, childNode]) => (
@@ -82,20 +78,6 @@ const SidebarContent = ({
                             .filter(f => {
                                 if (showDM) return true;
                                 if (f.dmOnly) return false;
-                                if (node._path[0] === '附录 B：生物数据卡') {
-                                    if (node._path[1] === 'CR0-CR1/4') {
-                                        return CR0_WHITELIST.includes(f.title);
-                                    }
-                                    if (node._path[1] === 'CR1/2') {
-                                        return CR1_2_WHITELIST.includes(f.title);
-                                    }
-                                    if (node._path[1] === 'CR1') {
-                                        return CR1_WHITELIST.includes(f.title);
-                                    }
-                                    if (node._path[1] === 'CR 4') {
-                                        return CR4_WHITELIST.includes(f.title);
-                                    }
-                                }
                                 return true;
                             })
 
@@ -110,6 +92,7 @@ const SidebarContent = ({
                                         onClick={() => {
                                             handleNavClick((push) => {
                                                 selectItem(file, push);
+                                                if (file.pathParts?.[0] === '附录 B：生物数据卡') return;
                                                 setCurrentPath(node._path);
                                                 setActiveTab('browser');
                                             });

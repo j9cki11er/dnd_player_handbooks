@@ -1,3 +1,4 @@
+import CatalogDialog from './components/CatalogDialog';
 import { bookmarkCodeFromInput } from './utils/bookmarkLink';
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence } from 'framer-motion';
@@ -75,6 +76,9 @@ const processedData = rawData.map(item => {
       updatedItem = { ...updatedItem, cr: monsterMatch.cr, subDivision: monsterMatch.subDivision, alignment: monsterMatch.alignment, titleEn: monsterMatch.titleEn };
     }
   }
+  if (updatedItem.pathParts?.[1] === 'CR0-CR1/4' && ['0', '1/8', '1/4'].includes(updatedItem.cr)) {
+    updatedItem.pathParts = [updatedItem.pathParts[0], `CR ${updatedItem.cr}`];
+  }
   // Show creation steps directly in chapter two while keeping IDs and URLs stable.
   if (updatedItem.pathParts?.[0] === '第二章：创建角色' && updatedItem.pathParts[1] === '创建你的角色') {
     updatedItem.pathParts = ['第二章：创建角色', ...updatedItem.pathParts.slice(2)];
@@ -139,6 +143,7 @@ const categoryTree = (() => {
 export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [creaturePreview, setCreaturePreview] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [showDev, setShowDev] = useState(() => localStorage.getItem('dev_mode') === 'true');
   const [showDM, setShowDM] = useState(() => localStorage.getItem('dm_mode') === 'true');
@@ -148,20 +153,28 @@ export default function App() {
       const newDevMode = !showDev;
       setShowDev(newDevMode);
       localStorage.setItem('dev_mode', newDevMode.toString());
-      window.history.replaceState(null, '', '/');
+      window.history.replaceState(window.history.state, '', '/' + window.location.search + window.location.hash);
     }
     if (window.location.pathname === '/dm') {
       const newDMMode = !showDM;
       setShowDM(newDMMode);
       localStorage.setItem('dm_mode', newDMMode.toString());
-      window.history.replaceState(null, '', '/');
+      window.history.replaceState(window.history.state, '', '/' + window.location.search + window.location.hash);
     }
   }, [showDev, showDM]);
 
   const {
     activeTab, setActiveTab, switchTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
-    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem, isExternalBack
+    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem: openItem, isExternalBack
   } = useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data });
+
+  const selectItem = (item, push) => {
+    if (!item.isDir && !item.isOverview && item.pathParts?.[0] === '附录 B：生物数据卡') {
+      setCreaturePreview(item);
+      return;
+    }
+    openItem(item, push);
+  };
 
   const {
     bookmarks, setBookmarks, isBookmarkModalOpen, setIsBookmarkModalOpen, pendingBookmark, expandedFolders, setExpandedFolders,
@@ -312,6 +325,8 @@ export default function App() {
         isOpen={isShareModalOpen} onClose={closeShare} initialImport={sharedImport}
         bookmarks={bookmarks} setBookmarks={setBookmarks}
       /></Suspense>}
+
+      {creaturePreview && <CatalogDialog item={creaturePreview} showCreature onClose={() => setCreaturePreview(null)} />}
 
       <MobileNavBar
         activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} currentPath={currentPath} navigateTo={navigateTo}

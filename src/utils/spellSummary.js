@@ -81,7 +81,8 @@ export function spellBookLabel(spell) {
 }
 
 // Keep the handbook's physical and mental abilities in two side-by-side tables.
-export function formatSpellCreatures(html) {
+export function formatCreatureBlocks(html, { expanded = false } = {}) {
+    if (!html.includes('stat-block')) return { html, hasCreatures: false };
     const template = document.createElement('template');
     template.innerHTML = html;
     const creatures = template.content.querySelectorAll('.stat-block');
@@ -89,6 +90,7 @@ export function formatSpellCreatures(html) {
         creature.classList.add('spell-creature-card');
         const disclosure = document.createElement('details');
         disclosure.className = 'spell-creature-disclosure';
+        disclosure.open = expanded;
         const summary = document.createElement('summary');
         summary.textContent = creature.querySelector('h5')?.textContent.trim().replace(/\s+/g, ' ') || '生物数据';
         creature.before(disclosure);

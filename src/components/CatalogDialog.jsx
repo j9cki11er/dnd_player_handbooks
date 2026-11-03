@@ -3,9 +3,9 @@ import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 import { loadContent, prepareContent } from '../utils/content';
 import { gearPriceLabel } from '../utils/gear';
-import { spellText, splitSpellDetails, formatSpellCreatures } from '../utils/spellSummary';
+import { spellText, splitSpellDetails, formatCreatureBlocks } from '../utils/spellSummary';
 
-export default function CatalogDialog({ item, onClose }) {
+export default function CatalogDialog({ item, onClose, showCreature = false }) {
     const titleId = useId();
     const isSpell = Number.isInteger(item.levelNumeric);
     const ref = useRef(null);
@@ -27,14 +27,14 @@ export default function CatalogDialog({ item, onClose }) {
                 if (isSpell) {
                     const details = splitSpellDetails(body);
                     setSpellFields(details.fields);
-                    const creatures = formatSpellCreatures(details.html);
+                    const creatures = formatCreatureBlocks(details.html);
                     setHasCreatures(creatures.hasCreatures);
                     setContent(creatures.html);
-                } else setContent(body);
+                } else setContent(showCreature ? formatCreatureBlocks(body, { expanded: true }).html : body);
             }
         }).catch(() => { if (!controller.signal.aborted) setContent('内容加载失败，请重试。'); });
         return () => { controller.abort(); dialog.close(); previous?.focus(); };
-    }, [item, isSpell]);
+    }, [item, isSpell, showCreature]);
     return createPortal(<dialog ref={ref} className="gear-dialog" aria-labelledby={titleId} onCancel={e => { e.preventDefault(); onClose(); }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}><div className="gear-dialog-surface">
         <header className="gear-dialog-header">
             {isSpell ? (
@@ -45,7 +45,7 @@ export default function CatalogDialog({ item, onClose }) {
             ) : (
                 <div>
                     <h2 id={titleId}>{item.title}</h2>
-                    <p>{item.damage ? `${item.titleEn} · ${item.category}` : item.itemType ? item.titleEn : `重量 ${item.weight} · ${gearPriceLabel(item)}`}</p>
+                    <p>{item.damage ? `${item.titleEn} · ${item.category}` : item.itemType || showCreature ? [item.titleEn, showCreature && item.cr != null ? `CR ${item.cr}` : ''].filter(Boolean).join(' · ') : `重量 ${item.weight} · ${gearPriceLabel(item)}`}</p>
                 </div>
             )}
             <button className="gear-close" aria-label={isSpell ? '关闭法术说明' : '关闭物品说明'} onClick={onClose} autoFocus><X size={20} /></button>
