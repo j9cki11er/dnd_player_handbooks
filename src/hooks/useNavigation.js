@@ -1,11 +1,74 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { resolveBookmarkItem } from '../utils/helpers';
 
+const pageAliases = new Map([
+    ['dir:["序章：欢迎来到冒险世界"]', 'welcome'],
+    ['序章：欢迎来到冒险世界/_序章.htm', 'intro'],
+    ['dir:["第二章：创建角色"]', 'ch2'],
+    ['第二章：创建角色/创建你的角色/第三步：确定属性值.htm', 'stats'],
+    ['第二章：创建角色/创建你的角色/第四步：选择阵营.htm', 'align']
+]);
+
+function pageCode(page) {
+    let hash = 0xcbf29ce484222325n;
+    for (const character of page) {
+        hash = BigInt.asUintN(64, (hash ^ BigInt(character.codePointAt(0))) * 0x100000001b3n);
+    }
+    return hash.toString(36);
+}
+
+function directoryPages(tree) {
+    return Object.values(tree).flatMap(node => [
+        `dir:${JSON.stringify(node._path)}`,
+        ...directoryPages(node._children ?? {})
+    ]);
+}
+
 export function useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data }) {
-    const [activeTab, setActiveTab] = useState('browser');
-    const [selectedItem, setSelectedItem] = useState(null);
-    const [currentPath, setCurrentPath] = useState([]);
-    const [detailStack, setDetailStack] = useState([]);
+    const sources = { categoryTree, spellData, featData, masteryData, invocationData, data };
+    const readRoute = () => {
+        const params = new URLSearchParams(window.location.hash.slice(1));
+        const tab = params.get('tab');
+        const codes = params.getAll('p');
+        const knownPages = codes.length ? new Map([
+            ...directoryPages(categoryTree),
+            ...[data, spellData, featData, masteryData, invocationData].flatMap(items => (items ?? []).map(item => item.id))
+        ].flatMap(page => {
+            const alias = pageAliases.get(page);
+            return alias ? [[pageCode(page), page], [alias, page]] : [[pageCode(page), page]];
+        })) : new Map();
+        const pages = Array.from(params).flatMap(([key, value]) => {
+            if (key === 'page') return [value];
+            if (key === 'p' && knownPages.has(value)) return [knownPages.get(value)];
+            return [];
+        });
+        const entries = pages.flatMap((page, index) => {
+            const id = `url-page-${index}`;
+            if (page.startsWith('dir:')) {
+                try {
+                    const path = JSON.parse(page.slice(4));
+                    if (!Array.isArray(path) || !path.length) return [];
+                    const node = path.reduce((parent, part) => parent?._children?.[part], { _children: categoryTree });
+                    return node?._isDir ? [{ id, type: 'dir', path }] : [];
+                } catch {
+                    return [];
+                }
+            }
+            const item = resolveBookmarkItem(page, sources);
+            return item && !item.isDir ? [{ id, type: 'file', item }] : [];
+        });
+        return {
+            tab: ['browser', 'spells', 'items', 'bookmarks', 'search', 'character'].includes(tab) ? tab : 'browser',
+            entries,
+            path: entries.find(entry => entry.type === 'dir')?.path ?? [],
+            item: entries[0]?.item ?? null
+        };
+    };
+    const [initialRoute] = useState(readRoute);
+    const [activeTab, setActiveTab] = useState(initialRoute.tab);
+    const [selectedItem, setSelectedItem] = useState(initialRoute.item);
+    const [currentPath, setCurrentPath] = useState(initialRoute.path);
+    const [detailStack, setDetailStack] = useState(initialRoute.entries);
     const [expandedPaths, setExpandedPaths] = useState({});
     const [shouldReplaceState, setShouldReplaceState] = useState(false);
 
@@ -13,7 +76,8 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     const internalBackRef = useRef(false);
 
     const tabPositions = useRef(new Map());
-    const restoredEntries = useRef(new Set());
+    const restoredEntries = useRef(new Set(initialRoute.entries.map(entry => entry.id)));
+    const initializedHistory = useRef(false);
 
     const switchTab = (tab) => {
         if (tab === activeTab) {
@@ -52,15 +116,37 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
                 historyState.selectedId !== currentState.selectedId ||
                 JSON.stringify(historyState.detailStack) !== JSON.stringify(currentState.detailStack);
 
-            if (isDifferent) {
-                if (shouldReplaceState) {
-                    window.history.replaceState(currentState, '', '');
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.hash.slice(1));
+            params.delete('tab');
+            params.delete('page');
+            params.delete('p');
+            if (activeTab !== 'browser') params.set('tab', activeTab);
+            for (const entry of detailStack) {
+                if (entry.type === 'dir') {
+                    const page = `dir:${JSON.stringify(entry.path)}`;
+                    params.append('p', pageAliases.get(page) ?? pageCode(page));
+                }
+                if (entry.type === 'file') {
+                    const id = entry.item.id;
+                    const indexed = [data, spellData, featData, masteryData, invocationData]
+                        .some(items => items?.some(item => item.id === id));
+                    if (indexed) params.append('p', pageAliases.get(id) ?? pageCode(id));
+                    else params.append('page', id);
+                }
+            }
+            url.hash = params.toString();
+
+            if (isDifferent || url.href !== window.location.href) {
+                if (shouldReplaceState || !initializedHistory.current) {
+                    window.history.replaceState(currentState, '', url);
                     setShouldReplaceState(false);
                 } else {
-                    window.history.pushState(currentState, '', '');
+                    window.history.pushState(currentState, '', url);
                 }
             }
         }
+        initializedHistory.current = true;
         window._isPopStateNavigating = false;
         // Reset external back flag after navigation stabilizes
         if (isExternalBack) {
@@ -73,7 +159,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     // Listen for back/forward buttons
     useEffect(() => {
         const handlePopState = (event) => {
-            if (event.state) {
+            if (event.state?.activeTab && Array.isArray(event.state.currentPath)) {
                 window._isPopStateNavigating = true;
 
                 // If internalBackRef is false, this popstate came from browser/swipe
@@ -95,17 +181,18 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
                 }
 
                 setDetailStack(event.state.detailStack || []);
+            } else {
+                const route = readRoute();
+                window._isPopStateNavigating = true;
+                restoredEntries.current = new Set(route.entries.map(entry => entry.id));
+                setActiveTab(route.tab);
+                setCurrentPath(route.path);
+                setSelectedItem(route.item);
+                setDetailStack(route.entries);
             }
         };
 
         window.addEventListener('popstate', handlePopState);
-        window.history.replaceState({
-            activeTab,
-            currentPath,
-            selectedId: selectedItem?.id || null,
-            detailStack: []
-        }, '', '');
-
         return () => window.removeEventListener('popstate', handlePopState);
     }, [categoryTree, spellData, featData, masteryData, invocationData, data]);
 
