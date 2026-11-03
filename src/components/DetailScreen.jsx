@@ -352,7 +352,7 @@ export default function DetailScreen({
                                 )}
                             </>
                         ) : currentPath[0]?.includes('DMG 2024') && currentPath[1] === '物品图鉴' ? (
-                            <MagicBrowser key={currentPath.join('/')} initialType={currentPath[2] || ''} initialRarity={currentPath[3] || ''} {...{openBookmarkDialog, isBookmarkedAnywhere}} />
+                            <MagicBrowser key={currentPath.join('/')} initialType={currentPath[2] || ''} initialRarity={currentPath[3] || '普通'} {...{openBookmarkDialog, isBookmarkedAnywhere}} />
                         ) : currentCategoryData ? (
                             <div className="directory-view">
                                 {overviewLoading ? (

@@ -26,7 +26,9 @@ export function prepareContent(html) {
             element.style.setProperty('color', `var(${token})`, 'important');
         }
         element.removeAttribute('bgcolor');
-        if (element.matches('table, thead, tbody, tfoot, tr, td, th')) {
+        const legacyCallout = element.matches('div.center') && Boolean(element.style.backgroundColor);
+        if (legacyCallout) element.classList.add('content-callout');
+        if (element.closest('table') || legacyCallout) {
             element.style.removeProperty('background');
             element.style.removeProperty('background-color');
         }

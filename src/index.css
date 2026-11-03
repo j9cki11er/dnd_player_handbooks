@@ -2924,9 +2924,26 @@ body.light-theme { --weapon-row-bg: #ffffff; --weapon-row-alt-bg: #eef1f5; --wea
 .catalog-open .gear-name small { flex: 1; }
 .catalog-card .gear-price { white-space: nowrap; }
 .weapon-card-classification { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 8px; width: 100%; color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; }
-.weapon-dialog-stats { margin: 18px 0 0; padding: 0; border-top: 1px solid var(--border-color); }
-.weapon-dialog-stats > div { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border-color); line-height: 1.6; }
-.weapon-dialog-stats > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.weapon-dialog-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+}
+.weapon-dialog-stats > div {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--glass-bg);
+  line-height: 1.6;
+}
+.weapon-dialog-mastery { grid-column: 1; }
+.weapon-dialog-properties { grid-column: 2 / -1; }
+@media (max-width: 480px) {
+  .weapon-dialog-stats > div { padding-inline: 8px; }
+}
 .weapon-dialog-stats dt { color: var(--text-muted); font-size: 0.85rem; }
 .weapon-dialog-stats dd { margin: 0; color: var(--text-primary); font-size: 0.95rem; overflow-wrap: anywhere; }
 /* Match native mobile menus to the active theme, including option sheets. */
@@ -2950,3 +2967,33 @@ select:disabled { opacity: 0.55; }
 .share-modal textarea { display: block; width: 100%; min-height: 72px; color: var(--text-primary); background: transparent; border: 0; }
 @media (max-width: 600px) { .share-modal { padding: 16px; } }
 .modal-overlay.share-overlay { padding: 16px; z-index: 6000; }
+.share-import-preview { margin-top: 12px; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary); }
+.share-import-preview ul { margin: 8px 0; padding-left: 20px; }
+
+.dnd-content .content-callout {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-block: 1rem;
+  color: var(--text-primary);
+}
+
+.magic-dialog-meta { flex-wrap: wrap; gap: 0.75rem 2rem; }
+
+.weapon-price { color: var(--text-primary); }
+.weapon-price-unit {
+  display: inline-block;
+  padding: 0 0.3em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--coin-color);
+  background: color-mix(in srgb, var(--coin-color) 12%, transparent);
+}
+.weapon-price-unit[data-unit="CP"] { --coin-color: #edb293; }
+.weapon-price-unit[data-unit="SP"] { --coin-color: #bdcde3; }
+.weapon-price-unit[data-unit="GP"] { --coin-color: #e8ce69; }
+.light-theme .weapon-price-unit[data-unit="CP"] { --coin-color: #864327; }
+.light-theme .weapon-price-unit[data-unit="SP"] { --coin-color: #465b76; }
+.light-theme .weapon-price-unit[data-unit="GP"] { --coin-color: #71540c; }

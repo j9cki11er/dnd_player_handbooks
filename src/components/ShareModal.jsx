@@ -1,10 +1,11 @@
+import { createBookmarkLink, bookmarkCodeFromInput } from '../utils/bookmarkLink';
 import BookmarkQr from './BookmarkQr';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bookmark, Share2, Download, Upload, Copy, Check } from 'lucide-react';
 
-export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks }) {
-    const [importText, setImportText] = useState('');
+export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks, initialImport = '' }) {
+    const [importText, setImportText] = useState(initialImport);
     const [copied, setCopied] = useState(false);
     const [error, setError] = useState('');
     const [selectedFolders, setSelectedFolders] = useState(() => {
@@ -28,15 +29,22 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
 
     const exportData = getExportData();
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(exportData);
+    const shareLink = createBookmarkLink(exportData, window.location.href);
+    let preview = null;
+    try {
+        const incoming = JSON.parse(decodeURIComponent(atob(bookmarkCodeFromInput(importText))));
+        if (incoming && typeof incoming === 'object' && !Array.isArray(incoming) && Object.values(incoming).every(ids => Array.isArray(ids) && ids.every(id => typeof id === 'string'))) preview = Object.entries(incoming);
+    } catch { /* Preview appears once the link is complete. */ }
+
+    const handleCopy = async () => {
+        try { await navigator.clipboard.writeText(shareLink); } catch { setError('复制失败，请长按链接手动复制。'); return; }
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
 
     const handleImport = () => {
         try {
-            const decoded = decodeURIComponent(atob(importText.trim()));
+            const decoded = decodeURIComponent(atob(bookmarkCodeFromInput(importText)));
             const parsed = JSON.parse(decoded);
 
             if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
@@ -86,7 +94,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                     <Share2 className="text-gold" size={24} />
                     <h3 className="modal-title gold-text m-0 font-bold uppercase tracking-wide">导入 / 导出收藏</h3>
                 </div>
-                <p className="modal-subtitle mb-8 text-sm opacity-60 italic">通过分享代码将您的收藏同步到其他设备或分享给好友。</p>
+                <p className="modal-subtitle mb-8 text-sm opacity-60 italic">分享链接给好友，对方打开后确认导入；现有收藏会保留。</p>
 
                 <div className="share-section mb-8">
                     <label className="text-xs uppercase tracking-widest opacity-80 mb-4 block">
@@ -119,14 +127,14 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                 <div className="share-section mb-8">
                     <label className="text-xs uppercase tracking-widest opacity-80 mb-3 block">
                         <Copy size={14} className="text-gold" />
-                        导出代码 (点击代码以复制)
+                        分享链接（点击复制）
                     </label>
                     <div className="relative share-code-area group">
                         <textarea
                             onClick={handleCopy}
                             readOnly
                             className="w-full h-28 bg-transparent border-none rounded text-xs font-mono break-all focus:outline-none custom-scrollbar text-gold/80 cursor-copy"
-                            value={copied ? '已复制' : exportData}
+                            value={copied ? '已复制链接' : shareLink}
 
                         />
                         {/* <button
@@ -139,15 +147,15 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                     </div>
                 </div>
 
-                <BookmarkQr exportData={exportData} onImportCode={code => { setImportText(code); setError(''); }} />
+                <BookmarkQr exportData={exportData} shareLink={shareLink} onImportCode={code => { setImportText(code); setError(''); }} />
                 <div className="share-section mb-8">
                     <label className="text-xs uppercase tracking-widest opacity-80 mb-3 block">
                         <Upload size={14} className="text-gold" />
-                        导入代码
+                        导入链接
                     </label>
                     <div className={`share-code-area ${error ? 'border-red-500/50' : ''}`}>
                         <textarea
-                            placeholder="在此粘贴分享代码..."
+                            placeholder="粘贴分享链接（也兼容旧分享代码）"
                             className="w-full h-28 bg-transparent border-none rounded p-4 text-xs font-mono break-all focus:outline-none custom-scrollbar"
                             value={importText}
                             onChange={(e) => {
@@ -156,6 +164,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks })
                             }}
                         />
                     </div>
+                    {preview && <div className="share-import-preview"><p>将新增 {preview.length} 个文件夹，共 {preview.reduce((sum, [, ids]) => sum + ids.length, 0)} 项收藏：</p><ul>{preview.map(([name, ids]) => <li key={name}>{name} · {ids.length} 项</li>)}</ul><p>同名文件夹会自动改名，现有收藏不会被覆盖。</p></div>}
                     {error && <p className="text-red-400 text-[11px] mt-2 font-medium flex items-center gap-1">⚠ {error}</p>}
                 </div>
 

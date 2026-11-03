@@ -1,3 +1,4 @@
+import { bookmarkCodeFromInput } from './utils/bookmarkLink';
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -201,6 +202,30 @@ export default function App() {
   }, [detailStack.length]);
 
   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  const [sharedImport, setSharedImport] = useState('');
+  useEffect(() => {
+    const readShareLink = () => {
+      const url = new URL(window.location.href);
+      if (!new URLSearchParams(url.hash.slice(1)).has('bookmarks') && !url.searchParams.has('bookmarks')) return;
+      try {
+        setSharedImport(bookmarkCodeFromInput(url.href));
+        setIsShareModalOpen(true);
+      } catch { /* Invalid links remain available for manual correction. */ }
+    };
+    readShareLink();
+    window.addEventListener('hashchange', readShareLink);
+    return () => window.removeEventListener('hashchange', readShareLink);
+  }, [setIsShareModalOpen]);
+  const closeShare = () => {
+    setIsShareModalOpen(false); setSharedImport('');
+    const url = new URL(window.location.href);
+    const hash = new URLSearchParams(url.hash.slice(1));
+    if (hash.has('bookmarks') || url.searchParams.has('bookmarks')) {
+      hash.delete('bookmarks'); url.hash = hash.toString(); url.searchParams.delete('bookmarks');
+      window.history.replaceState(window.history.state, '', url.href);
+    }
+  };
+
   const resolveItem = (id) => resolveBookmarkItem(id, { categoryTree, spellData, featData, masteryData, invocationData, data });
 
   const commonProps = {
@@ -284,7 +309,7 @@ export default function App() {
       />
 
       {isShareModalOpen && <Suspense fallback={<p role="status">加载导入／导出…</p>}><ShareModal
-        isOpen={isShareModalOpen} onClose={() => setIsShareModalOpen(false)}
+        isOpen={isShareModalOpen} onClose={closeShare} initialImport={sharedImport}
         bookmarks={bookmarks} setBookmarks={setBookmarks}
       /></Suspense>}
 

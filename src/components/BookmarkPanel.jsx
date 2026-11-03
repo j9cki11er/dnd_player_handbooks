@@ -282,8 +282,6 @@ export default function BookmarkPanel({
     reorderFolders,
     reorderItemsInFolder
 }) {
-    // Leave folder expansion local to each visit; the next visit starts folded.
-    React.useEffect(() => () => setExpandedFolders({}), [setExpandedFolders]);
     const [draggingId, setDraggingId] = React.useState(null);
     const lastReorderTime = React.useRef(0);
 

@@ -1,5 +1,15 @@
 import { useState, useEffect } from 'react';
 
+const expansionKey = 'dnd-bookmark-expansion';
+
+function readExpansion() {
+    try {
+        return JSON.parse(localStorage.getItem(expansionKey)) ?? {};
+    } catch {
+        return {};
+    }
+}
+
 export function useBookmarks() {
     const [bookmarks, setBookmarks] = useState(() => {
         const saved = localStorage.getItem('dnd-bookmarks');
@@ -10,8 +20,8 @@ export function useBookmarks() {
     });
     const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
     const [pendingBookmark, setPendingBookmark] = useState(null);
-    const [expandedFolders, setExpandedFolders] = useState({});
-    const [expandedCategories, setExpandedCategories] = useState({});
+    const [expandedFolders, setExpandedFolders] = useState(() => readExpansion().folders ?? {});
+    const [expandedCategories, setExpandedCategories] = useState(() => readExpansion().categories ?? {});
     const [confirmConfig, setConfirmConfig] = useState(null);
     const [isAddingFolder, setIsAddingFolder] = useState(false);
     const [isRenameModalOpen, setIsRenameModalOpen] = useState(false);
@@ -23,6 +33,13 @@ export function useBookmarks() {
     useEffect(() => {
         localStorage.setItem('dnd-bookmarks', JSON.stringify(bookmarks));
     }, [bookmarks]);
+
+    useEffect(() => {
+        localStorage.setItem(expansionKey, JSON.stringify({
+            folders: expandedFolders,
+            categories: expandedCategories
+        }));
+    }, [expandedFolders, expandedCategories]);
 
     const toggleBookmark = (id, folder) => {
         setBookmarks(prev => {

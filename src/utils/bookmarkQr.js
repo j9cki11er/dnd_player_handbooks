@@ -1,3 +1,4 @@
+import { bookmarkCodeFromInput } from './bookmarkLink.js';
 const bytesToBase64 = bytes => {
     let value = '';
     for (const byte of bytes) value += String.fromCharCode(byte);
@@ -18,6 +19,7 @@ export async function createBookmarkQrParts(code) {
     return Array.from({ length: total }, (_, index) => `DNDQR1:${id}:${index + 1}:${total}:${packed.slice(index * size, (index + 1) * size)}`);
 }
 export async function readBookmarkQrPart(value, current = null) {
+    if (/^https?:\/\//i.test(value)) return { state: null, code: bookmarkCodeFromInput(value) };
     const match = value.match(/^DNDQR1:([a-f0-9]{16}):(\d+):(\d+):([\s\S]+)$/);
     if (!match) throw new Error('这不是有效的收藏二维码。');
     const [, id, indexText, totalText, payload] = match;

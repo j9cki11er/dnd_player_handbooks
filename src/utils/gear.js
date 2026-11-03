@@ -18,7 +18,7 @@ export function gearPriceLabel(item, currency) {
     return minimum === maximum ? `${minimum} GP` : `${minimum}–${maximum} GP`;
 }
 
-export function gearCurrencyFactor(currency) { return currency === 'CP' ? 0.01 : 1; }
+export function gearCurrencyFactor(currency) { return { GP: 1, SP: 0.1, CP: 0.01 }[currency] ?? 1; }
 export function sortGear(items, sort = 'name', { min = '', max = '' } = {}) {
     const price = item => Math.min(...item.pricesGP.filter(value => value >= (min === '' ? 0 : Number(min)) && value <= (max === '' ? Infinity : Number(max))));
     return [...items].sort((a, b) => {

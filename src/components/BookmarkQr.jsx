@@ -3,16 +3,16 @@ import QRCode from 'qrcode';
 import jsQR from 'jsqr';
 import { createBookmarkQrParts, readBookmarkQrPart } from '../utils/bookmarkQr';
 
-export default function BookmarkQr({ exportData, onImportCode }) {
+export default function BookmarkQr({ exportData, shareLink, onImportCode }) {
     const [parts, setParts] = useState([]), [page, setPage] = useState(0), [url, setUrl] = useState('');
     const [message, setMessage] = useState(''), [error, setError] = useState('');
     const scan = useRef(null), busy = useRef(false);
     useEffect(() => {
         let alive = true;
         setParts([]); setPage(0); setUrl('');
-        createBookmarkQrParts(exportData).then(result => { if (alive) setParts(result); }).catch(() => { if (alive) setError('二维码生成失败，请使用分享代码。'); });
+        (shareLink && shareLink.length <= 1800 ? Promise.resolve([shareLink]) : createBookmarkQrParts(exportData)).then(result => { if (alive) setParts(result); }).catch(() => { if (alive) setError('二维码生成失败，请使用分享代码。'); });
         return () => { alive = false; };
-    }, [exportData]);
+    }, [exportData, shareLink]);
     useEffect(() => {
         let alive = true;
         setUrl('');
@@ -42,7 +42,7 @@ export default function BookmarkQr({ exportData, onImportCode }) {
         finally { if (objectUrl) URL.revokeObjectURL(objectUrl); busy.current = false; }
     };
     return <section className="bookmark-qr" aria-label="二维码分享与导入">
-        <h4>二维码分享</h4><p>二维码在本机生成。收藏较多时分成多张，接收方需读完全部二维码。</p>
+        <h4>二维码分享</h4><p>二维码在本机生成。可直接用手机扫码打开分享链接；收藏较多时分成多张，请在本页逐张识别。</p>
         {url ? <img src={url} alt={`收藏分享二维码，第 ${page + 1} 张，共 ${parts.length} 张`} className="bookmark-qr-image" /> : <p role="status">正在生成二维码…</p>}
         {parts.length > 1 && <div className="qr-actions"><button type="button" disabled={page === 0} onClick={() => setPage(page - 1)}>上一张</button><span>{page + 1} / {parts.length}</span><button type="button" disabled={page === parts.length - 1} onClick={() => setPage(page + 1)}>下一张</button></div>}
         {url && <a className="qr-download" href={url} download={`dnd-bookmarks-${page + 1}-of-${parts.length}.png`}>保存这张二维码</a>}
