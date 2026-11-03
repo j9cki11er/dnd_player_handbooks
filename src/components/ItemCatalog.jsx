@@ -30,19 +30,20 @@ export function CatalogCard({ item, onClick, openBookmarkDialog, isBookmarkedAny
                 <strong className="spell-level-badge">{item.category}</strong>
                 {isLightWeapon(item) && <strong className="spell-concentration">轻型</strong>}
             </span>}
+            {item.itemType && <span className="weapon-card-classification magic-card-meta">
+                <strong className="spell-level-badge">{item.rarity}</strong>
+                <span className="gear-weight">{item.itemType}</span>
+                {item.requiresAttunement && <strong className="spell-concentration">同调</strong>}
+            </span>}
             <span className="catalog-name-row">
-                {item.rarity && <strong className="spell-level-badge">{item.rarity}</strong>}
                 <span className={`gear-name ${item.damage ? '' : 'catalog-name-stacked'}`}>
                     <strong>{item.title}</strong>{item.titleEn && <small lang="en">{item.titleEn}</small>}
                 </span>
             </span>
-            <span className="gear-card-meta">{item.itemType ? <>
-                <span className="gear-weight">类别 {item.itemType}</span>
-                {item.requiresAttunement && <strong className="spell-concentration">同调</strong>}
-            </> : <>
+            {!item.itemType && <span className="gear-card-meta">
                 <span className="gear-weight">{item.damage ? `${item.damage} · ${item.weight}` : `重量 ${item.weight}`}</span>
                 <span className="gear-price"><CoinPrice cost={item.damage ? item.cost : gearPriceLabel(item)} /></span>
-            </>}</span>
+            </span>}
         </button>
         <button className={`catalog-save ${saved ? 'saved' : ''}`} aria-label={`收藏${item.title}`} aria-pressed={!!saved} onClick={() => openBookmarkDialog(item)}><Heart size={17} fill={saved ? 'currentColor' : 'none'} /></button>
     </div>;
@@ -122,6 +123,13 @@ export function WeaponBrowser({ openBookmarkDialog, isBookmarkedAnywhere }) {
     </section>;
 }
 export default function ItemCatalog(props) {
-    const [tab, setTab] = useState('weapons');
-    return <div className="spell-browser-container p-4"><div className="spell-list-panel item-catalog-panel"><div className="catalog-tabs" role="tablist" aria-label="物品分类">{[['weapons','武器'],['gear','装备'],['magic','魔法物品']].map(([id,title]) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => setTab(id)}>{title}</button>)}</div><div className="catalog-scroll" role="tabpanel">{tab === 'gear' ? <GearBrowser {...props} /> : tab === 'weapons' ? <WeaponBrowser {...props} /> : <MagicBrowser {...props} />}</div></div></div>;
+    const [tab, setTab] = useState(() => {
+        const saved = localStorage.getItem('item_catalog_tab');
+        return ['gear', 'magic', 'weapons'].includes(saved) ? saved : 'weapons';
+    });
+    const selectTab = id => {
+        setTab(id);
+        localStorage.setItem('item_catalog_tab', id);
+    };
+    return <div className="spell-browser-container p-4"><div className="spell-list-panel item-catalog-panel"><div className="catalog-tabs" role="tablist" aria-label="物品分类">{[['weapons','武器'],['gear','装备'],['magic','魔法物品']].map(([id,title]) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => selectTab(id)}>{title}</button>)}</div><div className="catalog-scroll" role="tabpanel">{tab === 'gear' ? <GearBrowser {...props} /> : tab === 'weapons' ? <WeaponBrowser {...props} /> : <MagicBrowser {...props} />}</div></div></div>;
 }

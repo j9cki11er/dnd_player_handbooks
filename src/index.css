@@ -3409,10 +3409,6 @@ select:disabled { opacity: 0.55; }
   width: 100%;
 }
 
-.catalog-name-row > .spell-level-badge {
-  flex-shrink: 0;
-}
-
 .catalog-open .catalog-name-stacked {
   flex-direction: column;
   align-items: stretch;
@@ -3423,11 +3419,14 @@ select:disabled { opacity: 0.55; }
   flex: initial;
 }
 
-.catalog-name-row > .spell-level-badge {
-  font-size: 1em;
+.magic-card-meta > .spell-level-badge {
+  font-size: 0.8rem;
 }
 
-.catalog-open .gear-card-meta > .spell-concentration {
+.catalog-open .magic-card-meta > .spell-concentration {
+  color: #e5d3ff;
+  background: #302044;
+  border-color: #7955a3;
   font-size: 0.75rem;
 }
 
