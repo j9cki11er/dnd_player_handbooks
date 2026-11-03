@@ -1,23 +1,12 @@
 import React from 'react';
 import { Layout, Book, Backpack, Heart, Sun, Moon, Menu, User } from 'lucide-react';
 
-export default function MobileNavBar({ activeTab, setActiveTab, currentPath, navigateTo, setSelectedItem, setDetailStack, setCurrentPath, theme, toggleTheme, showDev }) {
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
-        setSelectedItem(null);
-        setDetailStack([]);
-    };
-
+export default function MobileNavBar({ activeTab, switchTab, showDev }) {
     return (
         <nav className="mobile-navbar">
             <button
                 className={`mobile-nav-item ${activeTab === 'browser' ? 'active' : ''}`}
-                onClick={() => {
-                    setActiveTab('browser');
-                    setCurrentPath([]);
-                    setSelectedItem(null);
-                    setDetailStack([]);
-                }}
+                onClick={() => switchTab('browser')}
             >
                 <Layout size={20} />
                 <span>玩家手册</span>
@@ -25,17 +14,17 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
 
             <button
                 className={`mobile-nav-item ${activeTab === 'spells' ? 'active' : ''}`}
-                onClick={() => handleTabClick('spells')}
+                onClick={() => switchTab('spells')}
             >
                 <Book size={20} />
                 <span>法术列表</span>
             </button>
 
-            <button className={`mobile-nav-item ${activeTab === 'items' ? 'active' : ''}`} onClick={() => handleTabClick('items')}><Backpack size={20} /><span>物品</span></button>
+            <button className={`mobile-nav-item ${activeTab === 'items' ? 'active' : ''}`} onClick={() => switchTab('items')}><Backpack size={20} /><span>武器装备</span></button>
             {showDev && (
                 <button
                     className={`mobile-nav-item ${activeTab === 'character' ? 'active' : ''}`}
-                    onClick={() => handleTabClick('character')}
+                    onClick={() => switchTab('character')}
                 >
                     <User size={20} />
                     <span>角色卡</span>
@@ -44,7 +33,7 @@ export default function MobileNavBar({ activeTab, setActiveTab, currentPath, nav
 
             <button
                 className={`mobile-nav-item ${activeTab === 'bookmarks' ? 'active' : ''}`}
-                onClick={() => handleTabClick('bookmarks')}
+                onClick={() => switchTab('bookmarks')}
             >
                 <Heart size={20} />
                 <span>我的收藏</span>

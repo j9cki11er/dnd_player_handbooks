@@ -159,7 +159,7 @@ export default function App() {
   }, [showDev, showDM]);
 
   const {
-    activeTab, setActiveTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
+    activeTab, setActiveTab, switchTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
     detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem, isExternalBack
   } = useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data });
 
@@ -237,13 +237,13 @@ export default function App() {
     <div className="app-container">
       <TopBar
         activeTab={activeTab} selectedItem={selectedItem} currentPath={currentPath} detailStack={detailStack}
-        handleBack={handleBack} setActiveTab={setActiveTab} setSelectedItem={setSelectedItem} setDetailStack={setDetailStack}
+        handleBack={handleBack} setActiveTab={setActiveTab} switchTab={switchTab} setSelectedItem={setSelectedItem} setDetailStack={setDetailStack}
         theme={theme} toggleTheme={toggleTheme}
       />
 
       <aside className="sidebar">
         <SidebarContent
-          categoryTree={categoryTree} activeTab={activeTab} setActiveTab={setActiveTab} setCurrentPath={setCurrentPath}
+          categoryTree={categoryTree} activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} setCurrentPath={setCurrentPath}
           setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} theme={theme} toggleTheme={toggleTheme}
           currentPath={currentPath} selectedItem={selectedItem} toggleExpand={toggleExpand} expandedPaths={expandedPaths}
           setSearchQuery={setSearchQuery} navigateTo={navigateTo} selectItem={selectItem}
@@ -278,7 +278,7 @@ export default function App() {
               key={entry.id} entry={entry} index={index} onBack={handleBack} onNavigate={(path) => navigateTo(path, true, true)}
               onSelectItem={(item) => selectItem(item, true)} openBookmarkDialog={openBookmarkDialog}
               isBookmarkedAnywhere={isBookmarkedAnywhere} categoryTree={categoryTree} isMobile={isMobile}
-              SidebarContent={SidebarContent} activeTab={activeTab} setActiveTab={setActiveTab}
+              SidebarContent={SidebarContent} activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab}
               setCurrentPath={setCurrentPath} setSelectedItem={setSelectedItem} setDetailStack={setDetailStack}
               theme={theme} toggleTheme={toggleTheme} currentPath={currentPath} selectedItem={selectedItem}
               toggleExpand={toggleExpand} expandedPaths={expandedPaths} setSearchQuery={setSearchQuery}
@@ -314,7 +314,7 @@ export default function App() {
       /></Suspense>}
 
       <MobileNavBar
-        activeTab={activeTab} setActiveTab={setActiveTab} currentPath={currentPath} navigateTo={navigateTo}
+        activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} currentPath={currentPath} navigateTo={navigateTo}
         setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} setCurrentPath={setCurrentPath}
         theme={theme} toggleTheme={toggleTheme} showDev={showDev}
       />

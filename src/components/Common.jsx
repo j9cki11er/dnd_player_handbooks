@@ -1,5 +1,6 @@
 import React from 'react';
-import { spellText, summarizeComponents, summarizeDuration } from '../utils/spellSummary';
+import CatalogDialog from './CatalogDialog';
+import { spellText, summarizeComponents, summarizeDuration, spellBookLabel } from '../utils/spellSummary';
 import { Folder, Heart, Bookmark, ChevronRight, ChevronDown, ChevronUp, Layout, Book, Search, FilterX, Trash2, Menu } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -144,36 +145,41 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
     );
 }
 
-export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobile, openBookmarkDialog }) {
+export function SpellListItem({ item, isSelected, isBookmarked, isMobile, openBookmarkDialog }) {
+    const [isOpen, setIsOpen] = React.useState(false);
     const handleBookmarkClick = (e) => {
         e.stopPropagation();
         openBookmarkDialog(item);
     };
+    const sourceBook = spellBookLabel(item);
     const components = summarizeComponents(item.components);
     const castingTime = spellText(item.castingTime || '1 动作');
     const duration = spellText(item.duration || '瞬时');
-    const durationSummary = summarizeDuration(item.duration);
+    const concentration = duration.includes('专注');
+    const durationSummary = summarizeDuration(item.duration)
+        .replace(/^C\s*/, '')
+        .replace(/(\d)Min/g, '$1分钟')
+        .replace(/(\d)Hr/g, '$1小时');
     return (
         <div
             className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''}`}
         >
             <div
-                onClick={onClick}
+                onClick={() => setIsOpen(true)}
                 className="spell-card-inner"
                 role="button"
                 tabIndex={0}
                 aria-label={`查看${item.title}详情`}
-                onKeyDown={e => { if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); onClick(); } }}
+                onKeyDown={e => { if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); setIsOpen(true); } }}
             >
                 <div className="spell-card-body">
-                    <div className="spell-card-classes" title={item.classes?.join('、') || ''}>
-                        {item.source === 'XGE' ? 'XGE · ' : ''}{item.classes?.join('、') || ''}
-                    </div>
-
                     <div className="spell-card-header">
-                        <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
-                            {item.title}
-                        </h3>
+                        <div className="spell-card-name">
+                            <strong className="spell-level-badge">{item.level || '环阶未知'}</strong>
+                            <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
+                                {item.title}{item.titleEn && <small className="spell-card-title-en" lang="en">{item.titleEn}</small>}
+                            </h3>
+                        </div>
                         <div className="spell-card-actions">
                             <button
                                 aria-label={`收藏${item.title}`}
@@ -187,24 +193,18 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                     </div>
 
                     <div className="spell-card-footer">
-                        <div className="spell-card-meta">
-                            <span className="meta-item">{item.level || '环阶未知'}</span>
-                            <span className="meta-divider">•</span>
-                            <span className="meta-item spell-casting-time" title={castingTime}>{castingTime}</span>
+                        <div className="spell-card-meta spell-card-timing">
+                            <span className="spell-casting-time" title={castingTime}>施法：{castingTime.split(/[，,]/)[0]}</span>
+                            <span className="spell-duration" title={duration}>
+                                <span>维持：{durationSummary}</span>
+                                {concentration && <strong className="spell-concentration">专注</strong>}
+                            </span>
                         </div>
-
-                        <dl className="spell-card-extra spell-preview-details">
-                            <div className="spell-preview-row">
-                                <dt>持续</dt>
-                                <dd title={duration}>{durationSummary}</dd>
-                            </div>
-                            <div className="spell-preview-row">
-                                <dt>成分</dt>
-                                <dd title={components.summary}>
-                                    <span>{components.summary}</span>
-                                </dd>
-                            </div>
-                        </dl>
+                        <div className="spell-card-components" title={components.summary}>
+                            <span>{components.summary.replace(/、(?=[VSM])/g, ', ')}</span>
+                            {item.school && <span className="spell-card-school">{item.school}</span>}
+                            {sourceBook && <small className="spell-card-source" title={sourceBook}>{item.sourceBook || item.source}</small>}
+                        </div>
                     </div>
                 </div>
 
@@ -214,6 +214,7 @@ export function SpellListItem({ item, onClick, isSelected, isBookmarked, isMobil
                     </div>
                 )}
             </div>
+            {isOpen && <CatalogDialog item={item} onClose={() => setIsOpen(false)} />}
         </div>
     );
 }

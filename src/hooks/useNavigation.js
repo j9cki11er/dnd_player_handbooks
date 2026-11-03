@@ -12,6 +12,29 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     const [isExternalBack, setIsExternalBack] = useState(false);
     const internalBackRef = useRef(false);
 
+    const tabPositions = useRef(new Map());
+    const restoredEntries = useRef(new Set());
+
+    const switchTab = (tab) => {
+        if (tab === activeTab) {
+            if (detailStack.at(-1)?.type === 'menu') handleBack();
+            return;
+        }
+
+        tabPositions.current.set(activeTab, {
+            currentPath,
+            selectedItem,
+            detailStack: detailStack.filter(entry => entry.type !== 'menu')
+        });
+        const position = tabPositions.current.get(tab);
+        const entries = position?.detailStack ?? [];
+        restoredEntries.current = new Set(entries.map(entry => entry.id));
+        setActiveTab(tab);
+        setCurrentPath(position?.currentPath ?? []);
+        setSelectedItem(position?.selectedItem ?? null);
+        setDetailStack(entries);
+    };
+
     // Sync state to history when important navigation state changes
     useEffect(() => {
         const currentState = {
@@ -118,6 +141,15 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     };
 
     const handleBack = () => {
+        if (restoredEntries.current.has(detailStack.at(-1)?.id)) {
+            const entries = detailStack.slice(0, -1);
+            const parent = entries.at(-1);
+            setDetailStack(entries);
+            setCurrentPath(parent?.type === 'dir' ? parent.path : []);
+            setSelectedItem(parent?.type === 'file' ? parent.item : null);
+            setShouldReplaceState(true);
+            return;
+        }
         if (window.history.state && (window.history.state.detailStack?.length > 1 || window.history.state.selectedId || (window.history.state.activeTab === 'browser' && window.history.state.currentPath.length > 0))) {
             internalBackRef.current = true;
             window.history.back();
@@ -158,7 +190,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     };
 
     return {
-        activeTab, setActiveTab,
+        activeTab, setActiveTab, switchTab,
         selectedItem, setSelectedItem,
         currentPath, setCurrentPath,
         detailStack, setDetailStack,

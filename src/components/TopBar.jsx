@@ -1,13 +1,13 @@
 import { ArrowLeft, Search, Sun, Moon } from 'lucide-react';
 
-export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, setActiveTab, setSelectedItem, setDetailStack, theme, toggleTheme }) {
+export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, switchTab, theme, toggleTheme }) {
     const getTitle = () => {
         if (selectedItem) return selectedItem.title;
 
         switch (activeTab) {
             case 'browser':
                 return '玩家手册';
-            case 'items': return '物品';
+            case 'items': return '武器装备';
             case 'spells': return '法术列表';
             case 'search': return '全局搜索';
             case 'bookmarks': return '我的收藏';
@@ -33,7 +33,7 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
                     {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                 </button>
                 {activeTab !== 'search' && (
-                    <button onClick={() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); }} className="top-bar-search-btn">
+                    <button onClick={() => switchTab('search')} className="top-bar-search-btn">
                         <Search size={22} />
                     </button>
                 )}

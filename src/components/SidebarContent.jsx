@@ -12,6 +12,7 @@ const SidebarContent = ({
     categoryTree,
     activeTab,
     setActiveTab,
+    switchTab,
     setCurrentPath,
     setSelectedItem,
     setDetailStack,
@@ -152,34 +153,34 @@ const SidebarContent = ({
                     icon={<Layout size={20} />}
                     label="玩家手册"
                     active={activeTab === 'browser'}
-                    onClick={() => handleNavClick(() => { setActiveTab('browser'); setCurrentPath([]); setSelectedItem(null); setDetailStack([]); })}
+                    onClick={() => switchTab('browser')}
                 />
                 <NavItem
                     icon={<Book size={20} />}
                     label="法术列表"
                     active={activeTab === 'spells'}
-                    onClick={() => handleNavClick(() => { setActiveTab('spells'); setSelectedItem(null); setDetailStack([]); setSearchQuery(''); })}
+                    onClick={() => switchTab('spells')}
                 />
-                <NavItem icon={<Backpack size={20} />} label="物品" active={activeTab === 'items'} onClick={() => handleNavClick(() => { setActiveTab('items'); setSelectedItem(null); setDetailStack([]); })} />
+                <NavItem icon={<Backpack size={20} />} label="武器装备" active={activeTab === 'items'} onClick={() => switchTab('items')} />
                 {showDev && (
                     <NavItem
                         icon={<User size={20} />}
                         label="角色卡"
                         active={activeTab === 'character'}
-                        onClick={() => handleNavClick(() => { setActiveTab('character'); setSelectedItem(null); setDetailStack([]); })}
+                        onClick={() => switchTab('character')}
                     />
                 )}
                 <NavItem
                     icon={<Search size={20} />}
                     label="全局搜索"
                     active={activeTab === 'search'}
-                    onClick={() => handleNavClick(() => { setActiveTab('search'); setSelectedItem(null); setDetailStack([]); })}
+                    onClick={() => switchTab('search')}
                 />
                 <NavItem
                     icon={<Heart size={20} />}
                     label="我的收藏"
                     active={activeTab === 'bookmarks'}
-                    onClick={() => handleNavClick(() => { setActiveTab('bookmarks'); setSelectedItem(null); setDetailStack([]); })}
+                    onClick={() => switchTab('bookmarks')}
                 />
             </nav>
 

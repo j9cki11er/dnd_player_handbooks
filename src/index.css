@@ -2997,3 +2997,189 @@ select:disabled { opacity: 0.55; }
 .light-theme .weapon-price-unit[data-unit="CP"] { --coin-color: #864327; }
 .light-theme .weapon-price-unit[data-unit="SP"] { --coin-color: #465b76; }
 .light-theme .weapon-price-unit[data-unit="GP"] { --coin-color: #71540c; }
+
+.spell-dialog-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 12px;
+}
+@media (max-width: 480px) {
+  .spell-dialog-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.spell-list-panel.spell-browser-panel { min-width: 0; overflow: visible; }
+.spell-filter-header {
+  position: sticky;
+  top: 60px;
+  z-index: 6;
+  background: var(--bg-primary);
+  border-radius: 12px;
+}
+.spell-filter-bar {
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.spell-filter-bar > * { flex-shrink: 0; }
+.spell-filter-bar .filter-search { min-width: 140px; }
+@media (max-width: 768px) {
+  .spell-filter-header { top: 56px; }
+}
+.spell-ritual-filter { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font-size: 0.8rem; white-space: nowrap; }
+.spell-ritual-filter input { accent-color: var(--accent-gold); }
+.spell-card-level { color: var(--accent-gold); font-size: 0.75rem; }
+.spell-card-meta.spell-card-timing { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 8px; margin-top: 4px; }
+.spell-duration { display: inline-flex; align-items: baseline; gap: 4px; white-space: nowrap; }
+.spell-concentration { color: var(--accent-gold); background: var(--glass-gold); border: 1px solid var(--border-color); border-radius: 4px; padding: 0 4px; }
+.spell-card-components { margin-top: 5px; padding-top: 5px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.75rem; overflow-wrap: anywhere; }
+.spell-dialog-stats > div:last-child { grid-column: 1 / -1; }
+.spell-dialog-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.spell-card-level { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; color: var(--text-secondary); }
+.spell-level-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background: var(--glass-gold);
+  color: var(--accent-gold);
+  border: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.spell-dialog-classification { margin-top: 8px; color: var(--text-secondary); font-size: 0.85rem; }
+
+.spell-card-title-en {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.gear-dialog-header .spell-dialog-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.spell-dialog-heading .spell-level-badge { flex-shrink: 0; font-size: inherit; }
+.spell-dialog-heading small { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
+
+.spell-card-name { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
+.spell-card-name .spell-level-badge { flex-shrink: 0; }
+.spell-card-name .spell-card-title { min-width: 0; overflow-wrap: anywhere; }
+.spell-card-components { display: flex; align-items: baseline; gap: 8px; }
+.spell-card-school { margin-inline-start: auto; color: var(--accent-gold); white-space: nowrap; }
+.spell-filter-header, .spell-filter-bar { box-shadow: none; }
+.spell-filter-bar { scrollbar-width: none; }
+.spell-filter-bar::-webkit-scrollbar { display: none; }
+
+.spell-card-name { font-size: 1rem; }
+.spell-card-name .spell-level-badge,
+.spell-card-name .spell-card-title { font-size: inherit; }
+.spell-card-source { flex-shrink: 0; color: var(--text-muted); }
+
+
+.spell-card-components > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.spell-card-school { flex-shrink: 0; }
+
+/* Clip the page edges without creating a scroll container above the sticky filters. */
+.app-container:has(.spell-browser-panel) { overflow: clip; }
+.main-viewport:has(.spell-browser-panel) { min-width: 0; }
+.spell-filter-bar { width: 100%; }
+.spell-filter-bar .filter-search { flex: 1 1 140px; padding-left: 0; }
+.spell-filter-bar .filter-select,
+.spell-filter-bar .spell-ritual-filter { min-height: 44px; }
+.spell-search-field { display: flex; flex: 1; min-width: 0; align-items: center; gap: 8px; padding-left: 8px; cursor: text; }
+.spell-search-field .search-input { min-width: 0; min-height: 44px; }
+.spell-search-field:focus-within { outline: 1px solid var(--accent-gold); outline-offset: -1px; border-radius: 6px; }
+.spell-list-guide { margin-bottom: 12px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--glass-bg); font-size: 0.85rem; color: var(--text-secondary); }
+.spell-list-guide summary { padding: 12px; cursor: pointer; color: var(--text-primary); }
+.spell-list-guide dl { display: grid; gap: 8px; padding: 0 12px 12px; }
+.spell-list-guide dl > div { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 8px; }
+.spell-list-guide dt { color: var(--accent-gold); }
+.spell-list-guide dd { margin: 0; }
+
+.spell-dfd-note {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-inline-start: 3px solid var(--accent-gold);
+  border-radius: 4px;
+  background: var(--glass-gold);
+  color: var(--text-primary);
+}
+.spell-dfd-note strong { color: var(--accent-gold); }
+
+.spell-search-controls { display: flex; flex: 1 0 auto; align-items: center; gap: 8px; min-width: 0; }
+@media (max-width: 768px) {
+  .spell-filter-bar { flex-wrap: wrap; gap: 0 6px; }
+  .spell-filter-bar .filter-divider { display: none; }
+  .spell-search-controls { flex: 1 0 100%; }
+  .spell-filter-bar .filter-search { min-width: 0; }
+}
+
+.spell-creature-jump {
+  padding-inline: 10px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border-color);
+  color: var(--accent-gold);
+}
+.dnd-content .spell-creature-card {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--accent-gold);
+  border-radius: 10px;
+}
+.spell-creature-card .sub-line { color: var(--text-secondary); font-size: 0.85rem; }
+.dnd-content .spell-creature-card table { margin-block: 10px; }
+.dnd-content .spell-creature-card td { padding: 6px 8px; font-size: 0.85rem; }
+.spell-creature-abilities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-block: 10px;
+}
+.spell-creature-abilities > div {
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+}
+.spell-creature-abilities dt { color: var(--accent-gold); font-weight: 700; }
+.spell-creature-abilities dd { margin: 0; color: var(--text-secondary); font-size: 0.75rem; }
+.spell-creature-abilities dd:first-of-type { color: var(--text-primary); font-weight: 600; }
+.dnd-content .spell-creature-card h6 {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  color: var(--accent-gold);
+}
+
+.spell-creature-disclosure { margin-block: 12px; }
+.spell-creature-disclosure > summary {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--accent-gold);
+  background: var(--glass-bg);
+  cursor: pointer;
+}
+.spell-creature-disclosure > summary:focus-visible { outline: 2px solid var(--accent-gold); }
+.spell-creature-abilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dnd-content .spell-creature-abilities table { margin: 0; table-layout: fixed; }
+.dnd-content .spell-creature-abilities :is(th, td) {
+  padding: 4px 1px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.dnd-content .spell-creature-abilities tbody :is(th, td):nth-child(n+3) { background: var(--glass-gold); }
+@media (max-width: 360px) {
+  .spell-creature-abilities { grid-template-columns: minmax(0, 1fr); }
+}

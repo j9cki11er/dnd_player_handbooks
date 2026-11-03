@@ -1493,7 +1493,8 @@
     "school": "幻术",
     "classes": [
       "吟游诗人",
-      "法师"
+      "法师",
+      "魔契师"
     ],
     "path": "spells/Illusory_Script.html",
     "source": "1环.html",
@@ -6049,10 +6050,18 @@
     "fullTitle": "死亡法阵｜Circle of Death",
     "level": "6环",
     "levelNumeric": 6,
-    "school": "",
-    "classes": [],
+    "school": "死灵",
+    "classes": [
+      "术士",
+      "魔契师",
+      "法师"
+    ],
     "path": "spells/Circle_of_Death.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "150尺",
+    "components": "V、S、M（价值500GP+的研磨黑珍珠粉末）",
+    "duration": "立即"
   },
   {
     "id": "Conjure_Fey",
@@ -6061,10 +6070,16 @@
     "fullTitle": "咒唤妖精｜Conjure Fey",
     "level": "6环",
     "levelNumeric": 6,
-    "school": "",
-    "classes": [],
+    "school": "咒法",
+    "classes": [
+      "德鲁伊"
+    ],
     "path": "spells/Conjure_Fey.html",
-    "source": "6环.html"
+    "source": "6环.html",
+    "castingTime": "动作",
+    "range": "60 尺",
+    "components": "V、S",
+    "duration": "专注，至多10分钟"
   },
   {
     "id": "Contingency",

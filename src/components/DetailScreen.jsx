@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
 import { MagicBrowser } from './ItemCatalog';
 import { loadContent } from '../utils/content';
@@ -12,18 +12,18 @@ import { CR0_WHITELIST, CR1_2_WHITELIST, CR1_WHITELIST, CR4_WHITELIST } from '..
 
 export default function DetailScreen({
     entry, index, onBack, onNavigate, onSelectItem, openBookmarkDialog, isBookmarkedAnywhere, categoryTree, isMobile,
-    SidebarContent, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
+    SidebarContent, activeTab, setActiveTab, switchTab, setCurrentPath, setSelectedItem, setDetailStack, theme, toggleTheme,
     currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery, navigateTo, selectItem,
     parseCR, featData, masteryData, weaponData, invocationData, isLocked, showDev, showDM,
     isExternalBack
 }) {
     const sidebarProps = {
-        categoryTree, activeTab, setActiveTab, setCurrentPath, setSelectedItem, setDetailStack,
+        categoryTree, activeTab, setActiveTab, switchTab, setCurrentPath, setSelectedItem, setDetailStack,
         theme, toggleTheme, currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery,
         navigateTo, selectItem, showDev, showDM
     };
     const [loadedContent, setLoadedContent] = useState('');
-    const [contentLoading, setContentLoading] = useState(false);
+    const [contentLoading, setContentLoading] = useState(() => entry.type === 'file' && Boolean(entry.item?.path));
     const [loadedOverview, setLoadedOverview] = useState(null);
     const [overviewLoading, setOverviewLoading] = useState(false);
     const scrollRef = useRef(null);
@@ -221,14 +221,14 @@ export default function DetailScreen({
         return entry.type === 'dir' && entry.path && entry.path.length === 1 && (entry.path[0].includes('VGM') || entry.path[0].includes('瓦罗怪物指南'));
     }, [entry]);
 
-    const isIPhone = useMemo(() => /iPhone/i.test(navigator.userAgent), []);
+    const reduceMotion = useReducedMotion();
 
     return (
         <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%', transition: isIPhone ? { duration: 0 } : { type: 'spring', damping: 25, stiffness: 200 } }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={reduceMotion ? false : { x: 24, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={reduceMotion || isExternalBack ? { transition: { duration: 0 } } : { x: 16, opacity: 0 }}
+            transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="detail-overlay"
             style={{ zIndex: 1500 + index }}
         >

@@ -2,7 +2,8 @@ import React from 'react';
 import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart, Edit2, Share2 } from 'lucide-react';
 import { motion, Reorder, AnimatePresence, useDragControls } from 'framer-motion';
 import { ItemCard, SpellListItem } from './Common';
-import { CatalogCard, CatalogDialog } from './ItemCatalog';
+import { CatalogCard } from './ItemCatalog';
+import CatalogDialog from './CatalogDialog';
 
 function SavedItems({ items, openBookmarkDialog }) {
     const [selected, setSelected] = React.useState(null);
@@ -83,7 +84,6 @@ const DraggableBookmarkItem = ({ item, items, folder, categoryType, draggingId, 
                 <SpellListItem
                     item={item}
                     isSelected={selectedItemId === item.id}
-                    onClick={() => selectItem(item, false)}
                     isBookmarked={true}
                     isMobile={isMobile}
                     openBookmarkDialog={openBookmarkDialog}
