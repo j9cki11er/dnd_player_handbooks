@@ -1,3 +1,46 @@
+function layoutGroupedRollTable(table, rows, labels) {
+    if (labels.length !== 3 || !/^\d*d\d+$/i.test(labels[1])) return;
+    const groups = [];
+    for (let start = 1; start < rows.length;) {
+        const category = rows[start].cells[0];
+        const count = category?.rowSpan;
+        if (!(count > 1) || start + count > rows.length) return;
+        const groupRows = rows.slice(start, start + count);
+        if (!groupRows.every((row, index) =>
+            row.cells.length === (index === 0 ? 3 : 2) &&
+            Array.from(row.cells).every((cell, column) =>
+                cell.colSpan === 1 && ((index === 0 && column === 0) || cell.rowSpan === 1)
+            )
+        )) return;
+        groups.push({ category, rows: groupRows });
+        start += count;
+    }
+    if (groups.length < 2) return;
+
+    const document = table.ownerDocument;
+    const grid = document.createElement('div');
+    grid.className = 'grouped-roll-grid';
+    for (const group of groups) {
+        const card = document.createElement('div');
+        const groupTable = document.createElement('table');
+        const caption = groupTable.createCaption();
+        caption.append(...group.category.childNodes);
+        const header = groupTable.createTHead().insertRow();
+        for (const label of labels.slice(1)) {
+            const cell = document.createElement('th');
+            cell.scope = 'col';
+            cell.textContent = label;
+            header.append(cell);
+        }
+        const body = groupTable.createTBody();
+        group.category.remove();
+        body.append(...group.rows);
+        card.append(groupTable);
+        grid.append(card);
+    }
+    table.replaceWith(grid);
+}
+
 // Legacy CHM pages carry presentational colors that conflict with app themes.
 export function prepareContent(html) {
     const document = new DOMParser().parseFromString(html, 'text/html');
@@ -45,7 +88,10 @@ export function prepareContent(html) {
     for (const table of document.body.querySelectorAll('table')) {
         const rows = Array.from(table.rows);
         const labels = Array.from(rows[0]?.cells || []).map(cell => cell.textContent.trim());
-        if (labels.join('|') !== '名称|伤害|词条|精通|重量|价格') continue;
+        if (labels.join('|') !== '名称|伤害|词条|精通|重量|价格') {
+            layoutGroupedRollTable(table, rows, labels);
+            continue;
+        }
         table.classList.add('weapon-reference-table');
         table.style.removeProperty('width');
         const head = document.createElement('thead');

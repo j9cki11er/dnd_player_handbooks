@@ -3206,3 +3206,183 @@ select:disabled { opacity: 0.55; }
 .gear-dialog-surface {
   padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
 }
+
+.dnd-content .alignment-chart {
+  margin: 1.25rem 0;
+}
+
+.dnd-content .alignment-chart figcaption,
+.dnd-content .alignment-group h5 {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.dnd-content .alignment-chart table {
+  width: 100%;
+  text-align: center;
+}
+
+.dnd-content .alignment-group {
+  margin: 1.25rem 0;
+}
+
+.dnd-content .alignment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: .75rem;
+}
+
+.dnd-content .alignment-grid article {
+  padding: .85rem;
+  border: 1px solid var(--border-color);
+  border-radius: .65rem;
+  background: var(--glass-bg);
+  scroll-margin-top: 1rem;
+}
+
+.dnd-content .alignment-grid h6 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.dnd-content .alignment-grid h6 span,
+.dnd-content .alignment-english {
+  color: var(--text-secondary);
+  font-size: .875rem;
+}
+
+.dnd-content .alignment-grid p {
+  margin: .5rem 0 0;
+}
+
+.dnd-content .alignment-evil {
+  --alignment-purple: #d4b0ff;
+  --alignment-tint: #a866ea20;
+}
+
+.light-theme .dnd-content .alignment-evil {
+  --alignment-purple: #6a3396;
+}
+
+.dnd-content .alignment-evil :is(h5, h6 span, th, a) {
+  color: var(--alignment-purple);
+}
+
+.dnd-content .alignment-evil :is(article, th, td) {
+  background: var(--alignment-tint);
+}
+
+.dnd-content .alignment-evil article {
+  border-inline-start: 3px solid var(--alignment-purple);
+}
+
+.dnd-content .alignment-illustration {
+  margin: 1.25rem 0;
+}
+
+.dnd-content .alignment-illustration img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.dnd-content .grouped-roll-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: .75rem;
+  margin: .75rem 0 1.25rem;
+}
+
+.dnd-content .grouped-roll-grid > div {
+  min-width: 0;
+  border: 1px solid var(--border-color);
+  border-radius: .65rem;
+  background: var(--glass-bg);
+  padding: .65rem;
+}
+
+.dnd-content .grouped-roll-grid table {
+  width: 100%;
+  margin: 0;
+}
+
+.dnd-content .grouped-roll-grid caption {
+  padding-bottom: .5rem;
+  text-align: start;
+  font-weight: 700;
+}
+
+.dnd-content .grouped-roll-grid :is(th, td):first-child {
+  width: 3rem;
+  text-align: center;
+}
+
+.dnd-content .grouped-roll-grid td p {
+  margin: 0;
+}
+
+.dnd-content .grouped-roll-grid .ability-traits-grid :is(th, td):not(:first-child) {
+  width: 40%;
+}
+
+.dnd-content .ability-modifier-table {
+  width: min(100%, 28rem);
+  margin: 1rem 0 1.5rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.dnd-content .ability-modifier-table caption {
+  padding-bottom: .65rem;
+  text-align: start;
+  font-weight: 700;
+}
+
+.dnd-content .ability-modifier-table caption span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.dnd-content .ability-modifier-table :is(th, td) {
+  width: 50%;
+  padding: .4rem .75rem;
+}
+
+.dnd-content .ability-modifier-table tbody td {
+  font-weight: 700;
+}
+
+.dnd-content .ability-modifier-table [data-modifier="negative"] {
+  color: var(--content-red);
+}
+
+.dnd-content .ability-modifier-table [data-modifier="positive"] {
+  color: var(--content-green);
+}
+
+.dnd-content .ability-modifier-table tr:has([data-modifier="zero"]) > * {
+  background: var(--glass-bg);
+  border-block: 1px solid var(--border-color);
+}
+
+.dnd-content .companion-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  align-items: start;
+  gap: 1rem;
+}
+
+.dnd-content .companion-layout > * {
+  min-width: 0;
+}
+
+.dnd-content .companion-layout > img {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  justify-self: center;
+}
