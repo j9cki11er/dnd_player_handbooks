@@ -3183,3 +3183,26 @@ select:disabled { opacity: 0.55; }
 @media (max-width: 360px) {
   .spell-creature-abilities { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Keep editable fields at 16px on touch devices to avoid iPhone focus zoom. */
+@media (hover: none) and (pointer: coarse) {
+  :root body :is(input:not([type]), input[type="text"], input[type="search"],
+    input[type="number"], input[type="email"], input[type="password"],
+    input[type="tel"], input[type="url"], textarea, select) {
+    font-size: 16px;
+  }
+}
+
+/* Scroll the whole dialog within the currently visible browser viewport. */
+.gear-dialog {
+  max-height: min(720px, calc(100dvh - 2rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)));
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+.gear-dialog-description {
+  max-height: none;
+  overflow: visible;
+}
+.gear-dialog-surface {
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+}
