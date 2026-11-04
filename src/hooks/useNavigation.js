@@ -1,3 +1,5 @@
+import { pageCode } from '../utils/pageCode';
+import { EXPANSION_ROLE_SECTIONS, expansionSectionCode, isExpansionBook } from '../utils/expansions';
 import React, { useState, useEffect, useRef } from 'react';
 import { resolveBookmarkItem } from '../utils/helpers';
 
@@ -8,14 +10,6 @@ const pageAliases = new Map([
     ['第二章：创建角色/创建你的角色/第三步：确定属性值.htm', 'stats'],
     ['第二章：创建角色/创建你的角色/第四步：选择阵营.htm', 'align']
 ]);
-
-function pageCode(page) {
-    let hash = 0xcbf29ce484222325n;
-    for (const character of page) {
-        hash = BigInt.asUintN(64, (hash ^ BigInt(character.codePointAt(0))) * 0x100000001b3n);
-    }
-    return hash.toString(36);
-}
 
 function directoryPages(tree) {
     return Object.values(tree).flatMap(node => [
@@ -42,6 +36,8 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
             if (key === 'p' && knownPages.has(value)) return [knownPages.get(value)];
             return [];
         });
+        const sectionParam = params.get('section');
+        const section = EXPANSION_ROLE_SECTIONS.find(label => label === sectionParam || expansionSectionCode(label) === sectionParam);
         const entries = pages.flatMap((page, index) => {
             const id = `url-page-${index}`;
             if (page.startsWith('dir:')) {
@@ -49,7 +45,9 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
                     const path = JSON.parse(page.slice(4));
                     if (!Array.isArray(path) || !path.length) return [];
                     const node = path.reduce((parent, part) => parent?._children?.[part], { _children: categoryTree });
-                    return node?._isDir ? [{ id, type: 'dir', path }] : [];
+                    const opensSection = path.length === 1 && isExpansionBook(path[0]) &&
+                        EXPANSION_ROLE_SECTIONS.includes(section);
+                    return node?._isDir ? [{ id, type: 'dir', path, section: opensSection ? section : undefined }] : [];
                 } catch {
                     return [];
                 }
@@ -141,11 +139,13 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
             params.delete('tab');
             params.delete('page');
             params.delete('p');
+            params.delete('section');
             if (activeTab !== 'browser') params.set('tab', activeTab);
             for (const entry of detailStack) {
                 if (entry.type === 'dir') {
                     const page = `dir:${JSON.stringify(entry.path)}`;
                     params.append('p', pageAliases.get(page) ?? pageCode(page));
+                    if (entry.section) params.set('section', expansionSectionCode(entry.section));
                 }
                 if (entry.type === 'file') {
                     const id = entry.item.id;

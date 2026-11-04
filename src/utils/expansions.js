@@ -26,8 +26,12 @@ export const expansionLabel = title => {
     return `${code} ${name}`;
 };
 
+const sectionCodes = { 职业: 'class', 子职: 'subclass', 种族: 'species', 背景: 'background', 专长: 'feat' };
+export const EXPANSION_ROLE_SECTIONS = Object.keys(sectionCodes);
+export const expansionSectionCode = label => sectionCodes[label];
+
 export function expansionSections(root, feats) {
-    const sections = new Map(['职业', '子职', '种族', '背景', '专长', '内容'].map(name => [name, []]));
+    const sections = new Map([...EXPANSION_ROLE_SECTIONS, '内容'].map(name => [name, []]));
     const book = root._path[0];
     const bookFeats = feats.filter(feat => feat.pathParts?.[0] === book);
     const splitFeatSources = new Set(bookFeats.map(feat => feat.originalSource).filter(Boolean));
@@ -39,7 +43,7 @@ export function expansionSections(root, feats) {
         for (const file of files) {
             if (!splitFeatSources.has(file.originalSource)) sections.get(group).push(file);
         }
-        for (const child of Object.values(node._children)) collect(child, group, includeOverview);
+        for (const child of Object.values(node._children)) collect(child, group);
     }
 
     function addDirectory(node) {
