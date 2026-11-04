@@ -3481,6 +3481,7 @@ select:disabled { opacity: 0.55; }
 .spell-filter-header,
 .item-catalog-panel .gear-filters,
 .spell-card-wrapper,
+.item-card,
 .item-catalog-panel .catalog-card {
   --text-primary: #f5f5f5;
   --text-muted: #bcbcbc;
@@ -3832,4 +3833,19 @@ select:disabled { opacity: 0.55; }
 .sidebar-directory-section > summary:focus-visible {
   outline: 2px solid var(--accent-gold);
   outline-offset: 2px;
+}
+
+.reference-card-grid > .item-card {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 100px;
+}
+
+.expansion-content > summary {
+  cursor: pointer;
+}
+
+.expansion-section-link {
+  margin-inline-start: 12px;
 }

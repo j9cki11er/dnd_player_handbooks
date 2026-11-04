@@ -1,6 +1,5 @@
 import { expansionLabel } from '../utils/expansions';
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Folder } from 'lucide-react';
 
 export default function WelcomePanel({ chapters, expansions = [], categoryTree, navigateTo }) {
@@ -21,20 +20,19 @@ export default function WelcomePanel({ chapters, expansions = [], categoryTree, 
             <p className="welcome-desc">从目录选择分类，或使用全局搜索，快速查找规则、法术与职业内容。常用资料可 ❤️ 收藏至文件夹，让你在冒险途中随时查阅。</p>
 
             <div className="welcome-directory mt-6">
-                <div className="item-grid">
+                <div className="item-grid reference-card-grid">
                     {chapters.map(name => {
                         const node = categoryTree[name];
                         if (!node) return null;
                         return (
-                            <motion.div
+                            <div
                                 key={name}
-                                whileHover={{ scale: 1.02, y: -4 }}
                                 onClick={() => navigateTo(node._path, true, false)}
                                 className="item-card glass-panel flex flex-col items-center justify-center py-6"
                             >
                                 <Folder size={24} className="text-gold opacity-60 mb-2" />
                                 <h4 className="card-title text-center text-sm">{name}</h4>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>
@@ -48,20 +46,19 @@ export default function WelcomePanel({ chapters, expansions = [], categoryTree, 
                         但力量并非毫无代价——使用扩充手册创建的角色将比标准规则低 1️⃣ 个等级。
                     </p>
                     <div className="welcome-directory mt-6">
-                        <div className="item-grid">
+                        <div className="item-grid reference-card-grid">
                             {expansions.map(name => {
                                 const node = categoryTree[name];
                                 if (!node) return null;
                                 return (
-                                    <motion.div
+                                    <div
                                         key={name}
-                                        whileHover={{ scale: 1.02, y: -4 }}
                                         onClick={() => navigateTo(node._path, true, false)}
                                         className="item-card glass-panel flex flex-col items-center justify-center py-6"
                                     >
                                         <Folder size={24} className="text-gold opacity-60 mb-2" />
                                         <h4 className="card-title text-center text-sm">{expansionLabel(name)}</h4>
-                                    </motion.div>
+                                    </div>
                                 );
                             })}
                         </div>

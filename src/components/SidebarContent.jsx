@@ -1,6 +1,6 @@
 import SpellStaffIcon from './SpellStaffIcon';
 import React from 'react';
-import { EXPANSION_TITLES, expansionLabel, isExpansionBook } from '../utils/expansions';
+import { EXPANSION_TITLES, expansionLabel, expansionSections, isExpansionBook } from '../utils/expansions';
 import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Swords, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
 
@@ -26,6 +26,7 @@ const SidebarContent = ({
     navigateTo,
     selectItem,
     onNavigate,
+    featData,
     showDev,
     showDM
 }) => {
@@ -39,6 +40,10 @@ const SidebarContent = ({
         const isActive = currentPath.join('/') === pathStr && !selectedItem;
         const hasChildren = Object.keys(node._children).length > 0;
         const nonOverviewFiles = node._files.filter(f => !f.isOverview);
+        const expansionMenu = depth === 0 && isExpansionBook(node._path[0])
+            ? expansionSections(node, featData).filter(([label]) => label !== '内容')
+            : null;
+        const hasMenu = expansionMenu ? expansionMenu.length > 0 : hasChildren || nonOverviewFiles.length > 0;
 
         return (
             <div className="sidebar-node" style={{ marginLeft: depth > 0 ? '12px' : '0' }}>
@@ -50,7 +55,7 @@ const SidebarContent = ({
                             toggleExpand(pathStr);
                         }}
                     >
-                        {hasChildren || nonOverviewFiles.length > 0 ? (
+                        {hasMenu ? (
                             isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />
                         ) : <div style={{ width: 18 }} />}
                     </div>
@@ -64,8 +69,20 @@ const SidebarContent = ({
                         <span className="truncate">{name}</span>
                     </button>
                 </div>
-                {isExpanded && !(node._path[0]?.includes('DMG 2024') && node._path[1] === '物品图鉴') && (
+                {isExpanded && hasMenu && !(node._path[0]?.includes('DMG 2024') && node._path[1] === '物品图鉴') && (
                     <div className="sidebar-children border-l border-gold/10 ml-2">
+                        {expansionMenu ? expansionMenu.map(([label]) => (
+                                <div key={label} className="sidebar-node expansion-section-link">
+                                    <div className="category-item">
+                                        <div className="chevron-wrapper" aria-hidden="true" />
+                                        <button type="button" className="category-item-btn flex items-center gap-2 overflow-hidden flex-1 text-left"
+                                            onClick={() => navigateTo(node._path, false, Boolean(onNavigate), label)}>
+                                            <Folder size={14} className="opacity-50" aria-hidden="true" />
+                                            <span className="truncate">{label}</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            )) : <>
                         {Object.entries(node._children)
                             .filter(([childName]) => {
                                 if (node._path[0] !== '附录 B：生物数据卡' && !showDM
@@ -108,6 +125,7 @@ const SidebarContent = ({
                                     </button>
                                 );
                             })}
+                        </>}
                     </div>
                 )}
             </div>

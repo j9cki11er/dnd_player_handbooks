@@ -1,4 +1,4 @@
-import { expansionLabel } from '../utils/expansions';
+import { expansionLabel, expansionSections, isExpansionBook } from '../utils/expansions';
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
@@ -31,7 +31,7 @@ export default function DetailScreen({
     const sidebarProps = {
         categoryTree, activeTab, setActiveTab, switchTab, setCurrentPath, setSelectedItem, setDetailStack,
         theme, toggleTheme, currentPath: globalPath, selectedItem: globalItem, toggleExpand, expandedPaths, setSearchQuery,
-        navigateTo, selectItem, showDev, showDM
+        navigateTo, selectItem, featData, showDev, showDM
     };
     const [loadedContent, setLoadedContent] = useState('');
     const [contentLoading, setContentLoading] = useState(() => entry.type === 'file' && Boolean(entry.item?.path));
@@ -197,40 +197,20 @@ export default function DetailScreen({
         return weaponData.filter(w => w.mastery === selectedItem.title);
     }, [selectedItem, weaponData]);
 
-    const vgmRaces = useMemo(() => {
-        if (!categoryTree) return [];
-        // Find VGM directory
-        const vgmKey = Object.keys(categoryTree).find(k => k.includes('VGM') || k.includes('瓦罗怪物指南'));
-        if (!vgmKey) return [];
+    const bookSections = entry.type === 'dir' && entry.path?.length === 1 &&
+        currentCategoryData && isExpansionBook(entry.path[0])
+        ? expansionSections(currentCategoryData, featData)
+        : null;
 
-        const vgmNode = categoryTree[vgmKey];
-        const raceNode = vgmNode._children['玩家可用种族'];
-        if (!raceNode) return [];
-
-        const races = [];
-        // Direct races
-        raceNode._files.forEach(f => {
-            if (!f.isOverview && !f.title.includes('身高与体重')) {
-                races.push(f);
-            }
-        });
-
-        // Note: 怪物冒险者 files are now moved to raceNode._files by App.jsx data remapping
-        const order = ["兽人", "地精", "大地精", "熊地精", "狗头人", "纯血原体蛇人", "天狗", "斑猫人", "梭螺鱼人", "歌利亚", "蜥蜴人", "费尔伯格人", "阿斯莫"];
-        return races.sort((a, b) => {
-            let titleA = a.title.replace('.html', '').replace('.htm', '').trim();
-            let titleB = b.title.replace('.html', '').replace('.htm', '').trim();
-            let idxA = order.indexOf(titleA);
-            let idxB = order.indexOf(titleB);
-            if (idxA === -1) idxA = 999;
-            if (idxB === -1) idxB = 999;
-            return idxA - idxB;
-        });
-    }, [categoryTree]);
-
-    const isVgmMain = useMemo(() => {
-        return entry.type === 'dir' && entry.path && entry.path.length === 1 && (entry.path[0].includes('VGM') || entry.path[0].includes('瓦罗怪物指南'));
-    }, [entry]);
+    useLayoutEffect(() => {
+        if (!entry.section) return;
+        const target = Array.from(scrollRef.current?.querySelectorAll('[data-expansion-section]') || [])
+            .find(section => section.dataset.expansionSection === entry.section);
+        if (target) {
+            const scroller = scrollRef.current;
+            scroller.scrollTop += target.getBoundingClientRect().top - scroller.getBoundingClientRect().top;
+        }
+    }, [entry.section]);
 
     const reduceMotion = useReducedMotion();
 
@@ -293,9 +273,10 @@ export default function DetailScreen({
                                 {isFeatCategory ? (
                                     <div className="directory-view">
                                         <h3 className="section-title mb-4">专长列表</h3>
-                                        <div className="item-grid">
+                                        <div className="item-grid reference-card-grid">
                                             {featsInCategory.map(feat => (
                                                 <ItemCard
+                                                    lightweight
                                                     key={feat.id}
                                                     item={feat}
                                                     onClick={() => onSelectItem(feat)}
@@ -308,9 +289,10 @@ export default function DetailScreen({
                                 ) : isMasteryCategory ? (
                                     <div className="directory-view">
                                         <h3 className="section-title mb-4">精通词条</h3>
-                                        <div className="item-grid">
+                                        <div className="item-grid reference-card-grid">
                                             {masteriesInCategory.map(mastery => (
                                                 <ItemCard
+                                                    lightweight
                                                     key={mastery.id}
                                                     item={mastery}
                                                     onClick={() => onSelectItem(mastery)}
@@ -332,9 +314,10 @@ export default function DetailScreen({
                                                         <h4 className="text-gold opacity-80 mb-3 px-1 border-l-2 border-gold/30 pl-3">
                                                             {levelLabels[level] || `魔契师等级 ${level}+`}
                                                         </h4>
-                                                        <div className="item-grid">
+                                                        <div className="item-grid reference-card-grid">
                                                             {group.map(inv => (
                                                                 <ItemCard
+                                                                    lightweight
                                                                     key={inv.id}
                                                                     item={inv}
                                                                     onClick={() => onSelectItem(inv)}
@@ -376,7 +359,7 @@ export default function DetailScreen({
                                     />
                                 ) : loadedOverview ? (
                                     (() => {
-                                        const hasItemsBelow = isMasteryDirectory ||
+                                        const hasItemsBelow = Boolean(bookSections?.length) || isMasteryDirectory ||
                                             Object.keys(currentCategoryData._children).length > 0 ||
                                             currentCategoryData._files.filter(f => !f.isOverview).length > 0;
 
@@ -399,10 +382,38 @@ export default function DetailScreen({
 
 
 
+                                {bookSections ? bookSections.map(([label, items]) => {
+                                    const cards = (
+                                        <div className="item-grid reference-card-grid">
+                                            {items.map(item => (
+                                                <ItemCard
+                                                    lightweight
+                                                    key={item.id}
+                                                    item={item}
+                                                    onClick={() => item.isDir ? onNavigate(item.pathParts) : onSelectItem(item)}
+                                                    isBookmarked={isBookmarkedAnywhere(item.id)}
+                                                    openBookmarkDialog={openBookmarkDialog}
+                                                />
+                                            ))}
+                                        </div>
+                                    );
+                                    return label === '内容' ? (
+                                        <section key={label} className="mb-8">
+                                            <h3 className="section-title mb-4">内容</h3>
+                                            {cards}
+                                        </section>
+                                    ) : (
+                                        <details key={label} data-expansion-section={label}
+                                            className="expansion-content mb-8" open={entry.section === label}>
+                                            <summary className="section-title mb-4">{label}</summary>
+                                            {cards}
+                                        </details>
+                                    );
+                                }) : <>
                                 {Object.keys(currentCategoryData._children).length > 0 && (
                                     <div className="mb-8">
                                         <h3 className="section-title mb-4">分类</h3>
-                                        <div className="item-grid">
+                                        <div className="item-grid reference-card-grid">
                                             {Object.entries(currentCategoryData._children)
                                                 .filter(([name]) => {
                                                     if (name === '怪物冒险者' || name === '玩家可用种族') return false;
@@ -412,6 +423,7 @@ export default function DetailScreen({
                                                 })
                                                 .map(([name, node]) => (
                                                     <ItemCard
+                                                        lightweight
                                                         key={node._id}
                                                         item={{
                                                             id: node._id,
@@ -447,9 +459,10 @@ export default function DetailScreen({
                                     return (
                                         <div>
                                             <h3 className="section-title mb-4">{isMasteryDirectory ? '精通词条' : '内容'}</h3>
-                                            <div className="item-grid">
+                                            <div className="item-grid reference-card-grid">
                                                 {filteredFiles.map(item => (
                                                     <ItemCard
+                                                        lightweight
                                                         key={item.id}
                                                         item={item}
                                                         onClick={() => onSelectItem(item)}
@@ -460,25 +473,10 @@ export default function DetailScreen({
                                             </div>
 
 
-                                            {isVgmMain && vgmRaces.length > 0 && (
-                                                <div className="mt-8">
-                                                    <h3 className="section-title mb-4">玩家可用种族</h3>
-                                                    <div className="item-grid">
-                                                        {vgmRaces.map(race => (
-                                                            <ItemCard
-                                                                key={race.id}
-                                                                item={race}
-                                                                onClick={() => onSelectItem(race)}
-                                                                isBookmarked={isBookmarkedAnywhere(race.id)}
-                                                                openBookmarkDialog={openBookmarkDialog}
-                                                            />
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            )}
                                         </div>
                                     );
                                 })()}
+                                </>}
                             </div>
                         ) : null}
                     </div>

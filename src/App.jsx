@@ -273,6 +273,7 @@ export default function App() {
 
       <aside className="sidebar">
         <SidebarContent
+          featData={featData}
           categoryTree={categoryTree} activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} setCurrentPath={setCurrentPath}
           setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} theme={theme} toggleTheme={toggleTheme}
           currentPath={currentPath} selectedItem={selectedItem} toggleExpand={toggleExpand} expandedPaths={expandedPaths}

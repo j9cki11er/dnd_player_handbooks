@@ -223,10 +223,10 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
         }));
     };
 
-    const navigateTo = (path, shouldExpand = true, push = false) => {
+    const navigateTo = (path, shouldExpand = true, push = false, section) => {
         if (push) {
             setDetailStack(prev => {
-                const newEntry = { id: Date.now(), type: 'dir', path };
+                const newEntry = { id: Date.now(), type: 'dir', path, section };
                 if (prev.length > 0 && prev[prev.length - 1].type === 'menu') {
                     // Replace menu with the new directory entry
                     setShouldReplaceState(true);
@@ -238,7 +238,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
             setCurrentPath(path);
             setSelectedItem(null);
             setActiveTab('browser');
-            setDetailStack([{ id: Date.now(), type: 'dir', path }]);
+            setDetailStack([{ id: Date.now(), type: 'dir', path, section }]);
         }
 
         if (shouldExpand) {

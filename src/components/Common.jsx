@@ -85,7 +85,7 @@ export function ConfirmModal({ title, message, onConfirm, onClose, confirmText =
     );
 }
 
-export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
+export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, lightweight = false }) {
     const handleBookmarkClick = (e) => {
         e.stopPropagation();
         openBookmarkDialog(item);
@@ -93,6 +93,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
 
     const displayCategory = React.useMemo(() => {
         if (item?.itemType && item?.rarity) return `${item.itemType} · ${item.rarity}${item.requiresAttunement ? ' · 需同调' : ''}`;
+        if (item?.path?.startsWith('feats/') && !item.sourceBook) return item.category;
         if (item?.category === '魔能祈唤' || item?.category === '精通词条') return item.category;
 
         const pathStr = item?.fullCategory || item?.pathParts?.join(' > ') || '';
@@ -112,10 +113,14 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
         return code ? [code, cat === book ? '' : cat].filter(Boolean).join(' · ') : cat;
     }, [item]);
 
+    const Card = lightweight ? 'div' : motion.div;
+    const hover = lightweight ? {} : {
+        whileHover: { scale: 1.02, y: -4 },
+        transition: { type: "spring", stiffness: 300, damping: 30 }
+    };
     return (
-        <motion.div
-            whileHover={{ scale: 1.02, y: -4 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        <Card
+            {...hover}
             onClick={onClick}
             className="item-card glass-panel group relative"
         >
@@ -144,7 +149,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
                     CR {item.cr} • {item.subDivision} • {item.alignment}
                 </span>
             )}
-        </motion.div >
+        </Card>
     );
 }
 
