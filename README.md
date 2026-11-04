@@ -93,3 +93,27 @@ The report is `dmg-items-report.json`; all imported source pages use UTF-8.
 to each description. Variable-price gear retains actual option prices; scroll
 variants retain their separate prices. The equipment page renders the searchable
 catalog with GP range controls and a native detail dialog, without navigating away.
+
+## 《玩家手册 2024》MCP
+
+在有项目源码和运行依赖的服务器上启动只读 MCP 服务：
+
+```sh
+HANDBOOK_SITE_URL=https://handbook.example.com/ MCP_PORT=4281 npm run mcp
+```
+
+把示例域名换成手册网站域名。服务默认监听 `127.0.0.1`，请在现有 HTTPS 反向代理上将 `/mcp` 转发到 `http://127.0.0.1:4281/mcp`。`HANDBOOK_SITE_URL` 用于生成原文链接。更新手册资料后重启 MCP 服务以重新索引。
+
+### 发给玩家
+
+在 ChatGPT 的 Plugins 页面点「+」→「Add custom MCP server」，粘贴手册站点的 MCP 地址（下面的域名由站点管理员替换），认证选无。安装后，新开聊天并输入 `@` 选择这个插件。账号和工作区需要允许添加自定义 MCP。 [OpenAI 接入说明](https://developers.openai.com/plugins/deploy/connect-chatgpt)
+
+```text
+https://handbook.example.com/mcp
+```
+
+可以把以下文字一起发给玩家，作为聊天指令：
+
+> 查 D&D 规则时，先用手册网站插件搜索，再读取命中条目的原文。只根据本站公开原文回答，注明实际书名和章节或条目。核心手册为《玩家手册 2024》，扩充书和旧版条目按各自出处标注。不要使用网络搜索或模型记忆补充。没有足够依据时，直接回答「当前手册网站公开资料中未找到相关规则。」
+
+服务索引玩家可见的手册和扩充资料，包括独立的法术、专长、魔能祈唤和武器精通条目。隐藏条目和 DM 模式专属资料不开放查询。搜索适合输入单个中英文规则术语，例如「火球术」或 `Fireball`。聊天中对工具的选择和最终措辞由 ChatGPT 执行。
