@@ -1,6 +1,7 @@
+import SpellStaffIcon from './SpellStaffIcon';
 import React from 'react';
 import { isExpansionBook } from '../utils/expansions';
-import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Wand, Swords, Search, Heart, Sun, Moon, User } from 'lucide-react';
+import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Swords, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
 
 
@@ -139,7 +140,7 @@ const SidebarContent = ({
                     onClick={() => switchTab('browser')}
                 />
                 <NavItem
-                    icon={<Wand size={20} />}
+                    icon={<SpellStaffIcon size={20} />}
                     label="法术列表"
                     active={activeTab === 'spells'}
                     onClick={() => switchTab('spells')}
