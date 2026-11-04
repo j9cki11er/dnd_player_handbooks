@@ -1,6 +1,6 @@
 import SpellStaffIcon from './SpellStaffIcon';
 import React from 'react';
-import { isExpansionBook } from '../utils/expansions';
+import { EXPANSION_TITLES, expansionLabel, isExpansionBook } from '../utils/expansions';
 import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Swords, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
 
@@ -168,8 +168,8 @@ const SidebarContent = ({
                 />
             </nav>
 
-            <div className="sidebar-section">
-                <h3 className="section-title">分类目录</h3>
+            <details className="sidebar-section sidebar-directory-section">
+                <summary className="section-title">分类目录</summary>
                 <div className="category-list">
                     {Object.entries(categoryTree)
                         .filter(([catName]) => !isExpansionBook(catName))
@@ -189,18 +189,16 @@ const SidebarContent = ({
                             <SidebarItem key={catName} name={catName} node={catNode} />
                         ))}
                 </div>
-            </div>
+            </details>
 
-            <div className="sidebar-section">
-                <h3 className="section-title">扩充手册</h3>
+            <details className="sidebar-section sidebar-directory-section">
+                <summary className="section-title">扩充手册</summary>
                 <div className="category-list">
-                    {Object.entries(categoryTree)
-                        .filter(([catName]) => isExpansionBook(catName))
-                        .map(([catName, catNode]) => (
-                            <SidebarItem key={catName} name={catName} node={catNode} />
-                        ))}
+                    {EXPANSION_TITLES.filter(name => categoryTree[name]).map(name => (
+                        <SidebarItem key={name} name={expansionLabel(name)} node={categoryTree[name]} />
+                    ))}
                 </div>
-            </div>
+            </details>
 
 
         </>

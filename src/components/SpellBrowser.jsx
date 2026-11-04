@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
-import { isHandbookSpell } from '../utils/spellSummary';
+import { isListedSpell } from '../utils/spellSummary';
 import { SpellListItem } from './Common';
 
 const defaultSpellFilters = { class: '全部', level: '全部', school: '', ritual: false };
@@ -18,7 +18,7 @@ export default function SpellBrowser({
 
     const filteredSpells = useMemo(() => {
         return spellData.filter(spell => {
-            if (!isHandbookSpell(spell) && spell.source !== 'EFA') return false;
+            if (!isListedSpell(spell)) return false;
             const classMatch = spellFilters.class === '全部' || spell.classes.includes(spellFilters.class);
             const levelMatch = spellFilters.level === '全部' || spell.levelNumeric === parseInt(spellFilters.level);
             const searchMatch = !searchQuery ||

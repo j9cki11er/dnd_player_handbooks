@@ -1,3 +1,4 @@
+import { expansionLabel } from '../utils/expansions';
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
@@ -248,7 +249,7 @@ export default function DetailScreen({
                         <ArrowLeft size={20} />
                     </button>
                     <h1 className="top-bar-title truncate max-w-[200px] sm:max-w-md">
-                        {entry.type === 'menu' ? '目录' : (selectedItem ? selectedItem.title : (currentPath[currentPath.length - 1] || '目录'))}
+                        {entry.type === 'menu' ? '目录' : (selectedItem ? selectedItem.title : expansionLabel(currentPath.at(-1) || '目录'))}
                     </h1>
                 </div>
                 <div className="top-bar-actions">

@@ -18789,5 +18789,291 @@
       "CR0-CR1/4"
     ],
     "isOverview": false
+  },
+  {
+    "id": "洛温：初光 (LFL)/世界设定/_概述.htm",
+    "title": "前言：欢迎来到洛温-暗影荒原",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/世界设定/_概述.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "世界设定"
+    ],
+    "isOverview": true,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/前言：欢迎来到洛温-暗影荒原.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/世界设定/使用此扩展包.htm",
+    "title": "使用此扩展包",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/世界设定/使用此扩展包.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "世界设定"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/使用此扩展包.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/世界设定/洛温-暗影荒原的历史.htm",
+    "title": "洛温-暗影荒原的历史",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/世界设定/洛温-暗影荒原的历史.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "世界设定"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/洛温-暗影荒原的历史.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/世界设定/洛温的田园诗意.htm",
+    "title": "洛温的田园诗意",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/世界设定/洛温的田园诗意.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "世界设定"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/洛温的田园诗意.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/世界设定/暗影荒原的险恶旷野.htm",
+    "title": "暗影荒原的险恶旷野",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/世界设定/暗影荒原的险恶旷野.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "世界设定"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/暗影荒原的险恶旷野.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/世界设定/穿越洛温-暗影荒原.htm",
+    "title": "穿越洛温-暗影荒原",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/世界设定/穿越洛温-暗影荒原.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "世界设定"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/穿越洛温-暗影荒原.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/_概述.htm",
+    "title": "第一章：洛温-暗影荒原起源",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/_概述.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项"
+    ],
+    "isOverview": true,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/第一章：洛温-暗影荒原起源.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/_概述.htm",
+    "title": "LFL",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/_概述.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": true,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/种族.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/仙灵.htm",
+    "title": "仙灵",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/仙灵.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/仙灵.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/精灵.htm",
+    "title": "洛温的精灵",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/精灵.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/精灵.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/洁英.htm",
+    "title": "洁英",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/洁英.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/洁英.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/波尬.htm",
+    "title": "波尬",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/波尬.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/波尬.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/炎身.htm",
+    "title": "炎身",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/炎身.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/炎身.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/霜身.htm",
+    "title": "霜身",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/霜身.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/霜身.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/洛温幻身灵.htm",
+    "title": "洛温幻身灵",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/洛温幻身灵.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/洛温幻身灵.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/种族/蚀界.htm",
+    "title": "蚀界",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/种族/蚀界.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "种族"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/蚀界.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/背景/_概述.htm",
+    "title": "背景",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/背景/_概述.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "背景"
+    ],
+    "isOverview": true,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/背景.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/背景/洛温专家.htm",
+    "title": "洛温专家",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/背景/洛温专家.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "背景"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/洛温专家.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/背景/影原专家.htm",
+    "title": "影原专家",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/背景/影原专家.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "背景"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/影原专家.htm"
+  },
+  {
+    "id": "洛温：初光 (LFL)/角色选项/专长/起源专长.htm",
+    "title": "专长",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/角色选项/专长/起源专长.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "专长"
+    ],
+    "isOverview": false,
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/专长.htm",
+    "featCategory": "起源专长"
+  },
+  {
+    "id": "洛温：初光 (LFL)/_概述.htm",
+    "title": "洛温：初光 (LFL)",
+    "category": "洛温：初光 (LFL)",
+    "path": "洛温：初光 (LFL)/_概述.html",
+    "pathParts": [
+      "洛温：初光 (LFL)"
+    ],
+    "isOverview": true,
+    "sourceBook": "LFL",
+    "originalSource": "玩家资料导览（本站整理）"
   }
 ]

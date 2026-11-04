@@ -1,3 +1,4 @@
+import { expansionLabel } from '../utils/expansions';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Folder } from 'lucide-react';
@@ -59,7 +60,7 @@ export default function WelcomePanel({ chapters, expansions = [], categoryTree, 
                                         className="item-card glass-panel flex flex-col items-center justify-center py-6"
                                     >
                                         <Folder size={24} className="text-gold opacity-60 mb-2" />
-                                        <h4 className="card-title text-center text-sm">{name}</h4>
+                                        <h4 className="card-title text-center text-sm">{expansionLabel(name)}</h4>
                                     </motion.div>
                                 );
                             })}

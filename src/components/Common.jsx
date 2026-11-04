@@ -1,3 +1,4 @@
+import { expansionCode } from '../utils/expansions';
 import React from 'react';
 import CatalogDialog from './CatalogDialog';
 import { spellText, summarizeComponents, summarizeDuration, spellBookLabel } from '../utils/spellSummary';
@@ -106,7 +107,9 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog }) {
             cat = cleanParts[cleanParts.length - 2];
         }
 
-        return item?.sourceBook === 'XGE' ? `XGE · ${cat}` : cat;
+        const book = cleanParts[0] || item?.category;
+        const code = expansionCode(book);
+        return code ? [code, cat === book ? '' : cat].filter(Boolean).join(' · ') : cat;
     }, [item]);
 
     return (

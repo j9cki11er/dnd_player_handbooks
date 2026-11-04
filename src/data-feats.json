@@ -2645,5 +2645,39 @@
     ],
     "sourceBook": "AU",
     "originalSource": "启封奥秘/第一章/专长/通用专长.htm"
+  },
+  {
+    "id": "LFL_Child_of_the_Sun",
+    "title": "骄阳之子",
+    "titleEn": "Child of the Sun",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "洛温：初光 (LFL) > 起源专长",
+    "path": "feats/LFL_Child_of_the_Sun.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/专长.htm"
+  },
+  {
+    "id": "LFL_Shadowmoor_Hexer",
+    "title": "影原咒者",
+    "titleEn": "Shadowmoor Hexer",
+    "category": "起源专长",
+    "prerequisite": "",
+    "fullCategory": "洛温：初光 (LFL) > 起源专长",
+    "path": "feats/LFL_Shadowmoor_Hexer.html",
+    "pathParts": [
+      "洛温：初光 (LFL)",
+      "角色选项",
+      "专长",
+      "起源专长"
+    ],
+    "sourceBook": "LFL",
+    "originalSource": "被遗忘的国度/洛温初光/专长.htm"
   }
 ]

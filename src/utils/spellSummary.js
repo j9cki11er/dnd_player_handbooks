@@ -69,6 +69,8 @@ export function splitSpellDetails(html) {
 
 export const isHandbookSpell = spell => /^[0-9]环\.html$/.test(spell.source);
 
+export const isListedSpell = spell => isHandbookSpell(spell) || (spell.sourceBook || spell.source) === 'EFA';
+
 export function spellBookLabel(spell) {
     if (isHandbookSpell(spell)) return '';
     const books = {

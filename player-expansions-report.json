@@ -32,5 +32,13 @@
     "spells": 33,
     "skippedEmpty": [],
     "missingAssets": []
+  },
+  {
+    "book": "洛温：初光 (LFL)",
+    "pages": 21,
+    "feats": 2,
+    "spells": 0,
+    "skippedEmpty": [],
+    "missingAssets": []
   }
 ]

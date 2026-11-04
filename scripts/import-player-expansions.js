@@ -4,12 +4,34 @@ import iconv from 'iconv-lite';
 import { parse } from 'node-html-parser';
 import { readNumber } from '../src/utils/contentOrder.js';
 const referenceRoot = process.env.DND_REFERENCE_ROOT || '../DND5e_chm';
-const configs = [
+const allConfigs = [
     { title: '珊娜萨的万事指南 (XGE)', code: 'XGE', directory: '珊娜萨的万事指南', roots: ['角色选项', '角色姓名', '法术'], extra: [], description: 'XGE 旧版玩家规则：子职、种族专长、法术、角色生平与姓名参考，以及工具和休整期活动。与 2024 规则重叠的选项保留为独立版本。' },
     { title: '被遗忘的国度：费伦英雄', code: 'FRHF', directory: '被遗忘的国度/费伦英雄', extra: ['第四章', '第五章'], description: '费伦冒险者的子职、背景、种族规则、专长、装备与施法规则。' },
     { title: '鸦阁魔域：魔障深藏', code: 'RHW', directory: '鸦阁魔域：魔障深藏', extra: [], description: '恐怖冒险中的玩家子职、种族、背景、专长、黑暗赠礼与角色塑造建议。' },
-    { title: '启封奥秘', code: 'AU', directory: '启封奥秘', extra: ['第二章'], description: '魔法主题的子职、背景、专长、法术与魔法物品。' }
+    { title: '启封奥秘', code: 'AU', directory: '启封奥秘', extra: ['第二章'], description: '魔法主题的子职、背景、专长、法术与魔法物品。' },
+    {
+        title: '洛温：初光 (LFL)', code: 'LFL', directory: '被遗忘的国度/洛温初光', roots: [], extra: [],
+        description: '欢迎来到洛温-暗影荒原。查阅当地的种族、背景、起源专长与世界设定。',
+        pages: {
+            '前言：欢迎来到洛温-暗影荒原': '世界设定/_概述',
+            '使用此扩展包': '世界设定/使用此扩展包',
+            '洛温-暗影荒原的历史': '世界设定/洛温-暗影荒原的历史',
+            '洛温的田园诗意': '世界设定/洛温的田园诗意',
+            '暗影荒原的险恶旷野': '世界设定/暗影荒原的险恶旷野',
+            '穿越洛温-暗影荒原': '世界设定/穿越洛温-暗影荒原',
+            '第一章：洛温-暗影荒原起源': '角色选项/_概述',
+            '种族': '角色选项/种族/_概述',
+            ...Object.fromEntries(['仙灵', '精灵', '洁英', '波尬', '炎身', '霜身', '洛温幻身灵', '蚀界'].map(name => [name, `角色选项/种族/${name}`])),
+            '背景': '角色选项/背景/_概述',
+            '洛温专家': '角色选项/背景/洛温专家',
+            '影原专家': '角色选项/背景/影原专家',
+            '专长': '角色选项/专长/起源专长'
+        }
+    }
 ];
+const requestedCodes = process.argv.slice(2);
+const configs = requestedCodes.length ? allConfigs.filter(book => requestedCodes.includes(book.code)) : allConfigs;
+if (requestedCodes.some(code => !configs.some(book => book.code === code))) throw new Error('Unknown expansion code');
 const codes = new Set(configs.map(book => book.code));
 const load = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const originalIndex = load('src/data.json');
@@ -42,6 +64,7 @@ for (const book of configs) {
     const report = { book: book.title, pages: 0, feats: 0, spells: 0, skippedEmpty: [], missingAssets: [] };
     const source = path.join(referenceRoot, book.directory);
     const files = [...(book.roots || ['第一章']).flatMap(chapter => walk(path.join(source, chapter))), ...book.extra.flatMap(chapter => walk(path.join(source, chapter)))].filter(file => /\.html?$/.test(file));
+    if (book.pages) files.push(...Object.keys(book.pages).map(name => path.join(source, `${name}.htm`)));
     if (book.code === 'XGE') {
         for (const folder of ['地下城主工具/工具', '地下城主工具/范例休整期活动']) files.push(...walk(path.join(source, folder)).filter(file => /\.html?$/.test(file)));
         for (const name of ['角色姓名.htm', '核心规则/需谨记的十条规则.htm', '地下城主工具/工具熟练.html', '地下城主工具/修整期活动.htm', '地下城主工具/施法.html', '地下城主工具/精金武器.htm', '地下城主工具/打结.htm', '地下城主工具/睡眠.htm', '地下城主工具/坠落.htm', '地下城主工具/同时效应.htm']) files.push(path.join(source, name));
@@ -69,7 +92,9 @@ for (const book of configs) {
         const page = readPage(file);
         if (!page) { report.skippedEmpty.push(relative); continue; }
         let target;
-        if (book.code === 'XGE') {
+        if (book.pages) {
+            target = `${book.pages[base]}.htm`;
+        } else if (book.code === 'XGE') {
             target = relative.replace(/\.html?$/, '.htm');
             if (relative.startsWith('角色选项/')) {
                 if (base === '种族专长') target = '角色选项/专长/种族专长.htm';
@@ -108,10 +133,14 @@ for (const book of configs) {
                 element.setAttribute('style', style);
             }
         }
+        if (book.code === 'LFL' && base === '精灵') {
+            page.title = '洛温的精灵';
+            root.querySelector('h2').innerHTML = '洛温的精灵 Elves';
+        }
         const html = root.toString();
         const originalSource = `${book.directory}/${relative}`;
         const isSpellPage = root.querySelectorAll('h4').some(header => header.textContent.includes('｜'));
-        const featCategory = book.code === 'XGE' && base === '种族专长' ? '种族专长' : relative.includes('/专长/') && !['专长'].includes(base)
+        const featCategory = book.code === 'LFL' && base === '专长' ? '起源专长' : book.code === 'XGE' && base === '种族专长' ? '种族专长' : relative.includes('/专长/') && !['专长'].includes(base)
             ? ({ '传奇恩惠': '传奇恩惠专长', '黑暗赠礼': '黑暗赠礼专长' }[base] || base) : null;
         const entry = savePage(target, page.title, html, originalSource, { ...(isSpellPage || (book.code === 'XGE' && relative.startsWith('法术/')) || (book.code === 'AU' && relative.startsWith('第二章/')) ? { hiddenFromDirectory: true } : {}), ...(featCategory ? { featCategory } : {}) });
         if (featCategory) {
@@ -183,5 +212,8 @@ for (const [file, items] of [['src/data.json', data], ['src/data-feats.json', fe
 }
 // Validate the entire selection before updating any of the shared indexes.
 for (const [file, items] of [['src/data.json', data], ['src/data-feats.json', feats], ['src/data-spells.json', spells]]) fs.writeFileSync(file, JSON.stringify(items, null, 2) + '\n');
-fs.writeFileSync('player-expansions-report.json', JSON.stringify(reports, null, 2) + '\n');
+const reportPath = 'player-expansions-report.json';
+const priorReports = requestedCodes.length && fs.existsSync(reportPath) ? load(reportPath) : [];
+const importedTitles = new Set(reports.map(report => report.book));
+fs.writeFileSync(reportPath, JSON.stringify([...priorReports.filter(report => !importedTitles.has(report.book)), ...reports], null, 2) + '\n');
 console.log(JSON.stringify(reports, null, 2));
