@@ -219,12 +219,14 @@ export function SpellListItem({ item, isSelected, isBookmarked, isMobile, openBo
     );
 }
 
-export function CollapsibleSection({ title, icon: Icon, children, defaultExpanded = true, headerClassName = "" }) {
+export function CollapsibleSection({ title, icon: Icon, children, defaultExpanded = true, headerClassName = "", loading = false }) {
     const [isExpanded, setIsExpanded] = React.useState(defaultExpanded);
 
     return (
         <div className="collapsible-section mb-8">
             <button
+                disabled={loading}
+                aria-busy={loading}
                 onClick={() => setIsExpanded(!isExpanded)}
                 className={`collapsible-header category-item ${headerClassName}`}
             >

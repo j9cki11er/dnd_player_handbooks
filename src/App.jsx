@@ -133,6 +133,9 @@ const categoryTree = (() => {
         d._files.sort((a, b) => compareContentItems(a, b, d._path));
         d._children = Object.fromEntries(Object.entries(d._children).sort(([a], [b]) => compareContentNames(a, b, d._path)));
         visit(d._children, d);
+        // A child directory renders its matching parent file as its overview.
+        const childOverviews = new Set(Object.values(d._children).map(child => child._selfFile));
+        d._files = d._files.filter(file => !childOverviews.has(file));
       }
     });
   };
@@ -165,7 +168,7 @@ export default function App() {
 
   const {
     activeTab, setActiveTab, switchTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
-    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem: openItem, isExternalBack
+    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem: openItem, isExternalBack, showHandbookHint
   } = useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data });
 
   const selectItem = (item, push) => {
@@ -328,6 +331,7 @@ export default function App() {
 
       {creaturePreview && <CatalogDialog item={creaturePreview} showCreature onClose={() => setCreaturePreview(null)} />}
 
+      {showHandbookHint && <div className="handbook-home-hint" role="status">快速点击两次回主页</div>}
       <MobileNavBar
         activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} currentPath={currentPath} navigateTo={navigateTo}
         setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} setCurrentPath={setCurrentPath}

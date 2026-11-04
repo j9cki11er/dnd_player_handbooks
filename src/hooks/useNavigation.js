@@ -79,12 +79,32 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
     const restoredEntries = useRef(new Set(initialRoute.entries.map(entry => entry.id)));
     const initializedHistory = useRef(false);
 
+    const [handbookTap, setHandbookTap] = useState(null);
+    const handbookPage = detailStack.at(-1);
+    const showHandbookHint = handbookTap !== null && handbookTap.page === handbookPage && activeTab === 'browser';
+
+    useEffect(() => {
+        if (!handbookTap) return;
+        const timer = setTimeout(() => setHandbookTap(null), 1500);
+        return () => clearTimeout(timer);
+    }, [handbookTap]);
+
     const switchTab = (tab) => {
         if (tab === activeTab) {
-            if (detailStack.at(-1)?.type === 'menu') handleBack();
+            if (tab === 'browser' && (handbookPage || selectedItem || currentPath.length)) {
+                const now = performance.now();
+                if (showHandbookHint && now - handbookTap.time <= 500) {
+                    setHandbookTap(null);
+                    resetBrowser();
+                } else {
+                    setHandbookTap({ page: handbookPage, time: now });
+                }
+            }
+            else if (detailStack.at(-1)?.type === 'menu') handleBack();
             return;
         }
 
+        setHandbookTap(null);
         tabPositions.current.set(activeTab, {
             currentPath,
             selectedItem,
@@ -286,7 +306,7 @@ export function useNavigation({ categoryTree, spellData, featData, masteryData, 
         navigateTo,
         handleBack,
         selectItem,
-        resetBrowser,
+        resetBrowser, showHandbookHint,
         isExternalBack
     };
 }

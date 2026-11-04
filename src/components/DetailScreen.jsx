@@ -35,7 +35,7 @@ export default function DetailScreen({
     const [loadedContent, setLoadedContent] = useState('');
     const [contentLoading, setContentLoading] = useState(() => entry.type === 'file' && Boolean(entry.item?.path));
     const [loadedOverview, setLoadedOverview] = useState(null);
-    const [overviewLoading, setOverviewLoading] = useState(false);
+    const [overviewLoading, setOverviewLoading] = useState(true);
     const scrollRef = useRef(null);
 
     // Ensure new pages start at the top
@@ -365,10 +365,14 @@ export default function DetailScreen({
                             <MagicBrowser key={currentPath.join('/')} initialType={currentPath[2] || ''} initialRarity={currentPath[3] || '普通'} {...{openBookmarkDialog, isBookmarkedAnywhere}} />
                         ) : currentCategoryData ? (
                             <div className="directory-view">
-                                {overviewLoading ? (
-                                    <div className="overview-section mb-8 p-12 flex justify-center">
-                                        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-gold"></div>
-                                    </div>
+                                {overviewLoading && currentCategoryData._selfFile ? (
+                                    <CollapsibleSection
+                                        title="正在加载概述"
+                                        icon={Folder}
+                                        defaultExpanded={false}
+                                        loading
+                                        headerClassName="overview-skeleton"
+                                    />
                                 ) : loadedOverview ? (
                                     (() => {
                                         const hasItemsBelow = isMasteryDirectory ||
@@ -396,7 +400,7 @@ export default function DetailScreen({
 
                                 {Object.keys(currentCategoryData._children).length > 0 && (
                                     <div className="mb-8">
-                                        <h3 className="section-title mb-4">子目录</h3>
+                                        <h3 className="section-title mb-4">分类</h3>
                                         <div className="item-grid">
                                             {Object.entries(currentCategoryData._children)
                                                 .filter(([name]) => {
@@ -441,7 +445,7 @@ export default function DetailScreen({
 
                                     return (
                                         <div>
-                                            <h3 className="section-title mb-4">{isMasteryDirectory ? '精通词条' : '内容条目'}</h3>
+                                            <h3 className="section-title mb-4">{isMasteryDirectory ? '精通词条' : '内容'}</h3>
                                             <div className="item-grid">
                                                 {filteredFiles.map(item => (
                                                     <ItemCard

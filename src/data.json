@@ -47,7 +47,7 @@
     "pathParts": [
       "序章：欢迎来到冒险世界"
     ],
-    "isOverview": false
+    "isOverview": true
   },
   {
     "id": "瓦罗怪物指南 (VGM)/怪物学识.htm",
@@ -4855,7 +4855,8 @@
     "pathParts": [
       "第五章：专长"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "hiddenFromDirectory": true
   },
   {
     "id": "第五章：专长/传奇恩惠专长.htm",
@@ -5068,9 +5069,10 @@
     "category": "第四章：角色起源",
     "path": "第四章：角色起源/背景详述.html",
     "pathParts": [
-      "第四章：角色起源"
+      "第四章：角色起源",
+      "背景详述"
     ],
-    "isOverview": false
+    "isOverview": true
   },
   {
     "id": "第四章：角色起源/起源的构成部分.htm",
@@ -5080,7 +5082,8 @@
     "pathParts": [
       "第四章：角色起源"
     ],
-    "isOverview": false
+    "isOverview": false,
+    "hiddenFromDirectory": true
   },
   {
     "id": "第四章：角色起源/种族详述/人类.htm",

@@ -3120,9 +3120,18 @@ select:disabled { opacity: 0.55; }
 
 .spell-search-controls { display: flex; flex: 1 0 auto; align-items: center; gap: 8px; min-width: 0; }
 @media (max-width: 768px) {
-  .spell-filter-bar { flex-wrap: wrap; gap: 0 6px; }
+  .spell-filter-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    gap: 0 4px;
+  }
+  .spell-filter-bar .filter-item,
+  .spell-filter-bar .filter-select {
+    min-width: 0;
+    width: 100%;
+  }
   .spell-filter-bar .filter-divider { display: none; }
-  .spell-search-controls { flex: 1 0 100%; }
+  .spell-search-controls { grid-column: 1 / -1; }
   .spell-filter-bar .filter-search { min-width: 0; }
 }
 
@@ -3460,4 +3469,56 @@ select:disabled { opacity: 0.55; }
 .item-catalog-panel .gear-grid > li {
   content-visibility: auto;
   contain-intrinsic-block-size: auto 110px;
+}
+
+.handbook-home-hint {
+  position: fixed;
+  inset-inline-start: 50%;
+  bottom: calc(5rem + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 2000;
+  padding: .45rem .85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: .85rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.overview-skeleton .collapsible-title {
+  width: min(10rem, 100%);
+  color: transparent;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.collapsible-header.overview-skeleton {
+  cursor: progress;
+}
+
+@media (max-width: 767px) {
+  :is(.spell-browser-panel, .bookmark-group) .spell-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  :is(.spell-browser-panel, .bookmark-group) .spell-card-inner {
+    padding: 8px;
+  }
+
+  :is(.spell-browser-panel, .bookmark-group) .spell-card-name {
+    gap: 4px;
+    font-size: .85rem;
+  }
+
+  :is(.spell-browser-panel, .bookmark-group) .spell-card-name .spell-level-badge {
+    padding-inline: 4px;
+  }
+
+  :is(.spell-browser-panel, .bookmark-group) .spell-card-meta {
+    flex-wrap: wrap;
+  }
 }
