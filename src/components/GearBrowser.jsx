@@ -31,8 +31,8 @@ function GearDialog({ item, currency, onClose }) {
     );
 }
 
-export default function GearBrowser({ openBookmarkDialog, isBookmarkedAnywhere }) {
-    const [query, setQuery] = useState('');
+export default function GearBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initialQuery = '' }) {
+    const [query, setQuery] = useState(initialQuery);
     const [min, setMin] = useState('');
     const [max, setMax] = useState('');
     const [selected, setSelected] = useState(null);

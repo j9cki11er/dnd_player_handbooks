@@ -1,4 +1,6 @@
 import { ArrowLeft, Search, Sun, Moon } from 'lucide-react';
+import McpGuide from "./McpGuide";
+
 
 export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, switchTab, theme, toggleTheme }) {
     const getTitle = () => {
@@ -29,6 +31,8 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
                 <h1 className="top-bar-title">{getTitle()}</h1>
             </div>
             <div className="top-bar-actions">
+                <McpGuide />
+
                 <button onClick={toggleTheme} className="top-bar-theme-toggle" title={theme === 'dark' ? '切换浅色模式' : '切换深色模式'}>
                     {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                 </button>

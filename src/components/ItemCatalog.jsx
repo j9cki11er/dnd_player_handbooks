@@ -48,8 +48,8 @@ export function CatalogCard({ item, onClick, openBookmarkDialog, isBookmarkedAny
         <button className={`catalog-save ${saved ? 'saved' : ''}`} aria-label={`收藏${item.title}`} aria-pressed={!!saved} onClick={() => openBookmarkDialog(item)}><Heart size={17} fill={saved ? 'currentColor' : 'none'} /></button>
     </div>;
 }
-export function MagicBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initialType = '', initialRarity = '普通' }) {
-    const [query, setQuery] = useState(''), [type, setType] = useState(initialType), [rarity, setRarity] = useState(initialRarity), [attunement, setAttunement] = useState('');
+export function MagicBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initialType = '', initialRarity = '普通', initialQuery = '' }) {
+    const [query, setQuery] = useState(initialQuery), [type, setType] = useState(initialType), [rarity, setRarity] = useState(initialRarity), [attunement, setAttunement] = useState('');
     const [sort, setSort] = useState('rarity');
     const [selected, setSelected] = useState(null);
     const rarities = ['普通', '非普通', '珍稀', '极珍稀', '传说', '神器', '多种稀有度'];
@@ -76,8 +76,8 @@ export function MagicBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initial
         <p className="gear-count" role="status">显示 {items.length} / {magicItems.length} 件魔法物品</p><ul className="gear-grid">{items.map(item => <li key={item.id}><CatalogCard item={item} onClick={() => setSelected(item)} {...{openBookmarkDialog, isBookmarkedAnywhere}} /></li>)}</ul>{!items.length && <p className="gear-empty">没有符合条件的物品。</p>}{selected && <CatalogDialog item={selected} onClose={() => setSelected(null)} />}
     </section>;
 }
-export function WeaponBrowser({ openBookmarkDialog, isBookmarkedAnywhere }) {
-    const [query, setQuery] = useState(''), [category, setCategory] = useState(''), [mastery, setMastery] = useState('');
+export function WeaponBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initialQuery = '' }) {
+    const [query, setQuery] = useState(initialQuery), [category, setCategory] = useState(''), [mastery, setMastery] = useState('');
     const [sort, setSort] = useState('category');
     const [lightOnly, setLightOnly] = useState(false);
     const [priceRange, setPriceRange] = useState('');
@@ -123,7 +123,15 @@ export function WeaponBrowser({ openBookmarkDialog, isBookmarkedAnywhere }) {
     </section>;
 }
 export default function ItemCatalog(props) {
+    const [route] = useState(() => {
+        const params = new URLSearchParams(window.location.search);
+        const catalog = params.get('catalog');
+        return ['gear', 'magic', 'weapons'].includes(catalog)
+            ? { catalog, query: params.get('q') || '' }
+            : null;
+    });
     const [tab, setTab] = useState(() => {
+        if (route) return route.catalog;
         const saved = localStorage.getItem('item_catalog_tab');
         return ['gear', 'magic', 'weapons'].includes(saved) ? saved : 'weapons';
     });
@@ -131,5 +139,6 @@ export default function ItemCatalog(props) {
         setTab(id);
         localStorage.setItem('item_catalog_tab', id);
     };
-    return <div className="spell-browser-container p-4"><div className="spell-list-panel item-catalog-panel"><div className="catalog-tabs" role="tablist" aria-label="物品分类">{[['weapons','武器'],['gear','装备'],['magic','魔法物品']].map(([id,title]) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => selectTab(id)}>{title}</button>)}</div><div className="catalog-scroll" role="tabpanel">{tab === 'gear' ? <GearBrowser {...props} /> : tab === 'weapons' ? <WeaponBrowser {...props} /> : <MagicBrowser {...props} />}</div></div></div>;
+    const initialQuery = route?.catalog === tab ? route.query : '';
+    return <div className="spell-browser-container p-4"><div className="spell-list-panel item-catalog-panel"><div className="catalog-tabs" role="tablist" aria-label="物品分类">{[['weapons','武器'],['gear','装备'],['magic','魔法物品']].map(([id,title]) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => selectTab(id)}>{title}</button>)}</div><div className="catalog-scroll" role="tabpanel">{tab === 'gear' ? <GearBrowser {...props} initialQuery={initialQuery} /> : tab === 'weapons' ? <WeaponBrowser {...props} initialQuery={initialQuery} /> : <MagicBrowser {...props} initialQuery={initialQuery} initialRarity={initialQuery ? '' : undefined} />}</div></div></div>;
 }

@@ -3522,3 +3522,29 @@ select:disabled { opacity: 0.55; }
     flex-wrap: wrap;
   }
 }
+
+.mcp-guide-trigger { min-width: 44px; min-height: 44px; }
+.mcp-guide { width: min(36rem, calc(100% - 2rem)); }
+.mcp-guide-steps { padding-inline-start: 1.4rem; }
+.mcp-guide-steps li { margin-block: 0.45rem; }
+.mcp-guide-copy {
+  margin-block: 0.8rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border-color, currentColor);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.mcp-guide-copy .gear-reset {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent-gold);
+}
+.mcp-guide-prompt { margin: 0; white-space: pre-line; }
+.mcp-guide-status { min-height: 1.5em; margin: 0; }
+.mcp-guide :focus-visible, .mcp-guide-trigger:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+.mcp-guide-copy summary { cursor: pointer; }
+.mcp-guide-copy img { display: block; width: 100%; height: auto; border-radius: 6px; }
