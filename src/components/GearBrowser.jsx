@@ -16,7 +16,7 @@ function GearDialog({ item, currency, onClose }) {
         return () => { dialog.close(); previous?.focus(); };
     }, []);
     return createPortal(
-        <dialog ref={ref} className="gear-dialog" aria-labelledby="gear-dialog-title"
+        <dialog ref={ref} className="gear-dialog reference-dialog" aria-labelledby="gear-dialog-title"
             onCancel={event => { event.preventDefault(); onClose(); }}
             onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
             <div className="gear-dialog-surface">

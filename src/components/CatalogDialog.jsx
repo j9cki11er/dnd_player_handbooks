@@ -35,7 +35,7 @@ export default function CatalogDialog({ item, onClose, showCreature = false }) {
         }).catch(() => { if (!controller.signal.aborted) setContent('内容加载失败，请重试。'); });
         return () => { controller.abort(); dialog.close(); previous?.focus(); };
     }, [item, isSpell, showCreature]);
-    return createPortal(<dialog ref={ref} className="gear-dialog" aria-labelledby={titleId} onCancel={e => { e.preventDefault(); onClose(); }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}><div className="gear-dialog-surface">
+    return createPortal(<dialog ref={ref} className="gear-dialog reference-dialog" aria-labelledby={titleId} onCancel={e => { e.preventDefault(); onClose(); }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}><div className="gear-dialog-surface">
         <header className="gear-dialog-header">
             {isSpell ? (
                 <h2 id={titleId} className="spell-dialog-heading">

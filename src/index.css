@@ -2949,7 +2949,7 @@ body.light-theme { --weapon-row-bg: #ffffff; --weapon-row-alt-bg: #eef1f5; --wea
 }
 .catalog-card { position: relative; min-width: 0; transition: border-color 150ms; }
 .catalog-card:hover { border-color: var(--accent-gold); }
-.catalog-open { width: 100%; min-height: 86px; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 14px 16px; border: 0; background: transparent; color: var(--text-primary); text-align: left; font: inherit; cursor: pointer; }
+.catalog-open { width: 100%; min-height: 86px; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 8px 10px; border: 0; background: transparent; color: var(--text-primary); text-align: left; font: inherit; cursor: pointer; }
 .catalog-open .gear-name { padding-right: 26px; }
 .catalog-save { position: absolute; right: 4px; top: 1px; width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; color: var(--text-muted); cursor: pointer; }
 .catalog-save.saved { color: #ef4444; }
@@ -3116,7 +3116,7 @@ select:disabled { opacity: 0.55; }
 .spell-filter-bar { scrollbar-width: none; }
 .spell-filter-bar::-webkit-scrollbar { display: none; }
 
-.spell-card-name { font-size: 1rem; }
+.spell-card-name { font-size: 15.2px; }
 .spell-card-name .spell-level-badge,
 .spell-card-name .spell-card-title { font-size: inherit; }
 .spell-card-source { flex-shrink: 0; color: var(--text-muted); }
@@ -3550,7 +3550,6 @@ select:disabled { opacity: 0.55; }
 
   :is(.spell-browser-panel, .bookmark-group) .spell-card-name {
     gap: 4px;
-    font-size: .85rem;
   }
 
   :is(.spell-browser-panel, .bookmark-group) .spell-card-name .spell-level-badge {
@@ -3804,4 +3803,23 @@ select:disabled { opacity: 0.55; }
 @keyframes tab-page-fade-in {
   from { opacity: .45; }
   to { opacity: 1; }
+}
+
+.gear-dialog.reference-dialog {
+  --dialog-edge: 10px;
+  width: min(560px, calc(100% - 2 * max(var(--dialog-edge), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px))));
+  max-height: min(720px, calc(100dvh - 2 * max(var(--dialog-edge), env(safe-area-inset-top, 0px), env(safe-area-inset-bottom, 0px))));
+}
+
+.reference-dialog > .gear-dialog-surface {
+  padding: 12px;
+}
+
+.reference-dialog .gear-dialog-header {
+  gap: 8px;
+}
+
+.reference-dialog .gear-dialog-meta {
+  padding-block: 8px;
+  margin-block: 8px;
 }
