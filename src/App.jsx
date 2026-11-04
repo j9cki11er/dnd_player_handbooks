@@ -168,7 +168,7 @@ export default function App() {
 
   const {
     activeTab, setActiveTab, switchTab, selectedItem, setSelectedItem, currentPath, setCurrentPath,
-    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem: openItem, isExternalBack, showHandbookHint
+    detailStack, setDetailStack, expandedPaths, toggleExpand, navigateTo, handleBack, selectItem: openItem, isExternalBack, showHandbookHint, resetBrowser
   } = useNavigation({ categoryTree, spellData, featData, masteryData, invocationData, data });
 
   const selectItem = (item, push) => {
@@ -200,6 +200,11 @@ export default function App() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const scrollToTop = () => window.scrollTo({
+    top: 0,
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+  });
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
@@ -261,6 +266,7 @@ export default function App() {
     <div className="app-container">
       <TopBar
         activeTab={activeTab} selectedItem={selectedItem} currentPath={currentPath} detailStack={detailStack}
+        onHome={() => { resetBrowser(); window.scrollTo(0, 0); }}
         handleBack={handleBack} setActiveTab={setActiveTab} switchTab={switchTab} setSelectedItem={setSelectedItem} setDetailStack={setDetailStack}
         theme={theme} toggleTheme={toggleTheme}
       />
@@ -276,7 +282,7 @@ export default function App() {
       </aside>
 
       <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks' || activeTab === 'items') ? 'wide-view' : ''}`}>
-        <AnimatePresence mode="wait">
+        <div key={activeTab} className="tab-page-enter">
           {activeTab === 'browser' && <WelcomePanel chapters={CHAPTERS_TO_SHOW} expansions={EXPANSIONS_TO_SHOW} categoryTree={categoryTree} navigateTo={navigateTo} />}
           {activeTab === 'spells' && <SpellBrowser spellData={spellData} {...commonProps} />}
           {activeTab === 'items' && <ItemCatalog openBookmarkDialog={openBookmarkDialog} isBookmarkedAnywhere={isBookmarkedAnywhere} />}
@@ -294,7 +300,7 @@ export default function App() {
             />
           )}
           {activeTab === 'character' && showDev && <Suspense fallback={<p role="status">加载角色卡…</p>}><CharacterPanel /></Suspense>}
-        </AnimatePresence>
+        </div>
 
         <AnimatePresence>
           {detailStack.map((entry, index) => (
@@ -340,21 +346,19 @@ export default function App() {
       {creaturePreview && <CatalogDialog item={creaturePreview} showCreature onClose={() => setCreaturePreview(null)} />}
 
       {showHandbookHint && <div className="handbook-home-hint" role="status">快速点击两次回主页</div>}
-      {showScrollTop && detailStack.length === 0 && (
+      {!isMobile && showScrollTop && detailStack.length === 0 && (
         <button
           type="button"
           className="scroll-top-button"
           aria-label="回到顶部"
           title="回到顶部"
-          onClick={() => window.scrollTo({
-            top: 0,
-            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
-          })}
+          onClick={scrollToTop}
         >
           <span aria-hidden="true">↑</span>
         </button>
       )}
       <MobileNavBar
+        onScrollToTop={scrollToTop}
         activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} currentPath={currentPath} navigateTo={navigateTo}
         setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} setCurrentPath={setCurrentPath}
         theme={theme} toggleTheme={toggleTheme} showDev={showDev}

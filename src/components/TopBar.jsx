@@ -2,7 +2,7 @@ import { ArrowLeft, Search, Sun, Moon } from 'lucide-react';
 import McpGuide from "./McpGuide";
 
 
-export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, switchTab, theme, toggleTheme }) {
+export default function TopBar({ activeTab, selectedItem, currentPath, detailStack, handleBack, onHome, switchTab, theme, toggleTheme }) {
     const getTitle = () => {
         if (selectedItem) return selectedItem.title;
 
@@ -23,9 +23,13 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
     return (
         <header className="sticky-top-bar">
             <div className="top-bar-left">
-                {showBackButton && (
+                {showBackButton ? (
                     <button onClick={handleBack} className="top-bar-back-btn">
                         <ArrowLeft size={20} />
+                    </button>
+                ) : (
+                    <button type="button" className="top-bar-home" aria-label="返回主页" onClick={onHome}>
+                        <img src="/DFD logo-cropped.png" alt="" />
                     </button>
                 )}
                 <h1 className="top-bar-title">{getTitle()}</h1>
