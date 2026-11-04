@@ -1,6 +1,6 @@
 import React from 'react';
 import { isExpansionBook } from '../utils/expansions';
-import { Folder, FileText, ChevronRight, ChevronDown, Layout, Book, Backpack, Search, Heart, Sun, Moon, User } from 'lucide-react';
+import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Wand, Swords, Search, Heart, Sun, Moon, User } from 'lucide-react';
 import { NavItem } from './Common';
 
 
@@ -133,18 +133,18 @@ const SidebarContent = ({
 
             <nav className="nav-menu">
                 <NavItem
-                    icon={<Layout size={20} />}
+                    icon={<BookOpen size={20} />}
                     label="玩家手册"
                     active={activeTab === 'browser'}
                     onClick={() => switchTab('browser')}
                 />
                 <NavItem
-                    icon={<Book size={20} />}
+                    icon={<Wand size={20} />}
                     label="法术列表"
                     active={activeTab === 'spells'}
                     onClick={() => switchTab('spells')}
                 />
-                <NavItem icon={<Backpack size={20} />} label="武器装备" active={activeTab === 'items'} onClick={() => switchTab('items')} />
+                <NavItem icon={<Swords size={20} />} label="武器装备" active={activeTab === 'items'} onClick={() => switchTab('items')} />
                 {showDev && (
                     <NavItem
                         icon={<User size={20} />}

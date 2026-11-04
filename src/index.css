@@ -91,9 +91,9 @@ a {
   /* Higher than top bar for desktop */
 }
 
-/* Sticky Top Bar */
+/* Top Bar */
 .sticky-top-bar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 280px;
   right: 0;
@@ -175,7 +175,7 @@ a {
 .main-viewport {
   margin-left: 280px;
   margin-top: 60px;
-  /* Space for sticky top bar */
+  /* Space for the top bar */
   flex: 1;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -193,15 +193,16 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  box-sizing: border-box;
+  height: 68px;
   background: var(--logo-dark);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid var(--border-color);
   z-index: 5000;
-  padding: 0 1rem;
+  padding: 3px 1rem 0;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .mobile-nav-item {
@@ -214,7 +215,8 @@ a {
   color: #fff;
   font-size: 0.75rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  min-height: 44px;
   transition: all 0.2s;
 }
 
@@ -2581,16 +2583,52 @@ body.overlay-open .main-viewport .overflow-y-auto {
 }
 
 @media (max-width: 768px) {
-  .sticky-top-bar {
-    height: 56px;
-    padding: 0 1rem;
+  :root {
+    --mobile-header-height: 48px;
+    --mobile-nav-height: calc(48px + env(safe-area-inset-bottom, 0px));
   }
 
-  .main-viewport {
-    margin-top: 56px;
+  .sticky-top-bar {
+    height: var(--mobile-header-height);
+    padding-inline: 0.5rem;
+  }
+
+  .top-bar-left { min-width: 0; gap: 0.25rem; }
+  .top-bar-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  .top-bar-actions { flex-shrink: 0; gap: 2px; }
+  .sticky-top-bar button { min-width: 44px; min-height: 44px; }
+
+  .mobile-navbar {
+    box-sizing: border-box;
+    height: var(--mobile-nav-height);
+    padding: 3px 0.35rem env(safe-area-inset-bottom, 0px);
+    gap: 4px;
+  }
+
+  .mobile-nav-item {
+    flex: 1 1 0;
+    justify-content: flex-start;
+    min-height: 44px;
+    gap: 2px;
+    padding: 2px;
+    border-radius: 8px;
+  }
+
+  .mobile-nav-item svg { width: 17px; height: 17px; }
+  .mobile-nav-item span { white-space: nowrap; font-size: 0.7rem; line-height: 1.2; }
+  .mobile-nav-item.active { background: color-mix(in srgb, var(--logo-gold) 12%, transparent); }
+
+  .main-viewport,
+  .main-viewport.wide-view {
+    margin-top: var(--mobile-header-height);
+    min-height: calc(100vh - var(--mobile-header-height));
     padding: 0.75rem;
-    padding-bottom: 80px;
-    /* Space for mobile nav */
+    padding-bottom: calc(var(--mobile-nav-height) + 0.75rem);
   }
 
   .bookmark-group .item-grid {
@@ -2688,17 +2726,17 @@ body.overlay-open .main-viewport .overflow-y-auto {
   }
 
   .detail-overlay-content {
-    margin-top: 60px;
+    margin-top: var(--mobile-header-height);
   }
 
   .detail-overlay {
     top: 0;
     bottom: 0;
-    padding-bottom: 70px;
+    padding-bottom: var(--mobile-nav-height);
   }
 
   .modal-overlay {
-    padding-bottom: 80px;
+    padding-bottom: calc(var(--mobile-nav-height) + 0.75rem);
   }
 
   .view-header .flex-wrap {
@@ -3012,7 +3050,7 @@ select:disabled { opacity: 0.55; }
 .spell-filter-header,
 .item-catalog-panel .gear-filters {
   position: sticky;
-  top: 60px;
+  top: 0;
   z-index: 6;
   background: var(--bg-primary);
   border-radius: 12px;
@@ -3025,7 +3063,7 @@ select:disabled { opacity: 0.55; }
 .spell-filter-bar > * { flex-shrink: 0; }
 .spell-filter-bar .filter-search { min-width: 140px; }
 @media (max-width: 768px) {
-  .spell-filter-header, .item-catalog-panel .gear-filters { top: 56px; }
+  .spell-filter-header, .item-catalog-panel .gear-filters { top: var(--mobile-header-height); }
 }
 .spell-ritual-filter { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font-size: 0.8rem; white-space: nowrap; }
 .spell-ritual-filter input { accent-color: var(--accent-gold); }
@@ -3474,7 +3512,7 @@ select:disabled { opacity: 0.55; }
 .handbook-home-hint {
   position: fixed;
   inset-inline-start: 50%;
-  bottom: calc(5rem + env(safe-area-inset-bottom));
+  bottom: calc(var(--mobile-nav-height, 68px) + 0.625rem);
   transform: translateX(-50%);
   z-index: 2000;
   padding: .45rem .85rem;
@@ -3510,6 +3548,27 @@ select:disabled { opacity: 0.55; }
   }
 
   :is(.spell-browser-panel, .bookmark-group) .spell-card-name {
+
+.scroll-top-button {
+  position: fixed;
+  inset-inline-end: 1rem;
+  bottom: 1rem;
+  z-index: 901;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--accent-gold);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  .scroll-top-button {
+    bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
     gap: 4px;
     font-size: .85rem;
   }

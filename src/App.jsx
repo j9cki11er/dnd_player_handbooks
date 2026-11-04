@@ -201,6 +201,14 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const update = () => setShowScrollTop(window.scrollY > 300);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
+
   // Reset scroll to top when tab changes on mobile
   useEffect(() => {
     if (isMobile) {
@@ -332,6 +340,20 @@ export default function App() {
       {creaturePreview && <CatalogDialog item={creaturePreview} showCreature onClose={() => setCreaturePreview(null)} />}
 
       {showHandbookHint && <div className="handbook-home-hint" role="status">快速点击两次回主页</div>}
+      {showScrollTop && detailStack.length === 0 && (
+        <button
+          type="button"
+          className="scroll-top-button"
+          aria-label="回到顶部"
+          title="回到顶部"
+          onClick={() => window.scrollTo({
+            top: 0,
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+          })}
+        >
+          <span aria-hidden="true">↑</span>
+        </button>
+      )}
       <MobileNavBar
         activeTab={activeTab} setActiveTab={setActiveTab} switchTab={switchTab} currentPath={currentPath} navigateTo={navigateTo}
         setSelectedItem={setSelectedItem} setDetailStack={setDetailStack} setCurrentPath={setCurrentPath}
