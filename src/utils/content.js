@@ -146,6 +146,9 @@ export function prepareContent(html) {
         return ['black', 'rgb(0, 0, 0)'].includes(probe.style.color.toLowerCase());
     };
     const themeColors = {
+        'white': '--text-primary',
+        'rgb(255, 255, 255)': '--text-primary',
+        'rgb(128, 128, 128)': '--text-muted',
         'rgb(0, 128, 0)': '--content-green',
         'rgb(0, 128, 128)': '--content-green',
         'rgb(0, 0, 128)': '--content-blue',
