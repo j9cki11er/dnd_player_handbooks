@@ -3,11 +3,11 @@ import { ArrowUp, BookOpen, Swords, Heart, User } from 'lucide-react';
 import SpellStaffIcon from './SpellStaffIcon';
 
 const navigation = [
-    { id: 'browser', label: '玩家手册', Icon: BookOpen, mascot: 3, mascotY: '30%' },
-    { id: 'spells', label: '法术列表', Icon: SpellStaffIcon, mascot: 6, mascotY: '35%' },
-    { id: 'items', label: '武器装备', Icon: Swords, mascot: 5, mascotY: '30%' },
+    { id: 'browser', label: '玩家手册', Icon: BookOpen, mascot: 3 },
+    { id: 'spells', label: '法术列表', Icon: SpellStaffIcon, mascot: 6 },
+    { id: 'items', label: '武器装备', Icon: Swords, mascot: 5 },
     { id: 'character', label: '角色卡', Icon: User },
-    { id: 'bookmarks', label: '我的收藏', Icon: Heart, mascot: 2, mascotY: '49%' }
+    { id: 'bookmarks', label: '我的收藏', Icon: Heart, mascot: 2 }
 ];
 
 export default function MobileNavBar({ activeTab, switchTab, showDev, onScrollToTop }) {
@@ -19,7 +19,7 @@ export default function MobileNavBar({ activeTab, switchTab, showDev, onScrollTo
             style={{ '--nav-active-x': `${(Math.max(0, activeIndex) + 0.5) * 100 / (tabs.length + 1)}%` }}
             data-has-active={activeIndex >= 0}>
             <span className="mobile-nav-indicator" aria-hidden="true" />
-            {tabs.map(({ id, label, Icon, mascot, mascotY }) => (
+            {tabs.map(({ id, label, Icon, mascot }) => (
                 <button key={id} type="button"
                     className={`mobile-nav-item ${activeTab === id ? 'active' : ''}`}
                     aria-label={label}
@@ -27,7 +27,7 @@ export default function MobileNavBar({ activeTab, switchTab, showDev, onScrollTo
                     onClick={() => switchTab(id)}>
                     {activeTab === id && mascot ? (
                         <span className="mobile-nav-mascot" aria-hidden="true"
-                            style={{ '--mascot-art': `url(/dfdnono/dfdnono${mascot}.webp)`, '--mascot-y': mascotY }} />
+                            style={{ '--mascot-art': `url(/dfdnono/dfdnono${mascot}.webp)` }} />
                     ) : (
                         <span className="mobile-nav-icon"><Icon size={23} /></span>
                     )}

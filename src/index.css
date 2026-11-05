@@ -4098,9 +4098,8 @@ body.light-theme :is(.spell-filter-header, .item-catalog-panel .gear-filters,
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-  border-radius: 12px;
   translate: 0 -10px;
-  background: var(--mascot-art) 50% var(--mascot-y) / 145% no-repeat;
+  background: var(--mascot-art) center / contain no-repeat;
   animation: mobile-nav-mascot-enter 240ms ease-out both;
 }
 
