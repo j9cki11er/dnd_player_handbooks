@@ -12,10 +12,22 @@ import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
 
 
 
+function showConditionDialog(card) {
+    const dialog = card.closest('.dnd-content').querySelector('.condition-dialog');
+    dialog.querySelector('h3').replaceChildren(...card.querySelector('h3').cloneNode(true).childNodes);
+    const art = card.querySelector('.condition-art-frame').cloneNode(true);
+    art.querySelector('img').loading = 'eager';
+    dialog.querySelector('.condition-dialog-art').replaceChildren(art);
+    const rules = card.querySelector('.condition-card-body').cloneNode(true);
+    dialog.querySelector('.condition-dialog-rules').replaceChildren(...rules.childNodes);
+    dialog.showModal();
+    dialog.scrollTop = 0;
+}
+
 function scrollToContentAnchor(event) {
     const toggle = event.target.closest('.condition-card-toggle');
     if (toggle) {
-        toggle.setAttribute('aria-expanded', String(toggle.getAttribute('aria-expanded') !== 'true'));
+        showConditionDialog(toggle.closest('.condition-card'));
         return;
     }
     const link = event.target.closest('a[href^="#"]');
@@ -26,10 +38,10 @@ function scrollToContentAnchor(event) {
     event.preventDefault();
     const conditionToggle = target.closest('.condition-card')?.querySelector('.condition-card-toggle');
     if (conditionToggle?.getClientRects().length) {
-        conditionToggle.setAttribute('aria-expanded', 'true');
-        conditionToggle.focus({ preventScroll: true });
+        showConditionDialog(conditionToggle.closest('.condition-card'));
+        return;
     }
-    (target.closest('.condition-card') || target).scrollIntoView({ block: 'start' });
+    (target.closest('.condition-card-header') || target).scrollIntoView({ block: 'start' });
 }
 
 export default function DetailScreen({

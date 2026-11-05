@@ -41,6 +41,25 @@ function layoutGroupedRollTable(table, rows, labels) {
     table.replaceWith(grid);
 }
 
+// Scale and offset measured from each illustration’s visible alpha bounds.
+const conditionArtCrop = {
+    Blinded: [1.2470, '-3.32%', '1.86%'],
+    Charmed: [1.1531, '-0.28%', '0.96%'],
+    Deafened: [1.1602, '-7.02%', '4.19%'],
+    Exhaustion: [1.1142, '-4.27%', '-5.77%'],
+    Frightened: [1.3391, '6.21%', '0.62%'],
+    Grappled: [1.0196, '-3.88%', '-3.14%'],
+    Incapacitated: [1.1948, '-0.58%', '11.06%'],
+    Invisible: [1.3967, '9.17%', '-1.47%'],
+    Paralyzed: [1.7098, '0.00%', '23.04%'],
+    Petrified: [1.2047, '-2.88%', '4.47%'],
+    Poisoned: [1.1850, '-1.97%', '5.79%'],
+    Prone: [1.0124, '-0.32%', '0.22%'],
+    Restrained: [1.2315, '10.22%', '2.77%'],
+    Stunned: [1.1717, '0.17%', '5.49%'],
+    Unconscious: [1.0168, '0.32%', '-2.76%']
+};
+
 function layoutConditionCards(document) {
     const overview = document.getElementById('Condition');
     if (!overview) return;
@@ -50,10 +69,10 @@ function layoutConditionCards(document) {
     if (!headings.length) return;
 
     const grid = document.createElement('div');
-    grid.className = 'condition-masonry';
+    grid.className = 'condition-grid';
     headings[0].before(grid);
 
-    const anchors = new Map();
+    const names = new Set();
     for (const heading of headings) {
         const card = document.createElement('article');
         card.className = 'condition-card';
@@ -68,6 +87,17 @@ function layoutConditionCards(document) {
         image.decoding = 'async';
         image.alt = '';
 
+        const art = document.createElement('div');
+        art.className = 'condition-art-frame';
+        const crop = conditionArtCrop[heading.id];
+        if (crop) {
+            const [scale, x, y] = crop;
+            art.style.setProperty('--art-scale', scale);
+            art.style.setProperty('--art-x', x);
+            art.style.setProperty('--art-y', y);
+        }
+        art.append(image);
+
         const body = document.createElement('div');
         body.className = 'condition-card-body';
         const content = [];
@@ -78,8 +108,7 @@ function layoutConditionCards(document) {
         titleEn.textContent = heading.id;
         heading.textContent = heading.textContent.trim().split(/\s/)[0];
         heading.append(titleEn);
-        anchors.set(heading.firstChild.textContent, heading.id);
-        body.id = `condition-rules-${heading.id}`;
+        names.add(heading.firstChild.textContent);
         body.append(...content);
 
         const header = document.createElement('div');
@@ -88,27 +117,23 @@ function layoutConditionCards(document) {
         toggle.type = 'button';
         toggle.className = 'condition-card-toggle';
         toggle.setAttribute('aria-label', heading.firstChild.textContent);
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-controls', body.id);
-        header.append(image, heading, toggle);
+        toggle.setAttribute('aria-haspopup', 'dialog');
+        header.append(art, heading, toggle);
         card.append(header, body);
         grid.append(card);
     }
 
-    const index = Array.from(document.body.querySelectorAll('table')).find(table =>
-        (table.compareDocumentPosition(grid) & Node.DOCUMENT_POSITION_FOLLOWING) &&
-        Array.from(table.querySelectorAll('td')).every(cell => anchors.has(cell.textContent.trim()))
-    );
-    if (!index) return;
-    index.classList.add('condition-index');
-    index.setAttribute('aria-label', '状态索引');
-    for (const cell of index.querySelectorAll('td')) {
-        const label = cell.textContent.trim();
-        const link = document.createElement('a');
-        link.href = `#${anchors.get(label)}`;
-        link.textContent = label;
-        cell.replaceChildren(link);
-    }
+    const dialog = document.createElement('dialog');
+    dialog.className = 'condition-dialog';
+    dialog.setAttribute('aria-labelledby', 'condition-dialog-title');
+    dialog.innerHTML = '<form method="dialog"><h3 id="condition-dialog-title"></h3><button type="submit" aria-label="关闭">×</button></form><div class="condition-dialog-art"></div><div class="condition-dialog-rules"></div>';
+    grid.after(dialog);
+
+    const index = Array.from(document.body.querySelectorAll('table')).find(table => {
+        const cells = Array.from(table.querySelectorAll('td'));
+        return cells.length === names.size && cells.every(cell => names.has(cell.textContent.trim()));
+    });
+    index?.remove();
 }
 
 // Legacy CHM pages carry presentational colors that conflict with app themes.

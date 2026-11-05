@@ -3488,6 +3488,7 @@ select:disabled { opacity: 0.55; }
 .spell-filter-header,
 .item-catalog-panel .gear-filters,
 .spell-card-wrapper,
+.condition-card,
 .item-card,
 .item-catalog-panel .catalog-card {
   --text-primary: #f5f5f5;
@@ -3900,23 +3901,19 @@ select:disabled { opacity: 0.55; }
   text-align: center;
 }
 
-.condition-masonry {
-  columns: 14rem 4;
-  column-gap: 14px;
+.condition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
   margin-top: 16px;
 }
 
 .condition-card {
-  break-inside: avoid;
-  margin: 0 0 14px;
-  border: 1px solid var(--glass-border);
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--border-color);
   border-radius: 12px;
-  background: #3a3a3a;
   overflow: hidden;
-}
-
-.light-theme .condition-card {
-  background: var(--glass-bg);
 }
 
 .dnd-content .condition-card-art {
@@ -3928,77 +3925,94 @@ select:disabled { opacity: 0.55; }
   margin: 0;
 }
 
-.condition-card-body {
-  padding: 0 14px 14px;
+.condition-card-body { display: none; }
+
+.condition-card-header {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .dnd-content .condition-card h3 {
   margin: 0;
-  padding: 0 14px 10px;
+  padding: 0 4px 8px;
+  font-size: .95rem;
+  text-align: center;
 }
 
 .condition-card h3 small {
   display: block;
   color: var(--text-muted);
-  font-size: .8rem;
+  font-size: .75rem;
+  overflow-wrap: anywhere;
 }
 
-.dnd-content .condition-card p:last-child {
-  margin-bottom: 0;
-}
-
-.dnd-content .condition-index {
+.condition-card-toggle {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  table-layout: fixed;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
 }
 
-.dnd-content .condition-index td {
-  width: auto;
-  padding: 0;
+.condition-card-toggle:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: -3px; }
+
+.condition-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(36rem, calc(100vw - 24px));
+  max-height: calc(100dvh - 32px);
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
-.dnd-content .condition-index a {
-  display: grid;
-  place-items: center;
+.condition-dialog::backdrop { background: #0009; }
+.condition-dialog form { display: flex; align-items: center; justify-content: space-between; }
+.dnd-content .condition-dialog h3 { margin: 0; }
+.condition-dialog h3 small { display: block; color: var(--text-muted); }
+.condition-dialog button {
+  min-width: 44px;
   min-height: 44px;
-  color: var(--accent-gold);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.condition-card-header { position: relative; }
-.condition-card-toggle { display: none; }
+.condition-dialog-art {
+  width: min(100%, 12rem);
+  margin: 0 auto 8px;
+}
+
+@media (min-width: 769px) {
+  .condition-dialog[open] {
+    display: grid;
+    grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .condition-dialog form { grid-column: 1 / -1; }
+
+  .condition-dialog-art {
+    align-self: center;
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 768px) {
-  .condition-masonry { columns: 1; }
-
-  .condition-card-toggle {
-    display: block;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    border: 0;
-    border-radius: 12px;
-    background: transparent;
-    color: var(--accent-gold);
-    cursor: pointer;
+  .condition-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
   }
-
-  .condition-card-toggle::after {
-    content: '';
-    position: absolute;
-    right: 16px;
-    bottom: 22px;
-    width: 8px;
-    height: 8px;
-    border: solid currentColor;
-    border-width: 0 2px 2px 0;
-    rotate: 45deg;
-  }
-
-  .condition-card-toggle[aria-expanded="true"]::after { rotate: 225deg; }
-  .condition-card-toggle:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: -3px; }
-  .condition-card-header:has(.condition-card-toggle[aria-expanded="false"]) + .condition-card-body { display: none; }
 }
 
 .welcome-directory .welcome-four-grid {
@@ -4031,4 +4045,14 @@ select:disabled { opacity: 0.55; }
   display: block;
   width: 100%;
   white-space: nowrap;
+}
+
+.condition-art-frame {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.condition-art-frame .condition-card-art {
+  transform: translate(var(--art-x, 0%), var(--art-y, 0%)) scale(var(--art-scale, 1));
 }
