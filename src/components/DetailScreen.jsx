@@ -13,13 +13,23 @@ import { ItemCard, WeaponTable, CollapsibleSection } from './Common';
 
 
 function scrollToContentAnchor(event) {
+    const toggle = event.target.closest('.condition-card-toggle');
+    if (toggle) {
+        toggle.setAttribute('aria-expanded', String(toggle.getAttribute('aria-expanded') !== 'true'));
+        return;
+    }
     const link = event.target.closest('a[href^="#"]');
     if (!link) return;
     const id = link.getAttribute('href').slice(1);
     const target = Array.from(event.currentTarget.querySelectorAll('[id]')).find(node => node.id === id);
     if (!target) return;
     event.preventDefault();
-    target.scrollIntoView({ block: 'start' });
+    const conditionToggle = target.closest('.condition-card')?.querySelector('.condition-card-toggle');
+    if (conditionToggle?.getClientRects().length) {
+        conditionToggle.setAttribute('aria-expanded', 'true');
+        conditionToggle.focus({ preventScroll: true });
+    }
+    (target.closest('.condition-card') || target).scrollIntoView({ block: 'start' });
 }
 
 export default function DetailScreen({

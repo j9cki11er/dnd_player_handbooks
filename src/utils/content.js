@@ -41,6 +41,76 @@ function layoutGroupedRollTable(table, rows, labels) {
     table.replaceWith(grid);
 }
 
+function layoutConditionCards(document) {
+    const overview = document.getElementById('Condition');
+    if (!overview) return;
+
+    const headings = Array.from(document.body.querySelectorAll('h3[id]'))
+        .filter(heading => heading.textContent.trim().endsWith('【状态】'));
+    if (!headings.length) return;
+
+    const grid = document.createElement('div');
+    grid.className = 'condition-masonry';
+    headings[0].before(grid);
+
+    const anchors = new Map();
+    for (const heading of headings) {
+        const card = document.createElement('article');
+        card.className = 'condition-card';
+        card.setAttribute('aria-labelledby', heading.id);
+
+        const image = document.createElement('img');
+        image.className = 'condition-card-art';
+        image.src = `/condition/${heading.id}.webp`;
+        image.width = 2048;
+        image.height = 2048;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        image.alt = '';
+
+        const body = document.createElement('div');
+        body.className = 'condition-card-body';
+        const content = [];
+        for (let node = heading.nextSibling; node && !/^H[1-6]$/.test(node.nodeName); node = node.nextSibling) {
+            content.push(node);
+        }
+        const titleEn = document.createElement('small');
+        titleEn.textContent = heading.id;
+        heading.textContent = heading.textContent.trim().split(/\s/)[0];
+        heading.append(titleEn);
+        anchors.set(heading.firstChild.textContent, heading.id);
+        body.id = `condition-rules-${heading.id}`;
+        body.append(...content);
+
+        const header = document.createElement('div');
+        header.className = 'condition-card-header';
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'condition-card-toggle';
+        toggle.setAttribute('aria-label', heading.firstChild.textContent);
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-controls', body.id);
+        header.append(image, heading, toggle);
+        card.append(header, body);
+        grid.append(card);
+    }
+
+    const index = Array.from(document.body.querySelectorAll('table')).find(table =>
+        (table.compareDocumentPosition(grid) & Node.DOCUMENT_POSITION_FOLLOWING) &&
+        Array.from(table.querySelectorAll('td')).every(cell => anchors.has(cell.textContent.trim()))
+    );
+    if (!index) return;
+    index.classList.add('condition-index');
+    index.setAttribute('aria-label', '状态索引');
+    for (const cell of index.querySelectorAll('td')) {
+        const label = cell.textContent.trim();
+        const link = document.createElement('a');
+        link.href = `#${anchors.get(label)}`;
+        link.textContent = label;
+        cell.replaceChildren(link);
+    }
+}
+
 // Legacy CHM pages carry presentational colors that conflict with app themes.
 export function prepareContent(html) {
     const document = new DOMParser().parseFromString(html, 'text/html');
@@ -132,6 +202,7 @@ export function prepareContent(html) {
         scroll.tabIndex = 0;
         table.before(scroll); scroll.append(table);
     }
+    layoutConditionCards(document);
     return document.body.innerHTML;
 }
 

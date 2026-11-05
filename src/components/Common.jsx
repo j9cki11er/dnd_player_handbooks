@@ -85,7 +85,7 @@ export function ConfirmModal({ title, message, onConfirm, onClose, confirmText =
     );
 }
 
-export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, lightweight = false }) {
+export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, lightweight = false, categoryLabel }) {
     const handleBookmarkClick = (e) => {
         e.stopPropagation();
         openBookmarkDialog(item);
@@ -127,7 +127,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
         >
             <div className="card-top">
                 <div className="flex flex-col overflow-hidden mr-8 flex-1 min-w-0">
-                    <span className="card-category truncate">{displayCategory}{item?.legacy && <> · Legacy</>}</span>
+                    <span className="card-category truncate">{categoryLabel ?? displayCategory}{item?.legacy && <> · Legacy</>}</span>
                 </div>
                 <div className="item-card-actions">
                     {item?.isDir && <Folder size={14} className="text-gold opacity-50 mr-2" />}

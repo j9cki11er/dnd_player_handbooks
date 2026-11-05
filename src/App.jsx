@@ -284,7 +284,8 @@ export default function App() {
 
       <main className={`main-viewport ${(activeTab === 'spells' || activeTab === 'bookmarks' || activeTab === 'items') ? 'wide-view' : ''}`}>
         <div key={activeTab} className="tab-page-enter">
-          {activeTab === 'browser' && <WelcomePanel chapters={CHAPTERS_TO_SHOW} expansions={EXPANSIONS_TO_SHOW} categoryTree={categoryTree} navigateTo={navigateTo} />}
+          {activeTab === 'browser' && <WelcomePanel chapters={CHAPTERS_TO_SHOW} expansions={EXPANSIONS_TO_SHOW} categoryTree={categoryTree} navigateTo={navigateTo}
+            {...{selectItem, isBookmarkedAnywhere, openBookmarkDialog}} />}
           {activeTab === 'spells' && <SpellBrowser spellData={spellData} {...commonProps} />}
           {activeTab === 'items' && <ItemCatalog openBookmarkDialog={openBookmarkDialog} isBookmarkedAnywhere={isBookmarkedAnywhere} />}
           {activeTab === 'search' && <SearchPanel searchResults={searchResults} {...commonProps} />}

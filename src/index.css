@@ -824,7 +824,6 @@ a {
 
 /* Welcome Panel */
 .welcome-panel {
-  /* padding: 5rem; */
   text-align: center;
 }
 
@@ -862,6 +861,8 @@ a {
 
 .welcome-directory .item-grid .item-card {
   flex-direction: column;
+  text-align: start;
+  padding: 0.75rem;
 }
 
 
@@ -3897,4 +3898,137 @@ select:disabled { opacity: 0.55; }
   background: var(--glass-bg);
   color: var(--text-secondary);
   text-align: center;
+}
+
+.condition-masonry {
+  columns: 14rem 4;
+  column-gap: 14px;
+  margin-top: 16px;
+}
+
+.condition-card {
+  break-inside: avoid;
+  margin: 0 0 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  background: #3a3a3a;
+  overflow: hidden;
+}
+
+.light-theme .condition-card {
+  background: var(--glass-bg);
+}
+
+.dnd-content .condition-card-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0;
+}
+
+.condition-card-body {
+  padding: 0 14px 14px;
+}
+
+.dnd-content .condition-card h3 {
+  margin: 0;
+  padding: 0 14px 10px;
+}
+
+.condition-card h3 small {
+  display: block;
+  color: var(--text-muted);
+  font-size: .8rem;
+}
+
+.dnd-content .condition-card p:last-child {
+  margin-bottom: 0;
+}
+
+.dnd-content .condition-index {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.dnd-content .condition-index td {
+  width: auto;
+  padding: 0;
+}
+
+.dnd-content .condition-index a {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  color: var(--accent-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.condition-card-header { position: relative; }
+.condition-card-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .condition-masonry { columns: 1; }
+
+  .condition-card-toggle {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--accent-gold);
+    cursor: pointer;
+  }
+
+  .condition-card-toggle::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    bottom: 22px;
+    width: 8px;
+    height: 8px;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    rotate: 45deg;
+  }
+
+  .condition-card-toggle[aria-expanded="true"]::after { rotate: 225deg; }
+  .condition-card-toggle:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: -3px; }
+  .condition-card-header:has(.condition-card-toggle[aria-expanded="false"]) + .condition-card-body { display: none; }
+}
+
+.welcome-directory .welcome-four-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.welcome-directory .welcome-chapter-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  min-height: 72px;
+  text-align: start;
+  font: inherit;
+}
+
+.welcome-chapter-prefix {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 1024px) {
+  .welcome-directory .welcome-four-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.welcome-directory .card-title {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
 }
