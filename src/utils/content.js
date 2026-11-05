@@ -60,12 +60,16 @@ const conditionArtCrop = {
     Unconscious: [1.0168, '0.32%', '-2.76%']
 };
 
-function layoutConditionCards(document) {
-    const overview = document.getElementById('Condition');
-    if (!overview) return;
+function layoutGlossaryCards(document) {
+    const sections = { Condition: '状态', Action: '动作', Hazard: '危害', Area_of_Effect: '效应区域' };
+    const overview = document.body.firstElementChild?.matches('h3[id]')
+        ? document.body.firstElementChild
+        : document.body.querySelector('h3[id]');
+    const section = sections[overview?.id];
+    if (!section) return;
 
     const headings = Array.from(document.body.querySelectorAll('h3[id]'))
-        .filter(heading => heading.textContent.trim().endsWith('【状态】'));
+        .filter(heading => heading.textContent.trim().replace(/\s+】$/, '】').endsWith(`【${section}】`));
     if (!headings.length) return;
 
     const grid = document.createElement('div');
@@ -78,26 +82,6 @@ function layoutConditionCards(document) {
         card.className = 'condition-card';
         card.setAttribute('aria-labelledby', heading.id);
 
-        const image = document.createElement('img');
-        image.className = 'condition-card-art';
-        image.src = `/condition/${heading.id}.webp`;
-        image.width = 2048;
-        image.height = 2048;
-        image.loading = 'lazy';
-        image.decoding = 'async';
-        image.alt = '';
-
-        const art = document.createElement('div');
-        art.className = 'condition-art-frame';
-        const crop = conditionArtCrop[heading.id];
-        if (crop) {
-            const [scale, x, y] = crop;
-            art.style.setProperty('--art-scale', scale);
-            art.style.setProperty('--art-x', x);
-            art.style.setProperty('--art-y', y);
-        }
-        art.append(image);
-
         const body = document.createElement('div');
         body.className = 'condition-card-body';
         const content = [];
@@ -105,8 +89,9 @@ function layoutConditionCards(document) {
             content.push(node);
         }
         const titleEn = document.createElement('small');
-        titleEn.textContent = heading.id;
-        heading.textContent = heading.textContent.trim().split(/\s/)[0];
+        const [title, ...english] = heading.textContent.split('【')[0].trim().split(/\s+/);
+        titleEn.textContent = english.join(' ');
+        heading.textContent = title;
         heading.append(titleEn);
         names.add(heading.firstChild.textContent);
         body.append(...content);
@@ -118,7 +103,27 @@ function layoutConditionCards(document) {
         toggle.className = 'condition-card-toggle';
         toggle.setAttribute('aria-label', heading.firstChild.textContent);
         toggle.setAttribute('aria-haspopup', 'dialog');
-        header.append(art, heading, toggle);
+        const crop = overview.id === 'Condition' ? conditionArtCrop[heading.id] : null;
+        if (crop) {
+            const image = document.createElement('img');
+            image.className = 'condition-card-art';
+            image.src = `/condition/${heading.id}.webp`;
+            image.width = 2048;
+            image.height = 2048;
+            image.loading = 'lazy';
+            image.decoding = 'async';
+            image.alt = '';
+
+            const art = document.createElement('div');
+            art.className = 'condition-art-frame';
+            const [scale, x, y] = crop;
+            art.style.setProperty('--art-scale', scale);
+            art.style.setProperty('--art-x', x);
+            art.style.setProperty('--art-y', y);
+            art.append(image);
+            header.append(art);
+        }
+        header.append(heading, toggle);
         card.append(header, body);
         grid.append(card);
     }
@@ -230,7 +235,7 @@ export function prepareContent(html) {
         scroll.tabIndex = 0;
         table.before(scroll); scroll.append(table);
     }
-    layoutConditionCards(document);
+    layoutGlossaryCards(document);
     return document.body.innerHTML;
 }
 

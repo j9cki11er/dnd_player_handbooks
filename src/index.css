@@ -3903,7 +3903,7 @@ body.light-theme :is(.spell-filter-header, .item-catalog-panel .gear-filters,
 
 .condition-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
   margin-top: 16px;
 }
@@ -3994,7 +3994,7 @@ body.light-theme :is(.spell-filter-header, .item-catalog-panel .gear-filters,
 }
 
 @media (min-width: 769px) {
-  .condition-dialog[open] {
+  .condition-dialog[open]:has(.condition-dialog-art img) {
     display: grid;
     grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
     column-gap: 14px;
@@ -4053,9 +4053,24 @@ body.light-theme :is(.spell-filter-header, .item-catalog-panel .gear-filters,
   overflow: hidden;
 }
 
+.condition-card .condition-art-frame {
+  width: 70%;
+}
+
 .condition-art-frame .condition-card-art {
   transform: translate(var(--art-x, 0%), var(--art-y, 0%)) scale(var(--art-scale, 1));
 }
+
+
+.condition-card-header:not(:has(.condition-art-frame)) {
+  min-height: 64px;
+}
+
+.dnd-content .condition-card-header:not(:has(.condition-art-frame)) h3 {
+  padding-block: 8px;
+}
+
+.condition-dialog-art:empty { display: none; }
 
 .light-theme .mobile-navbar {
   background: color-mix(in srgb, var(--bg-secondary) 82%, transparent);
