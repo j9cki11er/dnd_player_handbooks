@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const expansionKey = 'dnd-bookmark-expansion';
+const recentFolderWindow = 5 * 60 * 1000;
 
 function readExpansion() {
     try {
@@ -19,6 +20,7 @@ export function useBookmarks() {
         ]));
     });
     const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
+    const recentFolder = useRef(null);
     const [pendingBookmark, setPendingBookmark] = useState(null);
     const [expandedFolders, setExpandedFolders] = useState(() => readExpansion().folders ?? {});
     const [expandedCategories, setExpandedCategories] = useState(() => readExpansion().categories ?? {});
@@ -42,6 +44,9 @@ export function useBookmarks() {
     }, [expandedFolders, expandedCategories]);
 
     const toggleBookmark = (id, folder) => {
+        if (bookmarks[folder] && !bookmarks[folder].includes(id)) {
+            recentFolder.current = { folder, savedAt: Date.now() };
+        }
         setBookmarks(prev => {
             const folderItems = prev[folder] || [];
             const isAlreadyInThisFolder = folderItems.includes(id);
@@ -161,7 +166,10 @@ export function useBookmarks() {
     };
 
     const openBookmarkDialog = item => {
-        setPendingBookmark(item);
+        const recent = recentFolder.current;
+        const suggestedFolder = recent && Date.now() - recent.savedAt < recentFolderWindow &&
+            Object.hasOwn(bookmarks, recent.folder) ? recent.folder : null;
+        setPendingBookmark({ ...item, suggestedFolder });
         setIsBookmarkModalOpen(true);
     };
 

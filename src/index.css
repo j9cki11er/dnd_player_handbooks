@@ -2,6 +2,7 @@
 
 :root {
   font-size: var(--handbook-text-size, 100%);
+  --background-tile-width: clamp(60px, 200vw, 200px);
   --top-bar-height: 42px;
   --bg-primary: #3A3A3A;
   --bg-secondary: #3A3A3A;
@@ -60,11 +61,11 @@ body {
   color: var(--text-primary);
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
-  background-repeat: no-repeat;
+  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfdbackground.webp');
+  background-repeat: no-repeat, repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: bottom;
+  background-size: cover, var(--background-tile-width) auto;
+  background-position: top left;
 }
 
 :where(h1, h2, h3, h4, h5, h6, b, strong, th, optgroup) {
@@ -1575,10 +1576,10 @@ body.overlay-open .main-viewport .overflow-y-auto {
   z-index: 1500;
   background-color: var(--bg-primary);
   /* Paint on the fixed panel, independently of expanding/scrolling content. */
-  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfdbackground.webp');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, var(--background-tile-width) auto;
+  background-position: top left;
   display: flex;
   flex-direction: column;
   /* box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3); */
@@ -2658,11 +2659,6 @@ body.overlay-open .main-viewport .overflow-y-auto {
   .bookmark-group .item-grid>* {
     width: calc(50% - 0.375rem);
     flex-shrink: 0;
-  }
-
-  body,
-  .detail-overlay {
-    background-image: linear-gradient(var(--glass-bg), var(--glass-bg)), url('/dfd_background_mobile.webp') !important;
   }
 
   .view-title {
@@ -4250,4 +4246,9 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
     width: 100%;
     min-width: 0;
   }
+}
+
+.folder-select-item.suggested {
+  border-color: var(--accent-gold);
+  background: var(--glass-gold);
 }
