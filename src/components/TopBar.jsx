@@ -1,3 +1,4 @@
+import { navMascots } from '../utils/handbookNavigation';
 import DisplaySettings from './DisplaySettings';
 import { ArrowLeft, Search } from 'lucide-react';
 import McpGuide from "./McpGuide";
@@ -39,8 +40,10 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
                 <McpGuide />
 
                 <DisplaySettings theme={theme} toggleTheme={toggleTheme} />
-                {activeTab !== 'search' && (
-                    <button onClick={() => switchTab('search')} className="top-bar-search-btn">
+                {activeTab === 'search' ? (
+                    <img className="top-bar-search-mascot" src={`/dfdnono/dfdnono${navMascots.search}.webp`} alt="" />
+                ) : (
+                    <button onClick={() => switchTab('search')} className="top-bar-search-btn" aria-label="全局搜索">
                         <Search size={22} />
                     </button>
                 )}

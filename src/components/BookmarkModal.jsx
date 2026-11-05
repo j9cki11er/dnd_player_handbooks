@@ -1,49 +1,45 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { useLayoutEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { Bookmark, Heart } from 'lucide-react';
+import { isDialogBackdropClick } from '../utils/dialog';
 
-export default function BookmarkModal({
-    isOpen,
-    onClose,
-    pendingBookmark,
-    bookmarks,
-    toggleBookmark,
-    isBookmarkedAnywhere
-}) {
-    if (!isOpen || !pendingBookmark) return null;
+export default function BookmarkModal({ isOpen, onClose, pendingBookmark, bookmarks, toggleBookmark }) {
+    const dialog = useRef(null);
+    const visible = isOpen && Boolean(pendingBookmark);
 
-    return (
-        <div className="modal-overlay" onClick={onClose}>
-            <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                className="modal-content glass-panel"
-                onClick={e => e.stopPropagation()}
-            >
-                <h3 className="modal-title gold-text">选择收藏文件夹</h3>
-                <p className="modal-subtitle">点击文件夹以添加/移除 <strong>{pendingBookmark?.title}</strong></p>
+    useLayoutEffect(() => {
+        if (!visible) return;
+        const element = dialog.current;
+        element.showModal();
+        return () => element.close();
+    }, [visible]);
 
+    if (!visible) return null;
+
+    return createPortal(
+        <dialog ref={dialog} className="gear-dialog bookmark-folder-dialog" aria-labelledby="bookmark-folder-title"
+            onCancel={event => { event.preventDefault(); onClose(); }}
+            onClick={event => { if (isDialogBackdropClick(event)) onClose(); }}>
+            <div className="bookmark-folder-dialog-body">
+                <h3 id="bookmark-folder-title" className="modal-title gold-text">选择收藏文件夹</h3>
+                <p className="modal-subtitle">点击文件夹以添加或移除 <strong>{pendingBookmark.title}</strong></p>
                 <div className="folder-selection-list">
-                    {Object.keys(bookmarks).map(folder => (
-                        <button
-                            key={folder}
-                            onClick={() => toggleBookmark(pendingBookmark.id, folder)}
-                            className={`folder-select-item ${bookmarks[folder].includes(pendingBookmark.id) ? 'selected' : ''}`}
-                        >
-                            <div className="folder-name-row">
-                                <Bookmark size={18} />
-                                <span>{folder}</span>
-                            </div>
-                            {bookmarks[folder].includes(pendingBookmark.id) && <Heart size={14} fill="currentColor" className="text-red-500" />}
-                        </button>
-                    ))}
+                    {Object.entries(bookmarks).map(([folder, ids]) => {
+                        const selected = ids.includes(pendingBookmark.id);
+                        return (
+                            <button key={folder} type="button" aria-pressed={selected}
+                                className={`folder-select-item ${selected ? 'selected' : ''}`}
+                                onClick={() => toggleBookmark(pendingBookmark.id, folder)}>
+                                <span className="folder-name-row"><Bookmark size={18} />{folder}</span>
+                                {selected && <Heart size={14} fill="currentColor" className="text-red-500" />}
+                            </button>
+                        );
+                    })}
                 </div>
-
                 <div className="modal-actions">
-                    <button onClick={onClose} className="gold-button">完成</button>
+                    <button type="button" onClick={onClose} className="gold-button">完成</button>
                 </div>
-            </motion.div>
-        </div>
+            </div>
+        </dialog>, document.body
     );
 }

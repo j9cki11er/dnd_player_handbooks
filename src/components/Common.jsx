@@ -154,7 +154,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
     );
 }
 
-export function SpellListItem({ item, isSelected, isBookmarked, isMobile, openBookmarkDialog }) {
+export function SpellListItem({ item, isSelected, isBookmarked, openBookmarkDialog }) {
     const [isOpen, setIsOpen] = React.useState(false);
     const handleBookmarkClick = (e) => {
         e.stopPropagation();
@@ -173,56 +173,34 @@ export function SpellListItem({ item, isSelected, isBookmarked, isMobile, openBo
         <div
             className={`spell-card-wrapper glass-panel group ${isSelected ? 'selected' : ''}`}
         >
-            <div
-                onClick={() => setIsOpen(true)}
-                className="spell-card-inner"
-                role="button"
-                tabIndex={0}
-                aria-label={`查看${item.title}详情`}
-                onKeyDown={e => { if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); setIsOpen(true); } }}
-            >
-                <div className="spell-card-body">
-                    <div className="spell-card-header">
-                        <div className="spell-card-name">
-                            <strong className="spell-level-badge">{item.level || '环阶未知'}</strong>
-                            <h3 className={`spell-card-title ${isSelected ? 'text-gold' : ''}`}>
-                                {item.title}{item.titleEn && <small className="spell-card-title-en" lang="en">{item.titleEn}</small>}
-                            </h3>
-                        </div>
-                        <div className="spell-card-actions">
-                            <button
-                                aria-label={`收藏${item.title}`}
-                                className={`spell-card-bookmark-btn ${isBookmarked ? 'active' : ''}`}
-                                onClick={handleBookmarkClick}
-                                onPointerDown={e => e.stopPropagation()}
-                            >
-                                <Heart size={18} fill={isBookmarked ? "currentColor" : "none"} />
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="spell-card-footer">
-                        <div className="spell-card-meta spell-card-timing">
-                            <span className="spell-casting-time" title={castingTime}>施法：{castingTime.split(/[，,]/)[0]}</span>
-                            <span className="spell-duration" title={duration}>
-                                <span>维持：{durationSummary}</span>
-                                {concentration && <strong className="spell-concentration">专注</strong>}
-                            </span>
-                        </div>
-                        <div className="spell-card-components" title={components.summary}>
-                            <span>{components.summary.replace(/、(?=[VSM])/g, ', ')}</span>
-                            {item.school && <span className="spell-card-school">{item.school}</span>}
-                            {sourceBook && <small className="spell-card-source" title={sourceBook}>{item.sourceBook || item.source}</small>}
-                        </div>
-                    </div>
-                </div>
-
-                {!isMobile && !isSelected && (
-                    <div className="spell-card-indicator">
-                        <ChevronRight size={14} />
-                    </div>
-                )}
-            </div>
+            <button type="button" className="catalog-open spell-catalog-open"
+                onClick={() => setIsOpen(true)} aria-label={`查看${item.title}详情`}>
+                <span className="weapon-card-classification">
+                    <strong className="spell-level-badge">{item.level || '环阶未知'}</strong>
+                </span>
+                <span className="catalog-name-row">
+                    <span className="gear-name catalog-name-stacked">
+                        <strong>{item.title}</strong>
+                        {item.titleEn && <small lang="en">{item.titleEn}</small>}
+                    </span>
+                </span>
+                <span className="spell-card-meta spell-card-timing">
+                    <span className="spell-casting-time" title={castingTime}>施法：{castingTime.split(/[，,]/)[0]}</span>
+                    <span className="spell-duration" title={duration}>
+                        <span>维持：{durationSummary}</span>
+                        {concentration && <strong className="spell-concentration">专注</strong>}
+                    </span>
+                </span>
+                <span className="spell-card-components" title={components.summary}>
+                    <span>{components.summary.replace(/、(?=[VSM])/g, ', ')}</span>
+                    {item.school && <span className="spell-card-school">{item.school}</span>}
+                    {sourceBook && <small className="spell-card-source" title={sourceBook}>{item.sourceBook || item.source}</small>}
+                </span>
+            </button>
+            <button type="button" className={`catalog-save ${isBookmarked ? 'saved' : ''}`}
+                aria-label={`收藏${item.title}`} aria-pressed={!!isBookmarked} onClick={handleBookmarkClick}>
+                <Heart size={17} fill={isBookmarked ? 'currentColor' : 'none'} />
+            </button>
             {isOpen && <CatalogDialog item={item} onClose={() => setIsOpen(false)} />}
         </div>
     );

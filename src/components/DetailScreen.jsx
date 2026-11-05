@@ -1,3 +1,4 @@
+import { isDialogBackdropClick } from '../utils/dialog';
 import DisplaySettings from './DisplaySettings';
 import { expansionLabel, expansionSections, isExpansionBook } from '../utils/expansions';
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
@@ -25,6 +26,12 @@ function showConditionDialog(card) {
 }
 
 function scrollToContentAnchor(event) {
+    const dialog = event.target.closest('.condition-dialog');
+    if (dialog && isDialogBackdropClick(event, dialog)) {
+        dialog.close();
+        return;
+    }
+
     const toggle = event.target.closest('.condition-card-toggle');
     if (toggle) {
         showConditionDialog(toggle.closest('.condition-card'));

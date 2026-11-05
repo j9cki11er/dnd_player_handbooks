@@ -1,8 +1,11 @@
 import SpellStaffIcon from './SpellStaffIcon';
 import React from 'react';
 import { EXPANSION_TITLES, expansionLabel, expansionSections, isExpansionBook } from '../utils/expansions';
-import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Swords, Search, Heart, Sun, Moon, User } from 'lucide-react';
+import { Folder, FileText, ChevronRight, ChevronDown, BookOpen, Swords, Search, Heart, Sun, Moon, User, Activity, Zap, TriangleAlert, Shapes } from 'lucide-react';
 import { NavItem } from './Common';
+import { glossaryName, glossaryTitles, navMascots } from '../utils/handbookNavigation';
+
+const glossaryIcons = [Activity, Zap, TriangleAlert, Shapes];
 
 
 
@@ -33,6 +36,14 @@ const SidebarContent = ({
     const handleNavClick = (callback) => {
         callback(!!onNavigate);
     };
+
+    const glossaryFiles = categoryTree[glossaryName]?._files ?? [];
+    const glossaryActive = !onNavigate && glossaryFiles.some(file =>
+        file.id === selectedItem?.id && glossaryTitles.includes(file.title));
+    const tabIcon = (id, Icon) => !onNavigate && activeTab === id && navMascots[id] &&
+        !(id === 'browser' && glossaryActive)
+        ? <img className="sidebar-nav-mascot" src={`/dfdnono/dfdnono${navMascots[id]}.webp`} alt="" />
+        : <Icon size={20} />;
 
     const SidebarItem = ({ name, node, depth = 0 }) => {
         const pathStr = node._path.join('/');
@@ -152,18 +163,18 @@ const SidebarContent = ({
 
             <nav className="nav-menu">
                 <NavItem
-                    icon={<BookOpen size={20} />}
+                    icon={tabIcon('browser', BookOpen)}
                     label="玩家手册"
-                    active={activeTab === 'browser'}
+                    active={activeTab === 'browser' && !glossaryActive}
                     onClick={() => switchTab('browser')}
                 />
                 <NavItem
-                    icon={<SpellStaffIcon size={20} />}
+                    icon={tabIcon('spells', SpellStaffIcon)}
                     label="法术列表"
                     active={activeTab === 'spells'}
                     onClick={() => switchTab('spells')}
                 />
-                <NavItem icon={<Swords size={20} />} label="武器装备" active={activeTab === 'items'} onClick={() => switchTab('items')} />
+                <NavItem icon={tabIcon('items', Swords)} label="武器装备" active={activeTab === 'items'} onClick={() => switchTab('items')} />
                 {showDev && (
                     <NavItem
                         icon={<User size={20} />}
@@ -173,19 +184,37 @@ const SidebarContent = ({
                     />
                 )}
                 <NavItem
-                    icon={<Search size={20} />}
+                    icon={tabIcon('search', Search)}
                     label="全局搜索"
                     active={activeTab === 'search'}
                     onClick={() => switchTab('search')}
                 />
                 <NavItem
-                    icon={<Heart size={20} />}
+                    icon={tabIcon('bookmarks', Heart)}
                     label="我的收藏"
                     active={activeTab === 'bookmarks'}
                     onClick={() => switchTab('bookmarks')}
                 />
             </nav>
 
+            {!onNavigate ? (
+                <section className="sidebar-section" aria-labelledby="sidebar-glossary-title">
+                    <h2 id="sidebar-glossary-title" className="section-title">常用知识</h2>
+                    <nav className="nav-menu" aria-label="常用知识">
+                        {glossaryTitles.map((title, index) => {
+                            const item = glossaryFiles.find(file => file.title === title);
+                            if (!item) return null;
+                            const Icon = glossaryIcons[index];
+                            return <NavItem key={item.id} icon={<Icon size={20} />} label={title}
+                                active={selectedItem?.id === item.id}
+                                onClick={() => {
+                                    if (activeTab !== 'browser') switchTab('browser');
+                                    selectItem(item);
+                                }} />;
+                        })}
+                    </nav>
+                </section>
+            ) : <>
             <details className="sidebar-section sidebar-directory-section">
                 <summary className="section-title">分类目录</summary>
                 <div className="category-list">
@@ -217,8 +246,7 @@ const SidebarContent = ({
                     ))}
                 </div>
             </details>
-
-
+            </>}
         </>
     );
 };

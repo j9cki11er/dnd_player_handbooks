@@ -5,11 +5,30 @@ import { ItemCard, SpellListItem } from './Common';
 import { CatalogCard } from './ItemCatalog';
 import CatalogDialog from './CatalogDialog';
 
+function BookmarkMasonry({ className, children }) {
+    const grid = React.useRef(null);
+    React.useLayoutEffect(() => {
+        const cards = [...grid.current.children];
+        const observer = new ResizeObserver(entries => {
+            for (const { target, borderBoxSize } of entries) {
+                const height = borderBoxSize[0].blockSize;
+                target.style.setProperty('--bookmark-span', Math.ceil((height + 10) / 2));
+            }
+        });
+        cards.forEach(card => {
+            card.style.setProperty('--bookmark-span', Math.ceil((card.offsetHeight + 10) / 2));
+            observer.observe(card);
+        });
+        return () => observer.disconnect();
+    }, [children]);
+    return <div ref={grid} className={`bookmark-masonry ${className}`}>{children}</div>;
+}
+
 function SavedItems({ items, openBookmarkDialog }) {
     const [selected, setSelected] = React.useState(null);
     return <div className="bookmark-group">
         <h4 className="section-title">物品</h4>
-        <div className="gear-grid">{items.map(item => <CatalogCard key={item.id} item={item} onClick={() => setSelected(item)} openBookmarkDialog={openBookmarkDialog} isBookmarkedAnywhere={() => true} />)}</div>
+        <BookmarkMasonry className="gear-grid">{items.map(item => <CatalogCard key={item.id} item={item} onClick={() => setSelected(item)} openBookmarkDialog={openBookmarkDialog} isBookmarkedAnywhere={() => true} />)}</BookmarkMasonry>
         {selected && <CatalogDialog item={selected} onClose={() => setSelected(null)} />}
     </div>;
 }
@@ -223,7 +242,7 @@ const DraggableFolder = ({
                                                         exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
                                                         transition={{ duration: 0.25, ease: 'easeInOut' }}
                                                     >
-                                                        <div className={categoryType === 'spells' ? 'spell-grid' : 'item-grid'}>
+                                                        <BookmarkMasonry className={categoryType === 'spells' ? 'spell-grid' : 'item-grid'}>
                                                             {items.map(item => (
                                                                 <DraggableBookmarkItem
                                                                     key={item.id}
@@ -240,7 +259,7 @@ const DraggableFolder = ({
                                                                     selectedItemId={selectedItemId}
                                                                 />
                                                             ))}
-                                                        </div>
+                                                        </BookmarkMasonry>
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>

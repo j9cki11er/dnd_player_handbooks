@@ -3,8 +3,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { Folder } from 'lucide-react';
 import { ItemCard } from './Common';
 
-const glossaryName = '附录 C：术语汇编';
-const glossaryTitles = ['状态', '动作', '危害', '效应区域'];
+import { glossaryName, glossaryTitles } from '../utils/handbookNavigation';
 
 function DirectoryGrid({ names, categoryTree, navigateTo }) {
     return (

@@ -160,7 +160,7 @@ export function useBookmarks() {
         }));
     };
 
-    const openBookmarkDialog = (item) => {
+    const openBookmarkDialog = item => {
         setPendingBookmark(item);
         setIsBookmarkModalOpen(true);
     };

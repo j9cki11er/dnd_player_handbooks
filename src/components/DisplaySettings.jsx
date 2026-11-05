@@ -1,3 +1,4 @@
+import { isDialogBackdropClick } from '../utils/dialog';
 import { useRef, useState } from 'react';
 import { Minus, Plus, Sun, Moon, X } from 'lucide-react';
 import { defaultTextSize, getTextSize, minTextSize, maxTextSize, saveTextSize } from '../utils/textSize';
@@ -23,7 +24,7 @@ export default function DisplaySettings({ theme, toggleTheme }) {
             </button>
             <dialog ref={dialog} className="display-settings" aria-label="显示设置"
                 onClick={event => {
-                    if (event.target === event.currentTarget) dialog.current.close();
+                    if (isDialogBackdropClick(event)) dialog.current.close();
                 }}>
                 <div className="display-settings-panel">
                     <div className="display-settings-row">

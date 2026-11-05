@@ -337,7 +337,7 @@ export default function App() {
 
       <BookmarkModal
         isOpen={isBookmarkModalOpen} onClose={() => setIsBookmarkModalOpen(false)} pendingBookmark={pendingBookmark}
-        bookmarks={bookmarks} toggleBookmark={toggleBookmark} isBookmarkedAnywhere={isBookmarkedAnywhere}
+        bookmarks={bookmarks} toggleBookmark={toggleBookmark}
       />
 
       {isShareModalOpen && <Suspense fallback={<p role="status">加载导入／导出…</p>}><ShareModal

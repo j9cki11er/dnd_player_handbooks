@@ -1,3 +1,4 @@
+import { isDialogBackdropClick } from '../utils/dialog';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Search, X } from 'lucide-react';
@@ -18,7 +19,7 @@ function GearDialog({ item, currency, onClose }) {
     return createPortal(
         <dialog ref={ref} className="gear-dialog reference-dialog" aria-labelledby="gear-dialog-title"
             onCancel={event => { event.preventDefault(); onClose(); }}
-            onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
+            onClick={event => { if (isDialogBackdropClick(event)) onClose(); }}>
             <div className="gear-dialog-surface">
                 <header className="gear-dialog-header">
                     <div><h2 id="gear-dialog-title">{item.title}</h2><p>{item.titleEn}</p></div>
