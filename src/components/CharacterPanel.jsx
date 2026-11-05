@@ -414,7 +414,7 @@ const CharacterPanel = () => {
                             {char.attacks.map((atk, idx) => (
                                 <div key={idx} className="attack-row p-2 flex flex-col gap-1 border-b border-white/5 last:border-0 relative group">
                                     <div className="flex items-center ">
-                                        <input className="font-bold flex-1" value={atk.name} onChange={(e) => updateNested(`attacks.${idx}.name`, e.target.value)} />
+                                        <input className="font-normal flex-1" value={atk.name} onChange={(e) => updateNested(`attacks.${idx}.name`, e.target.value)} />
                                         <span className="text-gold">+{atk.attack_bonus}</span>
                                         <button className="opacity-0 group-hover:opacity-100 transition-opacity" onClick={() => removeListItem('attacks', idx)}>
                                             <Trash2 size={14} className="text-red-500" />
@@ -445,7 +445,7 @@ const CharacterPanel = () => {
                             {char.features.feats.map((feat, idx) => (
                                 <div key={idx} className="feat-row p-2 border-b border-white/5 last:border-0 relative group">
                                     <div className="flex items-center justify-between">
-                                        <input className="font-bold text-sm" value={feat.name} onChange={(e) => updateNested(`features.feats.${idx}.name`, e.target.value)} />
+                                        <input className="font-normal text-sm" value={feat.name} onChange={(e) => updateNested(`features.feats.${idx}.name`, e.target.value)} />
                                         <button className="opacity-0 group-hover:opacity-100 transition-opacity" onClick={() => removeListItem('features.feats', idx)}>
                                             <Trash2 size={14} className="text-red-500" />
                                         </button>
@@ -541,7 +541,7 @@ const CharacterPanel = () => {
                         <div className="wealth-grid p-4 grid grid-cols-5 ">
                             {['cp', 'sp', 'ep', 'gp', 'pp'].map(curr => (
                                 <div key={curr} className="stat-mini">
-                                    <span className="label font-bold uppercase">{curr}</span>
+                                    <span className="label font-normal uppercase">{curr}</span>
                                     <input
                                         type="number"
                                         className="w-full text-center text-xs"

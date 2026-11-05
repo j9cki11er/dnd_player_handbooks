@@ -60,6 +60,10 @@ export function prepareContent(html) {
     };
     for (const element of document.body.querySelectorAll('[color], [style], [bgcolor]')) {
         if (element.hasAttribute('color') && isBlack(element.getAttribute('color'))) element.removeAttribute('color');
+        const weight = element.style.fontWeight;
+        if (weight && weight !== '300' && weight !== '400') {
+            element.style.setProperty('font-weight', '400', element.style.getPropertyPriority('font-weight'));
+        }
         if (isBlack(element.style.color)) element.style.removeProperty('color');
         probe.style.color = '';
         probe.style.color = element.style.color || element.getAttribute('color') || '';

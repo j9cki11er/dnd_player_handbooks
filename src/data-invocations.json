@@ -1,5 +1,38 @@
 [
   {
+    "id": "invocation_xge_lance_of_lethargy",
+    "title": "怠惰之枪",
+    "titleEn": "Lance of Lethargy",
+    "prerequisite": "习得戏法魔能爆eldritch blast",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_lance_of_lethargy.html"
+  },
+  {
+    "id": "invocation_xge_grasp_of_hadar",
+    "title": "哈达之攫",
+    "titleEn": "Grasp of Hadar",
+    "prerequisite": "习得戏法魔能爆eldritch blast",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_grasp_of_hadar.html"
+  },
+  {
+    "id": "invocation_xge_improved_pact_weapon",
+    "title": "进阶契约武器",
+    "titleEn": "Improved Pact Weapon",
+    "prerequisite": "刃之魔契特性",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_improved_pact_weapon.html"
+  },
+  {
     "id": "invocation__pact_of_the_chain",
     "title": "链之魔契",
     "titleEn": "Pact of the Chain",
@@ -36,6 +69,17 @@
     "path": "invocations/invocation__pact_of_the_tome.html"
   },
   {
+    "id": "invocation_xge_gift_of_the_ever_living_ones",
+    "title": "永生者赠礼",
+    "titleEn": "Gift of the Ever-Living Ones",
+    "prerequisite": "链之魔契",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_gift_of_the_ever_living_ones.html"
+  },
+  {
     "id": "invocation__armor_of_shadows",
     "title": "幽影护甲",
     "titleEn": "Armor of Shadows",
@@ -43,6 +87,17 @@
     "reqLevel": 0,
     "category": "魔能祈唤",
     "path": "invocations/invocation__armor_of_shadows.html"
+  },
+  {
+    "id": "invocation_xge_aspect_of_the_moon",
+    "title": "月之仪态",
+    "titleEn": "Aspect of the Moon",
+    "prerequisite": "书之魔契",
+    "reqLevel": 0,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_aspect_of_the_moon.html"
   },
   {
     "id": "invocation__otherworldly_leap",
@@ -126,6 +181,28 @@
     "path": "invocations/invocation__lessons_of_the_first_ones.html"
   },
   {
+    "id": "invocation_xge_maddening_hex",
+    "title": "癫狂巫咒",
+    "titleEn": "Maddening Hex",
+    "prerequisite": "第5级，习得法术脆弱诅咒hex、或具有可施加诅咒的魔契师特性",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_maddening_hex.html"
+  },
+  {
+    "id": "invocation_xge_cloak_of_flies",
+    "title": "飞蝇斗篷",
+    "titleEn": "Cloak of Flies",
+    "prerequisite": "第5级",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_cloak_of_flies.html"
+  },
+  {
     "id": "invocation__gaze_of_two_minds",
     "title": "共视感官",
     "titleEn": "Gaze of Two Minds",
@@ -142,6 +219,17 @@
     "reqLevel": 5,
     "category": "魔能祈唤",
     "path": "invocations/invocation__thirsting_blade.html"
+  },
+  {
+    "id": "invocation_xge_tomb_of_levistus",
+    "title": "莱维斯图斯之墓",
+    "titleEn": "Tomb of Levistus",
+    "prerequisite": "第5级",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_tomb_of_levistus.html"
   },
   {
     "id": "invocation__investment_of_the_chain_master",
@@ -162,6 +250,17 @@
     "path": "invocations/invocation__eldritch_smite.html"
   },
   {
+    "id": "invocation_xge_eldritch_smite",
+    "title": "魔能斩",
+    "titleEn": "Eldritch Smite",
+    "prerequisite": "第5级，刃之魔契",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": true,
+    "path": "invocations/invocation_xge_eldritch_smite.html"
+  },
+  {
     "id": "invocation__one_with_shadows",
     "title": "融身入影",
     "titleEn": "One with Shadows",
@@ -178,6 +277,17 @@
     "reqLevel": 5,
     "category": "魔能祈唤",
     "path": "invocations/invocation__gift_of_the_depths.html"
+  },
+  {
+    "id": "invocation_xge_gift_of_the_depths",
+    "title": "深海馈赠",
+    "titleEn": "Gift of the Depths",
+    "prerequisite": "第5级",
+    "reqLevel": 5,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": true,
+    "path": "invocations/invocation_xge_gift_of_the_depths.html"
   },
   {
     "id": "invocation__master_of_myriad_forms",
@@ -198,6 +308,17 @@
     "path": "invocations/invocation__ascendant_step.html"
   },
   {
+    "id": "invocation_xge_relentless_hex",
+    "title": "残酷巫咒",
+    "titleEn": "Relentless Hex",
+    "prerequisite": "第7级，习得法术脆弱诅咒hex、或具有可施加诅咒的魔契师特性",
+    "reqLevel": 7,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_relentless_hex.html"
+  },
+  {
     "id": "invocation__whispers_of_the_grave",
     "title": "坟茔殁语",
     "titleEn": "Whispers of the Grave",
@@ -205,6 +326,28 @@
     "reqLevel": 7,
     "category": "魔能祈唤",
     "path": "invocations/invocation__whispers_of_the_grave.html"
+  },
+  {
+    "id": "invocation_xge_trickster_s_escape",
+    "title": "诡术师的逃脱术",
+    "titleEn": "Trickster's Escape",
+    "prerequisite": "第7级",
+    "reqLevel": 7,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_trickster_s_escape.html"
+  },
+  {
+    "id": "invocation_xge_ghostly_gaze",
+    "title": "幽魂凝视",
+    "titleEn": "Ghostly Gaze",
+    "prerequisite": "第7级",
+    "reqLevel": 7,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_ghostly_gaze.html"
   },
   {
     "id": "invocation__visions_of_distant_realms",
@@ -250,5 +393,16 @@
     "reqLevel": 15,
     "category": "魔能祈唤",
     "path": "invocations/invocation_witch_sight.html"
+  },
+  {
+    "id": "invocation_xge_shroud_of_shadow",
+    "title": "阴影环绕",
+    "titleEn": "Shroud of Shadow",
+    "prerequisite": "第15级",
+    "reqLevel": 15,
+    "category": "魔能祈唤",
+    "sourceBook": "XGE",
+    "legacy": false,
+    "path": "invocations/invocation_xge_shroud_of_shadow.html"
   }
 ]

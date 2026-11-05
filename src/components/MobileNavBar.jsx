@@ -14,15 +14,11 @@ export default function MobileNavBar({ activeTab, switchTab, showDev, onScrollTo
     const tabs = navigation.filter(({ id }) => showDev || id !== 'character');
     const activeIndex = tabs.findIndex(({ id }) => id === activeTab);
 
-    const ActiveIcon = tabs[activeIndex]?.Icon;
-
     return (
         <nav className="mobile-navbar" aria-label="主导航"
-            style={{ '--nav-notch-x': `${(activeIndex + 0.5) * 100 / (tabs.length + 1)}%` }}
+            style={{ '--nav-active-x': `${(Math.max(0, activeIndex) + 0.5) * 100 / (tabs.length + 1)}%` }}
             data-has-active={activeIndex >= 0}>
-            <span className="mobile-nav-indicator" aria-hidden="true">
-                {ActiveIcon && <ActiveIcon key={activeTab} size={23} />}
-            </span>
+            <span className="mobile-nav-indicator" aria-hidden="true" />
             {tabs.map(({ id, label, Icon }) => (
                 <button key={id} type="button"
                     className={`mobile-nav-item ${activeTab === id ? 'active' : ''}`}

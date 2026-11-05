@@ -36,7 +36,7 @@ export function WeaponTable({ weapons }) {
                             {weapons.map((weapon, idx) => (
                                 <tr key={weapon.id} className={idx % 2 === 0 ? 'even' : 'odd'}>
                                     <td className="weapon-name">
-                                        <div className="font-bold">{weapon.title}</div>
+                                        <div className="font-normal">{weapon.title}</div>
                                         <small className="weapon-name-en">{weapon.titleEn}</small>
                                     </td>
                                     <td className="weapon-category">{weapon.category}</td>
@@ -94,7 +94,8 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
     const displayCategory = React.useMemo(() => {
         if (item?.itemType && item?.rarity) return `${item.itemType} · ${item.rarity}${item.requiresAttunement ? ' · 需同调' : ''}`;
         if (item?.path?.startsWith('feats/') && !item.sourceBook) return item.category;
-        if (item?.category === '魔能祈唤' || item?.category === '精通词条') return item.category;
+        if (item?.category === '魔能祈唤') return [item.sourceBook, item.category].filter(Boolean).join(' · ');
+        if (item?.category === '精通词条') return item.category;
 
         const pathStr = item?.fullCategory || item?.pathParts?.join(' > ') || '';
         const parts = pathStr.split(' > ').filter(Boolean);
@@ -126,7 +127,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
         >
             <div className="card-top">
                 <div className="flex flex-col overflow-hidden mr-8 flex-1 min-w-0">
-                    <span className="card-category truncate">{displayCategory}</span>
+                    <span className="card-category truncate">{displayCategory}{item?.legacy && <> · Legacy</>}</span>
                 </div>
                 <div className="item-card-actions">
                     {item?.isDir && <Folder size={14} className="text-gold opacity-50 mr-2" />}
@@ -141,7 +142,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
             </div>
             <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
             {(item?.prerequisite || item?.category === '魔能祈唤') && (
-                <span className="spell-card-extra truncate text-red-400 font-medium">
+                <span className="spell-card-extra truncate text-red-400 font-normal">
                     先决: {item.prerequisite || '无'}
                 </span>)}
             {item?.cr && (

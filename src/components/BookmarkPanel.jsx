@@ -213,7 +213,7 @@ const DraggableFolder = ({
                                                 onClick={() => setExpandedCategories(prev => ({ ...prev, [catId]: !isCatExpanded }))}
                                             >
                                                 {isCatExpanded ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
-                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-semibold">{titleMap[categoryType]}</h4>
+                                                <h4 className="section-title m-0 text-sm opacity-80 group-hover/cat:text-gold uppercase tracking-wider font-normal">{titleMap[categoryType]}</h4>
                                             </div>
                                             <AnimatePresence initial={false}>
                                                 {isCatExpanded && (

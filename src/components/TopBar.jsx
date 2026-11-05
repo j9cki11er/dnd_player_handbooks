@@ -1,4 +1,5 @@
-import { ArrowLeft, Search, Sun, Moon } from 'lucide-react';
+import DisplaySettings from './DisplaySettings';
+import { ArrowLeft, Search } from 'lucide-react';
 import McpGuide from "./McpGuide";
 
 
@@ -37,9 +38,7 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
             <div className="top-bar-actions">
                 <McpGuide />
 
-                <button onClick={toggleTheme} className="top-bar-theme-toggle" title={theme === 'dark' ? '切换浅色模式' : '切换深色模式'}>
-                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
+                <DisplaySettings theme={theme} toggleTheme={toggleTheme} />
                 {activeTab !== 'search' && (
                     <button onClick={() => switchTab('search')} className="top-bar-search-btn">
                         <Search size={22} />

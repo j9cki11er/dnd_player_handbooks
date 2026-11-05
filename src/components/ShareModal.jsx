@@ -92,7 +92,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks, i
             >
                 <div className="flex items-center gap-3 mb-2">
                     <Share2 className="text-gold" size={24} />
-                    <h3 className="modal-title gold-text m-0 font-bold uppercase tracking-wide">导入 / 导出收藏</h3>
+                    <h3 className="modal-title gold-text m-0 font-normal uppercase tracking-wide">导入 / 导出收藏</h3>
                 </div>
                 <p className="modal-subtitle mb-8 text-sm opacity-60 italic">分享链接给好友，对方打开后确认导入；现有收藏会保留。</p>
 
@@ -139,7 +139,7 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks, i
                         />
                         {/* <button
                             onClick={handleCopy}
-                            className={`absolute right-3 bottom-3 px-3 py-1.5 rounded-md flex items-center gap-2 text-[11px] font-bold transition-all ${copied ? 'bg-green-500/20 text-green-400 border border-green-500/30' : 'bg-gold/10 hover:bg-gold/20 text-gold border border-gold/20'}`}
+                            className={`absolute right-3 bottom-3 px-3 py-1.5 rounded-md flex items-center gap-2 text-[11px] font-normal transition-all ${copied ? 'bg-green-500/20 text-green-400 border border-green-500/30' : 'bg-gold/10 hover:bg-gold/20 text-gold border border-gold/20'}`}
                         >
                             {copied ? <Check size={14} /> : <Copy size={14} />}
                             {copied ? '已复制' : '复制代码'}
@@ -165,14 +165,14 @@ export default function ShareModal({ isOpen, onClose, bookmarks, setBookmarks, i
                         />
                     </div>
                     {preview && <div className="share-import-preview"><p>将新增 {preview.length} 个文件夹，共 {preview.reduce((sum, [, ids]) => sum + ids.length, 0)} 项收藏：</p><ul>{preview.map(([name, ids]) => <li key={name}>{name} · {ids.length} 项</li>)}</ul><p>同名文件夹会自动改名，现有收藏不会被覆盖。</p></div>}
-                    {error && <p className="text-red-400 text-[11px] mt-2 font-medium flex items-center gap-1">⚠ {error}</p>}
+                    {error && <p className="text-red-400 text-[11px] mt-2 font-normal flex items-center gap-1">⚠ {error}</p>}
                 </div>
 
                 <div className="modal-actions gap-4">
                     <button onClick={onClose} className="action-btn-small px-8 py-2.5 h-auto opacity-70 hover:opacity-100 transition-opacity">取消</button>
                     <button
                         onClick={handleImport}
-                        className="gold-button px-8 py-2.5 h-auto text-sm font-bold shadow-lg shadow-gold/10"
+                        className="gold-button px-8 py-2.5 h-auto text-sm font-normal shadow-lg shadow-gold/10"
                         disabled={!importText.trim()}
                     >
                         <Download size={18} />

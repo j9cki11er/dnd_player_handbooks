@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const BASE_DIR = path.join(__dirname, '..');
 const SOURCE_FILE = path.join(BASE_DIR, 'public/content/第三章：角色职业/魔契师/魔能祈唤选项.html');
+const XGE_SOURCE = path.join(BASE_DIR, 'public/content/珊娜萨的万事指南 (XGE)/角色选项/魔契师/魔能祈唤.html');
 const OUTPUT_DIR = path.join(BASE_DIR, 'public/content/invocations');
 const JSON_OUTPUT_PATH = path.join(BASE_DIR, 'src/data-invocations.json');
 
@@ -147,6 +148,8 @@ function extractInvocations() {
         }
     });
 
+    unique.push(...extractXgeInvocations());
+
     unique.sort((a, b) => {
         if (a.reqLevel !== b.reqLevel) return a.reqLevel - b.reqLevel;
         return a.title.localeCompare(b.title, 'zh-CN');
@@ -154,6 +157,39 @@ function extractInvocations() {
 
     fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(unique, null, 2));
     console.log(`Extracted ${unique.length} unique invocations to ${JSON_OUTPUT_PATH}`);
+}
+
+function extractXgeInvocations() {
+    const root = parse(fs.readFileSync(XGE_SOURCE, 'utf8'));
+    return root.querySelectorAll('p').flatMap(paragraph => {
+        const heading = paragraph.querySelector('strong');
+        const names = heading?.textContent.trim().replace(/\s+/g, ' ').match(/^(.+?) ([A-Za-z].*)$/);
+        if (!names) return [];
+
+        const [, title, titleEn] = names;
+        const id = `invocation_xge_${titleEn.toLowerCase().replace(/[^a-z0-9]+/g, '_')}`;
+        const filename = `${id}.html`;
+        const legacyMarker = paragraph.querySelector('sup');
+        const legacy = legacyMarker?.textContent.trim().toLowerCase() === 'legacy';
+        const prerequisite = paragraph.querySelectorAll('em').find(node => /^先决/.test(node.textContent.trim()))?.textContent
+            .trim().replace(/\s+/g, ' ').match(/^先决(?:条件)?[:：]\s*(.+)$/)?.[1] || '';
+
+        const titleWrapper = heading.parentNode;
+        if (titleWrapper.tagName === 'FONT') titleWrapper.remove();
+        else heading.remove();
+        const content = paragraph.innerHTML.replace(/[ \t]+$/gm, '').replace(/^(?:\s|<br\s*\/?>)+/i, '');
+        fs.writeFileSync(path.join(OUTPUT_DIR, filename),
+            `<h2>${title} ${titleEn}${legacy ? ' · Legacy' : ''}</h2>\n<p>${content}</p>`);
+
+        return [{
+            id, title, titleEn, prerequisite,
+            reqLevel: Number(prerequisite.match(/第(\d+)级/)?.[1] || 0),
+            category: '魔能祈唤',
+            sourceBook: 'XGE',
+            legacy,
+            path: `invocations/${filename}`
+        }];
+    });
 }
 
 function saveInvocation(invocation, contentArr, allInvocations) {

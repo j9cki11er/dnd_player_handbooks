@@ -1,7 +1,8 @@
+import DisplaySettings from './DisplaySettings';
 import { expansionLabel, expansionSections, isExpansionBook } from '../utils/expansions';
 import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowLeft, Heart, Folder, Moon, Sun } from 'lucide-react';
+import { ArrowLeft, Heart, Folder } from 'lucide-react';
 import { MagicBrowser } from './ItemCatalog';
 import { loadContent } from '../utils/content';
 import { formatCreatureBlocks } from '../utils/spellSummary';
@@ -151,7 +152,8 @@ export default function DetailScreen({
     }, [selectedItem]);
 
     const isInvocationCategory = useMemo(() => {
-        return selectedItem && selectedItem.id === '第三章：角色职业/魔契师/魔能祈唤选项.htm';
+        return selectedItem?.id === '第三章：角色职业/魔契师/魔能祈唤选项.htm' ||
+            selectedItem?.id === '珊娜萨的万事指南 (XGE)/角色选项/魔契师/魔能祈唤.htm';
     }, [selectedItem]);
 
     const invocationsByLevel = useMemo(() => {
@@ -159,13 +161,14 @@ export default function DetailScreen({
         const groups = {
             0: [], 2: [], 5: [], 7: [], 9: [], 12: [], 15: []
         };
-        invocationData.forEach(inv => {
+        const sourceBook = selectedItem?.sourceBook;
+        invocationData.filter(inv => inv.sourceBook === sourceBook).forEach(inv => {
             const level = inv.reqLevel || 0;
             if (!groups[level]) groups[level] = [];
             groups[level].push(inv);
         });
         return groups;
-    }, [isInvocationCategory, invocationData]);
+    }, [isInvocationCategory, invocationData, selectedItem?.sourceBook]);
 
     const levelLabels = {
         0: '先决：无',
@@ -233,9 +236,7 @@ export default function DetailScreen({
                     </h1>
                 </div>
                 <div className="top-bar-actions">
-                    <button onClick={toggleTheme} className="top-bar-theme-toggle" title={theme === 'dark' ? '切换浅色模式' : '切换深色模式'}>
-                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
+                    <DisplaySettings theme={theme} toggleTheme={toggleTheme} />
                     {(() => {
                         const bookmarkItem = selectedItem || loadedOverview?.item || (currentCategoryData ? {
                             id: currentCategoryData._id,
@@ -304,7 +305,7 @@ export default function DetailScreen({
                                     </div>
                                 ) : isInvocationCategory ? (
                                     <div className="directory-view">
-                                        <h3 className="section-title mb-4">魔能祈唤选项</h3>
+                                        <h3 className="section-title mb-4">{selectedItem.title}</h3>
                                         <div className="flex flex-col gap-8">
                                             {Object.keys(invocationsByLevel).sort((a, b) => Number(a) - Number(b)).map(level => {
                                                 const group = invocationsByLevel[level];
