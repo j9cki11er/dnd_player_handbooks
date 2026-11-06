@@ -4,7 +4,7 @@ import { navMascots } from '../utils/handbookNavigation';
 import SpellStaffIcon from './SpellStaffIcon';
 
 const navigation = [
-    { id: 'browser', label: '玩家手册', Icon: BookOpen },
+    { id: 'browser', label: '冒险手册', Icon: BookOpen },
     { id: 'spells', label: '法术列表', Icon: SpellStaffIcon },
     { id: 'items', label: '武器装备', Icon: Swords },
     { id: 'character', label: '角色卡', Icon: User },

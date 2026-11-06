@@ -5,19 +5,57 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="https://dfd-playerhandbooks.elsbiz.website/favico.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DFD 不要喂龙公会｜DnD 玩家手册 2024</title>
-  <meta name="description" content="DFD 不要喂龙公会提供的 DnD 玩家手册 2024，支援目录分类与全局搜索，快速查找规则、法术与职业内容，并可收藏常用资料，方便冒险途中随时查阅。" />
+  <title>DFD 不要喂龙公会｜冒险手册</title>
+  <meta name="description" content="DFD 不要喂龙公会提供的 冒险手册，支援目录分类与全局搜索，快速查找规则、法术与职业内容，并可收藏常用资料，方便冒险途中随时查阅。" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="DFD 不要喂龙公会｜DnD 玩家手册 2024" />
+  <meta property="og:title" content="DFD 不要喂龙公会｜冒险手册" />
   <meta property="og:description"
-    content="DFD 不要喂龙公会提供的 DnD 玩家手册 2024，支援目录分类与全局搜索，快速查找规则、法术与职业内容，并可收藏常用资料，方便冒险途中随时查阅。" />
+    content="DFD 不要喂龙公会提供的 冒险手册，支援目录分类与全局搜索，快速查找规则、法术与职业内容，并可收藏常用资料，方便冒险途中随时查阅。" />
   <meta property="og:image" content="https://dfd-playerhandbooks.elsbiz.website/favico.jpg" />
+  <style>
+    .startup-screen {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 12px;
+      color: #e2e2e7;
+      font: 16px system-ui, sans-serif;
+      background-color: var(--background-pattern-base, #161616);
+      background-image: linear-gradient(var(--background-pattern-overlay, #161616e6), var(--background-pattern-overlay, #161616e6)), url('/dfdbackground.webp');
+      background-repeat: no-repeat, repeat;
+      background-size: cover, var(--background-tile-width, 200px) auto;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .startup-dragon {
+        width: clamp(112px, 28vw, 176px);
+        aspect-ratio: 442 / 394;
+        background: url('/Chibi%20Dragon%20Cheer%20Animation.gif') center / contain no-repeat;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div class="startup-screen" role="status">
+      <span class="startup-dragon" aria-hidden="true"></span>
+      <span>正在加载冒险手册…</span>
+    </div>
+  </div>
+  <script>
+    const startupScreen = document.querySelector('.startup-screen');
+    try {
+      if (localStorage.getItem('dnd-startup-seen')) startupScreen.remove();
+    } catch {
+      // The intro can still play when browser storage is unavailable.
+    }
+    startupScreen.dataset.startedAt = performance.now();
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

@@ -10,12 +10,12 @@ export default function TopBar({ activeTab, selectedItem, currentPath, detailSta
 
         switch (activeTab) {
             case 'browser':
-                return '玩家手册';
+                return '冒险手册';
             case 'items': return '武器装备';
             case 'spells': return '法术列表';
             case 'search': return '全局搜索';
             case 'bookmarks': return '我的收藏';
-            default: return '玩家手册';
+            default: return '冒险手册';
         }
     };
 

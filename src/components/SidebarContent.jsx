@@ -159,12 +159,12 @@ const SidebarContent = ({
                 </button>
             </div>
 
-            <span className="sidebar-page-title">DnD 玩家手册2024</span>
+            <span className="sidebar-page-title">冒险手册</span>
 
             <nav className="nav-menu">
                 <NavItem
                     icon={tabIcon('browser', BookOpen)}
-                    label="玩家手册"
+                    label="冒险手册"
                     active={activeTab === 'browser' && !glossaryActive}
                     onClick={() => switchTab('browser')}
                 />

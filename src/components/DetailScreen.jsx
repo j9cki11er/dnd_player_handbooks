@@ -1,7 +1,7 @@
 import { isDialogBackdropClick } from '../utils/dialog';
 import DisplaySettings from './DisplaySettings';
 import { expansionLabel, expansionSections, isExpansionBook } from '../utils/expansions';
-import React, { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useLayoutEffect, useId } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, Heart, Folder } from 'lucide-react';
 import { MagicBrowser } from './ItemCatalog';
@@ -234,6 +234,10 @@ export default function DetailScreen({
         ? expansionSections(currentCategoryData, featData)
         : null;
 
+    const [selectedBookSection, setSelectedBookSection] = useState(entry.section);
+    const bookTabsId = useId();
+    const activeBookSection = bookSections?.find(([label]) => label === selectedBookSection) ?? bookSections?.[0];
+
     useLayoutEffect(() => {
         if (!entry.section) return;
         const target = Array.from(scrollRef.current?.querySelectorAll('[data-expansion-section]') || [])
@@ -412,10 +416,32 @@ export default function DetailScreen({
 
 
 
-                                {bookSections ? bookSections.map(([label, items]) => {
-                                    const cards = (
-                                        <div className="item-grid reference-card-grid">
-                                            {items.map(item => (
+                                {bookSections ? activeBookSection && (
+                                    <section className="mb-8" data-expansion-section={activeBookSection[0]}>
+                                        <div className="catalog-tabs expansion-tabs" role="tablist" aria-label="扩充手册分类">
+                                            {bookSections.map(([label], index) => {
+                                                const selected = label === activeBookSection[0];
+                                                return (
+                                                    <button key={label} type="button" role="tab" id={`${bookTabsId}-${index}`}
+                                                        aria-selected={selected} aria-controls={`${bookTabsId}-panel`} tabIndex={selected ? 0 : -1}
+                                                        onClick={() => setSelectedBookSection(label)}
+                                                        onKeyDown={event => {
+                                                            const offset = { ArrowLeft: -1, ArrowRight: 1 }[event.key];
+                                                            if (!offset) return;
+                                                            event.preventDefault();
+                                                            const next = (index + offset + bookSections.length) % bookSections.length;
+                                                            setSelectedBookSection(bookSections[next][0]);
+                                                            event.currentTarget.parentElement.children[next].focus();
+                                                        }}>
+                                                        {label === '子职' ? '子职业' : label}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                        <div role="tabpanel" id={`${bookTabsId}-panel`}
+                                            aria-labelledby={`${bookTabsId}-${bookSections.indexOf(activeBookSection)}`}
+                                            className="item-grid reference-card-grid">
+                                            {activeBookSection[1].map(item => (
                                                 <ItemCard
                                                     lightweight
                                                     key={item.id}
@@ -426,20 +452,8 @@ export default function DetailScreen({
                                                 />
                                             ))}
                                         </div>
-                                    );
-                                    return label === '内容' ? (
-                                        <section key={label} className="mb-8">
-                                            <h3 className="section-title mb-4">内容</h3>
-                                            {cards}
-                                        </section>
-                                    ) : (
-                                        <details key={label} data-expansion-section={label}
-                                            className="expansion-content mb-8" open={entry.section === label}>
-                                            <summary className="section-title mb-4">{label}</summary>
-                                            {cards}
-                                        </details>
-                                    );
-                                }) : <>
+                                    </section>
+                                ) : <>
                                 {Object.keys(currentCategoryData._children).length > 0 && (
                                     <div className="mb-8">
                                         <h3 className="section-title mb-4">分类</h3>

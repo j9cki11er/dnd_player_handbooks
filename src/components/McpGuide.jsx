@@ -53,7 +53,7 @@ export default function McpGuide() {
                             <li>确认风险提示后创建插件。</li>
                         </ol>
                         {[
-                            ['名称', '不要喂龙公会｜玩家手册 2024'],
+                            ['名称', '不要喂龙公会｜冒险手册'],
                             ['服务器网址', endpoint],
                         ].map(([label, value]) => (
                             <div className="mcp-guide-copy" key={label}>
