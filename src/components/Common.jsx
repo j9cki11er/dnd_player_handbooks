@@ -53,14 +53,14 @@ export function WeaponTable({ weapons }) {
     );
 }
 
-export function ConfirmModal({ title, message, onConfirm, onClose, confirmText = '确认', cancelText = '取消', isDanger = false }) {
+export function ConfirmModal({ title, message, onConfirm, onClose, confirmText = '确认', cancelText = '取消', isDanger = false, compact = false }) {
     return (
         <div className="modal-overlay" onClick={onClose}>
             <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="modal-content glass-panel confirm-modal"
+                className={`modal-content glass-panel confirm-modal${compact ? ' bookmark-folder-confirm-modal' : ''}`}
                 onClick={e => e.stopPropagation()}
             >
                 <div className="modal-header">

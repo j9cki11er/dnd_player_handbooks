@@ -964,6 +964,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   padding: 0.75rem 1rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -3625,7 +3626,7 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
 .mcp-guide-copy summary { cursor: pointer; }
 .mcp-guide-copy img { display: block; width: 100%; height: auto; border-radius: 6px; }
 
-.mcp-guide { width: min(48rem, calc(100% - 2rem)); }
+.mcp-guide { width: min(48rem, calc(100% - 2rem)); font-size: 0.875rem; }
 .mcp-guide .gear-dialog-surface { padding: 0; }
 .mcp-guide-header {
   display: flex;
@@ -3636,7 +3637,7 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
   background: var(--bg-primary);
   border-bottom: 1px solid color-mix(in srgb, var(--accent-gold) 30%, transparent);
 }
-.mcp-guide-header h2 { margin: 0.35rem 0; font-size: clamp(1.45rem, 4vw, 2rem); }
+.mcp-guide-header h2 { margin: 0.35rem 0; font-size: clamp(1.2rem, 3.5vw, 1.65rem); }
 .mcp-guide-header p { margin: 0; }
 .mcp-guide-kicker, .mcp-guide-link {
   display: inline-flex;
@@ -3644,11 +3645,11 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
   gap: 0.45rem;
   color: var(--accent-gold);
 }
-.mcp-guide-kicker { font-size: 0.85rem; }
+.mcp-guide-kicker, .mcp-guide-copy .gear-reset { font-size: 0.8rem; }
 .mcp-guide-section { padding: 1.1rem clamp(1rem, 4vw, 2rem); }
-.mcp-guide-section h3 { display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.65rem; }
+.mcp-guide-section h3 { font-size: 1rem; display: flex; align-items: center; gap: 0.65rem; margin: 0 0 0.65rem; }
 .mcp-guide-section h3 span {
-  font: 400 0.8rem ui-monospace, monospace;
+  font: 400 0.75rem ui-monospace, monospace;
   color: var(--accent-gold);
   border: 1px solid color-mix(in srgb, var(--accent-gold) 45%, transparent);
   border-radius: 5px;
@@ -3657,7 +3658,7 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
 .mcp-guide-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 1rem; }
 .mcp-guide-fields .mcp-guide-copy { margin: 0 0 0.55rem; }
 .mcp-guide-copy { border-color: color-mix(in srgb, var(--text-primary) 22%, transparent); }
-.mcp-guide-copy strong { display: block; margin-bottom: 0.25rem; font-size: 0.87rem; }
+.mcp-guide-copy strong { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; }
 .mcp-guide-copy strong span { font-weight: normal; }
 .mcp-guide-aside details { margin-top: 0; }
 .mcp-guide-aside summary svg { vertical-align: text-bottom; margin-inline-end: 0.3rem; }
@@ -3806,7 +3807,10 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
   max-height: min(720px, calc(100dvh - 2 * max(var(--dialog-edge), env(safe-area-inset-top, 0px), env(safe-area-inset-bottom, 0px))));
 }
 
-.reference-dialog > .gear-dialog-surface {
+.reference-dialog > .gear-dialog-surface,
+.bookmark-folder-dialog-body,
+.modal-content.bookmark-folder-name-modal,
+.modal-content.bookmark-folder-confirm-modal {
   padding: 12px;
 }
 
@@ -4187,11 +4191,91 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
 }
 
 .bookmark-folder-dialog {
-  width: min(400px, calc(100vw - 24px));
+  width: min(440px, calc(100vw - 24px));
+}
+
+.folder-header .folder-drag-handle {
+  touch-action: none;
+  cursor: grab;
+  flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.folder-header .folder-drag-handle:active {
+  cursor: grabbing;
 }
 
 .bookmark-folder-dialog-body {
-  padding: 16px;
+  display: grid;
+  grid-template-rows: auto minmax(44px, 1fr) auto;
+  gap: 12px;
+  max-height: inherit;
+}
+
+.bookmark-folder-dialog .modal-subtitle {
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.bookmark-folder-summary {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.bookmark-folder-dialog .folder-selection-list {
+  margin: 0;
+  max-height: min(22rem, 55dvh);
+  min-height: 0;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  scrollbar-gutter: stable;
+}
+
+.bookmark-folder-dialog .modal-actions {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bookmark-folder-dialog .modal-actions button {
+  min-height: 44px;
+}
+
+.bookmark-folder-dialog .modal-actions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.bookmark-folder-dialog .folder-select-item .lucide-heart {
+  color: var(--text-muted);
+}
+
+.bookmark-folder-dialog .folder-select-item.selected .lucide-heart {
+  color: var(--content-red);
+}
+
+.bookmark-folder-dialog .folder-select-item {
+  min-height: 44px;
+  flex-shrink: 0;
+  text-align: start;
+  background: color-mix(in srgb, var(--bg-secondary), var(--text-primary) 5%);
+  border-color: color-mix(in srgb, var(--bg-secondary), var(--text-primary) 24%);
+}
+
+.bookmark-folder-dialog .folder-select-item.selected {
+  background: color-mix(in srgb, var(--bg-secondary), var(--content-red) 16%);
+  border-color: var(--content-red);
+}
+
+.bookmark-folder-dialog .folder-name-row {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.bookmark-folder-dialog .folder-select-item svg {
+  flex-shrink: 0;
 }
 
 /* Fit multiple cards on tablets even when the sidebar reduces available width. */
@@ -4246,9 +4330,4 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
     width: 100%;
     min-width: 0;
   }
-}
-
-.folder-select-item.suggested {
-  border-color: var(--accent-gold);
-  background: var(--glass-gold);
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
+const folderOrderKey = 'dnd-bookmark-folder-order';
 const expansionKey = 'dnd-bookmark-expansion';
 const recentFolderWindow = 5 * 60 * 1000;
 
@@ -19,8 +20,19 @@ export function useBookmarks() {
             folder, ids.map(id => id.replace('瓦罗怪物指南 (MPMM)', '瓦罗怪物指南 (VGM)'))
         ]));
     });
+    const [folderOrder, setFolderOrder] = useState(() => {
+        try {
+            const saved = JSON.parse(localStorage.getItem(folderOrderKey));
+            return Array.isArray(saved) ? saved : [];
+        } catch {
+            return [];
+        }
+    });
+    const orderedFolders = [...new Set([...folderOrder, ...Object.keys(bookmarks)])]
+        .filter(folder => Object.hasOwn(bookmarks, folder));
+
     const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
-    const recentFolder = useRef(null);
+    const recentFolders = useRef(null);
     const [pendingBookmark, setPendingBookmark] = useState(null);
     const [expandedFolders, setExpandedFolders] = useState(() => readExpansion().folders ?? {});
     const [expandedCategories, setExpandedCategories] = useState(() => readExpansion().categories ?? {});
@@ -37,30 +49,31 @@ export function useBookmarks() {
     }, [bookmarks]);
 
     useEffect(() => {
+        localStorage.setItem(folderOrderKey, JSON.stringify(folderOrder));
+    }, [folderOrder]);
+
+    useEffect(() => {
         localStorage.setItem(expansionKey, JSON.stringify({
             folders: expandedFolders,
             categories: expandedCategories
         }));
     }, [expandedFolders, expandedCategories]);
 
-    const toggleBookmark = (id, folder) => {
-        if (bookmarks[folder] && !bookmarks[folder].includes(id)) {
-            recentFolder.current = { folder, savedAt: Date.now() };
-        }
-        setBookmarks(prev => {
-            const folderItems = prev[folder] || [];
-            const isAlreadyInThisFolder = folderItems.includes(id);
-            if (isAlreadyInThisFolder) {
-                return { ...prev, [folder]: folderItems.filter(i => i !== id) };
-            } else {
-                return { ...prev, [folder]: [...folderItems, id] };
-            }
-        });
+    const saveBookmarkFolders = (id, folders) => {
+        const selected = new Set(folders.filter(folder => Object.hasOwn(bookmarks, folder)));
+        recentFolders.current = { folders: [...selected], savedAt: Date.now() };
+        setBookmarks(prev => Object.fromEntries(Object.entries(prev).map(([folder, ids]) => [
+            folder,
+            selected.has(folder)
+                ? (ids.includes(id) ? ids : [...ids, id])
+                : ids.filter(itemId => itemId !== id)
+        ])));
     };
 
     const createFolder = (name) => {
         if (!name || bookmarks[name]) return;
         setBookmarks(prev => ({ ...prev, [name]: [] }));
+        setFolderOrder([...orderedFolders, name]);
     };
 
     const renameFolder = (oldName, newName) => {
@@ -71,6 +84,7 @@ export function useBookmarks() {
             delete next[oldName];
             return next;
         });
+        setFolderOrder(orderedFolders.map(folder => folder === oldName ? newName : folder));
         if (expandedFolders[oldName] !== undefined) {
             setExpandedFolders(prev => {
                 const next = { ...prev };
@@ -85,6 +99,7 @@ export function useBookmarks() {
         if (name === '默认') return;
         setConfirmConfig({
             title: '删除文件夹',
+            compact: true,
             message: `确定要删除文件夹“${name}”吗？其中包含的所有收藏项也将被移除。`,
             confirmText: '确认删除',
             isDanger: true,
@@ -94,6 +109,7 @@ export function useBookmarks() {
                     delete next[name];
                     return next;
                 });
+                setFolderOrder(orderedFolders.filter(folder => folder !== name));
                 setConfirmConfig(null);
             }
         });
@@ -106,6 +122,7 @@ export function useBookmarks() {
     const clearFolder = (folderName) => {
         setConfirmConfig({
             title: '清空文件夹',
+            compact: true,
             message: `确定要清空“${folderName}”中的所有收藏吗？`,
             onConfirm: () => {
                 setBookmarks(prev => ({
@@ -120,12 +137,14 @@ export function useBookmarks() {
     const clearAllBookmarks = () => {
         setConfirmConfig({
             title: '全局清空',
+            compact: true,
             message: '确定要清除所有收藏并重置吗？这将清除所有文件夹中的内容。',
             confirmText: '全部清空',
             isDanger: true,
             onConfirm: () => {
                 const resetValue = { '默认': [] };
                 setBookmarks(resetValue);
+                setFolderOrder([]);
                 localStorage.setItem('dnd-bookmarks', JSON.stringify(resetValue));
                 setConfirmConfig(null);
             }
@@ -140,24 +159,6 @@ export function useBookmarks() {
         setExpandedFolders(newState);
     };
 
-    const reorderFolders = (newOrder) => {
-        setBookmarks(prev => {
-            const next = {};
-            newOrder.forEach(folder => {
-                if (prev[folder]) {
-                    next[folder] = prev[folder];
-                }
-            });
-            // Ensure any missed folders are added at the end (safety)
-            Object.keys(prev).forEach(folder => {
-                if (!next[folder]) {
-                    next[folder] = prev[folder];
-                }
-            });
-            return next;
-        });
-    };
-
     const reorderItemsInFolder = (folderName, newItemIds) => {
         setBookmarks(prev => ({
             ...prev,
@@ -166,10 +167,12 @@ export function useBookmarks() {
     };
 
     const openBookmarkDialog = item => {
-        const recent = recentFolder.current;
-        const suggestedFolder = recent && Date.now() - recent.savedAt < recentFolderWindow &&
-            Object.hasOwn(bookmarks, recent.folder) ? recent.folder : null;
-        setPendingBookmark({ ...item, suggestedFolder });
+        const savedFolders = Object.keys(bookmarks).filter(folder => bookmarks[folder].includes(item.id));
+        const recent = recentFolders.current;
+        const suggestedFolders = !savedFolders.length && recent && Date.now() - recent.savedAt < recentFolderWindow
+            ? recent.folders.filter(folder => Object.hasOwn(bookmarks, folder))
+            : [];
+        setPendingBookmark({ ...item, savedFolders, suggestedFolders });
         setIsBookmarkModalOpen(true);
     };
 
@@ -186,7 +189,7 @@ export function useBookmarks() {
         newFolderName, setNewFolderName,
         isShareModalOpen, setIsShareModalOpen,
         isImporting, setIsImporting,
-        toggleBookmark,
+        saveBookmarkFolders,
         createFolder,
         renameFolder,
         deleteFolder,
@@ -195,7 +198,8 @@ export function useBookmarks() {
         clearAllBookmarks,
         toggleAllFolders,
         openBookmarkDialog,
-        reorderFolders,
+        orderedFolders,
+        reorderFolders: setFolderOrder,
         reorderItemsInFolder
     };
 }

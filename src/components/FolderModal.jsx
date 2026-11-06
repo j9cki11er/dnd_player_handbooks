@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { FolderPlus } from 'lucide-react';
 
 export default function FolderModal({ isOpen, onClose, newFolderName, setNewFolderName, onCreate, title, buttonText }) {
@@ -7,11 +7,11 @@ export default function FolderModal({ isOpen, onClose, newFolderName, setNewFold
 
     return (
         <div className="modal-overlay" onClick={onClose}>
-            <motion.div
+            <Motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="modal-content glass-panel"
+                className="modal-content glass-panel bookmark-folder-name-modal"
                 onClick={e => e.stopPropagation()}
             >
                 <h3 className="modal-title gold-text">{title || '新建收藏文件夹'}</h3>
@@ -57,7 +57,7 @@ export default function FolderModal({ isOpen, onClose, newFolderName, setNewFold
                         {buttonText || '确认'}
                     </button>
                 </div>
-            </motion.div>
+            </Motion.div>
         </div>
     );
 }

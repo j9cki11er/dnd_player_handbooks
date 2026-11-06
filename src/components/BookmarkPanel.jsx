@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart, Edit2, Share2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronRight, Trash2, FolderPlus, FilterX, Bookmark, Heart, Edit2, Share2, GripVertical } from 'lucide-react';
 import { motion, Reorder, AnimatePresence, useDragControls } from 'framer-motion';
 import { ItemCard, SpellListItem } from './Common';
 import { CatalogCard } from './ItemCatalog';
@@ -138,20 +138,39 @@ const DraggableFolder = ({
     selectItem,
     openBookmarkDialog,
     isMobile,
-    selectedItemId
+    selectedItemId,
+    moveFolder,
+    canReorder
 }) => {
-    const { controls, onPointerDown, onPointerMove, onPointerUp, isHolding } = useHoldToDrag();
+    const controls = useDragControls();
 
     return (
-        <motion.div
-            layout
-            className={`bookmark-section mb-6 ${!isFolderExpanded ? 'collapsed' : ''} ${isHolding ? 'is-holding' : ''}`}
+        <Reorder.Item
+            as="div"
+            value={folder}
+            dragListener={false}
+            dragControls={controls}
+            dragMomentum={false}
+            whileDrag={{ boxShadow: '0 8px 24px #0006' }}
+            className={`bookmark-section mb-6 ${!isFolderExpanded ? 'collapsed' : ''}`}
         >
             <div
                 className="folder-header group cursor-pointer flex items-center justify-between p-3 glass-panel mb-2"
                 onClick={() => setExpandedFolders(prev => ({ ...prev, [folder]: !isFolderExpanded }))}
             >
                 <div className="flex items-center gap-3">
+                    {canReorder && <button type="button" className="action-icon-btn folder-drag-handle"
+                        aria-label={`拖动排序：${folder}，也可使用上下方向键`}
+                        title="拖动排序（上下方向键也可移动）"
+                        onClick={event => event.stopPropagation()}
+                        onPointerDown={event => controls.start(event)}
+                        onKeyDown={event => {
+                            if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+                            event.preventDefault();
+                            moveFolder(folder, event.key === 'ArrowUp' ? -1 : 1);
+                        }}>
+                        <GripVertical size={18} aria-hidden="true" />
+                    </button>}
                     {isFolderExpanded ? <ChevronDown size={18} className="text-gold" /> : <ChevronRight size={18} className="text-gold" />}
                     <h3 className="folder-name text-lg gold-text m-0">{folder}</h3>
                     <span className="count-badge opacity-60 text-xs bg-gold/10 px-2 py-0.5 rounded-full">{folderItems.length} 项</span>
@@ -273,7 +292,7 @@ const DraggableFolder = ({
                     </motion.div>
                 )}
             </AnimatePresence>
-        </motion.div>
+        </Reorder.Item>
     );
 };
 
@@ -298,11 +317,21 @@ export default function BookmarkPanel({
     setIsImporting,
     setIsRenameModalOpen,
     setFolderToRename,
+    orderedFolders,
     reorderFolders,
     reorderItemsInFolder
 }) {
     const [draggingId, setDraggingId] = React.useState(null);
     const lastReorderTime = React.useRef(0);
+
+    const moveFolder = (folder, offset) => {
+        const index = orderedFolders.indexOf(folder);
+        const nextIndex = index + offset;
+        if (nextIndex < 0 || nextIndex >= orderedFolders.length) return;
+        const next = [...orderedFolders];
+        [next[index], next[nextIndex]] = [next[nextIndex], next[index]];
+        reorderFolders(next);
+    };
 
     const handleReorderItems = (folder, categoryType, newCategoryItems) => {
         const newItemIds = newCategoryItems.map(item => item.id);
@@ -393,13 +422,15 @@ export default function BookmarkPanel({
                     </div>
                 </div>
 
-                <div
+                <Reorder.Group as="div" axis="y" values={orderedFolders} onReorder={reorderFolders} layoutScroll
                     className="overflow-y-auto flex-1 min-h-0 pr-10 pb-20 custom-scrollbar"
                 >
-                    {Object.keys(bookmarks).map(folder => (
+                    {orderedFolders.map(folder => (
                         <DraggableFolder
                             key={folder}
                             folder={folder}
+                            moveFolder={moveFolder}
+                            canReorder={orderedFolders.length > 1}
                             isFolderExpanded={expandedFolders[folder] === true}
                             folderItems={bookmarks[folder]}
                             setExpandedFolders={setExpandedFolders}
@@ -420,10 +451,10 @@ export default function BookmarkPanel({
                             selectedItemId={selectedItemId}
                         />
                     ))}
-                    {Object.keys(bookmarks).length === 0 && (
+                    {orderedFolders.length === 0 && (
                         <div className="text-center py-20 text-muted">您还没有任何收藏</div>
                     )}
-                </div>
+                </Reorder.Group>
             </div>
         </div>
     );

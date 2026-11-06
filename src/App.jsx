@@ -184,8 +184,8 @@ export default function App() {
     expandedCategories, setExpandedCategories, confirmConfig, setConfirmConfig, isAddingFolder, setIsAddingFolder,
     isRenameModalOpen, setIsRenameModalOpen, folderToRename, setFolderToRename,
     newFolderName, setNewFolderName, isShareModalOpen, setIsShareModalOpen, isImporting, setIsImporting,
-    toggleBookmark, createFolder, renameFolder, deleteFolder, isBookmarkedAnywhere, clearFolder,
-    clearAllBookmarks, toggleAllFolders, openBookmarkDialog, reorderFolders, reorderItemsInFolder
+    saveBookmarkFolders, createFolder, renameFolder, deleteFolder, isBookmarkedAnywhere, clearFolder,
+    clearAllBookmarks, toggleAllFolders, openBookmarkDialog, orderedFolders, reorderFolders, reorderItemsInFolder
   } = useBookmarks();
 
   const { searchResults } = useSearch({ data, spellData, featData, masteryData, invocationData, searchQuery });
@@ -297,7 +297,7 @@ export default function App() {
               resolveItem={resolveItem} expandedCategories={expandedCategories} setExpandedCategories={setExpandedCategories}
               setIsShareModalOpen={setIsShareModalOpen} setIsImporting={setIsImporting}
               setIsRenameModalOpen={setIsRenameModalOpen} setFolderToRename={setFolderToRename}
-              reorderFolders={reorderFolders} reorderItemsInFolder={reorderItemsInFolder}
+              orderedFolders={orderedFolders} reorderFolders={reorderFolders} reorderItemsInFolder={reorderItemsInFolder}
               {...commonProps}
             />
           )}
@@ -337,7 +337,7 @@ export default function App() {
 
       <BookmarkModal
         isOpen={isBookmarkModalOpen} onClose={() => setIsBookmarkModalOpen(false)} pendingBookmark={pendingBookmark}
-        bookmarks={bookmarks} toggleBookmark={toggleBookmark}
+        orderedFolders={orderedFolders} saveBookmarkFolders={saveBookmarkFolders}
       />
 
       {isShareModalOpen && <Suspense fallback={<p role="status">加载导入／导出…</p>}><ShareModal
