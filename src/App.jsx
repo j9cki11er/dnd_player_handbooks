@@ -152,6 +152,11 @@ export default function App() {
   const [showDM, setShowDM] = useState(() => localStorage.getItem('dm_mode') === 'true');
 
   useEffect(() => {
+    // Remove data left by the retired handbook content cache.
+    globalThis.caches?.delete('dnd-handbook-content').catch(() => {});
+  }, []);
+
+  useEffect(() => {
     if (window.location.pathname === '/dev') {
       const newDevMode = !showDev;
       setShowDev(newDevMode);
