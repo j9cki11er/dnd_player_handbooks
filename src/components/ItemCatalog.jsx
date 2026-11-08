@@ -4,6 +4,7 @@ import data from '../data.json';
 import CatalogDialog from './CatalogDialog';
 import { gearPriceLabel } from '../utils/gear';
 import GearBrowser from './GearBrowser';
+import { catalogArmor } from '../utils/armor';
 import { catalogWeapons } from '../utils/weapons';
 
 export const magicItems = data.filter(item => item.itemType && item.rarity);
@@ -24,11 +25,19 @@ function CoinPrice({ cost }) {
 
 export function CatalogCard({ item, onClick, openBookmarkDialog, isBookmarkedAnywhere }) {
     const saved = isBookmarkedAnywhere?.(item.id);
+    if (item.armorClass || item.damage) return <div className="catalog-card glass-panel equipment-card">
+        <button className="catalog-open" onClick={onClick} aria-label={`查看${item.title}说明`}>
+            <span className="weapon-card-classification equipment-classification"><span className="spell-level-badge">{item.category}</span>{['轻型', '重型'].filter(property => item.properties?.includes(property)).map(property => <strong key={property} className="spell-concentration">{property}</strong>)}</span>
+            <span className="equipment-title-row"><strong>{item.title}</strong><small lang="en">{item.titleEn}</small></span>
+            <span className="gear-card-meta equipment-meta"><span className="equipment-stats gear-weight">{item.armorClass ? `AC ${item.armorClass}` : item.damage} · {item.weight}</span><span className="gear-price"><CoinPrice cost={item.cost} /></span></span>
+        </button>
+        <button className={`catalog-save ${saved ? 'saved' : ''}`} aria-label={`收藏${item.title}`} aria-pressed={!!saved} onClick={() => openBookmarkDialog(item)}><Heart size={17} fill={saved ? 'currentColor' : 'none'} /></button>
+    </div>;
     return <div className="catalog-card glass-panel">
         <button className="catalog-open" onClick={onClick} aria-label={`查看${item.title}说明`}>
-            {item.damage && <span className="weapon-card-classification">
+            {(item.damage || item.armorClass) && <span className="weapon-card-classification">
                 <strong className="spell-level-badge">{item.category}</strong>
-                {isLightWeapon(item) && <strong className="spell-concentration">轻型</strong>}
+                {['轻型', '重型'].filter(property => item.properties?.includes(property)).map(property => <strong key={property} className="spell-concentration">{property}</strong>)}
             </span>}
             {item.itemType && <span className="weapon-card-classification magic-card-meta">
                 <strong className="spell-level-badge">{item.rarity}</strong>
@@ -41,7 +50,7 @@ export function CatalogCard({ item, onClick, openBookmarkDialog, isBookmarkedAny
                 </span>
             </span>
             {!item.itemType && <span className="gear-card-meta">
-                <span className="gear-weight">{item.damage ? `${item.damage} · ${item.weight}` : `重量 ${item.weight}`}</span>
+                <span className="gear-weight">{item.damage ? `${item.damage} · ${item.weight}` : item.armorClass ? `AC ${item.armorClass} · ${item.weight}` : `重量 ${item.weight}`}</span>
                 <span className="gear-price"><CoinPrice cost={item.damage ? item.cost : gearPriceLabel(item)} /></span>
             </span>}
         </button>
@@ -122,23 +131,49 @@ export function WeaponBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initia
         <p className="gear-count" role="status">显示 {items.length} / {catalogWeapons.length} 件武器</p><ul className="gear-grid">{items.map(item => <li key={item.id}><CatalogCard item={item} onClick={() => setSelected(item)} {...{openBookmarkDialog, isBookmarkedAnywhere}} /></li>)}</ul>{!items.length && <p className="gear-empty">没有符合条件的武器。</p>}{selected && <CatalogDialog item={selected} onClose={() => setSelected(null)} />}
     </section>;
 }
+export function ArmorBrowser({ openBookmarkDialog, isBookmarkedAnywhere, initialQuery = '' }) {
+    const [query, setQuery] = useState(initialQuery);
+    const [category, setCategory] = useState('');
+    const [sort, setSort] = useState('category');
+    const [stealth, setStealth] = useState('');
+    const [selected, setSelected] = useState(null);
+    const items = catalogArmor.filter(item => (!category || item.category === category)
+        && (!stealth || (item.stealth === '劣势') === (stealth === 'disadvantage'))
+        && `${item.title} ${item.titleEn} ${item.armorClass}`.toLowerCase().includes(query.trim().toLowerCase()));
+    if (sort.startsWith('price-')) items.sort((a, b) => (a.pricesGP[0] - b.pricesGP[0]) * (sort === 'price-asc' ? 1 : -1));
+    if (sort.startsWith('weight-')) items.sort((a, b) => (weaponWeight(a) - weaponWeight(b)) * (sort === 'weight-asc' ? 1 : -1));
+    return <section className="gear-browser" aria-label="护甲图鉴">
+        <header className="gear-browser-header"><h2>护甲 <span>Armor</span></h2><p>按护甲类别与隐匿影响筛选 · 点击查看护甲等级、穿脱时间及价格，爱心保存到收藏。</p></header>
+        <div className="gear-filters unified-filter-bar">
+            <select aria-label="护甲类别" value={category} onChange={e => setCategory(e.target.value)}><option value="">全部类别</option>{[...new Set(catalogArmor.map(item => item.category))].map(value => <option key={value}>{value}</option>)}</select>
+            <select aria-label="护甲隐匿影响" value={stealth} onChange={e => setStealth(e.target.value)}><option value="">全部隐匿影响</option><option value="none">无隐匿劣势</option><option value="disadvantage">隐匿劣势</option></select>
+            <select aria-label="护甲排序" value={sort} onChange={e => setSort(e.target.value)}><option value="category">按类别</option><option value="price-asc">价格从低到高</option><option value="price-desc">价格从高到低</option><option value="weight-asc">重量从轻到重</option><option value="weight-desc">重量从重到轻</option></select>
+            <label className="gear-search"><input aria-label="搜索护甲" placeholder="搜索名称 / English / AC" value={query} onChange={e => setQuery(e.target.value)} /></label>
+            <button className="gear-reset" onClick={() => { setQuery(''); setCategory(''); setStealth(''); setSort('category'); }}>重置</button>
+        </div>
+        <p className="gear-count" role="status">显示 {items.length} / {catalogArmor.length} 件护甲</p>
+        <ul className="gear-grid">{items.map(item => <li key={item.id}><CatalogCard item={item} onClick={() => setSelected(item)} {...{openBookmarkDialog, isBookmarkedAnywhere}} /></li>)}</ul>
+        {!items.length && <p className="gear-empty">没有符合条件的护甲。</p>}
+        {selected && <CatalogDialog item={selected} onClose={() => setSelected(null)} />}
+    </section>;
+}
 export default function ItemCatalog(props) {
     const [route] = useState(() => {
         const params = new URLSearchParams(window.location.search);
         const catalog = params.get('catalog');
-        return ['gear', 'magic', 'weapons'].includes(catalog)
+        return ['gear', 'magic', 'weapons', 'armor'].includes(catalog)
             ? { catalog, query: params.get('q') || '' }
             : null;
     });
     const [tab, setTab] = useState(() => {
         if (route) return route.catalog;
         const saved = localStorage.getItem('item_catalog_tab');
-        return ['gear', 'magic', 'weapons'].includes(saved) ? saved : 'weapons';
+        return ['gear', 'magic', 'weapons', 'armor'].includes(saved) ? saved : 'weapons';
     });
     const selectTab = id => {
         setTab(id);
         localStorage.setItem('item_catalog_tab', id);
     };
     const initialQuery = route?.catalog === tab ? route.query : '';
-    return <div className="spell-browser-container p-4"><div className="spell-list-panel item-catalog-panel"><div className="catalog-tabs" role="tablist" aria-label="物品分类">{[['weapons','武器'],['gear','装备'],['magic','魔法物品']].map(([id,title]) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => selectTab(id)}>{title}</button>)}</div><div className="catalog-scroll" role="tabpanel">{tab === 'gear' ? <GearBrowser {...props} initialQuery={initialQuery} /> : tab === 'weapons' ? <WeaponBrowser {...props} initialQuery={initialQuery} /> : <MagicBrowser {...props} initialQuery={initialQuery} initialRarity={initialQuery ? '' : undefined} />}</div></div></div>;
+    return <div className="spell-browser-container p-4"><div className="spell-list-panel item-catalog-panel"><div className="catalog-tabs" role="tablist" aria-label="物品分类">{[['weapons','武器'],['armor','护甲'],['gear','装备'],['magic','魔法物品']].map(([id,title]) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => selectTab(id)}>{title}</button>)}</div><div className="catalog-scroll" role="tabpanel">{tab === 'armor' ? <ArmorBrowser {...props} initialQuery={initialQuery} /> : tab === 'gear' ? <GearBrowser {...props} initialQuery={initialQuery} /> : tab === 'weapons' ? <WeaponBrowser {...props} initialQuery={initialQuery} /> : <MagicBrowser {...props} initialQuery={initialQuery} initialRarity={initialQuery ? '' : undefined} />}</div></div></div>;
 }

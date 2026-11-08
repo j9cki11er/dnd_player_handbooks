@@ -221,7 +221,7 @@ const DraggableFolder = ({
                     >
                         {folderItems.length > 0 ? (
                             <div className="flex flex-col gap-6">
-                                {folderItems.map(resolveItem).some(item => item && (item.itemType || (item.id.startsWith('gear:') || item.id.startsWith('weapon:')))) && <SavedItems items={folderItems.map(resolveItem).filter(item => item && (item.itemType || (item.id.startsWith('gear:') || item.id.startsWith('weapon:'))))} openBookmarkDialog={openBookmarkDialog} />}
+                                {folderItems.map(resolveItem).some(item => item && (item.itemType || (item.id.startsWith('gear:') || item.id.startsWith('weapon:') || item.id.startsWith('armor:')))) && <SavedItems items={folderItems.map(resolveItem).filter(item => item && (item.itemType || (item.id.startsWith('gear:') || item.id.startsWith('weapon:') || item.id.startsWith('armor:'))))} openBookmarkDialog={openBookmarkDialog} />}
                                 {['rules', 'creatures', 'spells'].map(categoryType => {
                                     const catId = `${folder}-${categoryType}`;
                                     const isCatExpanded = expandedCategories[catId] !== false;
@@ -230,7 +230,7 @@ const DraggableFolder = ({
                                         const isSpell = !!item.castingTime;
                                         const isCreature = item.pathParts?.some(p => p.includes('附录 B') || p.includes('生物数据卡'));
 
-                                        if (categoryType === 'rules') return !isSpell && !isCreature && !item.itemType && !(item.id.startsWith('gear:') || item.id.startsWith('weapon:'));
+                                        if (categoryType === 'rules') return !isSpell && !isCreature && !item.itemType && !(item.id.startsWith('gear:') || item.id.startsWith('weapon:') || item.id.startsWith('armor:'));
                                         if (categoryType === 'creatures') return isCreature;
                                         if (categoryType === 'spells') return isSpell;
                                         return false;

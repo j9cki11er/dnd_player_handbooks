@@ -2969,7 +2969,7 @@ body.light-theme { --weapon-row-bg: var(--bg-secondary); --weapon-row-alt-bg: va
 .catalog-save { position: absolute; right: 4px; top: 1px; width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; color: var(--text-muted); cursor: pointer; }
 .catalog-save.saved { color: #ef4444; }
 .catalog-save:hover { color: var(--accent-gold); }
-.catalog-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.catalog-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .catalog-tabs button { min-height: 44px; padding: 8px 18px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--glass-bg); color: var(--text-secondary); cursor: pointer; font: inherit; }
 .catalog-tabs button[aria-selected=true] { color: var(--accent-gold); border-color: var(--accent-gold); }
 .catalog-scroll { overflow-y: auto; flex: 1; min-height: 0; padding-bottom: 5rem; }
@@ -4275,3 +4275,23 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
   border-color: var(--accent-gold);
   background: var(--glass-gold);
 }
+
+.equipment-title-row { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.equipment-title-row > strong { font-size: 0.95rem; }
+.equipment-english-row { display: flex; align-items: baseline; justify-content: flex-end; gap: 8px; width: 100%; }
+.equipment-title-row small { color: var(--text-muted); font-size: 0.75rem; min-width: 0; overflow-wrap: anywhere; }
+.equipment-english-row .gear-price { flex-shrink: 0; }
+.equipment-stats { display: block; width: 100%; line-height: 1.5; }
+
+.equipment-card .catalog-open { min-height: 114px; gap: 8px; }
+.equipment-title-row { min-height: 24px; }
+.equipment-classification { min-height: 24px; padding-right: 28px; flex-wrap: wrap; }
+.equipment-classification > span, .equipment-classification > strong { flex-shrink: 0; }
+.equipment-english-row { min-height: 20px; }
+
+.equipment-title-row > strong { flex-shrink: 0; }
+.equipment-title-row > small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.equipment-meta { align-items: baseline; }
+.equipment-meta .equipment-stats { width: auto; min-width: 0; }
+.equipment-meta .gear-price { flex-shrink: 0; }

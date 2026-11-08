@@ -46,7 +46,7 @@ export default function CatalogDialog({ item, onClose, showCreature = false }) {
             ) : (
                 <div>
                     <h2 id={titleId}>{item.title}</h2>
-                    <p>{item.damage ? `${item.titleEn} · ${item.category}` : item.itemType || showCreature ? [item.titleEn, showCreature && item.cr != null ? `CR ${item.cr}` : ''].filter(Boolean).join(' · ') : `重量 ${item.weight} · ${gearPriceLabel(item)}`}</p>
+                    <p>{(item.damage || item.armorClass) ? `${item.titleEn} · ${item.category}` : item.itemType || showCreature ? [item.titleEn, showCreature && item.cr != null ? `CR ${item.cr}` : ''].filter(Boolean).join(' · ') : `重量 ${item.weight} · ${gearPriceLabel(item)}`}</p>
                 </div>
             )}
             <button className="gear-close" aria-label={isSpell ? '关闭法术说明' : '关闭物品说明'} onClick={onClose} autoFocus><X size={20} /></button>
@@ -102,6 +102,19 @@ export default function CatalogDialog({ item, onClose, showCreature = false }) {
                 ))}
                 <div className="weapon-dialog-mastery"><dt>精通</dt><dd>{item.mastery || '—'}</dd></div>
                 <div className="weapon-dialog-properties"><dt>词条</dt><dd>{item.properties || '—'}</dd></div>
+            </dl>
+        ) : item.armorClass ? (
+            <dl className="weapon-dialog-stats armor-dialog-stats">
+                {[
+                    ['护甲等级（AC）', item.armorClass],
+                    ['重量', item.weight],
+                    ['价格', item.cost],
+                    ['力量要求', item.strength],
+                    ['隐匿', item.stealth],
+                    ['穿脱时间', item.donDoff],
+                ].map(([label, value]) => (
+                    <div key={label}><dt>{label}</dt><dd>{value || '—'}</dd></div>
+                ))}
             </dl>
         ) : <div ref={descriptionRef} className="gear-dialog-description dnd-content" dangerouslySetInnerHTML={{ __html: content }} />}
 

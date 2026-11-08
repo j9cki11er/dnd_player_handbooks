@@ -1,0 +1,249 @@
+[
+  {
+    "id": "armor:padded-armor",
+    "title": "布甲",
+    "titleEn": "Padded Armor",
+    "category": "轻甲",
+    "armorClass": "11+敏捷调整值",
+    "strength": "—",
+    "stealth": "劣势",
+    "weight": "8磅",
+    "cost": "5 GP",
+    "donDoff": "穿戴或卸除需1分钟",
+    "pricesGP": [
+      5
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:leather-armor",
+    "title": "皮甲",
+    "titleEn": "Leather Armor",
+    "category": "轻甲",
+    "armorClass": "11+敏捷调整值",
+    "strength": "—",
+    "stealth": "—",
+    "weight": "10磅",
+    "cost": "10 GP",
+    "donDoff": "穿戴或卸除需1分钟",
+    "pricesGP": [
+      10
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:studded-leather-armor",
+    "title": "镶钉皮甲",
+    "titleEn": "Studded Leather Armor",
+    "category": "轻甲",
+    "armorClass": "12+敏捷调整值",
+    "strength": "—",
+    "stealth": "—",
+    "weight": "13磅",
+    "cost": "45 GP",
+    "donDoff": "穿戴或卸除需1分钟",
+    "pricesGP": [
+      45
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:hide-armor",
+    "title": "兽皮甲",
+    "titleEn": "Hide Armor",
+    "category": "中甲",
+    "armorClass": "12+敏捷调整值（最大2）",
+    "strength": "—",
+    "stealth": "—",
+    "weight": "12磅",
+    "cost": "10 GP",
+    "donDoff": "穿戴需5分钟，卸除需1分钟",
+    "pricesGP": [
+      10
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:chain-shirt",
+    "title": "链甲衫",
+    "titleEn": "Chain Shirt",
+    "category": "中甲",
+    "armorClass": "13+敏捷调整值（最大2）",
+    "strength": "—",
+    "stealth": "—",
+    "weight": "20磅",
+    "cost": "50 GP",
+    "donDoff": "穿戴需5分钟，卸除需1分钟",
+    "pricesGP": [
+      50
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:scale-mail",
+    "title": "鳞甲",
+    "titleEn": "Scale Mail",
+    "category": "中甲",
+    "armorClass": "14+敏捷调整值（最大2）",
+    "strength": "—",
+    "stealth": "劣势",
+    "weight": "45磅",
+    "cost": "50 GP",
+    "donDoff": "穿戴需5分钟，卸除需1分钟",
+    "pricesGP": [
+      50
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:breastplate",
+    "title": "胸甲",
+    "titleEn": "Breastplate",
+    "category": "中甲",
+    "armorClass": "14+敏捷调整值（最大2）",
+    "strength": "—",
+    "stealth": "—",
+    "weight": "20磅",
+    "cost": "400 GP",
+    "donDoff": "穿戴需5分钟，卸除需1分钟",
+    "pricesGP": [
+      400
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:half-plate-armor",
+    "title": "半身板甲",
+    "titleEn": "Half Plate Armor",
+    "category": "中甲",
+    "armorClass": "15+敏捷调整值（最大2）",
+    "strength": "—",
+    "stealth": "劣势",
+    "weight": "40磅",
+    "cost": "750 GP",
+    "donDoff": "穿戴需5分钟，卸除需1分钟",
+    "pricesGP": [
+      750
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:ring-armor",
+    "title": "环甲",
+    "titleEn": "Ring Armor",
+    "category": "重甲",
+    "armorClass": "14",
+    "strength": "—",
+    "stealth": "劣势",
+    "weight": "40磅",
+    "cost": "30 GP",
+    "donDoff": "穿戴需10分钟，卸除需5分钟",
+    "pricesGP": [
+      30
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:chain-armor",
+    "title": "链甲",
+    "titleEn": "Chain Armor",
+    "category": "重甲",
+    "armorClass": "16",
+    "strength": "力量13",
+    "stealth": "劣势",
+    "weight": "55磅",
+    "cost": "75 GP",
+    "donDoff": "穿戴需10分钟，卸除需5分钟",
+    "pricesGP": [
+      75
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:splint-armor",
+    "title": "板条甲",
+    "titleEn": "Splint Armor",
+    "category": "重甲",
+    "armorClass": "17",
+    "strength": "力量15",
+    "stealth": "劣势",
+    "weight": "60磅",
+    "cost": "200 GP",
+    "donDoff": "穿戴需10分钟，卸除需5分钟",
+    "pricesGP": [
+      200
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:plate-armor",
+    "title": "板甲",
+    "titleEn": "Plate Armor",
+    "category": "重甲",
+    "armorClass": "18",
+    "strength": "力量15",
+    "stealth": "劣势",
+    "weight": "65磅",
+    "cost": "1500 GP",
+    "donDoff": "穿戴需10分钟，卸除需5分钟",
+    "pricesGP": [
+      1500
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  },
+  {
+    "id": "armor:shield",
+    "title": "盾牌",
+    "titleEn": "Shield",
+    "category": "盾牌",
+    "armorClass": "+2",
+    "strength": "—",
+    "stealth": "—",
+    "weight": "6磅",
+    "cost": "10 GP",
+    "donDoff": "穿戴或卸除需操作动作",
+    "pricesGP": [
+      10
+    ],
+    "pathParts": [
+      "物品",
+      "护甲"
+    ]
+  }
+]

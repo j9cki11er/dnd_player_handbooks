@@ -1,3 +1,4 @@
+import { catalogArmor } from './armor.js';
 import { catalogWeapons } from './weapons.js';
 import gearData from '../data-gear.json' with { type: 'json' };
 export const parseCR = (cr) => {
@@ -40,6 +41,8 @@ export const resolveBookmarkItem = (id, { categoryTree, spellData, featData, mas
             path: node._selfFile?.path
         };
     }
+    const armor = catalogArmor.find(item => item.id === id);
+    if (armor) return armor;
     const weapon = catalogWeapons.find(item => item.id === id);
     if (weapon) return weapon;
     const gear = gearData.find(item => item.id === id);
