@@ -128,7 +128,10 @@ export default function WelcomePanel({ theme, chapters, expansions = [], categor
 
             <footer className="welcome-footer mt-16 pt-8 border-t border-gold/10 text-center">
                 <p className="footer-text text-xs opacity-60 leading-relaxed">
-                    Provided by Don't Feed Dragon 不要喂龙公会 <br></br> Powered by <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
+                    内容由不要喂龙公会提供 <br />网页技术支持： <a href="https://elifestyles.biz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">eLifeStyles.biz</a>
+                </p>
+                <p className="footer-text text-xs opacity-60 leading-relaxed">
+                    插画绘制：<a href="https://www.instagram.com/yi.lin.10/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">一零 l YiLin</a>
                 </p>
                 <p className="footer-link text-xs opacity-60 mt-1">
                     查看更多冒险手册在: <a href="https://5echm.kagangtuya.top/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">https://5echm.kagangtuya.top/</a>
