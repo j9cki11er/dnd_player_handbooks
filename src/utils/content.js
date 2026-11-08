@@ -1,3 +1,5 @@
+import { classArt } from './classArt.js';
+
 function layoutGroupedRollTable(table, rows, labels) {
     if (labels.length !== 3 || !/^\d*d\d+$/i.test(labels[1])) return;
     const groups = [];
@@ -234,6 +236,42 @@ export function prepareContent(html) {
         scroll.setAttribute('aria-label', '武器表，可横向滚动');
         scroll.tabIndex = 0;
         table.before(scroll); scroll.append(table);
+    }
+    // Tables need a block scroll container: overflow on table itself cannot contain
+    // legacy pixel widths or the minimum content width of many columns.
+    for (const table of document.body.querySelectorAll('table')) {
+        table.removeAttribute('width');
+        table.style.removeProperty('width');
+        if (table.closest('.reference-table-scroll, .weapon-reference-scroll')) continue;
+        const columns = Math.max(0, ...Array.from(table.rows, row =>
+            Array.from(row.cells).reduce((count, cell) => count + cell.colSpan, 0)));
+        if (columns >= 7) table.style.setProperty('min-width', `${columns * 56}px`);
+        const scroll = document.createElement('div');
+        scroll.className = 'reference-table-scroll';
+        scroll.setAttribute('role', 'region');
+        const label = table.caption?.textContent.trim()
+            || table.rows[0]?.textContent.trim().replace(/\s+/g, ' ').slice(0, 80)
+            || '资料表格';
+        scroll.setAttribute('aria-label', `${label}，可横向滚动`);
+        scroll.tabIndex = 0;
+        table.before(scroll);
+        scroll.append(table);
+    }
+    const classHeading = document.body.querySelector('h1');
+    const art = classArt(classHeading?.textContent.trim().split(/\s+/)[0]);
+    if (art && !document.body.querySelector('.class-detail-art')) {
+        const frame = document.createElement('div');
+        frame.className = 'class-art-frame class-detail-art';
+        for (const [key, value] of Object.entries(art.style)) frame.style.setProperty(key, value);
+        const image = document.createElement('img');
+        image.src = art.src;
+        image.width = 2048;
+        image.height = 2048;
+        image.alt = '';
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        frame.append(image);
+        classHeading.after(frame);
     }
     layoutGlossaryCards(document);
     return document.body.innerHTML;

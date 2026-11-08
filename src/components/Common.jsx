@@ -1,3 +1,4 @@
+import { itemClassArt } from '../utils/classArt';
 import { expansionCode } from '../utils/expansions';
 import React from 'react';
 import CatalogDialog from './CatalogDialog';
@@ -114,6 +115,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
         return code ? [code, cat === book ? '' : cat].filter(Boolean).join(' · ') : cat;
     }, [item]);
 
+    const art = itemClassArt(item);
     const Card = lightweight ? 'div' : motion.div;
     const hover = lightweight ? {} : {
         whileHover: { scale: 1.02, y: -4 },
@@ -123,7 +125,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
         <Card
             {...hover}
             onClick={onClick}
-            className="item-card glass-panel group relative"
+            className={`item-card glass-panel group relative${art ? ' class-illustrated-card' : ''}`}
         >
             <div className="card-top">
                 <div className="flex flex-col overflow-hidden mr-8 flex-1 min-w-0">
@@ -140,6 +142,7 @@ export function ItemCard({ item, onClick, isBookmarked, openBookmarkDialog, ligh
                     </button>
                 </div>
             </div>
+            {art && <div className="class-art-frame" style={art.style}><img src={art.src} width="2048" height="2048" loading="lazy" decoding="async" alt="" /></div>}
             <h4 className="card-title group-hover:text-gold transition-colors">{item?.title}</h4>
             {(item?.prerequisite || item?.category === '魔能祈唤') && (
                 <span className="spell-card-extra truncate text-red-400 font-normal">

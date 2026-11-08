@@ -4295,3 +4295,18 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
 .equipment-meta { align-items: baseline; }
 .equipment-meta .equipment-stats { width: auto; min-width: 0; }
 .equipment-meta .gear-price { flex-shrink: 0; }
+
+/* Transparent class illustrations use the same alpha-bound framing as conditions. */
+.class-art-frame { aspect-ratio: 1; overflow: hidden; width: 100%; }
+.class-art-frame img, .dnd-content .class-art-frame img { display: block; width: 100%; height: 100%; object-fit: contain; margin: 0; transform: translate(var(--art-x, 0%), var(--art-y, 0%)) scale(var(--art-scale, 1)); }
+.class-illustrated-card .class-art-frame { width: 70%; align-self: center; margin-inline: auto; }
+.class-illustrated-card .card-title { text-align: center; }
+.dnd-content .class-detail-art { width: min(100%, 320px); margin: 16px auto 24px; }
+
+/* Contain legacy fixed-width and many-column tables inside the reading pane. */
+.dnd-content { min-width: 0; max-width: 100%; }
+.reference-table-scroll { display: block; width: 100%; max-width: 100%; min-width: 0; overflow-x: auto; margin: 1.5rem 0; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.dnd-content .reference-table-scroll > table { width: 100%; margin: 0; }
+.reference-table-scroll :is(td, th) { overflow-wrap: anywhere; }
+.reference-table-scroll:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.grouped-roll-grid .reference-table-scroll { margin: 0; }
