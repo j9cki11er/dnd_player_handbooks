@@ -4310,3 +4310,28 @@ body.light-theme :is(.spell-card-wrapper, .condition-card, .item-card, .catalog-
 .reference-table-scroll :is(td, th) { overflow-wrap: anywhere; }
 .reference-table-scroll:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
 .grouped-roll-grid .reference-table-scroll { margin: 0; }
+
+.dnd-content .lineage-benefits-table {
+  min-width: 34rem;
+  table-layout: fixed;
+}
+
+.dnd-content .lineage-benefits-table tr:first-child > :nth-child(2) {
+  width: 42%;
+}
+
+.dnd-content .lineage-benefits-table :is(td, th) {
+  padding: 0.5rem;
+  overflow-wrap: break-word;
+}
+
+.dnd-content .lineage-benefits-table td p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  /* Legacy CHM column widths can squeeze adjacent text on narrow screens. */
+  .dnd-content .reference-table-scroll :is(td, th)[width] {
+    width: auto;
+  }
+}
